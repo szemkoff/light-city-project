@@ -1,0 +1,24 @@
+{
+  "id": "research/spiritual/delphin-channeled-info",
+  "title": "Delphin City - Channeled Information",
+  "description": "Source: Interview with contactee about city on another planet",
+  "source": "@site/docs/research/spiritual/delphin-channeled-info.md",
+  "sourceDirName": "research/spiritual",
+  "slug": "/research/spiritual/delphin-channeled-info",
+  "permalink": "/light-city-project/docs/research/spiritual/delphin-channeled-info",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/research/spiritual/delphin-channeled-info.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Open Questions Log",
+    "permalink": "/light-city-project/docs/research/open-questions"
+  },
+  "next": {
+    "title": "GitHub + Docusaurus Setup Guide",
+    "permalink": "/light-city-project/docs/technical/github-docusaurus-setup"
+  }
+}

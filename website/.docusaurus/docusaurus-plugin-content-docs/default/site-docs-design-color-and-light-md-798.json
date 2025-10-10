@@ -1,0 +1,24 @@
+{
+  "id": "design/color-and-light",
+  "title": "Color and Light",
+  "description": "Palette, gradients, and lighting rules for Light City materials",
+  "source": "@site/docs/design/color-and-light.md",
+  "sourceDirName": "design",
+  "slug": "/design/color-and-light",
+  "permalink": "/light-city-project/docs/design/color-and-light",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/design/color-and-light.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Architecture",
+    "permalink": "/light-city-project/docs/design/architecture"
+  },
+  "next": {
+    "title": "Layout & Diagram Set",
+    "permalink": "/light-city-project/docs/design/layout-diagrams"
+  }
+}

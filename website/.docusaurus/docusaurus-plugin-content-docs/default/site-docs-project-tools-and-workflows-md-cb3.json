@@ -1,0 +1,24 @@
+{
+  "id": "project/tools-and-workflows",
+  "title": "Tools and Workflows",
+  "description": "This document outlines recommended tools and workflows for the Light City project across different stages and aspects of development.",
+  "source": "@site/docs/project/tools-and-workflows.md",
+  "sourceDirName": "project",
+  "slug": "/project/tools-and-workflows",
+  "permalink": "/light-city-project/docs/project/tools-and-workflows",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/project/tools-and-workflows.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Stage 1: Foundation & Vision - Task List",
+    "permalink": "/light-city-project/docs/project/stage-1-tasks"
+  },
+  "next": {
+    "title": "Bibliography & Sources",
+    "permalink": "/light-city-project/docs/research/bibliography"
+  }
+}

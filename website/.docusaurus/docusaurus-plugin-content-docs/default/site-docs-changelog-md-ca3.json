@@ -1,0 +1,20 @@
+{
+  "id": "CHANGELOG",
+  "title": "Changelog",
+  "description": "All notable changes to the Light City project will be documented in this file.",
+  "source": "@site/docs/CHANGELOG.md",
+  "sourceDirName": ".",
+  "slug": "/CHANGELOG",
+  "permalink": "/light-city-project/docs/CHANGELOG",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/CHANGELOG.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Documentation Index",
+    "permalink": "/light-city-project/docs/"
+  }
+}

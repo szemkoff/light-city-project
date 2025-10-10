@@ -1,0 +1,24 @@
+{
+  "id": "project/stage-1-tasks",
+  "title": "Stage 1: Foundation & Vision - Task List",
+  "description": "Stage Duration: 1-2 months",
+  "source": "@site/docs/project/stage-1-tasks.md",
+  "sourceDirName": "project",
+  "slug": "/project/stage-1-tasks",
+  "permalink": "/light-city-project/docs/project/stage-1-tasks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/project/stage-1-tasks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Start Guide",
+    "permalink": "/light-city-project/docs/project/quick-start-guide"
+  },
+  "next": {
+    "title": "Tools and Workflows",
+    "permalink": "/light-city-project/docs/project/tools-and-workflows"
+  }
+}

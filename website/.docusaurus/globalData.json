@@ -1,0 +1,148 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/light-city-project/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/light-city-project/docs",
+          "mainDocId": "INDEX",
+          "docs": [
+            {
+              "id": "CHANGELOG",
+              "path": "/light-city-project/docs/CHANGELOG",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/communospheres",
+              "path": "/light-city-project/docs/concepts/communospheres",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/core-concepts",
+              "path": "/light-city-project/docs/concepts/core-concepts",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/energy-systems",
+              "path": "/light-city-project/docs/concepts/energy-systems",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/philosophy",
+              "path": "/light-city-project/docs/concepts/philosophy",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/purpose-and-mission",
+              "path": "/light-city-project/docs/concepts/purpose-and-mission",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concepts/sacred-geometry",
+              "path": "/light-city-project/docs/concepts/sacred-geometry",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "design/architecture",
+              "path": "/light-city-project/docs/design/architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "design/color-and-light",
+              "path": "/light-city-project/docs/design/color-and-light",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "design/layout-diagrams",
+              "path": "/light-city-project/docs/design/layout-diagrams",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "design/visual-language",
+              "path": "/light-city-project/docs/design/visual-language",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "INDEX",
+              "path": "/light-city-project/docs/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/light-city-project/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "project/contributing",
+              "path": "/light-city-project/docs/project/contributing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "project/development-stages",
+              "path": "/light-city-project/docs/project/development-stages",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "project/project-structure",
+              "path": "/light-city-project/docs/project/project-structure",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "project/quick-start-guide",
+              "path": "/light-city-project/docs/project/quick-start-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "project/stage-1-tasks",
+              "path": "/light-city-project/docs/project/stage-1-tasks",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "project/tools-and-workflows",
+              "path": "/light-city-project/docs/project/tools-and-workflows",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "research/bibliography",
+              "path": "/light-city-project/docs/research/bibliography",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "research/open-questions",
+              "path": "/light-city-project/docs/research/open-questions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "research/spiritual/delphin-channeled-info",
+              "path": "/light-city-project/docs/research/spiritual/delphin-channeled-info",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "START-HERE",
+              "path": "/light-city-project/docs/START-HERE",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "technical/github-docusaurus-setup",
+              "path": "/light-city-project/docs/technical/github-docusaurus-setup",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/light-city-project/docs/CHANGELOG",
+                "label": "CHANGELOG"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

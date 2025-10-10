@@ -1,0 +1,24 @@
+{
+  "id": "concepts/core-concepts",
+  "title": "Core Concepts",
+  "description": "This document outlines the foundational concepts and principles of the Light City project.",
+  "source": "@site/docs/concepts/core-concepts.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/core-concepts",
+  "permalink": "/light-city-project/docs/concepts/core-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/concepts/core-concepts.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Communospheres",
+    "permalink": "/light-city-project/docs/concepts/communospheres"
+  },
+  "next": {
+    "title": "Energy Systems",
+    "permalink": "/light-city-project/docs/concepts/energy-systems"
+  }
+}

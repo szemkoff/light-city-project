@@ -1,0 +1,24 @@
+{
+  "id": "concepts/philosophy",
+  "title": "Philosophy",
+  "description": "This document explores the deeper philosophical underpinnings of the Light City vision.",
+  "source": "@site/docs/concepts/philosophy.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/philosophy",
+  "permalink": "/light-city-project/docs/concepts/philosophy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/concepts/philosophy.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Energy Systems",
+    "permalink": "/light-city-project/docs/concepts/energy-systems"
+  },
+  "next": {
+    "title": "Purpose and Mission",
+    "permalink": "/light-city-project/docs/concepts/purpose-and-mission"
+  }
+}

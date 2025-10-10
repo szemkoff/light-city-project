@@ -1,0 +1,24 @@
+{
+  "id": "research/open-questions",
+  "title": "Open Questions Log",
+  "description": "Track unanswered questions and assign research tasks",
+  "source": "@site/docs/research/open-questions.md",
+  "sourceDirName": "research",
+  "slug": "/research/open-questions",
+  "permalink": "/light-city-project/docs/research/open-questions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/research/open-questions.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Bibliography & Sources",
+    "permalink": "/light-city-project/docs/research/bibliography"
+  },
+  "next": {
+    "title": "Delphin City - Channeled Information",
+    "permalink": "/light-city-project/docs/research/spiritual/delphin-channeled-info"
+  }
+}

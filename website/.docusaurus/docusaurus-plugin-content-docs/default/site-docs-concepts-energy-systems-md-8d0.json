@@ -1,0 +1,24 @@
+{
+  "id": "concepts/energy-systems",
+  "title": "Energy Systems",
+  "description": "This document explores the energy generation, distribution, and consciousness technologies of Light City",
+  "source": "@site/docs/concepts/energy-systems.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/energy-systems",
+  "permalink": "/light-city-project/docs/concepts/energy-systems",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/concepts/energy-systems.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Core Concepts",
+    "permalink": "/light-city-project/docs/concepts/core-concepts"
+  },
+  "next": {
+    "title": "Philosophy",
+    "permalink": "/light-city-project/docs/concepts/philosophy"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "design/architecture",
+  "title": "Architecture",
+  "description": "This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions.",
+  "source": "@site/docs/design/architecture.md",
+  "sourceDirName": "design",
+  "slug": "/design/architecture",
+  "permalink": "/light-city-project/docs/design/architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/design/architecture.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sacred Geometry",
+    "permalink": "/light-city-project/docs/concepts/sacred-geometry"
+  },
+  "next": {
+    "title": "Color and Light",
+    "permalink": "/light-city-project/docs/design/color-and-light"
+  }
+}

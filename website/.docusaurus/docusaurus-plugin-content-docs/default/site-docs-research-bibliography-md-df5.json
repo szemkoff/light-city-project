@@ -1,0 +1,24 @@
+{
+  "id": "research/bibliography",
+  "title": "Bibliography & Sources",
+  "description": "Citation index for research used in Light City",
+  "source": "@site/docs/research/bibliography.md",
+  "sourceDirName": "research",
+  "slug": "/research/bibliography",
+  "permalink": "/light-city-project/docs/research/bibliography",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/research/bibliography.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tools and Workflows",
+    "permalink": "/light-city-project/docs/project/tools-and-workflows"
+  },
+  "next": {
+    "title": "Open Questions Log",
+    "permalink": "/light-city-project/docs/research/open-questions"
+  }
+}

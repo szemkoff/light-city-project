@@ -1,0 +1,24 @@
+{
+  "id": "project/quick-start-guide",
+  "title": "Quick Start Guide",
+  "description": "Welcome to the Light City project! This guide will help you get started quickly.",
+  "source": "@site/docs/project/quick-start-guide.md",
+  "sourceDirName": "project",
+  "slug": "/project/quick-start-guide",
+  "permalink": "/light-city-project/docs/project/quick-start-guide",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/project/quick-start-guide.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Project Structure",
+    "permalink": "/light-city-project/docs/project/project-structure"
+  },
+  "next": {
+    "title": "Stage 1: Foundation & Vision - Task List",
+    "permalink": "/light-city-project/docs/project/stage-1-tasks"
+  }
+}
