@@ -102,3 +102,11 @@ coverage/
 secrets.yml
 credentials.yml
 
+# Docusaurus
+website/node_modules/
+website/.docusaurus/
+website/build/
+website/.cache-loader/
+website/yarn.lock
+website/package-lock.json
+
