@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-design/architecture" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.1">
+<title data-rh="true">Architecture | Light City Project</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://szemkoff.github.io/light-city-project/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://szemkoff.github.io/light-city-project/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://szemkoff.github.io/light-city-project/docs/design/architecture"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Architecture | Light City Project"><meta data-rh="true" name="description" content="This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions."><meta data-rh="true" property="og:description" content="This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions."><link data-rh="true" rel="icon" href="/light-city-project/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://szemkoff.github.io/light-city-project/docs/design/architecture"><link data-rh="true" rel="alternate" href="https://szemkoff.github.io/light-city-project/docs/design/architecture" hreflang="en"><link data-rh="true" rel="alternate" href="https://szemkoff.github.io/light-city-project/docs/design/architecture" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Architecture","item":"https://szemkoff.github.io/light-city-project/docs/design/architecture"}]}</script><link rel="alternate" type="application/rss+xml" href="/light-city-project/blog/rss.xml" title="Light City Project RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/light-city-project/blog/atom.xml" title="Light City Project Atom Feed"><link rel="stylesheet" href="/light-city-project/assets/css/styles.bda66df9.css">
+<script src="/light-city-project/assets/js/runtime~main.1ba3695c.js" defer="defer"></script>
+<script src="/light-city-project/assets/js/main.1069f94b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/light-city-project/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/light-city-project/"><div class="navbar__logo"><img src="/light-city-project/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/light-city-project/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Light City</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/light-city-project/docs/CHANGELOG">Documentation</a><a class="navbar__item navbar__link" href="/light-city-project/blog">Updates</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/CHANGELOG"><span title="Changelog" class="linkLabel_WmDU">Changelog</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/"><span title="Documentation Index" class="linkLabel_WmDU">Documentation Index</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/START-HERE"><span title="🌟 Start Here" class="linkLabel_WmDU">🌟 Start Here</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/concepts/communospheres"><span title="concepts" class="categoryLinkLabel_W154">concepts</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/light-city-project/docs/design/architecture"><span title="design" class="categoryLinkLabel_W154">design</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/light-city-project/docs/design/architecture"><span title="Architecture" class="linkLabel_WmDU">Architecture</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/color-and-light"><span title="Color and Light" class="linkLabel_WmDU">Color and Light</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/layout-diagrams"><span title="Layout &amp; Diagram Set" class="linkLabel_WmDU">Layout &amp; Diagram Set</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/visual-language"><span title="Visual Language" class="linkLabel_WmDU">Visual Language</span></a></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/intro"><span title="Start Here" class="linkLabel_WmDU">Start Here</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/project/contributing"><span title="project" class="categoryLinkLabel_W154">project</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/research/bibliography"><span title="research" class="categoryLinkLabel_W154">research</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/technical/github-docusaurus-setup"><span title="technical" class="categoryLinkLabel_W154">technical</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/light-city-project/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">design</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Architecture</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Architecture</h1></header>
+<p><em>This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions.</em></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Light City&#x27;s architecture serves multiple purposes:</p>
+<ul>
+<li><strong>Functional</strong>: Practical spaces for living and gathering</li>
+<li><strong>Energetic</strong>: Structures that elevate consciousness</li>
+<li><strong>Symbolic</strong>: Forms that communicate principles</li>
+<li><strong>Aesthetic</strong>: Beauty that inspires and uplifts</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-design-principles">Core Design Principles<a href="#core-design-principles" class="hash-link" aria-label="Direct link to Core Design Principles" title="Direct link to Core Design Principles" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-sacred-geometry">1. Sacred Geometry<a href="#1-sacred-geometry" class="hash-link" aria-label="Direct link to 1. Sacred Geometry" title="Direct link to 1. Sacred Geometry" translate="no">​</a></h3>
+<p>All design is based on sacred geometric principles:</p>
+<ul>
+<li><strong>Circle</strong>: Unity, wholeness, infinity</li>
+<li><strong>Golden Ratio</strong>: Harmony, beauty, natural proportion</li>
+<li><strong>Platonic Solids</strong>: Fundamental forms</li>
+<li><strong>Flower of Life</strong>: Creation pattern</li>
+<li><strong>Merkaba</strong>: Energy field geometry</li>
+</ul>
+<p><strong>Application</strong>: City layout, building proportions, decorative elements</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-light-as-primary-element">2. Light as Primary Element<a href="#2-light-as-primary-element" class="hash-link" aria-label="Direct link to 2. Light as Primary Element" title="Direct link to 2. Light as Primary Element" translate="no">​</a></h3>
+<p>Light is not decoration but foundational:</p>
+<ul>
+<li><strong>Natural Light</strong>: Maximum solar integration</li>
+<li><strong>Crystalline Refraction</strong>: Structures that split light into rainbows</li>
+<li><strong>Luminescence</strong>: Materials that glow or transmit light</li>
+<li><strong>Light Paths</strong>: Designed movement of light through space</li>
+</ul>
+<p><strong>Materials</strong>: Crystal, glass, translucent stone, reflective metals</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-sound-and-resonance">3. Sound and Resonance<a href="#3-sound-and-resonance" class="hash-link" aria-label="Direct link to 3. Sound and Resonance" title="Direct link to 3. Sound and Resonance" translate="no">​</a></h3>
+<p>Architecture designed for harmonic resonance:</p>
+<ul>
+<li><strong>Acoustic Properties</strong>: Spaces amplify beneficial frequencies</li>
+<li><strong>Musical Ratios</strong>: Proportions based on harmonic intervals</li>
+<li><strong>Resonant Chambers</strong>: Specific spaces for sound healing</li>
+<li><strong>Natural Hum</strong>: The city itself maintains a harmonic tone</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-vertical-and-horizontal-integration">4. Vertical and Horizontal Integration<a href="#4-vertical-and-horizontal-integration" class="hash-link" aria-label="Direct link to 4. Vertical and Horizontal Integration" title="Direct link to 4. Vertical and Horizontal Integration" translate="no">​</a></h3>
+<p>Connection across dimensions:</p>
+<ul>
+<li><strong>Vertical</strong>: Earth to sky, roots to cosmos</li>
+<li><strong>Horizontal</strong>: Center to periphery, inner to outer</li>
+<li><strong>Central Axis</strong>: Grounding and ascending simultaneously</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overall-layout">Overall Layout<a href="#overall-layout" class="hash-link" aria-label="Direct link to Overall Layout" title="Direct link to Overall Layout" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="circular-form">Circular Form<a href="#circular-form" class="hash-link" aria-label="Direct link to Circular Form" title="Direct link to Circular Form" translate="no">​</a></h3>
+<p><strong>Primary Structure</strong>: Concentric circles radiating from center</p>
+<p><strong>Rings</strong> (from inner to outer):</p>
+<ol>
+<li><strong>Central Sanctum</strong>: The spire and core plaza</li>
+<li><strong>Inner Ring</strong>: Primary gathering spaces, temples, learning centers</li>
+<li><strong>Middle Ring</strong>: Creative studios, collaboration areas, specialized facilities</li>
+<li><strong>Outer Ring</strong>: Communospheres (living spaces), gardens, nature interface</li>
+</ol>
+<p><strong>Radial Pathways</strong>: Connect center to periphery like spokes</p>
+<p><strong>Circular Pathways</strong>: Connect points on same ring</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="delphin-inspired-model">Delphin-Inspired Model<a href="#delphin-inspired-model" class="hash-link" aria-label="Direct link to Delphin-Inspired Model" title="Direct link to Delphin-Inspired Model" translate="no">​</a></h3>
+<p>Based on the existing crystal city of Delphin (on planet Israel), Light City can incorporate proven architectural principles:</p>
+<ul>
+<li><strong>Central Crystal Spire</strong>: Energy and consciousness hub</li>
+<li><strong>Radial Urban Area</strong>: Dense development in middle rings</li>
+<li><strong>Communospheres</strong>: Large spherical living structures at perimeter</li>
+<li><strong>Natural Surroundings</strong>: Integration with forests and landscape</li>
+<li><strong>Resonance Field</strong>: Maintained throughout entire city structure</li>
+</ul>
+<p><em>See <a href="/light-city-project/docs/concepts/communospheres">Communospheres</a> for detailed explanation</em></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-central-spire">The Central Spire<a href="#the-central-spire" class="hash-link" aria-label="Direct link to The Central Spire" title="Direct link to The Central Spire" translate="no">​</a></h3>
+<p><strong>Height</strong>: Extraordinarily tall—potentially 40,000 feet (~12 km / 7.6 miles)</p>
+<ul>
+<li>Reference: Delphin&#x27;s spire is 40,000 feet</li>
+<li>Light City scale to be determined based on location and needs</li>
+<li>Even scaled down versions would be tallest structures on Earth</li>
+</ul>
+<p><strong>Function</strong>:</p>
+<ul>
+<li><strong>Power Generation</strong>: Handles all energy requirements for entire city</li>
+<li><strong>Consciousness Hub</strong>: Generates and maintains resonant frequency</li>
+<li><strong>Communication</strong>: Connection point with cosmos and Earth&#x27;s grid</li>
+<li><strong>Axis Mundi</strong>: Symbolic and functional world axis</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li><strong>Material</strong>: Crystal (primary material for energy and resonance properties)</li>
+<li><strong>Form</strong>: Tapers toward top, crystalline facets</li>
+<li><strong>Light</strong>: Emanates from within, refracts into rainbows</li>
+<li><strong>Geometry</strong>: May incorporate spiral, helical, or other sacred forms</li>
+</ul>
+<p><strong>Energy Function</strong>:</p>
+<ul>
+<li>Generates or channels power for entire city</li>
+<li>Creates specific resonant frequency held throughout city</li>
+<li>Receives cosmic energies from above</li>
+<li>Draws Earth energies from below</li>
+<li>Distributes balanced energy through geometric grid to communospheres</li>
+<li>Maintains coherent consciousness field</li>
+</ul>
+<p><strong>Resonance Technology</strong>:</p>
+<ul>
+<li>Crystal structure generates specific frequency</li>
+<li>This frequency maintains consciousness connection</li>
+<li>All living spaces tune to this base frequency</li>
+<li>Creates unified awareness field across entire city</li>
+<li>Enables knowledge transfer and collective consciousness</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="supporting-architecture">Supporting Architecture<a href="#supporting-architecture" class="hash-link" aria-label="Direct link to Supporting Architecture" title="Direct link to Supporting Architecture" translate="no">​</a></h3>
+<p><strong>Spires and Towers</strong>: Various heights, create skyline
+<strong>Domes</strong>: For gathering spaces and temples
+<strong>Arches</strong>: Connect structures, create pathways
+<strong>Platforms</strong>: Multi-level integration
+<strong>Gardens</strong>: Integrated throughout, not separate</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="architectural-styles-and-influences">Architectural Styles and Influences<a href="#architectural-styles-and-influences" class="hash-link" aria-label="Direct link to Architectural Styles and Influences" title="Direct link to Architectural Styles and Influences" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="primary-influences">Primary Influences<a href="#primary-influences" class="hash-link" aria-label="Direct link to Primary Influences" title="Direct link to Primary Influences" translate="no">​</a></h3>
+<ol>
+<li><strong>Crystalline Formations</strong>: Natural crystal growth patterns</li>
+<li><strong>Sacred Architecture</strong>: Temples, cathedrals, pyramids</li>
+<li><strong>Organic Forms</strong>: Inspired by nature&#x27;s patterns</li>
+<li><strong>Futuristic Vision</strong>: Advanced but harmonious technology</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="visual-characteristics">Visual Characteristics<a href="#visual-characteristics" class="hash-link" aria-label="Direct link to Visual Characteristics" title="Direct link to Visual Characteristics" translate="no">​</a></h3>
+<p><strong>Materials</strong>:</p>
+<ul>
+<li>White and gold tones predominant</li>
+<li>Crystal, glass, translucent materials</li>
+<li>Living materials (bioarchitecture when possible)</li>
+<li>Sustainable, high-vibration materials</li>
+</ul>
+<p><strong>Forms</strong>:</p>
+<ul>
+<li>Flowing, organic curves</li>
+<li>Sharp, precise geometry where appropriate</li>
+<li>Transparency and semi-transparency</li>
+<li>Layered and multi-dimensional</li>
+</ul>
+<p><strong>Aesthetics</strong>:</p>
+<ul>
+<li>Clean and uncluttered</li>
+<li>Luminous and light-filled</li>
+<li>Harmonious and balanced</li>
+<li>Awe-inspiring yet welcoming</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="specific-spaces">Specific Spaces<a href="#specific-spaces" class="hash-link" aria-label="Direct link to Specific Spaces" title="Direct link to Specific Spaces" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-the-central-plaza">1. The Central Plaza<a href="#1-the-central-plaza" class="hash-link" aria-label="Direct link to 1. The Central Plaza" title="Direct link to 1. The Central Plaza" translate="no">​</a></h3>
+<p><strong>Location</strong>: Surrounds the central spire</p>
+<p><strong>Function</strong>:</p>
+<ul>
+<li>Primary gathering space</li>
+<li>Ceremonies and celebrations</li>
+<li>Community connection</li>
+<li>Energy convergence point</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li>Open circular space</li>
+<li>Geometric paving patterns</li>
+<li>Water features (fountains, pools)</li>
+<li>Seating integrated organically</li>
+<li>Clear sightlines to spire</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-temples-and-meditation-spaces">2. Temples and Meditation Spaces<a href="#2-temples-and-meditation-spaces" class="hash-link" aria-label="Direct link to 2. Temples and Meditation Spaces" title="Direct link to 2. Temples and Meditation Spaces" translate="no">​</a></h3>
+<p><strong>Purpose</strong>: Consciousness elevation, spiritual practice</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Multiple temples for different practices</li>
+<li>Meditation chambers</li>
+<li>Sound healing rooms</li>
+<li>Vision quest spaces</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li>Acoustically optimized</li>
+<li>Light control (from darkness to brilliant light)</li>
+<li>Sacred geometry in layout</li>
+<li>Crystalline elements</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-learning-centers">3. Learning Centers<a href="#3-learning-centers" class="hash-link" aria-label="Direct link to 3. Learning Centers" title="Direct link to 3. Learning Centers" translate="no">​</a></h3>
+<p><strong>Purpose</strong>: Education, knowledge sharing, skill development</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Libraries and archives</li>
+<li>Workshop spaces</li>
+<li>Demonstration areas</li>
+<li>Technology integration</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li>Flexible, adaptable spaces</li>
+<li>Natural light emphasis</li>
+<li>Inspiring, beautiful environments</li>
+<li>Connection to gardens</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-living-spaces---communospheres">4. Living Spaces - Communospheres<a href="#4-living-spaces---communospheres" class="hash-link" aria-label="Direct link to 4. Living Spaces - Communospheres" title="Direct link to 4. Living Spaces - Communospheres" translate="no">​</a></h3>
+<p><strong>Purpose</strong>: Conscious community living environments that maintain resonance</p>
+<p><strong>Structure</strong>: Large spherical buildings (communospheres) positioned at city perimeter</p>
+<p><strong>Scale</strong>:</p>
+<ul>
+<li>Each sphere: 5,000-10,000 inhabitants</li>
+<li>Diameter: 600-1,200 feet depending on population</li>
+<li>Height: 400-600 feet (multi-level)</li>
+<li>Multiple spheres around city (potentially 12 for sacred geometry)</li>
+</ul>
+<p><strong>Features</strong>:</p>
+<ul>
+<li><strong>Resonance Maintenance</strong>: Sphere structure maintains the frequency from central spire</li>
+<li><strong>Community Integration</strong>: Complete living environment within each sphere</li>
+<li><strong>Consciousness Connection</strong>: Inhabitants remain &quot;consciously connected&quot;</li>
+<li><strong>Knowledge Transfer</strong>: Learning by one transfers to all in field</li>
+<li><strong>Self-Sufficient</strong>: Food, gathering spaces, basic services within sphere</li>
+<li><strong>Ground Connection</strong>: &quot;Hooked in&quot; to Earth—firmly anchored</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li>Geodesic or spherical structure</li>
+<li>Crystal or crystalline material integration</li>
+<li>Semi-transparent allowing light passage</li>
+<li>Multiple interior levels</li>
+<li>Private quarters + communal spaces</li>
+<li>Gardens integrated within</li>
+</ul>
+<p><strong>Living Experience</strong>:</p>
+<ul>
+<li>Balance of privacy and community</li>
+<li>Unity consciousness in daily life</li>
+<li>Natural alignment through resonance field</li>
+<li>Spontaneous learning and connection</li>
+</ul>
+<p><em>See detailed documentation: <a href="/light-city-project/docs/concepts/communospheres">Communospheres</a></em></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-creative-studios">5. Creative Studios<a href="#5-creative-studios" class="hash-link" aria-label="Direct link to 5. Creative Studios" title="Direct link to 5. Creative Studios" translate="no">​</a></h3>
+<p><strong>Purpose</strong>: Artistic and creative work</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Art studios</li>
+<li>Music spaces</li>
+<li>Maker spaces</li>
+<li>Performance venues</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li>Inspiring environments</li>
+<li>Practical functionality</li>
+<li>Acoustic considerations</li>
+<li>Gallery integration</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-gardens-and-nature-spaces">6. Gardens and Nature Spaces<a href="#6-gardens-and-nature-spaces" class="hash-link" aria-label="Direct link to 6. Gardens and Nature Spaces" title="Direct link to 6. Gardens and Nature Spaces" translate="no">​</a></h3>
+<p><strong>Purpose</strong>: Connection with nature, food production, beauty</p>
+<p><strong>Features</strong>:</p>
+<ul>
+<li>Terraced gardens</li>
+<li>Food forests</li>
+<li>Meditation gardens</li>
+<li>Natural water features</li>
+</ul>
+<p><strong>Design</strong>:</p>
+<ul>
+<li>Integrated throughout city</li>
+<li>Sacred geometry in planting</li>
+<li>Permaculture principles</li>
+<li>Native and crystalline plants</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="energy-systems">Energy Systems<a href="#energy-systems" class="hash-link" aria-label="Direct link to Energy Systems" title="Direct link to Energy Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="energetic-architecture">Energetic Architecture<a href="#energetic-architecture" class="hash-link" aria-label="Direct link to Energetic Architecture" title="Direct link to Energetic Architecture" translate="no">​</a></h3>
+<p>Light City operates on multiple energy levels:</p>
+<p><strong>Physical Energy</strong>:</p>
+<ul>
+<li>Solar, possibly zero-point or other advanced technologies</li>
+<li>Sustainable and regenerative</li>
+<li>Excess given back to Earth&#x27;s grid</li>
+</ul>
+<p><strong>Subtle Energy</strong>:</p>
+<ul>
+<li>Sacred geometry creates coherent fields</li>
+<li>Crystalline structures amplify and direct energy</li>
+<li>Central spire distributes balanced energy</li>
+<li>Natural ley lines honored and utilized</li>
+</ul>
+<p><strong>Consciousness Energy</strong>:</p>
+<ul>
+<li>Collective intention shapes the field</li>
+<li>Regular ceremonies maintain coherence</li>
+<li>The city &quot;learns&quot; and adapts energetically</li>
+<li>Consciousness of inhabitants is primary power source</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-living-grid">The Living Grid<a href="#the-living-grid" class="hash-link" aria-label="Direct link to The Living Grid" title="Direct link to The Living Grid" translate="no">​</a></h3>
+<p>Light City maintains an energetic grid:</p>
+<ul>
+<li><strong>Nodes</strong>: Key structures (spire, temples, major buildings)</li>
+<li><strong>Pathways</strong>: Energy flows along geometric patterns</li>
+<li><strong>Field</strong>: Coherent consciousness field pervades entire space</li>
+<li><strong>Interface</strong>: Connects to Earth&#x27;s crystalline grid</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="construction-principles">Construction Principles<a href="#construction-principles" class="hash-link" aria-label="Direct link to Construction Principles" title="Direct link to Construction Principles" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="physical-construction">Physical Construction<a href="#physical-construction" class="hash-link" aria-label="Direct link to Physical Construction" title="Direct link to Physical Construction" translate="no">​</a></h3>
+<ol>
+<li><strong>Minimal Impact</strong>: Build with minimal Earth disruption</li>
+<li><strong>Sustainable Materials</strong>: Local, renewable, high-vibration</li>
+<li><strong>Advanced Techniques</strong>: Blend ancient wisdom and modern technology</li>
+<li><strong>Conscious Creation</strong>: Every act of building is ceremony</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="energetic-construction">Energetic Construction<a href="#energetic-construction" class="hash-link" aria-label="Direct link to Energetic Construction" title="Direct link to Energetic Construction" translate="no">​</a></h3>
+<ol>
+<li><strong>Intention Setting</strong>: Clear intention for each space</li>
+<li><strong>Geometric Precision</strong>: Sacred geometry exactly rendered</li>
+<li><strong>Energy Consecration</strong>: Spaces blessed and activated</li>
+<li><strong>Conscious Maintenance</strong>: Ongoing energetic tending</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="scale-and-sizing">Scale and Sizing<a href="#scale-and-sizing" class="hash-link" aria-label="Direct link to Scale and Sizing" title="Direct link to Scale and Sizing" translate="no">​</a></h2>
+<p><em>To be determined based on:</em></p>
+<ul>
+<li>Number of intended inhabitants</li>
+<li>Available location and resources</li>
+<li>Phasing approach</li>
+<li>Organic growth vs. master plan</li>
+</ul>
+<p><strong>Initial Vision</strong>: Moderate scale, potentially 500-5,000 inhabitants, expandable</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="relationship-to-landscape">Relationship to Landscape<a href="#relationship-to-landscape" class="hash-link" aria-label="Direct link to Relationship to Landscape" title="Direct link to Relationship to Landscape" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="site-selection-future">Site Selection (Future)<a href="#site-selection-future" class="hash-link" aria-label="Direct link to Site Selection (Future)" title="Direct link to Site Selection (Future)" translate="no">​</a></h3>
+<p>Ideal location characteristics:</p>
+<ul>
+<li>Natural beauty and power</li>
+<li>Connection to ley lines or energy vortices</li>
+<li>Relatively undisturbed nature</li>
+<li>Climate conducive to year-round living</li>
+<li>Legal/political feasibility</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="integration-principles">Integration Principles<a href="#integration-principles" class="hash-link" aria-label="Direct link to Integration Principles" title="Direct link to Integration Principles" translate="no">​</a></h3>
+<ul>
+<li><strong>Harmony</strong>: Architecture complements landscape</li>
+<li><strong>Minimal Disruption</strong>: Work with existing features</li>
+<li><strong>Enhancement</strong>: Improve ecosystem health</li>
+<li><strong>Sacred Recognition</strong>: Honor land&#x27;s spirit and history</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="evolution-and-adaptation">Evolution and Adaptation<a href="#evolution-and-adaptation" class="hash-link" aria-label="Direct link to Evolution and Adaptation" title="Direct link to Evolution and Adaptation" translate="no">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="living-architecture">Living Architecture<a href="#living-architecture" class="hash-link" aria-label="Direct link to Living Architecture" title="Direct link to Living Architecture" translate="no">​</a></h3>
+<p>Light City architecture is:</p>
+<ul>
+<li><strong>Adaptable</strong>: Can evolve with needs and understanding</li>
+<li><strong>Organic</strong>: Grows more than it&#x27;s built</li>
+<li><strong>Responsive</strong>: Adjusts to inhabitant consciousness</li>
+<li><strong>Teaching</strong>: The structures themselves teach and guide</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="phasing-approach">Phasing Approach<a href="#phasing-approach" class="hash-link" aria-label="Direct link to Phasing Approach" title="Direct link to Phasing Approach" translate="no">​</a></h3>
+<ol>
+<li><strong>Core First</strong>: Central spire and plaza</li>
+<li><strong>Essential Spaces</strong>: Initial temples and gathering areas</li>
+<li><strong>Living Areas</strong>: Habitation for early inhabitants</li>
+<li><strong>Expansion</strong>: Organic growth as community develops</li>
+<li><strong>Completion</strong>: Perhaps never &quot;complete&quot; but continuously evolving</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="visual-documentation-needed">Visual Documentation Needed<a href="#visual-documentation-needed" class="hash-link" aria-label="Direct link to Visual Documentation Needed" title="Direct link to Visual Documentation Needed" translate="no">​</a></h2>
+<p><em>To be created in future stages:</em></p>
+<ul class="contains-task-list containsTaskList_mC6p">
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Overhead city layout diagram</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Central spire elevation and details</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Sample building designs</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Sacred geometry overlays</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Energy flow diagrams</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Perspective renderings</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Material palettes</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Lighting studies</li>
+</ul>
+<hr>
+<p><strong>Status</strong>: Foundational vision - requires significant expansion and visualization<br>
+<strong>Last Updated</strong>: October 10, 2025<br>
+<strong>Related</strong>: <a href="/light-city-project/docs/concepts/core-concepts">Core Concepts</a>, <a href="/light-city-project/docs/concepts/sacred-geometry">Sacred Geometry</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/design/architecture.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/light-city-project/docs/concepts/sacred-geometry"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Sacred Geometry</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/light-city-project/docs/design/color-and-light"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Color and Light</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#core-design-principles" class="table-of-contents__link toc-highlight">Core Design Principles</a><ul><li><a href="#1-sacred-geometry" class="table-of-contents__link toc-highlight">1. Sacred Geometry</a></li><li><a href="#2-light-as-primary-element" class="table-of-contents__link toc-highlight">2. Light as Primary Element</a></li><li><a href="#3-sound-and-resonance" class="table-of-contents__link toc-highlight">3. Sound and Resonance</a></li><li><a href="#4-vertical-and-horizontal-integration" class="table-of-contents__link toc-highlight">4. Vertical and Horizontal Integration</a></li></ul></li><li><a href="#overall-layout" class="table-of-contents__link toc-highlight">Overall Layout</a><ul><li><a href="#circular-form" class="table-of-contents__link toc-highlight">Circular Form</a></li><li><a href="#delphin-inspired-model" class="table-of-contents__link toc-highlight">Delphin-Inspired Model</a></li><li><a href="#the-central-spire" class="table-of-contents__link toc-highlight">The Central Spire</a></li><li><a href="#supporting-architecture" class="table-of-contents__link toc-highlight">Supporting Architecture</a></li></ul></li><li><a href="#architectural-styles-and-influences" class="table-of-contents__link toc-highlight">Architectural Styles and Influences</a><ul><li><a href="#primary-influences" class="table-of-contents__link toc-highlight">Primary Influences</a></li><li><a href="#visual-characteristics" class="table-of-contents__link toc-highlight">Visual Characteristics</a></li></ul></li><li><a href="#specific-spaces" class="table-of-contents__link toc-highlight">Specific Spaces</a><ul><li><a href="#1-the-central-plaza" class="table-of-contents__link toc-highlight">1. The Central Plaza</a></li><li><a href="#2-temples-and-meditation-spaces" class="table-of-contents__link toc-highlight">2. Temples and Meditation Spaces</a></li><li><a href="#3-learning-centers" class="table-of-contents__link toc-highlight">3. Learning Centers</a></li><li><a href="#4-living-spaces---communospheres" class="table-of-contents__link toc-highlight">4. Living Spaces - Communospheres</a></li><li><a href="#5-creative-studios" class="table-of-contents__link toc-highlight">5. Creative Studios</a></li><li><a href="#6-gardens-and-nature-spaces" class="table-of-contents__link toc-highlight">6. Gardens and Nature Spaces</a></li></ul></li><li><a href="#energy-systems" class="table-of-contents__link toc-highlight">Energy Systems</a><ul><li><a href="#energetic-architecture" class="table-of-contents__link toc-highlight">Energetic Architecture</a></li><li><a href="#the-living-grid" class="table-of-contents__link toc-highlight">The Living Grid</a></li></ul></li><li><a href="#construction-principles" class="table-of-contents__link toc-highlight">Construction Principles</a><ul><li><a href="#physical-construction" class="table-of-contents__link toc-highlight">Physical Construction</a></li><li><a href="#energetic-construction" class="table-of-contents__link toc-highlight">Energetic Construction</a></li></ul></li><li><a href="#scale-and-sizing" class="table-of-contents__link toc-highlight">Scale and Sizing</a></li><li><a href="#relationship-to-landscape" class="table-of-contents__link toc-highlight">Relationship to Landscape</a><ul><li><a href="#site-selection-future" class="table-of-contents__link toc-highlight">Site Selection (Future)</a></li><li><a href="#integration-principles" class="table-of-contents__link toc-highlight">Integration Principles</a></li></ul></li><li><a href="#evolution-and-adaptation" class="table-of-contents__link toc-highlight">Evolution and Adaptation</a><ul><li><a href="#living-architecture" class="table-of-contents__link toc-highlight">Living Architecture</a></li><li><a href="#phasing-approach" class="table-of-contents__link toc-highlight">Phasing Approach</a></li></ul></li><li><a href="#visual-documentation-needed" class="table-of-contents__link toc-highlight">Visual Documentation Needed</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://x.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">X<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Light City Project © 2025. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
