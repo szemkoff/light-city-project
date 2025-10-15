@@ -7,10 +7,49 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ## [Unreleased]
 
 ### To Be Added
-- Visual designs and concept art based on Delphin model
-- Additional research materials
-- Detailed communosphere designs
-- Energy system specifications
+- Custom Docusaurus homepage with hero section
+- Logo and branding assets
+- GitHub Actions for automated deployment
+- Additional concept art based on Delphin model
+- Detailed communosphere interior designs
+
+## [0.3.0] - 2025-10-15
+
+### Added - GitHub & Documentation Site
+- **GitHub Repository**: Published project at https://github.com/szemkoff/light-city-project
+- **Docusaurus Documentation Site**: Live at https://szemkoff.github.io/light-city-project/
+- **Visual Design System**:
+  - `docs/design/visual-language.md` - Design principles and tokens
+  - `docs/design/color-and-light.md` - Color palette and lighting rules
+  - `docs/design/layout-diagrams.md` - Placeholder for diagrams
+- **Research Infrastructure**:
+  - `docs/research/bibliography.md` - Research sources compilation
+  - `docs/research/open-questions.md` - Open research questions log
+- **Governance Documents**:
+  - `CODE_OF_CONDUCT.md` - Community guidelines
+  - `LICENSE` - MIT License for code
+  - `LICENSE-DOCS` - CC BY-SA 4.0 for documentation
+- **Technical Documentation**:
+  - `docs/technical/github-docusaurus-setup.md` - Deployment guide
+- **Assets Organization**:
+  - `assets/images/diagrams/README.md` - Diagrams folder structure
+  - Saved 4 inspiration images (Delphin aerial views + AI-generated visions)
+
+### Updated
+- **README.md**: Updated last modified date, clarified current stage
+- **START-HERE.md**: Updated version to 0.3.0
+- **.gitignore**: Added Docusaurus build exclusions
+- **website/docusaurus.config.ts**: Configured for GitHub Pages deployment
+- **Documentation links**: Fixed all internal links for Docusaurus routing
+
+### Infrastructure
+- Initialized Git repository with full project history
+- Set up GitHub Pages deployment on `gh-pages` branch
+- Configured Docusaurus with custom theme and navigation
+- Established version control workflow
+
+### Significance
+This update represents the project's public launch and technical infrastructure setup. Light City now has professional version control, a beautiful documentation site, and is ready for public visibility and collaboration. The foundation is complete for Stage 2 work.
 
 ## [0.2.0] - 2025-10-10
 

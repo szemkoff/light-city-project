@@ -29,23 +29,26 @@ Complete index of all Light City project documentation.
 
 ### Current Documents
 - [Architecture](design/architecture.md) - Architectural vision and principles
+- [Visual Language](design/visual-language.md) - Design principles and design tokens ⭐ NEW
+- [Color and Light](design/color-and-light.md) - Color palette and lighting rules ⭐ NEW
+- [Layout Diagrams](design/layout-diagrams.md) - City layout diagrams and visualizations ⭐ NEW
 
 ### To Be Created
-- Visual Language and Aesthetics
-- Color and Light Principles
-- City Layout and Planning
 - Materials and Construction
 - Symbolism and Meaning
 - Landscape Integration
+- Detailed Communosphere Interiors
 
 ## Technical
 
+### Current Documents
+- [GitHub + Docusaurus Setup](technical/github-docusaurus-setup.md) - Deployment guide ⭐ NEW
+
 ### To Be Created
-- Technology Stack
-- Development Guide
-- Tools Setup
-- API Documentation (when applicable)
-- Deployment Processes
+- Technology Stack (Stage 3+)
+- Development Guide (Stage 3+)
+- Tools Setup (Stage 3+)
+- API Documentation (Stage 4+)
 
 ## Community
 
@@ -97,31 +100,39 @@ See [assets/](../assets/) directory:
 ## Additional Files
 
 - [CHANGELOG.md](../CHANGELOG.md) - Project version history
+- [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) - Community guidelines ⭐ NEW
+- [LICENSE](../LICENSE) - MIT License for code ⭐ NEW
+- [LICENSE-DOCS](../LICENSE-DOCS) - CC BY-SA 4.0 for documentation ⭐ NEW
 - [.gitignore](../.gitignore) - Version control exclusions
 
 ## Research Materials
 
 See [research/](../research/) directory:
-- [Delphin Channeled Information](../research/spiritual/delphin-channeled-info.md) - Crystal city example ⭐ NEW
-- Research organization and notes
-- Spiritual/Metaphysical research
-- Architectural studies
+- [Delphin Channeled Information](../research/spiritual/delphin-channeled-info.md) - Crystal city example
+- [Bibliography](research/bibliography.md) - Compiled research sources ⭐ NEW
+- [Open Questions](research/open-questions.md) - Research questions to explore ⭐ NEW
+- [Inspirational Buildings](../research/architectural/inspirational-buildings.md) - Architectural inspirations
+- Spiritual/Metaphysical research materials
+- Architectural studies and references
 - Technology research
-- Community models
+- Community models and case studies
 
 ## Documentation Status
 
 | Category | Completion | Priority |
 |----------|------------|----------|
-| Concepts | 50% | HIGH |
-| Design | 30% | HIGH |
-| Technical | 5% | MEDIUM |
-| Community | 10% | MEDIUM |
-| Project | 70% | HIGH |
-| Research | 15% | HIGH |
+| Concepts | 85% | HIGH |
+| Design | 50% | HIGH |
+| Technical | 20% | MEDIUM |
+| Community | 30% | MEDIUM |
+| Project | 90% | COMPLETE |
+| Research | 35% | HIGH |
+| Infrastructure | 100% | COMPLETE |
 
-**Last Updated**: October 10, 2025  
-**Latest Addition**: Delphin contact information integrated throughout project
+**Last Updated**: October 15, 2025  
+**Latest Addition**: GitHub deployment + Docusaurus site live  
+**Repository**: [github.com/szemkoff/light-city-project](https://github.com/szemkoff/light-city-project)  
+**Live Site**: [szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/)
 
 ## Navigation Tips
 

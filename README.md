@@ -21,7 +21,13 @@ This project serves as a living documentation and development space for manifest
 
 ## Current Stage
 
-🌱 **Stage 1: Foundation & Vision** - Establishing core concepts and project structure
+🌱 **Stage 1: Foundation & Vision** (60% complete) - Establishing core concepts and project structure
+
+- ✅ Core documentation framework complete
+- ✅ GitHub repository and version control established
+- ✅ Live documentation site deployed at [szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/)
+- 🔄 Visual design system in progress
+- 🔄 Research materials being compiled
 
 See [Development Stages](docs/project/development-stages.md) for the complete roadmap.
 
@@ -34,17 +40,24 @@ See [Development Stages](docs/project/development-stages.md) for the complete ro
 
 ## Documentation
 
+View the complete documentation at **[szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/)**
+
 - **Concepts**: Core ideas, philosophy, and world-building
 - **Design**: Architecture, visual design, and aesthetic principles
 - **Technical**: Development guides, tools, and implementation
-- **Community**: Collaboration, governance, and engagement
+- **Research**: Bibliography, open questions, and source materials
 - **Project**: Planning, stages, and management
 
-## Contact & Community
+## Repository & Community
 
-*To be established as the project evolves*
+- **GitHub**: [github.com/szemkoff/light-city-project](https://github.com/szemkoff/light-city-project)
+- **Documentation**: [szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/)
+- **Version**: 0.3.0
+- **License**: MIT (code) / CC BY-SA 4.0 (documentation)
+
+Community channels to be established in Stage 3-4.
 
 ---
 
-**Last Updated**: October 10, 2025
+**Last Updated**: October 15, 2025
 
