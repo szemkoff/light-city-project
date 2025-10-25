@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkwebsite=globalThis.webpackChunkwebsite||[]).push([[1903],{1912:t=>{t.exports=JSON.parse('{"blogBasePath":"/light-city-project/blog","blogTitle":"Light City Updates","authorsListPath":"/light-city-project/blog/authors"}')}}]);

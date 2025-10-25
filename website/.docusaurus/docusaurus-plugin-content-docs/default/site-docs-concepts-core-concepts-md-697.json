@@ -8,17 +8,21 @@
   "permalink": "/light-city-project/docs/concepts/core-concepts",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/concepts/core-concepts.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/concepts/core-concepts.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "frontMatter": {
+    "id": "core-concepts",
+    "title": "Core Concepts",
+    "sidebar_label": "Core Concepts"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Communospheres",
-    "permalink": "/light-city-project/docs/concepts/communospheres"
+    "title": "🌟 Start Here",
+    "permalink": "/light-city-project/docs/START-HERE"
   },
   "next": {
-    "title": "Energy Systems",
-    "permalink": "/light-city-project/docs/concepts/energy-systems"
+    "title": "Philosophy",
+    "permalink": "/light-city-project/docs/concepts/philosophy"
   }
 }

@@ -8,17 +8,21 @@
   "permalink": "/light-city-project/docs/design/visual-language",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/design/visual-language.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/design/visual-language.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "frontMatter": {
+    "id": "visual-language",
+    "title": "Visual Language",
+    "sidebar_label": "Visual Language"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Layout & Diagram Set",
-    "permalink": "/light-city-project/docs/design/layout-diagrams"
+    "title": "Sacred Geometry",
+    "permalink": "/light-city-project/docs/concepts/sacred-geometry"
   },
   "next": {
-    "title": "Start Here",
-    "permalink": "/light-city-project/docs/intro"
+    "title": "Color and Light",
+    "permalink": "/light-city-project/docs/design/color-and-light"
   }
 }

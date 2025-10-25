@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Light City Project",
-  "tagline": "Manifesting Higher-Consciousness Civilization",
+  "tagline": "Anchoring a Higher-Consciousness Civilization",
   "favicon": "img/favicon.ico",
   "future": {
     "v4": {
@@ -47,10 +47,12 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.ts",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/"
         },
         "blog": {
           "showReadingTime": true,
+          "blogTitle": "Light City Updates",
+          "blogDescription": "Progress updates and insights on the Light City Project",
           "feedOptions": {
             "type": [
               "rss",
@@ -58,10 +60,7 @@ export default {
             ],
             "xslt": true
           },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          "onInlineTags": "warn",
-          "onInlineAuthors": "warn",
-          "onUntruncatedBlogPosts": "warn"
+          "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/"
         },
         "theme": {
           "customCss": "./src/css/custom.css"
@@ -70,7 +69,7 @@ export default {
     ]
   ],
   "themeConfig": {
-    "image": "img/docusaurus-social-card.jpg",
+    "image": "img/light-city-vision-1.jpg",
     "colorMode": {
       "respectPrefersColorScheme": true,
       "defaultMode": "light",
@@ -79,8 +78,9 @@ export default {
     "navbar": {
       "title": "Light City",
       "logo": {
-        "alt": "My Site Logo",
-        "src": "img/logo.svg"
+        "alt": "Light City Logo",
+        "src": "img/logo.svg",
+        "href": "/"
       },
       "items": [
         {
@@ -106,28 +106,36 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Docs",
+          "title": "Documentation",
           "items": [
             {
-              "label": "Tutorial",
-              "to": "/docs/intro"
+              "label": "Start Here",
+              "to": "/docs/START-HERE"
+            },
+            {
+              "label": "Core Concepts",
+              "to": "/docs/concepts/core-concepts"
+            },
+            {
+              "label": "Architecture",
+              "to": "/docs/design/architecture"
             }
           ]
         },
         {
-          "title": "Community",
+          "title": "Project",
           "items": [
             {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
+              "label": "Development Stages",
+              "to": "/docs/project/development-stages"
             },
             {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
+              "label": "Contributing",
+              "to": "/docs/project/contributing"
             },
             {
-              "label": "X",
-              "href": "https://x.com/docusaurus"
+              "label": "Quick Start",
+              "to": "/docs/project/quick-start-guide"
             }
           ]
         },
@@ -135,12 +143,12 @@ export default {
           "title": "More",
           "items": [
             {
-              "label": "Blog",
+              "label": "Updates",
               "to": "/blog"
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/szemkoff/light-city-project"
             }
           ]
         }

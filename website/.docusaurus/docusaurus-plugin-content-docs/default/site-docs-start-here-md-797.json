@@ -8,17 +8,17 @@
   "permalink": "/light-city-project/docs/START-HERE",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/START-HERE.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/START-HERE.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Documentation Index",
-    "permalink": "/light-city-project/docs/"
+  "frontMatter": {
+    "id": "START-HERE",
+    "title": "🌟 Start Here",
+    "sidebar_label": "🌟 Start Here"
   },
+  "sidebar": "tutorialSidebar",
   "next": {
-    "title": "Communospheres",
-    "permalink": "/light-city-project/docs/concepts/communospheres"
+    "title": "Core Concepts",
+    "permalink": "/light-city-project/docs/concepts/core-concepts"
   }
 }

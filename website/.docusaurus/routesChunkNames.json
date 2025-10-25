@@ -206,22 +206,26 @@
     },
     "content": "393be207"
   },
-  "/light-city-project/docs-203": {
+  "/light-city-project/docs-20a": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/light-city-project/docs-d4c": {
+  "/light-city-project/docs-e28": {
     "__comp": "a7bd4aaa",
     "__props": "3e7b93f0"
   },
-  "/light-city-project/docs-8fa": {
+  "/light-city-project/docs-e50": {
     "__comp": "a94703ab"
   },
-  "/light-city-project/docs/-3c1": {
+  "/light-city-project/docs/-860": {
     "__comp": "17896441",
     "content": "ef630e67"
+  },
+  "/light-city-project/docs/-ce9": {
+    "__comp": "17896441",
+    "content": "0e384e19"
   },
   "/light-city-project/docs/CHANGELOG-99d": {
     "__comp": "17896441",
@@ -259,17 +263,13 @@
     "__comp": "17896441",
     "content": "798ab04c"
   },
-  "/light-city-project/docs/design/layout-diagrams-471": {
+  "/light-city-project/docs/design/layout-diagrams-657": {
     "__comp": "17896441",
     "content": "d0838844"
   },
   "/light-city-project/docs/design/visual-language-4a6": {
     "__comp": "17896441",
     "content": "2d5065c4"
-  },
-  "/light-city-project/docs/intro-8d5": {
-    "__comp": "17896441",
-    "content": "0e384e19"
   },
   "/light-city-project/docs/project/contributing-55c": {
     "__comp": "17896441",
@@ -283,15 +283,11 @@
     "__comp": "17896441",
     "content": "86b47c56"
   },
-  "/light-city-project/docs/project/quick-start-guide-142": {
+  "/light-city-project/docs/project/quick-start-guide-e2d": {
     "__comp": "17896441",
     "content": "46a4b7e9"
   },
-  "/light-city-project/docs/project/stage-1-tasks-097": {
-    "__comp": "17896441",
-    "content": "ffc67c15"
-  },
-  "/light-city-project/docs/project/tools-and-workflows-7eb": {
+  "/light-city-project/docs/project/tools-and-workflows-a66": {
     "__comp": "17896441",
     "content": "cb346d49"
   },
@@ -303,15 +299,11 @@
     "__comp": "17896441",
     "content": "d25e1810"
   },
-  "/light-city-project/docs/research/spiritual/delphin-channeled-info-0ae": {
-    "__comp": "17896441",
-    "content": "667e670b"
-  },
   "/light-city-project/docs/START-HERE-8e2": {
     "__comp": "17896441",
     "content": "797b6692"
   },
-  "/light-city-project/docs/technical/github-docusaurus-setup-ad6": {
+  "/light-city-project/docs/technical/github-docusaurus-setup-9d9": {
     "__comp": "17896441",
     "content": "e51e00d5"
   },

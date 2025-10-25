@@ -1,6 +1,6 @@
 {
   "id": "project/contributing",
-  "title": "Contributing to Light City",
+  "title": "Contributing",
   "description": "Thank you for your interest in contributing to the Light City project! This document provides guidelines for how to participate and contribute meaningfully.",
   "source": "@site/docs/project/contributing.md",
   "sourceDirName": "project",
@@ -8,17 +8,21 @@
   "permalink": "/light-city-project/docs/project/contributing",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/project/contributing.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/project/contributing.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "frontMatter": {
+    "id": "contributing",
+    "title": "Contributing",
+    "sidebar_label": "Contributing"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Start Here",
-    "permalink": "/light-city-project/docs/intro"
+    "title": "Project Structure",
+    "permalink": "/light-city-project/docs/project/project-structure"
   },
   "next": {
-    "title": "Development Stages",
-    "permalink": "/light-city-project/docs/project/development-stages"
+    "title": "Bibliography",
+    "permalink": "/light-city-project/docs/research/bibliography"
   }
 }

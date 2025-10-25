@@ -1,5 +1,5 @@
 {
-  "id": "INDEX",
+  "id": "index",
   "title": "Documentation Index",
   "description": "Complete index of all Light City project documentation.",
   "source": "@site/docs/INDEX.md",
@@ -8,17 +8,12 @@
   "permalink": "/light-city-project/docs/",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/INDEX.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/INDEX.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Changelog",
-    "permalink": "/light-city-project/docs/CHANGELOG"
-  },
-  "next": {
-    "title": "🌟 Start Here",
-    "permalink": "/light-city-project/docs/START-HERE"
+  "frontMatter": {
+    "id": "index",
+    "title": "Documentation Index",
+    "sidebar_label": "Documentation Index"
   }
 }

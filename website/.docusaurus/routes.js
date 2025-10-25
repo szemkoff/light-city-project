@@ -79,21 +79,25 @@ export default [
   },
   {
     path: '/light-city-project/docs',
-    component: ComponentCreator('/light-city-project/docs', '203'),
+    component: ComponentCreator('/light-city-project/docs', '20a'),
     routes: [
       {
         path: '/light-city-project/docs',
-        component: ComponentCreator('/light-city-project/docs', 'd4c'),
+        component: ComponentCreator('/light-city-project/docs', 'e28'),
         routes: [
           {
             path: '/light-city-project/docs',
-            component: ComponentCreator('/light-city-project/docs', '8fa'),
+            component: ComponentCreator('/light-city-project/docs', 'e50'),
             routes: [
               {
                 path: '/light-city-project/docs/',
-                component: ComponentCreator('/light-city-project/docs/', '3c1'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/light-city-project/docs/', '860'),
+                exact: true
+              },
+              {
+                path: '/light-city-project/docs/',
+                component: ComponentCreator('/light-city-project/docs/', 'ce9'),
+                exact: true
               },
               {
                 path: '/light-city-project/docs/CHANGELOG',
@@ -151,19 +155,12 @@ export default [
               },
               {
                 path: '/light-city-project/docs/design/layout-diagrams',
-                component: ComponentCreator('/light-city-project/docs/design/layout-diagrams', '471'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/light-city-project/docs/design/layout-diagrams', '657'),
+                exact: true
               },
               {
                 path: '/light-city-project/docs/design/visual-language',
                 component: ComponentCreator('/light-city-project/docs/design/visual-language', '4a6'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/light-city-project/docs/intro',
-                component: ComponentCreator('/light-city-project/docs/intro', '8d5'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -187,21 +184,13 @@ export default [
               },
               {
                 path: '/light-city-project/docs/project/quick-start-guide',
-                component: ComponentCreator('/light-city-project/docs/project/quick-start-guide', '142'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/light-city-project/docs/project/stage-1-tasks',
-                component: ComponentCreator('/light-city-project/docs/project/stage-1-tasks', '097'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/light-city-project/docs/project/quick-start-guide', 'e2d'),
+                exact: true
               },
               {
                 path: '/light-city-project/docs/project/tools-and-workflows',
-                component: ComponentCreator('/light-city-project/docs/project/tools-and-workflows', '7eb'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/light-city-project/docs/project/tools-and-workflows', 'a66'),
+                exact: true
               },
               {
                 path: '/light-city-project/docs/research/bibliography',
@@ -216,12 +205,6 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/light-city-project/docs/research/spiritual/delphin-channeled-info',
-                component: ComponentCreator('/light-city-project/docs/research/spiritual/delphin-channeled-info', '0ae'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
                 path: '/light-city-project/docs/START-HERE',
                 component: ComponentCreator('/light-city-project/docs/START-HERE', '8e2'),
                 exact: true,
@@ -229,9 +212,8 @@ export default [
               },
               {
                 path: '/light-city-project/docs/technical/github-docusaurus-setup',
-                component: ComponentCreator('/light-city-project/docs/technical/github-docusaurus-setup', 'ad6'),
-                exact: true,
-                sidebar: "tutorialSidebar"
+                component: ComponentCreator('/light-city-project/docs/technical/github-docusaurus-setup', '9d9'),
+                exact: true
               }
             ]
           }

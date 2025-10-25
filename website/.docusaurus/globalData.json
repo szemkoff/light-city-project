@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/light-city-project/docs",
-          "mainDocId": "INDEX",
+          "mainDocId": "index",
           "docs": [
             {
               "id": "CHANGELOG",
@@ -57,8 +57,7 @@
             },
             {
               "id": "design/layout-diagrams",
-              "path": "/light-city-project/docs/design/layout-diagrams",
-              "sidebar": "tutorialSidebar"
+              "path": "/light-city-project/docs/design/layout-diagrams"
             },
             {
               "id": "design/visual-language",
@@ -66,14 +65,12 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "INDEX",
-              "path": "/light-city-project/docs/",
-              "sidebar": "tutorialSidebar"
+              "id": "index",
+              "path": "/light-city-project/docs/"
             },
             {
               "id": "intro",
-              "path": "/light-city-project/docs/intro",
-              "sidebar": "tutorialSidebar"
+              "path": "/light-city-project/docs/"
             },
             {
               "id": "project/contributing",
@@ -92,18 +89,11 @@
             },
             {
               "id": "project/quick-start-guide",
-              "path": "/light-city-project/docs/project/quick-start-guide",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "project/stage-1-tasks",
-              "path": "/light-city-project/docs/project/stage-1-tasks",
-              "sidebar": "tutorialSidebar"
+              "path": "/light-city-project/docs/project/quick-start-guide"
             },
             {
               "id": "project/tools-and-workflows",
-              "path": "/light-city-project/docs/project/tools-and-workflows",
-              "sidebar": "tutorialSidebar"
+              "path": "/light-city-project/docs/project/tools-and-workflows"
             },
             {
               "id": "research/bibliography",
@@ -116,27 +106,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "research/spiritual/delphin-channeled-info",
-              "path": "/light-city-project/docs/research/spiritual/delphin-channeled-info",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "START-HERE",
               "path": "/light-city-project/docs/START-HERE",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "technical/github-docusaurus-setup",
-              "path": "/light-city-project/docs/technical/github-docusaurus-setup",
-              "sidebar": "tutorialSidebar"
+              "path": "/light-city-project/docs/technical/github-docusaurus-setup"
             }
           ],
           "draftIds": [],
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/light-city-project/docs/CHANGELOG",
-                "label": "CHANGELOG"
+                "path": "/light-city-project/docs/START-HERE",
+                "label": "START-HERE"
               }
             }
           }

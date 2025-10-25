@@ -8,17 +8,21 @@
   "permalink": "/light-city-project/docs/project/project-structure",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/project/project-structure.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/project/project-structure.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "frontMatter": {
+    "id": "project-structure",
+    "title": "Project Structure",
+    "sidebar_label": "Project Structure"
+  },
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Development Stages",
     "permalink": "/light-city-project/docs/project/development-stages"
   },
   "next": {
-    "title": "Quick Start Guide",
-    "permalink": "/light-city-project/docs/project/quick-start-guide"
+    "title": "Contributing",
+    "permalink": "/light-city-project/docs/project/contributing"
   }
 }

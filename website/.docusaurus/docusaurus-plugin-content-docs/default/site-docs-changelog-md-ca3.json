@@ -8,13 +8,17 @@
   "permalink": "/light-city-project/docs/CHANGELOG",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/CHANGELOG.md",
+  "editUrl": "https://github.com/szemkoff/light-city-project/edit/main/docs/CHANGELOG.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "frontMatter": {
+    "id": "CHANGELOG",
+    "title": "Changelog",
+    "sidebar_label": "Changelog"
+  },
   "sidebar": "tutorialSidebar",
-  "next": {
-    "title": "Documentation Index",
-    "permalink": "/light-city-project/docs/"
+  "previous": {
+    "title": "Open Questions",
+    "permalink": "/light-city-project/docs/research/open-questions"
   }
 }
