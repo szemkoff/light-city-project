@@ -214,7 +214,7 @@ Recent contact information reveals **Delphin**—a crystal city on planet Israel
 
 This validates that Light City is accessing a real archetypal pattern, not creating from imagination alone.
 
-*See: [Delphin Channeled Information](../../research/spiritual/delphin-channeled-info.md) and [Communospheres](communospheres.md) for details*
+*See [Communospheres](/docs/concepts/communospheres) for details*
 
 ## Living Questions
 
@@ -234,13 +234,13 @@ These questions guide ongoing exploration:
 
 To deepen your understanding:
 
-1. Read [Philosophy](philosophy.md) for deeper conceptual exploration
-2. Explore [Architecture](../design/architecture.md) for physical/energetic design
-3. Review [Purpose and Mission](purpose-and-mission.md) for project goals
-4. Study [Sacred Geometry](sacred-geometry.md) for underlying patterns
+1. Read [Philosophy](/docs/concepts/philosophy) for deeper conceptual exploration
+2. Explore [Architecture](/docs/design/architecture) for physical/energetic design
+3. Review [Purpose and Mission](/docs/concepts/purpose-and-mission) for project goals
+4. Study [Sacred Geometry](/docs/concepts/sacred-geometry) for underlying patterns
 
 ---
 
 **Last Updated**: October 10, 2025  
-**Related Documents**: [Philosophy](philosophy.md), [Architecture](../design/architecture.md), [Development Stages](../project/development-stages.md)
+**Related Documents**: [Philosophy](/docs/concepts/philosophy), [Architecture](/docs/design/architecture), [Development Stages](/docs/project/development-stages)
 

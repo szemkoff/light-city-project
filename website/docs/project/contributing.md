@@ -64,10 +64,10 @@ Thank you for your interest in contributing to the Light City project! This docu
 
 Before contributing, familiarize yourself with:
 
-- [Core Concepts](../concepts/core-concepts.md)
-- [Purpose and Mission](../concepts/purpose-and-mission.md)
-- [Development Stages](development-stages.md)
-- [Project Structure](project-structure.md)
+- [Core Concepts](/docs/concepts/core-concepts)
+- [Purpose and Mission](/docs/concepts/purpose-and-mission)
+- [Development Stages](/docs/project/development-stages)
+- [Project Structure](/docs/project/project-structure)
 
 ### 2. Find Your Contribution Area
 

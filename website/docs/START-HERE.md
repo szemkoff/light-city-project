@@ -18,29 +18,29 @@ This is a comprehensive framework for documenting, developing, and manifesting L
 
 Read these three documents in order:
 
-1. **[README.md](README.md)** - What is this project?
-2. **[Core Concepts](docs/concepts/core-concepts.md)** - What is Light City?
-3. **[Development Stages](docs/project/development-stages.md)** - Where are we going?
+1. **[Core Concepts](/docs/concepts/core-concepts)** - What is Light City?
+2. **[Development Stages](/docs/project/development-stages)** - Where are we going?
+3. **[Philosophy](/docs/concepts/philosophy)** - Philosophical underpinnings
 
 ### 2. Get Oriented (5 minutes)
 
-- **[Quick Start Guide](docs/project/quick-start-guide.md)** - Practical next steps
-- **[Project Structure](docs/project/project-structure.md)** - How everything is organized
-- **[Documentation Index](docs/INDEX.md)** - Complete file map
+- **[Quick Start Guide](/docs/project/quick-start-guide)** - Practical next steps
+- **[Project Structure](/docs/project/project-structure)** - How everything is organized
+- **[Documentation Index](/docs/)** - Complete file map
 
 ### 3. Choose Your Path
 
 **If you want to contribute:**
-→ Read [Contributing Guidelines](docs/project/contributing.md)
+→ Read [Contributing Guidelines](/docs/project/contributing)
 
 **If you're setting up to work:**
-→ Read [Tools and Workflows](docs/project/tools-and-workflows.md)
+→ Read [Tools and Workflows](/docs/project/tools-and-workflows)
 
 **If you want to understand deeply:**
-→ Explore [Philosophy](docs/concepts/philosophy.md) and [Architecture](docs/design/architecture.md)
+→ Explore [Philosophy](/docs/concepts/philosophy) and [Architecture](/docs/design/architecture)
 
 **If you're planning your work:**
-→ Check [Stage 1 Tasks](planning/stage-1-tasks.md)
+→ Check [Development Stages](/docs/project/development-stages)
 
 ## Current Status
 
@@ -133,10 +133,10 @@ Pick 1-2 to start:
 
 ### Documentation
 Most questions are answered in:
-- [Quick Start Guide](docs/project/quick-start-guide.md)
-- [Project Structure](docs/project/project-structure.md)
-- [Contributing](docs/project/contributing.md)
-- [Tools and Workflows](docs/project/tools-and-workflows.md)
+- [Quick Start Guide](/docs/project/quick-start-guide)
+- [Project Structure](/docs/project/project-structure)
+- [Contributing](/docs/project/contributing)
+- [Tools and Workflows](/docs/project/tools-and-workflows)
 
 ### Community
 *Community channels to be established in Stage 3-4*
@@ -181,10 +181,10 @@ See [CHANGELOG.md](CHANGELOG.md) for complete version history.
 
 Choose your next step:
 
-→ **Explore**: [Core Concepts](docs/concepts/core-concepts.md)  
-→ **Begin**: [Quick Start Guide](docs/project/quick-start-guide.md)  
-→ **Contribute**: [Contributing](docs/project/contributing.md)  
-→ **Understand**: [Documentation Index](docs/INDEX.md)
+→ **Explore**: [Core Concepts](/docs/concepts/core-concepts)  
+→ **Begin**: [Quick Start Guide](/docs/project/quick-start-guide)  
+→ **Contribute**: [Contributing](/docs/project/contributing)  
+→ **Understand**: [Documentation Index](/docs/)
 
 **Welcome, builder. Let's begin.** ✨
 

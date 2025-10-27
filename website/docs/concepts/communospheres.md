@@ -313,10 +313,10 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 ## Connection to Other Concepts
 
 ### Related Documents
-- [Architecture](../design/architecture.md) - Overall city design
-- [Sacred Geometry](sacred-geometry.md) - Sphere significance
-- [Energy Systems](energy-systems.md) - Resonance technology
-- [Core Concepts](core-concepts.md) - Unity consciousness
+- [Architecture](/docs/design/architecture) - Overall city design
+- [Sacred Geometry](/docs/concepts/sacred-geometry) - Sphere significance
+- [Energy Systems](/docs/concepts/energy-systems) - Resonance technology
+- [Core Concepts](/docs/concepts/core-concepts) - Unity consciousness
 
 ### Integration Points
 - Communospheres are key component of Light City layout
@@ -341,6 +341,5 @@ This isn't speculation—it's adaptation of proven technology.
 **Status**: New concept document based on Delphin information  
 **Created**: October 10, 2025  
 **Priority**: High - Core architectural component  
-**Next Steps**: Integrate into architecture.md, develop detailed designs  
-**Related Research**: [Delphin Channeled Info](../../research/spiritual/delphin-channeled-info.md)
+**Next Steps**: Integrate into architecture.md, develop detailed designs
 

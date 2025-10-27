@@ -289,5 +289,5 @@ Based on Delphin's proven model, the central crystal spire serves as the primary
 **Created**: October 10, 2025  
 **Priority**: High - Core to entire Light City function  
 **Next Steps**: Deep research into each technology area  
-**Related**: [Architecture](../design/architecture.md), [Communospheres](communospheres.md), [Delphin Info](../../research/spiritual/delphin-channeled-info.md)
+**Related**: [Architecture](/docs/design/architecture), [Communospheres](/docs/concepts/communospheres)
 

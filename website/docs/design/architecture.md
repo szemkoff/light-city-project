@@ -84,7 +84,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - **Natural Surroundings**: Integration with forests and landscape
 - **Resonance Field**: Maintained throughout entire city structure
 
-*See [Communospheres](../concepts/communospheres.md) for detailed explanation*
+*See [Communospheres](/docs/concepts/communospheres) for detailed explanation*
 
 ### The Central Spire
 
@@ -242,7 +242,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - Natural alignment through resonance field
 - Spontaneous learning and connection
 
-*See detailed documentation: [Communospheres](../concepts/communospheres.md)*
+*See detailed documentation: [Communospheres](/docs/concepts/communospheres)*
 
 ### 5. Creative Studios
 
@@ -389,5 +389,5 @@ Light City architecture is:
 
 **Status**: Foundational vision - requires significant expansion and visualization  
 **Last Updated**: October 10, 2025  
-**Related**: [Core Concepts](../concepts/core-concepts.md), [Sacred Geometry](../concepts/sacred-geometry.md)
+**Related**: [Core Concepts](/docs/concepts/core-concepts), [Sacred Geometry](/docs/concepts/sacred-geometry)
 
