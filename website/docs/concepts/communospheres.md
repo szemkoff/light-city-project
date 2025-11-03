@@ -75,6 +75,52 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 - Private living quarters
 - Integrated amenities and services
 
+#### Communosphere Structure Diagram
+
+```mermaid
+graph TB
+    subgraph CS["🔮 Communosphere<br/>Single Living Sphere"]
+        subgraph Inner["Inner Spaces"]
+            CA["💫 Central Commons<br/>Gathering Space"]
+            LP["📚 Learning Plaza<br/>Knowledge Transfer"]
+            MC["🎨 Creative Chambers<br/>Expression & Art"]
+        end
+        
+        subgraph Living["Living Quarters"]
+            PQ["🏠 Private Quarters<br/>Individual/Family"]
+            SCS["🤝 Shared Community<br/>Services"]
+        end
+        
+        subgraph Support["Support Systems"]
+            Water["💧 Water Systems"]
+            Air["🌬️ Air Systems"]
+            Energy["⚡ Energy Systems"]
+        end
+        
+        CA -.->|Consciousness<br/>Connection| PQ
+        LP -->|Knowledge<br/>Transfer| PQ
+        MC -->|Creative<br/>Expression| PQ
+        
+        Water -->|Sustains| PQ
+        Air -->|Sustains| PQ
+        Energy -->|Powers| CA
+        Energy -->|Powers| LP
+        Energy -->|Powers| MC
+    end
+    
+    style CS fill:#e6f3ff,stroke:#667eea,stroke-width:3px,color:#333
+    style CA fill:#b0e0e6,stroke:#333
+    style LP fill:#b0e0e6,stroke:#333
+    style MC fill:#b0e0e6,stroke:#333
+    style PQ fill:#a0d8ff,stroke:#333
+    style SCS fill:#a0d8ff,stroke:#333
+    style Inner fill:#f0f8ff,stroke:#667eea,stroke-width:2px
+    style Living fill:#f0f8ff,stroke:#667eea,stroke-width:2px
+    style Support fill:#fffacd,stroke:#daa520,stroke-width:2px
+```
+
+---
+
 ### Consciousness Technology
 
 **Collective Awareness**:
