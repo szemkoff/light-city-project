@@ -21,6 +21,55 @@ Your original Light City visions that sparked this project:
 
 Light City is a multidimensional vision that exists simultaneously across several planes of reality:
 
+### Light City Dimensions
+
+```mermaid
+graph TB
+    LC["✨ Light City<br/>Multidimensional Vision"]
+    
+    LC -->|Dimension 1| EB["🔮 Etheric Blueprint<br/>Higher-Dimensional"]
+    LC -->|Dimension 2| CV["🌍 Collective Vision<br/>Future Timeline"]
+    LC -->|Dimension 3| PM["💫 Personal Mission<br/>Individual Calling"]
+    
+    EB -->|Characteristics| EBC1["White-Gold Crystal"]
+    EB -->|Characteristics| EBC2["Semi-Transparent"]
+    EB -->|Characteristics| EBC3["Harmonic Tone"]
+    EB -->|Characteristics| EBC4["Central Spire Hub"]
+    
+    CV -->|Principles| CVP1["Higher Ethics"]
+    CV -->|Principles| CVP2["Compassion"]
+    CV -->|Principles| CVP3["Unity Consciousness"]
+    CV -->|Manifests| CVM["Collective Alignment"]
+    
+    PM -->|Forms| PMF1["Physical Building"]
+    PM -->|Forms| PMF2["Energetic Holding"]
+    PM -->|Forms| PMF3["Bridge Roles"]
+    PM -->|Requires| PMR["Personal Transformation"]
+    
+    EB -.->|Informs| CV
+    CV -.->|Guides| PM
+    PM -.->|Anchors| EB
+    
+    style LC fill:#667eea,stroke:#fff,color:#fff,stroke-width:3px
+    style EB fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
+    style CV fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
+    style PM fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
+    style CVM fill:#f093fb,stroke:#fff,color:#fff
+    style PMR fill:#f093fb,stroke:#fff,color:#fff
+    style EBC1 fill:#a0d8ff,stroke:#333
+    style EBC2 fill:#a0d8ff,stroke:#333
+    style EBC3 fill:#a0d8ff,stroke:#333
+    style EBC4 fill:#a0d8ff,stroke:#333
+    style CVP1 fill:#a0d8ff,stroke:#333
+    style CVP2 fill:#a0d8ff,stroke:#333
+    style CVP3 fill:#a0d8ff,stroke:#333
+    style PMF1 fill:#a0d8ff,stroke:#333
+    style PMF2 fill:#a0d8ff,stroke:#333
+    style PMF3 fill:#a0d8ff,stroke:#333
+```
+
+---
+
 ### 1. The Etheric Blueprint
 
 Light City exists as an **etheric template** in Earth's higher-dimensional field—a city of light suspended between the physical and spiritual planes. This is not metaphorical; in certain spiritual traditions, such structures are understood to exist in subtle energy states, accessible to consciousness but not (yet) to physical senses.

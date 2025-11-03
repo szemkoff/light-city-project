@@ -40,6 +40,55 @@ These patterns exist at the intersection of matter and consciousness, making the
 
 ## Core Geometric Forms
 
+### Sacred Geometry Reference
+
+```mermaid
+graph LR
+    SG["✨ Sacred Geometry<br/>Universal Patterns"]
+    
+    SG --> C["⭕ Circle<br/>Unity & Wholeness"]
+    SG --> Sp["🌀 Spiral<br/>Evolution & Ascension"]
+    SG --> VP["🔘 Vesica Piscis<br/>Intersection & Birth"]
+    SG --> FL["🌸 Flower of Life<br/>Creation Pattern"]
+    SG --> PS["🧊 Platonic Solids<br/>Building Blocks"]
+    SG --> GR["φ Golden Ratio<br/>Divine Proportion"]
+    SG --> MK["⭐ Merkaba<br/>Light Body"]
+    
+    C -->|Application| CApp["Plazas<br/>City Layout"]
+    Sp -->|Application| SpApp["Pathways<br/>Energy Flow"]
+    VP -->|Application| VPApp["Doorways<br/>Portals"]
+    FL -->|Application| FLApp["Grid Overlay<br/>Art"]
+    PS -->|Application| PSApp["Buildings<br/>Installations"]
+    GR -->|Application| GRApp["Proportions<br/>Design"]
+    MK -->|Application| MKApp["City Energy<br/>Meditation"]
+    
+    C -->|Energy| CEnergy["Contains<br/>Unifies"]
+    Sp -->|Energy| SpEnergy["Expands<br/>Ascends"]
+    VP -->|Energy| VPEnergy["Portals<br/>Transforms"]
+    FL -->|Energy| FLEnergy["Templates<br/>Generates"]
+    PS -->|Energy| PSEnergy["Elements<br/>Properties"]
+    GR -->|Energy| GREnergy["Resonates<br/>Harmonizes"]
+    MK -->|Energy| MKEnergy["Bridges<br/>Elevates"]
+    
+    style SG fill:#667eea,stroke:#fff,color:#fff,stroke-width:3px
+    style C fill:#a0d8ff,stroke:#333
+    style Sp fill:#a0d8ff,stroke:#333
+    style VP fill:#a0d8ff,stroke:#333
+    style FL fill:#a0d8ff,stroke:#333
+    style PS fill:#a0d8ff,stroke:#333
+    style GR fill:#a0d8ff,stroke:#333
+    style MK fill:#a0d8ff,stroke:#333
+    style CApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+    style SpApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+    style VPApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+    style FLApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+    style PSApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+    style GRApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+    style MKApp fill:#b0e0e6,stroke:#333,stroke-width:1px
+```
+
+---
+
 ### The Circle
 **Symbolism**: Unity, wholeness, infinity, cycles  
 **Application**: Overall city layout, plazas, gathering spaces  
