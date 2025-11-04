@@ -1,0 +1,27 @@
+/* Custom CSS for Light City Docusaurus site */
+
+:root {
+  --ifm-color-primary: #667eea;
+  --ifm-color-primary-dark: #5a67d8;
+  --ifm-color-primary-darker: #4c51bf;
+  --ifm-color-primary-darkest: #3f46b8;
+  --ifm-color-primary-light: #7c8ff5;
+  --ifm-color-primary-lighter: #929dfd;
+  --ifm-color-primary-lightest: #c5cef8;
+}
+
+/* Mermaid diagram styling */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* Code blocks */
+pre {
+  background-color: #f5f5f5;
+}
+
+html[data-theme='dark'] pre {
+  background-color: #1e1e1e;
+}
