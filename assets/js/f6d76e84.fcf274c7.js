@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkwebsite=globalThis.webpackChunkwebsite||[]).push([[6959],{923:t=>{t.exports=JSON.parse('{"metadata":{"permalink":"/light-city-project/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Progress updates and insights on the Light City Project","blogTitle":"Light City Updates"}}')}}]);
