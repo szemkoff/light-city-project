@@ -1,0 +1,168 @@
+/* Hero Banner */
+.heroBanner {
+  position: relative;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.85) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 4rem 2rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.buttons .button {
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+html[data-theme='dark'] .features {
+  background: #1b1b1d;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #667eea;
+}
+
+html[data-theme='dark'] .feature h3 {
+  color: #929dfd;
+}
+
+.feature p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.feature a {
+  color: #667eea;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feature a:hover {
+  text-decoration: underline;
+}
+
+/* Vision Section */
+.visionSection {
+  padding: 4rem 2rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #667eea;
+}
+
+html[data-theme='dark'] .sectionTitle {
+  color: #929dfd;
+}
+
+.visionImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.visionText {
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.visionText p {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+  
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .buttons .button {
+    width: 100%;
+  }
+  
+  .visionText {
+    padding: 1rem 0;
+  }
+}
+

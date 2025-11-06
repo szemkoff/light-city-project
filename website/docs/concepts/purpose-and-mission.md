@@ -1,9 +1,3 @@
----
-id: purpose-and-mission
-title: Purpose and Mission
-sidebar_label: Purpose and Mission
----
-
 # Purpose and Mission
 
 ## Project Purpose
@@ -210,5 +204,5 @@ Use these questions to ensure ongoing alignment:
 ---
 
 **Last Updated**: October 10, 2025  
-**Related**: [Core Concepts](/docs/concepts/core-concepts), [Philosophy](/docs/concepts/philosophy), [Development Stages](/docs/project/development-stages)
+**Related**: [Core Concepts](core-concepts.md), [Philosophy](philosophy.md), [Development Stages](../project/development-stages.md)
 

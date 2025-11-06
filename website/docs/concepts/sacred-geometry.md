@@ -1,9 +1,3 @@
----
-id: sacred-geometry
-title: Sacred Geometry
-sidebar_label: Sacred Geometry
----
-
 # Sacred Geometry
 
 *This document explores the sacred geometric principles underlying Light City's design and energetic structure.*
@@ -11,18 +5,6 @@ sidebar_label: Sacred Geometry
 ## Overview
 
 Sacred geometry is the study of geometric forms and their metaphysical meanings, mathematical relationships, and energetic properties. In Light City, sacred geometry is foundational—not decorative.
-
-### Visual Inspiration
-
-The sacred geometry principles manifest in both your vision and the real-world example of Delphin:
-
-![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
-
-![Delphin Sacred Geometry in Action](/img/inspiration/delphin-aerial-view-1.png)
-
-Notice how both exhibit circular, concentric patterns with a central focus point—the manifestation of sacred geometric principles in actual form.
-
----
 
 ## Why Sacred Geometry?
 
@@ -39,55 +21,6 @@ Sacred geometric proportions naturally create beauty and harmony, resonating wit
 These patterns exist at the intersection of matter and consciousness, making them ideal for structures meant to bridge dimensions.
 
 ## Core Geometric Forms
-
-### Sacred Geometry Reference
-
-```mermaid
-graph LR
-    SG["✨ Sacred Geometry<br/>Universal Patterns"]
-    
-    SG --> C["⭕ Circle<br/>Unity & Wholeness"]
-    SG --> Sp["🌀 Spiral<br/>Evolution & Ascension"]
-    SG --> VP["🔘 Vesica Piscis<br/>Intersection & Birth"]
-    SG --> FL["🌸 Flower of Life<br/>Creation Pattern"]
-    SG --> PS["🧊 Platonic Solids<br/>Building Blocks"]
-    SG --> GR["φ Golden Ratio<br/>Divine Proportion"]
-    SG --> MK["⭐ Merkaba<br/>Light Body"]
-    
-    C -->|Application| CApp["Plazas<br/>City Layout"]
-    Sp -->|Application| SpApp["Pathways<br/>Energy Flow"]
-    VP -->|Application| VPApp["Doorways<br/>Portals"]
-    FL -->|Application| FLApp["Grid Overlay<br/>Art"]
-    PS -->|Application| PSApp["Buildings<br/>Installations"]
-    GR -->|Application| GRApp["Proportions<br/>Design"]
-    MK -->|Application| MKApp["City Energy<br/>Meditation"]
-    
-    C -->|Energy| CEnergy["Contains<br/>Unifies"]
-    Sp -->|Energy| SpEnergy["Expands<br/>Ascends"]
-    VP -->|Energy| VPEnergy["Portals<br/>Transforms"]
-    FL -->|Energy| FLEnergy["Templates<br/>Generates"]
-    PS -->|Energy| PSEnergy["Elements<br/>Properties"]
-    GR -->|Energy| GREnergy["Resonates<br/>Harmonizes"]
-    MK -->|Energy| MKEnergy["Bridges<br/>Elevates"]
-    
-    style SG fill:#667eea,stroke:#fff,color:#fff,stroke-width:3px
-    style C fill:#a0d8ff,stroke:#333
-    style Sp fill:#a0d8ff,stroke:#333
-    style VP fill:#a0d8ff,stroke:#333
-    style FL fill:#a0d8ff,stroke:#333
-    style PS fill:#a0d8ff,stroke:#333
-    style GR fill:#a0d8ff,stroke:#333
-    style MK fill:#a0d8ff,stroke:#333
-    style CApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-    style SpApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-    style VPApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-    style FLApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-    style PSApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-    style GRApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-    style MKApp fill:#b0e0e6,stroke:#333,stroke-width:1px
-```
-
----
 
 ### The Circle
 **Symbolism**: Unity, wholeness, infinity, cycles  
@@ -297,5 +230,5 @@ Sacred geometry in Light City isn't academic—it's lived:
 
 **Status**: Foundation document - to be significantly expanded  
 **Last Updated**: October 10, 2025  
-**Related**: [Architecture](/docs/design/architecture), [Core Concepts](/docs/concepts/core-concepts)
+**Related**: [Architecture](../design/architecture.md), [Core Concepts](core-concepts.md)
 

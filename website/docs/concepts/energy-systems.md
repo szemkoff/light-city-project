@@ -1,9 +1,3 @@
----
-id: energy-systems
-title: Energy Systems
-sidebar_label: Energy Systems
----
-
 # Energy Systems
 
 *This document explores the energy generation, distribution, and consciousness technologies of Light City*
@@ -16,18 +10,6 @@ Light City operates on multiple energy levels simultaneously:
 - **Consciousness Energy**: Awareness, intention, collective field
 
 All three are integrated through crystalline architecture and sacred geometry.
-
-### Visual Reference
-
-Your visionary conception of Light City's crystalline energy architecture:
-
-![Light City Energy Vision](/img/inspiration/light-city-vision-2.jpg)
-
-Delphin's crystal spire and energy system in action (visible as the central glowing structure):
-
-![Delphin Energy System](/img/inspiration/delphin-aerial-view-2.png)
-
----
 
 ## The Crystal Spire Energy System
 
@@ -61,45 +43,6 @@ Based on Delphin's proven model, the central crystal spire serves as the primary
 - Underground or subtle-field distribution
 - No visible power lines—energetic transmission
 
-#### Energy Flow Diagram
-
-```mermaid
-graph TD
-    CS["🔮 Central Crystal Spire<br/>Power Generation & Hub"]
-    
-    CS -->|Crystal Energy| SG["✨ Sacred Geometric Grid<br/>Distribution Network"]
-    
-    SG -->|Energy Distribution| C1["🏠 Communosphere 1"]
-    SG -->|Energy Distribution| C2["🏠 Communosphere 2"]
-    SG -->|Energy Distribution| C3["🏠 Communosphere 3"]
-    SG -->|Energy Distribution| C4["🏠 Communosphere 4"]
-    
-    SG -->|Energy Supply| T["🏛️ Temples & Sacred Spaces"]
-    SG -->|Energy Supply| S["🎨 Studios & Facilities"]
-    SG -->|Energy Supply| P["📚 Learning Centers"]
-    
-    C1 -->|Maintains| RF["🌊 Resonance Field"]
-    C2 -->|Maintains| RF
-    C3 -->|Maintains| RF
-    C4 -->|Maintains| RF
-    T -->|Maintains| RF
-    S -->|Maintains| RF
-    P -->|Maintains| RF
-    
-    style CS fill:#667eea,stroke:#fff,color:#fff,stroke-width:3px
-    style SG fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style RF fill:#f093fb,stroke:#fff,color:#fff,stroke-width:2px
-    style C1 fill:#a0d8ff,stroke:#333
-    style C2 fill:#a0d8ff,stroke:#333
-    style C3 fill:#a0d8ff,stroke:#333
-    style C4 fill:#a0d8ff,stroke:#333
-    style T fill:#b0e0e6,stroke:#333
-    style S fill:#b0e0e6,stroke:#333
-    style P fill:#b0e0e6,stroke:#333
-```
-
----
-
 ## Resonant Frequency System
 
 ### The Base Frequency
@@ -119,34 +62,6 @@ graph TD
 - Permeates entire city space
 - Felt by inhabitants as harmonic presence
 - Possibly audible as gentle tone or hum
-
-#### Resonance System Diagram
-
-```mermaid
-graph LR
-    CS["🔮 Crystal Spire<br/>Frequency Generator"]
-    
-    CS -->|Base Frequency| RF["🌊 Resonance Field<br/>Maintained Throughout City"]
-    
-    RF -->|Consciousness<br/>Connection| I["👥 Individual<br/>Inhabitants"]
-    
-    I -->|Collective<br/>Awareness| CA["🧠 Collective<br/>Consciousness"]
-    
-    CA -->|Knowledge<br/>Transfer| I
-    
-    RF -->|Harmonic<br/>Environment| HC["💖 Heart-Brain<br/>Coherence"]
-    
-    RF -->|Elevated<br/>State| ES["✨ Elevated<br/>Consciousness"]
-    
-    style CS fill:#667eea,stroke:#fff,color:#fff,stroke-width:2px
-    style RF fill:#f093fb,stroke:#fff,color:#fff,stroke-width:2px
-    style CA fill:#764ba2,stroke:#fff,color:#fff
-    style I fill:#a0d8ff,stroke:#333
-    style HC fill:#ffb347,stroke:#333
-    style ES fill:#90EE90,stroke:#333
-```
-
----
 
 ### How Resonance Works
 
@@ -368,5 +283,5 @@ graph LR
 **Created**: October 10, 2025  
 **Priority**: High - Core to entire Light City function  
 **Next Steps**: Deep research into each technology area  
-**Related**: [Architecture](/docs/design/architecture), [Communospheres](/docs/concepts/communospheres)
+**Related**: [Architecture](../design/architecture.md), [Communospheres](communospheres.md), [Delphin Info](../../research/spiritual/delphin-channeled-info.md)
 

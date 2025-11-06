@@ -1,9 +1,3 @@
----
-id: quick-start-guide
-title: Quick Start Guide
-sidebar_label: Quick Start Guide
----
-
 # Quick Start Guide
 
 Welcome to the Light City project! This guide will help you get started quickly.
@@ -23,16 +17,16 @@ Light City is a multi-dimensional vision of a higher-consciousness civilization.
 
 Read these essential documents:
 
-1. **[Core Concepts](/docs/concepts/core-concepts)** - Foundational ideas
-2. **[Development Stages](/docs/project/development-stages)** - Where we're going
-3. **[Philosophy](/docs/concepts/philosophy)** - Philosophical foundations
+1. **[README.md](../../README.md)** - Project overview
+2. **[Core Concepts](../concepts/core-concepts.md)** - Foundational ideas
+3. **[Development Stages](development-stages.md)** - Where we're going
 
 ### 2. Orient Yourself (10 minutes)
 
 Review the project structure:
 
-- **[Project Structure](/docs/project/project-structure)** - How everything is organized
-- Browse the documentation to see what's available
+- **[Project Structure](project-structure.md)** - How everything is organized
+- Browse the `docs/` folder to see what's available
 - Look at the `assets/` folder for visual inspiration
 
 ### 3. Set Up Your Environment (30 minutes)
@@ -235,15 +229,15 @@ Pick 2-3 to get started:
 
 ### Tools Setup
 
-See detailed guide: [Tools and Workflows](/docs/project/tools-and-workflows)
+See detailed guide: [Tools and Workflows](tools-and-workflows.md)
 
 ## Getting Help
 
 ### Self-Help
 
 1. Read relevant documentation
-2. Review [Project Structure](/docs/project/project-structure)
-3. Check [Contributing Guide](/docs/project/contributing)
+2. Review [Project Structure](project-structure.md)
+3. Check [Contributing Guide](contributing.md)
 4. Explore related documents
 
 ### Community Help
@@ -273,5 +267,5 @@ Welcome, builder. Let's begin.
 ---
 
 **Last Updated**: October 10, 2025  
-**Next**: [Core Concepts](/docs/concepts/core-concepts) | [Development Stages](/docs/project/development-stages)
+**Next**: [Core Concepts](../concepts/core-concepts.md) | [Development Stages](development-stages.md)
 

@@ -1,74 +1,10 @@
----
-id: core-concepts
-title: Core Concepts
-sidebar_label: Core Concepts
----
-
 # Core Concepts
 
 This document outlines the foundational concepts and principles of the Light City project.
 
-## Vision
-
-Your original Light City visions that sparked this project:
-
-![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
-![Light City Vision 2](/img/inspiration/light-city-vision-2.jpg)
-
----
-
 ## What is Light City?
 
 Light City is a multidimensional vision that exists simultaneously across several planes of reality:
-
-### Light City Dimensions
-
-```mermaid
-graph TB
-    LC["✨ Light City<br/>Multidimensional Vision"]
-    
-    LC -->|Dimension 1| EB["🔮 Etheric Blueprint<br/>Higher-Dimensional"]
-    LC -->|Dimension 2| CV["🌍 Collective Vision<br/>Future Timeline"]
-    LC -->|Dimension 3| PM["💫 Personal Mission<br/>Individual Calling"]
-    
-    EB -->|Characteristics| EBC1["White-Gold Crystal"]
-    EB -->|Characteristics| EBC2["Semi-Transparent"]
-    EB -->|Characteristics| EBC3["Harmonic Tone"]
-    EB -->|Characteristics| EBC4["Central Spire Hub"]
-    
-    CV -->|Principles| CVP1["Higher Ethics"]
-    CV -->|Principles| CVP2["Compassion"]
-    CV -->|Principles| CVP3["Unity Consciousness"]
-    CV -->|Manifests| CVM["Collective Alignment"]
-    
-    PM -->|Forms| PMF1["Physical Building"]
-    PM -->|Forms| PMF2["Energetic Holding"]
-    PM -->|Forms| PMF3["Bridge Roles"]
-    PM -->|Requires| PMR["Personal Transformation"]
-    
-    EB -.->|Informs| CV
-    CV -.->|Guides| PM
-    PM -.->|Anchors| EB
-    
-    style LC fill:#667eea,stroke:#fff,color:#fff,stroke-width:3px
-    style EB fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style CV fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style PM fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style CVM fill:#f093fb,stroke:#fff,color:#fff
-    style PMR fill:#f093fb,stroke:#fff,color:#fff
-    style EBC1 fill:#a0d8ff,stroke:#333
-    style EBC2 fill:#a0d8ff,stroke:#333
-    style EBC3 fill:#a0d8ff,stroke:#333
-    style EBC4 fill:#a0d8ff,stroke:#333
-    style CVP1 fill:#a0d8ff,stroke:#333
-    style CVP2 fill:#a0d8ff,stroke:#333
-    style CVP3 fill:#a0d8ff,stroke:#333
-    style PMF1 fill:#a0d8ff,stroke:#333
-    style PMF2 fill:#a0d8ff,stroke:#333
-    style PMF3 fill:#a0d8ff,stroke:#333
-```
-
----
 
 ### 1. The Etheric Blueprint
 
@@ -272,7 +208,7 @@ Recent contact information reveals **Delphin**—a crystal city on planet Israel
 
 This validates that Light City is accessing a real archetypal pattern, not creating from imagination alone.
 
-*See [Communospheres](/docs/concepts/communospheres) for details*
+*See: [Delphin Channeled Information](../../research/spiritual/delphin-channeled-info.md) and [Communospheres](communospheres.md) for details*
 
 ## Living Questions
 
@@ -292,13 +228,13 @@ These questions guide ongoing exploration:
 
 To deepen your understanding:
 
-1. Read [Philosophy](/docs/concepts/philosophy) for deeper conceptual exploration
-2. Explore [Architecture](/docs/design/architecture) for physical/energetic design
-3. Review [Purpose and Mission](/docs/concepts/purpose-and-mission) for project goals
-4. Study [Sacred Geometry](/docs/concepts/sacred-geometry) for underlying patterns
+1. Read [Philosophy](philosophy.md) for deeper conceptual exploration
+2. Explore [Architecture](../design/architecture.md) for physical/energetic design
+3. Review [Purpose and Mission](purpose-and-mission.md) for project goals
+4. Study [Sacred Geometry](sacred-geometry.md) for underlying patterns
 
 ---
 
 **Last Updated**: October 10, 2025  
-**Related Documents**: [Philosophy](/docs/concepts/philosophy), [Architecture](/docs/design/architecture), [Development Stages](/docs/project/development-stages)
+**Related Documents**: [Philosophy](philosophy.md), [Architecture](../design/architecture.md), [Development Stages](../project/development-stages.md)
 

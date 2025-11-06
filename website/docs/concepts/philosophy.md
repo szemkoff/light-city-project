@@ -1,9 +1,3 @@
----
-id: philosophy
-title: Philosophy
-sidebar_label: Philosophy
----
-
 # Philosophy
 
 *This document explores the deeper philosophical underpinnings of the Light City vision.*
@@ -114,5 +108,5 @@ Spiritual principles must be integrated with practical action. Mysticism and pra
 
 **Status**: Foundation document - to be significantly expanded  
 **Last Updated**: October 10, 2025  
-**Related**: [Core Concepts](/docs/concepts/core-concepts), [Purpose and Mission](/docs/concepts/purpose-and-mission)
+**Related**: [Core Concepts](core-concepts.md), [Purpose and Mission](purpose-and-mission.md)
 
