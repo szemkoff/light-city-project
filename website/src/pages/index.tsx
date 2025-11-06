@@ -110,6 +110,81 @@ function VisionSection() {
   );
 }
 
+function HighlightsSection() {
+  return (
+    <section className={styles.highlightsSection}>
+      <div className="container">
+        <h2 className={styles.sectionTitle}>Why Light City Matters Now</h2>
+        <div className="row">
+          <div className="col col--3">
+            <div className={styles.highlight}>
+              <div className={styles.highlightIcon}>🔮</div>
+              <h3>Proven Technology</h3>
+              <p>Based on Delphin, an existing crystal city that demonstrates these principles work in reality.</p>
+            </div>
+          </div>
+          <div className="col col--3">
+            <div className={styles.highlight}>
+              <div className={styles.highlightIcon}>⚡</div>
+              <h3>Zero-Point Energy</h3>
+              <p>Crystal spire technology provides unlimited clean energy without external power sources.</p>
+            </div>
+          </div>
+          <div className="col col--3">
+            <div className={styles.highlight}>
+              <div className={styles.highlightIcon}>🧠</div>
+              <h3>Unity Consciousness</h3>
+              <p>Resonance fields naturally maintain awareness connection and instant knowledge sharing.</p>
+            </div>
+          </div>
+          <div className="col col--3">
+            <div className={styles.highlight}>
+              <div className={styles.highlightIcon}>🌟</div>
+              <h3>Sacred Design</h3>
+              <p>Every structure based on sacred geometry that elevates consciousness and inspires beauty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StatsSection() {
+  return (
+    <section className={styles.statsSection}>
+      <div className="container">
+        <div className="row">
+          <div className="col col--3">
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>15+</div>
+              <div className={styles.statLabel}>Visual Diagrams</div>
+            </div>
+          </div>
+          <div className="col col--3">
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>60%</div>
+              <div className={styles.statLabel}>Stage 1 Complete</div>
+            </div>
+          </div>
+          <div className="col col--3">
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>6</div>
+              <div className={styles.statLabel}>Development Stages</div>
+            </div>
+          </div>
+          <div className="col col--3">
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>∞</div>
+              <div className={styles.statLabel}>Potential Impact</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function DelphinSection() {
   return (
     <section className={styles.delphinSection}>
@@ -160,6 +235,38 @@ function DelphinSection() {
   );
 }
 
+function CallToActionSection() {
+  return (
+    <section className={styles.ctaSection}>
+      <div className="container">
+        <h2 className={styles.ctaTitle}>Ready to Explore the Vision?</h2>
+        <p className={styles.ctaText}>
+          Light City is an open project documenting a higher-consciousness civilization. 
+          Dive into the complete documentation, explore sacred geometry diagrams, and discover 
+          how this vision can become reality.
+        </p>
+        <div className={styles.ctaButtons}>
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/START-HERE">
+            📖 Read Documentation
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/concepts/sacred-geometry">
+            ✨ View Sacred Geometry
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/blog">
+            📝 Latest Updates
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -169,8 +276,11 @@ export default function Home(): JSX.Element {
       <HomepageHeader />
       <main>
         <FeatureSection />
+        <HighlightsSection />
         <VisionSection />
+        <StatsSection />
         <DelphinSection />
+        <CallToActionSection />
       </main>
     </Layout>
   );
