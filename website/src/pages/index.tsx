@@ -102,11 +102,57 @@ function VisionSection() {
                 development roadmap for creating a city that elevates consciousness and serves as 
                 a model for humanity's evolution.
               </p>
-              <p>
-                <strong>Inspired by Delphin</strong> - a real crystal city on another world - Light City 
-                brings these proven principles to Earth.
-              </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function DelphinSection() {
+  return (
+    <section className={styles.delphinSection}>
+      <div className="container">
+        <h2 className={styles.sectionTitle}>Inspired by Delphin - A Real Crystal City</h2>
+        <div className="row">
+          <div className="col col--6">
+            <div className={styles.delphinText}>
+              <p>
+                <strong>Light City isn't just a dream—it's based on a working model.</strong>
+              </p>
+              <p>
+                Delphin is an actual crystal city on the planet Israel in another star system. Through 
+                channeled contact, we've received detailed specifications about its architecture and 
+                technology, providing a proven blueprint for Earth.
+              </p>
+              <p>
+                <strong>Key Features:</strong>
+              </p>
+              <ul>
+                <li>40,000-foot crystal spire generating all energy</li>
+                <li>Communospheres housing 10,000+ people each</li>
+                <li>Resonance technology maintaining consciousness connection</li>
+                <li>Instantaneous knowledge transfer through resonant fields</li>
+                <li>Concentric ring design with sacred geometry</li>
+              </ul>
+              <p>
+                This isn't speculation—it's adaptation of proven, functioning technology.
+              </p>
+              <Link to="/docs/concepts/communospheres" className="button button--primary">
+                Learn About Delphin →
+              </Link>
+            </div>
+          </div>
+          <div className="col col--6">
+            <img 
+              src="/light-city-project/img/inspiration/delphin-aerial-view-2.png" 
+              alt="Delphin Crystal City"
+              className={styles.visionImage}
+            />
+            <p className={styles.imageCaption}>
+              Aerial view of Delphin showing the central crystal spire and surrounding communospheres
+            </p>
           </div>
         </div>
       </div>
@@ -124,6 +170,7 @@ export default function Home(): JSX.Element {
       <main>
         <FeatureSection />
         <VisionSection />
+        <DelphinSection />
       </main>
     </Layout>
   );

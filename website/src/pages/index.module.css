@@ -143,6 +143,52 @@ html[data-theme='dark'] .sectionTitle {
   margin-bottom: 1.5rem;
 }
 
+/* Delphin Section */
+.delphinSection {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+}
+
+html[data-theme='dark'] .delphinSection {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+.delphinText {
+  padding: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.delphinText p {
+  margin-bottom: 1.5rem;
+}
+
+.delphinText ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.delphinText li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.delphinText .button {
+  margin-top: 1rem;
+}
+
+.imageCaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+html[data-theme='dark'] .imageCaption {
+  color: #aaa;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .heroTitle {
