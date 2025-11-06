@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" width="500" height="550">
+  <defs>
+    <radialGradient id="yantraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#f093fb;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0" />
+    </radialGradient>
+    <linearGradient id="yantraGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="yantraGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="550" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="250" y="30" font-family="Arial, sans-serif" font-size="22" fill="#667eea" text-anchor="middle" font-weight="bold">Sri Yantra</text>
+  <text x="250" y="50" font-family="Arial, sans-serif" font-size="13" fill="#764ba2" text-anchor="middle">Sacred Geometry of Creation and Manifestation</text>
+  
+  <!-- Central glow -->
+  <circle cx="250" cy="290" r="180" fill="url(#yantraGlow)" opacity="0.3"/>
+  
+  <!-- Outer square (earth element) -->
+  <rect x="80" y="120" width="340" height="340" fill="none" stroke="#764ba2" stroke-width="3" opacity="0.6"/>
+  
+  <!-- Four T-shaped gates -->
+  <rect x="230" y="80" width="40" height="40" fill="none" stroke="#764ba2" stroke-width="2" opacity="0.6"/>
+  <rect x="440" y="270" width="40" height="40" fill="none" stroke="#764ba2" stroke-width="2" opacity="0.6"/>
+  <rect x="230" y="460" width="40" height="40" fill="none" stroke="#764ba2" stroke-width="2" opacity="0.6"/>
+  <rect x="20" y="270" width="40" height="40" fill="none" stroke="#764ba2" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Outer circles -->
+  <circle cx="250" cy="290" r="170" fill="none" stroke="#667eea" stroke-width="2.5" opacity="0.7"/>
+  <circle cx="250" cy="290" r="160" fill="none" stroke="#667eea" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Lotus petals (16 outer) -->
+  <g opacity="0.6">
+    <ellipse cx="250" cy="120" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5"/>
+    <ellipse cx="310" cy="140" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(22.5 310 140)"/>
+    <ellipse cx="355" cy="180" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(45 355 180)"/>
+    <ellipse cx="380" cy="235" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(67.5 380 235)"/>
+    <ellipse cx="380" cy="345" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(112.5 380 345)"/>
+    <ellipse cx="355" cy="400" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(135 355 400)"/>
+    <ellipse cx="310" cy="440" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(157.5 310 440)"/>
+    <ellipse cx="250" cy="460" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5"/>
+    <ellipse cx="190" cy="440" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(-157.5 190 440)"/>
+    <ellipse cx="145" cy="400" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(-135 145 400)"/>
+    <ellipse cx="120" cy="345" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(-112.5 120 345)"/>
+    <ellipse cx="120" cy="235" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(-67.5 120 235)"/>
+    <ellipse cx="145" cy="180" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(-45 145 180)"/>
+    <ellipse cx="190" cy="140" rx="15" ry="30" fill="none" stroke="#f093fb" stroke-width="1.5" transform="rotate(-22.5 190 140)"/>
+  </g>
+  
+  <!-- Nine interlocking triangles -->
+  <!-- Upward triangles (masculine - Shiva) -->
+  <polygon points="250,165 340,380 160,380" fill="none" stroke="url(#yantraGrad1)" stroke-width="2.5" opacity="0.7"/>
+  <polygon points="250,190 320,360 180,360" fill="none" stroke="url(#yantraGrad1)" stroke-width="2" opacity="0.6"/>
+  <polygon points="250,210 300,340 200,340" fill="none" stroke="url(#yantraGrad1)" stroke-width="2" opacity="0.6"/>
+  <polygon points="250,230 280,320 220,320" fill="none" stroke="url(#yantraGrad1)" stroke-width="2" opacity="0.6"/>
+  <polygon points="250,250 270,300 230,300" fill="none" stroke="url(#yantraGrad1)" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Downward triangles (feminine - Shakti) -->
+  <polygon points="250,415 160,200 340,200" fill="none" stroke="url(#yantraGrad2)" stroke-width="2.5" opacity="0.7"/>
+  <polygon points="250,390 180,220 320,220" fill="none" stroke="url(#yantraGrad2)" stroke-width="2" opacity="0.6"/>
+  <polygon points="250,370 200,240 300,240" fill="none" stroke="url(#yantraGrad2)" stroke-width="2" opacity="0.6"/>
+  <polygon points="250,350 220,260 280,260" fill="none" stroke="url(#yantraGrad2)" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Central point (Bindu) -->
+  <circle cx="250" cy="290" r="10" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="250" cy="290" r="6" fill="url(#yantraGrad1)"/>
+  <circle cx="250" cy="290" r="3" fill="#ffffff"/>
+  
+  <!-- Info box -->
+  <rect x="20" y="480" width="460" height="60" fill="white" stroke="#667eea" stroke-width="2" rx="5" opacity="0.95"/>
+  <text x="250" y="503" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Union of Masculine & Feminine Energies</text>
+  <text x="250" y="519" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">9 interlocking triangles (4 upward/5 downward) create 43 smaller triangles,</text>
+  <text x="250" y="533" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">representing the cosmos. Used in Light City for energy balance and manifestation spaces.</text>
+</svg>
+

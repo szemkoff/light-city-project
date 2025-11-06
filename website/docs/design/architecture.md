@@ -78,6 +78,10 @@ Connection across dimensions:
 
 ### Circular Form
 
+![Light City Layout](/img/diagrams/city-layout.svg)
+
+This top-down view shows the complete city structure with concentric rings, radial pathways, communospheres positioned around the outer ring, and the central crystal spire at the heart of the design. Each element is precisely positioned according to sacred geometric principles.
+
 **Primary Structure**: Concentric circles radiating from center
 
 **Rings** (from inner to outer):

@@ -31,6 +31,10 @@ Delphin's crystal spire and energy system in action (visible as the central glow
 
 ## The Crystal Spire Energy System
 
+![Energy Flow System](/img/diagrams/energy-flow-detailed.svg)
+
+This comprehensive diagram shows the complete energy flow from cosmic source through the crystal spire, into the sacred geometric grid, and distributed to all city structures including communospheres, temples, creative studios, learning centers, and infrastructure.
+
 Based on Delphin's proven model, the central crystal spire serves as the primary energy generator and distributor.
 
 ### Power Generation

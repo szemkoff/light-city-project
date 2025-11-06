@@ -104,6 +104,10 @@ graph LR
 **Application**: Doorways, windows, meeting spaces  
 **Energy**: Portal between dimensions, birth of new possibilities
 
+![Vesica Piscis](/img/diagrams/vesica-piscis.svg)
+
+The Vesica Piscis is formed when two circles of equal radius intersect such that the center of each circle lies on the circumference of the other. This sacred shape represents the intersection of the material and spiritual worlds, and is used in Light City for doorways, portals, and transformation spaces.
+
 ### Flower of Life
 **Symbolism**: Creation pattern, interconnection, fundamental structure  
 **Application**: Decorative elements, city grid overlay, symbolic art  
@@ -118,11 +122,17 @@ The Flower of Life contains within it all the patterns of creation - the genesis
 **Application**: Building forms, crystal installations, meditation objects  
 **Energy**: Each solid carries specific properties and consciousness
 
+![Platonic Solids](/img/diagrams/platonic-solids.svg)
+
+The five Platonic Solids are the only regular polyhedra where each face is the same regular polygon and the same number of faces meet at each vertex. Each corresponds to an element and carries unique energetic properties:
+
 1. **Tetrahedron** - Fire element, transformation
 2. **Hexahedron (Cube)** - Earth element, grounding
 3. **Octahedron** - Air element, mental clarity
 4. **Dodecahedron** - Ether/universe, divine connection
 5. **Icosahedron** - Water element, flow and emotion
+
+In Light City, these forms are used in energy nodes, building structures, and meditation spaces to harness their specific elemental energies.
 
 ### The Golden Ratio (Phi)
 **Value**: 1.618...  
@@ -143,6 +153,26 @@ The Golden Ratio appears throughout nature - in nautilus shells, flower petals, 
 ![Merkaba Light Body](/img/diagrams/merkaba.svg)
 
 The Merkaba represents the light body field surrounding every conscious being. In Light City, this form is embedded in the architecture to support consciousness elevation and dimensional awareness. The upward and downward tetrahedrons represent masculine and feminine energies in perfect balance.
+
+### Metatron's Cube
+**Form**: 13 circles connected by straight lines  
+**Symbolism**: Blueprint of creation, contains all Platonic solids  
+**Application**: City energy grid, master template design  
+**Energy**: Foundation of all physical reality
+
+![Metatron's Cube](/img/diagrams/metatrons-cube.svg)
+
+Metatron's Cube is one of the most powerful sacred geometric patterns, containing within it all five Platonic Solids. This makes it a complete blueprint of physical reality. In Light City, Metatron's Cube forms the master template for the energy grid distribution system, ensuring that all structures are connected through the fundamental building blocks of creation.
+
+### Sri Yantra
+**Form**: 9 interlocking triangles within circles and lotus petals  
+**Symbolism**: Union of masculine and feminine, manifestation pattern  
+**Application**: Manifestation chambers, creation spaces, balance points  
+**Energy**: Transforms thought into form, spiritual into physical
+
+![Sri Yantra](/img/diagrams/sri-yantra.svg)
+
+The Sri Yantra is one of the most ancient and sacred geometric patterns, representing the entire cosmos and the union of Shiva (masculine) and Shakti (feminine) energies. Light City incorporates this powerful yantra in spaces designed for manifestation, creation, and the integration of spiritual and physical realities.
 
 ## Application in Light City
 

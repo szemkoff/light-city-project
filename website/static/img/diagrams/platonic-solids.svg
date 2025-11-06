@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="solidGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="solidGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="24" fill="#667eea" text-anchor="middle" font-weight="bold">The Five Platonic Solids</text>
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="14" fill="#764ba2" text-anchor="middle">Sacred Geometric Building Blocks of Reality</text>
+  
+  <!-- Tetrahedron (Fire) -->
+  <g transform="translate(100, 150)">
+    <polygon points="50,20 20,80 80,80" fill="none" stroke="url(#solidGrad1)" stroke-width="2.5"/>
+    <line x1="50" y1="20" x2="50" y2="60" stroke="url(#solidGrad1)" stroke-width="1" opacity="0.4"/>
+    <polygon points="50,60 20,80 50,90" fill="none" stroke="url(#solidGrad1)" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="50,60 80,80 50,90" fill="none" stroke="url(#solidGrad1)" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="50" cy="20" r="3" fill="#667eea"/>
+    <circle cx="20" cy="80" r="3" fill="#667eea"/>
+    <circle cx="80" cy="80" r="3" fill="#667eea"/>
+    <circle cx="50" cy="90" r="3" fill="#667eea"/>
+    
+    <text x="50" y="120" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Tetrahedron</text>
+    <text x="50" y="138" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">4 Faces • Fire</text>
+    <text x="50" y="153" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">Transformation</text>
+  </g>
+  
+  <!-- Hexahedron/Cube (Earth) -->
+  <g transform="translate(235, 150)">
+    <rect x="15" y="30" width="60" height="60" fill="none" stroke="url(#solidGrad1)" stroke-width="2.5"/>
+    <polygon points="15,30 35,15 95,15 75,30" fill="none" stroke="url(#solidGrad1)" stroke-width="2.5"/>
+    <polygon points="75,30 95,15 95,75 75,90" fill="none" stroke="url(#solidGrad1)" stroke-width="2.5"/>
+    <line x1="35" y1="15" x2="35" y2="75" stroke="url(#solidGrad1)" stroke-width="1" opacity="0.4"/>
+    <line x1="35" y1="75" x2="75" y2="90" stroke="url(#solidGrad1)" stroke-width="1" opacity="0.4"/>
+    <circle cx="15" cy="30" r="3" fill="#667eea"/>
+    <circle cx="75" cy="30" r="3" fill="#667eea"/>
+    <circle cx="15" cy="90" r="3" fill="#667eea"/>
+    <circle cx="75" cy="90" r="3" fill="#667eea"/>
+    <circle cx="35" cy="15" r="3" fill="#667eea"/>
+    <circle cx="95" cy="15" r="3" fill="#667eea"/>
+    
+    <text x="55" y="120" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Hexahedron</text>
+    <text x="55" y="138" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">6 Faces • Earth</text>
+    <text x="55" y="153" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">Grounding</text>
+  </g>
+  
+  <!-- Octahedron (Air) -->
+  <g transform="translate(390, 150)">
+    <polygon points="50,15 20,50 50,85" fill="none" stroke="url(#solidGrad1)" stroke-width="2.5"/>
+    <polygon points="50,15 80,50 50,85" fill="none" stroke="url(#solidGrad1)" stroke-width="2.5"/>
+    <line x1="20" y1="50" x2="80" y2="50" stroke="url(#solidGrad1)" stroke-width="2" opacity="0.7"/>
+    <polygon points="50,15 20,50 80,50" fill="none" stroke="url(#solidGrad1)" stroke-width="1" opacity="0.4"/>
+    <polygon points="50,85 20,50 80,50" fill="none" stroke="url(#solidGrad1)" stroke-width="1" opacity="0.4"/>
+    <circle cx="50" cy="15" r="3" fill="#667eea"/>
+    <circle cx="50" cy="85" r="3" fill="#667eea"/>
+    <circle cx="20" cy="50" r="3" fill="#667eea"/>
+    <circle cx="80" cy="50" r="3" fill="#667eea"/>
+    
+    <text x="50" y="120" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Octahedron</text>
+    <text x="50" y="138" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">8 Faces • Air</text>
+    <text x="50" y="153" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">Mental Clarity</text>
+  </g>
+  
+  <!-- Dodecahedron (Ether/Universe) -->
+  <g transform="translate(530, 145)">
+    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#solidGrad2)" stroke-width="2.5"/>
+    <polygon points="50,8 70,18 80,38 75,62 55,75 25,75 5,62 0,38 10,18 30,8" fill="none" stroke="url(#solidGrad2)" stroke-width="2"/>
+    <polygon points="50,15 65,22 72,35 68,52 55,62 35,62 22,52 18,35 25,22 40,15" fill="none" stroke="url(#solidGrad2)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="50" y1="8" x2="50" y2="15" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.5"/>
+    <line x1="70" y1="18" x2="65" y2="22" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.5"/>
+    <line x1="80" y1="38" x2="72" y2="35" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.5"/>
+    <line x1="75" y1="62" x2="68" y2="52" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.5"/>
+    <line x1="55" y1="75" x2="55" y2="62" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.5"/>
+    <circle cx="50" cy="8" r="3" fill="#f093fb"/>
+    <circle cx="50" cy="50" r="4" fill="#667eea" opacity="0.8"/>
+    
+    <text x="50" y="125" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Dodecahedron</text>
+    <text x="50" y="143" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">12 Faces • Ether</text>
+    <text x="50" y="158" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">Divine Connection</text>
+  </g>
+  
+  <!-- Icosahedron (Water) -->
+  <g transform="translate(680, 145)">
+    <polygon points="50,10 30,30 10,25 10,55 30,70 50,75 70,70 90,55 90,25 70,30" fill="none" stroke="url(#solidGrad2)" stroke-width="2.5"/>
+    <polygon points="50,10 30,30 50,40 70,30" fill="none" stroke="url(#solidGrad2)" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="50,75 30,70 50,60 70,70" fill="none" stroke="url(#solidGrad2)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="50" y1="10" x2="50" y2="40" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="50" y1="75" x2="50" y2="60" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="10" y1="25" x2="30" y2="30" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="90" y1="25" x2="70" y2="30" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="10" y1="55" x2="30" y2="70" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.4"/>
+    <line x1="90" y1="55" x2="70" y2="70" stroke="url(#solidGrad2)" stroke-width="1" opacity="0.4"/>
+    <circle cx="50" cy="10" r="3" fill="#f093fb"/>
+    <circle cx="50" cy="75" r="3" fill="#f093fb"/>
+    <circle cx="50" cy="42" r="3" fill="#667eea" opacity="0.6"/>
+    
+    <text x="50" y="125" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Icosahedron</text>
+    <text x="50" y="143" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">20 Faces • Water</text>
+    <text x="50" y="158" font-family="Arial, sans-serif" font-size="10" fill="#999" text-anchor="middle">Flow & Emotion</text>
+  </g>
+  
+  <!-- Bottom description -->
+  <rect x="50" y="320" width="700" height="140" fill="white" stroke="#667eea" stroke-width="2" rx="8" opacity="0.95"/>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="16" fill="#333" text-anchor="middle" font-weight="bold">Sacred Properties in Light City Architecture</text>
+  
+  <text x="70" y="380" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    <tspan x="70">• Tetrahedron: Used in energy nodes and transformation chambers</tspan>
+    <tspan x="70" dy="22">• Cube: Foundation structures, grounding plazas, stable living spaces</tspan>
+    <tspan x="70" dy="22">• Octahedron: Air circulation systems, consciousness clarity spaces</tspan>
+    <tspan x="70" dy="22">• Dodecahedron: Central spire structure, cosmic connection temples</tspan>
+    <tspan x="70" dy="22">• Icosahedron: Water features, emotional healing pools, flow pathways</tspan>
+  </text>
+</svg>
+

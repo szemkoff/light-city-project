@@ -2,6 +2,12 @@
 
 The Light City project unfolds through six evolutionary stages, each building upon the previous foundation.
 
+![Development Roadmap](/img/diagrams/development-roadmap.svg)
+
+This comprehensive roadmap shows the complete journey from initial vision to thriving civilization. Each stage builds upon the previous, with flexible timelines based on consciousness shift, resources, and collective readiness.
+
+---
+
 ## Stage 1: Foundation & Vision 🌱
 
 **Duration**: 1-2 months  

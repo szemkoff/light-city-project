@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="stage1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="stage2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="stage3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#764ba2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="stage4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff6b9d;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="stage5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#feca57;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="stage6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#feca57;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff9ff3;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial, sans-serif" font-size="24" fill="#667eea" text-anchor="middle" font-weight="bold">Light City Development Roadmap</text>
+  <text x="450" y="58" font-family="Arial, sans-serif" font-size="14" fill="#764ba2" text-anchor="middle">Six Stages from Vision to Living System</text>
+  
+  <!-- Timeline line -->
+  <line x1="80" y1="300" x2="820" y2="300" stroke="#667eea" stroke-width="4" opacity="0.5"/>
+  
+  <!-- Stage 1: Foundation -->
+  <g id="stage1-node">
+    <circle cx="130" cy="300" r="30" fill="url(#stage1)" stroke="#667eea" stroke-width="3"/>
+    <text x="130" y="308" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+    <rect x="60" y="110" width="140" height="120" fill="white" stroke="#667eea" stroke-width="2" rx="8"/>
+    <text x="130" y="135" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Foundation</text>
+    <text x="130" y="152" font-family="Arial, sans-serif" font-size="11" fill="#667eea" text-anchor="middle">Vision & Documentation</text>
+    <text x="70" y="175" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      <tspan x="70">• Core concepts</tspan>
+      <tspan x="70" dy="13">• Documentation</tspan>
+      <tspan x="70" dy="13">• Team formation</tspan>
+      <tspan x="70" dy="13">• Initial research</tspan>
+    </text>
+    <line x1="130" y1="230" x2="130" y2="270" stroke="#667eea" stroke-width="2"/>
+  </g>
+  
+  <!-- Stage 2: Research -->
+  <g id="stage2-node">
+    <circle cx="250" cy="300" r="30" fill="url(#stage2)" stroke="#764ba2" stroke-width="3"/>
+    <text x="250" y="308" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
+    <rect x="180" y="350" width="140" height="120" fill="white" stroke="#764ba2" stroke-width="2" rx="8"/>
+    <text x="250" y="375" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Research</text>
+    <text x="250" y="392" font-family="Arial, sans-serif" font-size="11" fill="#764ba2" text-anchor="middle">Deep Investigation</text>
+    <text x="190" y="415" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      <tspan x="190">• Sacred architecture</tspan>
+      <tspan x="190" dy="13">• Energy systems</tspan>
+      <tspan x="190" dy="13">• Materials science</tspan>
+      <tspan x="190" dy="13">• Consciousness tech</tspan>
+    </text>
+    <line x1="250" y1="330" x2="250" y2="350" stroke="#764ba2" stroke-width="2"/>
+  </g>
+  
+  <!-- Stage 3: Design -->
+  <g id="stage3-node">
+    <circle cx="370" cy="300" r="30" fill="url(#stage3)" stroke="#764ba2" stroke-width="3"/>
+    <text x="370" y="308" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+    <rect x="300" y="110" width="140" height="120" fill="white" stroke="#764ba2" stroke-width="2" rx="8"/>
+    <text x="370" y="135" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Design</text>
+    <text x="370" y="152" font-family="Arial, sans-serif" font-size="11" fill="#764ba2" text-anchor="middle">Detailed Planning</text>
+    <text x="310" y="175" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      <tspan x="310">• Architectural plans</tspan>
+      <tspan x="310" dy="13">• Energy blueprints</tspan>
+      <tspan x="310" dy="13">• Site selection</tspan>
+      <tspan x="310" dy="13">• 3D models</tspan>
+    </text>
+    <line x1="370" y1="230" x2="370" y2="270" stroke="#764ba2" stroke-width="2"/>
+  </g>
+  
+  <!-- Stage 4: Prototype -->
+  <g id="stage4-node">
+    <circle cx="490" cy="300" r="30" fill="url(#stage4)" stroke="#f093fb" stroke-width="3"/>
+    <text x="490" y="308" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
+    <rect x="420" y="350" width="140" height="120" fill="white" stroke="#f093fb" stroke-width="2" rx="8"/>
+    <text x="490" y="375" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Prototype</text>
+    <text x="490" y="392" font-family="Arial, sans-serif" font-size="11" fill="#f093fb" text-anchor="middle">Testing & Validation</text>
+    <text x="430" y="415" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      <tspan x="430">• Pilot structures</tspan>
+      <tspan x="430" dy="13">• Energy testing</tspan>
+      <tspan x="430" dy="13">• Small community</tspan>
+      <tspan x="430" dy="13">• Feedback loops</tspan>
+    </text>
+    <line x1="490" y1="330" x2="490" y2="350" stroke="#f093fb" stroke-width="2"/>
+  </g>
+  
+  <!-- Stage 5: Construction -->
+  <g id="stage5-node">
+    <circle cx="610" cy="300" r="30" fill="url(#stage5)" stroke="#ff6b9d" stroke-width="3"/>
+    <text x="610" y="308" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">5</text>
+    <rect x="540" y="110" width="140" height="120" fill="white" stroke="#ff6b9d" stroke-width="2" rx="8"/>
+    <text x="610" y="135" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Construction</text>
+    <text x="610" y="152" font-family="Arial, sans-serif" font-size="11" fill="#ff6b9d" text-anchor="middle">Full-Scale Build</text>
+    <text x="550" y="175" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      <tspan x="550">• Central spire</tspan>
+      <tspan x="550" dy="13">• Ring structures</tspan>
+      <tspan x="550" dy="13">• Communospheres</tspan>
+      <tspan x="550" dy="13">• Infrastructure</tspan>
+    </text>
+    <line x1="610" y1="230" x2="610" y2="270" stroke="#ff6b9d" stroke-width="2"/>
+  </g>
+  
+  <!-- Stage 6: Living System -->
+  <g id="stage6-node">
+    <circle cx="730" cy="300" r="30" fill="url(#stage6)" stroke="#feca57" stroke-width="3"/>
+    <text x="730" y="308" font-family="Arial, sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">6</text>
+    <rect x="660" y="350" width="140" height="120" fill="white" stroke="#feca57" stroke-width="2" rx="8"/>
+    <text x="730" y="375" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle" font-weight="bold">Living System</text>
+    <text x="730" y="392" font-family="Arial, sans-serif" font-size="11" fill="#feca57" text-anchor="middle">Thriving Civilization</text>
+    <text x="670" y="415" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      <tspan x="670">• Full population</tspan>
+      <tspan x="670" dy="13">• Self-sustaining</tspan>
+      <tspan x="670" dy="13">• Evolution</tspan>
+      <tspan x="670" dy="13">• Global model</tspan>
+    </text>
+    <line x1="730" y1="330" x2="730" y2="350" stroke="#feca57" stroke-width="2"/>
+    
+    <!-- Star of completion -->
+    <polygon points="820,300 825,315 840,315 828,325 833,340 820,330 807,340 812,325 800,315 815,315" fill="#feca57" opacity="0.8"/>
+  </g>
+  
+  <!-- Progress arrows -->
+  <polygon points="195,295 205,300 195,305" fill="#667eea" opacity="0.6"/>
+  <polygon points="315,295 325,300 315,305" fill="#764ba2" opacity="0.6"/>
+  <polygon points="435,295 445,300 435,305" fill="#f093fb" opacity="0.6"/>
+  <polygon points="555,295 565,300 555,305" fill="#ff6b9d" opacity="0.6"/>
+  <polygon points="675,295 685,300 675,305" fill="#feca57" opacity="0.6"/>
+  
+  <!-- Current status indicator -->
+  <rect x="50" y="520" width="150" height="60" fill="#667eea" opacity="0.2" stroke="#667eea" stroke-width="2" rx="5"/>
+  <text x="125" y="545" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Current Status:</text>
+  <text x="125" y="565" font-family="Arial, sans-serif" font-size="12" fill="#667eea" text-anchor="middle" font-weight="bold">Stage 1 - 60%</text>
+  
+  <!-- Timeline estimate -->
+  <rect x="220" y="520" width="460" height="60" fill="white" stroke="#667eea" stroke-width="2" rx="5" opacity="0.95"/>
+  <text x="450" y="545" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Estimated Timeline (Flexible)</text>
+  <text x="450" y="563" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">Stage 1-2: 1-2 years  •  Stage 3-4: 2-5 years  •  Stage 5-6: 5-20 years</text>
+  <text x="450" y="575" font-family="Arial, sans-serif" font-size="9" fill="#999" text-anchor="middle" font-style="italic">Timeline depends on consciousness shift, resources, and collective readiness</text>
+</svg>
+

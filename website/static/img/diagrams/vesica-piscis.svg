@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="vesicaGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="vesicaGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="400" fill="#f8f9fa"/>
+  
+  <!-- Left circle -->
+  <circle cx="200" cy="200" r="80" fill="url(#vesicaGrad1)" stroke="#667eea" stroke-width="3" opacity="0.7"/>
+  
+  <!-- Right circle -->
+  <circle cx="300" cy="200" r="80" fill="url(#vesicaGrad1)" stroke="#764ba2" stroke-width="3" opacity="0.7"/>
+  
+  <!-- Vesica Piscis (intersection) highlighted -->
+  <path d="M 250,120 A 80,80 0 0,1 250,280 A 80,80 0 0,1 250,120 Z" fill="url(#vesicaGrad2)" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+  
+  <!-- Center vertical line -->
+  <line x1="250" y1="110" x2="250" y2="290" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Horizontal line through centers -->
+  <line x1="120" y1="200" x2="380" y2="200" stroke="#667eea" stroke-width="1.5" opacity="0.5" stroke-dasharray="5,5"/>
+  
+  <!-- Circle centers -->
+  <circle cx="200" cy="200" r="5" fill="#667eea"/>
+  <circle cx="300" cy="200" r="5" fill="#764ba2"/>
+  <circle cx="250" cy="200" r="6" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+  
+  <!-- Intersection points -->
+  <circle cx="250" cy="120" r="5" fill="#f093fb"/>
+  <circle cx="250" cy="280" r="5" fill="#f093fb"/>
+  
+  <!-- Dimension lines -->
+  <line x1="200" y1="305" x2="300" y2="305" stroke="#999" stroke-width="1.5"/>
+  <line x1="200" y1="300" x2="200" y2="310" stroke="#999" stroke-width="1.5"/>
+  <line x1="300" y1="300" x2="300" y2="310" stroke="#999" stroke-width="1.5"/>
+  <text x="250" y="325" font-family="Arial, sans-serif" font-size="12" fill="#666" text-anchor="middle">Radius</text>
+  
+  <!-- Title and description -->
+  <text x="250" y="35" font-family="Arial, sans-serif" font-size="22" fill="#667eea" text-anchor="middle" font-weight="bold">Vesica Piscis</text>
+  <text x="250" y="55" font-family="Arial, sans-serif" font-size="13" fill="#764ba2" text-anchor="middle">The Sacred Intersection</text>
+  
+  <!-- Info box -->
+  <rect x="20" y="80" width="180" height="140" fill="white" stroke="#667eea" stroke-width="2" rx="5" opacity="0.95"/>
+  <text x="30" y="105" font-family="Arial, sans-serif" font-size="13" fill="#333" font-weight="bold">Symbolism:</text>
+  <text x="30" y="125" font-family="Arial, sans-serif" font-size="11" fill="#666">• Intersection of duality</text>
+  <text x="30" y="142" font-family="Arial, sans-serif" font-size="11" fill="#666">• Birth of new creation</text>
+  <text x="30" y="159" font-family="Arial, sans-serif" font-size="11" fill="#666">• Portal between worlds</text>
+  <text x="30" y="176" font-family="Arial, sans-serif" font-size="11" fill="#666">• Unity within diversity</text>
+  <text x="30" y="193" font-family="Arial, sans-serif" font-size="11" fill="#666">• Divine feminine</text>
+  <text x="30" y="210" font-family="Arial, sans-serif" font-size="11" fill="#666">• Christ consciousness</text>
+  
+  <!-- Application box -->
+  <rect x="300" y="80" width="180" height="140" fill="white" stroke="#764ba2" stroke-width="2" rx="5" opacity="0.95"/>
+  <text x="310" y="105" font-family="Arial, sans-serif" font-size="13" fill="#333" font-weight="bold">Applications:</text>
+  <text x="310" y="125" font-family="Arial, sans-serif" font-size="11" fill="#666">• Doorway design</text>
+  <text x="310" y="142" font-family="Arial, sans-serif" font-size="11" fill="#666">• Window shapes</text>
+  <text x="310" y="159" font-family="Arial, sans-serif" font-size="11" fill="#666">• Portal entrances</text>
+  <text x="310" y="176" font-family="Arial, sans-serif" font-size="11" fill="#666">• Meeting spaces</text>
+  <text x="310" y="193" font-family="Arial, sans-serif" font-size="11" fill="#666">• Transformation zones</text>
+  <text x="310" y="210" font-family="Arial, sans-serif" font-size="11" fill="#666">• Birth/creation areas</text>
+  
+  <!-- Bottom note -->
+  <rect x="50" y="345" width="400" height="40" fill="white" stroke="#667eea" stroke-width="1" rx="5" opacity="0.9"/>
+  <text x="250" y="365" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">The Vesica Piscis is formed when two circles of equal radius intersect</text>
+  <text x="250" y="379" font-family="Arial, sans-serif" font-size="11" fill="#666" text-anchor="middle">such that the center of each circle lies on the circumference of the other.</text>
+</svg>
+

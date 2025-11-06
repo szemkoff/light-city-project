@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 650" width="600" height="650">
+  <defs>
+    <radialGradient id="spireGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#667eea;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.2" />
+    </radialGradient>
+    <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.6" />
+    </linearGradient>
+    <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="650" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="22" fill="#667eea" text-anchor="middle" font-weight="bold">Light City Layout</text>
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="13" fill="#764ba2" text-anchor="middle">Concentric Sacred Design • Top-Down View</text>
+  
+  <!-- Natural surroundings (forest) -->
+  <circle cx="300" cy="330" r="260" fill="#90EE90" opacity="0.2" stroke="#90EE90" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Outer Ring (Communospheres & Gardens) -->
+  <circle cx="300" cy="330" r="220" fill="none" stroke="url(#ringGrad2)" stroke-width="3"/>
+  <circle cx="300" cy="330" r="210" fill="none" stroke="url(#ringGrad2)" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Communospheres (12 positions around outer ring) -->
+  <circle cx="300" cy="110" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="410" cy="155" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="470" cy="250" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="470" cy="410" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="410" cy="505" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="300" cy="550" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="190" cy="505" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="130" cy="410" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="130" cy="250" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="190" cy="155" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="385" cy="220" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  <circle cx="215" cy="440" r="18" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+  
+  <!-- Middle Ring (Creative Studios & Collaboration) -->
+  <circle cx="300" cy="330" r="155" fill="none" stroke="url(#ringGrad1)" stroke-width="3"/>
+  <circle cx="300" cy="330" r="145" fill="none" stroke="url(#ringGrad1)" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Creative spaces (rectangles) -->
+  <rect x="285" y="165" width="30" height="20" fill="#f093fb" opacity="0.6" stroke="#764ba2" stroke-width="1" rx="3"/>
+  <rect x="370" y="250" width="30" height="20" fill="#f093fb" opacity="0.6" stroke="#764ba2" stroke-width="1" rx="3"/>
+  <rect x="370" y="400" width="30" height="20" fill="#f093fb" opacity="0.6" stroke="#764ba2" stroke-width="1" rx="3"/>
+  <rect x="285" y="485" width="30" height="20" fill="#f093fb" opacity="0.6" stroke="#764ba2" stroke-width="1" rx="3"/>
+  <rect x="200" y="400" width="30" height="20" fill="#f093fb" opacity="0.6" stroke="#764ba2" stroke-width="1" rx="3"/>
+  <rect x="200" y="250" width="30" height="20" fill="#f093fb" opacity="0.6" stroke="#764ba2" stroke-width="1" rx="3"/>
+  
+  <!-- Inner Ring (Temples & Learning Centers) -->
+  <circle cx="300" cy="330" r="90" fill="none" stroke="url(#ringGrad1)" stroke-width="3"/>
+  <circle cx="300" cy="330" r="82" fill="none" stroke="url(#ringGrad1)" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Temples (triangular) -->
+  <polygon points="300,235 310,255 290,255" fill="#764ba2" opacity="0.7" stroke="#667eea" stroke-width="1"/>
+  <polygon points="370,295 378,310 362,310" fill="#764ba2" opacity="0.7" stroke="#667eea" stroke-width="1"/>
+  <polygon points="370,365 378,350 362,350" fill="#764ba2" opacity="0.7" stroke="#667eea" stroke-width="1"/>
+  <polygon points="300,425 310,405 290,405" fill="#764ba2" opacity="0.7" stroke="#667eea" stroke-width="1"/>
+  <polygon points="230,365 222,350 238,350" fill="#764ba2" opacity="0.7" stroke="#667eea" stroke-width="1"/>
+  <polygon points="230,295 222,310 238,310" fill="#764ba2" opacity="0.7" stroke="#667eea" stroke-width="1"/>
+  
+  <!-- Central Sanctum -->
+  <circle cx="300" cy="330" r="45" fill="url(#spireGlow)" stroke="#667eea" stroke-width="3"/>
+  
+  <!-- Central Spire -->
+  <circle cx="300" cy="330" r="25" fill="#ffffff" stroke="#667eea" stroke-width="3" opacity="0.9"/>
+  <circle cx="300" cy="330" r="15" fill="#667eea" opacity="0.6"/>
+  <circle cx="300" cy="330" r="8" fill="#ffffff"/>
+  
+  <!-- Radial Pathways (12 spokes) -->
+  <line x1="300" y1="330" x2="300" y2="90" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="425" y2="138" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="492" y2="250" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="492" y2="410" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="425" y2="522" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="300" y2="570" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="175" y2="522" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="108" y2="410" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="108" y2="250" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="175" y2="138" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="388" y2="220" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <line x1="300" y1="330" x2="212" y2="440" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Legend -->
+  <g transform="translate(20, 595)">
+    <rect x="0" y="0" width="560" height="50" fill="white" stroke="#667eea" stroke-width="2" rx="5" opacity="0.95"/>
+    
+    <circle cx="30" cy="18" r="8" fill="#ffffff" stroke="#667eea" stroke-width="2"/>
+    <text x="45" y="23" font-family="Arial, sans-serif" font-size="11" fill="#333">Central Spire</text>
+    
+    <circle cx="145" cy="18" r="6" fill="none" stroke="#667eea" stroke-width="2"/>
+    <text x="157" y="23" font-family="Arial, sans-serif" font-size="11" fill="#333">Inner Ring (Temples)</text>
+    
+    <circle cx="295" cy="18" r="6" fill="none" stroke="#f093fb" stroke-width="2"/>
+    <text x="307" y="23" font-family="Arial, sans-serif" font-size="11" fill="#333">Middle Ring (Studios)</text>
+    
+    <circle cx="445" cy="18" r="8" fill="#a0d8ff" stroke="#667eea" stroke-width="2"/>
+    <text x="460" y="23" font-family="Arial, sans-serif" font-size="11" fill="#333">Outer Ring (Living)</text>
+    
+    <line x1="30" y1="35" x2="50" y2="35" stroke="#667eea" stroke-width="2" opacity="0.4"/>
+    <text x="55" y="40" font-family="Arial, sans-serif" font-size="11" fill="#333">Radial Pathways</text>
+    
+    <circle cx="175" cy="35" r="6" fill="#90EE90" opacity="0.4" stroke="#90EE90" stroke-width="2"/>
+    <text x="187" y="40" font-family="Arial, sans-serif" font-size="11" fill="#333">Natural Surroundings</text>
+  </g>
+</svg>
+
