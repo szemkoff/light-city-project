@@ -109,6 +109,10 @@ graph LR
 **Application**: Decorative elements, city grid overlay, symbolic art  
 **Energy**: Contains all possible geometric forms, fundamental creation template
 
+![Flower of Life Pattern](/img/diagrams/flower-of-life.svg)
+
+The Flower of Life contains within it all the patterns of creation - the genesis of all form. This pattern appears in ancient temples worldwide and forms the basis for Light City's energetic grid.
+
 ### Platonic Solids
 **Symbolism**: Fundamental elements, building blocks of reality  
 **Application**: Building forms, crystal installations, meditation objects  
@@ -126,11 +130,19 @@ graph LR
 **Application**: All architectural proportions, layout ratios, aesthetic design  
 **Energy**: Creates natural resonance with human consciousness
 
+![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.svg)
+
+The Golden Ratio appears throughout nature - in nautilus shells, flower petals, human proportions, and galaxy spirals. Light City's architecture uses these proportions to create spaces that resonate with natural consciousness.
+
 ### Merkaba
 **Form**: Two tetrahedrons interpenetrating (Star of David 3D)  
 **Symbolism**: Light-body, consciousness vehicle, dimensional bridge  
 **Application**: Energy structure of city, meditation chambers  
 **Energy**: Enables dimensional travel and consciousness elevation
+
+![Merkaba Light Body](/img/diagrams/merkaba.svg)
+
+The Merkaba represents the light body field surrounding every conscious being. In Light City, this form is embedded in the architecture to support consciousness elevation and dimensional awareness. The upward and downward tetrahedrons represent masculine and feminine energies in perfect balance.
 
 ## Application in Light City
 

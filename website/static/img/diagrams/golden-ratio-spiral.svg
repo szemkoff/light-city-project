@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="goldenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="400" fill="#f8f9fa"/>
+  
+  <!-- Golden ratio rectangles -->
+  <rect x="50" y="50" width="233" height="144" fill="none" stroke="#667eea" stroke-width="2" opacity="0.3"/>
+  <rect x="50" y="50" width="144" height="89" fill="none" stroke="#667eea" stroke-width="2" opacity="0.4"/>
+  <rect x="50" y="50" width="89" height="55" fill="none" stroke="#667eea" stroke-width="2" opacity="0.5"/>
+  <rect x="50" y="50" width="55" height="34" fill="none" stroke="#667eea" stroke-width="2" opacity="0.6"/>
+  <rect x="50" y="50" width="34" height="21" fill="none" stroke="#667eea" stroke-width="2" opacity="0.7"/>
+  <rect x="50" y="50" width="21" height="13" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Golden spiral -->
+  <path d="M 283 194 Q 283 50, 194 50" fill="none" stroke="url(#goldenGrad)" stroke-width="3"/>
+  <path d="M 194 50 Q 50 50, 50 139" fill="none" stroke="url(#goldenGrad)" stroke-width="3"/>
+  <path d="M 50 139 Q 50 194, 84 194" fill="none" stroke="url(#goldenGrad)" stroke-width="3"/>
+  <path d="M 84 194 Q 139 194, 139 105" fill="none" stroke="url(#goldenGrad)" stroke-width="3"/>
+  <path d="M 139 105 Q 139 84, 105 84" fill="none" stroke="url(#goldenGrad)" stroke-width="3"/>
+  <path d="M 105 84 Q 84 84, 84 97" fill="none" stroke="url(#goldenGrad)" stroke-width="3"/>
+  
+  <!-- Phi symbol and value -->
+  <text x="320" y="120" font-family="Georgia, serif" font-size="48" fill="#667eea" font-weight="bold">φ</text>
+  <text x="320" y="150" font-family="Arial, sans-serif" font-size="16" fill="#764ba2">1.618...</text>
+  
+  <!-- Info box -->
+  <rect x="310" y="170" width="170" height="110" fill="white" stroke="#667eea" stroke-width="1" opacity="0.9" rx="5"/>
+  <text x="320" y="195" font-family="Arial, sans-serif" font-size="14" fill="#333" font-weight="bold">Golden Ratio</text>
+  <text x="320" y="215" font-family="Arial, sans-serif" font-size="11" fill="#666">Found in nature:</text>
+  <text x="320" y="230" font-family="Arial, sans-serif" font-size="10" fill="#666">• Nautilus shells</text>
+  <text x="320" y="243" font-family="Arial, sans-serif" font-size="10" fill="#666">• Flower petals</text>
+  <text x="320" y="256" font-family="Arial, sans-serif" font-size="10" fill="#666">• Human body</text>
+  <text x="320" y="269" font-family="Arial, sans-serif" font-size="10" fill="#666">• Galaxy spirals</text>
+  
+  <!-- Title -->
+  <text x="250" y="375" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Golden Ratio Spiral</text>
+  <text x="250" y="392" font-family="Arial, sans-serif" font-size="12" fill="#764ba2" text-anchor="middle">Divine Proportion in Nature and Architecture</text>
+</svg>
+

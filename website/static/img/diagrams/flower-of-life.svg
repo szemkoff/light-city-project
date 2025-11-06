@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="flowerGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Central circle -->
+  <circle cx="200" cy="200" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  
+  <!-- First ring (6 circles) -->
+  <circle cx="200" cy="150" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  <circle cx="243.3" cy="175" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  <circle cx="243.3" cy="225" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  <circle cx="200" cy="250" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  <circle cx="156.7" cy="225" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  <circle cx="156.7" cy="175" r="50" fill="none" stroke="#667eea" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Second ring (12 circles) -->
+  <circle cx="200" cy="100" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="243.3" cy="125" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="286.6" cy="150" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="286.6" cy="200" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="286.6" cy="250" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="243.3" cy="275" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="200" cy="300" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="156.7" cy="275" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="113.4" cy="250" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="113.4" cy="200" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="113.4" cy="150" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="156.7" cy="125" r="50" fill="none" stroke="#764ba2" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Central glow -->
+  <circle cx="200" cy="200" r="20" fill="url(#flowerGrad)" opacity="0.4"/>
+  <circle cx="200" cy="200" r="5" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Title -->
+  <text x="200" y="380" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Flower of Life</text>
+</svg>
+

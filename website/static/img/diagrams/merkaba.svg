@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="merkGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="merkGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f8f9fa"/>
+  
+  <!-- Upward tetrahedron (masculine) -->
+  <polygon points="200,80 320,280 80,280" fill="none" stroke="url(#merkGrad1)" stroke-width="3" opacity="0.8"/>
+  <line x1="200" y1="80" x2="80" y2="280" stroke="url(#merkGrad1)" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="80" x2="320" y2="280" stroke="url(#merkGrad1)" stroke-width="1" opacity="0.4"/>
+  <line x1="80" y1="280" x2="320" y2="280" stroke="url(#merkGrad1)" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Downward tetrahedron (feminine) -->
+  <polygon points="200,320 80,120 320,120" fill="none" stroke="url(#merkGrad2)" stroke-width="3" opacity="0.8"/>
+  <line x1="200" y1="320" x2="80" y2="120" stroke="url(#merkGrad2)" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="320" x2="320" y2="120" stroke="url(#merkGrad2)" stroke-width="1" opacity="0.4"/>
+  <line x1="80" y1="120" x2="320" y2="120" stroke="url(#merkGrad2)" stroke-width="1" opacity="0.4"/>
+  
+  <!-- Center sphere -->
+  <circle cx="200" cy="200" r="40" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+  <circle cx="200" cy="200" r="35" fill="rgba(255,255,255,0.1)" stroke="#667eea" stroke-width="1.5"/>
+  
+  <!-- Energy lines -->
+  <line x1="200" y1="80" x2="200" y2="320" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+  <line x1="80" y1="200" x2="320" y2="200" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Inner hexagram points -->
+  <circle cx="200" cy="80" r="6" fill="#667eea"/>
+  <circle cx="200" cy="320" r="6" fill="#f093fb"/>
+  <circle cx="80" cy="120" r="6" fill="#f093fb"/>
+  <circle cx="320" cy="120" r="6" fill="#f093fb"/>
+  <circle cx="80" cy="280" r="6" fill="#667eea"/>
+  <circle cx="320" cy="280" r="6" fill="#667eea"/>
+  
+  <!-- Central light -->
+  <circle cx="200" cy="200" r="8" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Title -->
+  <text x="200" y="375" font-family="Arial, sans-serif" font-size="18" fill="#667eea" text-anchor="middle" font-weight="bold">Merkaba</text>
+  <text x="200" y="392" font-family="Arial, sans-serif" font-size="12" fill="#764ba2" text-anchor="middle">Light Body / Energy Field</text>
+</svg>
+
