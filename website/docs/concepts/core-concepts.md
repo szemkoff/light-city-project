@@ -8,6 +8,15 @@ sidebar_label: Core Concepts
 
 This document outlines the foundational concepts and principles of the Light City project.
 
+## Vision
+
+Your original Light City visions that sparked this project:
+
+![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
+![Light City Vision 2](/img/inspiration/light-city-vision-2.jpg)
+
+---
+
 ## What is Light City?
 
 Light City is a multidimensional vision that exists simultaneously across several planes of reality:

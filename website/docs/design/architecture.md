@@ -16,6 +16,22 @@ Light City's architecture serves multiple purposes:
 - **Symbolic**: Forms that communicate principles
 - **Aesthetic**: Beauty that inspires and uplifts
 
+---
+
+### Vision References
+
+Your conceptual vision of Light City:
+
+![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
+![Light City Vision 2](/img/inspiration/light-city-vision-2.jpg)
+
+Delphin - A real existing city on another world that embodies these principles:
+
+![Delphin Crystal City 1](/img/inspiration/delphin-aerial-view-1.png)
+![Delphin Crystal City 2](/img/inspiration/delphin-aerial-view-2.png)
+
+---
+
 ## Core Design Principles
 
 ### 1. Sacred Geometry
@@ -398,6 +414,53 @@ Light City architecture is:
 3. **Living Areas**: Habitation for early inhabitants
 4. **Expansion**: Organic growth as community develops
 5. **Completion**: Perhaps never "complete" but continuously evolving
+
+---
+
+## Architectural Inspirations
+
+Light City draws wisdom from existing sacred architecture on Earth. These structures demonstrate how geometric principles, consciousness-elevating design, and spiritual intention can be manifest in stone and space:
+
+### Borobudur Temple - Indonesia
+
+Borobudur is one of the greatest Buddhist monuments, built in the 8th century. Its mandala structure, concentric platforms, and spiritual intentionality directly inform Light City design concepts.
+
+![Borobudur Temple](/img/architectural-inspiration/borobudur/Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04.jpg)
+
+![Borobudur Details](/img/architectural-inspiration/borobudur/Borobudur-Temple-4.jpg)
+
+**Key Principles from Borobudur:**
+- Concentric circular design (like Light City's rings)
+- Vertical ascent representing spiritual journey
+- Integration of sculpture, symbolism, and geometry
+- Multiple levels representing different states of consciousness
+- Sacred geometry embedded in proportions
+
+### Angkor Wat - Cambodia
+
+Angkor Wat is the largest religious monument in the world, a masterpiece of Khmer architecture. Its design reflects cosmological principles and demonstrates how sacred geometry can organize vast spiritual spaces.
+
+![Angkor Wat](/img/architectural-inspiration/angkor/angkor-cambodia-768x768.jpg)
+
+![Angkor Wat Temple](/img/architectural-inspiration/angkor/Siem-Reap_Cambodia_shutterstock_2291676013_1_x0vnvk-2.jpg)
+
+**Key Principles from Angkor Wat:**
+- Cosmological architecture reflecting the universe
+- Water integration (moats, reflection pools)
+- Sacred geometry in temple proportions
+- Hierarchical spatial organization
+- Symbolic journey from outer to inner sanctums
+- Stone craftsmanship at highest level
+
+### Design Application
+
+Both Borobudur and Angkor Wat demonstrate that:
+1. **Large-scale spiritual spaces can be built** with ancient techniques
+2. **Sacred geometry works** in creating consciousness-elevating environments
+3. **Symbolic and practical can integrate** seamlessly
+4. **Community effort can manifest visions** across generations
+
+Light City builds upon these principles with modern understanding and advanced technology to create spaces even more aligned with consciousness evolution.
 
 ---
 

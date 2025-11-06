@@ -17,6 +17,18 @@ Light City operates on multiple energy levels simultaneously:
 
 All three are integrated through crystalline architecture and sacred geometry.
 
+### Visual Reference
+
+Your visionary conception of Light City's crystalline energy architecture:
+
+![Light City Energy Vision](/img/inspiration/light-city-vision-2.jpg)
+
+Delphin's crystal spire and energy system in action (visible as the central glowing structure):
+
+![Delphin Energy System](/img/inspiration/delphin-aerial-view-2.png)
+
+---
+
 ## The Crystal Spire Energy System
 
 Based on Delphin's proven model, the central crystal spire serves as the primary energy generator and distributor.

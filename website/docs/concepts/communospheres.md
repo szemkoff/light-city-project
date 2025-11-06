@@ -14,6 +14,18 @@ Communospheres represent a revolutionary approach to living spaces—spherical s
 
 **Origin**: This concept comes from the city of Delphin on planet Israel, as shared through contact/channeling. It provides a concrete example of how higher-consciousness civilizations structure their living environments.
 
+### Visual Reference
+
+Your original vision of Light City showing the spherical communosphere concept:
+
+![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
+
+Delphin's actual communospheres as they appear from above (aerial view showing multiple spheres):
+
+![Delphin Aerial View](/img/inspiration/delphin-aerial-view-1.png)
+
+---
+
 ## Core Concept
 
 A communosphere is:

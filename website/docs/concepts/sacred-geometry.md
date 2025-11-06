@@ -12,6 +12,18 @@ sidebar_label: Sacred Geometry
 
 Sacred geometry is the study of geometric forms and their metaphysical meanings, mathematical relationships, and energetic properties. In Light City, sacred geometry is foundational—not decorative.
 
+### Visual Inspiration
+
+The sacred geometry principles manifest in both your vision and the real-world example of Delphin:
+
+![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
+
+![Delphin Sacred Geometry in Action](/img/inspiration/delphin-aerial-view-1.png)
+
+Notice how both exhibit circular, concentric patterns with a central focus point—the manifestation of sacred geometric principles in actual form.
+
+---
+
 ## Why Sacred Geometry?
 
 ### 1. Universal Language
