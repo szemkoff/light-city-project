@@ -122,7 +122,7 @@ The Flower of Life contains within it all the patterns of creation - the genesis
 **Application**: Building forms, crystal installations, meditation objects  
 **Energy**: Each solid carries specific properties and consciousness
 
-![Platonic Solids](/img/diagrams/platonic-solids.svg)
+![Platonic Solids](/img/diagrams/Platonic-Solids.jpg)
 
 The five Platonic Solids are the only regular polyhedra where each face is the same regular polygon and the same number of faces meet at each vertex. Each corresponds to an element and carries unique energetic properties:
 
