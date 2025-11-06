@@ -85,8 +85,8 @@ function VisionSection() {
         <div className="row">
           <div className="col col--6">
             <img 
-              src="/light-city-project/img/inspiration/light-city-vision-2.jpg" 
-              alt="Light City Vision 2"
+              src="/light-city-project/img/inspiration/light-city-vision-1.jpg" 
+              alt="Light City Vision"
               className={styles.visionImage}
             />
           </div>
