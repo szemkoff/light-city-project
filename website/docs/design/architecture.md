@@ -1,3 +1,9 @@
+---
+id: architecture
+title: Architecture
+sidebar_label: Architecture
+---
+
 # Architecture
 
 *This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions.*
@@ -68,6 +74,35 @@ Connection across dimensions:
 
 **Circular Pathways**: Connect points on same ring
 
+#### City Layout Diagram
+
+```mermaid
+graph TB
+    subgraph "Light City Concentric Structure"
+        CS["🔮 Central Sanctum<br/>Crystal Spire & Plaza"]
+        IR["🏛️ Inner Ring<br/>Temples & Learning Centers"]
+        MR["🎨 Middle Ring<br/>Creative Studios & Collaboration"]
+        OR["🏠 Outer Ring<br/>Communospheres & Gardens"]
+        NS["🌳 Natural Surroundings<br/>Forests & Integration"]
+        
+        CS -->|Radial Pathways| IR
+        IR -->|Radial Pathways| MR
+        MR -->|Radial Pathways| OR
+        OR -->|Circular Pathways| OR
+        IR -->|Circular Pathways| IR
+        MR -->|Circular Pathways| MR
+        OR -.->|Interface| NS
+    end
+    
+    style CS fill:#667eea,stroke:#fff,color:#fff
+    style IR fill:#764ba2,stroke:#fff,color:#fff
+    style MR fill:#f093fb,stroke:#fff,color:#fff
+    style OR fill:#a0d8ff,stroke:#333
+    style NS fill:#90EE90,stroke:#333
+```
+
+---
+
 ### Delphin-Inspired Model
 
 Based on the existing crystal city of Delphin (on planet Israel), Light City can incorporate proven architectural principles:
@@ -78,7 +113,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - **Natural Surroundings**: Integration with forests and landscape
 - **Resonance Field**: Maintained throughout entire city structure
 
-*See [Communospheres](../concepts/communospheres.md) for detailed explanation*
+*See [Communospheres](/docs/concepts/communospheres) for detailed explanation*
 
 ### The Central Spire
 
@@ -236,7 +271,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - Natural alignment through resonance field
 - Spontaneous learning and connection
 
-*See detailed documentation: [Communospheres](../concepts/communospheres.md)*
+*See detailed documentation: [Communospheres](/docs/concepts/communospheres)*
 
 ### 5. Creative Studios
 
@@ -383,5 +418,5 @@ Light City architecture is:
 
 **Status**: Foundational vision - requires significant expansion and visualization  
 **Last Updated**: October 10, 2025  
-**Related**: [Core Concepts](../concepts/core-concepts.md), [Sacred Geometry](../concepts/sacred-geometry.md)
+**Related**: [Core Concepts](/docs/concepts/core-concepts), [Sacred Geometry](/docs/concepts/sacred-geometry)
 
