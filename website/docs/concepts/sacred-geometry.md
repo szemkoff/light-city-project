@@ -140,7 +140,7 @@ In Light City, these forms are used in energy nodes, building structures, and me
 **Application**: All architectural proportions, layout ratios, aesthetic design  
 **Energy**: Creates natural resonance with human consciousness
 
-![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.svg)
+![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.jpg)
 
 The Golden Ratio appears throughout nature - in nautilus shells, flower petals, human proportions, and galaxy spirals. Light City's architecture uses these proportions to create spaces that resonate with natural consciousness.
 
