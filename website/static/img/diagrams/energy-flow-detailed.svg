@@ -54,7 +54,7 @@
     <circle cx="300" cy="285" r="8" fill="url(#spireEnergy)"/>
     <text x="380" y="285" font-family="Arial, sans-serif" font-size="12" fill="#333" font-weight="bold">Crystal Spire</text>
     <text x="380" y="300" font-family="Arial, sans-serif" font-size="10" fill="#666">Energy Converter</text>
-    <text x="380" y="313" font-family="Arial, sans-serif" font-size="10" fill="#666">& Distributor</text>
+    <text x="380" y="313" font-family="Arial, sans-serif" font-size="10" fill="#666">&amp; Distributor</text>
   </g>
   
   <!-- Sacred Geometric Grid -->

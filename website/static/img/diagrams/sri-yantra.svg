@@ -78,7 +78,7 @@
   
   <!-- Info box -->
   <rect x="20" y="480" width="460" height="60" fill="white" stroke="#667eea" stroke-width="2" rx="5" opacity="0.95"/>
-  <text x="250" y="503" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Union of Masculine & Feminine Energies</text>
+  <text x="250" y="503" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Union of Masculine &amp; Feminine Energies</text>
   <text x="250" y="519" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">9 interlocking triangles (4 upward/5 downward) create 43 smaller triangles,</text>
   <text x="250" y="533" font-family="Arial, sans-serif" font-size="10" fill="#666" text-anchor="middle">representing the cosmos. Used in Light City for energy balance and manifestation spaces.</text>
 </svg>
