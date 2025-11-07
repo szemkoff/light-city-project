@@ -20,16 +20,39 @@ const sidebars: SidebarsConfig = {
         'concepts/communospheres',
         'concepts/energy-systems',
         'concepts/sacred-geometry',
+        'design/visual-language',
+        'design/color-and-light',
+        'design/layout-diagrams',
       ],
     },
     {
       type: 'category',
-      label: 'Project',
+      label: 'Development',
       items: [
+        'project/development-stages',
+        'project/project-structure',
+        'project/tools-and-workflows',
         'project/contributing',
         'project/quick-start-guide',
       ],
     },
+    {
+      type: 'category',
+      label: 'Research & Resources',
+      items: [
+        'research/bibliography',
+        'research/open-questions',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Technical',
+      items: [
+        'technical/github-docusaurus-setup',
+      ],
+    },
+    'INDEX',
+    'CHANGELOG',
   ],
 };
 
