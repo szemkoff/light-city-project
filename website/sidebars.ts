@@ -38,6 +38,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Technical & Implementation',
+      items: [
+        'technical/technology-catalog',
+        'technical/urban-retrofit-guide',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Research & Resources',
       items: [
         'research/bibliography',
