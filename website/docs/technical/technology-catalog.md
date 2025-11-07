@@ -88,6 +88,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### Tensile Fabric Structures
 
+![Tensile Fabric Structure](/img/technology/tensile-fabric.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $ to $$ (Low to Medium)
 
@@ -112,6 +114,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 3D-Printed Concrete
+
+![3D Printed Concrete](/img/technology/3d-printed-concrete.jpg)
 
 **Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $ to $$ (Decreasing rapidly)
@@ -177,6 +181,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 2 Flow Batteries (Long-Duration Storage)
 
+![Flow Battery](/img/technology/flow-battery.jpg)
+
 **Status**: ✅ Commercially Available (TRL 7-8)  
 **Cost**: $$ (Medium, competitive for 4+ hour storage)
 
@@ -208,6 +214,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 3 Micro-Hydro Turbines
 
+![Micro-Hydro Turbine](/img/technology/micro-hydro.jpg)
+
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $ to $$ (Low to Medium)
 
@@ -236,6 +244,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 4 Solid-State Batteries
+
+![Solid-State Battery](/img/technology/solid-state-battery.jpg)
 
 **Status**: 🔶 Pilot/Near-Commercial (TRL 6-7)  
 **Cost**: $$$ (High, but expected to drop)
@@ -268,6 +278,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Living Machines (Biological Wastewater Treatment)
 
+![Living Machine](/img/technology/living-machine.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
@@ -297,6 +309,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 2 Atmospheric Water Generators (AWG)
+
+![Atmospheric Water Generator](/img/technology/atmospheric-water.jpg)
 
 **Status**: ✅ Commercially Available (TRL 7-8)  
 **Cost**: $$ to $$$ (Medium to High)
@@ -329,6 +343,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ### 3 Composting Toilet Systems
 
 ![Rainwater Harvesting System](/img/technology/rainwater-harvesting.jpg)
+
+![Composting Toilet](/img/technology/composting-toilet.jpg)
 
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $ (Low to Medium)
@@ -460,6 +476,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 3 Agroforestry & Food Forests
 
+![Agroforestry](/img/technology/agroforestry.jpg)
+
 **Status**: ✅ Proven Traditional (TRL 9)  
 **Cost**: $ (Low)
 
@@ -494,6 +512,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 4 Mycelium/Mushroom Cultivation
 
+![Mycelium Cultivation](/img/technology/mycelium-cultivation.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $ (Low)
 
@@ -521,6 +541,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Building Management Systems (BMS)
 
+![Building Management System](/img/technology/bms.jpg)
+
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $$ (Medium)
 
@@ -545,6 +567,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 2 Occupancy & Environmental Sensors
+
+![Environmental Sensors](/img/technology/environmental-sensors.jpg)
 
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $ (Low)
@@ -606,6 +630,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Acoustic Resonance Systems
 
+![Acoustic Resonance](/img/technology/acoustic-resonance.jpg)
+
 **Status**: 🔶 Pilot/Custom (TRL 4-6)  
 **Cost**: $$ to $$$ (Medium to High)
 
@@ -637,6 +663,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 2 Biofeedback & Neurofeedback Systems
 
+![Biofeedback System](/img/technology/biofeedback.jpg)
+
 **Status**: ✅ Commercially Available (TRL 7-8)  
 **Cost**: $ to $$ (Low to Medium)
 
@@ -661,6 +689,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 3 Red Light Therapy
+
+![Red Light Therapy](/img/technology/red-light-therapy.jpg)
 
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $ to $$ (Low to Medium)
@@ -770,6 +800,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 3 Autonomous Shuttles
 
+![Autonomous Shuttle](/img/technology/autonomous-shuttle.jpg)
+
 **Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $$$ (High)
 
@@ -796,6 +828,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ## Materials Science
 
 ### 1 Hempcrete
+
+![Hempcrete](/img/technology/hempcrete.jpg)
 
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
@@ -828,6 +862,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 2 Mycelium Insulation & Materials
 
+![Mycelium Insulation](/img/technology/mycelium-insulation.jpg)
+
 **Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $$ (Medium, decreasing)
 
@@ -853,6 +889,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 3 Transparent Wood
 
+![Transparent Wood](/img/technology/transparent-wood.jpg)
+
 **Status**: 🔶 R&D/Pilot (TRL 4-5)  
 **Cost**: $$$ (High, experimental)
 
@@ -876,6 +914,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 4 Self-Healing Concrete
+
+![Self-Healing Concrete](/img/technology/self-healing-concrete.jpg)
 
 **Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $$$ (High)
@@ -903,6 +943,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Mesh Networks (LoRaWAN, Helium)
 
+![Mesh Network](/img/technology/mesh-network.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $ (Low)
 
@@ -927,6 +969,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 2 Starlink & Satellite Internet
+
+![Starlink](/img/technology/starlink.jpg)
 
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
@@ -954,6 +998,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Environmental Monitoring Systems
 
+![Environmental Monitoring](/img/technology/environmental-monitoring.jpg)
+
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $ to $$ (Low to Medium)
 
@@ -978,6 +1024,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 2 Consciousness Research Equipment
+
+![Consciousness Research Equipment](/img/technology/consciousness-research.jpg)
 
 **Status**: 🔶 Research/Custom (TRL 3-5)  
 **Cost**: $$ to $$$ (Medium to High)
