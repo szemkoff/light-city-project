@@ -170,7 +170,7 @@ Metatron's Cube is one of the most powerful sacred geometric patterns, containin
 **Application**: Manifestation chambers, creation spaces, balance points  
 **Energy**: Transforms thought into form, spiritual into physical
 
-![Sri Yantra](/img/diagrams/sri_yantra_image.webp)
+![Sri Yantra](/img/diagrams/sri-yantra.svg)
 
 The Sri Yantra is one of the most ancient and sacred geometric patterns, representing the entire cosmos and the union of Shiva (masculine) and Shakti (feminine) energies. Light City incorporates this powerful yantra in spaces designed for manifestation, creation, and the integration of spiritual and physical realities.
 
