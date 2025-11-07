@@ -2,6 +2,30 @@
 
 *Required diagrams and conventions for Light City*
 
+## Completed Diagrams
+
+### City Layout (Top-Down)
+
+![City Layout](/img/diagrams/city-layout.svg)
+
+*Concentric ring structure with central spire, radial pathways, and communospheres at the perimeter.*
+
+### Energy Flow System
+
+![Energy Flow](/img/diagrams/energy-flow-detailed.svg)
+
+*Complete energy distribution from cosmic source through crystal spire to all city infrastructure.*
+
+### Sacred Geometry Foundations
+
+![Vesica Piscis](/img/diagrams/vesica-piscis.svg)
+
+*The Vesica Piscis - portal geometry used in doorways and transformation spaces.*
+
+![Metatron's Cube](/img/diagrams/metatrons-cube.svg)
+
+*Metatron's Cube - the master template containing all Platonic Solids, forming the city's energy grid.*
+
 ## Required Diagram Set (Stage 1)
 - City Plan (Top-Down): Concentric rings, radial spokes, ~12 communospheres
 - Energy Grid: Nodes (spire, spheres, temples), pathways, flow direction

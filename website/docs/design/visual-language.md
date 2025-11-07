@@ -2,6 +2,10 @@
 
 *Principles, patterns, and design tokens that give Light City its recognizable look and feel*
 
+![Light City Visual Identity](/img/inspiration/light-city-vision-1.jpg)
+
+*The visual language of Light City - crystalline, luminous, and rooted in sacred geometry.*
+
 ## Purpose
 
 This guide defines the visual system used across all Light City materials (documents, diagrams, concept art, web, and potential physical signage). It ensures coherence, beauty, and resonance with the Light City ethos.
@@ -57,6 +61,14 @@ This guide defines the visual system used across all Light City materials (docum
 - Spirals (logarithmic, Fibonacci)
 - Platonic solids; Merkaba
 - Toroidal fields (for energy diagrams)
+
+![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.jpg)
+
+*The Golden Ratio spiral - a fundamental pattern in Light City's visual language.*
+
+![Merkaba](/img/diagrams/merkaba.svg)
+
+*The Merkaba - representing the light body and dimensional bridge in our visual system.*
 
 ## Diagram Conventions
 

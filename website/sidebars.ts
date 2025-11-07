@@ -44,13 +44,6 @@ const sidebars: SidebarsConfig = {
         'research/open-questions',
       ],
     },
-    {
-      type: 'category',
-      label: 'Technical',
-      items: [
-        'technical/github-docusaurus-setup',
-      ],
-    },
     'INDEX',
     'CHANGELOG',
   ],

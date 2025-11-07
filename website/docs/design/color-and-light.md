@@ -2,6 +2,10 @@
 
 *Palette, gradients, and lighting rules for Light City materials*
 
+![Delphin Crystal City](/img/inspiration/delphin-aerial-view-2.png)
+
+*Delphin demonstrates the interplay of light, crystal, and color in a living city.*
+
 ## Palette
 
 ### Core

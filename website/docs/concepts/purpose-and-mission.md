@@ -1,5 +1,9 @@
 # Purpose and Mission
 
+![Delphin - A Living Example](/img/inspiration/delphin-aerial-view-1.png)
+
+*Delphin - A real crystal city demonstrating that our vision is not just philosophy, but achievable reality.*
+
 ## Project Purpose
 
 The Light City project exists to:
@@ -81,6 +85,10 @@ Create tangible connections between:
    - Inspire other Light City initiatives
    - Contribute to new Earth emergence
    - Share learnings and frameworks
+
+![Development Roadmap](/img/diagrams/development-roadmap.svg)
+
+*The complete 6-stage journey from vision to thriving civilization.*
 
 ## Who This Serves
 
