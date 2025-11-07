@@ -90,6 +90,10 @@ Create tangible connections between:
 
 *The complete 6-stage journey from vision to thriving civilization.*
 
+![Daily Life Timeline](/img/diagrams/daily-life-timeline.svg)
+
+*A typical 24-hour cycle in Light City - flowing with natural rhythms, balancing solitude and community.*
+
 ## Who This Serves
 
 ### Primary Beneficiaries

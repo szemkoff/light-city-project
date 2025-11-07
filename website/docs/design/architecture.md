@@ -76,6 +76,10 @@ Connection across dimensions:
 
 ## Overall Layout
 
+![City Scale Comparison](/img/diagrams/city-scale-comparison.svg)
+
+*Understanding Light City's size: The central spire is 40,000 feet tall (15x taller than Burj Khalifa), with a city diameter of ~3 miles housing 60,000-120,000 people.*
+
 ### Circular Form
 
 ![Light City Layout](/img/diagrams/city-layout.svg)
@@ -136,6 +140,10 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 *See [Communospheres](/docs/concepts/communospheres) for detailed explanation*
 
 ### The Central Spire
+
+![Central Spire Cross-Section](/img/diagrams/central-spire-cross-section.svg)
+
+*Complete cross-section of the 40,000-foot crystal spire showing energy zones and functions.*
 
 **Height**: Extraordinarily tall—potentially 40,000 feet (~12 km / 7.6 miles)
 - Reference: Delphin's spire is 40,000 feet

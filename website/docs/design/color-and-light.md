@@ -8,6 +8,10 @@
 
 ## Palette
 
+![Color Palette](/img/diagrams/color-palette.svg)
+
+*Complete Light City color palette with core colors, extended palette, and key gradients.*
+
 ### Core
 - Celestial Blue: `#4A9EFF` (primary)
 - Deep Space Blue: `#0B2447` (text/lines)

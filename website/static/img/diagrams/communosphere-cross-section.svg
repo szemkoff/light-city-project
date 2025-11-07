@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900">
+  <defs>
+    <style>
+      .label-text { font-family: 'Inter', sans-serif; font-size: 13px; fill: #0B2447; font-weight: 600; }
+      .desc-text { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .title-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #0B2447; }
+      .level-label { font-family: 'Inter', sans-serif; font-size: 12px; fill: #fff; font-weight: 600; }
+    </style>
+    <linearGradient id="sphere-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0CBFF;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:#4A9EFF;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.8" />
+    </linearGradient>
+    <radialGradient id="energy-core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFF6E0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E6B400;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#E6B400;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title-text">Communosphere Cross-Section</text>
+  <text x="500" y="65" text-anchor="middle" class="desc-text">Interior Structure &amp; Living Spaces</text>
+  
+  <!-- Main Sphere Outline -->
+  <ellipse cx="500" cy="500" rx="350" ry="320" fill="url(#sphere-gradient)" stroke="#4A9EFF" stroke-width="3"/>
+  
+  <!-- Ground Level -->
+  <line x1="150" y1="820" x2="850" y2="820" stroke="#0B2447" stroke-width="2"/>
+  <text x="500" y="850" text-anchor="middle" class="desc-text">Ground Level - Anchored to Earth</text>
+  
+  <!-- Energy Core (Center) -->
+  <circle cx="500" cy="500" r="40" fill="url(#energy-core)" stroke="#E6B400" stroke-width="2"/>
+  <text x="500" y="505" text-anchor="middle" class="level-label" fill="#E6B400">Resonance</text>
+  <text x="500" y="520" text-anchor="middle" class="level-label" fill="#E6B400">Core</text>
+  
+  <!-- Level 1: Ground Floor -->
+  <ellipse cx="500" cy="750" rx="280" ry="40" fill="rgba(118,75,162,0.3)" stroke="#764ba2" stroke-width="2"/>
+  <text x="500" y="755" text-anchor="middle" class="level-label">Level 1: Entry &amp; Commons</text>
+  
+  <!-- Level 2: Living Quarters Lower -->
+  <ellipse cx="500" cy="650" rx="300" ry="45" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="2"/>
+  <text x="500" y="655" text-anchor="middle" class="level-label">Level 2: Private Quarters</text>
+  
+  <!-- Level 3: Mid Level -->
+  <ellipse cx="500" cy="550" rx="320" ry="50" fill="rgba(74,158,255,0.3)" stroke="#4A9EFF" stroke-width="2"/>
+  <text x="500" y="555" text-anchor="middle" class="level-label">Level 3: Shared Spaces</text>
+  
+  <!-- Level 4: Upper Living -->
+  <ellipse cx="500" cy="450" rx="300" ry="45" fill="rgba(102,126,234,0.3)" stroke="#667eea" stroke-width="2"/>
+  <text x="500" y="455" text-anchor="middle" class="level-label">Level 4: Private Quarters</text>
+  
+  <!-- Level 5: Gardens & Recreation -->
+  <ellipse cx="500" cy="350" rx="280" ry="40" fill="rgba(34,197,94,0.3)" stroke="#22C55E" stroke-width="2"/>
+  <text x="500" y="355" text-anchor="middle" class="level-label">Level 5: Gardens &amp; Recreation</text>
+  
+  <!-- Level 6: Meditation & Ceremony -->
+  <ellipse cx="500" cy="260" rx="220" ry="35" fill="rgba(240,147,251,0.3)" stroke="#f093fb" stroke-width="2"/>
+  <text x="500" y="265" text-anchor="middle" class="level-label">Level 6: Meditation Chambers</text>
+  
+  <!-- Apex - Observation -->
+  <ellipse cx="500" cy="190" rx="120" ry="25" fill="rgba(255,246,224,0.5)" stroke="#FFF6E0" stroke-width="2"/>
+  <text x="500" y="195" text-anchor="middle" class="level-label" fill="#E6B400">Apex Observatory</text>
+  
+  <!-- Vertical Core (Energy Distribution) -->
+  <line x1="500" y1="190" x2="500" y2="750" stroke="#E6B400" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+  
+  <!-- Callouts - Left Side -->
+  <g transform="translate(50, 200)">
+    <circle cx="0" cy="0" r="3" fill="#f093fb"/>
+    <line x1="3" y1="0" x2="60" y2="60" stroke="#f093fb" stroke-width="1"/>
+    <text x="65" y="60" class="label-text">Meditation Chambers</text>
+    <text x="65" y="75" class="desc-text">Quiet contemplation</text>
+    <text x="65" y="88" class="desc-text">Consciousness elevation</text>
+  </g>
+  
+  <g transform="translate(50, 350)">
+    <circle cx="0" cy="0" r="3" fill="#22C55E"/>
+    <line x1="3" y1="0" x2="60" y2="0" stroke="#22C55E" stroke-width="1"/>
+    <text x="65" y="0" class="label-text">Internal Gardens</text>
+    <text x="65" y="15" class="desc-text">Living plants &amp; water</text>
+    <text x="65" y="28" class="desc-text">Natural air purification</text>
+  </g>
+  
+  <g transform="translate(50, 550)">
+    <circle cx="0" cy="0" r="3" fill="#4A9EFF"/>
+    <line x1="3" y1="0" x2="60" y2="0" stroke="#4A9EFF" stroke-width="1"/>
+    <text x="65" y="0" class="label-text">Shared Commons</text>
+    <text x="65" y="15" class="desc-text">Gathering spaces</text>
+    <text x="65" y="28" class="desc-text">Creative studios</text>
+    <text x="65" y="41" class="desc-text">Learning areas</text>
+  </g>
+  
+  <g transform="translate(50, 750)">
+    <circle cx="0" cy="0" r="3" fill="#764ba2"/>
+    <line x1="3" y1="0" x2="60" y2="0" stroke="#764ba2" stroke-width="1"/>
+    <text x="65" y="0" class="label-text">Entry Plaza</text>
+    <text x="65" y="15" class="desc-text">Main entrance</text>
+    <text x="65" y="28" class="desc-text">Welcome center</text>
+  </g>
+  
+  <!-- Callouts - Right Side -->
+  <g transform="translate(950, 190)">
+    <circle cx="0" cy="0" r="3" fill="#FFF6E0"/>
+    <line x1="-3" y1="0" x2="-60" y2="0" stroke="#FFF6E0" stroke-width="1"/>
+    <text x="-65" y="0" class="label-text" text-anchor="end">Sky Observatory</text>
+    <text x="-65" y="15" class="desc-text" text-anchor="end">360° views</text>
+    <text x="-65" y="28" class="desc-text" text-anchor="end">Star gazing</text>
+  </g>
+  
+  <g transform="translate(950, 450)">
+    <circle cx="0" cy="0" r="3" fill="#667eea"/>
+    <line x1="-3" y1="0" x2="-60" y2="0" stroke="#667eea" stroke-width="1"/>
+    <text x="-65" y="0" class="label-text" text-anchor="end">Private Quarters</text>
+    <text x="-65" y="15" class="desc-text" text-anchor="end">Individual/family homes</text>
+    <text x="-65" y="28" class="desc-text" text-anchor="end">Personal sanctuaries</text>
+  </g>
+  
+  <g transform="translate(950, 500)">
+    <circle cx="0" cy="0" r="3" fill="#E6B400"/>
+    <line x1="-3" y1="0" x2="-60" y2="-50" stroke="#E6B400" stroke-width="1"/>
+    <text x="-65" y="-50" class="label-text" text-anchor="end">Resonance Core</text>
+    <text x="-65" y="-35" class="desc-text" text-anchor="end">Energy distribution</text>
+    <text x="-65" y="-22" class="desc-text" text-anchor="end">Consciousness field</text>
+    <text x="-65" y="-9" class="desc-text" text-anchor="end">Knowledge transfer</text>
+  </g>
+  
+  <g transform="translate(950, 650)">
+    <circle cx="0" cy="0" r="3" fill="#667eea"/>
+    <line x1="-3" y1="0" x2="-60" y2="0" stroke="#667eea" stroke-width="1"/>
+    <text x="-65" y="0" class="label-text" text-anchor="end">Living Quarters</text>
+    <text x="-65" y="15" class="desc-text" text-anchor="end">~10,000 residents</text>
+    <text x="-65" y="28" class="desc-text" text-anchor="end">Complete community</text>
+  </g>
+  
+  <!-- Specifications Box -->
+  <g transform="translate(300, 870)">
+    <rect x="0" y="0" width="400" height="20" fill="#E6ECF3" rx="4"/>
+    <text x="200" y="14" text-anchor="middle" class="desc-text" style="font-weight: 600;">
+      Capacity: ~10,000 people | Diameter: ~500m | Height: ~300m
+    </text>
+  </g>
+</svg>
+

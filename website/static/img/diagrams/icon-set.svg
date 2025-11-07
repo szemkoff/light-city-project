@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .icon-label { font-family: 'Inter', sans-serif; font-size: 13px; fill: #0B2447; text-anchor: middle; }
+      .title-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #0B2447; }
+      .subtitle-text { font-family: 'Inter', sans-serif; font-size: 16px; fill: #666; }
+      .icon-stroke { stroke: #0B2447; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-fill { fill: #4A9EFF; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title-text">Light City Icon Set</text>
+  <text x="600" y="65" text-anchor="middle" class="subtitle-text">Sacred Geometry-Based Icons</text>
+  
+  <!-- Row 1 -->
+  <!-- Spire Icon -->
+  <g transform="translate(150, 120)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <path d="M 0,-25 L 8,-5 L 8,25 L -8,25 L -8,-5 Z" class="icon-stroke"/>
+    <circle cx="0" cy="-25" r="3" class="icon-fill"/>
+    <line x1="-15" y1="25" x2="15" y2="25" class="icon-stroke"/>
+    <text y="70" class="icon-label">Central Spire</text>
+  </g>
+  
+  <!-- Communosphere Icon -->
+  <g transform="translate(350, 120)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="0" r="20" class="icon-stroke"/>
+    <path d="M -20,0 Q -20,-15 0,-20 Q 20,-15 20,0" class="icon-stroke"/>
+    <line x1="-20" y1="0" x2="20" y2="0" class="icon-stroke"/>
+    <text y="70" class="icon-label">Communosphere</text>
+  </g>
+  
+  <!-- Energy Flow Icon -->
+  <g transform="translate(550, 120)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="-15" r="4" class="icon-fill"/>
+    <path d="M 0,-10 L 0,0 M -8,0 L 8,0 M -12,8 L 12,8 M -15,16 L 15,16" class="icon-stroke"/>
+    <text y="70" class="icon-label">Energy Flow</text>
+  </g>
+  
+  <!-- Sacred Geometry Icon -->
+  <g transform="translate(750, 120)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="0" r="18" class="icon-stroke"/>
+    <circle cx="0" cy="-12" r="6" class="icon-stroke"/>
+    <circle cx="10.4" cy="6" r="6" class="icon-stroke"/>
+    <circle cx="-10.4" cy="6" r="6" class="icon-stroke"/>
+    <text y="70" class="icon-label">Sacred Geometry</text>
+  </g>
+  
+  <!-- Consciousness Icon -->
+  <g transform="translate(950, 120)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="-5" r="12" class="icon-stroke"/>
+    <path d="M -8,5 Q -8,15 0,18 Q 8,15 8,5" class="icon-stroke"/>
+    <circle cx="-4" cy="-7" r="2" class="icon-fill"/>
+    <circle cx="4" cy="-7" r="2" class="icon-fill"/>
+    <text y="70" class="icon-label">Consciousness</text>
+  </g>
+  
+  <!-- Row 2 -->
+  <!-- Unity Icon -->
+  <g transform="translate(150, 280)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="0" r="18" class="icon-stroke"/>
+    <circle cx="0" cy="0" r="10" class="icon-stroke"/>
+    <circle cx="0" cy="0" r="3" class="icon-fill"/>
+    <text y="70" class="icon-label">Unity</text>
+  </g>
+  
+  <!-- Light Icon -->
+  <g transform="translate(350, 280)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="0" r="6" class="icon-fill"/>
+    <line x1="0" y1="-20" x2="0" y2="-12" class="icon-stroke"/>
+    <line x1="0" y1="12" x2="0" y2="20" class="icon-stroke"/>
+    <line x1="-20" y1="0" x2="-12" y2="0" class="icon-stroke"/>
+    <line x1="12" y1="0" x2="20" y2="0" class="icon-stroke"/>
+    <line x1="-14" y1="-14" x2="-9" y2="-9" class="icon-stroke"/>
+    <line x1="9" y1="9" x2="14" y2="14" class="icon-stroke"/>
+    <line x1="14" y1="-14" x2="9" y2="-9" class="icon-stroke"/>
+    <line x1="-9" y1="9" x2="-14" y2="14" class="icon-stroke"/>
+    <text y="70" class="icon-label">Light</text>
+  </g>
+  
+  <!-- Crystal Icon -->
+  <g transform="translate(550, 280)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <path d="M 0,-18 L 12,-6 L 12,12 L 0,18 L -12,12 L -12,-6 Z" class="icon-stroke"/>
+    <line x1="0" y1="-18" x2="0" y2="18" class="icon-stroke"/>
+    <line x1="-12" y1="-6" x2="12" y2="-6" class="icon-stroke"/>
+    <line x1="-12" y1="12" x2="12" y2="12" class="icon-stroke"/>
+    <text y="70" class="icon-label">Crystal</text>
+  </g>
+  
+  <!-- Resonance Icon -->
+  <g transform="translate(750, 280)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <path d="M -15,0 Q -15,-8 -8,-8 Q 0,-8 0,0 Q 0,8 8,8 Q 15,8 15,0" class="icon-stroke"/>
+    <path d="M -18,0 Q -18,-12 -8,-12 Q 0,-12 0,0 Q 0,12 8,12 Q 18,12 18,0" class="icon-stroke" opacity="0.5"/>
+    <text y="70" class="icon-label">Resonance</text>
+  </g>
+  
+  <!-- Portal Icon -->
+  <g transform="translate(950, 280)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <ellipse cx="-6" cy="0" rx="8" ry="16" class="icon-stroke"/>
+    <ellipse cx="6" cy="0" rx="8" ry="16" class="icon-stroke"/>
+    <ellipse cx="0" cy="0" rx="6" ry="12" class="icon-fill" opacity="0.3"/>
+    <text y="70" class="icon-label">Portal</text>
+  </g>
+  
+  <!-- Row 3 -->
+  <!-- Garden Icon -->
+  <g transform="translate(150, 440)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="0" cy="-8" r="6" class="icon-stroke"/>
+    <path d="M -3,-2 Q -3,5 0,8 Q 3,5 3,-2" class="icon-stroke"/>
+    <circle cx="-8" cy="0" r="5" class="icon-stroke"/>
+    <circle cx="8" cy="0" r="5" class="icon-stroke"/>
+    <line x1="-12" y1="15" x2="12" y2="15" class="icon-stroke"/>
+    <text y="70" class="icon-label">Garden</text>
+  </g>
+  
+  <!-- Temple Icon -->
+  <g transform="translate(350, 440)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <path d="M 0,-18 L 15,-8 L 15,15 L -15,15 L -15,-8 Z" class="icon-stroke"/>
+    <rect x="-6" y="5" width="12" height="10" class="icon-stroke"/>
+    <line x1="-15" y1="15" x2="15" y2="15" class="icon-stroke" stroke-width="3"/>
+    <text y="70" class="icon-label">Temple</text>
+  </g>
+  
+  <!-- Learning Icon -->
+  <g transform="translate(550, 440)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <rect x="-12" y="-15" width="24" height="28" rx="2" class="icon-stroke"/>
+    <line x1="-8" y1="-8" x2="8" y2="-8" class="icon-stroke"/>
+    <line x1="-8" y1="0" x2="8" y2="0" class="icon-stroke"/>
+    <line x1="-8" y1="8" x2="4" y2="8" class="icon-stroke"/>
+    <text y="70" class="icon-label">Learning</text>
+  </g>
+  
+  <!-- Community Icon -->
+  <g transform="translate(750, 440)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <circle cx="-8" cy="-5" r="5" class="icon-stroke"/>
+    <circle cx="8" cy="-5" r="5" class="icon-stroke"/>
+    <circle cx="0" cy="8" r="5" class="icon-stroke"/>
+    <path d="M -8,0 Q -4,5 0,5 Q 4,5 8,0" class="icon-stroke"/>
+    <text y="70" class="icon-label">Community</text>
+  </g>
+  
+  <!-- Evolution Icon -->
+  <g transform="translate(950, 440)">
+    <circle cx="0" cy="0" r="40" fill="#E6ECF3"/>
+    <path d="M -15,10 Q -10,5 -5,5 Q 0,5 0,0 Q 0,-5 5,-5 Q 10,-5 15,-10" class="icon-stroke"/>
+    <circle cx="15" cy="-10" r="3" class="icon-fill"/>
+    <polygon points="15,-10 12,-15 18,-12" class="icon-fill"/>
+    <text y="70" class="icon-label">Evolution</text>
+  </g>
+  
+  <!-- Design Specifications -->
+  <g transform="translate(50, 580)">
+    <text x="0" y="0" class="subtitle-text" style="font-weight: 600;">Design Specifications:</text>
+    <text x="0" y="30" class="icon-label" text-anchor="start">• Stroke-based design with 2px weight</text>
+    <text x="0" y="50" class="icon-label" text-anchor="start">• Rounded joins and caps for organic feel</text>
+    <text x="0" y="70" class="icon-label" text-anchor="start">• Derived from sacred geometry principles</text>
+    <text x="0" y="90" class="icon-label" text-anchor="start">• 40px circle container for consistency</text>
+    <text x="0" y="110" class="icon-label" text-anchor="start">• Color: Deep Space Blue (#0B2447)</text>
+    <text x="0" y="130" class="icon-label" text-anchor="start">• Accent: Celestial Blue (#4A9EFF)</text>
+  </g>
+  
+  <!-- Usage Examples -->
+  <g transform="translate(650, 580)">
+    <text x="0" y="0" class="subtitle-text" style="font-weight: 600;">Usage:</text>
+    <text x="0" y="30" class="icon-label" text-anchor="start">• Navigation menus</text>
+    <text x="0" y="50" class="icon-label" text-anchor="start">• Section headers</text>
+    <text x="0" y="70" class="icon-label" text-anchor="start">• Diagrams and infographics</text>
+    <text x="0" y="90" class="icon-label" text-anchor="start">• Wayfinding signage</text>
+    <text x="0" y="110" class="icon-label" text-anchor="start">• Documentation markers</text>
+    <text x="0" y="130" class="icon-label" text-anchor="start">• Interactive UI elements</text>
+  </g>
+  
+  <!-- Color Legend -->
+  <g transform="translate(450, 720)">
+    <circle cx="0" cy="0" r="8" fill="#E6ECF3"/>
+    <text x="15" y="5" class="icon-label" text-anchor="start">Container</text>
+    
+    <circle cx="100" cy="0" r="8" stroke="#0B2447" stroke-width="2" fill="none"/>
+    <text x="115" y="5" class="icon-label" text-anchor="start">Stroke</text>
+    
+    <circle cx="200" cy="0" r="8" fill="#4A9EFF"/>
+    <text x="215" y="5" class="icon-label" text-anchor="start">Accent</text>
+  </g>
+</svg>
+

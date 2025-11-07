@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <style>
+      .label-text { font-family: 'Inter', sans-serif; font-size: 14px; fill: #0B2447; font-weight: 600; }
+      .desc-text { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .title-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #0B2447; }
+      .stat-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #0B2447; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title-text">Light City Scale Comparison</text>
+  <text x="600" y="65" text-anchor="middle" class="desc-text">Understanding the Size &amp; Population</text>
+  
+  <!-- Ground Line -->
+  <line x1="50" y1="600" x2="1150" y2="600" stroke="#0B2447" stroke-width="2"/>
+  
+  <!-- Human Scale Reference -->
+  <g transform="translate(100, 590)">
+    <rect x="-3" y="-10" width="6" height="10" fill="#0B2447"/>
+    <circle cx="0" cy="-15" r="3" fill="#0B2447"/>
+    <text x="0" y="30" text-anchor="middle" class="desc-text">Human</text>
+    <text x="0" y="45" text-anchor="middle" class="desc-text">~6 ft</text>
+  </g>
+  
+  <!-- Empire State Building -->
+  <g transform="translate(250, 600)">
+    <rect x="-15" y="-150" width="30" height="150" fill="#667eea" opacity="0.6"/>
+    <rect x="-10" y="-180" width="20" height="30" fill="#667eea" opacity="0.8"/>
+    <text x="0" y="30" text-anchor="middle" class="label-text">Empire State</text>
+    <text x="0" y="45" text-anchor="middle" class="desc-text">1,454 ft</text>
+    <text x="0" y="60" text-anchor="middle" class="desc-text">(443 m)</text>
+  </g>
+  
+  <!-- Burj Khalifa -->
+  <g transform="translate(400, 600)">
+    <rect x="-12" y="-260" width="24" height="260" fill="#4A9EFF" opacity="0.6"/>
+    <polygon points="0,-280 -12,-260 12,-260" fill="#4A9EFF" opacity="0.8"/>
+    <text x="0" y="30" text-anchor="middle" class="label-text">Burj Khalifa</text>
+    <text x="0" y="45" text-anchor="middle" class="desc-text">2,717 ft</text>
+    <text x="0" y="60" text-anchor="middle" class="desc-text">(828 m)</text>
+    <text x="0" y="75" text-anchor="middle" class="desc-text" style="font-size: 9px;">Tallest building</text>
+  </g>
+  
+  <!-- Mt. Everest (for scale) -->
+  <g transform="translate(600, 600)">
+    <polygon points="0,-400 -40,-100 40,-100" fill="#764ba2" opacity="0.3"/>
+    <line x1="0" y1="-400" x2="0" y2="-100" stroke="#764ba2" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="0" y="30" text-anchor="middle" class="label-text">Mt. Everest</text>
+    <text x="0" y="45" text-anchor="middle" class="desc-text">29,032 ft</text>
+    <text x="0" y="60" text-anchor="middle" class="desc-text">(8,849 m)</text>
+    <text x="0" y="75" text-anchor="middle" class="desc-text" style="font-size: 9px;">For reference</text>
+  </g>
+  
+  <!-- Light City Central Spire -->
+  <g transform="translate(900, 600)">
+    <!-- Spire structure -->
+    <path d="M 0,-500 L 20,-480 L 25,-200 L 30,0 L -30,0 L -25,-200 L -20,-480 Z" fill="#E6B400" opacity="0.7" stroke="#E6B400" stroke-width="2"/>
+    <circle cx="0" cy="-500" r="8" fill="#FFF6E0"/>
+    
+    <!-- Glow effect -->
+    <circle cx="0" cy="-500" r="30" fill="#FFF6E0" opacity="0.3"/>
+    <circle cx="0" cy="-500" r="20" fill="#FFF6E0" opacity="0.5"/>
+    
+    <!-- Height marker -->
+    <line x1="50" y1="-500" x2="100" y2="-500" stroke="#E6B400" stroke-width="1"/>
+    <text x="105" y="-495" class="label-text" fill="#E6B400">40,000 ft</text>
+    <text x="105" y="-480" class="desc-text">(12,192 m)</text>
+    <text x="105" y="-465" class="desc-text">(7.6 miles)</text>
+    
+    <text x="0" y="30" text-anchor="middle" class="label-text" fill="#E6B400">Light City</text>
+    <text x="0" y="45" text-anchor="middle" class="label-text" fill="#E6B400">Central Spire</text>
+    <text x="0" y="65" text-anchor="middle" class="desc-text">40,000 ft</text>
+    <text x="0" y="80" text-anchor="middle" class="desc-text">(12 km / 7.6 mi)</text>
+  </g>
+  
+  <!-- City Diameter Comparison -->
+  <g transform="translate(100, 150)">
+    <rect x="0" y="0" width="400" height="120" fill="#E6ECF3" rx="8"/>
+    <text x="200" y="25" text-anchor="middle" class="label-text">City Diameter Comparison</text>
+    
+    <!-- Manhattan -->
+    <circle cx="100" cy="70" r="30" fill="#667eea" opacity="0.6"/>
+    <text x="100" y="75" text-anchor="middle" class="stat-text" fill="#fff">2.3 mi</text>
+    <text x="100" y="110" text-anchor="middle" class="desc-text">Manhattan</text>
+    
+    <!-- Light City -->
+    <circle cx="280" cy="70" r="35" fill="#4A9EFF" opacity="0.8"/>
+    <text x="280" y="75" text-anchor="middle" class="stat-text" fill="#fff">~3 mi</text>
+    <text x="280" y="110" text-anchor="middle" class="desc-text">Light City</text>
+  </g>
+  
+  <!-- Population Comparison -->
+  <g transform="translate(550, 150)">
+    <rect x="0" y="0" width="400" height="120" fill="#E6ECF3" rx="8"/>
+    <text x="200" y="25" text-anchor="middle" class="label-text">Population Comparison</text>
+    
+    <!-- Small Town -->
+    <g transform="translate(70, 60)">
+      <circle cx="0" cy="0" r="3" fill="#0B2447"/>
+      <circle cx="10" cy="0" r="3" fill="#0B2447"/>
+      <circle cx="20" cy="0" r="3" fill="#0B2447"/>
+      <text x="10" y="25" text-anchor="middle" class="desc-text">Small Town</text>
+      <text x="10" y="40" text-anchor="middle" class="stat-text">~5,000</text>
+    </g>
+    
+    <!-- Light City -->
+    <g transform="translate(200, 45)">
+      <circle cx="0" cy="0" r="3" fill="#4A9EFF"/>
+      <circle cx="8" cy="0" r="3" fill="#4A9EFF"/>
+      <circle cx="16" cy="0" r="3" fill="#4A9EFF"/>
+      <circle cx="0" cy="8" r="3" fill="#4A9EFF"/>
+      <circle cx="8" cy="8" r="3" fill="#4A9EFF"/>
+      <circle cx="16" cy="8" r="3" fill="#4A9EFF"/>
+      <circle cx="0" cy="16" r="3" fill="#4A9EFF"/>
+      <circle cx="8" cy="16" r="3" fill="#4A9EFF"/>
+      <circle cx="16" cy="16" r="3" fill="#4A9EFF"/>
+      <circle cx="24" cy="8" r="3" fill="#4A9EFF"/>
+      <circle cx="32" cy="8" r="3" fill="#4A9EFF"/>
+      <circle cx="24" cy="16" r="3" fill="#4A9EFF"/>
+      <text x="16" y="40" text-anchor="middle" class="desc-text">Light City</text>
+      <text x="16" y="55" text-anchor="middle" class="stat-text">60,000-120,000</text>
+      <text x="16" y="68" text-anchor="middle" class="desc-text" style="font-size: 9px;">(12 communospheres)</text>
+    </g>
+    
+    <!-- Major City -->
+    <g transform="translate(330, 45)">
+      <rect x="0" y="0" width="40" height="25" fill="#667eea" opacity="0.3"/>
+      <text x="20" y="40" text-anchor="middle" class="desc-text">Major City</text>
+      <text x="20" y="55" text-anchor="middle" class="stat-text">1-10 million</text>
+    </g>
+  </g>
+  
+  <!-- Key Facts -->
+  <g transform="translate(100, 320)">
+    <rect x="0" y="0" width="1000" height="180" fill="#FFF6E0" rx="8" stroke="#E6B400" stroke-width="2"/>
+    <text x="500" y="30" text-anchor="middle" class="label-text" fill="#E6B400">Light City Key Specifications</text>
+    
+    <g transform="translate(50, 60)">
+      <text x="0" y="0" class="label-text">Central Spire:</text>
+      <text x="0" y="18" class="desc-text">• Height: 40,000 feet (12 km / 7.6 miles)</text>
+      <text x="0" y="33" class="desc-text">• Function: Total energy generation</text>
+      <text x="0" y="48" class="desc-text">• Visible from 200+ miles away</text>
+      <text x="0" y="63" class="desc-text">• Tallest structure ever conceived</text>
+    </g>
+    
+    <g transform="translate(350, 60)">
+      <text x="0" y="0" class="label-text">City Layout:</text>
+      <text x="0" y="18" class="desc-text">• Diameter: ~3 miles (5 km)</text>
+      <text x="0" y="33" class="desc-text">• Design: Concentric circles</text>
+      <text x="0" y="48" class="desc-text">• 12 communospheres at perimeter</text>
+      <text x="0" y="63" class="desc-text">• Sacred geometry throughout</text>
+    </g>
+    
+    <g transform="translate(650, 60)">
+      <text x="0" y="0" class="label-text">Population:</text>
+      <text x="0" y="18" class="desc-text">• Total: 60,000-120,000 people</text>
+      <text x="0" y="33" class="desc-text">• Per communosphere: ~10,000</text>
+      <text x="0" y="48" class="desc-text">• Complete self-sufficient city</text>
+      <text x="0" y="63" class="desc-text">• Unity consciousness community</text>
+    </g>
+  </g>
+  
+  <!-- Scale Note -->
+  <text x="600" y="670" text-anchor="middle" class="desc-text" style="font-style: italic;">
+    Note: Diagrams not to exact scale for visibility. Light City Spire is ~15x taller than Burj Khalifa.
+  </text>
+</svg>
+

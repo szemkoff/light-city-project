@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400">
+  <defs>
+    <style>
+      .stage-label { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #0B2447; }
+      .stage-desc { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .progress-text { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; fill: #4A9EFF; }
+      .title-text { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; fill: #0B2447; }
+      .subtitle-text { font-family: 'Inter', sans-serif; font-size: 16px; fill: #666; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title-text">Light City Development Progress</text>
+  <text x="500" y="65" text-anchor="middle" class="subtitle-text">Current Stage: Foundation &amp; Vision</text>
+  
+  <!-- Progress Circle -->
+  <circle cx="500" cy="180" r="80" fill="none" stroke="#E6ECF3" stroke-width="16"/>
+  <circle cx="500" cy="180" r="80" fill="none" stroke="#4A9EFF" stroke-width="16" 
+          stroke-dasharray="301.59" stroke-dashoffset="120.64" 
+          transform="rotate(-90 500 180)" stroke-linecap="round"/>
+  <text x="500" y="195" text-anchor="middle" class="progress-text">60%</text>
+  <text x="500" y="220" text-anchor="middle" class="subtitle-text">Complete</text>
+  
+  <!-- Stage Timeline -->
+  <g transform="translate(50, 300)">
+    <!-- Stage 1 - Current -->
+    <rect x="0" y="0" width="140" height="60" fill="#4A9EFF" rx="8"/>
+    <text x="70" y="25" text-anchor="middle" class="stage-label" fill="#fff">Stage 1</text>
+    <text x="70" y="42" text-anchor="middle" class="stage-desc" fill="#fff">Foundation</text>
+    <text x="70" y="55" text-anchor="middle" class="stage-desc" fill="#A0CBFF">← Current</text>
+    
+    <!-- Stage 2 -->
+    <rect x="155" y="0" width="140" height="60" fill="#A0CBFF" rx="8"/>
+    <text x="225" y="25" text-anchor="middle" class="stage-label">Stage 2</text>
+    <text x="225" y="42" text-anchor="middle" class="stage-desc">Visualization</text>
+    
+    <!-- Stage 3 -->
+    <rect x="310" y="0" width="140" height="60" fill="#E6ECF3" rx="8"/>
+    <text x="380" y="25" text-anchor="middle" class="stage-label">Stage 3</text>
+    <text x="380" y="42" text-anchor="middle" class="stage-desc">Digital Presence</text>
+    
+    <!-- Stage 4 -->
+    <rect x="465" y="0" width="140" height="60" fill="#E6ECF3" rx="8"/>
+    <text x="535" y="25" text-anchor="middle" class="stage-label">Stage 4</text>
+    <text x="535" y="42" text-anchor="middle" class="stage-desc">Community</text>
+    
+    <!-- Stage 5 -->
+    <rect x="620" y="0" width="140" height="60" fill="#E6ECF3" rx="8"/>
+    <text x="690" y="25" text-anchor="middle" class="stage-label">Stage 5</text>
+    <text x="690" y="42" text-anchor="middle" class="stage-desc">Manifestation</text>
+    
+    <!-- Stage 6 -->
+    <rect x="775" y="0" width="140" height="60" fill="#E6ECF3" rx="8"/>
+    <text x="845" y="25" text-anchor="middle" class="stage-label">Stage 6</text>
+    <text x="845" y="42" text-anchor="middle" class="stage-desc">Living System</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(350, 380)">
+    <rect x="0" y="0" width="20" height="12" fill="#4A9EFF" rx="2"/>
+    <text x="25" y="10" class="stage-desc">Active</text>
+    
+    <rect x="100" y="0" width="20" height="12" fill="#A0CBFF" rx="2"/>
+    <text x="125" y="10" class="stage-desc">Next</text>
+    
+    <rect x="200" y="0" width="20" height="12" fill="#E6ECF3" rx="2"/>
+    <text x="225" y="10" class="stage-desc">Future</text>
+  </g>
+</svg>
+

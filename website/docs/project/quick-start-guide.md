@@ -2,6 +2,10 @@
 
 Welcome to the Light City project! This guide will help you get started quickly.
 
+![Quick Start Flowchart](/img/diagrams/quick-start-flowchart.svg)
+
+*Follow this flowchart to discover your entry point into the Light City project.*
+
 ## What is This Project?
 
 Light City is a multi-dimensional vision of a higher-consciousness civilization. This project documents, develops, and works toward manifesting that vision through:

@@ -13,6 +13,10 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 **Duration**: 1-2 months  
 **Status**: CURRENT
 
+![Stage Progress](/img/diagrams/stage-progress.svg)
+
+*Current progress: 60% complete in Stage 1 - Foundation & Vision*
+
 ### Objectives
 - Establish core philosophical and spiritual foundations
 - Create comprehensive documentation structure

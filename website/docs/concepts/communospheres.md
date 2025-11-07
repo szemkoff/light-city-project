@@ -38,6 +38,10 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 ## Key Characteristics
 
+![Communosphere Cross-Section](/img/diagrams/communosphere-cross-section.svg)
+
+*Detailed cross-section showing all interior levels, living spaces, and the central resonance core.*
+
 ### Physical Structure
 
 **Shape**: Spherical (dome visible from exterior)

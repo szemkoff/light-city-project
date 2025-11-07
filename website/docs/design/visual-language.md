@@ -42,6 +42,10 @@ This guide defines the visual system used across all Light City materials (docum
 - Geometry-derived icons (circle, hexagon, triangle)
 - Avoid skeuomorphism; prefer abstract sacred forms
 
+![Icon Set](/img/diagrams/icon-set.svg)
+
+*Complete Light City icon set based on sacred geometry principles.*
+
 ### Spacing & Grid
 
 - 8pt spacing system (8, 16, 24, 32, 48, 64)

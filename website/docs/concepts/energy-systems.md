@@ -188,6 +188,10 @@ graph LR
 
 ## Knowledge Transfer Technology
 
+![Knowledge Transfer Mechanism](/img/diagrams/knowledge-transfer-mechanism.svg)
+
+*How information flows from individual learning through the resonance field to instant collective reception.*
+
 ### How It Works
 
 **Delphin Model**: "Whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
