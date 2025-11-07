@@ -8,7 +8,15 @@ sidebar_label: Core Concepts
 
 This document outlines the foundational concepts and principles of the Light City project.
 
+:::info Scope & Framing
+This page blends visionary language with practical design cues. Spiritual descriptions are presented as the project's working lens. **All physical infrastructure on Earth follows standard engineering, permitting, and safety practices.** For implementation details, see [Architecture](/docs/design/architecture), [Energy Systems](/docs/concepts/energy-systems), and [Development Stages](/docs/project/development-stages).
+:::
+
 ## Vision
+
+:::tip How to Read This Page
+This is a **conceptual primer**. Take metaphysical language as **design intent**; take implementation details from the **Architecture**, **Development Stages**, and **Energy Systems** pages. Where claims could be controversial, we tag them as **hypotheses** and defer to peer-reviewed evidence.
+:::
 
 Your original Light City visions that sparked this project:
 
@@ -72,7 +80,7 @@ graph TB
 
 ### 1. The Etheric Blueprint
 
-Light City exists as an **etheric template** in Earth's higher-dimensional field—a city of light suspended between the physical and spiritual planes. This is not metaphorical; in certain spiritual traditions, such structures are understood to exist in subtle energy states, accessible to consciousness but not (yet) to physical senses.
+We describe Light City as an **etheric template**—a pattern referenced in certain spiritual traditions and accessible through contemplative practice. In this lens, the city's forms (white-gold crystalline geometries, harmonic tone, central spire) orient our design metaphors and community rituals.
 
 **Key Attributes:**
 - White-gold crystalline architecture
@@ -190,6 +198,8 @@ This means:
 - Creates a field that elevates consciousness
 - Self-sustaining energetic system
 
+> **Terminology Clarification:** Here "energetic" denotes **experiential resonance** (light/sound/coherence), not electrical baseload. **Physical electrical power** is provided by a renewable **microgrid** (PV + batteries + backup); see [Energy Systems](/docs/concepts/energy-systems) for details.
+
 ### Energetic/Metaphysical Description
 
 **Purpose**: 
@@ -216,6 +226,8 @@ It manifests through collective choice:
 - If enough individuals hold the vision
 - If enough people embody the principles
 - If humanity collectively chooses unity over separation
+
+> **Your contribution** (skills, stewardship, research, resources) is what collapses potential into buildable plans. This is an invitation to agency, not a guarantee.
 
 ### How Do We Build It?
 
@@ -260,7 +272,7 @@ Light City resonates with and connects to:
 - **Cosmic Citizenship**: Humanity's connection with broader galactic family
 - **Extraterrestrial Models**: Cities like Delphin that demonstrate the archetype
 
-## Delphin: A Living Example
+## Delphin (Off-World Archetype, Inspirational Reference)
 
 Recent contact information reveals **Delphin**—a crystal city on planet Israel (another star system) that embodies the Light City archetype:
 
@@ -268,14 +280,15 @@ Recent contact information reveals **Delphin**—a crystal city on planet Israel
 - **Communospheres**: Large spherical living spaces (600-1,200 ft diameter) maintaining resonance
 - **Knowledge transfer system**: Learning by one transfers to all
 - **Unified consciousness field**: All inhabitants consciously connected
-- **Proven technology**: Demonstrates these principles are not theoretical
+- **Archetypal reference from off-world narrative sources**: We treat it as design inspiration, not empirical proof
 
-**Important**: Delphin's scale represents what's possible with advanced off-world technology. Light City's **Earth implementation** will use **scaled, buildable versions**:
+**Important**: Delphin represents a mythic/visionary implementation of the archetype. Light City's **Earth implementation** uses **scaled, buildable versions** within Earth engineering standards:
 - **Spire**: 60-300m (200-1,000 ft) instead of 40,000 ft
 - **Communospheres**: 30-60m (100-200 ft) diameter instead of 600-1,200 ft
 - **Same principles**, different scale appropriate for Earth physics and construction
+- **Proven technologies**: Solar PV, battery storage, CLT/steel structures, BIPV glazing (see [Technology Catalog](/docs/technical/technology-catalog))
 
-This validates that Light City is accessing a real archetypal pattern, not creating from imagination alone.
+This archetype validates that Light City is accessing a coherent design pattern, not creating from imagination alone.
 
 *See [Communospheres](/docs/concepts/communospheres) for details*
 
@@ -302,8 +315,36 @@ To deepen your understanding:
 3. Review [Purpose and Mission](/docs/concepts/purpose-and-mission) for project goals
 4. Study [Sacred Geometry](/docs/concepts/sacred-geometry) for underlying patterns
 
+### Next Actions by Role
+
+**If you're a builder/engineer:**
+- Jump to [Development Stages](/docs/project/development-stages) to see gates, TRLs, and budgets
+- Review [Technology Catalog](/docs/technical/technology-catalog) for proven technologies
+- Check [Architecture](/docs/design/architecture) for specifications and phasing
+
+**If you're a researcher/experience curator:**
+- See [Energy Systems](/docs/concepts/energy-systems) for metrology, ethics, and consent UI
+- Explore measurement protocols and research hygiene standards
+- Review IRB requirements and human-subject research frameworks
+
+**If you're an architect/designer:**
+- Study [Architecture](/docs/design/architecture) for scale, heights, and typologies
+- Review [Sacred Geometry](/docs/concepts/sacred-geometry) for design principles
+- Check [Visual Language](/docs/design/visual-language) for design tokens
+
+**If you're interested in urban retrofits:**
+- See [Urban Retrofit Guide](/docs/technical/urban-retrofit-guide) for applying Light City principles to existing cities
+- Review policy interventions, district strategies, and building-level upgrades
+
 ---
 
-**Last Updated**: October 10, 2025  
+**Last Updated**: November 7, 2025  
+**Last Reviewed**: November 7, 2025  
+**Owner**: Core Team  
+**Related**: [Architecture](/docs/design/architecture), [Energy Systems](/docs/concepts/energy-systems), [Development Stages](/docs/project/development-stages)
+
+---
+
+**📝 [Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/concepts/core-concepts.md)** | **📊 [View Updates](/blog)**  
 **Related Documents**: [Philosophy](/docs/concepts/philosophy), [Architecture](/docs/design/architecture), [Development Stages](/docs/project/development-stages)
 
