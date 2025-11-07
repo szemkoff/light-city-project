@@ -89,14 +89,12 @@ The project now has solid infrastructure and documentation. Current focus:
 Light City Project/
 ├── README.md                    ← Project overview
 ├── START-HERE.md               ← This file
-├── CHANGELOG.md                ← Version history
 │
 ├── docs/                       ← All documentation
 │   ├── concepts/               ← Core ideas and philosophy
 │   ├── design/                 ← Architecture and aesthetics
-│   ├── technical/              ← Development (future)
-│   ├── community/              ← Community guidelines (future)
 │   ├── project/                ← Project management
+│   ├── research/               ← Bibliography and open questions
 │   └── INDEX.md                ← Complete documentation map
 │
 ├── assets/                     ← Media files
@@ -173,7 +171,7 @@ Most questions are answered in:
 **Repository**: [github.com/szemkoff/light-city-project](https://github.com/szemkoff/light-city-project)  
 **Live Site**: [szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/)
 
-See [CHANGELOG.md](CHANGELOG.md) for complete version history.
+See the [Updates](/blog) section for project progress and milestones.
 
 ---
 
