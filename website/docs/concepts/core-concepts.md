@@ -237,7 +237,7 @@ The mistake is skipping levels 1 and 2 to rush to level 3.
 - **Metaphorically**: In communities and hearts that embody the principles
 - **Literally**: In future physical structures built on these principles
 
-**Validation**: The discovery of Delphin—an existing crystal city with 40,000-foot crystal spire and communosphere living spaces—confirms that Light City is not fantasy but an archetypal pattern already implemented elsewhere.
+**Validation**: The discovery of Delphin—an existing crystal city on another planet with a 40,000-foot crystal spire (off-world scale, not Earth-feasible) and communosphere living spaces—confirms that Light City is not fantasy but an archetypal pattern already implemented elsewhere. Light City's Earth implementation will use scaled, buildable versions (60-300m spire).
 
 ### Who Is This For?
 
@@ -262,13 +262,18 @@ Light City resonates with and connects to:
 
 ## Delphin: A Living Example
 
-Recent contact information reveals **Delphin**—a crystal city on planet Israel that embodies the Light City archetype:
+Recent contact information reveals **Delphin**—a crystal city on planet Israel (another star system) that embodies the Light City archetype:
 
-- **40,000-foot crystal spire** generating power and consciousness frequency
-- **Communospheres**: Large spherical living spaces maintaining resonance
+- **40,000-foot crystal spire** (off-world scale, ~12 km tall) generating power and consciousness frequency
+- **Communospheres**: Large spherical living spaces (600-1,200 ft diameter) maintaining resonance
 - **Knowledge transfer system**: Learning by one transfers to all
 - **Unified consciousness field**: All inhabitants consciously connected
 - **Proven technology**: Demonstrates these principles are not theoretical
+
+**Important**: Delphin's scale represents what's possible with advanced off-world technology. Light City's **Earth implementation** will use **scaled, buildable versions**:
+- **Spire**: 60-300m (200-1,000 ft) instead of 40,000 ft
+- **Communospheres**: 30-60m (100-200 ft) diameter instead of 600-1,200 ft
+- **Same principles**, different scale appropriate for Earth physics and construction
 
 This validates that Light City is accessing a real archetypal pattern, not creating from imagination alone.
 
