@@ -22,6 +22,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### Cross-Laminated Timber (CLT)
 
+![CLT Construction](/img/technology/clt-construction.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
@@ -52,6 +54,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### Geodesic Dome Systems
+
+![Geodesic Dome](/img/technology/geodesic-dome.jpg)
 
 **Status**: ✅ Commercially Available (TRL 7-8)  
 **Cost**: $$ (Medium to High)
@@ -140,6 +144,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ## Energy Systems
 
 ### 1 Building-Integrated Photovoltaics (BIPV)
+
+![BIPV Solar Facade](/img/technology/bipv-solar-facade.jpg)
 
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$$ (High, but decreasing)
@@ -322,6 +328,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 3 Composting Toilet Systems
 
+![Rainwater Harvesting System](/img/technology/rainwater-harvesting.jpg)
+
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $ (Low to Medium)
 
@@ -386,6 +394,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Vertical Hydroponic/Aeroponic Systems
 
+![Vertical Farm](/img/technology/vertical-farm.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ to $$$ (Medium to High)
 
@@ -416,6 +426,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 2 Aquaponics Systems
+
+![Aquaponics System](/img/technology/aquaponics-system.jpg)
 
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
@@ -559,6 +571,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 3 Circadian Lighting Systems
 
+![Circadian Lighting](/img/technology/circadian-lighting.jpg)
+
 **Status**: ✅ Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
@@ -673,6 +687,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 4 Float Tanks (Sensory Deprivation)
 
+![Float Tank](/img/technology/float-tank.jpg)
+
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $$ (Medium)
 
@@ -700,6 +716,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Electric Vehicles & Charging
 
+![EV Charging Station](/img/technology/ev-charging.jpg)
+
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $$ to $$$ (Medium to High, decreasing)
 
@@ -724,6 +742,8 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ---
 
 ### 2 E-Bikes & Cargo Bikes
+
+![Cargo Bike](/img/technology/cargo-bike.jpg)
 
 **Status**: ✅ Commercially Available (TRL 9)  
 **Cost**: $ (Low)
