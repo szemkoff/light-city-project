@@ -586,6 +586,79 @@ These stages are guideposts, not rigid requirements. The project may:
 **Includes**: Utilities, communal meals (10-15/month), wellness access, events, maintenance  
 **Additional**: Private meals, workshops, personal services (à la carte)
 
+---
+
+## Financial Model Notes & Assumptions
+
+### Cross-Subsidy Structure
+
+**Unit Economics**:
+| Unit Type | Monthly Fee | Annual | Per-Resident Cost | Margin |
+|-----------|-------------|--------|-------------------|---------|
+| Tiny Home | $500-$700 | $6K-$8.4K | $8.7K-$18K | ❌ Loss leader |
+| Studio | $700-$950 | $8.4K-$11.4K | $8.7K-$18K | ≈ Break-even |
+| 1-Bedroom | $950-$1,300 | $11.4K-$15.6K | $8.7K-$18K | ✅ Profitable |
+| 2-Bedroom | $1,300-$1,700 | $15.6K-$20.4K | $8.7K-$18K | ✅ Profitable |
+
+**Cross-Subsidy Strategy**:
+1. **Tiny homes** (25% of units) operate at loss, subsidized by larger units + retreat revenue
+2. **Studios** (40% of units) approximately break-even
+3. **1-BR and 2-BR** (35% of units) generate profit margin
+4. **Retreat revenue** ($400K-$900K/year) is **essential**, not optional
+
+### Critical Success Factors
+
+**Revenue Dependencies**:
+- **Occupancy**: 90%+ required for break-even (80% occupancy = operating loss)
+- **Retreat Revenue**: Must achieve 800-1,500 guests/year @ $500-$600/guest
+- **Unit Mix**: Cannot exceed 25% tiny homes without increasing fees
+- **Pricing Power**: Must maintain fees within $500-$1,700 range (market competitive)
+
+### Sensitivity Analysis
+
+**10% Revenue Drop Scenarios**:
+| Scenario | Impact | Mitigation |
+|----------|--------|------------|
+| Occupancy drops to 80% | -$185K-$252K/year | Increase marketing, improve retention |
+| Retreat bookings -10% | -$40K-$90K/year | Diversify retreat offerings, partnerships |
+| Fee resistance (5% discount) | -$93K-$126K/year | Value-add services, improve experience |
+| **Combined worst case** | -$318K-$468K/year | Draw from reserves, cut discretionary costs |
+
+**Risk Mitigation**:
+1. **Build 12-18 month operating reserve** ($1.8M-$4.5M) before opening
+2. **Guarantee minimum retreat bookings** (pre-sell 50% of Year 1 capacity)
+3. **Dynamic pricing** (adjust fees based on demand, +/- 10%)
+4. **Limit tiny homes** to 25% of total units (currently appropriate)
+5. **Diversify revenue** (events, agritourism, licensing)
+
+### Break-Even Analysis
+
+**Base Case** (Mid Scenario):
+- **Residents**: 180 @ average $925/month = $2.0M/year
+- **Retreats**: 1,000 guests @ $550 = $550K/year
+- **Other**: Events, agritourism, licensing = $300K/year
+- **Total Revenue**: $2.85M/year
+- **Total OPEX**: $2.5M/year
+- **Margin**: $350K/year (12% margin)
+
+**Conservative Case** (Low Scenario):
+- **Residents**: 160 @ average $800/month = $1.54M/year
+- **Retreats**: 800 guests @ $500 = $400K/year
+- **Other**: $200K/year
+- **Total Revenue**: $2.14M/year
+- **Total OPEX**: $1.8M/year
+- **Margin**: $340K/year (16% margin)
+
+**Optimistic Case** (High Scenario):
+- **Residents**: 220 @ average $1,100/month = $2.9M/year
+- **Retreats**: 1,500 guests @ $600 = $900K/year
+- **Other**: $450K/year
+- **Total Revenue**: $4.25M/year
+- **Total OPEX**: $3.6M/year
+- **Margin**: $650K/year (15% margin)
+
+---
+
 ### Funding Stack by Stage
 
 | Stage | Budget Range | Timeline | Primary Sources | Secondary Sources |

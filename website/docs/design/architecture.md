@@ -414,22 +414,27 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 
 Light City operates on multiple energy levels:
 
-**Physical Energy**:
-- Solar, possibly zero-point or other advanced technologies
+**Physical Energy** (Conventional, TRL 8-9):
+- Solar PV: 2-5 MWp (Phase 1), 5-15 MWp (Phase 2)
+- Battery storage: 8-20 MWh (Phase 1), 40-80 MWh (Phase 2)
+- Backup generator: 500 kW - 2 MW (diesel/propane)
+- **Powers**: All essential systems (HVAC, lighting, kitchens, water, communications)
 - Sustainable and regenerative
-- Excess given back to Earth's grid
+- Excess may be given back to Earth's grid (if interconnected)
 
-**Subtle Energy**:
-- Sacred geometry creates coherent fields
-- Crystalline structures amplify and direct energy
-- Central spire distributes balanced energy
-- Natural ley lines honored and utilized
+**Subtle Energy** (Research, TRL 1-3):
+- Sacred geometry creates coherent acoustic fields
+- Crystalline structures may amplify resonance (hypothesis)
+- Central spire coordinates ceremonial lighting and acoustic programs
+- **Influences**: Human experience, consciousness, well-being (not electrical loads)
+- Natural ley lines honored and utilized (visionary layer)
 
-**Consciousness Energy**:
-- Collective intention shapes the field
-- Regular ceremonies maintain coherence
-- The city "learns" and adapts energetically
-- Consciousness of inhabitants is primary power source
+**Consciousness Energy** (Visionary Layer):
+- Collective intention shapes the experiential field
+- Regular ceremonies maintain community coherence
+- The city "learns" and adapts through community feedback
+- **Role**: Enhances human consciousness and community well-being
+- **Not a power source**: Physical electricity comes from microgrid (solar + batteries)
 
 ### The Living Grid
 
@@ -710,7 +715,9 @@ Light City builds upon these principles with modern understanding and advanced t
 
 ---
 
-**Status**: Upgraded to investor/permit-ready framework with phased implementation
-**Last Updated**: November 7, 2025
-**Related**: [Core Concepts](/docs/concepts/core-concepts), [Sacred Geometry](/docs/concepts/sacred-geometry), [Development Stages](/docs/project/development-stages)
+**Status**: Upgraded to investor/permit-ready framework with phased implementation  
+**Version**: 2.0 (Energy Clarity)  
+**Last Updated**: November 14, 2025  
+**Last Reviewed**: November 14, 2025  
+**Related**: [Core Concepts](/docs/concepts/core-concepts), [Sacred Geometry](/docs/concepts/sacred-geometry), [Development Stages](/docs/project/development-stages), [Energy Systems](/docs/concepts/energy-systems)
 

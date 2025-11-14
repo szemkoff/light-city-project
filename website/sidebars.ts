@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
       label: 'Development',
       items: [
         'project/development-stages',
+        'project/governance',
         'project/project-structure',
         'project/tools-and-workflows',
         'project/contributing',

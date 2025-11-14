@@ -35,7 +35,10 @@ Create tangible connections between:
 
 ## Specific Goals
 
-### Short-Term (Stage 1-2: Next 6 months)
+### Short-Term (Q4 2025 - Q2 2026: Stages 1-2)
+
+**Timeline**: October 2025 - June 2026 (8 months)  
+**Current Status**: 85% through Stage 1 (as of Nov 14, 2025)
 
 1. **Complete Foundational Documentation**
    - Core concepts fully articulated
@@ -52,7 +55,9 @@ Create tangible connections between:
    - Tools and workflows defined
    - Standards and guidelines set
 
-### Medium-Term (Stage 3-4: 6-18 months)
+### Medium-Term (Q3 2026 - Q4 2027: Stages 3-4)
+
+**Timeline**: July 2026 - November 2027 (17 months)
 
 1. **Build Digital Presence**
    - Website or digital platform launched
@@ -69,7 +74,11 @@ Create tangible connections between:
    - Develop specific aspects in detail
    - Create educational materials
 
-### Long-Term (Stage 5-6: 2+ years)
+### Long-Term (2028-2031+: Stages 5-6)
+
+**Timeline**: December 2027 - 2031+ (3+ years)  
+**Stage 5**: Physical manifestation (18-36 months)  
+**Stage 6**: Operations and evolution (ongoing)
 
 1. **Physical Manifestation**
    - Explore real-world implementations
@@ -215,6 +224,8 @@ Use these questions to ensure ongoing alignment:
 
 ---
 
-**Last Updated**: October 10, 2025  
+**Version**: 2.0 (Timeline Aligned)  
+**Last Updated**: November 14, 2025  
+**Last Reviewed**: November 14, 2025  
 **Related**: [Core Concepts](core-concepts.md), [Philosophy](philosophy.md), [Development Stages](../project/development-stages.md)
 

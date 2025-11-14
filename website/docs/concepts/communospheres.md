@@ -14,6 +14,12 @@ Communospheres represent a revolutionary approach to living spaces—spherical s
 
 **Origin**: This concept comes from the city of Delphin on planet Israel, as shared through contact/channeling. It provides a concrete example of how higher-consciousness civilizations structure their living environments.
 
+:::info Scale Clarification
+**Delphin Scale** (Off-World Reference): 600-1,200 ft diameter spheres housing 10,000 people each represent advanced off-world technology and serve as inspirational reference.
+
+**Light City Scale** (Earth Implementation): 30-90 m (100-300 ft) diameter domes housing 80-400 residents each, using proven technologies (CLT, geodesic structures, BIPV). See [Architecture](/docs/design/architecture) for detailed specifications.
+:::
+
 ### Visual Reference
 
 Your original vision of Light City showing the spherical communosphere concept:
@@ -46,28 +52,54 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 **Shape**: Spherical (dome visible from exterior)
 
-**Size**: 
-- Large enough for complete communities (example: 10,000 people)
-- Self-contained living environment
-- Multiple levels/floors within the sphere
+#### 🔮 Vision Source (Off-World Reference)
 
-**Construction**:
-- "Hooked in" to the ground—firmly anchored
-- Likely crystalline or crystal-integrated materials
-- Semi-transparent or translucent (based on Delphin images)
-- Designed to maintain specific energetic properties
+**Delphin Communospheres**: 600-1,200 ft diameter mega-spheres
+- Each houses 10,000 people
+- Complete self-contained cities within spheres
+- Demonstrates far-future pavilion scale with advanced consciousness-matter technology
+- Serves as aspirational model and proportional guide
 
-**Location**: Positioned around the city's perimeter/outer ring
+#### 🌍 Terrestrial Prototype (Earth Implementation)
+
+**Phase 1 (18-24 months)**: 3 geodesic domes
+- **Size**: 30-45 m diameter (100-150 ft)
+- **Height**: 3-5 levels, 15-25 m tall
+- **Capacity**: 80-120 residents per dome
+- **Total Phase 1**: 240-360 residents (target: 200)
+- **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
+- **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
+
+**Phase 2 (36-48 months)**: 6-12 domes expansion
+- **Size**: 45-60 m diameter (150-200 ft)
+- **Capacity**: 120-200 residents per dome
+- **Total**: 720-2,400 residents
+- **Clustered**: Outer ring arrangement, connected by covered walkways
+
+**Phase 3 (Long-term vision)**: 12+ domes
+- **Size**: 60-90 m diameter (200-300 ft)
+- **Capacity**: 200-400 residents per dome
+- **Total**: 2,400-4,800+ residents
+
+**Construction** (Terrestrial):
+- "Hooked in" to the ground—firmly anchored with deep foundations
+- CLT (cross-laminated timber) or steel frame with geodesic geometry
+- BIPV glazing + insulated panels (R-30+ walls, R-50+ roof)
+- Designed to maintain acoustic resonance and biophilic environment
+
+**Location**: Positioned around the city's outer ring(s)
 
 ### Energetic Function
 
 **Primary Purpose**: Maintain resonant frequency
 
-**How It Works**:
-1. Central city spire generates/holds base frequency
-2. Communospheres receive and maintain this frequency
-3. Living spaces within sphere hold steady resonance
-4. Inhabitants remain "consciously connected" through this field
+**How It Works** (Research Hypothesis, TRL 1-3):
+1. Central city spire generates/holds base RESONANCE frequency (acoustic/consciousness)
+2. Communospheres receive and maintain this acoustic resonance
+3. Living spaces within sphere hold steady harmonic environment
+4. Inhabitants remain "consciously connected" through this experiential field
+5. **Note**: This is experiential/acoustic resonance, NOT electrical power
+6. **Physical power**: Provided by microgrid (solar PV + batteries)
 
 **Field Effects**:
 - Creates coherent consciousness environment
@@ -146,10 +178,19 @@ graph TB
 - Unity consciousness in practice
 
 **Knowledge Transfer System**:
-- Learning in "elevated knowledge form" 
-- Automatic transmission through resonance field
-- Instantaneous reception by all connected beings
-- No traditional teaching required for information
+
+**Delphin Model** (Off-World Reference):
+"Whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
+
+**Light City Research Approach**:
+We treat "field-mediated learning" as a **testable hypothesis**:
+- **Measurement**: Learning speed, retention, transfer, group coherence
+- **Method**: Preregistered protocols, sham controls, third-party observers
+- **Ethics**: IRB approval, informed consent, right to withdraw
+- **Outcome**: Enhanced learning environments (not "instant download")
+- **Status**: TRL 1-2 (early research, no claims of proven efficacy)
+
+See [Energy Systems](/docs/concepts/energy-systems) for detailed research protocols.
 
 ## Applications to Light City
 
@@ -161,11 +202,11 @@ graph TB
 - Arrange in geometric pattern (circle, 12 positions, etc.)
 - Pathways connecting to central area
 
-**Number**: 
-- Depends on total intended population
-- 12 spheres for sacred number alignment?
-- Each housing 5,000-10,000 people
-- Total city population: 60,000-120,000
+**Number** (Phased Approach):
+- **Phase 1**: 3 domes (200 residents target, 150-300 range)
+- **Phase 2**: 6-12 domes (720-2,400 residents)
+- **Phase 3**: 12+ domes (2,400-4,800+ residents)
+- **Long-term Vision**: Inspired by Delphin's 12 mega-spheres (60,000-120,000 people off-world scale)
 
 **Architecture**:
 - Geodesic dome or sphere structure
@@ -400,8 +441,16 @@ This isn't speculation—it's adaptation of proven technology.
 
 ---
 
-**Status**: New concept document based on Delphin information  
-**Created**: October 10, 2025  
+**Status**: Scale-clarified, investor-ready framework  
+**Version**: 2.0 (Scale Separation)  
+**Last Updated**: November 14, 2025  
+**Last Reviewed**: November 14, 2025  
 **Priority**: High - Core architectural component  
 **Next Steps**: Integrate into architecture.md, develop detailed designs
+
+**Related Documents**: 
+- [Architecture](/docs/design/architecture) - Physical implementation and specifications
+- [Energy Systems](/docs/concepts/energy-systems) - Resonance technology and research protocols
+- [Development Stages](/docs/project/development-stages) - Timeline and phasing
+- [Technology Catalog](/docs/technical/technology-catalog) - Proven technologies (CLT, geodesic, BIPV)
 
