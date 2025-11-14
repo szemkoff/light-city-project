@@ -1,0 +1,111 @@
+/* Theme Variables */
+
+:root[data-theme='light'] {
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f0f0f0;
+  --bg-hero: linear-gradient(135deg, #F5F5DC 0%, #E8E4D8 50%, #D8D4E8 100%);
+  --bg-card: #ffffff;
+  --bg-elevated: #ffffff;
+  
+  /* Text Colors */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --text-inverse: #ffffff;
+  
+  /* Accent Colors */
+  --color-gold: #FFD700;
+  --color-gold-light: #FFE55C;
+  --color-purple: #667EEA;
+  --color-purple-light: #8B9FFF;
+  --color-lavender: #764BA2;
+  --color-green: #32CD32;
+  --color-green-light: #90EE90;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  --gradient-secondary: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  --gradient-hero: linear-gradient(135deg, #F5F5DC 0%, #E8E4D8 50%, #D8D4E8 100%);
+  --gradient-stats: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  --gradient-footer: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+  --gradient-card: linear-gradient(135deg, #F5F5DC 0%, #E8E4D8 100%);
+  
+  /* Border Colors */
+  --border-subtle: #f0f0f0;
+  --border-medium: #e0e0e0;
+  --border-accent: #667EEA;
+  --border-gold: #FFD700;
+  
+  /* Shadow */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.3);
+  --shadow-purple: 0 10px 40px rgba(102, 126, 234, 0.15);
+  
+  /* Pattern Opacity */
+  --pattern-opacity: 0.03;
+  --pattern-color: #667EEA;
+}
+
+:root[data-theme='dark'] {
+  /* Background Colors */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #0f0f10;
+  --bg-tertiary: #1a1a1a;
+  --bg-hero: linear-gradient(135deg, #0a0a0a 0%, #1a1530 50%, #1a1a2e 100%);
+  --bg-card: #1a1a1a;
+  --bg-elevated: #242424;
+  
+  /* Text Colors */
+  --text-primary: #e8e8e8;
+  --text-secondary: #b8b8b8;
+  --text-muted: #808080;
+  --text-inverse: #0a0a0a;
+  
+  /* Accent Colors */
+  --color-gold: #FFE55C;
+  --color-gold-light: #FFF0A3;
+  --color-purple: #8B9FFF;
+  --color-purple-light: #A8B8FF;
+  --color-lavender: #9D6FCC;
+  --color-green: #4ADE80;
+  --color-green-light: #86EFAC;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #FFE55C 0%, #FFB347 100%);
+  --gradient-secondary: linear-gradient(135deg, #8B9FFF 0%, #9D6FCC 100%);
+  --gradient-hero: linear-gradient(135deg, #0a0a0a 0%, #1a1530 50%, #1a1a2e 100%);
+  --gradient-stats: linear-gradient(135deg, #1a1a40 0%, #2d1b4e 100%);
+  --gradient-footer: linear-gradient(135deg, #1a1a40 0%, #2d1b4e 100%);
+  --gradient-card: linear-gradient(135deg, #1a1a1a 0%, #1a1530 100%);
+  
+  /* Border Colors */
+  --border-subtle: #2a2a2a;
+  --border-medium: #3a3a3a;
+  --border-accent: #8B9FFF;
+  --border-gold: #FFE55C;
+  
+  /* Shadow */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 0 30px rgba(255, 229, 92, 0.3);
+  --shadow-purple: 0 10px 40px rgba(139, 159, 255, 0.2);
+  
+  /* Pattern Opacity */
+  --pattern-opacity: 0.05;
+  --pattern-color: #8B9FFF;
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent transition on page load */
+.preload * {
+  transition: none !important;
+}
