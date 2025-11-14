@@ -1,0 +1,200 @@
+# Light City Image Generation Prompts
+# Ready to use with FluxFast 1.1, DALL-E 3, Midjourney, or other AI image generators
+
+## PRIORITY 1: CRITICAL IMAGES
+
+### 1. AGROFORESTRY/FOOD FOREST
+File: agroforestry-food-forest.webp
+Size: 1600x900px (16:9)
+Purpose: Vision Snapshot Card 3
+
+PROMPT:
+A thriving agroforestry food forest system with multiple layers of edible plants, fruit trees, berry bushes, and vegetable gardens integrated in a natural woodland setting. Sunlight filtering through tree canopy, diverse plant species, permaculture design with winding paths, people harvesting food in harmony with nature. Photorealistic, vibrant colors, golden hour lighting, aerial perspective showing the layered ecosystem. Style: National Geographic photography, professional landscape photography, 8K quality.
+
+ALTERNATIVE (More Light City):
+Futuristic regenerative food forest integrated into a crystal city community. Multi-level hanging gardens with hydroponic systems, vertical farming towers made of transparent bio-materials, fruit trees growing alongside geometric glass structures. Sacred geometry patterns visible in garden layout (Flower of Life, golden ratio spirals). People in flowing white garments tending plants. Bioluminescent plants glowing softly. Photorealistic with subtle sci-fi elements, golden hour lighting, aerial view. Style: Architectural photography meets solarpunk, 8K quality.
+
+---
+
+### 2. COMMUNITY CIRCLE
+File: community-circle-dome.webp
+Size: 1600x900px (16:9)
+Purpose: Highlights Section
+
+PROMPT:
+Diverse group of 20-30 people standing in a perfect circle formation in a beautiful sacred space with geometric floor patterns (Flower of Life mandala). All ages, ethnicities, and backgrounds represented. Soft natural lighting from above through a geodesic dome skyline. People holding hands, eyes closed in meditation or open in joyful connection. Warm, golden lighting. In the center of the circle, a small crystal or sacred geometric sculpture glowing softly. Modern spiritual aesthetic, not religious. Photorealistic, cinematic quality, shot from elevated angle showing the full circle. Style: High-end documentary photography, 8K quality.
+
+ALTERNATIVE (More Architectural):
+Aerial view of a community gathering circle inside a stunning geodesic dome communosphere. 30 people arranged in concentric circles on a floor with sacred geometry patterns (Flower of Life inlaid in polished wood and crystal). Natural light streaming through triangular glass panels. Cross-laminated timber (CLT) structure visible. Hanging gardens and bioluminescent plants around the perimeter. People of all ages in comfortable, flowing clothing. Warm, inviting atmosphere. Photorealistic architectural photography, golden hour lighting, 8K quality.
+
+---
+
+### 3. FINANCIAL DASHBOARD
+File: financial-dashboard.webp
+Size: 1920x1080px (16:9)
+Purpose: Highlights + CTA Sections
+
+PROMPT:
+Modern financial dashboard interface showing Light City project metrics. Clean, dark theme UI with purple and gold accents. Multiple data visualizations: line graph showing 8-12% IRR projection over 10 years, bar chart comparing Stage 1-6 budgets ($22M-$95M), circular progress indicator at 85% for Stage 1, pie chart showing revenue breakdown (resident fees 60%, retreats 25%, partnerships 15%). Futuristic holographic style with subtle glow effects. Professional fintech aesthetic. High contrast, readable typography. Style: Modern UI/UX design, Figma mockup quality, 4K resolution.
+
+ALTERNATIVE (More Tangible):
+Professional financial presentation board showing Light City investment opportunity. Large monitor display in a modern office with dark walls. Screen shows: project timeline (2025-2031), budget allocation charts, ROI projections (8-12% IRR highlighted in gold), resident capacity growth curve (200→1,500→5,000), and key metrics (85% Stage 1 complete, 6 development stages, $22M-$95M total investment). Purple and gold color scheme. Clean, corporate aesthetic. Photorealistic, professional business photography, 8K quality.
+
+---
+
+### 4. COMMUNOSPHERE INTERIOR
+File: communosphere-interior.webp
+Size: 1600x900px (16:9)
+Purpose: CTA Section - Residents
+
+PROMPT:
+Interior of a stunning geodesic dome home with floor-to-ceiling triangular windows showing lush forest outside. Open-plan living space with natural materials: cross-laminated timber (CLT) beams, polished concrete floors with radiant heating, living plant walls covering one curved wall. Modern minimalist furniture in earth tones. Sunlight streaming through the geometric glass panels creating beautiful light patterns. Hanging plants, a small indoor water feature, and subtle sacred geometry art on walls. Cozy reading nook with floor cushions. Warm, inviting atmosphere. Photorealistic architectural interior photography, golden hour lighting, 8K quality.
+
+ALTERNATIVE (More Communal):
+Shared community space inside a large communosphere dome. Circular layout with central gathering area featuring comfortable seating arranged in a circle. Geodesic structure visible overhead with natural light flooding in. Multiple levels connected by spiral staircases made of CLT. Abundant plants everywhere - hanging gardens, vertical green walls, potted trees. Small meditation alcoves in the curved walls. Kitchen area visible in background. People reading, talking, meditating. Warm wood tones, natural materials, biophilic design. Photorealistic, architectural photography, soft natural lighting, 8K quality.
+
+---
+
+## PRIORITY 2: ENHANCED IMPACT
+
+### 5. HERO BACKGROUND
+File: hero-crystal-city-aerial.webp
+Size: 2560x1080px (21:9 ultra-wide)
+Purpose: Main Hero Section Background
+
+PROMPT:
+Aerial view of a futuristic crystal city at golden hour. Multiple geodesic domes of varying sizes arranged in a sacred geometry pattern (Flower of Life layout). Central crystalline spire (200m tall) glowing with soft purple and gold light. Surrounded by lush forests and permaculture gardens. Winding paths connecting the domes. Solar panels integrated into structures. Mist rising from the forest. Dramatic sky with volumetric light rays. Cinematic, epic scale, photorealistic with subtle fantasy elements. Style: High-end architectural visualization meets sci-fi concept art, 8K quality, ultra-wide composition.
+
+ALTERNATIVE (More Grounded):
+Stunning aerial photograph of an eco-village prototype at sunset. 6 geodesic dome structures (30-60m diameter) arranged in a hexagonal pattern around a central gathering plaza with a tall observation tower (60m). Cross-laminated timber and glass construction. Surrounded by regenerative agriculture - food forests, permaculture gardens, solar arrays. Mountain backdrop. Golden hour lighting with long shadows. Drone photography, photorealistic, National Geographic quality, 8K resolution, ultra-wide aspect ratio.
+
+---
+
+### 6. ENERGY SYSTEM VISUALIZATION
+File: energy-system-dual-track.webp
+Size: 1600x900px (16:9)
+Purpose: Highlights Section
+
+PROMPT:
+Split-screen technical illustration showing Light City's dual energy system. Left side: Physical microgrid with solar panels, battery storage, smart grid connections, labeled with technical specs (TRL 8-9). Right side: Subtle energy layer with acoustic resonance visualization (sound waves), crystal spire emitting geometric light patterns, consciousness field represented as interconnected nodes of light (TRL 1-3). Center: geodesic dome structure bridging both systems. Dark background with purple and gold accents. Professional infographic style, clean lines, modern technical illustration. Style: Scientific journal illustration meets sacred geometry art, 4K quality.
+
+---
+
+### 7. CONSTRUCTION PROGRESS
+File: construction-progress.webp
+Size: 1600x900px (16:9)
+Purpose: Timeline Section
+
+PROMPT:
+Construction site photograph showing a geodesic dome being built. Cross-laminated timber (CLT) panels being installed by workers. Partially completed dome structure (30m diameter) with triangular glass panels being fitted. Construction crane in background. Workers in safety gear collaborating. Solar panels stacked nearby ready for installation. Blue sky, professional construction photography. Photorealistic, documentary style, showing real building process. Style: Architectural construction documentation, professional photography, 8K quality.
+
+---
+
+## PRIORITY 3: POLISH
+
+### 8. SACRED GEOMETRY BLUEPRINT
+File: sacred-geometry-blueprint.webp
+Size: 1200x1200px (1:1 square)
+Purpose: Various Sections
+
+PROMPT:
+Architectural blueprint overlay showing sacred geometry patterns integrated into Light City design. Flower of Life pattern as the foundation, with geodesic dome structures positioned at key intersection points. Golden ratio spiral overlaying the city layout. Metatron's Cube connecting the central spire to outer domes. Platonic solids floating around the composition. Dark blueprint background with glowing golden lines. Technical precision meets mystical symbolism. Style: Architectural technical drawing meets sacred geometry art, high contrast, 4K quality, square format.
+
+---
+
+### 9. RESIDENT DAILY LIFE
+File: resident-daily-life.webp
+Size: 1600x900px (16:9)
+Purpose: CTA Section - Residents
+
+PROMPT:
+Lifestyle photography showing a day in Light City. Composite image with multiple vignettes: morning meditation in a geodesic dome with sunlight streaming in, people harvesting vegetables in a food forest, community meal in a shared dining space, children playing in a natural playground, evening gathering around a fire pit under the stars. Warm, natural lighting. Diverse people of all ages. Modern bohemian aesthetic. Photorealistic, documentary lifestyle photography, 8K quality.
+
+---
+
+### 10. TECHNOLOGY SHOWCASE
+File: technology-showcase.webp
+Size: 1600x900px (16:9)
+Purpose: CTA Section - Builders
+
+PROMPT:
+Technology showcase collage for sustainable city building. Grid layout showing: CLT construction panels, geodesic dome framework, solar panel arrays, vertical hydroponic gardens, smart home control interface, battery storage systems, water filtration technology, biophilic interior design elements. Each element labeled with TRL rating. Professional product photography style. Clean white background with subtle purple accents. Modern tech catalog aesthetic. Style: High-end product photography, catalog quality, 4K resolution.
+
+---
+
+## GENERATION SETTINGS (FluxFast 1.1)
+
+Model: flux-fast-1.1
+Width: 1600 (or as specified above)
+Height: 900 (or as specified above)
+Steps: 20-30
+Guidance Scale: 7.5
+Number of Images: 4 (generate variations, choose best)
+
+## COLOR REFERENCES
+
+Purple Gradient: #667eea → #764ba2
+Gold: #FFD700
+Deep Black: #0a0a0a
+Dark Blue-Black: #1a1a2e
+Sky Blue: #A0D8FF
+Emerald Green: #90EE90
+
+## STYLE KEYWORDS (Always Include)
+
+- Photorealistic
+- 8K quality / 4K resolution
+- Golden hour lighting (for outdoor/hero images)
+- Architectural photography
+- Professional photography
+- High contrast
+- Natural lighting
+- Documentary style
+
+## AVOID
+
+- Religious symbols (crosses, specific deities)
+- Overly sci-fi (flying cars, aliens, holograms)
+- Dystopian elements
+- Generic stock photo poses
+- Cluttered compositions
+- Harsh lighting
+
+---
+
+## USAGE INSTRUCTIONS
+
+1. Copy the prompt for the image you want to generate
+2. Go to FluxFast 1.1 (https://fluxfast.ai) or your preferred tool
+3. Paste the prompt
+4. Set the generation settings (size, steps, etc.)
+5. Generate 4 variations
+6. Select the best one
+7. Download and optimize (convert to WebP, create responsive sizes)
+8. Add to /website/static/img/homepage/
+9. Update the tracking table in .cursorignore-image-generation-guide.md
+
+---
+
+## OPTIMIZATION COMMANDS
+
+# Convert to WebP
+cwebp -q 85 original.jpg -o optimized.webp
+
+# Create responsive sizes
+convert original.jpg -resize 400x optimized-400w.jpg
+convert original.jpg -resize 800x optimized-800w.jpg
+convert original.jpg -resize 1200x optimized-1200w.jpg
+convert original.jpg -resize 1600x optimized-1600w.jpg
+
+# Convert all to WebP
+for file in optimized-*.jpg; do
+  cwebp -q 85 "$file" -o "${file%.jpg}.webp"
+done
+
+---
+
+Generated: November 14, 2025
+For: Light City Project Homepage Redesign
+Total Images: 10 (4 Priority 1, 3 Priority 2, 3 Priority 3)
+

@@ -31,6 +31,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'project/development-stages',
         'project/governance',
+        'project/contribution-based-residency',
         'project/project-structure',
         'project/tools-and-workflows',
         'project/contributing',
