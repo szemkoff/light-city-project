@@ -14,6 +14,32 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ---
 
+## Executive Summary
+
+### Project Timeline (2025-2031+)
+| Stage | Duration | Timeline | Investment | Status |
+|-------|----------|----------|------------|--------|
+| **S1: Foundation** | 2-3 months | Oct-Dec 2025 | $5K-$15K | ✅ 85% Complete |
+| **S2: Design** | 4-6 months | Jan-Jun 2026 | $25K-$85K | 🔜 Upcoming |
+| **S3: Digital** | 3-5 months | Jul-Nov 2026 | $35K-$125K | 📅 Planned |
+| **S4: Community** | 6-12 months | Dec 2026-Nov 2027 | $85K-$280K | 📅 Planned |
+| **S5: Physical** | 18-36 months | Dec 2027-Nov 2030 | $22M-$95M | 🎯 Target |
+| **S6: Operations** | Ongoing | 2031+ | $1.8M-$4.5M/yr | 🌟 Vision |
+
+### Financial Overview
+| Metric | Low Scenario | Mid Scenario | High Scenario |
+|--------|--------------|--------------|---------------|
+| **Total CAPEX (S1-S5)** | $22.1M | $45M | $95.5M |
+| **Phase 1 Capacity** | 150 residents | 200 residents | 300 residents |
+| **Annual OPEX (S6)** | $1.8M/year | $2.5M/year | $4.5M/year |
+| **Annual Revenue (S6)** | $2.3M/year | $3.5M/year | $4.5M/year |
+| **Break-even** | 160 residents | 180 residents | 220 residents |
+| **ROI Timeline** | 8-12 years | 6-9 years | 10-15 years |
+
+**Target Scenario**: $45M CAPEX, 200 residents, $2.5M OPEX, $3.5M revenue, break-even Year 3
+
+---
+
 ## Stage Gate Checklist
 
 > **Pass criteria for advancing to next stage:**
@@ -27,10 +53,23 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ## Stage 1: Foundation & Vision 🌱
 
-**Duration**: 1-2 months  
-**Status**: CURRENT  
-**Budget Band**: $0-$10K (soft costs, tools, initial design)  
+**Duration**: 2-3 months (Oct 2025 - Dec 2025)  
+**Status**: CURRENT (85% complete)  
+**Total Budget**: $5K-$15K  
 **Funding Sources**: Founder equity, personal investment
+
+### Cost Breakdown (Stage 1)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Tools & Software** | $500 | $1,500 | GitHub, design tools, domain, hosting |
+| **Design Assets** | $1,000 | $3,000 | Stock images, fonts, basic concept art |
+| **Consulting** | $1,000 | $5,000 | Legal (entity setup), initial advisors |
+| **Documentation** | $500 | $2,000 | Writing, editing, formatting |
+| **Research** | $500 | $1,500 | Books, courses, site visits |
+| **Contingency (20%)** | $700 | $2,000 | Buffer for unknowns |
+| **TOTAL** | **$4,200** | **$15,000** | |
+
+**Actual Spend to Date**: ~$2,500 (tools, domain, research)
 
 ![Stage Progress](/img/diagrams/stage-progress.svg)
 
@@ -82,10 +121,24 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ## Stage 2: World-Building & Design 🎨
 
-**Duration**: 2-4 months  
+**Duration**: 4-6 months (Jan 2026 - Jun 2026)  
 **Status**: UPCOMING  
-**Budget Band**: $10K-$50K (design, concept art, consultants)  
-**Funding Sources**: Grants (arts/culture), patronage, crowdfunding
+**Total Budget**: $25K-$85K  
+**Funding Sources**: Arts/culture grants, patronage, crowdfunding (Kickstarter/Patreon)
+
+### Cost Breakdown (Stage 2)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Architectural Design** | $8,000 | $25,000 | Schematic design, concept plans, 3D models |
+| **Concept Art & Visualization** | $5,000 | $20,000 | 10-20 professional renders, illustrations |
+| **Sacred Geometry Mapping** | $2,000 | $8,000 | CAD/GIS work, overlays, technical drawings |
+| **3D Modeling & VR** | $3,000 | $12,000 | Interactive models, virtual walkthroughs |
+| **Consultants** | $3,000 | $10,000 | Engineers, sustainability experts, advisors |
+| **Storytelling & Content** | $2,000 | $5,000 | Writers, editors, narrative development |
+| **Contingency (20%)** | $4,600 | $16,000 | Buffer for scope changes |
+| **TOTAL** | **$27,600** | **$96,000** | |
+
+**Revenue Target**: $10K-$30K from crowdfunding, early supporters
 
 ### Objectives
 - Develop detailed descriptions of Light City's architecture
@@ -131,10 +184,25 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ## Stage 3: Digital Presence 🌐
 
-**Duration**: 2-3 months  
+**Duration**: 3-5 months (Jul 2026 - Nov 2026)  
 **Status**: FUTURE  
-**Budget Band**: $20K-$100K (web dev, platform, marketing)  
+**Total Budget**: $35K-$125K  
 **Funding Sources**: Digital products (courses, memberships), donations, sponsorships
+
+### Cost Breakdown (Stage 3)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Website Enhancement** | $5,000 | $20,000 | Interactive features, 3D/VR integration, UX |
+| **Platform Development** | $8,000 | $30,000 | Community platform (Discord/Circle), CRM |
+| **Content Creation** | $6,000 | $20,000 | Video production, courses, guides, assets |
+| **Marketing & PR** | $8,000 | $25,000 | Social media ads, PR agency, influencer outreach |
+| **Community Tools** | $3,000 | $10,000 | Forum, newsletter, analytics, automation |
+| **Digital Products** | $3,000 | $12,000 | Course development, ebooks, templates |
+| **Contingency (20%)** | $6,600 | $23,400 | Buffer for platform changes |
+| **TOTAL** | **$39,600** | **$140,400** | |
+
+**Revenue Target**: $15K-$60K from digital products, memberships, donations  
+**Break-even Goal**: Month 8-12 post-launch
 
 ### Objectives
 - Create a website or digital platform
@@ -182,10 +250,26 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ## Stage 4: Community & Collaboration 🤝
 
-**Duration**: 3-6 months  
+**Duration**: 6-12 months (Dec 2026 - Nov 2027)  
 **Status**: FUTURE  
-**Budget Band**: $50K-$200K (events, platforms, stipends)  
-**Funding Sources**: Partnerships, sponsorships, event revenue, memberships
+**Total Budget**: $85K-$280K  
+**Funding Sources**: Partnerships, sponsorships, event revenue, memberships, foundation grants
+
+### Cost Breakdown (Stage 4)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Events & Gatherings** | $20,000 | $60,000 | Retreats, workshops, conferences (4-12 events) |
+| **Contributor Stipends** | $15,000 | $60,000 | Part-time roles, project grants, fellowships |
+| **Platform & Tools** | $8,000 | $25,000 | Governance tools, collaboration software, DAO |
+| **Community Operations** | $12,000 | $40,000 | Community manager, moderation, support |
+| **Working Group Support** | $10,000 | $35,000 | Budgets for 5-10 working groups |
+| **Marketing & Outreach** | $10,000 | $30,000 | Targeted campaigns, partnerships, PR |
+| **Contingency (20%)** | $15,000 | $50,000 | Buffer for rapid growth |
+| **TOTAL** | **$90,000** | **$300,000** | |
+
+**Revenue Target**: $40K-$150K from memberships, events, partnerships  
+**Burn Rate**: $7K-$25K/month  
+**Runway Goal**: 12-18 months secured funding
 
 ### Objectives
 - Grow the community of aligned individuals
@@ -234,10 +318,52 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ## Stage 5: Physical Manifestation 🏗️
 
-**Duration**: 6-24+ months  
+**Duration**: 18-36 months (Dec 2027 - Nov 2030)  
 **Status**: FUTURE  
-**Budget Band**: $500K-$50M+ (land, design, construction, Phase 1 hamlet)  
-**Funding Sources**: Grants (green building, innovation), green bonds, impact investors, pre-sales, EPC finance
+**Total Budget**: $22M-$95M (Phase 1 Hamlet: 150-300 residents)  
+**Funding Sources**: Impact investors, green bonds, pre-sales, EPC finance, government grants
+
+### Cost Breakdown (Stage 5) - Phase 1 Hamlet
+
+#### Pre-Development ($1.5M-$5M)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Land Acquisition** | $500K | $2M | 100-500 acres, rural/semi-rural location |
+| **Due Diligence** | $50K | $200K | Environmental, geotechnical, title, surveys |
+| **Master Planning** | $200K | $800K | Site plan, infrastructure design, phasing |
+| **Architectural/Engineering** | $400K | $1.2M | Full construction documents (SD/DD/CD) |
+| **Permitting & Legal** | $200K | $600K | Entitlements, zoning, environmental review |
+| **Financing Costs** | $150K | $500K | Legal, due diligence, loan origination |
+| **SUBTOTAL** | **$1.5M** | **$5.3M** | |
+
+#### Hard Costs - Construction ($14M-$65M)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Site Work & Infrastructure** | $3M | $12M | Roads, utilities, grading, drainage |
+| **Communospheres (3-6 units)** | $4M | $18M | Geodesic domes, CLT, BIPV, interiors |
+| **Residential Units (50-100)** | $5M | $25M | Tiny homes, studios, 1-2BR units |
+| **Central Spire (Prototype)** | $1M | $4M | Observation/meditation tower (50-100 ft) |
+| **Energy Systems** | $800K | $3M | Solar, batteries, microgrid, backup |
+| **Water Systems** | $400K | $1.5M | Wells, rainwater, treatment, storage |
+| **Food Systems** | $300K | $1.2M | Greenhouses, aquaponics, gardens |
+| **Wellness Facilities** | $500K | $2M | Float tanks, red light, acoustic spaces |
+| **SUBTOTAL** | **$15M** | **$66.7M** | |
+
+#### Soft Costs ($3.5M-$15M)
+| Category | Low | High | Notes |
+|----------|-----|------|-------|
+| **Project Management** | $800K | $3.5M | Owner's rep, construction management |
+| **Inspections & Testing** | $200K | $800K | QA/QC, commissioning, code compliance |
+| **Insurance & Bonds** | $300K | $1.2M | Builder's risk, performance bonds |
+| **Marketing & Pre-Sales** | $400K | $1.8M | Sales center, materials, campaigns |
+| **Furniture & Equipment** | $600K | $2.5M | Furnishings, appliances, tools |
+| **Landscaping & Art** | $400K | $1.5M | Native plants, sacred geometry installations |
+| **Contingency (15-20%)** | $2.5M | $11M | Construction risk buffer |
+| **SUBTOTAL** | **$5.2M** | **$22.3M** | |
+
+#### **TOTAL PHASE 1 CAPEX**: **$21.7M - $94.3M**
+
+**Target Budget**: $35M-$55M (mid-range scenario, 200 residents)
 
 ### Objectives
 - Explore physical world implementations
@@ -303,10 +429,63 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ## Stage 6: Living System & Evolution 🌟
 
-**Duration**: Ongoing (perpetual)  
+**Duration**: Ongoing (perpetual, starting 2031+)  
 **Status**: FUTURE  
-**Budget Band**: $1.3M-$3.6M/year operating (Phase 1 steady-state)  
-**Funding Sources**: Resident fees, retreat revenue, events, agritourism, product sales, replication licensing
+**Annual Operating Budget**: $1.8M-$4.5M/year (Phase 1 steady-state, 200 residents)  
+**Funding Sources**: Resident fees (60%), retreat revenue (20%), events/agritourism (10%), licensing/consulting (10%)
+
+### Annual Operating Costs (Stage 6) - Phase 1
+
+#### Personnel ($900K-$2.2M/year)
+| Role | FTE | Salary Range | Total |
+|------|-----|--------------|-------|
+| **Executive Director** | 1.0 | $80K-$120K | $80K-$120K |
+| **Operations Manager** | 1.0 | $60K-$90K | $60K-$90K |
+| **Community Coordinator** | 1.0 | $50K-$75K | $50K-$75K |
+| **Facilities Manager** | 1.0 | $55K-$80K | $55K-$80K |
+| **Maintenance Staff** | 2-4 | $40K-$60K | $160K-$240K |
+| **Food/Agriculture Lead** | 1.0 | $50K-$70K | $50K-$70K |
+| **Wellness Coordinator** | 0.5 | $45K-$65K | $23K-$33K |
+| **Admin/Finance** | 1.0 | $50K-$70K | $50K-$70K |
+| **Security/Safety** | 1-2 | $40K-$55K | $40K-$110K |
+| **Guest Services** | 1-2 | $35K-$50K | $35K-$100K |
+| **Benefits & Taxes (35%)** | - | - | $210K-$350K |
+| **SUBTOTAL** | **10-15** | - | **$813K-$1.34M** |
+
+#### Operations ($500K-$1.2M/year)
+| Category | Annual Cost | Notes |
+|----------|-------------|-------|
+| **Utilities** | $80K-$180K | Electric, water, internet, waste |
+| **Maintenance & Repairs** | $150K-$350K | Buildings, infrastructure, equipment |
+| **Food & Supplies** | $100K-$250K | Communal meals, supplies, supplements |
+| **Insurance** | $80K-$200K | Property, liability, workers comp |
+| **Property Taxes** | $20K-$80K | Varies by location, non-profit status |
+| **Marketing & Sales** | $40K-$100K | Resident recruitment, retreat promotion |
+| **Technology & Software** | $20K-$50K | Systems, licenses, IT support |
+| **Professional Services** | $30K-$80K | Legal, accounting, consulting |
+| **SUBTOTAL** | - | **$520K-$1.29M** |
+
+#### Programs & Development ($200K-$500K/year)
+| Category | Annual Cost | Notes |
+|----------|-------------|-------|
+| **Retreat Programs** | $80K-$200K | Facilitators, materials, marketing |
+| **Education & Workshops** | $40K-$100K | Teachers, curriculum, equipment |
+| **Research & Innovation** | $30K-$80K | Consciousness research, sustainability R&D |
+| **Community Events** | $30K-$80K | Gatherings, ceremonies, celebrations |
+| **Outreach & Replication** | $20K-$40K | Consulting, knowledge sharing, network |
+| **SUBTOTAL** | - | **$200K-$500K** |
+
+#### Capital Reserves ($200K-$500K/year)
+| Category | Annual Reserve | Notes |
+|----------|----------------|-------|
+| **Replacement Reserve** | $150K-$350K | Equipment, systems, major repairs |
+| **Expansion Fund** | $50K-$150K | Phase 2 planning, land acquisition |
+| **SUBTOTAL** | - | **$200K-$500K** |
+
+#### **TOTAL ANNUAL OPEX**: **$1.73M - $3.59M**
+
+**Per Resident Cost**: $8,650-$17,950/year  
+**Target Operating Budget**: $2.5M/year (200 residents @ $12,500/year avg)
 
 ### Objectives
 - Maintain and evolve the Light City ecosystem
@@ -380,18 +559,70 @@ These stages are guideposts, not rigid requirements. The project may:
 
 ---
 
-## Funding Stack by Stage
+## Comprehensive Financial Model
 
-| Stage | Budget Range | Primary Sources | Secondary Sources |
-|-------|-------------|-----------------|-------------------|
-| **S1: Foundation** | $0-$10K | Founder equity, personal investment | Friends/family |
-| **S2: Design** | $10K-$50K | Arts/culture grants, patronage | Crowdfunding (Kickstarter) |
-| **S3: Digital** | $20K-$100K | Digital products (courses, memberships), donations | Sponsorships, ads |
-| **S4: Community** | $50K-$200K | Partnerships, event revenue, memberships | Foundation grants, corporate sponsors |
-| **S5: Physical** | $500K-$50M+ | Green bonds, impact investors, EPC finance, pre-sales | Government grants (innovation, green building) |
-| **S6: Operations** | $1.3M-$3.6M/yr | Resident fees, retreat revenue, agritourism | Product sales, licensing, consulting |
+### Revenue Model by Stage
 
-**Note**: Cumulative capital requirement for Phase 1 hamlet (S5): **$19M-$81M** depending on scope and location.
+#### Stage 6 Revenue Streams (Annual, Steady-State)
+| Revenue Source | Annual | % of Total | Notes |
+|----------------|--------|------------|-------|
+| **Resident Fees** | $1.5M-$2.7M | 60% | 200 residents @ $625-$1,125/month |
+| **Retreat Programs** | $400K-$900K | 20% | 800-1,500 guests @ $500-$600/visit |
+| **Events & Agritourism** | $200K-$450K | 10% | Workshops, tours, farm sales |
+| **Licensing & Consulting** | $200K-$450K | 10% | Replication support, IP licensing |
+| **TOTAL REVENUE** | **$2.3M-$4.5M** | **100%** | |
+
+**Break-even**: 160-180 residents + 600-800 retreat guests/year  
+**Profitability Target**: 10-15% margin → $250K-$500K/year for expansion
+
+### Resident Fee Structure (Monthly)
+| Unit Type | Size | Monthly Fee | Annual | Notes |
+|-----------|------|-------------|--------|-------|
+| **Tiny Home** | 200-300 sf | $500-$700 | $6K-$8.4K | Shared facilities |
+| **Studio** | 400-500 sf | $700-$950 | $8.4K-$11.4K | Private bath, kitchenette |
+| **1-Bedroom** | 600-800 sf | $950-$1,300 | $11.4K-$15.6K | Full kitchen, private |
+| **2-Bedroom** | 900-1,200 sf | $1,300-$1,700 | $15.6K-$20.4K | Families, shared living |
+
+**Includes**: Utilities, communal meals (10-15/month), wellness access, events, maintenance  
+**Additional**: Private meals, workshops, personal services (à la carte)
+
+### Funding Stack by Stage
+
+| Stage | Budget Range | Timeline | Primary Sources | Secondary Sources |
+|-------|-------------|----------|-----------------|-------------------|
+| **S1: Foundation** | $5K-$15K | 2-3 mo | Founder equity, personal investment | Friends/family |
+| **S2: Design** | $25K-$85K | 4-6 mo | Arts/culture grants, patronage | Crowdfunding (Kickstarter), pre-sales |
+| **S3: Digital** | $35K-$125K | 3-5 mo | Digital products, memberships, donations | Sponsorships, affiliate revenue |
+| **S4: Community** | $85K-$280K | 6-12 mo | Partnerships, event revenue, memberships | Foundation grants, corporate sponsors |
+| **S5: Physical** | $22M-$95M | 18-36 mo | Impact investors (40%), pre-sales (30%), EPC finance (20%) | Green bonds, government grants (10%) |
+| **S6: Operations** | $1.8M-$4.5M/yr | Ongoing | Resident fees (60%), retreat revenue (20%) | Events (10%), licensing (10%) |
+
+**Cumulative Investment (S1-S5)**: **$22.1M - $95.5M**  
+**Target Capital Raise (S5)**: **$35M-$55M** (mid-range scenario, 200 residents)
+
+### Investment Returns & Exit Strategies
+
+#### For Impact Investors (Stage 5)
+| Return Mechanism | Timeline | Expected Return | Notes |
+|------------------|----------|-----------------|-------|
+| **Preferred Return** | Years 1-3 | 4-6% annual | Priority distribution before equity |
+| **Equity Appreciation** | Years 5-10 | 8-12% IRR | Property value + business value growth |
+| **Refinancing Exit** | Year 5-7 | Full return | Refinance with permanent debt, cash out investors |
+| **Sale/Transfer** | Year 10+ | 1.5-2.5x | Sell to community trust, co-op, or new investors |
+| **Dividend Stream** | Year 4+ | 3-8% yield | Ongoing distributions from operating profit |
+
+**Investor Profile**: Impact-first, patient capital, 7-12 year horizon, aligned values
+
+#### For Pre-Sale Residents (Stage 5)
+| Benefit | Value | Notes |
+|---------|-------|-------|
+| **Founding Member Discount** | 15-25% off | Early commitment discount on monthly fees |
+| **Equity Participation** | 5-10% | Optional: invest $25K-$100K for equity stake |
+| **Governance Rights** | Voting | Founding members get enhanced voting rights |
+| **Priority Selection** | First choice | Unit selection, communosphere placement |
+| **Lifetime Lock** | Fixed rate | Monthly fees locked at founding rate (inflation-adjusted) |
+
+**Pre-Sale Target**: 50-100 founding residents @ $5K-$25K deposits = $250K-$2.5M
 
 ---
 
@@ -417,10 +648,11 @@ These stages are guideposts, not rigid requirements. The project may:
 
 ---
 
-**Last Updated**: November 7, 2025  
-**Last Reviewed**: November 7, 2025  
+**Last Updated**: November 14, 2025  
+**Last Reviewed**: November 14, 2025  
+**Version**: 2.0 (Comprehensive Financial Model)  
 **Author**: Stan Zemskoff (Founder)  
-**Related**: [Architecture](/docs/design/architecture), [Technology Catalog](/docs/technical/technology-catalog), [Urban Retrofit Guide](/docs/technical/urban-retrofit-guide)
+**Related**: [Architecture](/docs/design/architecture), [Technology Catalog](/docs/technical/technology-catalog), [Energy Systems](/docs/concepts/energy-systems)
 
 ---
 
