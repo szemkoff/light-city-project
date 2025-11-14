@@ -1,0 +1,277 @@
+/* Builders Page Styles */
+
+.builders-page {
+  width: 100%;
+}
+
+.builder-hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, #E8E4D8 0%, #D8D4E8 100%);
+  text-align: center;
+}
+
+.builder-hero h1 {
+  font-size: 3.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+/* Technical Specs */
+.technical-specs {
+  padding: 6rem 0;
+  background: white;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.spec-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.spec-card:hover {
+  border-color: #FFD700;
+  transform: translateY(-5px);
+}
+
+.spec-icon {
+  color: #667EEA;
+  margin-bottom: 1rem;
+}
+
+.spec-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.spec-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.spec-card li {
+  padding: 0.5rem 0;
+  color: #666;
+  line-height: 1.6;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.spec-card li:last-child {
+  border-bottom: none;
+}
+
+/* Technology Catalog */
+.technology-catalog {
+  padding: 6rem 0;
+  background: #fafafa;
+}
+
+.tech-table {
+  overflow-x: auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tech-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tech-table thead {
+  background: #667EEA;
+  color: white;
+}
+
+.tech-table th,
+.tech-table td {
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.tech-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tech-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.commercial {
+  background: #90EE90;
+  color: #2d5016;
+}
+
+.status-badge.pilot {
+  background: #FFD700;
+  color: #664d00;
+}
+
+/* Phasing Timeline */
+.phasing-timeline {
+  padding: 6rem 0;
+  background: white;
+}
+
+.timeline-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.timeline-card {
+  background: linear-gradient(135deg, #F5F5DC 0%, #E8E4D8 100%);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.timeline-card h3 {
+  font-size: 1.5rem;
+  color: #667EEA;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-duration {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.timeline-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Partnership CTA */
+.partnership-cta {
+  padding: 6rem 0;
+  background: #fafafa;
+}
+
+.cta-box {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-box h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cta-box p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #333;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 215, 0, 0.4);
+}
+
+.cta-button.secondary {
+  background: white;
+  color: #667EEA;
+  border: 2px solid #667EEA;
+}
+
+.cta-button.secondary:hover {
+  background: #667EEA;
+  color: white;
+}
+
+.contact-info {
+  color: #666;
+}
+
+.contact-info a {
+  color: #667EEA;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  color: #FFD700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .builder-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+}

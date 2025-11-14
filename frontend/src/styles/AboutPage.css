@@ -1,0 +1,177 @@
+/* About Page Styles */
+
+.about-page {
+  width: 100%;
+}
+
+.about-hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, #F5F5DC 0%, #E8E4D8 100%);
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+/* Core Principles */
+.core-principles {
+  padding: 6rem 0;
+  background: white;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.principle-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid #f0f0f0;
+}
+
+.principle-card:hover {
+  transform: translateY(-8px);
+  border-color: #FFD700;
+  box-shadow: 0 20px 60px rgba(255, 215, 0, 0.15);
+}
+
+.principle-icon {
+  color: #667EEA;
+  margin-bottom: 1.5rem;
+}
+
+.principle-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.principle-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* What is Light City */
+.what-is-light-city {
+  padding: 6rem 0;
+  background: #fafafa;
+}
+
+.definition-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.def-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  border-left: 4px solid #667EEA;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.def-box h3 {
+  font-size: 1.3rem;
+  color: #667EEA;
+  margin-bottom: 1rem;
+}
+
+.def-box p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Purpose Mission */
+.purpose-mission {
+  padding: 6rem 0;
+  background: white;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-statement {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #F5F5DC 0%, #E8E4D8 100%);
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.timeline-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.phase {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #FFD700;
+}
+
+.phase h4 {
+  font-size: 1.3rem;
+  color: #667EEA;
+  margin-bottom: 1rem;
+}
+
+.phase ul {
+  padding-left: 1.5rem;
+}
+
+.phase li {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
