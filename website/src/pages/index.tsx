@@ -44,19 +44,19 @@ function HeroSection() {
 function FeaturesSection() {
   const features = [
     {
-      icon: '🏛️',
+      iconPath: '/light-city-project/img/icons/architecture-icon.svg',
       title: 'Sacred Architecture',
       description: '30-90m communosphere domes using proven CLT & BIPV technology',
       link: '/about',
     },
     {
-      icon: '✨',
+      iconPath: '/light-city-project/img/icons/consciousness-icon.svg',
       title: 'Unity Consciousness',
       description: 'Research-grade protocols for consciousness field studies (TRL 1-3)',
       link: '/researchers',
     },
     {
-      icon: '🌱',
+      iconPath: '/light-city-project/img/icons/regenerative-icon.svg',
       title: 'Regenerative Living',
       description: 'Zero-waste, renewable energy, permaculture food systems',
       link: '/builders',
@@ -69,7 +69,9 @@ function FeaturesSection() {
         <div className={styles.featuresGrid}>
           {features.map((feature, idx) => (
             <div key={idx} className={styles.featureCard}>
-              <div className={styles.featureIcon}>{feature.icon}</div>
+              <div className={styles.featureIconWrapper}>
+                <img src={feature.iconPath} alt={feature.title} className={styles.featureIcon} />
+              </div>
               <h3 className={styles.featureTitle}>{feature.title}</h3>
               <p className={styles.featureDescription}>{feature.description}</p>
               <Link to={feature.link} className={styles.featureLink}>
@@ -137,9 +139,9 @@ function FoundationsSection() {
 
 function StatsSection() {
   const stats = [
-    { value: '0+', label: 'Visual Diagrams', description: 'Comprehensive documentation' },
-    { value: '0%', label: 'Stage 1 Complete', description: 'Active development' },
-    { value: '0', label: 'Development Stages', description: 'Clear roadmap' },
+    { value: '15+', label: 'Visual Diagrams', description: 'Comprehensive documentation' },
+    { value: '85%', label: 'Stage 1 Complete', description: 'Active development' },
+    { value: '6', label: 'Development Stages', description: 'Clear roadmap' },
     { value: '$22M-$95M', label: 'Investment Range', description: 'Phased capital needs' },
   ];
 
@@ -204,21 +206,21 @@ function DelphinSection() {
 function JoinSection() {
   const roles = [
     {
-      icon: '💼',
+      iconPath: '/light-city-project/img/icons/investors-icon.svg',
       title: 'Investors',
       description: 'Review Financial Model',
       detail: '8-12% IRR, impact-first',
       link: '/investors',
     },
     {
-      icon: '🏡',
+      iconPath: '/light-city-project/img/icons/residents-icon.svg',
       title: 'Residents',
       description: 'Explore Living Experience',
       detail: '$500-$1,700/month, community governance',
       link: '/residents',
     },
     {
-      icon: '🏗️',
+      iconPath: '/light-city-project/img/icons/builders-icon.svg',
       title: 'Builders',
       description: 'See Technical Specs',
       detail: 'TRL 7-9 technologies, phased construction',
@@ -233,7 +235,9 @@ function JoinSection() {
         <div className={styles.rolesGrid}>
           {roles.map((role, idx) => (
             <Link key={idx} to={role.link} className={styles.roleCard}>
-              <div className={styles.roleIcon}>{role.icon}</div>
+              <div className={styles.roleIconWrapper}>
+                <img src={role.iconPath} alt={role.title} className={styles.roleIcon} />
+              </div>
               <h3 className={styles.roleTitle}>{role.title}</h3>
               <p className={styles.roleDescription}>{role.description}</p>
               <p className={styles.roleDetail}>{role.detail}</p>
