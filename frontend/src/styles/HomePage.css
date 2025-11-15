@@ -305,24 +305,24 @@
 /* Delphin Section */
 .delphin-section {
   padding: 6rem 0;
-  background: white;
+  background: var(--bg-primary);
 }
 
 .delphin-text h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
 }
 
 .delphin-intro {
   font-size: 1.1rem;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 2rem;
 }
 
 .comparison-table {
-  background: #fafafa;
+  background: var(--bg-secondary);
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 2rem;
@@ -331,8 +331,8 @@
 .table-header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background: #667EEA;
-  color: white;
+  background: var(--color-purple);
+  color: var(--text-inverse);
   padding: 1rem;
   font-weight: 600;
 }
@@ -341,7 +341,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 1rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border-medium);
 }
 
 .table-row:last-child {
@@ -350,7 +350,7 @@
 
 .table-cell {
   padding: 0.5rem;
-  color: #333;
+  color: var(--text-primary);
 }
 
 /* CTA Section */
