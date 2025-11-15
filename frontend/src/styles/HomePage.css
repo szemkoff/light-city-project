@@ -48,7 +48,7 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #FFD700 0%, #667EEA 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -57,7 +57,7 @@
 
 .hero-subheadline {
   font-size: 1.5rem;
-  color: #4a4a4a;
+  color: var(--text-secondary);
   margin-bottom: 3rem;
   line-height: 1.6;
   animation: fadeInUp 1s ease-out 0.2s both;
