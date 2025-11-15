@@ -54,7 +54,9 @@ const config: Config = {
   themeConfig: {
     image: 'img/light-city-vision-1.jpg',
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Light City',

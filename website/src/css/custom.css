@@ -1,5 +1,6 @@
 /* Custom CSS for Light City Docusaurus site */
 
+/* Light Theme Colors */
 :root {
   --ifm-color-primary: #667eea;
   --ifm-color-primary-dark: #5a67d8;
@@ -8,6 +9,46 @@
   --ifm-color-primary-light: #7c8ff5;
   --ifm-color-primary-lighter: #929dfd;
   --ifm-color-primary-lightest: #c5cef8;
+  
+  --ifm-code-font-size: 95%;
+}
+
+/* Dark Theme Colors - Light City Custom */
+[data-theme='dark'] {
+  /* Primary Purple Gradient */
+  --ifm-color-primary: #667eea;
+  --ifm-color-primary-dark: #4c5ed4;
+  --ifm-color-primary-darker: #3d4fc7;
+  --ifm-color-primary-darkest: #2f3fa3;
+  --ifm-color-primary-light: #8098f0;
+  --ifm-color-primary-lighter: #96a8f3;
+  --ifm-color-primary-lightest: #c1ccf9;
+  
+  /* Backgrounds */
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #1a1a2e;
+  
+  /* Text Colors */
+  --ifm-font-color-base: #e0e0e0;
+  --ifm-font-color-secondary: #b0b0b0;
+  --ifm-heading-color: #ffffff;
+  
+  /* Links - Gold Accent */
+  --ifm-link-color: #FFD700;
+  --ifm-link-hover-color: #FFA500;
+  
+  /* Code Blocks */
+  --ifm-code-background: #16213e;
+  
+  /* Navbar */
+  --ifm-navbar-background-color: rgba(10, 10, 10, 0.95);
+  --ifm-navbar-shadow: 0 1px 0 rgba(102, 126, 234, 0.1);
+  
+  /* Footer */
+  --ifm-footer-background-color: #0a0a0a;
+  
+  /* Cards & Containers */
+  --ifm-card-background-color: #1a1a2e;
 }
 
 /* Mermaid diagram styling */
@@ -24,4 +65,144 @@ pre {
 
 html[data-theme='dark'] pre {
   background-color: #1e1e1e;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Button Enhancements */
+.button--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+[data-theme='dark'] .button--primary:hover {
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+}
+
+.button--secondary {
+  transition: all 0.3s ease;
+}
+
+.button--secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Hover Effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.2);
+}
+
+/* Link Animations */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme='dark'] .gradient-text {
+  background: linear-gradient(135deg, #8098f0 0%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass Morphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+[data-theme='dark'] .glass {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Glow Effect */
+.glow {
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+[data-theme='dark'] .glow {
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
 }
