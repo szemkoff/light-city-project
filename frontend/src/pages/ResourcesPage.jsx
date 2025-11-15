@@ -65,7 +65,7 @@ const ResourcesPage = () => {
               <h3>Core Concepts</h3>
               <p>Foundational principles, Delphin reference, and multidimensional vision</p>
               <a 
-                href="https://github.com/szemkoff/light-city-project/blob/main/website/docs/concepts/core-concepts.md"
+                href="https://szemkoff.github.io/light-city-project/docs/concepts/core-concepts"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -77,7 +77,7 @@ const ResourcesPage = () => {
               <h3>Architecture Specifications</h3>
               <p>Physical implementation, phasing, TRLs, and buildable specs</p>
               <a 
-                href="https://github.com/szemkoff/light-city-project/blob/main/website/docs/design/architecture.md"
+                href="https://szemkoff.github.io/light-city-project/docs/design/architecture"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,7 +89,7 @@ const ResourcesPage = () => {
               <h3>Development Stages & Financial Model</h3>
               <p>Timeline, costs, revenue model, and financial analysis</p>
               <a 
-                href="https://github.com/szemkoff/light-city-project/blob/main/website/docs/project/development-stages.md"
+                href="https://szemkoff.github.io/light-city-project/docs/project/development-stages"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -101,7 +101,7 @@ const ResourcesPage = () => {
               <h3>Governance Framework</h3>
               <p>Decision-making, authority, and community structure</p>
               <a 
-                href="https://github.com/szemkoff/light-city-project/blob/main/website/docs/project/governance.md"
+                href="https://szemkoff.github.io/light-city-project/docs/project/governance"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -113,7 +113,7 @@ const ResourcesPage = () => {
               <h3>Technology Catalog</h3>
               <p>34 technologies with specs, TRLs, costs, and suppliers</p>
               <a 
-                href="https://github.com/szemkoff/light-city-project/blob/main/website/docs/technical/technology-catalog.md"
+                href="https://szemkoff.github.io/light-city-project/docs/technical/technology-catalog"
                 target="_blank"
                 rel="noopener noreferrer"
               >
