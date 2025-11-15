@@ -54,7 +54,7 @@ const config: Config = {
   themeConfig: {
     image: 'img/light-city-vision-1.jpg',
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: 'light',
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
