@@ -82,36 +82,37 @@
 }
 
 .cta-button.primary {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #333;
-  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+  background: var(--gradient-primary);
+  color: var(--text-inverse);
+  box-shadow: var(--shadow-gold);
 }
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255, 215, 0, 0.4);
+  box-shadow: var(--shadow-gold);
+  filter: brightness(1.1);
 }
 
 .cta-button.secondary {
-  background: white;
-  color: #667EEA;
-  border: 2px solid #667EEA;
+  background: var(--bg-primary);
+  color: var(--color-purple);
+  border: 2px solid var(--color-purple);
 }
 
 .cta-button.secondary:hover {
-  background: #667EEA;
-  color: white;
+  background: var(--color-purple);
+  color: var(--bg-primary);
   transform: translateY(-2px);
 }
 
 .cta-button.tertiary {
   background: transparent;
-  color: #667EEA;
+  color: var(--color-purple);
   border: 2px solid transparent;
 }
 
 .cta-button.tertiary:hover {
-  border-color: #667EEA;
+  border-color: var(--color-purple);
   transform: translateY(-2px);
 }
 
@@ -121,7 +122,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  color: #667EEA;
+  color: var(--color-purple);
 }
 
 .bounce {
