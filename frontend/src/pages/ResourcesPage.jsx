@@ -25,12 +25,12 @@ const ResourcesPage = () => {
                 governance framework, and development stages.
               </p>
               <a 
-                href="https://github.com/szemkoff/light-city-project" 
+                href="https://szemkoff.github.io/light-city-project/docs/START-HERE" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="resource-link"
               >
-                View on GitHub <ExternalLink size={16} />
+                View Documentation <ExternalLink size={16} />
               </a>
             </div>
 
