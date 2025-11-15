@@ -148,52 +148,52 @@
 }
 
 .vision-card {
-  background: white;
+  background: var(--bg-card);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--border-subtle);
 }
 
 .vision-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
+  box-shadow: var(--shadow-purple);
 }
 
 .vision-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #F5F5DC 0%, #FFD700 100%);
+  background: var(--gradient-card);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  color: #667EEA;
+  color: var(--color-purple);
 }
 
 .vision-card h3 {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
 .vision-card p {
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .vision-link {
-  color: #667EEA;
+  color: var(--color-purple);
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .vision-link:hover {
-  color: #FFD700;
+  color: var(--color-gold);
 }
 
 /* Highlights Section */
