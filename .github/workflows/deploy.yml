@@ -1,45 +1,40 @@
 name: Deploy Docusaurus to GitHub Pages
 
+# Matches repo Settings → Pages: "Deploy from a branch" → gh-pages / (root).
+# Pushes website/build to the gh-pages branch so the live site and hashed assets stay in sync.
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    
+
     concurrency:
       group: pages
       cancel-in-progress: false
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
-      # Use lockfile for reproducible installs (avoids ETARGET / missing versions on fresh npm install)
+
       - name: Install dependencies
         run: cd website && npm ci --legacy-peer-deps
-      
+
       - name: Build site
         run: cd website && npm run build
 
-      # Ensures HTML and hashed bundles stay in sync (avoids “site did not load” when JS/CSS 404)
       - name: Verify build output
         run: |
           set -euo pipefail
@@ -49,13 +44,13 @@ jobs:
           test -n "$(ls -1 "$B/assets/js"/runtime~main.*.js 2>/dev/null)"
           test -n "$(ls -1 "$B/assets/js"/main.*.js 2>/dev/null)"
           echo "OK: index.html and asset bundles present under $B"
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 'website/build'
-      
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
 
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build
+          publish_branch: gh-pages
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: 'deploy: update site from main'
