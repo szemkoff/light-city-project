@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Light City Project',
   tagline: 'Anchoring a Higher-Consciousness Civilization',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   url: 'https://szemkoff.github.io',
   baseUrl: '/light-city-project/',
@@ -58,6 +58,15 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
+    headTags: [
+      {
+        tagName: 'link',
+        attributes: {
+          rel: 'apple-touch-icon',
+          href: '/img/apple-touch-icon.png',
+        },
+      },
+    ],
     navbar: {
       // Wordmark is baked into the logo image (see static/img/light-city-logo-navbar.png)
       title: '',
