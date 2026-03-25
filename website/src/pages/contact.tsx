@@ -3,23 +3,17 @@ import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import MarketingPageLayout from '../components/MarketingPageLayout';
-import { CONTACT_EMAIL, FORMSUBMIT_ENDPOINT } from '../contactConfig';
+import { CONTACT_EMAIL, FORMSUBMIT_ENDPOINT, buildSiteAbsoluteUrl } from '../contactConfig';
 import styles from './contact.module.css';
 import pageStyles from '../components/MarketingPageLayout/styles.module.css';
-
-function buildAbsoluteUrl(siteUrl: string, baseUrl: string, path: string): string {
-  const u = siteUrl.replace(/\/$/, '');
-  const b = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  const p = path.startsWith('/') ? path.slice(1) : path;
-  return `${u}${b}${p}`;
-}
 
 export default function Contact(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
   const sent = new URLSearchParams(location.search).get('sent') === '1';
 
-  const nextContact = buildAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, 'contact?sent=1');
+  const nextContact = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, 'contact?sent=1');
+  const formPageUrl = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, 'contact');
 
   return (
     <MarketingPageLayout
@@ -41,8 +35,10 @@ export default function Contact(): JSX.Element {
       <form className={styles.form} action={FORMSUBMIT_ENDPOINT} method="POST">
         <input type="hidden" name="_subject" value="Light City Project - Contact form" />
         <input type="hidden" name="_template" value="table" />
-        <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+        <input type="hidden" name="_url" value={formPageUrl} />
         <input type="hidden" name="_next" value={nextContact} />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
         <div className={styles.row}>
           <label htmlFor="contact-name">Name</label>
