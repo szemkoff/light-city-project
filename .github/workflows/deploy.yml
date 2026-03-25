@@ -33,9 +33,6 @@ jobs:
         run: cd website && npm ci --legacy-peer-deps
 
       - name: Build site
-        env:
-          # Web3Forms (https://web3forms.com) — avoids enterprise blocks on formsubmit.co. Add in repo Settings → Secrets.
-          WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
         run: cd website && npm run build
 
       - name: Verify build output

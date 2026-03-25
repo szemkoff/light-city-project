@@ -1,16 +1,29 @@
 /**
- * Public inquiry address (mailto + Web3Forms notifications).
- * Web3Forms uses api.web3forms.com — avoids enterprise blocks on formsubmit.co (e.g. Cisco Umbrella).
+ * Public inquiry address. Contact uses mailto: (no third-party POST, works behind strict firewalls).
  */
 export const CONTACT_EMAIL = 'irnbrue@gmail.com';
 
-/** Web3Forms HTML form POST endpoint (see https://docs.web3forms.com/). */
-export const WEB3FORMS_SUBMIT_URL = 'https://api.web3forms.com/submit';
+/** Keep mailto URLs within typical browser limits (~2000 chars). */
+const MAX_MAILTO_BODY = 1700;
 
-/** Absolute site URL for Web3Forms `redirect` after submit. */
-export function buildSiteAbsoluteUrl(siteUrl: string, baseUrl: string, path: string = ''): string {
-  const u = siteUrl.replace(/\/$/, '');
-  const b = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
-  const p = path.startsWith('/') ? path.slice(1) : path;
-  return `${u}${b}${p}`;
+export function buildContactMailto(params: {
+  name: string;
+  userEmail: string;
+  role: string;
+  message: string;
+}): string {
+  const subject = `Light City Project — ${params.role}`;
+  let body = `Name: ${params.name}\nReply-to: ${params.userEmail}\nRole: ${params.role}\n\n${params.message}`;
+  if (body.length > MAX_MAILTO_BODY) {
+    body =
+      body.slice(0, MAX_MAILTO_BODY) +
+      '\n\n[Message truncated for email link length. Send a shorter note or email directly.]';
+  }
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+export function buildNewsletterMailto(subscriberEmail: string): string {
+  const subject = 'Light City Project — Newsletter / updates';
+  const body = `Please add this address for project updates:\n${subscriberEmail}\n`;
+  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
