@@ -1,13 +1,13 @@
 /**
- * Public inquiry address. FormSubmit posts to this inbox (no server required on GitHub Pages).
- * First submission may require one-time email verification from FormSubmit.
+ * Public inquiry address (mailto + Web3Forms notifications).
+ * Web3Forms uses api.web3forms.com — avoids enterprise blocks on formsubmit.co (e.g. Cisco Umbrella).
  */
 export const CONTACT_EMAIL = 'irnbrue@gmail.com';
 
-/** FormSubmit endpoint (static site friendly; first use may require inbox verification). */
-export const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/${CONTACT_EMAIL}`;
+/** Web3Forms HTML form POST endpoint (see https://docs.web3forms.com/). */
+export const WEB3FORMS_SUBMIT_URL = 'https://api.web3forms.com/submit';
 
-/** Absolute site URL for redirects and FormSubmit `_url` (avoids referrer-policy stripping). */
+/** Absolute site URL for Web3Forms `redirect` after submit. */
 export function buildSiteAbsoluteUrl(siteUrl: string, baseUrl: string, path: string = ''): string {
   const u = siteUrl.replace(/\/$/, '');
   const b = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;

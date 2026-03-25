@@ -4,7 +4,7 @@ import { useLocation } from '@docusaurus/router';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import PageLayout from '../components/PageLayout';
-import { FORMSUBMIT_ENDPOINT, buildSiteAbsoluteUrl } from '../contactConfig';
+import { CONTACT_EMAIL, WEB3FORMS_SUBMIT_URL, buildSiteAbsoluteUrl } from '../contactConfig';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -213,8 +213,9 @@ function JoinSection() {
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
   const newsletterOk = new URLSearchParams(location.search).get('newsletter') === '1';
+  const accessKey =
+    (siteConfig.customFields as { web3formsAccessKey?: string } | undefined)?.web3formsAccessKey ?? '';
   const nextHome = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, '?newsletter=1');
-  const newsletterFormUrl = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, '');
   const investorsIcon = useBaseUrl('img/icons/investors-icon.svg');
   const residentsIcon = useBaseUrl('img/icons/residents-icon.svg');
   const buildersIcon = useBaseUrl('img/icons/builders-icon.svg');
@@ -270,31 +271,39 @@ function JoinSection() {
           <h3 className={styles.newsletterTitle}>Stay connected</h3>
           {newsletterOk ? (
             <p className={styles.newsletterThanks} role="status">
-              Thanks — your interest is recorded. You will receive a confirmation from the form service if required.
+              Thanks — your interest is recorded. Check your inbox for a confirmation if the service sends one.
             </p>
           ) : null}
-          <form className={styles.newsletterForm} action={FORMSUBMIT_ENDPOINT} method="POST">
-            <input type="hidden" name="_subject" value="Light City Project - Newsletter signup" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_url" value={newsletterFormUrl} />
-            <input type="hidden" name="_next" value={nextHome} />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
-            <input type="hidden" name="name" value="Newsletter signup" />
-            <input type="hidden" name="role" value="Newsletter" />
-            <input type="hidden" name="message" value="Signed up from homepage." />
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Email for project updates"
-              className={styles.newsletterInput}
-              autoComplete="email"
-            />
-            <button type="submit" className={clsx('button', styles.buttonPrimary)}>
-              Subscribe
-            </button>
-          </form>
+          {accessKey ? (
+            <form className={styles.newsletterForm} action={WEB3FORMS_SUBMIT_URL} method="POST">
+              <input type="hidden" name="access_key" value={accessKey} />
+              <input type="hidden" name="subject" value="Light City Project - Newsletter signup" />
+              <input type="hidden" name="redirect" value={nextHome} />
+              <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
+              <input type="hidden" name="name" value="Newsletter signup" />
+              <input type="hidden" name="role" value="Newsletter" />
+              <input type="hidden" name="message" value="Signed up from homepage." />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email for project updates"
+                className={styles.newsletterInput}
+                autoComplete="email"
+              />
+              <button type="submit" className={clsx('button', styles.buttonPrimary)}>
+                Subscribe
+              </button>
+            </form>
+          ) : (
+            <p className={styles.newsletterDisclaimer}>
+              For updates, email{' '}
+              <a href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Light City updates')}`}>
+                {CONTACT_EMAIL}
+              </a>{' '}
+              or use the <Link to="/contact">contact form</Link>.
+            </p>
+          )}
           <p className={styles.newsletterDisclaimer}>
             For a full inquiry, use the <Link to="/contact">contact form</Link> with your role. We respect your privacy.
           </p>

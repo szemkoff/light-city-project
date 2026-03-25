@@ -16,7 +16,7 @@ export default function Privacy(): JSX.Element {
       <p>
         If you use the <Link to="/contact">contact form</Link> or email, your message and address are used
         only to respond and are not sold to third parties. The contact form is delivered through a
-        third-party form service (FormSubmit); review their terms if needed. There are no account systems
+        third-party form service (Web3Forms); review their terms if needed. There are no account systems
         or payment flows on this documentation site at this time.
       </p>
       <p>
