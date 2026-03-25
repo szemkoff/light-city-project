@@ -44,15 +44,15 @@ These patterns exist at the intersection of matter and consciousness, making the
 
 ```mermaid
 graph LR
-    SG["✨ Sacred Geometry<br/>Universal Patterns"]
+    SG["Sacred Geometry<br/>Universal patterns"]
     
-    SG --> C["⭕ Circle<br/>Unity & Wholeness"]
-    SG --> Sp["🌀 Spiral<br/>Evolution & Ascension"]
-    SG --> VP["🔘 Vesica Piscis<br/>Intersection & Birth"]
-    SG --> FL["🌸 Flower of Life<br/>Creation Pattern"]
-    SG --> PS["🧊 Platonic Solids<br/>Building Blocks"]
-    SG --> GR["φ Golden Ratio<br/>Divine Proportion"]
-    SG --> MK["⭐ Merkaba<br/>Light Body"]
+    SG --> C["Circle<br/>Unity & wholeness"]
+    SG --> Sp["Spiral<br/>Evolution & ascension"]
+    SG --> VP["Vesica Piscis<br/>Intersection & birth"]
+    SG --> FL["Flower of Life<br/>Creation pattern"]
+    SG --> PS["Platonic Solids<br/>Building blocks"]
+    SG --> GR["Golden Ratio<br/>Divine proportion"]
+    SG --> MK["Merkaba<br/>Light body"]
     
     C -->|Application| CApp["Plazas<br/>City Layout"]
     Sp -->|Application| SpApp["Pathways<br/>Energy Flow"]

@@ -15,7 +15,7 @@ sidebar_label: Energy Systems
 
 ---
 
-## ⚠️ Claim Discipline
+## Claim discipline
 
 **This page integrates visionary concepts with practical engineering.** All non-conventional mechanisms (zero-point/scalar/torsion/consciousness-coupled power) are **research hypotheses (TRL 1–3)**; all essential electricity comes from a **conventional microgrid** until peer-reviewed evidence says otherwise.
 
@@ -205,28 +205,28 @@ Delphin's crystal spire and energy system in action (visible as the central glow
 ```mermaid
 graph TD
     subgraph "PHYSICAL MICROGRID (Proven — TRL 6-9)"
-        PV["☀️ Solar PV<br/>2-5 MWp"]
-        BATT["🔋 Battery Storage<br/>8-20 MWh"]
-        GEN["⚡ Backup Genset<br/>500 kW - 2 MW"]
+        PV["Solar PV<br/>2-5 MWp"]
+        BATT["Battery Storage<br/>8-20 MWh"]
+        GEN["Backup Genset<br/>500 kW - 2 MW"]
         
         PV --> BATT
         GEN --> BATT
-        BATT --> AC["🔌 AC Feeders<br/>480V 3-phase"]
-        BATT --> DC["💡 LVDC Ring<br/>48V DC"]
+        BATT --> AC["AC Feeders<br/>480V 3-phase"]
+        BATT --> DC["LVDC Ring<br/>48V DC"]
         
         AC --> LOADS_AC["Heavy Loads:<br/>HVAC, Kitchens, Workshops"]
         DC --> LOADS_DC["Lighting, Controls, Sensors"]
     end
     
     subgraph "SUBTLE/RESONANCE OVERLAY (Research — TRL 1-3)"
-        SPIRE["🔮 Crystal Spire<br/>Acoustic + Light Programs"]
-        GEOM["✨ Sacred Geometry<br/>Standing Waves"]
+        SPIRE["Crystal Spire<br/>Acoustic + Light Programs"]
+        GEOM["Sacred Geometry<br/>Standing Waves"]
         
-        SPIRE -.->|Influences| LIGHT["🌟 Circadian Lighting<br/>Tunable White LEDs"]
-        SPIRE -.->|Influences| SOUND["🎵 Acoustic Environment<br/>RT60, Harmonics"]
-        GEOM -.->|Influences| SPACE["🏛️ Spatial Experience<br/>Resonance Chambers"]
+        SPIRE -.->|Influences| LIGHT["Circadian Lighting<br/>Tunable White LEDs"]
+        SPIRE -.->|Influences| SOUND["Acoustic Environment<br/>RT60, Harmonics"]
+        GEOM -.->|Influences| SPACE["Spatial Experience<br/>Resonance Chambers"]
         
-        LIGHT -.->|Measured| BIO["📊 Biosensors<br/>HRV, EEG, Coherence"]
+        LIGHT -.->|Measured| BIO["Biosensors<br/>HRV, EEG, Coherence"]
         SOUND -.->|Measured| BIO
         SPACE -.->|Measured| BIO
     end
@@ -529,4 +529,4 @@ graph TD
 
 ---
 
-**📝 [Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/concepts/energy-systems.md)** | **📊 [View Updates](/blog)**
+**[Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/concepts/energy-systems.md)** | **[Project updates](/blog)**

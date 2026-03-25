@@ -1,16 +1,16 @@
 ---
 id: START-HERE
-title: 🌟 Start Here
-sidebar_label: 🌟 Start Here
+title: Start Here
+sidebar_label: Start Here
 ---
 
-# 🌟 Start Here
+# Start Here
 
-Welcome to the **Light City Project** – a vision of higher-consciousness civilization being anchored from etheric potential into manifest reality.
+Welcome to the **Light City Project**—documentation for a spiritually grounded, physically buildable community: clear governance, engineering scope, and timelines alongside the vision.
 
 ## What You're Looking At
 
-This is a comprehensive framework for documenting, developing, and manifesting Light City through six evolutionary stages, from initial vision to living reality.
+This framework covers six evolutionary stages, from initial vision toward living reality. **Inspiration and rigor both belong here:** sacred geometry and consciousness themes sit next to TRLs, budgets, and permitting language so stakeholders can share one source of truth.
 
 ## Your First Steps
 
@@ -49,18 +49,18 @@ Read these three documents in order:
 **Completion**: ~60% of Stage 1 objectives
 
 **What exists now:**
-- ✅ Complete project structure
-- ✅ Core documentation framework
-- ✅ Philosophical foundations (comprehensive)
-- ✅ Architectural vision with Delphin integration
-- ✅ Project management framework
-- ✅ GitHub repository and version control
-- ✅ Live documentation site ([view here](https://szemkoff.github.io/light-city-project/))
-- ✅ Visual design system (initial)
-- ✅ Research infrastructure
-- ✅ Governance and licensing
-- 🔄 Visual content and diagrams (in progress)
-- 🔄 Research compilation (ongoing)
+- Complete project structure
+- Core documentation framework
+- Philosophical foundations (comprehensive)
+- Architectural vision with Delphin integration (as reference, not proof)
+- Project management framework
+- GitHub repository and version control
+- Live documentation site ([view here](https://szemkoff.github.io/light-city-project/))
+- Visual design system (initial)
+- Research infrastructure
+- Governance and licensing
+- Visual content and diagrams (in progress)
+- Research compilation (ongoing)
 
 ## Immediate Priorities
 
@@ -184,7 +184,7 @@ Choose your next step:
 → **Contribute**: [Contributing](/docs/project/contributing)  
 → **Understand**: [Documentation Index](/docs/)
 
-**Welcome, builder. Let's begin.** ✨
+**Welcome, builder. Let's begin.**
 
 ---
 

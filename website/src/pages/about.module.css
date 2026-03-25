@@ -96,8 +96,15 @@
 }
 
 .cardIcon {
-  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
+}
+
+.cardIcon img {
+  display: block;
+  opacity: 0.92;
 }
 
 .card h3 {

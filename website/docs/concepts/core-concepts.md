@@ -33,11 +33,11 @@ Light City is a multidimensional vision that exists simultaneously across severa
 
 ```mermaid
 graph TB
-    LC["✨ Light City<br/>Multidimensional Vision"]
+    LC["Light City<br/>Multidimensional vision"]
     
-    LC -->|Dimension 1| EB["🔮 Etheric Blueprint<br/>Higher-Dimensional"]
-    LC -->|Dimension 2| CV["🌍 Collective Vision<br/>Future Timeline"]
-    LC -->|Dimension 3| PM["💫 Personal Mission<br/>Individual Calling"]
+    LC -->|Dimension 1| EB["Etheric Blueprint<br/>Higher-dimensional"]
+    LC -->|Dimension 2| CV["Collective Vision<br/>Future timeline"]
+    LC -->|Dimension 3| PM["Personal Mission<br/>Individual calling"]
     
     EB -->|Characteristics| EBC1["White-Gold Crystal"]
     EB -->|Characteristics| EBC2["Semi-Transparent"]
@@ -345,6 +345,6 @@ To deepen your understanding:
 
 ---
 
-**📝 [Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/concepts/core-concepts.md)** | **📊 [View Updates](/blog)**  
+**[Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/concepts/core-concepts.md)** | **[Project updates](/blog)**  
 **Related Documents**: [Philosophy](/docs/concepts/philosophy), [Architecture](/docs/design/architecture), [Development Stages](/docs/project/development-stages)
 

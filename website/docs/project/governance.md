@@ -437,4 +437,4 @@ A: Constitutional convention every 5 years (or upon 66% petition) allows full fr
 
 ---
 
-**📝 [Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/project/governance.md)** | **📊 [View Updates](/blog)**
+**[Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/project/governance.md)** | **[Project updates](/blog)**

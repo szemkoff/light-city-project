@@ -17,8 +17,8 @@ Complete index of all Light City project documentation.
 - [Philosophy](concepts/philosophy.md) - Philosophical underpinnings
 - [Purpose and Mission](concepts/purpose-and-mission.md) - Project goals and mission
 - [Sacred Geometry](concepts/sacred-geometry.md) - Geometric principles
-- [Communospheres](concepts/communospheres.md) - Living spaces and consciousness technology ⭐ NEW
-- [Energy Systems](concepts/energy-systems.md) - Energy generation and resonance ⭐ NEW
+- [Communospheres](concepts/communospheres.md) - Living spaces and consciousness technology (recent)
+- [Energy Systems](concepts/energy-systems.md) - Energy generation and resonance (recent)
 
 ### To Be Created
 - Consciousness and Awareness
@@ -29,9 +29,9 @@ Complete index of all Light City project documentation.
 
 ### Current Documents
 - [Architecture](design/architecture.md) - Architectural vision and principles
-- [Visual Language](design/visual-language.md) - Design principles and design tokens ⭐ NEW
-- [Color and Light](design/color-and-light.md) - Color palette and lighting rules ⭐ NEW
-- [Layout Diagrams](design/layout-diagrams.md) - City layout diagrams and visualizations ⭐ NEW
+- [Visual Language](design/visual-language.md) - Design principles and design tokens (recent)
+- [Color and Light](design/color-and-light.md) - Color palette and lighting rules (recent)
+- [Layout Diagrams](design/layout-diagrams.md) - City layout diagrams and visualizations (recent)
 
 ### To Be Created
 - Materials and Construction

@@ -10,7 +10,7 @@ The Light City project unfolds through six evolutionary stages, each building up
 
 ![Development Roadmap](/img/diagrams/development-roadmap.svg)
 
-This comprehensive roadmap shows the complete journey from initial vision to thriving civilization. Each stage builds upon the previous, with flexible timelines based on consciousness shift, resources, and collective readiness.
+This roadmap runs from initial vision through design, community, construction, and steady operations. Timelines depend on funding, permits, partnerships, and collective readiness—not only on intent.
 
 ---
 
@@ -19,12 +19,12 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 ### Project Timeline (2025-2031+)
 | Stage | Duration | Timeline | Investment | Status |
 |-------|----------|----------|------------|--------|
-| **S1: Foundation** | 2-3 months | Oct-Dec 2025 | $5K-$15K | ✅ 85% Complete |
-| **S2: Design** | 4-6 months | Jan-Jun 2026 | $25K-$85K | 🔜 Upcoming |
-| **S3: Digital** | 3-5 months | Jul-Nov 2026 | $35K-$125K | 📅 Planned |
-| **S4: Community** | 6-12 months | Dec 2026-Nov 2027 | $85K-$280K | 📅 Planned |
-| **S5: Physical** | 18-36 months | Dec 2027-Nov 2030 | $22M-$95M | 🎯 Target |
-| **S6: Operations** | Ongoing | 2031+ | $1.8M-$4.5M/yr | 🌟 Vision |
+| **S1: Foundation** | 2-3 months | Oct-Dec 2025 | $5K-$15K | ~85% complete |
+| **S2: Design** | 4-6 months | Jan-Jun 2026 | $25K-$85K | Upcoming |
+| **S3: Digital** | 3-5 months | Jul-Nov 2026 | $35K-$125K | Planned |
+| **S4: Community** | 6-12 months | Dec 2026-Nov 2027 | $85K-$280K | Planned |
+| **S5: Physical** | 18-36 months | Dec 2027-Nov 2030 | $22M-$95M | Target |
+| **S6: Operations** | Ongoing | 2031+ | $1.8M-$4.5M/yr | Long-term |
 
 ### Financial Overview
 | Metric | Low Scenario | Mid Scenario | High Scenario |
@@ -43,15 +43,15 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 ## Stage Gate Checklist
 
 > **Pass criteria for advancing to next stage:**
-> 1. ✅ Key deliverables complete and published  
-> 2. ✅ Community readiness confirmed (vote/consent)  
-> 3. ✅ Resources secured (budget, team, partners)  
-> 4. ✅ Risks reviewed with mitigations documented  
-> 5. ✅ Learnings documented and linked
+> 1. Key deliverables complete and published  
+> 2. Community readiness confirmed (vote/consent)  
+> 3. Resources secured (budget, team, partners)  
+> 4. Risks reviewed with mitigations documented  
+> 5. Learnings documented and linked
 
 ---
 
-## Stage 1: Foundation & Vision 🌱
+## Stage 1: Foundation & Vision
 
 **Duration**: 2-3 months (Oct 2025 - Dec 2025)  
 **Status**: CURRENT (85% complete)  
@@ -119,7 +119,7 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ---
 
-## Stage 2: World-Building & Design 🎨
+## Stage 2: World-Building & Design
 
 **Duration**: 4-6 months (Jan 2026 - Jun 2026)  
 **Status**: UPCOMING  
@@ -182,7 +182,7 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ---
 
-## Stage 3: Digital Presence 🌐
+## Stage 3: Digital Presence
 
 **Duration**: 3-5 months (Jul 2026 - Nov 2026)  
 **Status**: FUTURE  
@@ -248,7 +248,7 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ---
 
-## Stage 4: Community & Collaboration 🤝
+## Stage 4: Community & Collaboration
 
 **Duration**: 6-12 months (Dec 2026 - Nov 2027)  
 **Status**: FUTURE  
@@ -316,7 +316,7 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ---
 
-## Stage 5: Physical Manifestation 🏗️
+## Stage 5: Physical Manifestation
 
 **Duration**: 18-36 months (Dec 2027 - Nov 2030)  
 **Status**: FUTURE  
@@ -427,7 +427,7 @@ This comprehensive roadmap shows the complete journey from initial vision to thr
 
 ---
 
-## Stage 6: Living System & Evolution 🌟
+## Stage 6: Living System & Evolution
 
 **Duration**: Ongoing (perpetual, starting 2031+)  
 **Status**: FUTURE  
@@ -597,8 +597,8 @@ These stages are guideposts, not rigid requirements. The project may:
 |-----------|-------------|--------|-------------------|---------|
 | Tiny Home | $500-$700 | $6K-$8.4K | $8.7K-$18K | ❌ Loss leader |
 | Studio | $700-$950 | $8.4K-$11.4K | $8.7K-$18K | ≈ Break-even |
-| 1-Bedroom | $950-$1,300 | $11.4K-$15.6K | $8.7K-$18K | ✅ Profitable |
-| 2-Bedroom | $1,300-$1,700 | $15.6K-$20.4K | $8.7K-$18K | ✅ Profitable |
+| 1-Bedroom | $950-$1,300 | $11.4K-$15.6K | $8.7K-$18K | Profitable (model) |
+| 2-Bedroom | $1,300-$1,700 | $15.6K-$20.4K | $8.7K-$18K | Profitable (model) |
 
 **Cross-Subsidy Strategy**:
 1. **Tiny homes** (25% of units) operate at loss, subsidized by larger units + retreat revenue
@@ -702,22 +702,22 @@ These stages are guideposts, not rigid requirements. The project may:
 ## Current Focus: Stage 1 Activities
 
 ### Immediate Next Steps
-1. ✅ Complete core concept documentation
-2. ✅ Set up project management tools (GitHub, Docusaurus)
-3. ✅ Create initial visual concepts (30+ diagrams)
-4. ✅ Define project values and principles
-5. ✅ Establish documentation standards
-6. ✅ Select technical tools and platforms
+1. Complete core concept documentation
+2. Set up project management tools (GitHub, Docusaurus)
+3. Create initial visual concepts (30+ diagrams)
+4. Define project values and principles
+5. Establish documentation standards
+6. Select technical tools and platforms
 7. [ ] Complete Technology Catalog
 8. [ ] Complete Urban Retrofit Guide
 9. [ ] Finalize Stage 1 and transition to Stage 2
 
 ### Success Metrics for Stage 1
-- ✅ Clear, comprehensive documentation of vision (70%+ complete)
-- ✅ Well-organized project structure (GitHub + Docusaurus operational)
-- ✅ Foundational documents that inspire (positive early feedback)
-- ✅ Technical foundation for future stages (live website, version control)
-- ✅ Personal clarity on direction (vision articulated and energizing)
+- Clear, comprehensive documentation of vision (70%+ complete)
+- Well-organized project structure (GitHub + Docusaurus operational)
+- Foundational documents that invite serious review (early reader feedback)
+- Technical foundation for future stages (live website, version control)
+- Clear direction for contributors (vision and next steps documented)
 
 ---
 
@@ -729,4 +729,4 @@ These stages are guideposts, not rigid requirements. The project may:
 
 ---
 
-**📝 [Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/project/development-stages.md)** | **📊 [View Updates](/blog)**
+**[Edit this page on GitHub](https://github.com/szemkoff/light-city-project/edit/main/website/docs/project/development-stages.md)** | **[Project updates](/blog)**

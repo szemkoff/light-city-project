@@ -113,7 +113,7 @@
   
   <!-- Side notes -->
   <g transform="translate(50, 100)">
-    <text x="0" y="0" class="arrow-label" style="font-weight: 600;">💡 Tips:</text>
+    <text x="0" y="0" class="arrow-label" style="font-weight: 600;">Tips:</text>
     <text x="0" y="20" class="arrow-label">• Take your time</text>
     <text x="0" y="35" class="arrow-label">• Follow your resonance</text>
     <text x="0" y="50" class="arrow-label">• No wrong path</text>

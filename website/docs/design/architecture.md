@@ -128,11 +128,11 @@ This top-down view shows the complete city structure with concentric rings, radi
 ```mermaid
 graph TB
     subgraph "Light City Concentric Structure"
-        CS["🔮 Central Sanctum<br/>Crystal Spire & Plaza"]
-        IR["🏛️ Inner Ring<br/>Temples & Learning Centers"]
-        MR["🎨 Middle Ring<br/>Creative Studios & Collaboration"]
-        OR["🏠 Outer Ring<br/>Communospheres & Gardens"]
-        NS["🌳 Natural Surroundings<br/>Forests & Integration"]
+        CS["Central Sanctum<br/>Crystal Spire & Plaza"]
+        IR["Inner Ring<br/>Temples & Learning Centers"]
+        MR["Middle Ring<br/>Creative Studios & Collaboration"]
+        OR["Outer Ring<br/>Communospheres & Gardens"]
+        NS["Natural Surroundings<br/>Forests & Integration"]
         
         CS -->|Radial Pathways| IR
         IR -->|Radial Pathways| MR
@@ -170,7 +170,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 
 *The Delphin spire (40,000 ft) serves as mythic reference and visionary archetype. Light City's terrestrial prototype is scaled for Earth physics.*
 
-#### 🔮 Vision Source (Off-world Reference)
+#### Vision source (off-world reference)
 
 **Delphin Spire**: 40,000 feet (~12 km / 7.6 miles)
 - Exists on planet Israel in another star system
@@ -178,7 +178,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - Demonstrates what's possible with advanced consciousness-matter technology
 - Serves as aspirational model and proportional guide
 
-#### 🌍 Terrestrial Prototype (Earth Implementation)
+#### Terrestrial prototype (Earth implementation)
 
 **Phase 1 (18-24 months)**: 60-120 m light/acoustic tower
 - Feasible height range: 200-400 feet
@@ -323,7 +323,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 
 **Purpose**: Conscious community living environments that maintain resonance
 
-#### 🔮 Vision Source (Off-world Reference)
+#### Vision source (off-world reference)
 
 **Delphin Communospheres**: 600-1,200 ft diameter mega-spheres
 - Each houses 10,000 people
@@ -331,7 +331,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - Demonstrates far-future pavilion scale
 - Serves as aspirational model
 
-#### 🌍 Terrestrial Prototype (Buildable Kit-of-Parts)
+#### Terrestrial prototype (buildable kit-of-parts)
 
 **Phase 1 (18-24 months)**: 3 geodesic domes
 - **Size**: 30-45 m diameter (100-150 ft)

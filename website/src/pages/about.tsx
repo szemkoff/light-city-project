@@ -1,8 +1,13 @@
 import React from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import PageLayout from '../components/PageLayout';
 import styles from './about.module.css';
 
 export default function About(): JSX.Element {
+  const iconSpirit = useBaseUrl('img/icons/consciousness-icon.svg');
+  const iconEarth = useBaseUrl('img/icons/regenerative-icon.svg');
+  const iconCollective = useBaseUrl('img/icons/architecture-icon.svg');
+
   return (
     <PageLayout title="About Light City" description="Vision & Philosophy">
       {/* Hero Section */}
@@ -22,7 +27,9 @@ export default function About(): JSX.Element {
           <h2 className={styles.sectionTitle}>Core Principles</h2>
           <div className={styles.cardGrid}>
             <div className={styles.card}>
-              <div className={styles.cardIcon}>🌟</div>
+              <div className={styles.cardIcon}>
+                <img src={iconSpirit} alt="" width={48} height={48} />
+              </div>
               <h3>Spirit Before Structure</h3>
               <p>
                 Light City begins as an etheric template—a higher-dimensional pattern. 
@@ -30,7 +37,9 @@ export default function About(): JSX.Element {
               </p>
             </div>
             <div className={styles.card}>
-              <div className={styles.cardIcon}>🌍</div>
+              <div className={styles.cardIcon}>
+                <img src={iconEarth} alt="" width={48} height={48} />
+              </div>
               <h3>Gaia's Memory</h3>
               <p>
                 Earth (Gaia) holds the memory of what Light City can be. We are co-creating 
@@ -38,7 +47,9 @@ export default function About(): JSX.Element {
               </p>
             </div>
             <div className={styles.card}>
-              <div className={styles.cardIcon}>🤝</div>
+              <div className={styles.cardIcon}>
+                <img src={iconCollective} alt="" width={48} height={48} />
+              </div>
               <h3>Collective Co-Creation</h3>
               <p>
                 Light City is not a single person's vision but an emergent pattern drawing 

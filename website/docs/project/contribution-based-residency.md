@@ -57,14 +57,14 @@ Light City offers a **Contribution-Based Residency (CBR)** program where communi
 #### **Commitment**: 25-30 hours/week of community contribution
 
 #### **Includes**:
-- ✅ Private studio or tiny home (200-400 sq ft)
-- ✅ All utilities (electricity, water, internet)
-- ✅ Access to all communal spaces (kitchen, dining, workshops, gardens)
-- ✅ Community meals (breakfast, lunch, dinner - 7 days/week)
-- ✅ Basic healthcare (community clinic, preventive care)
-- ✅ Educational programs (workshops, classes, retreats)
-- ✅ Full voting rights in governance
-- ✅ Access to shared vehicles and tools
+- Private studio or tiny home (200-400 sq ft)
+- All utilities (electricity, water, internet)
+- Access to all communal spaces (kitchen, dining, workshops, gardens)
+- Community meals (breakfast, lunch, dinner - 7 days/week)
+- Basic healthcare (community clinic, preventive care)
+- Educational programs (workshops, classes, retreats)
+- Full voting rights in governance
+- Access to shared vehicles and tools
 
 #### **Contribution Areas** (choose 1-3):
 1. **Food Systems** (10-15 hrs/week)
@@ -116,12 +116,12 @@ Light City offers a **Contribution-Based Residency (CBR)** program where communi
 #### **Commitment**: 15-20 hours/week of community contribution
 
 #### **Includes**:
-- ✅ Private studio or tiny home (200-400 sq ft)
-- ✅ All utilities
-- ✅ Access to communal spaces
-- ✅ 10 community meals/week (choose days)
-- ✅ Basic healthcare
-- ✅ Full voting rights
+- Private studio or tiny home (200-400 sq ft)
+- All utilities
+- Access to communal spaces
+- 10 community meals/week (choose days)
+- Basic healthcare
+- Full voting rights
 
 #### **Resident Pays**:
 - 💰 $250-400/month (covers food & operational costs)
@@ -139,11 +139,11 @@ Light City offers a **Contribution-Based Residency (CBR)** program where communi
 #### **Commitment**: 8-12 hours/week of specialized contribution
 
 #### **Includes**:
-- ✅ Private studio (200-300 sq ft)
-- ✅ All utilities
-- ✅ Access to communal spaces
-- ✅ 5 community meals/week
-- ✅ Full voting rights
+- Private studio (200-300 sq ft)
+- All utilities
+- Access to communal spaces
+- 5 community meals/week
+- Full voting rights
 
 #### **Resident Pays**:
 - 💰 $500-700/month
@@ -359,27 +359,27 @@ CBR residents **increase** community capacity and reduce operational costs while
 ## Phased Implementation
 
 ### **Stage 1-2: Foundation** (Current)
-- ✅ Document CBR framework
-- ✅ Include in governance structure
-- ✅ Budget for CBR in financial model
+- Document CBR framework
+- Include in governance structure
+- Budget for CBR in financial model
 
 ### **Stage 3: Pilot Program** (2026-2027)
-- 🔄 Launch with 5-10 CBR residents
-- 🔄 Test contribution tracking system
-- 🔄 Refine policies based on experience
-- 🔄 Gather testimonials and data
+- Launch with 5-10 CBR residents
+- Test contribution tracking system
+- Refine policies based on experience
+- Gather testimonials and data
 
 ### **Stage 4: Scale** (2027-2028)
-- 📅 Expand to 20-30% of residents
-- 📅 Implement digital tracking platform
-- 📅 Establish CBR Council
-- 📅 Create training program for coordinators
+- (planned) Expand to 20-30% of residents
+- (planned) Implement digital tracking platform
+- (planned) Establish CBR Council
+- (planned) Create training program for coordinators
 
 ### **Stage 5-6: Mature System** (2028+)
-- 📅 CBR as core community feature
-- 📅 Replication guide for other communities
-- 📅 Research publication on outcomes
-- 📅 Network of CBR communities
+- (planned) CBR as core community feature
+- (planned) Replication guide for other communities
+- (planned) Research publication on outcomes
+- (planned) Network of CBR communities
 
 ---
 

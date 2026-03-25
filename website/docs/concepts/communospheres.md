@@ -52,7 +52,7 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 **Shape**: Spherical (dome visible from exterior)
 
-#### 🔮 Vision Source (Off-World Reference)
+#### Vision source (off-world reference)
 
 **Delphin Communospheres**: 600-1,200 ft diameter mega-spheres
 - Each houses 10,000 people
@@ -60,7 +60,7 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 - Demonstrates far-future pavilion scale with advanced consciousness-matter technology
 - Serves as aspirational model and proportional guide
 
-#### 🌍 Terrestrial Prototype (Earth Implementation)
+#### Terrestrial prototype (Earth implementation)
 
 **Phase 1 (18-24 months)**: 3 geodesic domes
 - **Size**: 30-45 m diameter (100-150 ft)
@@ -101,11 +101,11 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 5. **Note**: This is experiential/acoustic resonance, NOT electrical power
 6. **Physical power**: Provided by microgrid (solar PV + batteries)
 
-**Field Effects**:
-- Creates coherent consciousness environment
-- Enables telepathic/energetic connection
-- Maintains elevated awareness state
-- Supports instant knowledge transfer
+**Field Effects** (experiential hypotheses, not established science):
+- Coherent acoustic and spatial environment
+- Subjective sense of connection (to be studied with consent and protocols)
+- Supports focus and shared learning (measurable where possible)
+- No claim of “instant” knowledge transfer without evidence
 
 ### Social Structure
 
@@ -127,22 +127,22 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 ```mermaid
 graph TB
-    subgraph CS["🔮 Communosphere<br/>Single Living Sphere"]
+    subgraph CS["Communosphere<br/>Single living sphere"]
         subgraph Inner["Inner Spaces"]
-            CA["💫 Central Commons<br/>Gathering Space"]
-            LP["📚 Learning Plaza<br/>Knowledge Transfer"]
-            MC["🎨 Creative Chambers<br/>Expression & Art"]
+            CA["Central Commons<br/>Gathering space"]
+            LP["Learning Plaza<br/>Knowledge transfer"]
+            MC["Creative Chambers<br/>Expression & art"]
         end
         
         subgraph Living["Living Quarters"]
-            PQ["🏠 Private Quarters<br/>Individual/Family"]
-            SCS["🤝 Shared Community<br/>Services"]
+            PQ["Private Quarters<br/>Individual/Family"]
+            SCS["Shared Community<br/>Services"]
         end
         
         subgraph Support["Support Systems"]
-            Water["💧 Water Systems"]
-            Air["🌬️ Air Systems"]
-            Energy["⚡ Energy Systems"]
+            Water["Water Systems"]
+            Air["Air Systems"]
+            Energy["Energy Systems"]
         end
         
         CA -.->|Consciousness<br/>Connection| PQ

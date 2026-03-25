@@ -100,5 +100,5 @@ With comprehensive visual documentation in place, we can now focus on:
 
 **View the enhanced documentation**: [Light City Project](https://szemkoff.github.io/light-city-project/)
 
-The vision is becoming clearer with every update. ✨
+The vision is becoming clearer with every update.
 

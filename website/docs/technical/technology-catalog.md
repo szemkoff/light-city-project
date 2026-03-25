@@ -24,7 +24,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![CLT Construction](/img/technology/clt-construction.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -57,7 +57,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Geodesic Dome](/img/technology/geodesic-dome.jpg)
 
-**Status**: ✅ Commercially Available (TRL 7-8)  
+**Status**: Commercially Available (TRL 7-8)  
 **Cost**: $$ (Medium to High)
 
 **Description**:
@@ -90,7 +90,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Tensile Fabric Structure](/img/technology/tensile-fabric.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -117,7 +117,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![3D Printed Concrete](/img/technology/3d-printed-concrete.jpg)
 
-**Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
+**Status**: Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $ to $$ (Decreasing rapidly)
 
 **Description**:
@@ -151,7 +151,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![BIPV Solar Facade](/img/technology/bipv-solar-facade.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$$ (High, but decreasing)
 
 **Description**:
@@ -183,7 +183,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Flow Battery](/img/technology/flow-battery.jpg)
 
-**Status**: ✅ Commercially Available (TRL 7-8)  
+**Status**: Commercially Available (TRL 7-8)  
 **Cost**: $$ (Medium, competitive for 4+ hour storage)
 
 **Description**:
@@ -216,7 +216,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Micro-Hydro Turbine](/img/technology/micro-hydro.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -247,7 +247,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Solid-State Battery](/img/technology/solid-state-battery.jpg)
 
-**Status**: 🔶 Pilot/Near-Commercial (TRL 6-7)  
+**Status**: Pilot/Near-Commercial (TRL 6-7)  
 **Cost**: $$$ (High, but expected to drop)
 
 **Description**:
@@ -280,7 +280,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Living Machine](/img/technology/living-machine.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -312,7 +312,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Atmospheric Water Generator](/img/technology/atmospheric-water.jpg)
 
-**Status**: ✅ Commercially Available (TRL 7-8)  
+**Status**: Commercially Available (TRL 7-8)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -346,7 +346,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Composting Toilet](/img/technology/composting-toilet.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $ (Low to Medium)
 
 **Description**:
@@ -377,7 +377,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 4 Rainwater Harvesting Systems
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -412,7 +412,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Vertical Farm](/img/technology/vertical-farm.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -445,7 +445,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Aquaponics System](/img/technology/aquaponics-system.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -478,7 +478,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Agroforestry](/img/technology/agroforestry.jpg)
 
-**Status**: ✅ Proven Traditional (TRL 9)  
+**Status**: Proven Traditional (TRL 9)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -514,7 +514,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Mycelium Cultivation](/img/technology/mycelium-cultivation.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -543,7 +543,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Building Management System](/img/technology/bms.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -570,7 +570,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Environmental Sensors](/img/technology/environmental-sensors.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -597,7 +597,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Circadian Lighting](/img/technology/circadian-lighting.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -632,7 +632,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Acoustic Resonance](/img/technology/acoustic-resonance.jpg)
 
-**Status**: 🔶 Pilot/Custom (TRL 4-6)  
+**Status**: Pilot/Custom (TRL 4-6)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -665,7 +665,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Biofeedback System](/img/technology/biofeedback.jpg)
 
-**Status**: ✅ Commercially Available (TRL 7-8)  
+**Status**: Commercially Available (TRL 7-8)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -692,7 +692,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Red Light Therapy](/img/technology/red-light-therapy.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -719,7 +719,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Float Tank](/img/technology/float-tank.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -748,7 +748,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![EV Charging Station](/img/technology/ev-charging.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $$ to $$$ (Medium to High, decreasing)
 
 **Description**:
@@ -775,7 +775,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Cargo Bike](/img/technology/cargo-bike.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -802,7 +802,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Autonomous Shuttle](/img/technology/autonomous-shuttle.jpg)
 
-**Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
+**Status**: Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $$$ (High)
 
 **Description**:
@@ -831,7 +831,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Hempcrete](/img/technology/hempcrete.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -864,7 +864,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Mycelium Insulation](/img/technology/mycelium-insulation.jpg)
 
-**Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
+**Status**: Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $$ (Medium, decreasing)
 
 **Description**:
@@ -891,7 +891,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Transparent Wood](/img/technology/transparent-wood.jpg)
 
-**Status**: 🔶 R&D/Pilot (TRL 4-5)  
+**Status**: R&D/Pilot (TRL 4-5)  
 **Cost**: $$$ (High, experimental)
 
 **Description**:
@@ -917,7 +917,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Self-Healing Concrete](/img/technology/self-healing-concrete.jpg)
 
-**Status**: 🔶 Pilot/Early Commercial (TRL 6-7)  
+**Status**: Pilot/Early Commercial (TRL 6-7)  
 **Cost**: $$$ (High)
 
 **Description**:
@@ -945,7 +945,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Mesh Network](/img/technology/mesh-network.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -972,7 +972,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Starlink](/img/technology/starlink.jpg)
 
-**Status**: ✅ Commercially Available (TRL 8-9)  
+**Status**: Commercially Available (TRL 8-9)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -1000,7 +1000,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Environmental Monitoring](/img/technology/environmental-monitoring.jpg)
 
-**Status**: ✅ Commercially Available (TRL 9)  
+**Status**: Commercially Available (TRL 9)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -1027,7 +1027,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Consciousness Research Equipment](/img/technology/consciousness-research.jpg)
 
-**Status**: 🔶 Research/Custom (TRL 3-5)  
+**Status**: Research/Custom (TRL 3-5)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
