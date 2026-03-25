@@ -124,7 +124,7 @@ Light City offers a **Contribution-Based Residency (CBR)** program where communi
 - Full voting rights
 
 #### **Resident Pays**:
-- 💰 $250-400/month (covers food & operational costs)
+- **Cost:** $250-400/month (covers food & operational costs)
 
 #### **Best For**:
 - People with part-time remote work
@@ -146,7 +146,7 @@ Light City offers a **Contribution-Based Residency (CBR)** program where communi
 - Full voting rights
 
 #### **Resident Pays**:
-- 💰 $500-700/month
+- **Cost:** $500-700/month
 
 #### **Best For**:
 - Professionals with specialized skills (architects, engineers, therapists, teachers)
