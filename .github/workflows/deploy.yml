@@ -37,6 +37,17 @@ jobs:
       
       - name: Build site
         run: cd website && npm run build
+
+      # Ensures HTML and hashed bundles stay in sync (avoids “site did not load” when JS/CSS 404)
+      - name: Verify build output
+        run: |
+          set -euo pipefail
+          B="website/build"
+          test -f "$B/index.html"
+          test -n "$(ls -1 "$B/assets/css"/styles.*.css 2>/dev/null | head -1)"
+          test -n "$(ls -1 "$B/assets/js"/runtime~main.*.js 2>/dev/null)"
+          test -n "$(ls -1 "$B/assets/js"/main.*.js 2>/dev/null)"
+          echo "OK: index.html and asset bundles present under $B"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
