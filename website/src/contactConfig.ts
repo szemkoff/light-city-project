@@ -1,29 +1,13 @@
 /**
- * Public inquiry address. Contact uses mailto: (no third-party POST, works behind strict firewalls).
+ * Contact forms POST to Web3Forms (https://web3forms.com). The destination inbox is set in the
+ * Web3Forms dashboard when you create the access key — do not put the project email in page HTML.
+ * Build with WEB3FORMS_ACCESS_KEY (GitHub Actions secret) so the key is not committed.
  */
-export const CONTACT_EMAIL = 'irnbrue@gmail.com';
+export const WEB3FORMS_SUBMIT_URL = 'https://api.web3forms.com/submit';
 
-/** Keep mailto URLs within typical browser limits (~2000 chars). */
-const MAX_MAILTO_BODY = 1700;
-
-export function buildContactMailto(params: {
-  name: string;
-  userEmail: string;
-  role: string;
-  message: string;
-}): string {
-  const subject = `Light City Project — ${params.role}`;
-  let body = `Name: ${params.name}\nReply-to: ${params.userEmail}\nRole: ${params.role}\n\n${params.message}`;
-  if (body.length > MAX_MAILTO_BODY) {
-    body =
-      body.slice(0, MAX_MAILTO_BODY) +
-      '\n\n[Message truncated for email link length. Send a shorter note or email directly.]';
-  }
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-
-export function buildNewsletterMailto(subscriberEmail: string): string {
-  const subject = 'Light City Project — Newsletter / updates';
-  const body = `Please add this address for project updates:\n${subscriberEmail}\n`;
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+export function buildSiteAbsoluteUrl(siteUrl: string, baseUrl: string, path: string = ''): string {
+  const u = siteUrl.replace(/\/$/, '');
+  const b = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const p = path.startsWith('/') ? path.slice(1) : path;
+  return `${u}${b}${p}`;
 }

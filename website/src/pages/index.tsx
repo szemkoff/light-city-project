@@ -1,9 +1,10 @@
-import React, { FormEvent, useState } from 'react';
+import React from 'react';
 import Link from '@docusaurus/Link';
+import { useLocation } from '@docusaurus/router';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import PageLayout from '../components/PageLayout';
-import { CONTACT_EMAIL, buildNewsletterMailto } from '../contactConfig';
+import { WEB3FORMS_SUBMIT_URL, buildSiteAbsoluteUrl } from '../contactConfig';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -209,16 +210,12 @@ function DelphinSection() {
 }
 
 function JoinSection() {
-  const [newsletterOpened, setNewsletterOpened] = useState(false);
-
-  const handleNewsletter = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const email = String(fd.get('email') ?? '').trim();
-    if (!email) return;
-    setNewsletterOpened(true);
-    window.location.assign(buildNewsletterMailto(email));
-  };
+  const { siteConfig } = useDocusaurusContext();
+  const location = useLocation();
+  const newsletterOk = new URLSearchParams(location.search).get('newsletter') === '1';
+  const accessKey =
+    (siteConfig.customFields as { web3formsAccessKey?: string } | undefined)?.web3formsAccessKey ?? '';
+  const nextHome = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, '?newsletter=1');
 
   const investorsIcon = useBaseUrl('img/icons/investors-icon.svg');
   const residentsIcon = useBaseUrl('img/icons/residents-icon.svg');
@@ -273,28 +270,41 @@ function JoinSection() {
         </div>
         <div className={styles.newsletterBox}>
           <h3 className={styles.newsletterTitle}>Stay connected</h3>
-          {newsletterOpened ? (
+          {newsletterOk ? (
             <p className={styles.newsletterThanks} role="status">
-              If your email app did not open, mail{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with the subject “Newsletter.”
+              Thanks — your signup was sent. If the form service is configured, you should receive a confirmation.
             </p>
           ) : null}
-          <form className={styles.newsletterForm} onSubmit={handleNewsletter}>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Email for project updates"
-              className={styles.newsletterInput}
-              autoComplete="email"
-            />
-            <button type="submit" className={clsx('button', styles.buttonPrimary)}>
-              Subscribe
-            </button>
-          </form>
+          {accessKey ? (
+            <form className={styles.newsletterForm} action={WEB3FORMS_SUBMIT_URL} method="POST">
+              <input type="hidden" name="access_key" value={accessKey} />
+              <input type="hidden" name="subject" value="Light City Project - Newsletter signup" />
+              <input type="hidden" name="redirect" value={nextHome} />
+              <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
+              <input type="hidden" name="name" value="Newsletter signup" />
+              <input type="hidden" name="role" value="Newsletter" />
+              <input type="hidden" name="message" value="Signed up from homepage." />
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Email for project updates"
+                className={styles.newsletterInput}
+                autoComplete="email"
+              />
+              <button type="submit" className={clsx('button', styles.buttonPrimary)}>
+                Subscribe
+              </button>
+            </form>
+          ) : (
+            <p className={styles.newsletterDisclaimer}>
+              Newsletter uses the same backend as the <Link to="/contact">contact form</Link> once{' '}
+              <code>WEB3FORMS_ACCESS_KEY</code> is set for the site build.
+            </p>
+          )}
           <p className={styles.newsletterDisclaimer}>
-            Opens your mail app with a pre-filled note (no third-party form service). For a full inquiry, use the{' '}
-            <Link to="/contact">contact page</Link> and choose your role. We respect your privacy.
+            For a full inquiry, use the <Link to="/contact">contact form</Link> and choose your role. We respect your
+            privacy.
           </p>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import MarketingPageLayout from '../components/MarketingPageLayout';
-import { CONTACT_EMAIL } from '../contactConfig';
 
 export default function Conduct(): JSX.Element {
   return (
@@ -25,8 +24,8 @@ export default function Conduct(): JSX.Element {
         .
       </p>
       <p>
-        Concerns may be reported via the <Link to="/contact">contact form</Link> (choose <strong>Other</strong>) or by email to{' '}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        Concerns may be reported via the <Link to="/contact">contact form</Link> (choose <strong>Other</strong>). To
+        copy our address manually, use the image on the contact page.
       </p>
       <p>
         <Link to="/">Back to home</Link>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import MarketingPageLayout from '../components/MarketingPageLayout';
-import { CONTACT_EMAIL } from '../contactConfig';
 import styles from '../components/MarketingPageLayout/styles.module.css';
 
 export default function Investors(): JSX.Element {
@@ -31,8 +30,8 @@ export default function Investors(): JSX.Element {
       </ul>
       <h2>Contact</h2>
       <p>
-        Use the <Link to="/contact">contact form</Link> and choose <strong>Investor</strong>, or email{' '}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        Use the <Link to="/contact">contact form</Link> and choose <strong>Investor</strong>. To copy our address
+        manually, use the image on the contact page (we do not publish the address as plain text).
       </p>
       <div className={styles.ctaRow}>
         <Link className="button button--primary" to="/contact">

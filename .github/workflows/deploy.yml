@@ -33,6 +33,8 @@ jobs:
         run: cd website && npm ci --legacy-peer-deps
 
       - name: Build site
+        env:
+          WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
         run: cd website && npm run build
 
       - name: Verify build output

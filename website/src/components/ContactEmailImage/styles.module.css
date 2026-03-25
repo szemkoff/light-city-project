@@ -1,0 +1,25 @@
+.wrap {
+  margin: 1rem 0 0;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0 0 0.35rem;
+}
+
+[data-theme='dark'] .caption {
+  color: #9ca3af;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] .img {
+  border-color: rgba(255, 255, 255, 0.12);
+}

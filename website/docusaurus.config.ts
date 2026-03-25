@@ -15,6 +15,10 @@ const config: Config = {
 
   onBrokenLinks: 'warn',
 
+  customFields: {
+    web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY ?? '',
+  },
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],

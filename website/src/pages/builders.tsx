@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import MarketingPageLayout from '../components/MarketingPageLayout';
-import { CONTACT_EMAIL } from '../contactConfig';
 import styles from '../components/MarketingPageLayout/styles.module.css';
 
 export default function Builders(): JSX.Element {
@@ -32,8 +31,8 @@ export default function Builders(): JSX.Element {
       <h2>Contact</h2>
       <p>
         Technical or build collaboration: use the <Link to="/contact">contact form</Link> and choose{' '}
-        <strong>Collaborator (builder, partner, service)</strong>, or email{' '}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        <strong>Collaborator (builder, partner, service)</strong>. To copy our address manually, use the image on the
+        contact page.
       </p>
       <div className={styles.ctaRow}>
         <Link className="button button--primary" to="/contact">
