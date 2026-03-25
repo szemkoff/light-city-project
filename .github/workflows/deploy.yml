@@ -32,8 +32,9 @@ jobs:
         with:
           node-version: '20'
       
+      # Use lockfile for reproducible installs (avoids ETARGET / missing versions on fresh npm install)
       - name: Install dependencies
-        run: cd website && npm install --legacy-peer-deps
+        run: cd website && npm ci --legacy-peer-deps
       
       - name: Build site
         run: cd website && npm run build

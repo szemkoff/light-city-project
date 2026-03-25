@@ -108,5 +108,4 @@ website/.docusaurus/
 website/build/
 website/.cache-loader/
 website/yarn.lock
-website/package-lock.json
 
