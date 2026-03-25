@@ -5,7 +5,7 @@ Complete index of all Light City project documentation.
 ## Getting Started
 
 **New to the project?** Start here:
-1. [README.md](../README.md) - Project overview
+1. [README.md (repository)](https://github.com/szemkoff/light-city-project/blob/main/README.md) - Project overview
 2. [Core Concepts](concepts/core-concepts.md) - Foundational ideas
 3. [Quick Start Guide](project/quick-start-guide.md) - How to begin
 4. [Development Stages](project/development-stages.md) - Project roadmap
@@ -42,7 +42,7 @@ Complete index of all Light City project documentation.
 ## Technical
 
 ### Current Documents
-- [GitHub + Docusaurus Setup](technical/github-docusaurus-setup.md) - Deployment guide ⭐ NEW
+- [Technology Catalog](technical/technology-catalog.md) - TRL, suppliers, applications
 
 ### To Be Created
 - Technology Stack (Stage 3+)
@@ -76,13 +76,12 @@ Complete index of all Light City project documentation.
 
 ## Planning
 
-See [planning/](../planning/) directory:
-- [Stage 1 Tasks](../planning/stage-1-tasks.md) - Current task list
-- Planning README
+See the [planning folder on GitHub](https://github.com/szemkoff/light-city-project/tree/main/planning):
+- [Stage 1 Tasks](https://github.com/szemkoff/light-city-project/blob/main/planning/stage-1-tasks.md) - Current task list
 
 ## Research
 
-See [research/](../research/) directory:
+See the [research folder on GitHub](https://github.com/szemkoff/light-city-project/tree/main/research):
 - Research organization and notes
 - Spiritual/Metaphysical research
 - Architectural studies
@@ -91,7 +90,7 @@ See [research/](../research/) directory:
 
 ## Assets
 
-See [assets/](../assets/) directory:
+See the [assets folder on GitHub](https://github.com/szemkoff/light-city-project/tree/main/assets):
 - Images (concept art, diagrams, inspiration)
 - 3D Models
 - Audio files
@@ -99,19 +98,19 @@ See [assets/](../assets/) directory:
 
 ## Additional Files
 
-- [CHANGELOG.md](../CHANGELOG.md) - Project version history
-- [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md) - Community guidelines ⭐ NEW
-- [LICENSE](../LICENSE) - MIT License for code ⭐ NEW
-- [LICENSE-DOCS](../LICENSE-DOCS) - CC BY-SA 4.0 for documentation ⭐ NEW
-- [.gitignore](../.gitignore) - Version control exclusions
+- [CHANGELOG.md](https://github.com/szemkoff/light-city-project/blob/main/CHANGELOG.md) - Project version history
+- [CODE_OF_CONDUCT.md](https://github.com/szemkoff/light-city-project/blob/main/CODE_OF_CONDUCT.md) - Community guidelines
+- [LICENSE](https://github.com/szemkoff/light-city-project/blob/main/LICENSE) - MIT License for code
+- [LICENSE-DOCS](https://github.com/szemkoff/light-city-project/blob/main/LICENSE-DOCS) - CC BY-SA 4.0 for documentation
+- [.gitignore](https://github.com/szemkoff/light-city-project/blob/main/.gitignore) - Version control exclusions
 
 ## Research Materials
 
-See [research/](../research/) directory:
-- [Delphin Channeled Information](../research/spiritual/delphin-channeled-info.md) - Crystal city example
-- [Bibliography](research/bibliography.md) - Compiled research sources ⭐ NEW
-- [Open Questions](research/open-questions.md) - Research questions to explore ⭐ NEW
-- [Inspirational Buildings](../research/architectural/inspirational-buildings.md) - Architectural inspirations
+Hosted in the repository (browse on GitHub):
+- [Delphin Channeled Information](https://github.com/szemkoff/light-city-project/blob/main/research/spiritual/delphin-channeled-info.md) - Crystal city example
+- [Bibliography](research/bibliography.md) - Compiled research sources
+- [Open Questions](research/open-questions.md) - Research questions to explore
+- [Inspirational Buildings](https://github.com/szemkoff/light-city-project/blob/main/research/architectural/inspirational-buildings.md) - Architectural inspirations
 - Spiritual/Metaphysical research materials
 - Architectural studies and references
 - Technology research

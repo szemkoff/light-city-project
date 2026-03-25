@@ -1,13 +1,14 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import PageLayout from '../components/PageLayout';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
 function HeroSection() {
-  const { siteConfig } = useDocusaurusContext();
-  
+  const heroImg = useBaseUrl('img/inspiration/light-city-vision-1.jpg');
+
   return (
     <section className={styles.heroSection}>
       <div className="container">
@@ -33,7 +34,7 @@ function HeroSection() {
             </div>
           </div>
           <div className={styles.heroImage}>
-            <img src="/light-city-project/img/inspiration/light-city-vision-1.jpg" alt="Light City Vision" />
+            <img src={heroImg} alt="Light City Vision" />
           </div>
         </div>
       </div>
@@ -42,21 +43,24 @@ function HeroSection() {
 }
 
 function FeaturesSection() {
+  const architectureIcon = useBaseUrl('img/icons/architecture-icon.svg');
+  const consciousnessIcon = useBaseUrl('img/icons/consciousness-icon.svg');
+  const regenerativeIcon = useBaseUrl('img/icons/regenerative-icon.svg');
   const features = [
     {
-      iconPath: '/light-city-project/img/icons/architecture-icon.svg',
+      iconPath: architectureIcon,
       title: 'Sacred Architecture',
       description: '30-90m communosphere domes using proven CLT & BIPV technology',
       link: '/about',
     },
     {
-      iconPath: '/light-city-project/img/icons/consciousness-icon.svg',
+      iconPath: consciousnessIcon,
       title: 'Unity Consciousness',
       description: 'Research-grade protocols for consciousness field studies (TRL 1-3)',
       link: '/researchers',
     },
     {
-      iconPath: '/light-city-project/img/icons/regenerative-icon.svg',
+      iconPath: regenerativeIcon,
       title: 'Regenerative Living',
       description: 'Zero-waste, renewable energy, permaculture food systems',
       link: '/builders',
@@ -204,23 +208,26 @@ function DelphinSection() {
 }
 
 function JoinSection() {
+  const investorsIcon = useBaseUrl('img/icons/investors-icon.svg');
+  const residentsIcon = useBaseUrl('img/icons/residents-icon.svg');
+  const buildersIcon = useBaseUrl('img/icons/builders-icon.svg');
   const roles = [
     {
-      iconPath: '/light-city-project/img/icons/investors-icon.svg',
+      iconPath: investorsIcon,
       title: 'Investors',
       description: 'Review Financial Model',
       detail: '8-12% IRR, impact-first',
       link: '/investors',
     },
     {
-      iconPath: '/light-city-project/img/icons/residents-icon.svg',
+      iconPath: residentsIcon,
       title: 'Residents',
       description: 'Explore Living Experience',
       detail: '$500-$1,700/month, community governance',
       link: '/residents',
     },
     {
-      iconPath: '/light-city-project/img/icons/builders-icon.svg',
+      iconPath: buildersIcon,
       title: 'Builders',
       description: 'See Technical Specs',
       detail: 'TRL 7-9 technologies, phased construction',

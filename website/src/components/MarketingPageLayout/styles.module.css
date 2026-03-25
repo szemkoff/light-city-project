@@ -1,0 +1,99 @@
+.hero {
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.18) 100%);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+}
+
+[data-theme='dark'] .subtitle {
+  color: #b0b0b0;
+}
+
+.section {
+  padding: 2rem 2rem 5rem;
+}
+
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333333;
+}
+
+[data-theme='dark'] .prose {
+  color: #e0e0e0;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  color: #667eea;
+}
+
+[data-theme='dark'] .prose h2 {
+  color: #c9b4ff;
+}
+
+.prose p {
+  margin: 0 0 1rem;
+}
+
+.prose ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose a {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.ctaRow {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}

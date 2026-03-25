@@ -27,7 +27,7 @@ Today we're announcing significant enhancements to Light City's documentation, m
 **Status**: Investor-ready framework complete  
 **Impact**: Clear path from vision to implementation
 
-### 🎯 New Content & Enhancements
+### New Content & Enhancements
 
 #### 1. **Governance Framework** (NEW)
 We've created a comprehensive governance document that establishes Light City's decision-making structure and community framework:
@@ -220,7 +220,7 @@ Research framework is now rigorous and ethical:
 - [Start Here](/docs/START-HERE) - New to Light City? Begin here
 - [Core Concepts](/docs/concepts/core-concepts) - Foundational vision and principles
 - [Technology Catalog](/docs/technical/technology-catalog) - 34 proven technologies
-- [Financial Model Summary](/FINANCIAL-MODEL-SUMMARY.md) - Quick reference for investors
+- [Financial model (Development Stages)](/docs/project/development-stages#financial-model-notes--assumptions) - Quick reference for investors
 
 ---
 
@@ -243,11 +243,11 @@ These enhancements represent a significant step forward in Light City's developm
 **Next Major Update**: Q2 2026 (Stage 2 Design completion)
 
 **Related Updates**:
-- [Complete Visual Enhancement](/blog/2025-11-07-complete-visual-enhancement)
-- [Comprehensive Visual Documentation](/blog/2025-11-06-visual-documentation-system)
-- [GitHub Launch](/blog/2025-10-15-github-launch)
+- [Complete Visual Enhancement](/blog/complete-visual-enhancement)
+- [Comprehensive Visual Documentation](/blog/visual-documentation-system)
+- [GitHub Launch](/blog/github-launch)
 
 ---
 
-**📧 Get Involved**: Interested in investing, residing, building, or researching? [Contact us](mailto:stan@lightcityproject.org) or explore our [documentation](/docs/START-HERE).
+**Get Involved**: Interested in investing, residing, building, or researching? [Contact us](mailto:info@lightcityproject.org) or explore our [documentation](/docs/START-HERE).
 

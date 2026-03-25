@@ -21,7 +21,7 @@ Light City is a multi-dimensional vision of a higher-consciousness civilization.
 
 Read these essential documents:
 
-1. **[README.md](../../README.md)** - Project overview
+1. **[Repository README](https://github.com/szemkoff/light-city-project/blob/main/README.md)** - Project overview
 2. **[Core Concepts](../concepts/core-concepts.md)** - Foundational ideas
 3. **[Development Stages](development-stages.md)** - Where we're going
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
@@ -8,28 +8,100 @@ interface PageLayoutProps {
   description?: string;
 }
 
+const navItems = [
+  {to: '/', label: 'Home'},
+  {to: '/about', label: 'About'},
+  {to: '/investors', label: 'Investors'},
+  {to: '/residents', label: 'Residents'},
+  {to: '/builders', label: 'Builders'},
+  {to: '/researchers', label: 'Researchers'},
+  {to: '/resources', label: 'Resources'},
+  {to: '/docs/START-HERE', label: 'Documentation'},
+] as const;
+
 export default function PageLayout({ children, title, description }: PageLayoutProps): JSX.Element {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
   return (
     <div className={styles.pageWrapper}>
       {/* Navigation */}
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar} aria-label="Main">
         <div className={styles.navContainer}>
           <Link to="/" className={styles.logo}>
-            <span className={styles.logoIcon}>✦</span>
+            <span className={styles.logoIcon} aria-hidden>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
             <span className={styles.logoText}>Light City</span>
           </Link>
-          
+
           <div className={styles.navLinks}>
-            <Link to="/" className={styles.navLink}>Home</Link>
-            <Link to="/about" className={styles.navLink}>About</Link>
-            <Link to="/investors" className={styles.navLink}>Investors</Link>
-            <Link to="/residents" className={styles.navLink}>Residents</Link>
-            <Link to="/builders" className={styles.navLink}>Builders</Link>
-            <Link to="/researchers" className={styles.navLink}>Researchers</Link>
-            <Link to="/resources" className={styles.navLink}>Resources</Link>
-            <Link to="/docs/START-HERE" className={styles.navLink}>Documentation</Link>
+            {navItems.map(({to, label}) => (
+              <Link key={to} to={to} className={styles.navLink}>
+                {label}
+              </Link>
+            ))}
           </div>
+
+          <button
+            type="button"
+            className={styles.menuButton}
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-expanded={menuOpen}
+            aria-controls="site-mobile-menu"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {menuOpen ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
+          </button>
         </div>
+
+        {menuOpen ? (
+          <>
+            <button
+              type="button"
+              className={styles.menuBackdrop}
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+            />
+            <div id="site-mobile-menu" className={styles.mobileMenu}>
+              {navItems.map(({to, label}) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </>
+        ) : null}
       </nav>
 
       {/* Main Content */}
@@ -68,9 +140,9 @@ export default function PageLayout({ children, title, description }: PageLayoutP
               <h3>Explore</h3>
               <ul>
                 <li><Link to="/about">Vision & Philosophy</Link></li>
-                <li><Link to="/builders">Architecture</Link></li>
-                <li><Link to="/about">Development Stages</Link></li>
-                <li><Link to="/builders">Technology Catalog</Link></li>
+                <li><Link to="/docs/design/architecture">Architecture</Link></li>
+                <li><Link to="/docs/project/development-stages">Development Stages</Link></li>
+                <li><Link to="/docs/technical/technology-catalog">Technology Catalog</Link></li>
               </ul>
             </div>
 
