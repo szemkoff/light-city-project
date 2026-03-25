@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklight_city_docusaurus=self.webpackChunklight_city_docusaurus||[]).push([[6366],{86366:function(u,c,e){e.d(c,{createArchitectureServices:function(){return t.S}});var t=e(38980);e(87960)}}]);

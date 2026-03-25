@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklight_city_docusaurus=self.webpackChunklight_city_docusaurus||[]).push([[1903],{1912:function(t){t.exports=JSON.parse('{"blogBasePath":"/light-city-project/blog","blogTitle":"Light City Updates","authorsListPath":"/light-city-project/blog/authors"}')}}]);

@@ -2,366 +2,539 @@
 <html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-design/architecture" data-has-hydrated="false">
 <head>
 <meta charset="UTF-8">
-<meta name="generator" content="Docusaurus v3.9.1">
+<meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Architecture | Light City Project</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://szemkoff.github.io/light-city-project/img/light-city-vision-1.jpg"><meta data-rh="true" name="twitter:image" content="https://szemkoff.github.io/light-city-project/img/light-city-vision-1.jpg"><meta data-rh="true" property="og:url" content="https://szemkoff.github.io/light-city-project/docs/design/architecture"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Architecture | Light City Project"><meta data-rh="true" name="description" content="This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions."><meta data-rh="true" property="og:description" content="This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions."><link data-rh="true" rel="icon" href="/light-city-project/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://szemkoff.github.io/light-city-project/docs/design/architecture"><link data-rh="true" rel="alternate" href="https://szemkoff.github.io/light-city-project/docs/design/architecture" hreflang="en"><link data-rh="true" rel="alternate" href="https://szemkoff.github.io/light-city-project/docs/design/architecture" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Architecture","item":"https://szemkoff.github.io/light-city-project/docs/design/architecture"}]}</script><link rel="alternate" type="application/rss+xml" href="/light-city-project/blog/rss.xml" title="Light City Project RSS Feed">
-<link rel="alternate" type="application/atom+xml" href="/light-city-project/blog/atom.xml" title="Light City Project Atom Feed"><link rel="stylesheet" href="/light-city-project/assets/css/styles.c651815f.css">
-<script src="/light-city-project/assets/js/runtime~main.df548e6d.js" defer="defer"></script>
-<script src="/light-city-project/assets/js/main.74343fa9.js" defer="defer"></script>
+<link rel="alternate" type="application/atom+xml" href="/light-city-project/blog/atom.xml" title="Light City Project Atom Feed"><link rel="stylesheet" href="/light-city-project/assets/css/styles.bc39025d.css">
+<script src="/light-city-project/assets/js/runtime~main.e8b7f8eb.js" defer="defer"></script>
+<script src="/light-city-project/assets/js/main.d650e57b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
-<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/light-city-project/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/light-city-project/"><div class="navbar__logo"><img src="/light-city-project/img/logo.svg" alt="Light City Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/light-city-project/img/logo.svg" alt="Light City Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Light City</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/light-city-project/docs/START-HERE">Documentation</a><a class="navbar__item navbar__link" href="/light-city-project/blog">Updates</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/START-HERE"><span title="🌟 Start Here" class="linkLabel_WmDU">🌟 Start Here</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/concepts/core-concepts"><span title="Vision &amp; Philosophy" class="categoryLinkLabel_W154">Vision &amp; Philosophy</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/light-city-project/docs/design/architecture"><span title="Sacred Design" class="categoryLinkLabel_W154">Sacred Design</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/light-city-project/docs/design/architecture"><span title="Architecture" class="linkLabel_WmDU">Architecture</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/concepts/communospheres"><span title="Communospheres" class="linkLabel_WmDU">Communospheres</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/concepts/energy-systems"><span title="Energy Systems" class="linkLabel_WmDU">Energy Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/concepts/sacred-geometry"><span title="Sacred Geometry" class="linkLabel_WmDU">Sacred Geometry</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/visual-language"><span title="Visual Language" class="linkLabel_WmDU">Visual Language</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/color-and-light"><span title="Color and Light" class="linkLabel_WmDU">Color and Light</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/project/development-stages"><span title="Development" class="categoryLinkLabel_W154">Development</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/research/bibliography"><span title="Research &amp; Resources" class="categoryLinkLabel_W154">Research &amp; Resources</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/CHANGELOG"><span title="Changelog" class="linkLabel_WmDU">Changelog</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/light-city-project/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Sacred Design</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Architecture</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Architecture</h1></header>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/light-city-project/"><div class="navbar__logo"><img src="/light-city-project/img/light-city-logo-navbar.png" alt="Light City" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/light-city-project/img/light-city-logo-navbar.png" alt="Light City" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/light-city-project/docs/START-HERE">Documentation</a><a class="navbar__item navbar__link" href="/light-city-project/blog">Updates</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/START-HERE"><span title="🌟 Start Here" class="linkLabel_WmDU">🌟 Start Here</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/concepts/core-concepts"><span title="Vision &amp; Philosophy" class="categoryLinkLabel_W154">Vision &amp; Philosophy</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/light-city-project/docs/design/architecture"><span title="Sacred Design" class="categoryLinkLabel_W154">Sacred Design</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/light-city-project/docs/design/architecture"><span title="Architecture" class="linkLabel_WmDU">Architecture</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/concepts/communospheres"><span title="Communospheres" class="linkLabel_WmDU">Communospheres</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/concepts/energy-systems"><span title="Energy Systems" class="linkLabel_WmDU">Energy Systems</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/concepts/sacred-geometry"><span title="Sacred Geometry" class="linkLabel_WmDU">Sacred Geometry</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/visual-language"><span title="Visual Language" class="linkLabel_WmDU">Visual Language</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/color-and-light"><span title="Color and Light" class="linkLabel_WmDU">Color and Light</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/design/layout-diagrams"><span title="Layout &amp; Diagram Set" class="linkLabel_WmDU">Layout &amp; Diagram Set</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/project/development-stages"><span title="Development" class="categoryLinkLabel_W154">Development</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/technical/technology-catalog"><span title="Technical &amp; Implementation" class="categoryLinkLabel_W154">Technical &amp; Implementation</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/research/bibliography"><span title="Research &amp; Resources" class="categoryLinkLabel_W154">Research &amp; Resources</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/"><span title="Documentation Index" class="linkLabel_WmDU">Documentation Index</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/light-city-project/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Sacred Design</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Architecture</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Architecture</h1></header>
 <p><em>This document details the architectural vision of Light City across physical, energetic, and symbolic dimensions.</em></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
 <p>Light City&#x27;s architecture serves multiple purposes:</p>
 <ul>
-<li><strong>Functional</strong>: Practical spaces for living and gathering</li>
-<li><strong>Energetic</strong>: Structures that elevate consciousness</li>
-<li><strong>Symbolic</strong>: Forms that communicate principles</li>
-<li><strong>Aesthetic</strong>: Beauty that inspires and uplifts</li>
+<li class=""><strong>Functional</strong>: Practical spaces for living and gathering</li>
+<li class=""><strong>Energetic</strong>: Structures that elevate consciousness</li>
+<li class=""><strong>Symbolic</strong>: Forms that communicate principles</li>
+<li class=""><strong>Aesthetic</strong>: Beauty that inspires and uplifts</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-design-principles">Core Design Principles<a href="#core-design-principles" class="hash-link" aria-label="Direct link to Core Design Principles" title="Direct link to Core Design Principles" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-sacred-geometry">1. Sacred Geometry<a href="#1-sacred-geometry" class="hash-link" aria-label="Direct link to 1. Sacred Geometry" title="Direct link to 1. Sacred Geometry" translate="no">​</a></h3>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vision-references">Vision References<a href="#vision-references" class="hash-link" aria-label="Direct link to Vision References" title="Direct link to Vision References" translate="no">​</a></h3>
+<p>Your conceptual vision of Light City:</p>
+<p><img decoding="async" loading="lazy" alt="Light City Vision 1" src="/light-city-project/assets/images/light-city-vision-1-83ff8962cf7375bf837ef8be28f7b4d3.jpg" width="1216" height="832" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Light City Vision 2" src="/light-city-project/assets/images/light-city-vision-2-3ee603da3f7210be87e69c6ce2cf2dc7.jpg" width="896" height="1152" class="img_ev3q"></p>
+<p>Delphin - A real existing city on another world that embodies these principles:</p>
+<p><img decoding="async" loading="lazy" alt="Delphin Crystal City 1" src="/light-city-project/assets/images/delphin-aerial-view-1-dedfc8c8cc7ec6773b9846accdbfb1e4.png" width="936" height="524" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Delphin Crystal City 2" src="/light-city-project/assets/images/delphin-aerial-view-2-d5d59a62d61e2f6dc08ca6a3a6b98ac4.png" width="936" height="526" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-design-principles">Core Design Principles<a href="#core-design-principles" class="hash-link" aria-label="Direct link to Core Design Principles" title="Direct link to Core Design Principles" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-sacred-geometry">1. Sacred Geometry<a href="#1-sacred-geometry" class="hash-link" aria-label="Direct link to 1. Sacred Geometry" title="Direct link to 1. Sacred Geometry" translate="no">​</a></h3>
 <p>All design is based on sacred geometric principles:</p>
 <ul>
-<li><strong>Circle</strong>: Unity, wholeness, infinity</li>
-<li><strong>Golden Ratio</strong>: Harmony, beauty, natural proportion</li>
-<li><strong>Platonic Solids</strong>: Fundamental forms</li>
-<li><strong>Flower of Life</strong>: Creation pattern</li>
-<li><strong>Merkaba</strong>: Energy field geometry</li>
+<li class=""><strong>Circle</strong>: Unity, wholeness, infinity</li>
+<li class=""><strong>Golden Ratio</strong>: Harmony, beauty, natural proportion</li>
+<li class=""><strong>Platonic Solids</strong>: Fundamental forms</li>
+<li class=""><strong>Flower of Life</strong>: Creation pattern</li>
+<li class=""><strong>Merkaba</strong>: Energy field geometry</li>
 </ul>
 <p><strong>Application</strong>: City layout, building proportions, decorative elements</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-light-as-primary-element">2. Light as Primary Element<a href="#2-light-as-primary-element" class="hash-link" aria-label="Direct link to 2. Light as Primary Element" title="Direct link to 2. Light as Primary Element" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-light-as-primary-element">2. Light as Primary Element<a href="#2-light-as-primary-element" class="hash-link" aria-label="Direct link to 2. Light as Primary Element" title="Direct link to 2. Light as Primary Element" translate="no">​</a></h3>
 <p>Light is not decoration but foundational:</p>
 <ul>
-<li><strong>Natural Light</strong>: Maximum solar integration</li>
-<li><strong>Crystalline Refraction</strong>: Structures that split light into rainbows</li>
-<li><strong>Luminescence</strong>: Materials that glow or transmit light</li>
-<li><strong>Light Paths</strong>: Designed movement of light through space</li>
+<li class=""><strong>Natural Light</strong>: Maximum solar integration</li>
+<li class=""><strong>Crystalline Refraction</strong>: Structures that split light into rainbows</li>
+<li class=""><strong>Luminescence</strong>: Materials that glow or transmit light</li>
+<li class=""><strong>Light Paths</strong>: Designed movement of light through space</li>
 </ul>
 <p><strong>Materials</strong>: Crystal, glass, translucent stone, reflective metals</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-sound-and-resonance">3. Sound and Resonance<a href="#3-sound-and-resonance" class="hash-link" aria-label="Direct link to 3. Sound and Resonance" title="Direct link to 3. Sound and Resonance" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-sound-and-resonance">3. Sound and Resonance<a href="#3-sound-and-resonance" class="hash-link" aria-label="Direct link to 3. Sound and Resonance" title="Direct link to 3. Sound and Resonance" translate="no">​</a></h3>
 <p>Architecture designed for harmonic resonance:</p>
 <ul>
-<li><strong>Acoustic Properties</strong>: Spaces amplify beneficial frequencies</li>
-<li><strong>Musical Ratios</strong>: Proportions based on harmonic intervals</li>
-<li><strong>Resonant Chambers</strong>: Specific spaces for sound healing</li>
-<li><strong>Natural Hum</strong>: The city itself maintains a harmonic tone</li>
+<li class=""><strong>Acoustic Properties</strong>: Spaces amplify beneficial frequencies</li>
+<li class=""><strong>Musical Ratios</strong>: Proportions based on harmonic intervals</li>
+<li class=""><strong>Resonant Chambers</strong>: Specific spaces for sound healing</li>
+<li class=""><strong>Natural Hum</strong>: The city itself maintains a harmonic tone</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-vertical-and-horizontal-integration">4. Vertical and Horizontal Integration<a href="#4-vertical-and-horizontal-integration" class="hash-link" aria-label="Direct link to 4. Vertical and Horizontal Integration" title="Direct link to 4. Vertical and Horizontal Integration" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-vertical-and-horizontal-integration">4. Vertical and Horizontal Integration<a href="#4-vertical-and-horizontal-integration" class="hash-link" aria-label="Direct link to 4. Vertical and Horizontal Integration" title="Direct link to 4. Vertical and Horizontal Integration" translate="no">​</a></h3>
 <p>Connection across dimensions:</p>
 <ul>
-<li><strong>Vertical</strong>: Earth to sky, roots to cosmos</li>
-<li><strong>Horizontal</strong>: Center to periphery, inner to outer</li>
-<li><strong>Central Axis</strong>: Grounding and ascending simultaneously</li>
+<li class=""><strong>Vertical</strong>: Earth to sky, roots to cosmos</li>
+<li class=""><strong>Horizontal</strong>: Center to periphery, inner to outer</li>
+<li class=""><strong>Central Axis</strong>: Grounding and ascending simultaneously</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overall-layout">Overall Layout<a href="#overall-layout" class="hash-link" aria-label="Direct link to Overall Layout" title="Direct link to Overall Layout" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="circular-form">Circular Form<a href="#circular-form" class="hash-link" aria-label="Direct link to Circular Form" title="Direct link to Circular Form" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overall-layout">Overall Layout<a href="#overall-layout" class="hash-link" aria-label="Direct link to Overall Layout" title="Direct link to Overall Layout" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="City Scale Comparison" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDcwMCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5sYWJlbC10ZXh0IHsgZm9udC1mYW1pbHk6ICdJbnRlcicsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsgZmlsbDogIzBCMjQ0NzsgZm9udC13ZWlnaHQ6IDYwMDsgfQogICAgICAuZGVzYy10ZXh0IHsgZm9udC1mYW1pbHk6ICdJbnRlcicsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTFweDsgZmlsbDogIzY2NjsgfQogICAgICAudGl0bGUtdGV4dCB7IGZvbnQtZmFtaWx5OiAnSW50ZXInLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDI4cHg7IGZvbnQtd2VpZ2h0OiA3MDA7IGZpbGw6ICMwQjI0NDc7IH0KICAgICAgLnN0YXQtdGV4dCB7IGZvbnQtZmFtaWx5OiAnSW50ZXInLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEycHg7IGZpbGw6ICMwQjI0NDc7IH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIAogIDwhLS0gVGl0bGUgLS0+CiAgPHRleHQgeD0iNjAwIiB5PSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InRpdGxlLXRleHQiPkxpZ2h0IENpdHkgU2NhbGUgQ29tcGFyaXNvbjwvdGV4dD4KICA8dGV4dCB4PSI2MDAiIHk9IjY1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij5VbmRlcnN0YW5kaW5nIHRoZSBTaXplICZhbXA7IFBvcHVsYXRpb248L3RleHQ+CiAgCiAgPCEtLSBHcm91bmQgTGluZSAtLT4KICA8bGluZSB4MT0iNTAiIHkxPSI2MDAiIHgyPSIxMTUwIiB5Mj0iNjAwIiBzdHJva2U9IiMwQjI0NDciIHN0cm9rZS13aWR0aD0iMiIvPgogIAogIDwhLS0gSHVtYW4gU2NhbGUgUmVmZXJlbmNlIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCwgNTkwKSI+CiAgICA8cmVjdCB4PSItMyIgeT0iLTEwIiB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgZmlsbD0iIzBCMjQ0NyIvPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9Ii0xNSIgcj0iMyIgZmlsbD0iIzBCMjQ0NyIvPgogICAgPHRleHQgeD0iMCIgeT0iMzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPkh1bWFuPC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPn42IGZ0PC90ZXh0PgogIDwvZz4KICAKICA8IS0tIEVtcGlyZSBTdGF0ZSBCdWlsZGluZyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNTAsIDYwMCkiPgogICAgPHJlY3QgeD0iLTE1IiB5PSItMTUwIiB3aWR0aD0iMzAiIGhlaWdodD0iMTUwIiBmaWxsPSIjNjY3ZWVhIiBvcGFjaXR5PSIwLjYiLz4KICAgIDxyZWN0IHg9Ii0xMCIgeT0iLTE4MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjNjY3ZWVhIiBvcGFjaXR5PSIwLjgiLz4KICAgIDx0ZXh0IHg9IjAiIHk9IjMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwtdGV4dCI+RW1waXJlIFN0YXRlPC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPjEsNDU0IGZ0PC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPig0NDMgbSk8L3RleHQ+CiAgPC9nPgogIAogIDwhLS0gQnVyaiBLaGFsaWZhIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQwMCwgNjAwKSI+CiAgICA8cmVjdCB4PSItMTIiIHk9Ii0yNjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNjAiIGZpbGw9IiM0QTlFRkYiIG9wYWNpdHk9IjAuNiIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIwLC0yODAgLTEyLC0yNjAgMTIsLTI2MCIgZmlsbD0iIzRBOUVGRiIgb3BhY2l0eT0iMC44Ii8+CiAgICA8dGV4dCB4PSIwIiB5PSIzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsLXRleHQiPkJ1cmogS2hhbGlmYTwvdGV4dD4KICAgIDx0ZXh0IHg9IjAiIHk9IjQ1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij4yLDcxNyBmdDwvdGV4dD4KICAgIDx0ZXh0IHg9IjAiIHk9IjYwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij4oODI4IG0pPC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiIHN0eWxlPSJmb250LXNpemU6IDlweDsiPlRhbGxlc3QgYnVpbGRpbmc8L3RleHQ+CiAgPC9nPgogIAogIDwhLS0gTXQuIEV2ZXJlc3QgKGZvciBzY2FsZSkgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAwLCA2MDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iMCwtNDAwIC00MCwtMTAwIDQwLC0xMDAiIGZpbGw9IiM3NjRiYTIiIG9wYWNpdHk9IjAuMyIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSItNDAwIiB4Mj0iMCIgeTI9Ii0xMDAiIHN0cm9rZT0iIzc2NGJhMiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI1LDUiLz4KICAgIDx0ZXh0IHg9IjAiIHk9IjMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwtdGV4dCI+TXQuIEV2ZXJlc3Q8L3RleHQ+CiAgICA8dGV4dCB4PSIwIiB5PSI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRlc2MtdGV4dCI+MjksMDMyIGZ0PC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPig4LDg0OSBtKTwvdGV4dD4KICAgIDx0ZXh0IHg9IjAiIHk9Ijc1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0IiBzdHlsZT0iZm9udC1zaXplOiA5cHg7Ij5Gb3IgcmVmZXJlbmNlPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIExpZ2h0IENpdHkgQ2VudHJhbCBTcGlyZSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5MDAsIDYwMCkiPgogICAgPCEtLSBTcGlyZSBzdHJ1Y3R1cmUgLS0+CiAgICA8cGF0aCBkPSJNIDAsLTUwMCBMIDIwLC00ODAgTCAyNSwtMjAwIEwgMzAsMCBMIC0zMCwwIEwgLTI1LC0yMDAgTCAtMjAsLTQ4MCBaIiBmaWxsPSIjRTZCNDAwIiBvcGFjaXR5PSIwLjciIHN0cm9rZT0iI0U2QjQwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iLTUwMCIgcj0iOCIgZmlsbD0iI0ZGRjZFMCIvPgogICAgCiAgICA8IS0tIEdsb3cgZWZmZWN0IC0tPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9Ii01MDAiIHI9IjMwIiBmaWxsPSIjRkZGNkUwIiBvcGFjaXR5PSIwLjMiLz4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItNTAwIiByPSIyMCIgZmlsbD0iI0ZGRjZFMCIgb3BhY2l0eT0iMC41Ii8+CiAgICAKICAgIDwhLS0gSGVpZ2h0IG1hcmtlciAtLT4KICAgIDxsaW5lIHgxPSI1MCIgeTE9Ii01MDAiIHgyPSIxMDAiIHkyPSItNTAwIiBzdHJva2U9IiNFNkI0MDAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgeD0iMTA1IiB5PSItNDk1IiBjbGFzcz0ibGFiZWwtdGV4dCIgZmlsbD0iI0U2QjQwMCI+NDAsMDAwIGZ0PC90ZXh0PgogICAgPHRleHQgeD0iMTA1IiB5PSItNDgwIiBjbGFzcz0iZGVzYy10ZXh0Ij4oMTIsMTkyIG0pPC90ZXh0PgogICAgPHRleHQgeD0iMTA1IiB5PSItNDY1IiBjbGFzcz0iZGVzYy10ZXh0Ij4oNy42IG1pbGVzKTwvdGV4dD4KICAgIAogICAgPHRleHQgeD0iMCIgeT0iMzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbC10ZXh0IiBmaWxsPSIjRTZCNDAwIj5MaWdodCBDaXR5PC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbC10ZXh0IiBmaWxsPSIjRTZCNDAwIj5DZW50cmFsIFNwaXJlPC90ZXh0PgogICAgPHRleHQgeD0iMCIgeT0iNjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPjQwLDAwMCBmdDwvdGV4dD4KICAgIDx0ZXh0IHg9IjAiIHk9IjgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij4oMTIga20gLyA3LjYgbWkpPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIENpdHkgRGlhbWV0ZXIgQ29tcGFyaXNvbiAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAsIDE1MCkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiNFNkVDRjMiIHJ4PSI4Ii8+CiAgICA8dGV4dCB4PSIyMDAiIHk9IjI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwtdGV4dCI+Q2l0eSBEaWFtZXRlciBDb21wYXJpc29uPC90ZXh0PgogICAgCiAgICA8IS0tIE1hbmhhdHRhbiAtLT4KICAgIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjcwIiByPSIzMCIgZmlsbD0iIzY2N2VlYSIgb3BhY2l0eT0iMC42Ii8+CiAgICA8dGV4dCB4PSIxMDAiIHk9Ijc1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic3RhdC10ZXh0IiBmaWxsPSIjZmZmIj4yLjMgbWk8L3RleHQ+CiAgICA8dGV4dCB4PSIxMDAiIHk9IjExMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRlc2MtdGV4dCI+TWFuaGF0dGFuPC90ZXh0PgogICAgCiAgICA8IS0tIExpZ2h0IENpdHkgLS0+CiAgICA8Y2lyY2xlIGN4PSIyODAiIGN5PSI3MCIgcj0iMzUiIGZpbGw9IiM0QTlFRkYiIG9wYWNpdHk9IjAuOCIvPgogICAgPHRleHQgeD0iMjgwIiB5PSI3NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InN0YXQtdGV4dCIgZmlsbD0iI2ZmZiI+fjMgbWk8L3RleHQ+CiAgICA8dGV4dCB4PSIyODAiIHk9IjExMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRlc2MtdGV4dCI+TGlnaHQgQ2l0eTwvdGV4dD4KICA8L2c+CiAgCiAgPCEtLSBQb3B1bGF0aW9uIENvbXBhcmlzb24gLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTUwLCAxNTApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI0MDAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRTZFQ0YzIiByeD0iOCIvPgogICAgPHRleHQgeD0iMjAwIiB5PSIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsLXRleHQiPlBvcHVsYXRpb24gQ29tcGFyaXNvbjwvdGV4dD4KICAgIAogICAgPCEtLSBTbWFsbCBUb3duIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzAsIDYwKSI+CiAgICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIzIiBmaWxsPSIjMEIyNDQ3Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjEwIiBjeT0iMCIgcj0iMyIgZmlsbD0iIzBCMjQ0NyIvPgogICAgICA8Y2lyY2xlIGN4PSIyMCIgY3k9IjAiIHI9IjMiIGZpbGw9IiMwQjI0NDciLz4KICAgICAgPHRleHQgeD0iMTAiIHk9IjI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij5TbWFsbCBUb3duPC90ZXh0PgogICAgICA8dGV4dCB4PSIxMCIgeT0iNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzdGF0LXRleHQiPn41LDAwMDwvdGV4dD4KICAgIDwvZz4KICAgIAogICAgPCEtLSBMaWdodCBDaXR5IC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAwLCA0NSkiPgogICAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMyIgZmlsbD0iIzRBOUVGRiIvPgogICAgICA8Y2lyY2xlIGN4PSI4IiBjeT0iMCIgcj0iMyIgZmlsbD0iIzRBOUVGRiIvPgogICAgICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjAiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgICAgPGNpcmNsZSBjeD0iMCIgY3k9IjgiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgICAgPGNpcmNsZSBjeD0iOCIgY3k9IjgiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgICAgPGNpcmNsZSBjeD0iMTYiIGN5PSI4IiByPSIzIiBmaWxsPSIjNEE5RUZGIi8+CiAgICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIxNiIgcj0iMyIgZmlsbD0iIzRBOUVGRiIvPgogICAgICA8Y2lyY2xlIGN4PSI4IiBjeT0iMTYiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgICAgPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMyIgZmlsbD0iIzRBOUVGRiIvPgogICAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjgiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgICAgPGNpcmNsZSBjeD0iMzIiIGN5PSI4IiByPSIzIiBmaWxsPSIjNEE5RUZGIi8+CiAgICAgIDxjaXJjbGUgY3g9IjI0IiBjeT0iMTYiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgICAgPHRleHQgeD0iMTYiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij5MaWdodCBDaXR5PC90ZXh0PgogICAgICA8dGV4dCB4PSIxNiIgeT0iNTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzdGF0LXRleHQiPjYwLDAwMC0xMjAsMDAwPC90ZXh0PgogICAgICA8dGV4dCB4PSIxNiIgeT0iNjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiIHN0eWxlPSJmb250LXNpemU6IDlweDsiPigxMiBjb21tdW5vc3BoZXJlcyk8L3RleHQ+CiAgICA8L2c+CiAgICAKICAgIDwhLS0gTWFqb3IgQ2l0eSAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMzMCwgNDUpIj4KICAgICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI1IiBmaWxsPSIjNjY3ZWVhIiBvcGFjaXR5PSIwLjMiLz4KICAgICAgPHRleHQgeD0iMjAiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij5NYWpvciBDaXR5PC90ZXh0PgogICAgICA8dGV4dCB4PSIyMCIgeT0iNTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzdGF0LXRleHQiPjEtMTAgbWlsbGlvbjwvdGV4dD4KICAgIDwvZz4KICA8L2c+CiAgCiAgPCEtLSBLZXkgRmFjdHMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLCAzMjApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI0ZGRjZFMCIgcng9IjgiIHN0cm9rZT0iI0U2QjQwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSI1MDAiIHk9IjMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwtdGV4dCIgZmlsbD0iI0U2QjQwMCI+TGlnaHQgQ2l0eSBLZXkgU3BlY2lmaWNhdGlvbnM8L3RleHQ+CiAgICAKICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUwLCA2MCkiPgogICAgICA8dGV4dCB4PSIwIiB5PSIwIiBjbGFzcz0ibGFiZWwtdGV4dCI+Q2VudHJhbCBTcGlyZTo8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjE4IiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgSGVpZ2h0OiA0MCwwMDAgZmVldCAoMTIga20gLyA3LjYgbWlsZXMpPC90ZXh0PgogICAgICA8dGV4dCB4PSIwIiB5PSIzMyIgY2xhc3M9ImRlc2MtdGV4dCI+4oCiIEZ1bmN0aW9uOiBUb3RhbCBlbmVyZ3kgZ2VuZXJhdGlvbjwvdGV4dD4KICAgICAgPHRleHQgeD0iMCIgeT0iNDgiIGNsYXNzPSJkZXNjLXRleHQiPuKAoiBWaXNpYmxlIGZyb20gMjAwKyBtaWxlcyBhd2F5PC90ZXh0PgogICAgICA8dGV4dCB4PSIwIiB5PSI2MyIgY2xhc3M9ImRlc2MtdGV4dCI+4oCiIFRhbGxlc3Qgc3RydWN0dXJlIGV2ZXIgY29uY2VpdmVkPC90ZXh0PgogICAgPC9nPgogICAgCiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNTAsIDYwKSI+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjAiIGNsYXNzPSJsYWJlbC10ZXh0Ij5DaXR5IExheW91dDo8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjE4IiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgRGlhbWV0ZXI6IH4zIG1pbGVzICg1IGttKTwvdGV4dD4KICAgICAgPHRleHQgeD0iMCIgeT0iMzMiIGNsYXNzPSJkZXNjLXRleHQiPuKAoiBEZXNpZ246IENvbmNlbnRyaWMgY2lyY2xlczwvdGV4dD4KICAgICAgPHRleHQgeD0iMCIgeT0iNDgiIGNsYXNzPSJkZXNjLXRleHQiPuKAoiAxMiBjb21tdW5vc3BoZXJlcyBhdCBwZXJpbWV0ZXI8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjYzIiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgU2FjcmVkIGdlb21ldHJ5IHRocm91Z2hvdXQ8L3RleHQ+CiAgICA8L2c+CiAgICAKICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY1MCwgNjApIj4KICAgICAgPHRleHQgeD0iMCIgeT0iMCIgY2xhc3M9ImxhYmVsLXRleHQiPlBvcHVsYXRpb246PC90ZXh0PgogICAgICA8dGV4dCB4PSIwIiB5PSIxOCIgY2xhc3M9ImRlc2MtdGV4dCI+4oCiIFRvdGFsOiA2MCwwMDAtMTIwLDAwMCBwZW9wbGU8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjMzIiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgUGVyIGNvbW11bm9zcGhlcmU6IH4xMCwwMDA8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjQ4IiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgQ29tcGxldGUgc2VsZi1zdWZmaWNpZW50IGNpdHk8L3RleHQ+CiAgICAgIDx0ZXh0IHg9IjAiIHk9IjYzIiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgVW5pdHkgY29uc2Npb3VzbmVzcyBjb21tdW5pdHk8L3RleHQ+CiAgICA8L2c+CiAgPC9nPgogIAogIDwhLS0gU2NhbGUgTm90ZSAtLT4KICA8dGV4dCB4PSI2MDAiIHk9IjY3MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRlc2MtdGV4dCIgc3R5bGU9ImZvbnQtc3R5bGU6IGl0YWxpYzsiPgogICAgTm90ZTogRGlhZ3JhbXMgbm90IHRvIGV4YWN0IHNjYWxlIGZvciB2aXNpYmlsaXR5LiBMaWdodCBDaXR5IFNwaXJlIGlzIH4xNXggdGFsbGVyIHRoYW4gQnVyaiBLaGFsaWZhLgogIDwvdGV4dD4KPC9zdmc+Cgo=" width="1200" height="700" class="img_ev3q"></p>
+<p><em>Understanding Light City&#x27;s scale: Phased growth from hamlet to town, with terrestrial spire scaled for Earth physics.</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="phased-development--scale">Phased Development &amp; Scale<a href="#phased-development--scale" class="hash-link" aria-label="Direct link to Phased Development &amp; Scale" title="Direct link to Phased Development &amp; Scale" translate="no">​</a></h3>
+<p><strong>Phase 1 - Pilot Hamlet</strong> (18-24 months):</p>
+<ul>
+<li class=""><strong>Population</strong>: 150-300 residents</li>
+<li class=""><strong>Footprint</strong>: 20-30 acres (8-12 hectares)</li>
+<li class=""><strong>Structures</strong>: Central plaza, 1 temple, 3 communosphere domes, spire tower (60-120 m)</li>
+<li class=""><strong>Energy</strong>: 2-5 MWp solar PV + 8-20 MWh storage</li>
+<li class=""><strong>Food</strong>: 1-2 ha agroforestry, supplemented by external sources</li>
+</ul>
+<p><strong>Phase 2 - Village</strong> (36-48 months):</p>
+<ul>
+<li class=""><strong>Population</strong>: 1,500-3,000 residents</li>
+<li class=""><strong>Footprint</strong>: 150-300 acres (60-120 hectares)</li>
+<li class=""><strong>Structures</strong>: Expanded plaza, 3-5 temples, 6-12 domes, taller spire (120-300 m)</li>
+<li class=""><strong>Energy</strong>: 5-15 MWp solar + 40-80 MWh storage</li>
+<li class=""><strong>Food</strong>: 5-10 ha food forests, approaching self-sufficiency</li>
+</ul>
+<p><strong>Phase 3 - Town</strong> (Long-term vision):</p>
+<ul>
+<li class=""><strong>Population</strong>: 8,000-12,000 residents</li>
+<li class=""><strong>Footprint</strong>: 1-3 square miles (2.6-7.8 km²)</li>
+<li class=""><strong>Structures</strong>: Full concentric ring layout with 12+ domes</li>
+<li class=""><strong>Energy</strong>: 15-50 MWp distributed renewable + storage</li>
+<li class=""><strong>Food</strong>: 20-50 ha regenerative agriculture</li>
+</ul>
+<p><strong>Note on Delphin Scale</strong>: The 40,000-ft spire and 60,000-120,000 population represent the off-world reference model. Light City&#x27;s terrestrial implementation follows the phased approach above.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="circular-form">Circular Form<a href="#circular-form" class="hash-link" aria-label="Direct link to Circular Form" title="Direct link to Circular Form" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Light City Layout" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNjUwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjY1MCI+CiAgPGRlZnM+CiAgICA8cmFkaWFsR3JhZGllbnQgaWQ9InNwaXJlR2xvdyIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNTAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2ZmZmZmZjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM2NjdlZWE7c3RvcC1vcGFjaXR5OjAuNiIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNzY0YmEyO3N0b3Atb3BhY2l0eTowLjIiIC8+CiAgICA8L3JhZGlhbEdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJyaW5nR3JhZDEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N2VlYTtzdG9wLW9wYWNpdHk6MC44IiAvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM3NjRiYTI7c3RvcC1vcGFjaXR5OjAuNiIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InJpbmdHcmFkMiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZjA5M2ZiO3N0b3Atb3BhY2l0eTowLjYiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2N2VlYTtzdG9wLW9wYWNpdHk6MC41IiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgCiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjUwIiBmaWxsPSIjZjhmOWZhIi8+CiAgCiAgPCEtLSBUaXRsZSAtLT4KICA8dGV4dCB4PSIzMDAiIHk9IjMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiM2NjdlZWEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtd2VpZ2h0PSJib2xkIj5MaWdodCBDaXR5IExheW91dDwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM3NjRiYTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNvbmNlbnRyaWMgU2FjcmVkIERlc2lnbiDigKIgVG9wLURvd24gVmlldzwvdGV4dD4KICAKICA8IS0tIE5hdHVyYWwgc3Vycm91bmRpbmdzIChmb3Jlc3QpIC0tPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMzMCIgcj0iMjYwIiBmaWxsPSIjOTBFRTkwIiBvcGFjaXR5PSIwLjIiIHN0cm9rZT0iIzkwRUU5MCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI1LDUiLz4KICAKICA8IS0tIE91dGVyIFJpbmcgKENvbW11bm9zcGhlcmVzICYgR2FyZGVucykgLS0+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzMwIiByPSIyMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyaW5nR3JhZDIpIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIzMzAiIHI9IjIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JpbmdHcmFkMikiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+CiAgCiAgPCEtLSBDb21tdW5vc3BoZXJlcyAoMTIgcG9zaXRpb25zIGFyb3VuZCBvdXRlciByaW5nKSAtLT4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIxMTAiIHI9IjE4IiBmaWxsPSIjYTBkOGZmIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjQxMCIgY3k9IjE1NSIgcj0iMTgiIGZpbGw9IiNhMGQ4ZmYiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iNDcwIiBjeT0iMjUwIiByPSIxOCIgZmlsbD0iI2EwZDhmZiIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI0NzAiIGN5PSI0MTAiIHI9IjE4IiBmaWxsPSIjYTBkOGZmIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjQxMCIgY3k9IjUwNSIgcj0iMTgiIGZpbGw9IiNhMGQ4ZmYiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iNTUwIiByPSIxOCIgZmlsbD0iI2EwZDhmZiIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSIxOTAiIGN5PSI1MDUiIHI9IjE4IiBmaWxsPSIjYTBkOGZmIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjEzMCIgY3k9IjQxMCIgcj0iMTgiIGZpbGw9IiNhMGQ4ZmYiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMTMwIiBjeT0iMjUwIiByPSIxOCIgZmlsbD0iI2EwZDhmZiIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSIxOTAiIGN5PSIxNTUiIHI9IjE4IiBmaWxsPSIjYTBkOGZmIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjM4NSIgY3k9IjIyMCIgcj0iMTgiIGZpbGw9IiNhMGQ4ZmYiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPGNpcmNsZSBjeD0iMjE1IiBjeT0iNDQwIiByPSIxOCIgZmlsbD0iI2EwZDhmZiIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiLz4KICAKICA8IS0tIE1pZGRsZSBSaW5nIChDcmVhdGl2ZSBTdHVkaW9zICYgQ29sbGFib3JhdGlvbikgLS0+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzMwIiByPSIxNTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyaW5nR3JhZDEpIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIzMzAiIHI9IjE0NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ1cmwoI3JpbmdHcmFkMSkiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+CiAgCiAgPCEtLSBDcmVhdGl2ZSBzcGFjZXMgKHJlY3RhbmdsZXMpIC0tPgogIDxyZWN0IHg9IjI4NSIgeT0iMTY1IiB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIGZpbGw9IiNmMDkzZmIiIG9wYWNpdHk9IjAuNiIgc3Ryb2tlPSIjNzY0YmEyIiBzdHJva2Utd2lkdGg9IjEiIHJ4PSIzIi8+CiAgPHJlY3QgeD0iMzcwIiB5PSIyNTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2YwOTNmYiIgb3BhY2l0eT0iMC42IiBzdHJva2U9IiM3NjRiYTIiIHN0cm9rZS13aWR0aD0iMSIgcng9IjMiLz4KICA8cmVjdCB4PSIzNzAiIHk9IjQwMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZjA5M2ZiIiBvcGFjaXR5PSIwLjYiIHN0cm9rZT0iIzc2NGJhMiIgc3Ryb2tlLXdpZHRoPSIxIiByeD0iMyIvPgogIDxyZWN0IHg9IjI4NSIgeT0iNDg1IiB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIGZpbGw9IiNmMDkzZmIiIG9wYWNpdHk9IjAuNiIgc3Ryb2tlPSIjNzY0YmEyIiBzdHJva2Utd2lkdGg9IjEiIHJ4PSIzIi8+CiAgPHJlY3QgeD0iMjAwIiB5PSI0MDAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2YwOTNmYiIgb3BhY2l0eT0iMC42IiBzdHJva2U9IiM3NjRiYTIiIHN0cm9rZS13aWR0aD0iMSIgcng9IjMiLz4KICA8cmVjdCB4PSIyMDAiIHk9IjI1MCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjZjA5M2ZiIiBvcGFjaXR5PSIwLjYiIHN0cm9rZT0iIzc2NGJhMiIgc3Ryb2tlLXdpZHRoPSIxIiByeD0iMyIvPgogIAogIDwhLS0gSW5uZXIgUmluZyAoVGVtcGxlcyAmIExlYXJuaW5nIENlbnRlcnMpIC0tPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMzMCIgcj0iOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCNyaW5nR3JhZDEpIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIzMzAiIHI9IjgyIiBmaWxsPSJub25lIiBzdHJva2U9InVybCgjcmluZ0dyYWQxKSIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjQiLz4KICAKICA8IS0tIFRlbXBsZXMgKHRyaWFuZ3VsYXIpIC0tPgogIDxwb2x5Z29uIHBvaW50cz0iMzAwLDIzNSAzMTAsMjU1IDI5MCwyNTUiIGZpbGw9IiM3NjRiYTIiIG9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8cG9seWdvbiBwb2ludHM9IjM3MCwyOTUgMzc4LDMxMCAzNjIsMzEwIiBmaWxsPSIjNzY0YmEyIiBvcGFjaXR5PSIwLjciIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNzAsMzY1IDM3OCwzNTAgMzYyLDM1MCIgZmlsbD0iIzc2NGJhMiIgb3BhY2l0eT0iMC43IiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzAwLDQyNSAzMTAsNDA1IDI5MCw0MDUiIGZpbGw9IiM3NjRiYTIiIG9wYWNpdHk9IjAuNyIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8cG9seWdvbiBwb2ludHM9IjIzMCwzNjUgMjIyLDM1MCAyMzgsMzUwIiBmaWxsPSIjNzY0YmEyIiBvcGFjaXR5PSIwLjciIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIyMzAsMjk1IDIyMiwzMTAgMjM4LDMxMCIgZmlsbD0iIzc2NGJhMiIgb3BhY2l0eT0iMC43IiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMSIvPgogIAogIDwhLS0gQ2VudHJhbCBTYW5jdHVtIC0tPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMzMCIgcj0iNDUiIGZpbGw9InVybCgjc3BpcmVHbG93KSIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjMiLz4KICAKICA8IS0tIENlbnRyYWwgU3BpcmUgLS0+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMzMwIiByPSIyNSIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMzMCIgcj0iMTUiIGZpbGw9IiM2NjdlZWEiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjMzMCIgcj0iOCIgZmlsbD0iI2ZmZmZmZiIvPgogIAogIDwhLS0gUmFkaWFsIFBhdGh3YXlzICgxMiBzcG9rZXMpIC0tPgogIDxsaW5lIHgxPSIzMDAiIHkxPSIzMzAiIHgyPSIzMDAiIHkyPSI5MCIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMyIvPgogIDxsaW5lIHgxPSIzMDAiIHkxPSIzMzAiIHgyPSI0MjUiIHkyPSIxMzgiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMzAwIiB5MT0iMzMwIiB4Mj0iNDkyIiB5Mj0iMjUwIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+CiAgPGxpbmUgeDE9IjMwMCIgeTE9IjMzMCIgeDI9IjQ5MiIgeTI9IjQxMCIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMyIvPgogIDxsaW5lIHgxPSIzMDAiIHkxPSIzMzAiIHgyPSI0MjUiIHkyPSI1MjIiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMzAwIiB5MT0iMzMwIiB4Mj0iMzAwIiB5Mj0iNTcwIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+CiAgPGxpbmUgeDE9IjMwMCIgeTE9IjMzMCIgeDI9IjE3NSIgeTI9IjUyMiIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMyIvPgogIDxsaW5lIHgxPSIzMDAiIHkxPSIzMzAiIHgyPSIxMDgiIHkyPSI0MTAiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMzAwIiB5MT0iMzMwIiB4Mj0iMTA4IiB5Mj0iMjUwIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+CiAgPGxpbmUgeDE9IjMwMCIgeTE9IjMzMCIgeDI9IjE3NSIgeTI9IjEzOCIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMyIvPgogIDxsaW5lIHgxPSIzMDAiIHkxPSIzMzAiIHgyPSIzODgiIHkyPSIyMjAiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjMiLz4KICA8bGluZSB4MT0iMzAwIiB5MT0iMzMwIiB4Mj0iMjEyIiB5Mj0iNDQwIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+CiAgCiAgPCEtLSBMZWdlbmQgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAsIDU5NSkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjU2MCIgaGVpZ2h0PSI1MCIgZmlsbD0id2hpdGUiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIiByeD0iNSIgb3BhY2l0eT0iMC45NSIvPgogICAgCiAgICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjE4IiByPSI4IiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iNDUiIHk9IjIzIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiPkNlbnRyYWwgU3BpcmU8L3RleHQ+CiAgICAKICAgIDxjaXJjbGUgY3g9IjE0NSIgY3k9IjE4IiByPSI2IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHRleHQgeD0iMTU3IiB5PSIyMyIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSIjMzMzIj5Jbm5lciBSaW5nIChUZW1wbGVzKTwvdGV4dD4KICAgIAogICAgPGNpcmNsZSBjeD0iMjk1IiBjeT0iMTgiIHI9IjYiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YwOTNmYiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSIzMDciIHk9IjIzIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiPk1pZGRsZSBSaW5nIChTdHVkaW9zKTwvdGV4dD4KICAgIAogICAgPGNpcmNsZSBjeD0iNDQ1IiBjeT0iMTgiIHI9IjgiIGZpbGw9IiNhMGQ4ZmYiIHN0cm9rZT0iIzY2N2VlYSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSI0NjAiIHk9IjIzIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiPk91dGVyIFJpbmcgKExpdmluZyk8L3RleHQ+CiAgICAKICAgIDxsaW5lIHgxPSIzMCIgeTE9IjM1IiB4Mj0iNTAiIHkyPSIzNSIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNCIvPgogICAgPHRleHQgeD0iNTUiIHk9IjQwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMzMzMiPlJhZGlhbCBQYXRod2F5czwvdGV4dD4KICAgIAogICAgPGNpcmNsZSBjeD0iMTc1IiBjeT0iMzUiIHI9IjYiIGZpbGw9IiM5MEVFOTAiIG9wYWNpdHk9IjAuNCIgc3Ryb2tlPSIjOTBFRTkwIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDx0ZXh0IHg9IjE4NyIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzMzMyI+TmF0dXJhbCBTdXJyb3VuZGluZ3M8L3RleHQ+CiAgPC9nPgo8L3N2Zz4KCg==" width="600" height="650" class="img_ev3q"></p>
+<p>This top-down view shows the complete city structure with concentric rings, radial pathways, communospheres positioned around the outer ring, and the central crystal spire at the heart of the design. Each element is precisely positioned according to sacred geometric principles.</p>
 <p><strong>Primary Structure</strong>: Concentric circles radiating from center</p>
 <p><strong>Rings</strong> (from inner to outer):</p>
 <ol>
-<li><strong>Central Sanctum</strong>: The spire and core plaza</li>
-<li><strong>Inner Ring</strong>: Primary gathering spaces, temples, learning centers</li>
-<li><strong>Middle Ring</strong>: Creative studios, collaboration areas, specialized facilities</li>
-<li><strong>Outer Ring</strong>: Communospheres (living spaces), gardens, nature interface</li>
+<li class=""><strong>Central Sanctum</strong>: The spire and core plaza</li>
+<li class=""><strong>Inner Ring</strong>: Primary gathering spaces, temples, learning centers</li>
+<li class=""><strong>Middle Ring</strong>: Creative studios, collaboration areas, specialized facilities</li>
+<li class=""><strong>Outer Ring</strong>: Communospheres (living spaces), gardens, nature interface</li>
 </ol>
 <p><strong>Radial Pathways</strong>: Connect center to periphery like spokes</p>
 <p><strong>Circular Pathways</strong>: Connect points on same ring</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="delphin-inspired-model">Delphin-Inspired Model<a href="#delphin-inspired-model" class="hash-link" aria-label="Direct link to Delphin-Inspired Model" title="Direct link to Delphin-Inspired Model" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="city-layout-diagram">City Layout Diagram<a href="#city-layout-diagram" class="hash-link" aria-label="Direct link to City Layout Diagram" title="Direct link to City Layout Diagram" translate="no">​</a></h4>
+<!-- -->
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="delphin-inspired-model">Delphin-Inspired Model<a href="#delphin-inspired-model" class="hash-link" aria-label="Direct link to Delphin-Inspired Model" title="Direct link to Delphin-Inspired Model" translate="no">​</a></h3>
 <p>Based on the existing crystal city of Delphin (on planet Israel), Light City can incorporate proven architectural principles:</p>
 <ul>
-<li><strong>Central Crystal Spire</strong>: Energy and consciousness hub</li>
-<li><strong>Radial Urban Area</strong>: Dense development in middle rings</li>
-<li><strong>Communospheres</strong>: Large spherical living structures at perimeter</li>
-<li><strong>Natural Surroundings</strong>: Integration with forests and landscape</li>
-<li><strong>Resonance Field</strong>: Maintained throughout entire city structure</li>
+<li class=""><strong>Central Crystal Spire</strong>: Energy and consciousness hub</li>
+<li class=""><strong>Radial Urban Area</strong>: Dense development in middle rings</li>
+<li class=""><strong>Communospheres</strong>: Large spherical living structures at perimeter</li>
+<li class=""><strong>Natural Surroundings</strong>: Integration with forests and landscape</li>
+<li class=""><strong>Resonance Field</strong>: Maintained throughout entire city structure</li>
 </ul>
-<p><em>See <a href="/light-city-project/docs/concepts/communospheres">Communospheres</a> for detailed explanation</em></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-central-spire">The Central Spire<a href="#the-central-spire" class="hash-link" aria-label="Direct link to The Central Spire" title="Direct link to The Central Spire" translate="no">​</a></h3>
-<p><strong>Height</strong>: Extraordinarily tall—potentially 40,000 feet (~12 km / 7.6 miles)</p>
+<p><em>See <a class="" href="/light-city-project/docs/concepts/communospheres">Communospheres</a> for detailed explanation</em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-central-spire">The Central Spire<a href="#the-central-spire" class="hash-link" aria-label="Direct link to The Central Spire" title="Direct link to The Central Spire" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Central Spire Cross-Section" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEyMDAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAubGFiZWwtdGV4dCB7IGZvbnQtZmFtaWx5OiAnSW50ZXInLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEycHg7IGZpbGw6ICMwQjI0NDc7IGZvbnQtd2VpZ2h0OiA2MDA7IH0KICAgICAgLmRlc2MtdGV4dCB7IGZvbnQtZmFtaWx5OiAnSW50ZXInLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEwcHg7IGZpbGw6ICM2NjY7IH0KICAgICAgLnRpdGxlLXRleHQgeyBmb250LWZhbWlseTogJ0ludGVyJywgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAyOHB4OyBmb250LXdlaWdodDogNzAwOyBmaWxsOiAjMEIyNDQ3OyB9CiAgICAgIC56b25lLWxhYmVsIHsgZm9udC1mYW1pbHk6ICdJbnRlcicsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTFweDsgZmlsbDogI2ZmZjsgZm9udC13ZWlnaHQ6IDYwMDsgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iY3J5c3RhbC1ncmFkaWVudCIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkY2RTA7c3RvcC1vcGFjaXR5OjAuOSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIzMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNFNkI0MDA7c3RvcC1vcGFjaXR5OjAuNyIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI3MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM0QTlFRkY7c3RvcC1vcGFjaXR5OjAuNiIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjY3ZWVhO3N0b3Atb3BhY2l0eTowLjgiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPHJhZGlhbEdyYWRpZW50IGlkPSJhcGV4LWdsb3ciIGN4PSI1MCUiIGN5PSIwJSIgcj0iNTAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGRjZFMDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNFNkI0MDA7c3RvcC1vcGFjaXR5OjAuNSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojRTZCNDAwO3N0b3Atb3BhY2l0eTowIiAvPgogICAgPC9yYWRpYWxHcmFkaWVudD4KICA8L2RlZnM+CiAgCiAgPCEtLSBUaXRsZSAtLT4KICA8dGV4dCB4PSI1MDAiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0idGl0bGUtdGV4dCI+Q2VudHJhbCBDcnlzdGFsIFNwaXJlIENyb3NzLVNlY3Rpb248L3RleHQ+CiAgPHRleHQgeD0iNTAwIiB5PSI2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImRlc2MtdGV4dCI+NDAsMDAwIGZlZXQgKH4xMiBrbSAvIDcuNiBtaWxlcykgLSBFbmVyZ3kgJmFtcDsgQ29uc2Npb3VzbmVzcyBIdWI8L3RleHQ+CiAgCiAgPCEtLSBIZWlnaHQgU2NhbGUgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAsIDE1MCkiPgogICAgPGxpbmUgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjkwMCIgc3Ryb2tlPSIjMEIyNDQ3IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSItNSIgeTE9IjAiIHgyPSI1IiB5Mj0iMCIgc3Ryb2tlPSIjMEIyNDQ3IiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxsaW5lIHgxPSItNSIgeTE9IjkwMCIgeDI9IjUiIHkyPSI5MDAiIHN0cm9rZT0iIzBCMjQ0NyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8dGV4dCB4PSIxNSIgeT0iNSIgY2xhc3M9ImRlc2MtdGV4dCI+NDAsMDAwIGZ0PC90ZXh0PgogICAgPHRleHQgeD0iMTUiIHk9IjkwNSIgY2xhc3M9ImRlc2MtdGV4dCI+MCBmdDwvdGV4dD4KICAgIAogICAgPCEtLSBJbnRlcm1lZGlhdGUgbWFya3MgLS0+CiAgICA8bGluZSB4MT0iLTMiIHkxPSIyMjUiIHgyPSIzIiB5Mj0iMjI1IiBzdHJva2U9IiMwQjI0NDciIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgeD0iMTUiIHk9IjIzMCIgY2xhc3M9ImRlc2MtdGV4dCIgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyI+MzAsMDAwIGZ0PC90ZXh0PgogICAgCiAgICA8bGluZSB4MT0iLTMiIHkxPSI0NTAiIHgyPSIzIiB5Mj0iNDUwIiBzdHJva2U9IiMwQjI0NDciIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgeD0iMTUiIHk9IjQ1NSIgY2xhc3M9ImRlc2MtdGV4dCIgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyI+MjAsMDAwIGZ0PC90ZXh0PgogICAgCiAgICA8bGluZSB4MT0iLTMiIHkxPSI2NzUiIHgyPSIzIiB5Mj0iNjc1IiBzdHJva2U9IiMwQjI0NDciIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgeD0iMTUiIHk9IjY4MCIgY2xhc3M9ImRlc2MtdGV4dCIgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyI+MTAsMDAwIGZ0PC90ZXh0PgogIDwvZz4KICAKICA8IS0tIE1haW4gU3BpcmUgU3RydWN0dXJlIC0tPgogIDxwYXRoIGQ9Ik0gNTAwLDE1MCBMIDU1MCwyMDAgTCA1ODAsNDUwIEwgNTkwLDcwMCBMIDYwMCw5MDAgTCA2NTAsMTA1MCBMIDQwMCwxMDUwIEwgNDEwLDkwMCBMIDQyMCw3MDAgTCA0MzAsNDUwIEwgNDYwLDIwMCBaIiAKICAgICAgICBmaWxsPSJ1cmwoI2NyeXN0YWwtZ3JhZGllbnQpIiBzdHJva2U9IiM0QTlFRkYiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC45Ii8+CiAgCiAgPCEtLSBBcGV4IEdsb3cgLS0+CiAgPGVsbGlwc2UgY3g9IjUwMCIgY3k9IjE1MCIgcng9IjgwIiByeT0iNjAiIGZpbGw9InVybCgjYXBleC1nbG93KSIvPgogIAogIDwhLS0gWm9uZSAxOiBDb3NtaWMgSW50ZXJmYWNlIChUb3ApIC0tPgogIDxwYXRoIGQ9Ik0gNTAwLDE1MCBMIDU1MCwyMDAgTCA1ODAsMzUwIEwgNDMwLDM1MCBMIDQ2MCwyMDAgWiIgZmlsbD0icmdiYSgyNTUsMjQ2LDIyNCwwLjQpIiBzdHJva2U9IiNFNkI0MDAiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjUwNSIgeT0iMjUwIiBjbGFzcz0iem9uZS1sYWJlbCIgZmlsbD0iI0U2QjQwMCI+Q29zbWljIEludGVyZmFjZTwvdGV4dD4KICA8dGV4dCB4PSI1MDUiIHk9IjI2NSIgY2xhc3M9InpvbmUtbGFiZWwiIGZpbGw9IiNFNkI0MDAiIHN0eWxlPSJmb250LXNpemU6IDlweDsiPkVuZXJneSBSZWNlcHRpb248L3RleHQ+CiAgCiAgPCEtLSBab25lIDI6IFRyYW5zZm9ybWF0aW9uIENoYW1iZXIgLS0+CiAgPHBhdGggZD0iTSA0MzAsMzUwIEwgNTgwLDM1MCBMIDU4NSw1NTAgTCA0MjUsNTUwIFoiIGZpbGw9InJnYmEoMjMwLDE4MCwwLDAuMykiIHN0cm9rZT0iI0U2QjQwMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iNTA1IiB5PSI0NDUiIGNsYXNzPSJ6b25lLWxhYmVsIiBmaWxsPSIjRTZCNDAwIj5UcmFuc2Zvcm1hdGlvbjwvdGV4dD4KICA8dGV4dCB4PSI1MDUiIHk9IjQ2MCIgY2xhc3M9InpvbmUtbGFiZWwiIGZpbGw9IiNFNkI0MDAiIHN0eWxlPSJmb250LXNpemU6IDlweDsiPkVuZXJneSBDb252ZXJzaW9uPC90ZXh0PgogIAogIDwhLS0gWm9uZSAzOiBSZXNvbmFuY2UgQW1wbGlmaWNhdGlvbiAtLT4KICA8cGF0aCBkPSJNIDQyNSw1NTAgTCA1ODUsNTUwIEwgNTkwLDc1MCBMIDQyMCw3NTAgWiIgZmlsbD0icmdiYSg3NCwxNTgsMjU1LDAuMykiIHN0cm9rZT0iIzRBOUVGRiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHRleHQgeD0iNTA1IiB5PSI2NDUiIGNsYXNzPSJ6b25lLWxhYmVsIj5SZXNvbmFuY2U8L3RleHQ+CiAgPHRleHQgeD0iNTA1IiB5PSI2NjAiIGNsYXNzPSJ6b25lLWxhYmVsIiBzdHlsZT0iZm9udC1zaXplOiA5cHg7Ij5BbXBsaWZpY2F0aW9uPC90ZXh0PgogIAogIDwhLS0gWm9uZSA0OiBEaXN0cmlidXRpb24gTmV0d29yayAtLT4KICA8cGF0aCBkPSJNIDQyMCw3NTAgTCA1OTAsNzUwIEwgNjAwLDk1MCBMIDQxMCw5NTAgWiIgZmlsbD0icmdiYSgxMDIsMTI2LDIzNCwwLjMpIiBzdHJva2U9IiM2NjdlZWEiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjUwNSIgeT0iODQ1IiBjbGFzcz0iem9uZS1sYWJlbCI+RGlzdHJpYnV0aW9uPC90ZXh0PgogIDx0ZXh0IHg9IjUwNSIgeT0iODYwIiBjbGFzcz0iem9uZS1sYWJlbCIgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyI+TmV0d29yayBIdWI8L3RleHQ+CiAgCiAgPCEtLSBab25lIDU6IEdyb3VuZCBJbnRlZ3JhdGlvbiAtLT4KICA8cGF0aCBkPSJNIDQxMCw5NTAgTCA2MDAsOTUwIEwgNjUwLDEwNTAgTCA0MDAsMTA1MCBaIiBmaWxsPSJyZ2JhKDExOCw3NSwxNjIsMC4zKSIgc3Ryb2tlPSIjNzY0YmEyIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8dGV4dCB4PSI1MDUiIHk9IjEwMDAiIGNsYXNzPSJ6b25lLWxhYmVsIj5Hcm91bmQgSW50ZWdyYXRpb248L3RleHQ+CiAgPHRleHQgeD0iNTA1IiB5PSIxMDE1IiBjbGFzcz0iem9uZS1sYWJlbCIgc3R5bGU9ImZvbnQtc2l6ZTogOXB4OyI+RWFydGggQ29ubmVjdGlvbjwvdGV4dD4KICAKICA8IS0tIEdyb3VuZCBMZXZlbCAtLT4KICA8bGluZSB4MT0iMTAwIiB5MT0iMTA1MCIgeDI9IjkwMCIgeTI9IjEwNTAiIHN0cm9rZT0iIzBCMjQ0NyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPHRleHQgeD0iNTAwIiB5PSIxMDc1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij5Hcm91bmQgTGV2ZWwgLSBDZW50cmFsIFBsYXphPC90ZXh0PgogIAogIDwhLS0gRW5lcmd5IEZsb3cgQXJyb3dzIC0tPgogIDxnIG9wYWNpdHk9IjAuNiI+CiAgICA8IS0tIEluY29taW5nIGNvc21pYyBlbmVyZ3kgLS0+CiAgICA8cGF0aCBkPSJNIDUwMCwxMjAgTCA1MDAsMTUwIiBzdHJva2U9IiNGRkY2RTAiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhcnJvdy1nb2xkKSIvPgogICAgPHBhdGggZD0iTSA0ODAsMTMwIEwgNTAwLDE1MCIgc3Ryb2tlPSIjRkZGNkUwIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxwYXRoIGQ9Ik0gNTIwLDEzMCBMIDUwMCwxNTAiIHN0cm9rZT0iI0ZGRjZFMCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICAKICAgIDwhLS0gQ2VudHJhbCBmbG93IC0tPgogICAgPGxpbmUgeDE9IjUwNSIgeTE9IjM1MCIgeDI9IjUwNSIgeTI9IjU1MCIgc3Ryb2tlPSIjRTZCNDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjUsNSIvPgogICAgPGxpbmUgeDE9IjUwNSIgeTE9IjU1MCIgeDI9IjUwNSIgeTI9Ijc1MCIgc3Ryb2tlPSIjNEE5RUZGIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjUsNSIvPgogICAgPGxpbmUgeDE9IjUwNSIgeTE9Ijc1MCIgeDI9IjUwNSIgeTI9Ijk1MCIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjUsNSIvPgogICAgCiAgICA8IS0tIE91dGdvaW5nIGRpc3RyaWJ1dGlvbiAtLT4KICAgIDxsaW5lIHgxPSI1MDUiIHkxPSI5NTAiIHgyPSI0MDAiIHkyPSIxMDUwIiBzdHJva2U9IiM3NjRiYTIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iMywzIi8+CiAgICA8bGluZSB4MT0iNTA1IiB5MT0iOTUwIiB4Mj0iNjUwIiB5Mj0iMTA1MCIgc3Ryb2tlPSIjNzY0YmEyIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjMsMyIvPgogIDwvZz4KICAKICA8IS0tIENhbGxvdXRzIC0gTGVmdCBTaWRlIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1MCwgMTgwKSI+CiAgICA8Y2lyY2xlIGN4PSIwIiBjeT0iMCIgcj0iMyIgZmlsbD0iI0ZGRjZFMCIvPgogICAgPGxpbmUgeDE9IjMiIHkxPSIwIiB4Mj0iMTAwIiB5Mj0iNzAiIHN0cm9rZT0iI0ZGRjZFMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8dGV4dCB4PSIxMDUiIHk9IjcwIiBjbGFzcz0ibGFiZWwtdGV4dCI+Q29zbWljIEVuZXJneSBSZWNlcHRpb248L3RleHQ+CiAgICA8dGV4dCB4PSIxMDUiIHk9IjgzIiBjbGFzcz0iZGVzYy10ZXh0Ij5SZWNlaXZlcyBlbmVyZ3kgZnJvbTo8L3RleHQ+CiAgICA8dGV4dCB4PSIxMDUiIHk9Ijk0IiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgU29sYXIgcmFkaWF0aW9uPC90ZXh0PgogICAgPHRleHQgeD0iMTA1IiB5PSIxMDUiIGNsYXNzPSJkZXNjLXRleHQiPuKAoiBDb3NtaWMgcmF5czwvdGV4dD4KICAgIDx0ZXh0IHg9IjEwNSIgeT0iMTE2IiBjbGFzcz0iZGVzYy10ZXh0Ij7igKIgVW5pdmVyc2FsIGZpZWxkPC90ZXh0PgogIDwvZz4KICAKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNTAsIDQ1MCkiPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjMiIGZpbGw9IiNFNkI0MDAiLz4KICAgIDxsaW5lIHgxPSIzIiB5MT0iMCIgeDI9IjgwIiB5Mj0iMCIgc3Ryb2tlPSIjRTZCNDAwIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDx0ZXh0IHg9Ijg1IiB5PSIwIiBjbGFzcz0ibGFiZWwtdGV4dCI+RW5lcmd5IENvbnZlcnNpb248L3RleHQ+CiAgICA8dGV4dCB4PSI4NSIgeT0iMTMiIGNsYXNzPSJkZXNjLXRleHQiPkNyeXN0YWwgbGF0dGljZSB0cmFuc2Zvcm1zPC90ZXh0PgogICAgPHRleHQgeD0iODUiIHk9IjI0IiBjbGFzcz0iZGVzYy10ZXh0Ij5yYXcgZW5lcmd5IGludG8gdXNhYmxlPC90ZXh0PgogICAgPHRleHQgeD0iODUiIHk9IjM1IiBjbGFzcz0iZGVzYy10ZXh0Ij5wb3dlciAmYW1wOyBjb25zY2lvdXNuZXNzIGZpZWxkPC90ZXh0PgogIDwvZz4KICAKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNTAsIDY1MCkiPgogICAgPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjMiIGZpbGw9IiM0QTlFRkYiLz4KICAgIDxsaW5lIHgxPSIzIiB5MT0iMCIgeDI9IjgwIiB5Mj0iMCIgc3Ryb2tlPSIjNEE5RUZGIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDx0ZXh0IHg9Ijg1IiB5PSIwIiBjbGFzcz0ibGFiZWwtdGV4dCI+UmVzb25hbmNlIEdlbmVyYXRpb248L3RleHQ+CiAgICA8dGV4dCB4PSI4NSIgeT0iMTMiIGNsYXNzPSJkZXNjLXRleHQiPkNyZWF0ZXMgJmFtcDsgbWFpbnRhaW5zPC90ZXh0PgogICAgPHRleHQgeD0iODUiIHk9IjI0IiBjbGFzcz0iZGVzYy10ZXh0Ij5iYXNlIGZyZXF1ZW5jeSBmb3I8L3RleHQ+CiAgICA8dGV4dCB4PSI4NSIgeT0iMzUiIGNsYXNzPSJkZXNjLXRleHQiPmVudGlyZSBjaXR5PC90ZXh0PgogIDwvZz4KICAKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNTAsIDEwMDApIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIzIiBmaWxsPSIjNzY0YmEyIi8+CiAgICA8bGluZSB4MT0iMyIgeTE9IjAiIHgyPSI4MCIgeTI9IjAiIHN0cm9rZT0iIzc2NGJhMiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8dGV4dCB4PSI4NSIgeT0iMCIgY2xhc3M9ImxhYmVsLXRleHQiPkVhcnRoIEdyb3VuZGluZzwvdGV4dD4KICAgIDx0ZXh0IHg9Ijg1IiB5PSIxMyIgY2xhc3M9ImRlc2MtdGV4dCI+RGVlcCByb290cyBhbmNob3I8L3RleHQ+CiAgICA8dGV4dCB4PSI4NSIgeT0iMjQiIGNsYXNzPSJkZXNjLXRleHQiPnN0cnVjdHVyZSAmYW1wOyBjb25uZWN0PC90ZXh0PgogICAgPHRleHQgeD0iODUiIHk9IjM1IiBjbGFzcz0iZGVzYy10ZXh0Ij50byBwbGFuZXRhcnkgZ3JpZDwvdGV4dD4KICA8L2c+CiAgCiAgPCEtLSBDYWxsb3V0cyAtIFJpZ2h0IFNpZGUgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUwLCAyNTApIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIzIiBmaWxsPSIjRkZGNkUwIi8+CiAgICA8bGluZSB4MT0iLTMiIHkxPSIwIiB4Mj0iLTgwIiB5Mj0iMTAwIiBzdHJva2U9IiNGRkY2RTAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHRleHQgeD0iLTg1IiB5PSIxMDAiIGNsYXNzPSJsYWJlbC10ZXh0IiB0ZXh0LWFuY2hvcj0iZW5kIj5DcnlzdGFsIEFwZXg8L3RleHQ+CiAgICA8dGV4dCB4PSItODUiIHk9IjExMyIgY2xhc3M9ImRlc2MtdGV4dCIgdGV4dC1hbmNob3I9ImVuZCI+RmFjZXRlZCBjcnlzdGFsbGluZSBzdHJ1Y3R1cmU8L3RleHQ+CiAgICA8dGV4dCB4PSItODUiIHk9IjEyNCIgY2xhc3M9ImRlc2MtdGV4dCIgdGV4dC1hbmNob3I9ImVuZCI+VmlzaWJsZSBmb3IgbWlsZXM8L3RleHQ+CiAgICA8dGV4dCB4PSItODUiIHk9IjEzNSIgY2xhc3M9ImRlc2MtdGV4dCIgdGV4dC1hbmNob3I9ImVuZCI+R2xvd3Mgd2l0aCBpbm5lciBsaWdodDwvdGV4dD4KICA8L2c+CiAgCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUwLCA1NTApIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIzIiBmaWxsPSIjRTZCNDAwIi8+CiAgICA8bGluZSB4MT0iLTMiIHkxPSIwIiB4Mj0iLTgwIiB5Mj0iMCIgc3Ryb2tlPSIjRTZCNDAwIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDx0ZXh0IHg9Ii04NSIgeT0iMCIgY2xhc3M9ImxhYmVsLXRleHQiIHRleHQtYW5jaG9yPSJlbmQiPlBvd2VyIE91dHB1dDwvdGV4dD4KICAgIDx0ZXh0IHg9Ii04NSIgeT0iMTMiIGNsYXNzPSJkZXNjLXRleHQiIHRleHQtYW5jaG9yPSJlbmQiPkhhbmRsZXMgQUxMIGVuZXJneTwvdGV4dD4KICAgIDx0ZXh0IHg9Ii04NSIgeT0iMjQiIGNsYXNzPSJkZXNjLXRleHQiIHRleHQtYW5jaG9yPSJlbmQiPnJlcXVpcmVtZW50cyBmb3I8L3RleHQ+CiAgICA8dGV4dCB4PSItODUiIHk9IjM1IiBjbGFzcz0iZGVzYy10ZXh0IiB0ZXh0LWFuY2hvcj0iZW5kIj5lbnRpcmUgY2l0eTwvdGV4dD4KICA8L2c+CiAgCiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUwLCA4NTApIj4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIzIiBmaWxsPSIjNjY3ZWVhIi8+CiAgICA8bGluZSB4MT0iLTMiIHkxPSIwIiB4Mj0iLTgwIiB5Mj0iMCIgc3Ryb2tlPSIjNjY3ZWVhIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDx0ZXh0IHg9Ii04NSIgeT0iMCIgY2xhc3M9ImxhYmVsLXRleHQiIHRleHQtYW5jaG9yPSJlbmQiPkRpc3RyaWJ1dGlvbiBHcmlkPC90ZXh0PgogICAgPHRleHQgeD0iLTg1IiB5PSIxMyIgY2xhc3M9ImRlc2MtdGV4dCIgdGV4dC1hbmNob3I9ImVuZCI+Q29ubmVjdHMgdG8gYWxsPC90ZXh0PgogICAgPHRleHQgeD0iLTg1IiB5PSIyNCIgY2xhc3M9ImRlc2MtdGV4dCIgdGV4dC1hbmNob3I9ImVuZCI+Y29tbXVub3NwaGVyZXMgJmFtcDs8L3RleHQ+CiAgICA8dGV4dCB4PSItODUiIHk9IjM1IiBjbGFzcz0iZGVzYy10ZXh0IiB0ZXh0LWFuY2hvcj0iZW5kIj5tYWpvciBzdHJ1Y3R1cmVzPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIFNwZWNpZmljYXRpb25zIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1MCwgMTEwMCkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0U2RUNGMyIgcng9IjQiLz4KICAgIDx0ZXh0IHg9IjI1MCIgeT0iMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbC10ZXh0Ij5UZWNobmljYWwgU3BlY2lmaWNhdGlvbnM8L3RleHQ+CiAgICA8dGV4dCB4PSIyNTAiIHk9IjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0iZGVzYy10ZXh0Ij5IZWlnaHQ6IDQwLDAwMCBmdCAofjEyIGttKSB8IEJhc2UgRGlhbWV0ZXI6IH4yMDBtIHwgTWF0ZXJpYWw6IENyeXN0YWxsaW5lIFN0cnVjdHVyZTwvdGV4dD4KICAgIDx0ZXh0IHg9IjI1MCIgeT0iNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJkZXNjLXRleHQiPkZ1bmN0aW9uOiBUb3RhbCBFbmVyZ3kgR2VuZXJhdGlvbiArIENvbnNjaW91c25lc3MgRmllbGQgTWFpbnRlbmFuY2U8L3RleHQ+CiAgPC9nPgogIAogIDxkZWZzPgogICAgPG1hcmtlciBpZD0iYXJyb3ctZ29sZCIgbWFya2VyV2lkdGg9IjEwIiBtYXJrZXJIZWlnaHQ9IjEwIiByZWZYPSI5IiByZWZZPSIzIiBvcmllbnQ9ImF1dG8iPgogICAgICA8cG9seWdvbiBwb2ludHM9IjAgMCwgMTAgMywgMCA2IiBmaWxsPSIjRkZGNkUwIiAvPgogICAgPC9tYXJrZXI+CiAgPC9kZWZzPgo8L3N2Zz4KCg==" width="1000" height="1200" class="img_ev3q"></p>
+<p><em>The Delphin spire (40,000 ft) serves as mythic reference and visionary archetype. Light City&#x27;s terrestrial prototype is scaled for Earth physics.</em></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vision-source-off-world-reference">🔮 Vision Source (Off-world Reference)<a href="#-vision-source-off-world-reference" class="hash-link" aria-label="Direct link to 🔮 Vision Source (Off-world Reference)" title="Direct link to 🔮 Vision Source (Off-world Reference)" translate="no">​</a></h4>
+<p><strong>Delphin Spire</strong>: 40,000 feet (~12 km / 7.6 miles)</p>
 <ul>
-<li>Reference: Delphin&#x27;s spire is 40,000 feet</li>
-<li>Light City scale to be determined based on location and needs</li>
-<li>Even scaled down versions would be tallest structures on Earth</li>
+<li class="">Exists on planet Israel in another star system</li>
+<li class="">Provides total energy for entire crystal city</li>
+<li class="">Demonstrates what&#x27;s possible with advanced consciousness-matter technology</li>
+<li class="">Serves as aspirational model and proportional guide</li>
 </ul>
-<p><strong>Function</strong>:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-terrestrial-prototype-earth-implementation">🌍 Terrestrial Prototype (Earth Implementation)<a href="#-terrestrial-prototype-earth-implementation" class="hash-link" aria-label="Direct link to 🌍 Terrestrial Prototype (Earth Implementation)" title="Direct link to 🌍 Terrestrial Prototype (Earth Implementation)" translate="no">​</a></h4>
+<p><strong>Phase 1 (18-24 months)</strong>: 60-120 m light/acoustic tower</p>
 <ul>
-<li><strong>Power Generation</strong>: Handles all energy requirements for entire city</li>
-<li><strong>Consciousness Hub</strong>: Generates and maintains resonant frequency</li>
-<li><strong>Communication</strong>: Connection point with cosmos and Earth&#x27;s grid</li>
-<li><strong>Axis Mundi</strong>: Symbolic and functional world axis</li>
+<li class="">Feasible height range: 200-400 feet</li>
+<li class="">Primary functions: Lighting, acoustic resonance, ceremonial focus</li>
+<li class="">PV canopy integrated at top (200-500 kWp)</li>
+<li class="">Public observation deck</li>
+<li class="">Wind chimes tuned to harmonic series</li>
+<li class="">LED programmable light art visible for miles</li>
+</ul>
+<p><strong>Phase 2 (36-48 months)</strong>: 120-300 m expanded tower</p>
+<ul>
+<li class="">Height range: 400-1,000 feet</li>
+<li class="">Enhanced public access and ceremonial spaces</li>
+<li class="">Expanded PV capacity (500 kWp - 2 MWp)</li>
+<li class="">Advanced acoustic design with resonance chambers</li>
+<li class="">Becomes regional landmark</li>
+</ul>
+<p><strong>Function - Terrestrial Model</strong>:</p>
+<ul>
+<li class=""><strong>Symbolic &amp; Ceremonial</strong>: Axis mundi, focal point for consciousness work</li>
+<li class=""><strong>Lighting &amp; Signaling</strong>: Programmable light shows, wayfinding beacon</li>
+<li class=""><strong>Acoustic Resonance</strong>: Generates harmonic tones, amplifies ceremony sound</li>
+<li class=""><strong>Consciousness Hub</strong>: Anchors meditation and collective intention (subtle energy)</li>
+<li class=""><strong>Solar Generation</strong>: Contributes to renewable micro-grid (physical energy)</li>
+<li class=""><strong>NOT grid baseload</strong>: Primary power from distributed PV + storage system</li>
 </ul>
 <p><strong>Design</strong>:</p>
 <ul>
-<li><strong>Material</strong>: Crystal (primary material for energy and resonance properties)</li>
-<li><strong>Form</strong>: Tapers toward top, crystalline facets</li>
-<li><strong>Light</strong>: Emanates from within, refracts into rainbows</li>
-<li><strong>Geometry</strong>: May incorporate spiral, helical, or other sacred forms</li>
+<li class=""><strong>Material</strong>: Crystalline glazing, structural steel/CLT hybrid, integrated PV</li>
+<li class=""><strong>Form</strong>: Tapers toward top, faceted geometry reflecting sacred proportions</li>
+<li class=""><strong>Light</strong>: Internal LED systems, natural light refraction through glazing</li>
+<li class=""><strong>Geometry</strong>: Golden ratio proportions, spiral or helical elements</li>
 </ul>
-<p><strong>Energy Function</strong>:</p>
+<p><strong>Energy System - Layered Approach</strong>:</p>
+<p><em>Physical Energy (Measurable)</em>:</p>
 <ul>
-<li>Generates or channels power for entire city</li>
-<li>Creates specific resonant frequency held throughout city</li>
-<li>Receives cosmic energies from above</li>
-<li>Draws Earth energies from below</li>
-<li>Distributes balanced energy through geometric grid to communospheres</li>
-<li>Maintains coherent consciousness field</li>
+<li class=""><strong>Primary Power</strong>: 2-15 MWp distributed solar PV across rooftops, canopies, and ground arrays</li>
+<li class=""><strong>Storage</strong>: 8-80 MWh battery + thermal storage</li>
+<li class=""><strong>Spire Contribution</strong>: 200 kWp - 2 MWp (supplemental, not primary)</li>
+<li class=""><strong>Backup</strong>: Grid interconnect or micro-hydro where available</li>
+</ul>
+<p><em>Subtle Energy (Consciousness Field)</em>:</p>
+<ul>
+<li class="">Spire coordinates ceremonial lighting programs</li>
+<li class="">Maintains harmonic acoustic environment</li>
+<li class="">Anchors collective meditation and intention</li>
+<li class="">Creates coherent consciousness field through geometry and resonance</li>
 </ul>
 <p><strong>Resonance Technology</strong>:</p>
 <ul>
-<li>Crystal structure generates specific frequency</li>
-<li>This frequency maintains consciousness connection</li>
-<li>All living spaces tune to this base frequency</li>
-<li>Creates unified awareness field across entire city</li>
-<li>Enables knowledge transfer and collective consciousness</li>
+<li class="">Acoustic design: Main hall RT60 1.6-2.0 s (music), meditation rooms 0.3-0.5 s</li>
+<li class="">Exterior soundscape target: ≤ 45 dBA at night</li>
+<li class="">Wind chimes and bells tuned to musical ratios (perfect fifths, octaves)</li>
+<li class="">Crystal/quartz elements for piezoelectric properties</li>
+<li class="">Sacred geometry creates standing wave patterns</li>
+<li class="">Enables knowledge transfer and collective consciousness</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="supporting-architecture">Supporting Architecture<a href="#supporting-architecture" class="hash-link" aria-label="Direct link to Supporting Architecture" title="Direct link to Supporting Architecture" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="supporting-architecture">Supporting Architecture<a href="#supporting-architecture" class="hash-link" aria-label="Direct link to Supporting Architecture" title="Direct link to Supporting Architecture" translate="no">​</a></h3>
 <p><strong>Spires and Towers</strong>: Various heights, create skyline
 <strong>Domes</strong>: For gathering spaces and temples
 <strong>Arches</strong>: Connect structures, create pathways
 <strong>Platforms</strong>: Multi-level integration
 <strong>Gardens</strong>: Integrated throughout, not separate</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="architectural-styles-and-influences">Architectural Styles and Influences<a href="#architectural-styles-and-influences" class="hash-link" aria-label="Direct link to Architectural Styles and Influences" title="Direct link to Architectural Styles and Influences" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="primary-influences">Primary Influences<a href="#primary-influences" class="hash-link" aria-label="Direct link to Primary Influences" title="Direct link to Primary Influences" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="architectural-styles-and-influences">Architectural Styles and Influences<a href="#architectural-styles-and-influences" class="hash-link" aria-label="Direct link to Architectural Styles and Influences" title="Direct link to Architectural Styles and Influences" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="primary-influences">Primary Influences<a href="#primary-influences" class="hash-link" aria-label="Direct link to Primary Influences" title="Direct link to Primary Influences" translate="no">​</a></h3>
 <ol>
-<li><strong>Crystalline Formations</strong>: Natural crystal growth patterns</li>
-<li><strong>Sacred Architecture</strong>: Temples, cathedrals, pyramids</li>
-<li><strong>Organic Forms</strong>: Inspired by nature&#x27;s patterns</li>
-<li><strong>Futuristic Vision</strong>: Advanced but harmonious technology</li>
+<li class=""><strong>Crystalline Formations</strong>: Natural crystal growth patterns</li>
+<li class=""><strong>Sacred Architecture</strong>: Temples, cathedrals, pyramids</li>
+<li class=""><strong>Organic Forms</strong>: Inspired by nature&#x27;s patterns</li>
+<li class=""><strong>Futuristic Vision</strong>: Advanced but harmonious technology</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="visual-characteristics">Visual Characteristics<a href="#visual-characteristics" class="hash-link" aria-label="Direct link to Visual Characteristics" title="Direct link to Visual Characteristics" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-characteristics">Visual Characteristics<a href="#visual-characteristics" class="hash-link" aria-label="Direct link to Visual Characteristics" title="Direct link to Visual Characteristics" translate="no">​</a></h3>
 <p><strong>Materials</strong>:</p>
 <ul>
-<li>White and gold tones predominant</li>
-<li>Crystal, glass, translucent materials</li>
-<li>Living materials (bioarchitecture when possible)</li>
-<li>Sustainable, high-vibration materials</li>
+<li class="">White and gold tones predominant</li>
+<li class="">Crystal, glass, translucent materials</li>
+<li class="">Living materials (bioarchitecture when possible)</li>
+<li class="">Sustainable, high-vibration materials</li>
 </ul>
 <p><strong>Forms</strong>:</p>
 <ul>
-<li>Flowing, organic curves</li>
-<li>Sharp, precise geometry where appropriate</li>
-<li>Transparency and semi-transparency</li>
-<li>Layered and multi-dimensional</li>
+<li class="">Flowing, organic curves</li>
+<li class="">Sharp, precise geometry where appropriate</li>
+<li class="">Transparency and semi-transparency</li>
+<li class="">Layered and multi-dimensional</li>
 </ul>
 <p><strong>Aesthetics</strong>:</p>
 <ul>
-<li>Clean and uncluttered</li>
-<li>Luminous and light-filled</li>
-<li>Harmonious and balanced</li>
-<li>Awe-inspiring yet welcoming</li>
+<li class="">Clean and uncluttered</li>
+<li class="">Luminous and light-filled</li>
+<li class="">Harmonious and balanced</li>
+<li class="">Awe-inspiring yet welcoming</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="specific-spaces">Specific Spaces<a href="#specific-spaces" class="hash-link" aria-label="Direct link to Specific Spaces" title="Direct link to Specific Spaces" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-the-central-plaza">1. The Central Plaza<a href="#1-the-central-plaza" class="hash-link" aria-label="Direct link to 1. The Central Plaza" title="Direct link to 1. The Central Plaza" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="specific-spaces">Specific Spaces<a href="#specific-spaces" class="hash-link" aria-label="Direct link to Specific Spaces" title="Direct link to Specific Spaces" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-the-central-plaza">1. The Central Plaza<a href="#1-the-central-plaza" class="hash-link" aria-label="Direct link to 1. The Central Plaza" title="Direct link to 1. The Central Plaza" translate="no">​</a></h3>
 <p><strong>Location</strong>: Surrounds the central spire</p>
 <p><strong>Function</strong>:</p>
 <ul>
-<li>Primary gathering space</li>
-<li>Ceremonies and celebrations</li>
-<li>Community connection</li>
-<li>Energy convergence point</li>
+<li class="">Primary gathering space</li>
+<li class="">Ceremonies and celebrations</li>
+<li class="">Community connection</li>
+<li class="">Energy convergence point</li>
 </ul>
 <p><strong>Design</strong>:</p>
 <ul>
-<li>Open circular space</li>
-<li>Geometric paving patterns</li>
-<li>Water features (fountains, pools)</li>
-<li>Seating integrated organically</li>
-<li>Clear sightlines to spire</li>
+<li class="">Open circular space</li>
+<li class="">Geometric paving patterns</li>
+<li class="">Water features (fountains, pools)</li>
+<li class="">Seating integrated organically</li>
+<li class="">Clear sightlines to spire</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-temples-and-meditation-spaces">2. Temples and Meditation Spaces<a href="#2-temples-and-meditation-spaces" class="hash-link" aria-label="Direct link to 2. Temples and Meditation Spaces" title="Direct link to 2. Temples and Meditation Spaces" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-temples-and-meditation-spaces">2. Temples and Meditation Spaces<a href="#2-temples-and-meditation-spaces" class="hash-link" aria-label="Direct link to 2. Temples and Meditation Spaces" title="Direct link to 2. Temples and Meditation Spaces" translate="no">​</a></h3>
 <p><strong>Purpose</strong>: Consciousness elevation, spiritual practice</p>
 <p><strong>Features</strong>:</p>
 <ul>
-<li>Multiple temples for different practices</li>
-<li>Meditation chambers</li>
-<li>Sound healing rooms</li>
-<li>Vision quest spaces</li>
+<li class="">Multiple temples for different practices</li>
+<li class="">Meditation chambers</li>
+<li class="">Sound healing rooms</li>
+<li class="">Vision quest spaces</li>
 </ul>
 <p><strong>Design</strong>:</p>
 <ul>
-<li>Acoustically optimized</li>
-<li>Light control (from darkness to brilliant light)</li>
-<li>Sacred geometry in layout</li>
-<li>Crystalline elements</li>
+<li class="">Acoustically optimized</li>
+<li class="">Light control (from darkness to brilliant light)</li>
+<li class="">Sacred geometry in layout</li>
+<li class="">Crystalline elements</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-learning-centers">3. Learning Centers<a href="#3-learning-centers" class="hash-link" aria-label="Direct link to 3. Learning Centers" title="Direct link to 3. Learning Centers" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-learning-centers">3. Learning Centers<a href="#3-learning-centers" class="hash-link" aria-label="Direct link to 3. Learning Centers" title="Direct link to 3. Learning Centers" translate="no">​</a></h3>
 <p><strong>Purpose</strong>: Education, knowledge sharing, skill development</p>
 <p><strong>Features</strong>:</p>
 <ul>
-<li>Libraries and archives</li>
-<li>Workshop spaces</li>
-<li>Demonstration areas</li>
-<li>Technology integration</li>
+<li class="">Libraries and archives</li>
+<li class="">Workshop spaces</li>
+<li class="">Demonstration areas</li>
+<li class="">Technology integration</li>
 </ul>
 <p><strong>Design</strong>:</p>
 <ul>
-<li>Flexible, adaptable spaces</li>
-<li>Natural light emphasis</li>
-<li>Inspiring, beautiful environments</li>
-<li>Connection to gardens</li>
+<li class="">Flexible, adaptable spaces</li>
+<li class="">Natural light emphasis</li>
+<li class="">Inspiring, beautiful environments</li>
+<li class="">Connection to gardens</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="4-living-spaces---communospheres">4. Living Spaces - Communospheres<a href="#4-living-spaces---communospheres" class="hash-link" aria-label="Direct link to 4. Living Spaces - Communospheres" title="Direct link to 4. Living Spaces - Communospheres" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-living-spaces---communospheres">4. Living Spaces - Communospheres<a href="#4-living-spaces---communospheres" class="hash-link" aria-label="Direct link to 4. Living Spaces - Communospheres" title="Direct link to 4. Living Spaces - Communospheres" translate="no">​</a></h3>
 <p><strong>Purpose</strong>: Conscious community living environments that maintain resonance</p>
-<p><strong>Structure</strong>: Large spherical buildings (communospheres) positioned at city perimeter</p>
-<p><strong>Scale</strong>:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vision-source-off-world-reference-1">🔮 Vision Source (Off-world Reference)<a href="#-vision-source-off-world-reference-1" class="hash-link" aria-label="Direct link to 🔮 Vision Source (Off-world Reference)" title="Direct link to 🔮 Vision Source (Off-world Reference)" translate="no">​</a></h4>
+<p><strong>Delphin Communospheres</strong>: 600-1,200 ft diameter mega-spheres</p>
 <ul>
-<li>Each sphere: 5,000-10,000 inhabitants</li>
-<li>Diameter: 600-1,200 feet depending on population</li>
-<li>Height: 400-600 feet (multi-level)</li>
-<li>Multiple spheres around city (potentially 12 for sacred geometry)</li>
+<li class="">Each houses 10,000 people</li>
+<li class="">Complete self-contained cities within spheres</li>
+<li class="">Demonstrates far-future pavilion scale</li>
+<li class="">Serves as aspirational model</li>
 </ul>
-<p><strong>Features</strong>:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-terrestrial-prototype-buildable-kit-of-parts">🌍 Terrestrial Prototype (Buildable Kit-of-Parts)<a href="#-terrestrial-prototype-buildable-kit-of-parts" class="hash-link" aria-label="Direct link to 🌍 Terrestrial Prototype (Buildable Kit-of-Parts)" title="Direct link to 🌍 Terrestrial Prototype (Buildable Kit-of-Parts)" translate="no">​</a></h4>
+<p><strong>Phase 1 (18-24 months)</strong>: 3 geodesic domes</p>
 <ul>
-<li><strong>Resonance Maintenance</strong>: Sphere structure maintains the frequency from central spire</li>
-<li><strong>Community Integration</strong>: Complete living environment within each sphere</li>
-<li><strong>Consciousness Connection</strong>: Inhabitants remain &quot;consciously connected&quot;</li>
-<li><strong>Knowledge Transfer</strong>: Learning by one transfers to all in field</li>
-<li><strong>Self-Sufficient</strong>: Food, gathering spaces, basic services within sphere</li>
-<li><strong>Ground Connection</strong>: &quot;Hooked in&quot; to Earth—firmly anchored</li>
+<li class=""><strong>Size</strong>: 30-45 m diameter (100-150 ft)</li>
+<li class=""><strong>Height</strong>: 3-5 levels, 15-25 m tall</li>
+<li class=""><strong>Capacity</strong>: 80-120 residents per dome</li>
+<li class=""><strong>Total Phase 1</strong>: 240-360 residents</li>
+<li class=""><strong>Structure</strong>: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic</li>
+<li class=""><strong>Glazing</strong>: BIPV (building-integrated photovoltaics) + insulated panels</li>
 </ul>
-<p><strong>Design</strong>:</p>
+<p><strong>Phase 2 (36-48 months)</strong>: 6-12 domes expansion</p>
 <ul>
-<li>Geodesic or spherical structure</li>
-<li>Crystal or crystalline material integration</li>
-<li>Semi-transparent allowing light passage</li>
-<li>Multiple interior levels</li>
-<li>Private quarters + communal spaces</li>
-<li>Gardens integrated within</li>
+<li class=""><strong>Size</strong>: 45-60 m diameter (150-200 ft)</li>
+<li class=""><strong>Capacity</strong>: 120-200 residents per dome</li>
+<li class=""><strong>Total</strong>: 720-2,400 residents</li>
+<li class=""><strong>Clustered</strong>: Outer ring arrangement, connected by covered walkways</li>
+</ul>
+<p><strong>Features - Terrestrial Model</strong>:</p>
+<ul>
+<li class=""><strong>Resonance Maintenance</strong>: Acoustic design, ceremonial bell systems, geometric proportions</li>
+<li class=""><strong>Community Integration</strong>: Shared commons, private units, maker spaces</li>
+<li class=""><strong>Consciousness Connection</strong>: Regular gatherings, meditation spaces, knowledge-sharing circles</li>
+<li class=""><strong>Partial Self-Sufficiency</strong>: Shared kitchens, gardens, rainwater systems</li>
+<li class=""><strong>Ground Connection</strong>: Deep foundations, earth-coupling for thermal mass</li>
+</ul>
+<p><strong>Design Specifications</strong>:</p>
+<ul>
+<li class=""><strong>Structure</strong>: Geodesic (icosahedron or similar), CLT frame, steel connectors</li>
+<li class=""><strong>Envelope</strong>: R-30+ walls, R-50+ roof, triple-pane windows</li>
+<li class=""><strong>Interior</strong>: 3-5 levels with central atrium, spiral stairs</li>
+<li class=""><strong>Unit Mix</strong>: Studios (20%), 1-BR (40%), 2-BR (30%), 3-BR (10%)</li>
+<li class=""><strong>Shared Spaces</strong>: Ground floor commons (200-400 m²), rooftop garden</li>
+<li class=""><strong>Services</strong>: Composting toilets, greywater recycling, radiant heating/cooling</li>
 </ul>
 <p><strong>Living Experience</strong>:</p>
 <ul>
-<li>Balance of privacy and community</li>
-<li>Unity consciousness in daily life</li>
-<li>Natural alignment through resonance field</li>
-<li>Spontaneous learning and connection</li>
+<li class="">Balance of privacy (private units) and community (shared meals 2-3x/week)</li>
+<li class="">Unity consciousness through regular ceremonies and councils</li>
+<li class="">Natural alignment through biophilic design and acoustic environment</li>
+<li class="">Knowledge sharing through workshops, skill exchanges, and study groups</li>
 </ul>
-<p><em>See detailed documentation: <a href="/light-city-project/docs/concepts/communospheres">Communospheres</a></em></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="5-creative-studios">5. Creative Studios<a href="#5-creative-studios" class="hash-link" aria-label="Direct link to 5. Creative Studios" title="Direct link to 5. Creative Studios" translate="no">​</a></h3>
+<p><strong>Kit-of-Parts Approach</strong>:</p>
+<ul>
+<li class="">Modular design allows phased construction</li>
+<li class="">Each dome can be built independently</li>
+<li class="">Shared infrastructure (energy, water, waste) connects domes</li>
+<li class="">Future domes can increase in size as technology and funding allow</li>
+</ul>
+<p><em>See detailed documentation: <a class="" href="/light-city-project/docs/concepts/communospheres">Communospheres</a></em></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-creative-studios">5. Creative Studios<a href="#5-creative-studios" class="hash-link" aria-label="Direct link to 5. Creative Studios" title="Direct link to 5. Creative Studios" translate="no">​</a></h3>
 <p><strong>Purpose</strong>: Artistic and creative work</p>
 <p><strong>Features</strong>:</p>
 <ul>
-<li>Art studios</li>
-<li>Music spaces</li>
-<li>Maker spaces</li>
-<li>Performance venues</li>
+<li class="">Art studios</li>
+<li class="">Music spaces</li>
+<li class="">Maker spaces</li>
+<li class="">Performance venues</li>
 </ul>
 <p><strong>Design</strong>:</p>
 <ul>
-<li>Inspiring environments</li>
-<li>Practical functionality</li>
-<li>Acoustic considerations</li>
-<li>Gallery integration</li>
+<li class="">Inspiring environments</li>
+<li class="">Practical functionality</li>
+<li class="">Acoustic considerations</li>
+<li class="">Gallery integration</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="6-gardens-and-nature-spaces">6. Gardens and Nature Spaces<a href="#6-gardens-and-nature-spaces" class="hash-link" aria-label="Direct link to 6. Gardens and Nature Spaces" title="Direct link to 6. Gardens and Nature Spaces" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-gardens-and-nature-spaces">6. Gardens and Nature Spaces<a href="#6-gardens-and-nature-spaces" class="hash-link" aria-label="Direct link to 6. Gardens and Nature Spaces" title="Direct link to 6. Gardens and Nature Spaces" translate="no">​</a></h3>
 <p><strong>Purpose</strong>: Connection with nature, food production, beauty</p>
 <p><strong>Features</strong>:</p>
 <ul>
-<li>Terraced gardens</li>
-<li>Food forests</li>
-<li>Meditation gardens</li>
-<li>Natural water features</li>
+<li class="">Terraced gardens</li>
+<li class="">Food forests</li>
+<li class="">Meditation gardens</li>
+<li class="">Natural water features</li>
 </ul>
 <p><strong>Design</strong>:</p>
 <ul>
-<li>Integrated throughout city</li>
-<li>Sacred geometry in planting</li>
-<li>Permaculture principles</li>
-<li>Native and crystalline plants</li>
+<li class="">Integrated throughout city</li>
+<li class="">Sacred geometry in planting</li>
+<li class="">Permaculture principles</li>
+<li class="">Native and crystalline plants</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="energy-systems">Energy Systems<a href="#energy-systems" class="hash-link" aria-label="Direct link to Energy Systems" title="Direct link to Energy Systems" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="energetic-architecture">Energetic Architecture<a href="#energetic-architecture" class="hash-link" aria-label="Direct link to Energetic Architecture" title="Direct link to Energetic Architecture" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="energy-systems">Energy Systems<a href="#energy-systems" class="hash-link" aria-label="Direct link to Energy Systems" title="Direct link to Energy Systems" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="energetic-architecture">Energetic Architecture<a href="#energetic-architecture" class="hash-link" aria-label="Direct link to Energetic Architecture" title="Direct link to Energetic Architecture" translate="no">​</a></h3>
 <p>Light City operates on multiple energy levels:</p>
-<p><strong>Physical Energy</strong>:</p>
+<p><strong>Physical Energy</strong> (Conventional, TRL 8-9):</p>
 <ul>
-<li>Solar, possibly zero-point or other advanced technologies</li>
-<li>Sustainable and regenerative</li>
-<li>Excess given back to Earth&#x27;s grid</li>
+<li class="">Solar PV: 2-5 MWp (Phase 1), 5-15 MWp (Phase 2)</li>
+<li class="">Battery storage: 8-20 MWh (Phase 1), 40-80 MWh (Phase 2)</li>
+<li class="">Backup generator: 500 kW - 2 MW (diesel/propane)</li>
+<li class=""><strong>Powers</strong>: All essential systems (HVAC, lighting, kitchens, water, communications)</li>
+<li class="">Sustainable and regenerative</li>
+<li class="">Excess may be given back to Earth&#x27;s grid (if interconnected)</li>
 </ul>
-<p><strong>Subtle Energy</strong>:</p>
+<p><strong>Subtle Energy</strong> (Research, TRL 1-3):</p>
 <ul>
-<li>Sacred geometry creates coherent fields</li>
-<li>Crystalline structures amplify and direct energy</li>
-<li>Central spire distributes balanced energy</li>
-<li>Natural ley lines honored and utilized</li>
+<li class="">Sacred geometry creates coherent acoustic fields</li>
+<li class="">Crystalline structures may amplify resonance (hypothesis)</li>
+<li class="">Central spire coordinates ceremonial lighting and acoustic programs</li>
+<li class=""><strong>Influences</strong>: Human experience, consciousness, well-being (not electrical loads)</li>
+<li class="">Natural ley lines honored and utilized (visionary layer)</li>
 </ul>
-<p><strong>Consciousness Energy</strong>:</p>
+<p><strong>Consciousness Energy</strong> (Visionary Layer):</p>
 <ul>
-<li>Collective intention shapes the field</li>
-<li>Regular ceremonies maintain coherence</li>
-<li>The city &quot;learns&quot; and adapts energetically</li>
-<li>Consciousness of inhabitants is primary power source</li>
+<li class="">Collective intention shapes the experiential field</li>
+<li class="">Regular ceremonies maintain community coherence</li>
+<li class="">The city &quot;learns&quot; and adapts through community feedback</li>
+<li class=""><strong>Role</strong>: Enhances human consciousness and community well-being</li>
+<li class=""><strong>Not a power source</strong>: Physical electricity comes from microgrid (solar + batteries)</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="the-living-grid">The Living Grid<a href="#the-living-grid" class="hash-link" aria-label="Direct link to The Living Grid" title="Direct link to The Living Grid" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-living-grid">The Living Grid<a href="#the-living-grid" class="hash-link" aria-label="Direct link to The Living Grid" title="Direct link to The Living Grid" translate="no">​</a></h3>
 <p>Light City maintains an energetic grid:</p>
 <ul>
-<li><strong>Nodes</strong>: Key structures (spire, temples, major buildings)</li>
-<li><strong>Pathways</strong>: Energy flows along geometric patterns</li>
-<li><strong>Field</strong>: Coherent consciousness field pervades entire space</li>
-<li><strong>Interface</strong>: Connects to Earth&#x27;s crystalline grid</li>
+<li class=""><strong>Nodes</strong>: Key structures (spire, temples, major buildings)</li>
+<li class=""><strong>Pathways</strong>: Energy flows along geometric patterns</li>
+<li class=""><strong>Field</strong>: Coherent consciousness field pervades entire space</li>
+<li class=""><strong>Interface</strong>: Connects to Earth&#x27;s crystalline grid</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="construction-principles">Construction Principles<a href="#construction-principles" class="hash-link" aria-label="Direct link to Construction Principles" title="Direct link to Construction Principles" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="physical-construction">Physical Construction<a href="#physical-construction" class="hash-link" aria-label="Direct link to Physical Construction" title="Direct link to Physical Construction" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="construction-principles">Construction Principles<a href="#construction-principles" class="hash-link" aria-label="Direct link to Construction Principles" title="Direct link to Construction Principles" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="physical-construction">Physical Construction<a href="#physical-construction" class="hash-link" aria-label="Direct link to Physical Construction" title="Direct link to Physical Construction" translate="no">​</a></h3>
 <ol>
-<li><strong>Minimal Impact</strong>: Build with minimal Earth disruption</li>
-<li><strong>Sustainable Materials</strong>: Local, renewable, high-vibration</li>
-<li><strong>Advanced Techniques</strong>: Blend ancient wisdom and modern technology</li>
-<li><strong>Conscious Creation</strong>: Every act of building is ceremony</li>
+<li class=""><strong>Minimal Impact</strong>: Build with minimal Earth disruption</li>
+<li class=""><strong>Sustainable Materials</strong>: Local, renewable, high-vibration</li>
+<li class=""><strong>Advanced Techniques</strong>: Blend ancient wisdom and modern technology</li>
+<li class=""><strong>Conscious Creation</strong>: Every act of building is ceremony</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="energetic-construction">Energetic Construction<a href="#energetic-construction" class="hash-link" aria-label="Direct link to Energetic Construction" title="Direct link to Energetic Construction" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="energetic-construction">Energetic Construction<a href="#energetic-construction" class="hash-link" aria-label="Direct link to Energetic Construction" title="Direct link to Energetic Construction" translate="no">​</a></h3>
 <ol>
-<li><strong>Intention Setting</strong>: Clear intention for each space</li>
-<li><strong>Geometric Precision</strong>: Sacred geometry exactly rendered</li>
-<li><strong>Energy Consecration</strong>: Spaces blessed and activated</li>
-<li><strong>Conscious Maintenance</strong>: Ongoing energetic tending</li>
+<li class=""><strong>Intention Setting</strong>: Clear intention for each space</li>
+<li class=""><strong>Geometric Precision</strong>: Sacred geometry exactly rendered</li>
+<li class=""><strong>Energy Consecration</strong>: Spaces blessed and activated</li>
+<li class=""><strong>Conscious Maintenance</strong>: Ongoing energetic tending</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="scale-and-sizing">Scale and Sizing<a href="#scale-and-sizing" class="hash-link" aria-label="Direct link to Scale and Sizing" title="Direct link to Scale and Sizing" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="scale-and-sizing">Scale and Sizing<a href="#scale-and-sizing" class="hash-link" aria-label="Direct link to Scale and Sizing" title="Direct link to Scale and Sizing" translate="no">​</a></h2>
 <p><em>To be determined based on:</em></p>
 <ul>
-<li>Number of intended inhabitants</li>
-<li>Available location and resources</li>
-<li>Phasing approach</li>
-<li>Organic growth vs. master plan</li>
+<li class="">Number of intended inhabitants</li>
+<li class="">Available location and resources</li>
+<li class="">Phasing approach</li>
+<li class="">Organic growth vs. master plan</li>
 </ul>
 <p><strong>Initial Vision</strong>: Moderate scale, potentially 500-5,000 inhabitants, expandable</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="relationship-to-landscape">Relationship to Landscape<a href="#relationship-to-landscape" class="hash-link" aria-label="Direct link to Relationship to Landscape" title="Direct link to Relationship to Landscape" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="site-selection-future">Site Selection (Future)<a href="#site-selection-future" class="hash-link" aria-label="Direct link to Site Selection (Future)" title="Direct link to Site Selection (Future)" translate="no">​</a></h3>
-<p>Ideal location characteristics:</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="relationship-to-landscape">Relationship to Landscape<a href="#relationship-to-landscape" class="hash-link" aria-label="Direct link to Relationship to Landscape" title="Direct link to Relationship to Landscape" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="site-selection-future">Site Selection (Future)<a href="#site-selection-future" class="hash-link" aria-label="Direct link to Site Selection (Future)" title="Direct link to Site Selection (Future)" translate="no">​</a></h3>
+<p><strong>Siting Filters &amp; Criteria</strong>:</p>
+<p><em>Environmental</em>:</p>
 <ul>
-<li>Natural beauty and power</li>
-<li>Connection to ley lines or energy vortices</li>
-<li>Relatively undisturbed nature</li>
-<li>Climate conducive to year-round living</li>
-<li>Legal/political feasibility</li>
+<li class=""><strong>Solar Insolation</strong>: ≥ 4.5 kWh/m²/day annual average (for PV viability)</li>
+<li class=""><strong>Wind</strong>: Prevailing winds 5-15 mph for comfort; avoid extreme wind zones</li>
+<li class=""><strong>Topography</strong>: Gentle slopes (2-8%) for water terraces and passive solar</li>
+<li class=""><strong>Soils</strong>: Class I-III agricultural soils for agroforestry (USDA classification)</li>
+<li class=""><strong>Water</strong>: On-site springs, streams, or high water table; annual rainfall ≥ 30 inches</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="integration-principles">Integration Principles<a href="#integration-principles" class="hash-link" aria-label="Direct link to Integration Principles" title="Direct link to Integration Principles" translate="no">​</a></h3>
+<p><em>Infrastructure</em>:</p>
 <ul>
-<li><strong>Harmony</strong>: Architecture complements landscape</li>
-<li><strong>Minimal Disruption</strong>: Work with existing features</li>
-<li><strong>Enhancement</strong>: Improve ecosystem health</li>
-<li><strong>Sacred Recognition</strong>: Honor land&#x27;s spirit and history</li>
+<li class=""><strong>Grid Access</strong>: Within 5-10 miles of substation for interconnect (if hybrid system)</li>
+<li class=""><strong>Road Access</strong>: Paved road within 2 miles; emergency vehicle access</li>
+<li class=""><strong>Hospital</strong>: Within 30-60 minutes for medical emergencies</li>
+<li class=""><strong>Airport</strong>: Within 2 hours for logistics and guest access</li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="evolution-and-adaptation">Evolution and Adaptation<a href="#evolution-and-adaptation" class="hash-link" aria-label="Direct link to Evolution and Adaptation" title="Direct link to Evolution and Adaptation" translate="no">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="living-architecture">Living Architecture<a href="#living-architecture" class="hash-link" aria-label="Direct link to Living Architecture" title="Direct link to Living Architecture" translate="no">​</a></h3>
+<p><em>Legal &amp; Social</em>:</p>
+<ul>
+<li class=""><strong>Zoning</strong>: Rural mixed-use, agricultural, or PD (Planned Development) overlay potential</li>
+<li class=""><strong>Water Rights</strong>: Secure water rights for domestic + agricultural use</li>
+<li class=""><strong>Building Codes</strong>: Jurisdiction open to alternative building methods (CLT, geodesic)</li>
+<li class=""><strong>Community</strong>: Supportive local community or remote enough to minimize conflict</li>
+</ul>
+<p><em>Energetic</em> (Visionary Layer):</p>
+<ul>
+<li class="">Natural beauty and power</li>
+<li class="">Connection to ley lines or energy vortices (if resonant)</li>
+<li class="">Relatively undisturbed nature</li>
+<li class="">Sacred recognition of land&#x27;s spirit and history</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="permitting-pathway">Permitting Pathway<a href="#permitting-pathway" class="hash-link" aria-label="Direct link to Permitting Pathway" title="Direct link to Permitting Pathway" translate="no">​</a></h3>
+<p><strong>Anticipated Approvals</strong>:</p>
+<ul>
+<li class=""><strong>Land Use</strong>: Conditional Use Permit (CUP) or Planned Development (PD) rezoning</li>
+<li class=""><strong>Environmental</strong>: Environmental Impact Report (EIR) or Assessment (EA)</li>
+<li class=""><strong>Water</strong>: Well permits, water rights adjudication, greywater system approval</li>
+<li class=""><strong>Septic/Wastewater</strong>: On-site treatment (constructed wetlands, composting) or district system</li>
+<li class=""><strong>Building</strong>: Structural permits for tall tower (wind/seismic/ice loads), geodesic domes</li>
+<li class=""><strong>Fire</strong>: Fire access roads, water storage, defensible space (if wildfire zone)</li>
+<li class=""><strong>Electrical</strong>: Interconnection agreement with utility (if grid-tied)</li>
+</ul>
+<p><strong>Timeline</strong>: Permitting for Phase 1 typically 12-24 months depending on jurisdiction.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-principles">Integration Principles<a href="#integration-principles" class="hash-link" aria-label="Direct link to Integration Principles" title="Direct link to Integration Principles" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Harmony</strong>: Architecture complements landscape</li>
+<li class=""><strong>Minimal Disruption</strong>: Work with existing features</li>
+<li class=""><strong>Enhancement</strong>: Improve ecosystem health through regenerative design</li>
+<li class=""><strong>Sacred Recognition</strong>: Honor land&#x27;s spirit and history</li>
+<li class=""><strong>Resilience</strong>: Design for climate adaptation and long-term sustainability</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="evolution-and-adaptation">Evolution and Adaptation<a href="#evolution-and-adaptation" class="hash-link" aria-label="Direct link to Evolution and Adaptation" title="Direct link to Evolution and Adaptation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="living-architecture">Living Architecture<a href="#living-architecture" class="hash-link" aria-label="Direct link to Living Architecture" title="Direct link to Living Architecture" translate="no">​</a></h3>
 <p>Light City architecture is:</p>
 <ul>
-<li><strong>Adaptable</strong>: Can evolve with needs and understanding</li>
-<li><strong>Organic</strong>: Grows more than it&#x27;s built</li>
-<li><strong>Responsive</strong>: Adjusts to inhabitant consciousness</li>
-<li><strong>Teaching</strong>: The structures themselves teach and guide</li>
+<li class=""><strong>Adaptable</strong>: Can evolve with needs and understanding</li>
+<li class=""><strong>Organic</strong>: Grows more than it&#x27;s built</li>
+<li class=""><strong>Responsive</strong>: Adjusts to inhabitant consciousness</li>
+<li class=""><strong>Teaching</strong>: The structures themselves teach and guide</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="phasing-approach">Phasing Approach<a href="#phasing-approach" class="hash-link" aria-label="Direct link to Phasing Approach" title="Direct link to Phasing Approach" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="phasing-approach">Phasing Approach<a href="#phasing-approach" class="hash-link" aria-label="Direct link to Phasing Approach" title="Direct link to Phasing Approach" translate="no">​</a></h3>
 <ol>
-<li><strong>Core First</strong>: Central spire and plaza</li>
-<li><strong>Essential Spaces</strong>: Initial temples and gathering areas</li>
-<li><strong>Living Areas</strong>: Habitation for early inhabitants</li>
-<li><strong>Expansion</strong>: Organic growth as community develops</li>
-<li><strong>Completion</strong>: Perhaps never &quot;complete&quot; but continuously evolving</li>
+<li class=""><strong>Core First</strong>: Central spire and plaza</li>
+<li class=""><strong>Essential Spaces</strong>: Initial temples and gathering areas</li>
+<li class=""><strong>Living Areas</strong>: Habitation for early inhabitants</li>
+<li class=""><strong>Expansion</strong>: Organic growth as community develops</li>
+<li class=""><strong>Completion</strong>: Perhaps never &quot;complete&quot; but continuously evolving</li>
 </ol>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="visual-documentation-needed">Visual Documentation Needed<a href="#visual-documentation-needed" class="hash-link" aria-label="Direct link to Visual Documentation Needed" title="Direct link to Visual Documentation Needed" translate="no">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="architectural-inspirations">Architectural Inspirations<a href="#architectural-inspirations" class="hash-link" aria-label="Direct link to Architectural Inspirations" title="Direct link to Architectural Inspirations" translate="no">​</a></h2>
+<p>Light City draws wisdom from existing sacred architecture on Earth. These structures demonstrate how geometric principles, consciousness-elevating design, and spiritual intention can be manifest in stone and space:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="borobudur-temple---indonesia">Borobudur Temple - Indonesia<a href="#borobudur-temple---indonesia" class="hash-link" aria-label="Direct link to Borobudur Temple - Indonesia" title="Direct link to Borobudur Temple - Indonesia" translate="no">​</a></h3>
+<p>Borobudur is one of the greatest Buddhist monuments, built in the 8th century. Its mandala structure, concentric platforms, and spiritual intentionality directly inform Light City design concepts.</p>
+<p><img decoding="async" loading="lazy" alt="Borobudur Temple" src="/light-city-project/assets/images/Borobudur-Temple-Park_Indonesia_Stupas-of-Borobudur-04-52b5cc2d85130a508459ad1a51bfd70e.jpg" width="4757" height="3398" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Borobudur Details" src="/light-city-project/assets/images/Borobudur-Temple-4-427dddb6425b5b596c71ba0b1b68387e.jpg" width="1599" height="1066" class="img_ev3q"></p>
+<p><strong>Key Principles from Borobudur:</strong></p>
+<ul>
+<li class="">Concentric circular design (like Light City&#x27;s rings)</li>
+<li class="">Vertical ascent representing spiritual journey</li>
+<li class="">Integration of sculpture, symbolism, and geometry</li>
+<li class="">Multiple levels representing different states of consciousness</li>
+<li class="">Sacred geometry embedded in proportions</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="angkor-wat---cambodia">Angkor Wat - Cambodia<a href="#angkor-wat---cambodia" class="hash-link" aria-label="Direct link to Angkor Wat - Cambodia" title="Direct link to Angkor Wat - Cambodia" translate="no">​</a></h3>
+<p>Angkor Wat is the largest religious monument in the world, a masterpiece of Khmer architecture. Its design reflects cosmological principles and demonstrates how sacred geometry can organize vast spiritual spaces.</p>
+<p><img decoding="async" loading="lazy" alt="Angkor Wat" src="/light-city-project/assets/images/angkor-cambodia-768x768-6e279a72d93c735298a1ce724a33c8ed.jpg" width="768" height="768" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Angkor Wat Temple" src="/light-city-project/assets/images/Siem-Reap_Cambodia_shutterstock_2291676013_1_x0vnvk-2-6adf459c1df896c12368ba0d556115cc.jpg" width="1920" height="1005" class="img_ev3q"></p>
+<p><strong>Key Principles from Angkor Wat:</strong></p>
+<ul>
+<li class="">Cosmological architecture reflecting the universe</li>
+<li class="">Water integration (moats, reflection pools)</li>
+<li class="">Sacred geometry in temple proportions</li>
+<li class="">Hierarchical spatial organization</li>
+<li class="">Symbolic journey from outer to inner sanctums</li>
+<li class="">Stone craftsmanship at highest level</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="design-application">Design Application<a href="#design-application" class="hash-link" aria-label="Direct link to Design Application" title="Direct link to Design Application" translate="no">​</a></h3>
+<p>Both Borobudur and Angkor Wat demonstrate that:</p>
+<ol>
+<li class=""><strong>Large-scale spiritual spaces can be built</strong> with ancient techniques</li>
+<li class=""><strong>Sacred geometry works</strong> in creating consciousness-elevating environments</li>
+<li class=""><strong>Symbolic and practical can integrate</strong> seamlessly</li>
+<li class=""><strong>Community effort can manifest visions</strong> across generations</li>
+</ol>
+<p>Light City builds upon these principles with modern understanding and advanced technology to create spaces even more aligned with consciousness evolution.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-documentation-needed">Visual Documentation Needed<a href="#visual-documentation-needed" class="hash-link" aria-label="Direct link to Visual Documentation Needed" title="Direct link to Visual Documentation Needed" translate="no">​</a></h2>
 <p><em>To be created in future stages:</em></p>
 <ul class="contains-task-list containsTaskList_mC6p">
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Overhead city layout diagram</li>
@@ -373,9 +546,89 @@
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Material palettes</li>
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->Lighting studies</li>
 </ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-readiness">Implementation Readiness<a href="#implementation-readiness" class="hash-link" aria-label="Direct link to Implementation Readiness" title="Direct link to Implementation Readiness" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technology-readiness-levels-trl-by-subsystem">Technology Readiness Levels (TRL) by Subsystem<a href="#technology-readiness-levels-trl-by-subsystem" class="hash-link" aria-label="Direct link to Technology Readiness Levels (TRL) by Subsystem" title="Direct link to Technology Readiness Levels (TRL) by Subsystem" translate="no">​</a></h3>
+<table><thead><tr><th>Subsystem</th><th>Phase 1 (18-24 mo)</th><th>Phase 2 (36-48 mo)</th><th>Current TRL</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Spire (Terrestrial)</strong></td><td>60-120 m light/acoustic tower; PV canopy</td><td>120-300 m tower; public deck</td><td>3-4</td><td>Steel/CLT hybrid proven; LED art systems mature</td></tr><tr><td><strong>Communospheres</strong></td><td>3 domes (30-45 m)</td><td>6-12 domes (45-60 m)</td><td>4-5</td><td>Geodesic CLT domes built globally; BIPV glazing TRL 6-7</td></tr><tr><td><strong>Plaza/Temples</strong></td><td>Central plaza + 1 temple</td><td>3-5 temples</td><td>4-6</td><td>Sacred architecture well-established; acoustic design mature</td></tr><tr><td><strong>Energy (Physical)</strong></td><td>2-5 MWp PV + 8-20 MWh storage</td><td>5-15 MWp + 40-80 MWh</td><td>6-8</td><td>Solar+storage is proven tech; micro-grid controls TRL 7</td></tr><tr><td><strong>Water/Food</strong></td><td>Rain/grey loops; 1-2 ha agroforestry</td><td>5-10 ha food forests</td><td>5-6</td><td>Permaculture systems proven; greywater recycling TRL 6</td></tr><tr><td><strong>&quot;Subtle Grid&quot;</strong></td><td>Ceremonies, lighting programs</td><td>City-scale wayfinding light grid</td><td>1-3</td><td>Consciousness tech experimental; acoustic resonance TRL 3-4</td></tr></tbody></table>
+<p><strong>TRL Scale</strong>: 1 = Basic research, 3 = Proof of concept, 5 = Prototype, 7 = Demonstrated in operational environment, 9 = Proven in production</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-1-program--areas-pilot-hamlet">Phase 1 Program &amp; Areas (Pilot Hamlet)<a href="#phase-1-program--areas-pilot-hamlet" class="hash-link" aria-label="Direct link to Phase 1 Program &amp; Areas (Pilot Hamlet)" title="Direct link to Phase 1 Program &amp; Areas (Pilot Hamlet)" translate="no">​</a></h3>
+<p><strong>Central Plaza</strong>: 1-1.5 hectares (2.5-3.7 acres)</p>
+<ul>
+<li class="">Gathering capacity: 500-1,000 people</li>
+<li class="">Features: Central fountain, fire pit, amphitheater seating</li>
+<li class="">Materials: Stone, permeable paving, native plantings</li>
+</ul>
+<p><strong>Temple</strong>: 1,200-2,000 m² (13,000-21,500 sq ft)</p>
+<ul>
+<li class="">Main hall: 600-1,000 m² with RT60 1.6-2.0 s</li>
+<li class="">Meditation rooms: 200-400 m² with RT60 0.3-0.5 s</li>
+<li class="">Support spaces: 400-600 m²</li>
+</ul>
+<p><strong>Studios/Maker Spaces</strong>: 1,500-3,000 m² (16,000-32,000 sq ft)</p>
+<ul>
+<li class="">Art studios, woodshop, metal shop, ceramics, textiles</li>
+<li class="">Shared equipment and tools</li>
+<li class="">Natural light and ventilation</li>
+</ul>
+<p><strong>Communospheres</strong>: 3 domes @ 30-45 m diameter</p>
+<ul>
+<li class="">Total units: 80-120 (mix of studio to 3-BR)</li>
+<li class="">Shared commons: 600-1,200 m² total</li>
+<li class="">Rooftop gardens: 1,000-2,000 m²</li>
+</ul>
+<p><strong>Gardens &amp; Food</strong>: 4-6 hectares (10-15 acres)</p>
+<ul>
+<li class="">Agroforestry: 1-2 ha</li>
+<li class="">Annual gardens: 0.5-1 ha</li>
+<li class="">Orchards: 1-2 ha</li>
+<li class="">Wildlands/buffer: 1.5-2 ha</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="budget-framework-phase-1-hamlet">Budget Framework (Phase 1 Hamlet)<a href="#budget-framework-phase-1-hamlet" class="hash-link" aria-label="Direct link to Budget Framework (Phase 1 Hamlet)" title="Direct link to Budget Framework (Phase 1 Hamlet)" translate="no">​</a></h3>
+<p><strong>Preliminary Cost Ranges</strong> (2025 USD, order-of-magnitude):</p>
+<table><thead><tr><th>Category</th><th>Low</th><th>Medium</th><th>High</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Land Acquisition</strong></td><td>$500K</td><td>$2M</td><td>$5M</td><td>Varies wildly by location; rural vs. peri-urban</td></tr><tr><td><strong>Site Infrastructure</strong></td><td>$1M</td><td>$3M</td><td>$6M</td><td>Roads, utilities, earthwork, drainage</td></tr><tr><td><strong>Spire Tower</strong></td><td>$2M</td><td>$5M</td><td>$10M</td><td>60-120 m; steel/CLT; PV canopy; LED systems</td></tr><tr><td><strong>3 Communosphere Domes</strong></td><td>$6M</td><td>$12M</td><td>$20M</td><td>$2M-$7M each; CLT+steel; BIPV; interiors</td></tr><tr><td><strong>Plaza + 1 Temple</strong></td><td>$2M</td><td>$5M</td><td>$10M</td><td>Stone/concrete plaza; timber-frame temple</td></tr><tr><td><strong>Studios/Maker</strong></td><td>$1M</td><td>$2M</td><td>$4M</td><td>Light industrial construction</td></tr><tr><td><strong>PV + Storage</strong></td><td>$3M</td><td>$6M</td><td>$10M</td><td>2-5 MWp solar; 8-20 MWh batteries</td></tr><tr><td><strong>Water/Septic/Food</strong></td><td>$1M</td><td>$2M</td><td>$4M</td><td>Wells, treatment, irrigation, orchards</td></tr><tr><td><strong>Soft Costs</strong></td><td>$3M</td><td>$7M</td><td>$12M</td><td>Design, permits, legal, contingency (20-30%)</td></tr><tr><td><strong>TOTAL</strong></td><td><strong>$19M</strong></td><td><strong>$44M</strong></td><td><strong>$81M</strong></td><td>Phase 1 capital cost range</td></tr></tbody></table>
+<p><strong>Funding Strategies</strong>:</p>
+<ul>
+<li class="">Founder equity + friends/family</li>
+<li class="">Impact investors (ESG, regenerative economy)</li>
+<li class="">Crowdfunding (Kickstarter, equity crowdfunding)</li>
+<li class="">Grants (foundations, government innovation programs)</li>
+<li class="">Pre-sales (founding resident memberships)</li>
+<li class="">Revenue from retreats, events, agritourism during construction</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="operations-model-steady-state">Operations Model (Steady-State)<a href="#operations-model-steady-state" class="hash-link" aria-label="Direct link to Operations Model (Steady-State)" title="Direct link to Operations Model (Steady-State)" translate="no">​</a></h3>
+<p><strong>Resident Mix</strong>:</p>
+<ul>
+<li class="">Founding members: 30-40% (equity holders)</li>
+<li class="">Long-term residents: 40-50% (renters, co-op members)</li>
+<li class="">Guests/researchers: 10-20% (short-term, revenue-generating)</li>
+<li class="">Staff: 5-10% (on-site workers)</li>
+</ul>
+<p><strong>Revenue Streams</strong>:</p>
+<ul>
+<li class="">Resident fees: $800-$1,500/month per person (housing + food + utilities)</li>
+<li class="">Retreat programs: $150-$300/person/day (workshops, ceremonies)</li>
+<li class="">Studio residencies: $1,000-$3,000/month (artists, researchers)</li>
+<li class="">Events: Weddings, festivals, conferences</li>
+<li class="">Agritourism: Farm tours, harvest experiences</li>
+<li class="">Product sales: Crafts, food products, educational materials</li>
+</ul>
+<p><strong>Operating Expenses</strong>:</p>
+<ul>
+<li class="">Staffing: $500K-$1.5M/year (10-20 FTE)</li>
+<li class="">Utilities: $100K-$300K/year (supplemental grid, internet, phone)</li>
+<li class="">Maintenance: $200K-$500K/year (buildings, equipment, grounds)</li>
+<li class="">Food: $200K-$500K/year (supplemental purchases)</li>
+<li class="">Insurance: $100K-$300K/year (property, liability, health)</li>
+<li class="">Reserves: $200K-$500K/year (capital replacement, contingency)</li>
+<li class=""><strong>TOTAL</strong>: $1.3M-$3.6M/year</li>
+</ul>
+<p><strong>Break-Even</strong>: Requires $400-$1,000/month net revenue per resident, achievable with mixed model.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="risk-register-top-10">Risk Register (Top 10)<a href="#risk-register-top-10" class="hash-link" aria-label="Direct link to Risk Register (Top 10)" title="Direct link to Risk Register (Top 10)" translate="no">​</a></h3>
+<table><thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody><tr><td><strong>Fire</strong> (wildfire zone)</td><td>Medium</td><td>Critical</td><td>Defensible space, sprinklers, fire-resistant materials, insurance</td></tr><tr><td><strong>Wind on Domes</strong></td><td>Medium</td><td>High</td><td>Engineered for 120+ mph winds; aerodynamic design; insurance</td></tr><tr><td><strong>Water Rights</strong></td><td>Medium</td><td>High</td><td>Secure rights before purchase; backup well; rainwater systems</td></tr><tr><td><strong>Budget Creep</strong></td><td>High</td><td>High</td><td>Phased approach; value engineering; 20-30% contingency</td></tr><tr><td><strong>Neighbor Pushback</strong></td><td>Medium</td><td>Medium</td><td>Community engagement; buffer zones; noise/light management</td></tr><tr><td><strong>Permitting Delays</strong></td><td>High</td><td>Medium</td><td>Pre-application meetings; experienced consultants; flexible timeline</td></tr><tr><td><strong>Founder Conflict</strong></td><td>Medium</td><td>High</td><td>Clear governance; conflict resolution processes; exit mechanisms</td></tr><tr><td><strong>Market Downturn</strong></td><td>Medium</td><td>Medium</td><td>Diversified funding; pre-sales; revenue generation during construction</td></tr><tr><td><strong>Construction Defects</strong></td><td>Medium</td><td>High</td><td>Experienced contractors; third-party inspections; warranties</td></tr><tr><td><strong>Consciousness Tech Fails</strong></td><td>High</td><td>Low</td><td>Physical systems work independently; subtle layer is enhancement not dependency</td></tr></tbody></table>
 <hr>
-<p><strong>Status</strong>: Foundational vision - requires significant expansion and visualization<br>
-<strong>Last Updated</strong>: October 10, 2025<br>
-<strong>Related</strong>: <a href="/light-city-project/docs/concepts/core-concepts">Core Concepts</a>, <a href="/light-city-project/docs/concepts/sacred-geometry">Sacred Geometry</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/szemkoff/light-city-project/edit/main/docs/design/architecture.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/light-city-project/docs/concepts/purpose-and-mission"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Purpose and Mission</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/light-city-project/docs/concepts/communospheres"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Communospheres</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#core-design-principles" class="table-of-contents__link toc-highlight">Core Design Principles</a><ul><li><a href="#1-sacred-geometry" class="table-of-contents__link toc-highlight">1. Sacred Geometry</a></li><li><a href="#2-light-as-primary-element" class="table-of-contents__link toc-highlight">2. Light as Primary Element</a></li><li><a href="#3-sound-and-resonance" class="table-of-contents__link toc-highlight">3. Sound and Resonance</a></li><li><a href="#4-vertical-and-horizontal-integration" class="table-of-contents__link toc-highlight">4. Vertical and Horizontal Integration</a></li></ul></li><li><a href="#overall-layout" class="table-of-contents__link toc-highlight">Overall Layout</a><ul><li><a href="#circular-form" class="table-of-contents__link toc-highlight">Circular Form</a></li><li><a href="#delphin-inspired-model" class="table-of-contents__link toc-highlight">Delphin-Inspired Model</a></li><li><a href="#the-central-spire" class="table-of-contents__link toc-highlight">The Central Spire</a></li><li><a href="#supporting-architecture" class="table-of-contents__link toc-highlight">Supporting Architecture</a></li></ul></li><li><a href="#architectural-styles-and-influences" class="table-of-contents__link toc-highlight">Architectural Styles and Influences</a><ul><li><a href="#primary-influences" class="table-of-contents__link toc-highlight">Primary Influences</a></li><li><a href="#visual-characteristics" class="table-of-contents__link toc-highlight">Visual Characteristics</a></li></ul></li><li><a href="#specific-spaces" class="table-of-contents__link toc-highlight">Specific Spaces</a><ul><li><a href="#1-the-central-plaza" class="table-of-contents__link toc-highlight">1. The Central Plaza</a></li><li><a href="#2-temples-and-meditation-spaces" class="table-of-contents__link toc-highlight">2. Temples and Meditation Spaces</a></li><li><a href="#3-learning-centers" class="table-of-contents__link toc-highlight">3. Learning Centers</a></li><li><a href="#4-living-spaces---communospheres" class="table-of-contents__link toc-highlight">4. Living Spaces - Communospheres</a></li><li><a href="#5-creative-studios" class="table-of-contents__link toc-highlight">5. Creative Studios</a></li><li><a href="#6-gardens-and-nature-spaces" class="table-of-contents__link toc-highlight">6. Gardens and Nature Spaces</a></li></ul></li><li><a href="#energy-systems" class="table-of-contents__link toc-highlight">Energy Systems</a><ul><li><a href="#energetic-architecture" class="table-of-contents__link toc-highlight">Energetic Architecture</a></li><li><a href="#the-living-grid" class="table-of-contents__link toc-highlight">The Living Grid</a></li></ul></li><li><a href="#construction-principles" class="table-of-contents__link toc-highlight">Construction Principles</a><ul><li><a href="#physical-construction" class="table-of-contents__link toc-highlight">Physical Construction</a></li><li><a href="#energetic-construction" class="table-of-contents__link toc-highlight">Energetic Construction</a></li></ul></li><li><a href="#scale-and-sizing" class="table-of-contents__link toc-highlight">Scale and Sizing</a></li><li><a href="#relationship-to-landscape" class="table-of-contents__link toc-highlight">Relationship to Landscape</a><ul><li><a href="#site-selection-future" class="table-of-contents__link toc-highlight">Site Selection (Future)</a></li><li><a href="#integration-principles" class="table-of-contents__link toc-highlight">Integration Principles</a></li></ul></li><li><a href="#evolution-and-adaptation" class="table-of-contents__link toc-highlight">Evolution and Adaptation</a><ul><li><a href="#living-architecture" class="table-of-contents__link toc-highlight">Living Architecture</a></li><li><a href="#phasing-approach" class="table-of-contents__link toc-highlight">Phasing Approach</a></li></ul></li><li><a href="#visual-documentation-needed" class="table-of-contents__link toc-highlight">Visual Documentation Needed</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/START-HERE">Start Here</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/concepts/core-concepts">Core Concepts</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/design/architecture">Architecture</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Project</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/development-stages">Development Stages</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/contributing">Contributing</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/quick-start-guide">Quick Start</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/blog">Updates</a></li><li class="footer__item"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Light City Project © 2025. Built with Docusaurus.</div></div></div></footer></div>
+<p><strong>Status</strong>: Upgraded to investor/permit-ready framework with phased implementation<br>
+<strong>Version</strong>: 2.0 (Energy Clarity)<br>
+<strong>Last Updated</strong>: November 14, 2025<br>
+<strong>Last Reviewed</strong>: November 14, 2025<br>
+<strong>Related</strong>: <a class="" href="/light-city-project/docs/concepts/core-concepts">Core Concepts</a>, <a class="" href="/light-city-project/docs/concepts/sacred-geometry">Sacred Geometry</a>, <a class="" href="/light-city-project/docs/project/development-stages">Development Stages</a>, <a class="" href="/light-city-project/docs/concepts/energy-systems">Energy Systems</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/szemkoff/light-city-project/edit/main/docs/design/architecture.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/light-city-project/docs/concepts/purpose-and-mission"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Purpose and Mission</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/light-city-project/docs/concepts/communospheres"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Communospheres</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a><ul><li><a href="#vision-references" class="table-of-contents__link toc-highlight">Vision References</a></li></ul></li><li><a href="#core-design-principles" class="table-of-contents__link toc-highlight">Core Design Principles</a><ul><li><a href="#1-sacred-geometry" class="table-of-contents__link toc-highlight">1. Sacred Geometry</a></li><li><a href="#2-light-as-primary-element" class="table-of-contents__link toc-highlight">2. Light as Primary Element</a></li><li><a href="#3-sound-and-resonance" class="table-of-contents__link toc-highlight">3. Sound and Resonance</a></li><li><a href="#4-vertical-and-horizontal-integration" class="table-of-contents__link toc-highlight">4. Vertical and Horizontal Integration</a></li></ul></li><li><a href="#overall-layout" class="table-of-contents__link toc-highlight">Overall Layout</a><ul><li><a href="#phased-development--scale" class="table-of-contents__link toc-highlight">Phased Development &amp; Scale</a></li><li><a href="#circular-form" class="table-of-contents__link toc-highlight">Circular Form</a></li><li><a href="#delphin-inspired-model" class="table-of-contents__link toc-highlight">Delphin-Inspired Model</a></li><li><a href="#the-central-spire" class="table-of-contents__link toc-highlight">The Central Spire</a></li><li><a href="#supporting-architecture" class="table-of-contents__link toc-highlight">Supporting Architecture</a></li></ul></li><li><a href="#architectural-styles-and-influences" class="table-of-contents__link toc-highlight">Architectural Styles and Influences</a><ul><li><a href="#primary-influences" class="table-of-contents__link toc-highlight">Primary Influences</a></li><li><a href="#visual-characteristics" class="table-of-contents__link toc-highlight">Visual Characteristics</a></li></ul></li><li><a href="#specific-spaces" class="table-of-contents__link toc-highlight">Specific Spaces</a><ul><li><a href="#1-the-central-plaza" class="table-of-contents__link toc-highlight">1. The Central Plaza</a></li><li><a href="#2-temples-and-meditation-spaces" class="table-of-contents__link toc-highlight">2. Temples and Meditation Spaces</a></li><li><a href="#3-learning-centers" class="table-of-contents__link toc-highlight">3. Learning Centers</a></li><li><a href="#4-living-spaces---communospheres" class="table-of-contents__link toc-highlight">4. Living Spaces - Communospheres</a></li><li><a href="#5-creative-studios" class="table-of-contents__link toc-highlight">5. Creative Studios</a></li><li><a href="#6-gardens-and-nature-spaces" class="table-of-contents__link toc-highlight">6. Gardens and Nature Spaces</a></li></ul></li><li><a href="#energy-systems" class="table-of-contents__link toc-highlight">Energy Systems</a><ul><li><a href="#energetic-architecture" class="table-of-contents__link toc-highlight">Energetic Architecture</a></li><li><a href="#the-living-grid" class="table-of-contents__link toc-highlight">The Living Grid</a></li></ul></li><li><a href="#construction-principles" class="table-of-contents__link toc-highlight">Construction Principles</a><ul><li><a href="#physical-construction" class="table-of-contents__link toc-highlight">Physical Construction</a></li><li><a href="#energetic-construction" class="table-of-contents__link toc-highlight">Energetic Construction</a></li></ul></li><li><a href="#scale-and-sizing" class="table-of-contents__link toc-highlight">Scale and Sizing</a></li><li><a href="#relationship-to-landscape" class="table-of-contents__link toc-highlight">Relationship to Landscape</a><ul><li><a href="#site-selection-future" class="table-of-contents__link toc-highlight">Site Selection (Future)</a></li><li><a href="#permitting-pathway" class="table-of-contents__link toc-highlight">Permitting Pathway</a></li><li><a href="#integration-principles" class="table-of-contents__link toc-highlight">Integration Principles</a></li></ul></li><li><a href="#evolution-and-adaptation" class="table-of-contents__link toc-highlight">Evolution and Adaptation</a><ul><li><a href="#living-architecture" class="table-of-contents__link toc-highlight">Living Architecture</a></li><li><a href="#phasing-approach" class="table-of-contents__link toc-highlight">Phasing Approach</a></li></ul></li><li><a href="#architectural-inspirations" class="table-of-contents__link toc-highlight">Architectural Inspirations</a><ul><li><a href="#borobudur-temple---indonesia" class="table-of-contents__link toc-highlight">Borobudur Temple - Indonesia</a></li><li><a href="#angkor-wat---cambodia" class="table-of-contents__link toc-highlight">Angkor Wat - Cambodia</a></li><li><a href="#design-application" class="table-of-contents__link toc-highlight">Design Application</a></li></ul></li><li><a href="#visual-documentation-needed" class="table-of-contents__link toc-highlight">Visual Documentation Needed</a></li><li><a href="#implementation-readiness" class="table-of-contents__link toc-highlight">Implementation Readiness</a><ul><li><a href="#technology-readiness-levels-trl-by-subsystem" class="table-of-contents__link toc-highlight">Technology Readiness Levels (TRL) by Subsystem</a></li><li><a href="#phase-1-program--areas-pilot-hamlet" class="table-of-contents__link toc-highlight">Phase 1 Program &amp; Areas (Pilot Hamlet)</a></li><li><a href="#budget-framework-phase-1-hamlet" class="table-of-contents__link toc-highlight">Budget Framework (Phase 1 Hamlet)</a></li><li><a href="#operations-model-steady-state" class="table-of-contents__link toc-highlight">Operations Model (Steady-State)</a></li><li><a href="#risk-register-top-10" class="table-of-contents__link toc-highlight">Risk Register (Top 10)</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/START-HERE">Start Here</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/concepts/core-concepts">Core Concepts</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/design/architecture">Architecture</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Project</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/development-stages">Development Stages</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/blog">Updates</a></li><li class="footer__item"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Light City Project © 2026. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>

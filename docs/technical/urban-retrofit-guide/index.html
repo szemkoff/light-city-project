@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-technical/urban-retrofit-guide" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Urban Retrofit Guide | Light City Project</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://szemkoff.github.io/light-city-project/img/light-city-vision-1.jpg"><meta data-rh="true" name="twitter:image" content="https://szemkoff.github.io/light-city-project/img/light-city-vision-1.jpg"><meta data-rh="true" property="og:url" content="https://szemkoff.github.io/light-city-project/docs/technical/urban-retrofit-guide"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Urban Retrofit Guide | Light City Project"><meta data-rh="true" name="description" content="Applying Light City principles to existing cities at any stage of development"><meta data-rh="true" property="og:description" content="Applying Light City principles to existing cities at any stage of development"><link data-rh="true" rel="icon" href="/light-city-project/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://szemkoff.github.io/light-city-project/docs/technical/urban-retrofit-guide"><link data-rh="true" rel="alternate" href="https://szemkoff.github.io/light-city-project/docs/technical/urban-retrofit-guide" hreflang="en"><link data-rh="true" rel="alternate" href="https://szemkoff.github.io/light-city-project/docs/technical/urban-retrofit-guide" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Urban Retrofit Guide","item":"https://szemkoff.github.io/light-city-project/docs/technical/urban-retrofit-guide"}]}</script><link rel="alternate" type="application/rss+xml" href="/light-city-project/blog/rss.xml" title="Light City Project RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/light-city-project/blog/atom.xml" title="Light City Project Atom Feed"><link rel="stylesheet" href="/light-city-project/assets/css/styles.bc39025d.css">
+<script src="/light-city-project/assets/js/runtime~main.e8b7f8eb.js" defer="defer"></script>
+<script src="/light-city-project/assets/js/main.d650e57b.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/light-city-project/"><div class="navbar__logo"><img src="/light-city-project/img/light-city-logo-navbar.png" alt="Light City" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/light-city-project/img/light-city-logo-navbar.png" alt="Light City" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/light-city-project/docs/START-HERE">Documentation</a><a class="navbar__item navbar__link" href="/light-city-project/blog">Updates</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/START-HERE"><span title="🌟 Start Here" class="linkLabel_WmDU">🌟 Start Here</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/concepts/core-concepts"><span title="Vision &amp; Philosophy" class="categoryLinkLabel_W154">Vision &amp; Philosophy</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/design/architecture"><span title="Sacred Design" class="categoryLinkLabel_W154">Sacred Design</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/project/development-stages"><span title="Development" class="categoryLinkLabel_W154">Development</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/light-city-project/docs/technical/technology-catalog"><span title="Technical &amp; Implementation" class="categoryLinkLabel_W154">Technical &amp; Implementation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/light-city-project/docs/technical/technology-catalog"><span title="Technology Catalog" class="linkLabel_WmDU">Technology Catalog</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/light-city-project/docs/technical/urban-retrofit-guide"><span title="Urban Retrofit Guide" class="linkLabel_WmDU">Urban Retrofit Guide</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/light-city-project/docs/research/bibliography"><span title="Research &amp; Resources" class="categoryLinkLabel_W154">Research &amp; Resources</span></a></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/light-city-project/docs/"><span title="Documentation Index" class="linkLabel_WmDU">Documentation Index</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/light-city-project/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Technical &amp; Implementation</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Urban Retrofit Guide</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Urban Retrofit Guide</h1></header>
+<p><em>Applying Light City principles to existing cities at any stage of development</em></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Light City principles aren&#x27;t just for greenfield development—they can transform existing urban environments. This guide provides <strong>actionable frameworks</strong> for cities like Miami, New York, or any municipality to adopt Light City concepts incrementally.</p>
+<p><strong>Key Insight</strong>: You don&#x27;t need to build a new city. You can <strong>upgrade consciousness, geometry, and sustainability</strong> into existing infrastructure through policy, design guidelines, and strategic interventions.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="retrofit-framework-5-intervention-scales">Retrofit Framework: 5 Intervention Scales<a href="#retrofit-framework-5-intervention-scales" class="hash-link" aria-label="Direct link to Retrofit Framework: 5 Intervention Scales" title="Direct link to Retrofit Framework: 5 Intervention Scales" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="policy--code-level-citywide"><strong>Policy &amp; Code Level</strong> (Citywide)<a href="#policy--code-level-citywide" class="hash-link" aria-label="Direct link to policy--code-level-citywide" title="Direct link to policy--code-level-citywide" translate="no">​</a></h3>
+<p>Embed principles into regulations and incentives</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="districtneighborhood-level-1-5-sq-mi"><strong>District/Neighborhood Level</strong> (1-5 sq mi)<a href="#districtneighborhood-level-1-5-sq-mi" class="hash-link" aria-label="Direct link to districtneighborhood-level-1-5-sq-mi" title="Direct link to districtneighborhood-level-1-5-sq-mi" translate="no">​</a></h3>
+<p>Pilot zones with concentrated interventions</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="blockstreet-level-1-10-acres"><strong>Block/Street Level</strong> (1-10 acres)<a href="#blockstreet-level-1-10-acres" class="hash-link" aria-label="Direct link to blockstreet-level-1-10-acres" title="Direct link to blockstreet-level-1-10-acres" translate="no">​</a></h3>
+<p>Tactical urbanism and quick wins</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="building-level-individual-structures"><strong>Building Level</strong> (Individual structures)<a href="#building-level-individual-structures" class="hash-link" aria-label="Direct link to building-level-individual-structures" title="Direct link to building-level-individual-structures" translate="no">​</a></h3>
+<p>Retrofit guidelines for private development</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="interiorunit-level-rooms-apartments"><strong>Interior/Unit Level</strong> (Rooms, apartments)<a href="#interiorunit-level-rooms-apartments" class="hash-link" aria-label="Direct link to interiorunit-level-rooms-apartments" title="Direct link to interiorunit-level-rooms-apartments" translate="no">​</a></h3>
+<p>Personal spaces aligned with principles</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="policy--code-interventions">Policy &amp; Code Interventions<a href="#policy--code-interventions" class="hash-link" aria-label="Direct link to Policy &amp; Code Interventions" title="Direct link to Policy &amp; Code Interventions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-sacred-geometry-overlay-district">1 Sacred Geometry Overlay District<a href="#1-sacred-geometry-overlay-district" class="hash-link" aria-label="Direct link to 1 Sacred Geometry Overlay District" title="Direct link to 1 Sacred Geometry Overlay District" translate="no">​</a></h3>
+<p><strong>What</strong>: Zoning overlay that incentivizes sacred geometry in new construction and public space design.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Bonus FAR/Height</strong>: +10-20% density bonus for buildings incorporating:<!-- -->
+<ul>
+<li class="">Golden ratio proportions (1.618:1) in facade, floor plans</li>
+<li class="">Circular or radial site plans</li>
+<li class="">Fibonacci sequence in setbacks, window spacing</li>
+</ul>
+</li>
+<li class=""><strong>Expedited Permitting</strong>: Fast-track projects with sacred geometry elements</li>
+<li class=""><strong>Public Art Requirement</strong>: 1% of construction cost for sacred geometry installations</li>
+</ul>
+<p><strong>Example Code Language</strong>:</p>
+<blockquote>
+<p>&quot;Buildings demonstrating sacred geometric principles (golden ratio, Platonic solids, circular forms) in facade design, floor plans, or site layout shall receive a Floor Area Ratio bonus of up to 15%, subject to design review board approval.&quot;</p>
+</blockquote>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Paris, France: Haussmann&#x27;s radial boulevards (sacred geometry at city scale)</li>
+<li class="">Brasília, Brazil: Pilot Plan based on airplane/bird geometry</li>
+<li class="">Washington DC: L&#x27;Enfant Plan with radial avenues</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Overlay district in Design District, Wynwood, or Brickell</li>
+<li class="">Pilot with 3-5 year sunset clause, evaluate results</li>
+<li class="">Pair with public realm improvements (see Section 1.3)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-biophilic-design-standards">2 Biophilic Design Standards<a href="#2-biophilic-design-standards" class="hash-link" aria-label="Direct link to 2 Biophilic Design Standards" title="Direct link to 2 Biophilic Design Standards" translate="no">​</a></h3>
+<p><strong>What</strong>: Mandatory or incentivized integration of nature into buildings.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Green Roof Requirement</strong>: 50%+ roof area for buildings &gt;10,000 sq ft</li>
+<li class=""><strong>Living Walls</strong>: Vertical gardens on 10%+ of facade area (bonus FAR)</li>
+<li class=""><strong>Indoor Biophilia</strong>: Minimum plant density (1 plant per 100 sq ft office space)</li>
+<li class=""><strong>Daylighting</strong>: 75%+ of occupied spaces within 25 ft of windows</li>
+</ul>
+<p><strong>Metrics</strong> (LEED, WELL, Living Building Challenge):</p>
+<ul>
+<li class="">Air quality: CO₂ &lt;800 ppm, VOCs &lt;500 µg/m³</li>
+<li class="">Daylight: 300+ lux for 75%+ of hours</li>
+<li class="">Views: 75%+ of spaces with exterior views</li>
+<li class="">Biophilic elements: 7+ of 14 patterns (Terrapin Bright Green framework)</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Singapore: 50% green plot ratio requirement (2009)</li>
+<li class="">San Francisco: Living Roof Ordinance (2016)</li>
+<li class="">Portland: Ecoroof incentive program</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Start with city-owned buildings (lead by example)</li>
+<li class="">Incentive program: Stormwater fee reduction for green roofs</li>
+<li class="">Partner with University of Miami for monitoring/research</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-hanging-hydroponic-gardens-mandate">3 Hanging Hydroponic Gardens Mandate<a href="#3-hanging-hydroponic-gardens-mandate" class="hash-link" aria-label="Direct link to 3 Hanging Hydroponic Gardens Mandate" title="Direct link to 3 Hanging Hydroponic Gardens Mandate" translate="no">​</a></h3>
+<p><strong>What</strong>: Require or incentivize vertical food production in new developments.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Urban Agriculture Zoning</strong>: Allow commercial urban farms in all zones</li>
+<li class=""><strong>Hydroponic Bonus</strong>: +5-10% FAR for buildings with productive vertical farms</li>
+<li class=""><strong>Rooftop Farm Requirement</strong>: Buildings &gt;50,000 sq ft must dedicate 20%+ of roof to food production OR contribute to community farm fund</li>
+<li class=""><strong>Tax Incentive</strong>: Property tax abatement (10-20%) for buildings with certified urban farms</li>
+</ul>
+<p><strong>Design Standards</strong>:</p>
+<ul>
+<li class="">Minimum 1,000 sq ft productive area</li>
+<li class="">Certified organic or hydroponic/aquaponic systems</li>
+<li class="">Public access component (farm stand, tours, education)</li>
+<li class="">Integration with building water/energy systems</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Paris: 100 hectares of green roofs/walls by 2020 (achieved)</li>
+<li class="">Toronto: Green Roof Bylaw (2009) - 20-60% coverage required</li>
+<li class="">Brooklyn Grange (NYC): 5.6 acres of rooftop farms</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Pilot in Wynwood/Design District (already food-forward culture)</li>
+<li class="">Partner with Farmshelf, Freight Farms for turnkey systems</li>
+<li class="">Integrate with Miami-Dade food security programs</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-circadian-lighting-code">4 Circadian Lighting Code<a href="#4-circadian-lighting-code" class="hash-link" aria-label="Direct link to 4 Circadian Lighting Code" title="Direct link to 4 Circadian Lighting Code" translate="no">​</a></h3>
+<p><strong>What</strong>: Require human-centric lighting in public spaces and new construction.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Public Realm</strong>: All streetlights, park lighting must be tunable white (2700K-5000K)</li>
+<li class=""><strong>New Construction</strong>: Commercial/residential buildings &gt;20,000 sq ft must install circadian lighting in common areas</li>
+<li class=""><strong>Retrofit Incentive</strong>: Rebate program for existing buildings (50% cost, up to $50K)</li>
+</ul>
+<p><strong>Standards</strong>:</p>
+<ul>
+<li class="">Daytime (6am-12pm): 5000-6500K (blue-rich, alertness)</li>
+<li class="">Afternoon (12pm-6pm): 4000-5000K (neutral)</li>
+<li class="">Evening (6pm-10pm): 3000-3500K (warm transition)</li>
+<li class="">Night (10pm-6am): 2700-3000K (minimal blue, melatonin-friendly)</li>
+</ul>
+<p><strong>Health Benefits</strong>:</p>
+<ul>
+<li class="">Improved sleep quality (30-40% per studies)</li>
+<li class="">Reduced depression (SAD mitigation)</li>
+<li class="">Better focus and productivity</li>
+<li class="">Aligned with natural circadian rhythms</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Eindhoven, Netherlands: Circadian street lighting pilot</li>
+<li class="">Rensselaer Polytechnic Institute: Circadian-optimized campus</li>
+<li class="">Various hospitals: Circadian lighting in patient rooms</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Start with Baywalk, Brickell City Centre, public parks</li>
+<li class="">Partner with Ketra, Philips for demonstration projects</li>
+<li class="">Measure health outcomes (sleep tracking, surveys)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-acoustic-wellness-standards">5 Acoustic Wellness Standards<a href="#5-acoustic-wellness-standards" class="hash-link" aria-label="Direct link to 5 Acoustic Wellness Standards" title="Direct link to 5 Acoustic Wellness Standards" translate="no">​</a></h3>
+<p><strong>What</strong>: Regulate noise and promote beneficial sound environments.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Noise Limits</strong>: Stricter than current (45 dBA night, 55 dBA day in residential)</li>
+<li class=""><strong>Acoustic Design Review</strong>: Required for buildings &gt;50 units (RT60 targets, sound insulation)</li>
+<li class=""><strong>Soundscape Design</strong>: Public spaces must include natural sounds (water features, wind chimes)</li>
+<li class=""><strong>Quiet Zones</strong>: Designate car-free, low-noise districts</li>
+</ul>
+<p><strong>Design Targets</strong> (from Light City):</p>
+<ul>
+<li class="">Residential: RT60 0.3-0.5 s (bedrooms), 0.5-0.7 s (living)</li>
+<li class="">Offices: RT60 0.6-0.8 s (open plan), 0.3-0.5 s (focus rooms)</li>
+<li class="">Gathering spaces: RT60 1.0-1.5 s (cafes), 1.6-2.0 s (performance)</li>
+<li class="">Exterior: &lt;45 dBA at night, &lt;55 dBA at day (residential areas)</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">European Union: Environmental Noise Directive</li>
+<li class="">WHO: Guidelines for Community Noise (1999)</li>
+<li class="">Quiet Parks International: Certified quiet spaces</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Pilot quiet zone in Coconut Grove or Coral Gables</li>
+<li class="">Retrofit Brickell with sound-absorbing facades, green walls</li>
+<li class="">Water features along Baywalk (masking + beneficial sound)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="districtneighborhood-interventions">District/Neighborhood Interventions<a href="#districtneighborhood-interventions" class="hash-link" aria-label="Direct link to District/Neighborhood Interventions" title="Direct link to District/Neighborhood Interventions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-sacred-geometry-street-network">1 Sacred Geometry Street Network<a href="#1-sacred-geometry-street-network" class="hash-link" aria-label="Direct link to 1 Sacred Geometry Street Network" title="Direct link to 1 Sacred Geometry Street Network" translate="no">​</a></h3>
+<p><strong>What</strong>: Retrofit street patterns with radial/circular overlays where feasible.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Pedestrian Plazas</strong>: Convert intersections to circular plazas (like Columbus Circle, NYC)</li>
+<li class=""><strong>Radial Greenways</strong>: Bike/ped paths radiating from central park/plaza</li>
+<li class=""><strong>Golden Ratio Blocks</strong>: Encourage lot subdivisions using 1.618:1 proportions</li>
+</ul>
+<p><strong>Tactical Approach</strong>:</p>
+<ol>
+<li class="">Identify underutilized intersections (low traffic, wide ROW)</li>
+<li class="">Pilot with temporary materials (paint, planters, furniture)</li>
+<li class="">Measure foot traffic, business revenue, safety</li>
+<li class="">Permanent if successful (raised pavers, landscaping)</li>
+</ol>
+<p><strong>Example Projects</strong>:</p>
+<ul>
+<li class=""><strong>Circular Plaza</strong>: 5-way intersection → circular roundabout with central fountain</li>
+<li class=""><strong>Radial Greenway</strong>: 6 bike paths radiating from Bayfront Park to neighborhoods</li>
+<li class=""><strong>Fibonacci Pocket Parks</strong>: Series of parks at 1, 1, 2, 3, 5, 8 blocks from center</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Barcelona: Superblocks (9-block clusters, pedestrian interiors)</li>
+<li class="">Paris: Place de l&#x27;Étoile (12 radial avenues)</li>
+<li class="">Copenhagen: Radial bike superhighways</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Pilot at Brickell/Downtown intersections</li>
+<li class="">Radial greenways connecting Bayfront Park, Brickell, Wynwood, Design District</li>
+<li class="">Partner with Bloomberg Asphalt Art Initiative (funding available)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-vertical-farm-district">2 Vertical Farm District<a href="#2-vertical-farm-district" class="hash-link" aria-label="Direct link to 2 Vertical Farm District" title="Direct link to 2 Vertical Farm District" translate="no">​</a></h3>
+<p><strong>What</strong>: Concentrate urban agriculture in one neighborhood for critical mass.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Zoning</strong>: Allow vertical farms as-of-right in industrial/commercial zones</li>
+<li class=""><strong>Incentives</strong>: Tax increment financing (TIF) for vertical farm startups</li>
+<li class=""><strong>Infrastructure</strong>: Shared water recycling, renewable energy micro-grid</li>
+<li class=""><strong>Anchor Tenant</strong>: City-funded demonstration farm (5,000-10,000 sq ft)</li>
+</ul>
+<p><strong>District Components</strong>:</p>
+<ul>
+<li class="">5-10 vertical farm businesses (leafy greens, herbs, strawberries)</li>
+<li class="">Aquaponics facility (fish + vegetables)</li>
+<li class="">Mushroom cultivation</li>
+<li class="">Food hub/distribution center</li>
+<li class="">Farm-to-table restaurants</li>
+<li class="">Educational center</li>
+</ul>
+<p><strong>Economic Model</strong>:</p>
+<ul>
+<li class="">Jobs: 20-50 per acre (vs. 5-10 for traditional farming)</li>
+<li class="">Revenue: $500K-$2M per acre per year</li>
+<li class="">Water savings: 90-95% vs. traditional</li>
+<li class="">Year-round production (climate-controlled)</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Newark, NJ: AeroFarms (69,000 sq ft, 2M lbs/year)</li>
+<li class="">Singapore: Sky Greens (vertical farm pioneer)</li>
+<li class="">The Hague: PlantLab (closed-loop vertical farm)</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Allapattah or Hialeah (affordable industrial space)</li>
+<li class="">Integrate with Miami-Dade food desert initiatives</li>
+<li class="">Partner with FIU, UM for research and workforce training</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-consciousness--wellness-district">3 Consciousness &amp; Wellness District<a href="#3-consciousness--wellness-district" class="hash-link" aria-label="Direct link to 3 Consciousness &amp; Wellness District" title="Direct link to 3 Consciousness &amp; Wellness District" translate="no">​</a></h3>
+<p><strong>What</strong>: Neighborhood designed for meditation, healing, and consciousness work.</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li class=""><strong>Anchor Institutions</strong>: Meditation centers, yoga studios, healing clinics</li>
+<li class=""><strong>Public Meditation Spaces</strong>: Outdoor chambers with acoustic design</li>
+<li class=""><strong>Quiet Zone</strong>: Car-free or low-speed (15 mph max)</li>
+<li class=""><strong>Biophilic Design</strong>: 50%+ green coverage, water features, natural materials</li>
+<li class=""><strong>Circadian Lighting</strong>: Tunable white throughout district</li>
+<li class=""><strong>Acoustic Design</strong>: &lt;45 dBA ambient, beneficial soundscapes</li>
+</ul>
+<p><strong>Program Mix</strong>:</p>
+<ul>
+<li class="">Meditation/yoga studios (5-10 locations)</li>
+<li class="">Float tank centers</li>
+<li class="">Sound healing spaces</li>
+<li class="">Holistic health clinics</li>
+<li class="">Healthy restaurants (plant-based, organic)</li>
+<li class="">Bookstores, apothecaries</li>
+<li class="">Residential (for practitioners and seekers)</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Sedona, AZ: Wellness tourism destination</li>
+<li class="">Ubud, Bali: Yoga/meditation hub</li>
+<li class="">Rishikesh, India: Spiritual center</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Coconut Grove (already wellness-oriented)</li>
+<li class="">Integrate with Fairchild Tropical Botanic Garden</li>
+<li class="">Partner with Art of Living, Isha Foundation, local studios</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="blockstreet-interventions">Block/Street Interventions<a href="#blockstreet-interventions" class="hash-link" aria-label="Direct link to Block/Street Interventions" title="Direct link to Block/Street Interventions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-tactical-sacred-geometry">1 Tactical Sacred Geometry<a href="#1-tactical-sacred-geometry" class="hash-link" aria-label="Direct link to 1 Tactical Sacred Geometry" title="Direct link to 1 Tactical Sacred Geometry" translate="no">​</a></h3>
+<p><strong>What</strong>: Quick, low-cost installations to test concepts.</p>
+<p><strong>Projects</strong>:</p>
+<p><strong>A. Painted Intersections</strong>:</p>
+<ul>
+<li class="">Flower of Life pattern at crosswalks</li>
+<li class="">Golden spiral in roundabouts</li>
+<li class="">Metatron&#x27;s Cube in plazas</li>
+<li class="">Cost: $5K-$20K per intersection</li>
+<li class="">Timeline: 1-2 weeks</li>
+</ul>
+<p><strong>B. Parklets with Geometry</strong>:</p>
+<ul>
+<li class="">Hexagonal seating (beehive pattern)</li>
+<li class="">Circular gathering spaces</li>
+<li class="">Fibonacci-spaced planters</li>
+<li class="">Cost: $10K-$30K per parklet</li>
+<li class="">Timeline: 2-4 weeks</li>
+</ul>
+<p><strong>C. Light Installations</strong>:</p>
+<ul>
+<li class="">Projection mapping sacred geometry on buildings</li>
+<li class="">LED strips forming geometric patterns</li>
+<li class="">Solar-powered light art</li>
+<li class="">Cost: $20K-$100K per installation</li>
+<li class="">Timeline: 1-3 months</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Asphalt Art Initiative: 50+ cities, $25M invested</li>
+<li class="">Pavement to Parks (SF): 50+ parklets</li>
+<li class="">Luminothérapie (Montreal): Annual light festival</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Wynwood Walls: Sacred geometry murals</li>
+<li class="">Design District: Geometric parklets</li>
+<li class="">Brickell: Light installations on high-rises</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-hanging-gardens-retrofit">2 Hanging Gardens Retrofit<a href="#2-hanging-gardens-retrofit" class="hash-link" aria-label="Direct link to 2 Hanging Gardens Retrofit" title="Direct link to 2 Hanging Gardens Retrofit" translate="no">​</a></h3>
+<p><strong>What</strong>: Add vertical gardens to existing buildings.</p>
+<p><strong>Implementation</strong>:</p>
+<p><strong>A. Facade-Mounted Systems</strong>:</p>
+<ul>
+<li class="">Modular panels (4x8 ft) with integrated irrigation</li>
+<li class="">Retrofit to blank walls, parking garages</li>
+<li class="">Cost: $200-$400 per sq ft installed</li>
+<li class="">Maintenance: $2-$5 per sq ft per year</li>
+</ul>
+<p><strong>B. Balcony Gardens</strong>:</p>
+<ul>
+<li class="">Railing-mounted planters (hydroponic)</li>
+<li class="">Resident-managed or building-managed</li>
+<li class="">Cost: $500-$2,000 per balcony</li>
+<li class="">Food production: 20-50 lbs per balcony per year</li>
+</ul>
+<p><strong>C. Fire Escape Gardens</strong>:</p>
+<ul>
+<li class="">Lightweight containers (code-compliant)</li>
+<li class="">Herbs, leafy greens, flowers</li>
+<li class="">Cost: $100-$500 per fire escape</li>
+<li class="">Aesthetic + functional</li>
+</ul>
+<p><strong>Vendors</strong>:</p>
+<ul>
+<li class="">Nedlaw Living Walls (Canada)</li>
+<li class="">Sempergreen (Netherlands)</li>
+<li class="">Biotecture (UK)</li>
+<li class="">Local: Miami-based installers</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Pilot on city-owned garages (highly visible)</li>
+<li class="">Incentive program for private buildings ($50-$100 per sq ft rebate)</li>
+<li class="">Partner with Miami Beach Botanical Garden for plant selection</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-street-to-plaza-conversions">3 Street-to-Plaza Conversions<a href="#3-street-to-plaza-conversions" class="hash-link" aria-label="Direct link to 3 Street-to-Plaza Conversions" title="Direct link to 3 Street-to-Plaza Conversions" translate="no">​</a></h3>
+<p><strong>What</strong>: Close streets to cars, create pedestrian plazas.</p>
+<p><strong>Process</strong>:</p>
+<ol>
+<li class=""><strong>Identify</strong>: Low-traffic streets, high pedestrian demand</li>
+<li class=""><strong>Pilot</strong>: Temporary closure (6-12 months) with movable furniture</li>
+<li class=""><strong>Measure</strong>: Foot traffic, business revenue, safety, air quality</li>
+<li class=""><strong>Permanent</strong>: If successful, raise pavers, add landscaping, water features</li>
+</ol>
+<p><strong>Design Elements</strong>:</p>
+<ul>
+<li class="">Circular or radial layout (sacred geometry)</li>
+<li class="">Central focal point (fountain, sculpture, tree)</li>
+<li class="">Flexible furniture (movable chairs, tables)</li>
+<li class="">Shade (trees, sails, pergolas)</li>
+<li class="">Lighting (circadian, artistic)</li>
+<li class="">Programming (markets, performances, yoga)</li>
+</ul>
+<p><strong>Precedent</strong>:</p>
+<ul>
+<li class="">Times Square, NYC: Pedestrianized 2009</li>
+<li class="">Market Street, SF: Car-free 2020</li>
+<li class="">Strøget, Copenhagen: Pedestrian street since 1962</li>
+</ul>
+<p><strong>Miami Application</strong>:</p>
+<ul>
+<li class="">Española Way, Miami Beach (already pedestrian-friendly)</li>
+<li class="">Giralda Avenue, Coral Gables</li>
+<li class="">Flagler Street, Downtown (weekend closures → permanent)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="building-level-interventions">Building-Level Interventions<a href="#building-level-interventions" class="hash-link" aria-label="Direct link to Building-Level Interventions" title="Direct link to Building-Level Interventions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-retrofit-design-guidelines">1 Retrofit Design Guidelines<a href="#1-retrofit-design-guidelines" class="hash-link" aria-label="Direct link to 1 Retrofit Design Guidelines" title="Direct link to 1 Retrofit Design Guidelines" translate="no">​</a></h3>
+<p><strong>Sacred Geometry Integration</strong>:</p>
+<p><strong>Facades</strong>:</p>
+<ul>
+<li class="">Add golden ratio proportions to window spacing</li>
+<li class="">Geometric sunshades (hexagonal, triangular)</li>
+<li class="">Facade patterns (Flower of Life, Metatron&#x27;s Cube)</li>
+</ul>
+<p><strong>Roofs</strong>:</p>
+<ul>
+<li class="">Circular or radial rooftop gardens</li>
+<li class="">Geodesic greenhouse structures</li>
+<li class="">Mandala-patterned solar arrays</li>
+</ul>
+<p><strong>Lobbies</strong>:</p>
+<ul>
+<li class="">Circular floor patterns (terrazzo, tile)</li>
+<li class="">Golden ratio in furniture layout</li>
+<li class="">Sacred geometry art installations</li>
+</ul>
+<p><strong>Courtyards</strong>:</p>
+<ul>
+<li class="">Circular or spiral pathways</li>
+<li class="">Central fountain (sacred geometry)</li>
+<li class="">Fibonacci-spaced plantings</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-hanging-hydroponic-systems">2 Hanging Hydroponic Systems<a href="#2-hanging-hydroponic-systems" class="hash-link" aria-label="Direct link to 2 Hanging Hydroponic Systems" title="Direct link to 2 Hanging Hydroponic Systems" translate="no">​</a></h3>
+<p><strong>Residential Buildings</strong>:</p>
+<p><strong>Lobby/Atrium Gardens</strong>:</p>
+<ul>
+<li class="">Vertical towers (ZipGrow, Tower Garden)</li>
+<li class="">200-500 sq ft productive area</li>
+<li class="">Provides herbs, greens for residents</li>
+<li class="">Cost: $20K-$50K installed</li>
+<li class="">Maintenance: $500-$1,000/month (staff or resident volunteers)</li>
+</ul>
+<p><strong>Rooftop Farms</strong>:</p>
+<ul>
+<li class="">Hydroponic or aquaponic systems</li>
+<li class="">1,000-5,000 sq ft</li>
+<li class="">Produces 10,000-50,000 lbs food/year</li>
+<li class="">Cost: $100K-$500K installed</li>
+<li class="">Revenue: Resident CSA, farmers market, restaurants</li>
+</ul>
+<p><strong>Balcony Kits</strong>:</p>
+<ul>
+<li class="">Individual hydroponic units for residents</li>
+<li class="">2-4 sq ft per unit</li>
+<li class="">Produces 20-40 lbs/year per unit</li>
+<li class="">Cost: $200-$500 per kit</li>
+<li class="">Building provides: Water connection, nutrient solution</li>
+</ul>
+<p><strong>Commercial Buildings</strong>:</p>
+<p><strong>Office Lobbies</strong>:</p>
+<ul>
+<li class="">Living walls (aesthetic + air quality)</li>
+<li class="">Productive gardens (herbs for cafeteria)</li>
+<li class="">Employee engagement (harvest events)</li>
+</ul>
+<p><strong>Restaurants</strong>:</p>
+<ul>
+<li class="">On-site herb/microgreen production</li>
+<li class="">Visible to diners (farm-to-table theater)</li>
+<li class="">Reduces supply chain, ensures freshness</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-energy--water-retrofits">3 Energy &amp; Water Retrofits<a href="#3-energy--water-retrofits" class="hash-link" aria-label="Direct link to 3 Energy &amp; Water Retrofits" title="Direct link to 3 Energy &amp; Water Retrofits" translate="no">​</a></h3>
+<p><strong>Solar PV</strong>:</p>
+<ul>
+<li class="">Rooftop arrays: 50-100% of roof area</li>
+<li class="">Facade-integrated (BIPV): South/west facades</li>
+<li class="">Parking canopies: Dual function (shade + power)</li>
+<li class="">Cost: $2-$4 per watt installed</li>
+<li class="">Payback: 5-10 years (with incentives)</li>
+</ul>
+<p><strong>Energy Storage</strong>:</p>
+<ul>
+<li class="">Lithium-ion batteries: 2-4 hour duration</li>
+<li class="">Flow batteries: 4-12 hour duration (if space available)</li>
+<li class="">Cost: $400-$800 per kWh installed</li>
+<li class="">Use case: Peak shaving, backup power, grid services</li>
+</ul>
+<p><strong>Rainwater Harvesting</strong>:</p>
+<ul>
+<li class="">Rooftop collection: 0.6 gal per sq ft per inch rain</li>
+<li class="">Storage: Cisterns (above/below ground)</li>
+<li class="">Uses: Irrigation, toilet flushing, cooling towers</li>
+<li class="">Cost: $2-$5 per gallon storage capacity</li>
+<li class="">Payback: 3-7 years (depending on water rates)</li>
+</ul>
+<p><strong>Greywater Recycling</strong>:</p>
+<ul>
+<li class="">Treat shower/sink water for toilets, irrigation</li>
+<li class="">Reduces water use 30-50%</li>
+<li class="">Cost: $5K-$50K depending on building size</li>
+<li class="">Payback: 5-15 years</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-consciousness-enhancing-retrofits">4 Consciousness-Enhancing Retrofits<a href="#4-consciousness-enhancing-retrofits" class="hash-link" aria-label="Direct link to 4 Consciousness-Enhancing Retrofits" title="Direct link to 4 Consciousness-Enhancing Retrofits" translate="no">​</a></h3>
+<p><strong>Circadian Lighting</strong>:</p>
+<ul>
+<li class="">Replace all interior lighting with tunable white LEDs</li>
+<li class="">Automate based on time of day</li>
+<li class="">Cost: $5-$15 per sq ft</li>
+<li class="">Benefits: Better sleep, mood, productivity</li>
+</ul>
+<p><strong>Biophilic Design</strong>:</p>
+<ul>
+<li class="">Add plants (1 per 100 sq ft minimum)</li>
+<li class="">Living walls in lobbies, corridors</li>
+<li class="">Views of nature (artwork if no windows)</li>
+<li class="">Natural materials (wood, stone, plants)</li>
+</ul>
+<p><strong>Acoustic Treatment</strong>:</p>
+<ul>
+<li class="">Sound-absorbing panels (walls, ceilings)</li>
+<li class="">White noise systems (mask distractions)</li>
+<li class="">Quiet rooms (phone booths, meditation spaces)</li>
+<li class="">Cost: $2-$10 per sq ft</li>
+</ul>
+<p><strong>Meditation/Wellness Spaces</strong>:</p>
+<ul>
+<li class="">Convert underutilized rooms (storage, mechanical)</li>
+<li class="">100-500 sq ft dedicated quiet spaces</li>
+<li class="">Acoustic treatment, dim lighting, cushions</li>
+<li class="">Cost: $10K-$50K per space</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="interiorunit-level-interventions">Interior/Unit-Level Interventions<a href="#interiorunit-level-interventions" class="hash-link" aria-label="Direct link to Interior/Unit-Level Interventions" title="Direct link to Interior/Unit-Level Interventions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-personal-space-guidelines">1 Personal Space Guidelines<a href="#1-personal-space-guidelines" class="hash-link" aria-label="Direct link to 1 Personal Space Guidelines" title="Direct link to 1 Personal Space Guidelines" translate="no">​</a></h3>
+<p><strong>Sacred Geometry</strong>:</p>
+<ul>
+<li class="">Arrange furniture in golden ratio proportions</li>
+<li class="">Circular rugs, mandala art</li>
+<li class="">Geometric shelving (hexagonal, triangular)</li>
+</ul>
+<p><strong>Biophilia</strong>:</p>
+<ul>
+<li class="">5-10 plants per room</li>
+<li class="">Natural materials (wood, stone, cotton, wool)</li>
+<li class="">Views of nature (windows, artwork, VR)</li>
+</ul>
+<p><strong>Lighting</strong>:</p>
+<ul>
+<li class="">Tunable white bulbs (Philips Hue, LIFX)</li>
+<li class="">Automate: Bright/blue morning, warm evening</li>
+<li class="">Task lighting (reading, cooking)</li>
+<li class="">Ambient lighting (indirect, dimmable)</li>
+</ul>
+<p><strong>Air Quality</strong>:</p>
+<ul>
+<li class="">HEPA filters (remove particles)</li>
+<li class="">Activated carbon (remove VOCs)</li>
+<li class="">Plants (natural air purification)</li>
+<li class="">Ventilation (open windows, ERV/HRV)</li>
+</ul>
+<p><strong>Sound</strong>:</p>
+<ul>
+<li class="">White noise machines (mask distractions)</li>
+<li class="">Acoustic panels (reduce echo)</li>
+<li class="">Soundproofing (doors, windows)</li>
+<li class="">Beneficial sounds (nature recordings, music)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="implementation-roadmap-for-cities">Implementation Roadmap for Cities<a href="#implementation-roadmap-for-cities" class="hash-link" aria-label="Direct link to Implementation Roadmap for Cities" title="Direct link to Implementation Roadmap for Cities" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="year-1-policy--pilots">Year 1: Policy &amp; Pilots<a href="#year-1-policy--pilots" class="hash-link" aria-label="Direct link to Year 1: Policy &amp; Pilots" title="Direct link to Year 1: Policy &amp; Pilots" translate="no">​</a></h3>
+<ul>
+<li class="">Adopt sacred geometry overlay district</li>
+<li class="">Launch biophilic design incentive program</li>
+<li class="">Pilot 3-5 tactical sacred geometry projects</li>
+<li class="">Install 1-2 demonstration vertical farms</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="year-2-scale-pilots">Year 2: Scale Pilots<a href="#year-2-scale-pilots" class="hash-link" aria-label="Direct link to Year 2: Scale Pilots" title="Direct link to Year 2: Scale Pilots" translate="no">​</a></h3>
+<ul>
+<li class="">Expand overlay district citywide</li>
+<li class="">Retrofit 10-20 buildings with hanging gardens</li>
+<li class="">Convert 2-3 streets to pedestrian plazas</li>
+<li class="">Launch circadian lighting program</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="year-3-district-development">Year 3: District Development<a href="#year-3-district-development" class="hash-link" aria-label="Direct link to Year 3: District Development" title="Direct link to Year 3: District Development" translate="no">​</a></h3>
+<ul>
+<li class="">Designate vertical farm district</li>
+<li class="">Create consciousness &amp; wellness district</li>
+<li class="">Implement acoustic wellness standards</li>
+<li class="">Scale successful pilots to 50+ sites</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="year-4-5-mainstreaming">Year 4-5: Mainstreaming<a href="#year-4-5-mainstreaming" class="hash-link" aria-label="Direct link to Year 4-5: Mainstreaming" title="Direct link to Year 4-5: Mainstreaming" translate="no">​</a></h3>
+<ul>
+<li class="">Sacred geometry becomes standard practice</li>
+<li class="">25%+ of buildings have vertical gardens</li>
+<li class="">50%+ of public lighting is circadian</li>
+<li class="">Measurable health/wellness improvements</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="case-study-miami-retrofit-plan">Case Study: Miami Retrofit Plan<a href="#case-study-miami-retrofit-plan" class="hash-link" aria-label="Direct link to Case Study: Miami Retrofit Plan" title="Direct link to Case Study: Miami Retrofit Plan" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-1-policy-months-1-12">Phase 1: Policy (Months 1-12)<a href="#phase-1-policy-months-1-12" class="hash-link" aria-label="Direct link to Phase 1: Policy (Months 1-12)" title="Direct link to Phase 1: Policy (Months 1-12)" translate="no">​</a></h3>
+<ul>
+<li class="">Sacred geometry overlay: Design District, Wynwood, Brickell</li>
+<li class="">Biophilic design incentives: 50% cost share, up to $500K</li>
+<li class="">Hanging garden mandate: New buildings &gt;50K sq ft</li>
+<li class="">Circadian lighting: All public spaces by 2027</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-2-pilots-months-6-24">Phase 2: Pilots (Months 6-24)<a href="#phase-2-pilots-months-6-24" class="hash-link" aria-label="Direct link to Phase 2: Pilots (Months 6-24)" title="Direct link to Phase 2: Pilots (Months 6-24)" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Wynwood</strong>: 10 buildings with facade gardens, 5 sacred geometry murals</li>
+<li class=""><strong>Design District</strong>: 3 street-to-plaza conversions, geometric parklets</li>
+<li class=""><strong>Brickell</strong>: Circadian lighting retrofit (Brickell City Centre, Baywalk)</li>
+<li class=""><strong>Allapattah</strong>: Vertical farm district (5 farms, 50K sq ft total)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="phase-3-scale-months-18-36">Phase 3: Scale (Months 18-36)<a href="#phase-3-scale-months-18-36" class="hash-link" aria-label="Direct link to Phase 3: Scale (Months 18-36)" title="Direct link to Phase 3: Scale (Months 18-36)" translate="no">​</a></h3>
+<ul>
+<li class="">100+ buildings with vertical gardens</li>
+<li class="">20+ pedestrian plazas with sacred geometry</li>
+<li class="">Citywide circadian lighting (streetlights, parks)</li>
+<li class="">Consciousness district in Coconut Grove</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="metrics">Metrics:<a href="#metrics" class="hash-link" aria-label="Direct link to Metrics:" title="Direct link to Metrics:" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Environmental</strong>: 20% reduction in urban heat island, 30% increase in urban tree canopy</li>
+<li class=""><strong>Health</strong>: 15% improvement in sleep quality (surveys), 10% reduction in stress</li>
+<li class=""><strong>Economic</strong>: 10% increase in property values (retrofit areas), 500+ green jobs</li>
+<li class=""><strong>Social</strong>: 25% increase in public space usage, 20% increase in walking/biking</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="budget">Budget:<a href="#budget" class="hash-link" aria-label="Direct link to Budget:" title="Direct link to Budget:" translate="no">​</a></h3>
+<ul>
+<li class="">Policy development: $500K (staff, consultants)</li>
+<li class="">Pilot projects: $5M-$10M (city + grants)</li>
+<li class="">Incentive programs: $20M-$50M over 5 years</li>
+<li class="">Total: $25M-$60M (0.3-0.7% of annual city budget)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="funding-sources">Funding Sources:<a href="#funding-sources" class="hash-link" aria-label="Direct link to Funding Sources:" title="Direct link to Funding Sources:" translate="no">​</a></h3>
+<ul>
+<li class="">City capital budget</li>
+<li class="">Federal grants (DOT, HUD, EPA)</li>
+<li class="">State programs (Florida DEP)</li>
+<li class="">Private philanthropy (Knight Foundation, etc.)</li>
+<li class="">Impact investors (ESG funds)</li>
+<li class="">Developer contributions (in-lieu fees)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="measurement--evaluation">Measurement &amp; Evaluation<a href="#measurement--evaluation" class="hash-link" aria-label="Direct link to Measurement &amp; Evaluation" title="Direct link to Measurement &amp; Evaluation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-performance-indicators-kpis">Key Performance Indicators (KPIs)<a href="#key-performance-indicators-kpis" class="hash-link" aria-label="Direct link to Key Performance Indicators (KPIs)" title="Direct link to Key Performance Indicators (KPIs)" translate="no">​</a></h3>
+<p><strong>Environmental</strong>:</p>
+<ul>
+<li class="">Urban heat island reduction (°F)</li>
+<li class="">Air quality improvement (PM2.5, O₃)</li>
+<li class="">Stormwater capture (gallons/year)</li>
+<li class="">Carbon sequestration (tons CO₂/year)</li>
+<li class="">Biodiversity (species count)</li>
+</ul>
+<p><strong>Health &amp; Wellness</strong>:</p>
+<ul>
+<li class="">Sleep quality (surveys, wearables)</li>
+<li class="">Stress levels (cortisol, surveys)</li>
+<li class="">Physical activity (step counts, bike/ped trips)</li>
+<li class="">Mental health (depression/anxiety scales)</li>
+<li class="">Chronic disease rates (asthma, diabetes, etc.)</li>
+</ul>
+<p><strong>Economic</strong>:</p>
+<ul>
+<li class="">Property values ($/sq ft)</li>
+<li class="">Business revenue (retail, restaurants)</li>
+<li class="">Job creation (green jobs, urban agriculture)</li>
+<li class="">Tourism (visitors, spending)</li>
+<li class="">Cost savings (energy, water, healthcare)</li>
+</ul>
+<p><strong>Social</strong>:</p>
+<ul>
+<li class="">Public space usage (counts, dwell time)</li>
+<li class="">Community cohesion (surveys, event attendance)</li>
+<li class="">Equity (access to green space, healthy food)</li>
+<li class="">Civic engagement (participation in programs)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="research-partnerships">Research Partnerships:<a href="#research-partnerships" class="hash-link" aria-label="Direct link to Research Partnerships:" title="Direct link to Research Partnerships:" translate="no">​</a></h3>
+<ul>
+<li class="">University of Miami: Health outcomes, environmental monitoring</li>
+<li class="">FIU: Urban agriculture, economic impacts</li>
+<li class="">MIT Media Lab: Consciousness research, sensor networks</li>
+<li class="">Global Wellness Institute: Wellness metrics</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="resources--templates">Resources &amp; Templates<a href="#resources--templates" class="hash-link" aria-label="Direct link to Resources &amp; Templates" title="Direct link to Resources &amp; Templates" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-ordinances">Model Ordinances:<a href="#model-ordinances" class="hash-link" aria-label="Direct link to Model Ordinances:" title="Direct link to Model Ordinances:" translate="no">​</a></h3>
+<ul>
+<li class="">Sacred Geometry Overlay District (zoning code language)</li>
+<li class="">Biophilic Design Standards (building code amendment)</li>
+<li class="">Hanging Garden Mandate (zoning code language)</li>
+<li class="">Circadian Lighting Requirements (building code amendment)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="design-guidelines">Design Guidelines:<a href="#design-guidelines" class="hash-link" aria-label="Direct link to Design Guidelines:" title="Direct link to Design Guidelines:" translate="no">​</a></h3>
+<ul>
+<li class="">Sacred Geometry Pattern Library (CAD files, specifications)</li>
+<li class="">Vertical Garden Details (construction drawings, plant lists)</li>
+<li class="">Circadian Lighting Schedules (color temperature by time of day)</li>
+<li class="">Acoustic Design Targets (RT60 by space type)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="financial-tools">Financial Tools:<a href="#financial-tools" class="hash-link" aria-label="Direct link to Financial Tools:" title="Direct link to Financial Tools:" translate="no">​</a></h3>
+<ul>
+<li class="">Cost-Benefit Calculator (ROI for retrofits)</li>
+<li class="">Incentive Program Template (rebates, tax credits)</li>
+<li class="">Public-Private Partnership Models (P3 structures)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="community-engagement">Community Engagement:<a href="#community-engagement" class="hash-link" aria-label="Direct link to Community Engagement:" title="Direct link to Community Engagement:" translate="no">​</a></h3>
+<ul>
+<li class="">Public Workshop Toolkit (presentations, activities)</li>
+<li class="">Demonstration Project Signage (explain concepts to public)</li>
+<li class="">Educational Materials (brochures, videos, website)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="next-steps-for-cities">Next Steps for Cities<a href="#next-steps-for-cities" class="hash-link" aria-label="Direct link to Next Steps for Cities" title="Direct link to Next Steps for Cities" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>Assessment</strong>: Evaluate current conditions, identify opportunities</li>
+<li class=""><strong>Stakeholder Engagement</strong>: Convene city staff, developers, community</li>
+<li class=""><strong>Policy Development</strong>: Draft ordinances, design guidelines</li>
+<li class=""><strong>Pilot Selection</strong>: Choose 3-5 high-visibility projects</li>
+<li class=""><strong>Funding</strong>: Secure grants, budget allocation, private investment</li>
+<li class=""><strong>Implementation</strong>: Launch pilots, monitor, iterate</li>
+<li class=""><strong>Evaluation</strong>: Measure KPIs, publish results</li>
+<li class=""><strong>Scale</strong>: Expand successful pilots citywide</li>
+</ol>
+<p><strong>Contact</strong>: For cities interested in adopting Light City principles, reach out to the Light City Project team for technical assistance, model ordinances, and partnership opportunities.</p>
+<hr>
+<p><strong>Last Updated</strong>: November 7, 2025<br>
+<strong>Related</strong>: <a class="" href="/light-city-project/docs/technical/technology-catalog">Technology Catalog</a>, <a class="" href="/light-city-project/docs/design/architecture">Architecture</a></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/szemkoff/light-city-project/edit/main/docs/technical/urban-retrofit-guide.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/light-city-project/docs/technical/technology-catalog"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Technology Catalog</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/light-city-project/docs/research/bibliography"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Bibliography &amp; Sources</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#retrofit-framework-5-intervention-scales" class="table-of-contents__link toc-highlight">Retrofit Framework: 5 Intervention Scales</a><ul><li><a href="#policy--code-level-citywide" class="table-of-contents__link toc-highlight"><strong>Policy &amp; Code Level</strong> (Citywide)</a></li><li><a href="#districtneighborhood-level-1-5-sq-mi" class="table-of-contents__link toc-highlight"><strong>District/Neighborhood Level</strong> (1-5 sq mi)</a></li><li><a href="#blockstreet-level-1-10-acres" class="table-of-contents__link toc-highlight"><strong>Block/Street Level</strong> (1-10 acres)</a></li><li><a href="#building-level-individual-structures" class="table-of-contents__link toc-highlight"><strong>Building Level</strong> (Individual structures)</a></li><li><a href="#interiorunit-level-rooms-apartments" class="table-of-contents__link toc-highlight"><strong>Interior/Unit Level</strong> (Rooms, apartments)</a></li></ul></li><li><a href="#policy--code-interventions" class="table-of-contents__link toc-highlight">Policy &amp; Code Interventions</a><ul><li><a href="#1-sacred-geometry-overlay-district" class="table-of-contents__link toc-highlight">1 Sacred Geometry Overlay District</a></li><li><a href="#2-biophilic-design-standards" class="table-of-contents__link toc-highlight">2 Biophilic Design Standards</a></li><li><a href="#3-hanging-hydroponic-gardens-mandate" class="table-of-contents__link toc-highlight">3 Hanging Hydroponic Gardens Mandate</a></li><li><a href="#4-circadian-lighting-code" class="table-of-contents__link toc-highlight">4 Circadian Lighting Code</a></li><li><a href="#5-acoustic-wellness-standards" class="table-of-contents__link toc-highlight">5 Acoustic Wellness Standards</a></li></ul></li><li><a href="#districtneighborhood-interventions" class="table-of-contents__link toc-highlight">District/Neighborhood Interventions</a><ul><li><a href="#1-sacred-geometry-street-network" class="table-of-contents__link toc-highlight">1 Sacred Geometry Street Network</a></li><li><a href="#2-vertical-farm-district" class="table-of-contents__link toc-highlight">2 Vertical Farm District</a></li><li><a href="#3-consciousness--wellness-district" class="table-of-contents__link toc-highlight">3 Consciousness &amp; Wellness District</a></li></ul></li><li><a href="#blockstreet-interventions" class="table-of-contents__link toc-highlight">Block/Street Interventions</a><ul><li><a href="#1-tactical-sacred-geometry" class="table-of-contents__link toc-highlight">1 Tactical Sacred Geometry</a></li><li><a href="#2-hanging-gardens-retrofit" class="table-of-contents__link toc-highlight">2 Hanging Gardens Retrofit</a></li><li><a href="#3-street-to-plaza-conversions" class="table-of-contents__link toc-highlight">3 Street-to-Plaza Conversions</a></li></ul></li><li><a href="#building-level-interventions" class="table-of-contents__link toc-highlight">Building-Level Interventions</a><ul><li><a href="#1-retrofit-design-guidelines" class="table-of-contents__link toc-highlight">1 Retrofit Design Guidelines</a></li><li><a href="#2-hanging-hydroponic-systems" class="table-of-contents__link toc-highlight">2 Hanging Hydroponic Systems</a></li><li><a href="#3-energy--water-retrofits" class="table-of-contents__link toc-highlight">3 Energy &amp; Water Retrofits</a></li><li><a href="#4-consciousness-enhancing-retrofits" class="table-of-contents__link toc-highlight">4 Consciousness-Enhancing Retrofits</a></li></ul></li><li><a href="#interiorunit-level-interventions" class="table-of-contents__link toc-highlight">Interior/Unit-Level Interventions</a><ul><li><a href="#1-personal-space-guidelines" class="table-of-contents__link toc-highlight">1 Personal Space Guidelines</a></li></ul></li><li><a href="#implementation-roadmap-for-cities" class="table-of-contents__link toc-highlight">Implementation Roadmap for Cities</a><ul><li><a href="#year-1-policy--pilots" class="table-of-contents__link toc-highlight">Year 1: Policy &amp; Pilots</a></li><li><a href="#year-2-scale-pilots" class="table-of-contents__link toc-highlight">Year 2: Scale Pilots</a></li><li><a href="#year-3-district-development" class="table-of-contents__link toc-highlight">Year 3: District Development</a></li><li><a href="#year-4-5-mainstreaming" class="table-of-contents__link toc-highlight">Year 4-5: Mainstreaming</a></li></ul></li><li><a href="#case-study-miami-retrofit-plan" class="table-of-contents__link toc-highlight">Case Study: Miami Retrofit Plan</a><ul><li><a href="#phase-1-policy-months-1-12" class="table-of-contents__link toc-highlight">Phase 1: Policy (Months 1-12)</a></li><li><a href="#phase-2-pilots-months-6-24" class="table-of-contents__link toc-highlight">Phase 2: Pilots (Months 6-24)</a></li><li><a href="#phase-3-scale-months-18-36" class="table-of-contents__link toc-highlight">Phase 3: Scale (Months 18-36)</a></li><li><a href="#metrics" class="table-of-contents__link toc-highlight">Metrics:</a></li><li><a href="#budget" class="table-of-contents__link toc-highlight">Budget:</a></li><li><a href="#funding-sources" class="table-of-contents__link toc-highlight">Funding Sources:</a></li></ul></li><li><a href="#measurement--evaluation" class="table-of-contents__link toc-highlight">Measurement &amp; Evaluation</a><ul><li><a href="#key-performance-indicators-kpis" class="table-of-contents__link toc-highlight">Key Performance Indicators (KPIs)</a></li><li><a href="#research-partnerships" class="table-of-contents__link toc-highlight">Research Partnerships:</a></li></ul></li><li><a href="#resources--templates" class="table-of-contents__link toc-highlight">Resources &amp; Templates</a><ul><li><a href="#model-ordinances" class="table-of-contents__link toc-highlight">Model Ordinances:</a></li><li><a href="#design-guidelines" class="table-of-contents__link toc-highlight">Design Guidelines:</a></li><li><a href="#financial-tools" class="table-of-contents__link toc-highlight">Financial Tools:</a></li><li><a href="#community-engagement" class="table-of-contents__link toc-highlight">Community Engagement:</a></li></ul></li><li><a href="#next-steps-for-cities" class="table-of-contents__link toc-highlight">Next Steps for Cities</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Documentation</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/START-HERE">Start Here</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/concepts/core-concepts">Core Concepts</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/design/architecture">Architecture</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Project</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/development-stages">Development Stages</a></li><li class="footer__item"><a class="footer__link-item" href="/light-city-project/docs/project/contributing">Contributing</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/light-city-project/blog">Updates</a></li><li class="footer__item"><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Light City Project © 2026. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+  <defs>
+    <style>
+      .label-text { font-family: 'Inter', sans-serif; font-size: 13px; fill: #0B2447; font-weight: 600; }
+      .desc-text { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .title-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #0B2447; }
+      .step-text { font-family: 'Inter', sans-serif; font-size: 12px; fill: #fff; font-weight: 600; }
+    </style>
+    <radialGradient id="field-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4A9EFF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4A9EFF;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="knowledge-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#E6B400;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#E6B400;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="title-text">Knowledge Transfer Mechanism</text>
+  <text x="500" y="65" text-anchor="middle" class="desc-text">How Information Flows Through Resonance Field</text>
+  
+  <!-- Resonance Field (Background) -->
+  <circle cx="500" cy="400" r="350" fill="url(#field-gradient)"/>
+  <circle cx="500" cy="400" r="300" fill="none" stroke="#4A9EFF" stroke-width="1" stroke-dasharray="5,5" opacity="0.3"/>
+  <circle cx="500" cy="400" r="250" fill="none" stroke="#4A9EFF" stroke-width="1" stroke-dasharray="5,5" opacity="0.3"/>
+  <circle cx="500" cy="400" r="200" fill="none" stroke="#4A9EFF" stroke-width="1" stroke-dasharray="5,5" opacity="0.3"/>
+  
+  <text x="500" y="750" text-anchor="middle" class="desc-text" style="font-style: italic;">Resonance Field - Maintained by Central Spire</text>
+  
+  <!-- Central Spire (Source) -->
+  <g transform="translate(500, 120)">
+    <path d="M 0,-30 L 15,-10 L 15,30 L -15,30 L -15,-10 Z" fill="#E6B400" stroke="#E6B400" stroke-width="2"/>
+    <circle cx="0" cy="-30" r="5" fill="#FFF6E0"/>
+    <circle cx="0" cy="0" r="40" fill="url(#knowledge-glow)"/>
+    <text x="0" y="60" text-anchor="middle" class="label-text">Central Spire</text>
+    <text x="0" y="75" text-anchor="middle" class="desc-text">Resonance Source</text>
+  </g>
+  
+  <!-- Step 1: Individual Learning -->
+  <g transform="translate(200, 300)">
+    <circle cx="0" cy="0" r="40" fill="#667eea" stroke="#4A9EFF" stroke-width="2"/>
+    <circle cx="0" cy="-10" r="12" fill="#fff"/>
+    <circle cx="-5" cy="-12" r="3" fill="#0B2447"/>
+    <circle cx="5" cy="-12" r="3" fill="#0B2447"/>
+    <path d="M -8,5 Q 0,10 8,5" stroke="#0B2447" stroke-width="2" fill="none"/>
+    
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#E6B400" stroke-width="2" opacity="0.5"/>
+    <circle cx="0" cy="0" r="50" fill="url(#knowledge-glow)"/>
+    
+    <rect x="-50" y="70" width="100" height="50" rx="8" fill="#667eea"/>
+    <text x="0" y="90" text-anchor="middle" class="step-text">Step 1</text>
+    <text x="0" y="105" text-anchor="middle" class="step-text" style="font-size: 10px;">Individual</text>
+    <text x="0" y="117" text-anchor="middle" class="step-text" style="font-size: 10px;">Learns</text>
+  </g>
+  
+  <!-- Step 2: Elevation to Field -->
+  <g transform="translate(350, 250)">
+    <path d="M 0,0 Q 50,-50 100,-20" stroke="#E6B400" stroke-width="3" fill="none" marker-end="url(#arrow-gold)"/>
+    <circle cx="50" cy="-25" r="15" fill="#E6B400" opacity="0.3"/>
+    <circle cx="50" cy="-25" r="10" fill="#E6B400" opacity="0.5"/>
+    <circle cx="50" cy="-25" r="5" fill="#FFF6E0"/>
+    
+    <rect x="0" y="-80" width="100" height="50" rx="8" fill="#E6B400"/>
+    <text x="50" y="-55" text-anchor="middle" class="step-text">Step 2</text>
+    <text x="50" y="-40" text-anchor="middle" class="step-text" style="font-size: 10px;">Elevated to</text>
+    <text x="50" y="-28" text-anchor="middle" class="step-text" style="font-size: 10px;">Field Form</text>
+  </g>
+  
+  <!-- Step 3: Field Integration -->
+  <g transform="translate(500, 200)">
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#4A9EFF" stroke-width="3"/>
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#4A9EFF" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#4A9EFF" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="8" fill="#4A9EFF"/>
+    
+    <rect x="-60" y="70" width="120" height="50" rx="8" fill="#4A9EFF"/>
+    <text x="0" y="90" text-anchor="middle" class="step-text">Step 3</text>
+    <text x="0" y="105" text-anchor="middle" class="step-text" style="font-size: 10px;">Integrated into</text>
+    <text x="0" y="117" text-anchor="middle" class="step-text" style="font-size: 10px;">Collective Field</text>
+  </g>
+  
+  <!-- Step 4: Broadcast -->
+  <g transform="translate(500, 300)">
+    <path d="M 0,-50 L -100,50" stroke="#4A9EFF" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+    <path d="M 0,-50 L -50,100" stroke="#4A9EFF" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+    <path d="M 0,-50 L 50,100" stroke="#4A9EFF" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+    <path d="M 0,-50 L 100,50" stroke="#4A9EFF" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+    <path d="M 0,-50 L 0,150" stroke="#4A9EFF" stroke-width="2" stroke-dasharray="3,3" opacity="0.6"/>
+    
+    <rect x="-60" y="160" width="120" height="50" rx="8" fill="#4A9EFF"/>
+    <text x="0" y="180" text-anchor="middle" class="step-text">Step 4</text>
+    <text x="0" y="195" text-anchor="middle" class="step-text" style="font-size: 10px;">Broadcast to All</text>
+    <text x="0" y="207" text-anchor="middle" class="step-text" style="font-size: 10px;">Connected Beings</text>
+  </g>
+  
+  <!-- Step 5: Instant Reception -->
+  <g transform="translate(700, 500)">
+    <circle cx="0" cy="0" r="40" fill="#764ba2" stroke="#4A9EFF" stroke-width="2"/>
+    <circle cx="0" cy="-10" r="12" fill="#fff"/>
+    <circle cx="-5" cy="-12" r="3" fill="#0B2447"/>
+    <circle cx="5" cy="-12" r="3" fill="#0B2447"/>
+    <path d="M -8,5 Q 0,10 8,5" stroke="#0B2447" stroke-width="2" fill="none"/>
+    
+    <!-- Knowledge download effect -->
+    <path d="M -15,-25 L 0,-35 L 15,-25" stroke="#E6B400" stroke-width="2" fill="none"/>
+    <circle cx="0" cy="-40" r="3" fill="#E6B400"/>
+    
+    <rect x="-60" y="60" width="120" height="50" rx="8" fill="#764ba2"/>
+    <text x="0" y="80" text-anchor="middle" class="step-text">Step 5</text>
+    <text x="0" y="95" text-anchor="middle" class="step-text" style="font-size: 10px;">Instant Reception</text>
+    <text x="0" y="107" text-anchor="middle" class="step-text" style="font-size: 10px;">&amp; Integration</text>
+  </g>
+  
+  <!-- Additional Recipients -->
+  <g transform="translate(300, 550)">
+    <circle cx="0" cy="0" r="30" fill="#764ba2" stroke="#4A9EFF" stroke-width="2"/>
+    <circle cx="0" cy="-8" r="8" fill="#fff"/>
+    <circle cx="-3" cy="-9" r="2" fill="#0B2447"/>
+    <circle cx="3" cy="-9" r="2" fill="#0B2447"/>
+    <path d="M -5,3 Q 0,6 5,3" stroke="#0B2447" stroke-width="1.5" fill="none"/>
+    <path d="M -10,-18 L 0,-25 L 10,-18" stroke="#E6B400" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <g transform="translate(500, 600)">
+    <circle cx="0" cy="0" r="30" fill="#764ba2" stroke="#4A9EFF" stroke-width="2"/>
+    <circle cx="0" cy="-8" r="8" fill="#fff"/>
+    <circle cx="-3" cy="-9" r="2" fill="#0B2447"/>
+    <circle cx="3" cy="-9" r="2" fill="#0B2447"/>
+    <path d="M -5,3 Q 0,6 5,3" stroke="#0B2447" stroke-width="1.5" fill="none"/>
+    <path d="M -10,-18 L 0,-25 L 10,-18" stroke="#E6B400" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <g transform="translate(800, 350)">
+    <circle cx="0" cy="0" r="30" fill="#764ba2" stroke="#4A9EFF" stroke-width="2"/>
+    <circle cx="0" cy="-8" r="8" fill="#fff"/>
+    <circle cx="-3" cy="-9" r="2" fill="#0B2447"/>
+    <circle cx="3" cy="-9" r="2" fill="#0B2447"/>
+    <path d="M -5,3 Q 0,6 5,3" stroke="#0B2447" stroke-width="1.5" fill="none"/>
+    <path d="M -10,-18 L 0,-25 L 10,-18" stroke="#E6B400" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- Key Characteristics -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" class="label-text">Key Characteristics:</text>
+    <text x="0" y="20" class="desc-text">✓ Instantaneous transfer</text>
+    <text x="0" y="35" class="desc-text">✓ No conscious effort required</text>
+    <text x="0" y="50" class="desc-text">✓ Elevated knowledge form</text>
+    <text x="0" y="65" class="desc-text">✓ Automatic integration</text>
+    <text x="0" y="80" class="desc-text">✓ "They all know the same thing"</text>
+  </g>
+  
+  <!-- Result -->
+  <g transform="translate(750, 650)">
+    <rect x="0" y="0" width="200" height="80" rx="8" fill="#22C55E"/>
+    <text x="100" y="25" text-anchor="middle" class="step-text">Result</text>
+    <text x="100" y="45" text-anchor="middle" class="step-text" style="font-size: 11px;">Unity Consciousness</text>
+    <text x="100" y="60" text-anchor="middle" class="step-text" style="font-size: 10px;">Collective knowledge</text>
+    <text x="100" y="73" text-anchor="middle" class="step-text" style="font-size: 10px;">Accelerated evolution</text>
+  </g>
+  
+  <defs>
+    <marker id="arrow-gold" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#E6B400" />
+    </marker>
+  </defs>
+</svg>
+

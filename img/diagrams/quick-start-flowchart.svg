@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <defs>
+    <style>
+      .box-text { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; fill: #fff; text-anchor: middle; }
+      .box-desc { font-family: 'Inter', sans-serif; font-size: 11px; fill: #fff; text-anchor: middle; }
+      .decision-text { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; fill: #0B2447; text-anchor: middle; }
+      .arrow-label { font-family: 'Inter', sans-serif; font-size: 11px; fill: #666; }
+      .title-text { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; fill: #0B2447; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4A9EFF" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" class="title-text">Quick Start Guide</text>
+  
+  <!-- Start -->
+  <ellipse cx="450" cy="100" rx="80" ry="35" fill="#22C55E"/>
+  <text x="450" y="105" class="box-text">START</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="135" x2="450" y2="170" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 1: Read START-HERE -->
+  <rect x="350" y="180" width="200" height="70" rx="8" fill="#4A9EFF"/>
+  <text x="450" y="205" class="box-text">1. Read START-HERE</text>
+  <text x="450" y="225" class="box-desc">Get project overview</text>
+  <text x="450" y="240" class="box-desc">&amp; understand vision</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="250" x2="450" y2="285" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: Explore Core Concepts -->
+  <rect x="350" y="295" width="200" height="70" rx="8" fill="#4A9EFF"/>
+  <text x="450" y="320" class="box-text">2. Explore Core Concepts</text>
+  <text x="450" y="340" class="box-desc">Philosophy, Purpose,</text>
+  <text x="450" y="355" class="box-desc">Sacred Geometry</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="365" x2="450" y2="400" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Decision: What interests you? -->
+  <path d="M 450,410 L 550,460 L 450,510 L 350,460 Z" fill="#FFF6E0" stroke="#E6B400" stroke-width="2"/>
+  <text x="450" y="455" class="decision-text">What interests</text>
+  <text x="450" y="470" class="decision-text">you most?</text>
+  
+  <!-- Branch 1: Design & Architecture -->
+  <line x1="350" y1="460" x2="200" y2="460" stroke="#4A9EFF" stroke-width="2"/>
+  <line x1="200" y1="460" x2="200" y2="575" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="275" y="455" class="arrow-label">Design &amp;</text>
+  <text x="275" y="468" class="arrow-label">Architecture</text>
+  
+  <rect x="100" y="585" width="200" height="70" rx="8" fill="#764ba2"/>
+  <text x="200" y="610" class="box-text">Explore Architecture</text>
+  <text x="200" y="630" class="box-desc">Sacred Design, Visual</text>
+  <text x="200" y="645" class="box-desc">Language, City Layout</text>
+  
+  <!-- Branch 2: Spiritual & Philosophical -->
+  <line x1="450" y1="510" x2="450" y2="575" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="470" y="545" class="arrow-label">Spiritual &amp;</text>
+  <text x="470" y="558" class="arrow-label">Philosophical</text>
+  
+  <rect x="350" y="585" width="200" height="70" rx="8" fill="#764ba2"/>
+  <text x="450" y="610" class="box-text">Dive into Philosophy</text>
+  <text x="450" y="630" class="box-desc">Consciousness, Unity,</text>
+  <text x="450" y="645" class="box-desc">Energy Systems</text>
+  
+  <!-- Branch 3: Practical & Contributing -->
+  <line x1="550" y1="460" x2="700" y2="460" stroke="#4A9EFF" stroke-width="2"/>
+  <line x1="700" y1="460" x2="700" y2="575" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="625" y="455" class="arrow-label">Practical &amp;</text>
+  <text x="625" y="468" class="arrow-label">Contributing</text>
+  
+  <rect x="600" y="585" width="200" height="70" rx="8" fill="#764ba2"/>
+  <text x="700" y="610" class="box-text">Get Involved</text>
+  <text x="700" y="630" class="box-desc">Development Stages,</text>
+  <text x="700" y="645" class="box-desc">Contributing Guide</text>
+  
+  <!-- Converge arrows -->
+  <line x1="200" y1="655" x2="200" y2="720" stroke="#4A9EFF" stroke-width="2"/>
+  <line x1="200" y1="720" x2="450" y2="720" stroke="#4A9EFF" stroke-width="2"/>
+  
+  <line x1="450" y1="655" x2="450" y2="720" stroke="#4A9EFF" stroke-width="2"/>
+  
+  <line x1="700" y1="655" x2="700" y2="720" stroke="#4A9EFF" stroke-width="2"/>
+  <line x1="700" y1="720" x2="450" y2="720" stroke="#4A9EFF" stroke-width="2"/>
+  
+  <line x1="450" y1="720" x2="450" y2="755" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Join Community -->
+  <rect x="350" y="765" width="200" height="70" rx="8" fill="#4A9EFF"/>
+  <text x="450" y="790" class="box-text">3. Join the Community</text>
+  <text x="450" y="810" class="box-desc">Connect with others,</text>
+  <text x="450" y="825" class="box-desc">share insights</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="835" x2="450" y2="870" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 4: Contribute -->
+  <rect x="350" y="880" width="200" height="70" rx="8" fill="#4A9EFF"/>
+  <text x="450" y="905" class="box-text">4. Contribute Your Gifts</text>
+  <text x="450" y="925" class="box-desc">Documentation, art,</text>
+  <text x="450" y="940" class="box-desc">code, or vision</text>
+  
+  <!-- Arrow -->
+  <line x1="450" y1="950" x2="450" y2="985" stroke="#4A9EFF" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- End: Co-Create -->
+  <ellipse cx="450" cy="1025" rx="100" ry="35" fill="#22C55E"/>
+  <text x="450" y="1030" class="box-text">CO-CREATE LIGHT CITY</text>
+  
+  <!-- Side notes -->
+  <g transform="translate(50, 100)">
+    <text x="0" y="0" class="arrow-label" style="font-weight: 600;">💡 Tips:</text>
+    <text x="0" y="20" class="arrow-label">• Take your time</text>
+    <text x="0" y="35" class="arrow-label">• Follow your resonance</text>
+    <text x="0" y="50" class="arrow-label">• No wrong path</text>
+  </g>
+</svg>
+

@@ -2,108 +2,744 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://szemkoff.github.io/light-city-project/blog</id>
     <title>Light City Project Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2025-11-14T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://szemkoff.github.io/light-city-project/blog"/>
     <subtitle>Light City Project Blog</subtitle>
     <icon>https://szemkoff.github.io/light-city-project/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Welcome]]></title>
-        <id>https://szemkoff.github.io/light-city-project/blog/welcome</id>
-        <link href="https://szemkoff.github.io/light-city-project/blog/welcome"/>
-        <updated>2021-08-26T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Docusaurus blogging features are powered by the blog plugin.]]></summary>
-        <content type="html"><![CDATA[<p><a href="https://docusaurus.io/docs/blog" target="_blank" rel="noopener noreferrer">Docusaurus blogging features</a> are powered by the <a href="https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog" target="_blank" rel="noopener noreferrer">blog plugin</a>.</p>
-<p>Here are a few tips you might find useful.</p>
-<p>Simply add Markdown files (or folders) to the <code>blog</code> directory.</p>
-<p>Regular blog authors can be added to <code>authors.yml</code>.</p>
-<p>The blog post date can be extracted from filenames, such as:</p>
+        <title type="html"><![CDATA[Major Documentation Enhancements - Governance, Financial Model & Scale Clarity]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration"/>
+        <updated>2025-11-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Version: 2.0]]></summary>
+        <content type="html"><![CDATA[<p><strong>Version</strong>: 2.0<br>
+<strong>Date</strong>: November 14, 2025<br>
+<strong>Status</strong>: Major Development Milestone</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Today we're announcing significant enhancements to Light City's documentation, making it fully investor-ready with comprehensive governance framework, detailed financial modeling, and clear architectural specifications. These additions provide the transparency and rigor needed for serious stakeholder engagement.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="major-additions">Major Additions<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#major-additions" class="hash-link" aria-label="Direct link to Major Additions" title="Direct link to Major Additions" translate="no">​</a></h2>
+<p><strong>What's New</strong>: 5 major documentation enhancements<br>
+<strong>Status</strong>: Investor-ready framework complete<br>
+<strong>Impact</strong>: Clear path from vision to implementation</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-content--enhancements">New Content &amp; Enhancements<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#new-content--enhancements" class="hash-link" aria-label="Direct link to New Content &amp; Enhancements" title="Direct link to New Content &amp; Enhancements" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-governance-framework-new">1. <strong>Governance Framework</strong> (NEW)<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#1-governance-framework-new" class="hash-link" aria-label="Direct link to 1-governance-framework-new" title="Direct link to 1-governance-framework-new" translate="no">​</a></h4>
+<p>We've created a comprehensive governance document that establishes Light City's decision-making structure and community framework:</p>
+<p><strong>Key Components</strong>:</p>
 <ul>
-<li><code>2019-05-30-welcome.md</code></li>
-<li><code>2019-05-30-welcome/index.md</code></li>
+<li class=""><strong>Legal Structure</strong>: LLC during development (Stages 1-4) transitioning to Co-op in operations (Stages 5-6)</li>
+<li class=""><strong>Decision-Making Framework</strong>: Clear authority levels with consent-based governance (80% threshold for major decisions)</li>
+<li class=""><strong>Community Council</strong>: Elected representatives (1 per 50 residents) managing operational decisions</li>
+<li class=""><strong>Conflict Resolution</strong>: 4-stage process (Direct Conversation → Mediation → Arbitration → Exit)</li>
+<li class=""><strong>Financial Governance</strong>: Transparent budgeting, reserve funds, investment policies</li>
+<li class=""><strong>Membership &amp; Exit</strong>: Clear application process and exit terms</li>
 </ul>
-<p>A blog post folder can be convenient to co-locate blog post images:</p>
-<p><img decoding="async" loading="lazy" alt="Docusaurus Plushie" src="https://szemkoff.github.io/light-city-project/assets/images/docusaurus-plushie-banner-a60f7593abca1e3eef26a9afa244e4fb.jpeg" width="1500" height="500" class="img_ev3q"></p>
-<p>The blog supports tags as well!</p>
-<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in your Docusaurus config.</p>]]></content>
+<p><strong>Why It Matters</strong>: Provides investors and residents with clarity on authority, accountability, and community structure.</p>
+<p><strong>Read More</strong>: <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/governance">Governance Framework</a></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-enhanced-financial-model">2. <strong>Enhanced Financial Model</strong><a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#2-enhanced-financial-model" class="hash-link" aria-label="Direct link to 2-enhanced-financial-model" title="Direct link to 2-enhanced-financial-model" translate="no">​</a></h4>
+<p>Expanded the financial section in Development Stages with comprehensive analysis:</p>
+<p><strong>New Sections</strong>:</p>
+<ul>
+<li class=""><strong>Cross-Subsidy Structure</strong>: Detailed unit economics showing how different unit types contribute to overall viability</li>
+<li class=""><strong>Critical Success Factors</strong>: Key dependencies (90%+ occupancy, 800-1,500 retreat guests/year)</li>
+<li class=""><strong>Sensitivity Analysis</strong>: Impact of 10% revenue drops across different scenarios</li>
+<li class=""><strong>Break-Even Analysis</strong>: Three detailed scenarios (Conservative, Base, Optimistic) with specific assumptions</li>
+<li class=""><strong>Risk Mitigation</strong>: Strategies including 12-18 month operating reserves, pre-sold retreat capacity, dynamic pricing</li>
+</ul>
+<p><strong>Key Insights</strong>:</p>
+<ul>
+<li class="">Tiny homes ($500-$700/month) and studios ($700-$950/month) operate near break-even</li>
+<li class="">1-BR and 2-BR units generate profit margins</li>
+<li class="">Retreat revenue ($400K-$900K/year) is essential for financial sustainability</li>
+<li class="">Break-even at 180 residents + 600-800 retreat guests/year</li>
+</ul>
+<p><strong>Read More</strong>: <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages#financial-model-notes--assumptions">Development Stages - Financial Model</a></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-architecture-scale-clarification">3. <strong>Architecture Scale Clarification</strong><a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#3-architecture-scale-clarification" class="hash-link" aria-label="Direct link to 3-architecture-scale-clarification" title="Direct link to 3-architecture-scale-clarification" translate="no">​</a></h4>
+<p>Enhanced architectural documentation with clear distinction between inspirational reference and buildable implementation:</p>
+<p><strong>Delphin (Off-World Reference)</strong>:</p>
+<ul>
+<li class="">40,000 ft (12 km) crystal spire</li>
+<li class="">600-1,200 ft diameter communospheres</li>
+<li class="">10,000 people per sphere</li>
+<li class="">Advanced consciousness-matter technology</li>
+<li class="">Serves as design archetype and proportional guide</li>
+</ul>
+<p><strong>Light City Earth (Buildable Implementation)</strong>:</p>
+<ul>
+<li class=""><strong>Phase 1</strong>: 60-120m spire, 3 domes @ 30-45m diameter, 200 residents</li>
+<li class=""><strong>Phase 2</strong>: 120-300m spire, 6-12 domes @ 45-60m diameter, 1,500 residents</li>
+<li class=""><strong>Phase 3</strong>: 12+ domes @ 60-90m diameter, 8,000+ residents</li>
+<li class="">Proven technologies: CLT, geodesic structures, BIPV, solar + battery storage</li>
+</ul>
+<p><strong>Why It Matters</strong>: Provides clear, buildable specifications while honoring the visionary inspiration.</p>
+<p><strong>Read More</strong>: <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/architecture#phased-development--scale">Architecture - Phased Development</a></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-energy-system-documentation">4. <strong>Energy System Documentation</strong><a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#4-energy-system-documentation" class="hash-link" aria-label="Direct link to 4-energy-system-documentation" title="Direct link to 4-energy-system-documentation" translate="no">​</a></h4>
+<p>Clarified Light City's two-track energy approach throughout all technical documentation:</p>
+<p><strong>Track 1 - Physical Microgrid</strong> (Proven, TRL 8-9):</p>
+<ul>
+<li class="">Solar PV: 2-5 MWp (Phase 1), scaling to 15-50 MWp</li>
+<li class="">Battery storage: 8-20 MWh (Phase 1), scaling to 40-80 MWh</li>
+<li class="">Backup generator: 500 kW - 2 MW</li>
+<li class="">Powers ALL essential systems: HVAC, lighting, kitchens, water, communications</li>
+</ul>
+<p><strong>Track 2 - Subtle/Consciousness Layer</strong> (Research, TRL 1-3):</p>
+<ul>
+<li class="">Acoustic resonance and harmonic environment</li>
+<li class="">Ceremonial lighting programs</li>
+<li class="">Consciousness field research (optional, consent-based)</li>
+<li class="">Influences human experience, not electrical loads</li>
+</ul>
+<p><strong>Spire Functions</strong> (Clarified):</p>
+<ul>
+<li class="">Ceremonial and symbolic focal point</li>
+<li class="">Acoustic resonance generation</li>
+<li class="">LED lighting programs</li>
+<li class="">Solar PV contribution (200 kWp - 2 MWp, supplemental)</li>
+<li class="">NOT primary electrical power source (that's the microgrid)</li>
+</ul>
+<p><strong>Read More</strong>: <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/energy-systems">Energy Systems - Two-Track Approach</a></p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-timeline--progress-updates">5. <strong>Timeline &amp; Progress Updates</strong><a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#5-timeline--progress-updates" class="hash-link" aria-label="Direct link to 5-timeline--progress-updates" title="Direct link to 5-timeline--progress-updates" translate="no">​</a></h4>
+<p>Updated project timeline across all documentation with current progress:</p>
+<p><strong>Current Status</strong> (November 14, 2025):</p>
+<ul>
+<li class=""><strong>Stage 1</strong> (Foundation): 85% complete</li>
+<li class="">Focus: Documentation, vision articulation, initial planning</li>
+</ul>
+<p><strong>Upcoming Milestones</strong>:</p>
+<ul>
+<li class=""><strong>Q2 2026</strong>: Complete Stage 2 (Design) - 20 professional renders, detailed architectural plans</li>
+<li class=""><strong>Q4 2026</strong>: Complete Stage 3 (Digital Platform) - Enhanced website, community tools</li>
+<li class=""><strong>Q4 2027</strong>: Complete Stage 4 (Community Building) - 500+ members, governance operational</li>
+<li class=""><strong>Q1 2028</strong>: Begin Stage 5 (Physical Manifestation) - Land acquisition, capital raise</li>
+<li class=""><strong>Q4 2029</strong>: Construction complete, first residents move in</li>
+<li class=""><strong>Q2 2031</strong>: Break-even achieved (180 residents + retreat operations)</li>
+</ul>
+<p><strong>Read More</strong>: <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages">Development Stages</a></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-these-enhancements-matter">Why These Enhancements Matter<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#why-these-enhancements-matter" class="hash-link" aria-label="Direct link to Why These Enhancements Matter" title="Direct link to Why These Enhancements Matter" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-investors">For Investors<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#for-investors" class="hash-link" aria-label="Direct link to For Investors" title="Direct link to For Investors" translate="no">​</a></h3>
+<p>These additions provide the transparency and rigor needed for serious capital deployment:</p>
+<ul>
+<li class=""><strong>Governance clarity</strong>: Understand who makes decisions and how capital is protected</li>
+<li class=""><strong>Financial modeling</strong>: Detailed scenarios, sensitivity analysis, and risk mitigation strategies</li>
+<li class=""><strong>Realistic specifications</strong>: Buildable Phase 1 (200 residents, $22M-$45M) with proven technologies</li>
+<li class=""><strong>Clear timeline</strong>: Specific milestones from now through break-even (2031)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-future-residents">For Future Residents<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#for-future-residents" class="hash-link" aria-label="Direct link to For Future Residents" title="Direct link to For Future Residents" translate="no">​</a></h3>
+<p>Enhanced documentation helps you understand what living in Light City will actually be like:</p>
+<ul>
+<li class=""><strong>Transparent costs</strong>: $500-$1,700/month with clear breakdown of what's included</li>
+<li class=""><strong>Governance participation</strong>: Elect representatives, vote on major decisions, serve on committees</li>
+<li class=""><strong>Community structure</strong>: Balance of private units and shared spaces, 10-15 communal meals/month</li>
+<li class=""><strong>Application process</strong>: Clear 5-step path from inquiry to residency</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-builders--engineers">For Builders &amp; Engineers<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#for-builders--engineers" class="hash-link" aria-label="Direct link to For Builders &amp; Engineers" title="Direct link to For Builders &amp; Engineers" translate="no">​</a></h3>
+<p>Technical specifications are now comprehensive and buildable:</p>
+<ul>
+<li class=""><strong>Proven technologies</strong>: CLT (TRL 8-9), geodesic domes (TRL 7-8), solar+storage (TRL 8-9)</li>
+<li class=""><strong>Realistic scale</strong>: 30-90m domes (not 600-1,200 ft), 60-300m spire (not 40,000 ft)</li>
+<li class=""><strong>Phased approach</strong>: Start with 3 domes and 200 residents, scale systematically</li>
+<li class=""><strong>Clear energy system</strong>: Solar PV + batteries provide all essential power</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-researchers">For Researchers<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#for-researchers" class="hash-link" aria-label="Direct link to For Researchers" title="Direct link to For Researchers" translate="no">​</a></h3>
+<p>Research framework is now rigorous and ethical:</p>
+<ul>
+<li class=""><strong>Two-track system</strong>: Physical energy (proven) separate from consciousness research (exploratory)</li>
+<li class=""><strong>Measurement protocols</strong>: Specific instruments, targets, and methodologies</li>
+<li class=""><strong>Ethics framework</strong>: IRB approval, informed consent, opt-out zones, privacy protection</li>
+<li class=""><strong>Collaboration opportunities</strong>: Open to university partnerships and independent researchers</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-structure">Documentation Structure<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#documentation-structure" class="hash-link" aria-label="Direct link to Documentation Structure" title="Direct link to Documentation Structure" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="enhanced-pages">Enhanced Pages<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#enhanced-pages" class="hash-link" aria-label="Direct link to Enhanced Pages" title="Direct link to Enhanced Pages" translate="no">​</a></h3>
+<p><strong>Major Enhancements</strong>:</p>
+<ul>
+<li class=""><strong>Governance</strong> (NEW): Complete decision-making framework, 500+ lines</li>
+<li class=""><strong>Development Stages</strong>: Added financial model notes, cross-subsidy analysis, sensitivity scenarios</li>
+<li class=""><strong>Architecture</strong>: Enhanced with phased development details, scale clarification, implementation readiness</li>
+<li class=""><strong>Communospheres</strong>: Separated Delphin reference from Earth implementation specifications</li>
+<li class=""><strong>Energy Systems</strong>: Clarified two-track approach (physical microgrid + subtle research layer)</li>
+<li class=""><strong>Purpose &amp; Mission</strong>: Updated timeline with current progress and specific milestones</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="navigation-improvements">Navigation Improvements<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#navigation-improvements" class="hash-link" aria-label="Direct link to Navigation Improvements" title="Direct link to Navigation Improvements" translate="no">​</a></h3>
+<ul>
+<li class="">Added Governance to sidebar under "Development" section</li>
+<li class="">Updated all cross-references between related documents</li>
+<li class="">Consistent terminology and framing across all pages</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-next">What's Next<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#whats-next" class="hash-link" aria-label="Direct link to What's Next" title="Direct link to What's Next" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="immediate-focus-q4-2025">Immediate Focus (Q4 2025)<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#immediate-focus-q4-2025" class="hash-link" aria-label="Direct link to Immediate Focus (Q4 2025)" title="Direct link to Immediate Focus (Q4 2025)" translate="no">​</a></h3>
+<ul>
+<li class="">Complete Stage 1 (Foundation) - final 15%</li>
+<li class="">Begin Stage 2 (Design) planning</li>
+<li class="">Engage architectural visualization partners</li>
+<li class="">Develop investor presentation materials</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="short-term-q1-q2-2026">Short-Term (Q1-Q2 2026)<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#short-term-q1-q2-2026" class="hash-link" aria-label="Direct link to Short-Term (Q1-Q2 2026)" title="Direct link to Short-Term (Q1-Q2 2026)" translate="no">​</a></h3>
+<ul>
+<li class="">Create 20 professional architectural renders</li>
+<li class="">Develop detailed construction documents</li>
+<li class="">Identify potential land sites</li>
+<li class="">Build advisory board</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="medium-term-2026-2027">Medium-Term (2026-2027)<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#medium-term-2026-2027" class="hash-link" aria-label="Direct link to Medium-Term (2026-2027)" title="Direct link to Medium-Term (2026-2027)" translate="no">​</a></h3>
+<ul>
+<li class="">Launch enhanced digital platform (Stage 3)</li>
+<li class="">Grow community to 500+ members (Stage 4)</li>
+<li class="">Establish governance structures</li>
+<li class="">Prepare for capital raise</li>
+</ul>
+<p><strong>Stay Updated</strong>: Follow our <a class="" href="https://szemkoff.github.io/light-city-project/blog">blog</a> for regular progress updates</p>
+<hr>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="key-documentation-links">Key Documentation Links<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#key-documentation-links" class="hash-link" aria-label="Direct link to Key Documentation Links" title="Direct link to Key Documentation Links" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new--enhanced-pages">New &amp; Enhanced Pages<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#new--enhanced-pages" class="hash-link" aria-label="Direct link to New &amp; Enhanced Pages" title="Direct link to New &amp; Enhanced Pages" translate="no">​</a></h3>
+<ul>
+<li class=""><strong><a class="" href="https://szemkoff.github.io/light-city-project/docs/project/governance">Governance Framework</a></strong> - Complete decision-making and community structure (NEW)</li>
+<li class=""><strong><a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages">Development Stages</a></strong> - Enhanced with detailed financial model</li>
+<li class=""><strong><a class="" href="https://szemkoff.github.io/light-city-project/docs/design/architecture">Architecture</a></strong> - Phased development and scale clarification</li>
+<li class=""><strong><a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/communospheres">Communospheres</a></strong> - Living spaces with clear Earth specifications</li>
+<li class=""><strong><a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/energy-systems">Energy Systems</a></strong> - Two-track approach (physical + subtle)</li>
+<li class=""><strong><a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/purpose-and-mission">Purpose &amp; Mission</a></strong> - Updated timeline and milestones</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="quick-links">Quick Links<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#quick-links" class="hash-link" aria-label="Direct link to Quick Links" title="Direct link to Quick Links" translate="no">​</a></h3>
+<ul>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/docs/START-HERE">Start Here</a> - New to Light City? Begin here</li>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/core-concepts">Core Concepts</a> - Foundational vision and principles</li>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/docs/technical/technology-catalog">Technology Catalog</a> - 34 proven technologies</li>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages#financial-model-notes--assumptions">Financial model (Development Stages)</a> - Quick reference for investors</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="conclusion">Conclusion<a href="https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
+<p>These enhancements represent a significant step forward in Light City's development, transforming our documentation from visionary concept to investor-ready framework. We now have:</p>
+<ol>
+<li class=""><strong>Comprehensive Governance</strong>: Clear decision-making structure and community framework</li>
+<li class=""><strong>Detailed Financial Modeling</strong>: Three scenarios with sensitivity analysis and risk mitigation</li>
+<li class=""><strong>Buildable Specifications</strong>: Realistic, phased approach using proven technologies</li>
+<li class=""><strong>Transparent Energy System</strong>: Clear separation of physical power and consciousness research</li>
+<li class=""><strong>Current Timeline</strong>: Specific milestones from now through break-even</li>
+</ol>
+<p><strong>Status</strong>: Documentation is now investor-ready and suitable for serious stakeholder engagement.</p>
+<hr>
+<p><strong>Version</strong>: 2.0<br>
+<strong>Date</strong>: November 14, 2025<br>
+<strong>Next Major Update</strong>: Q2 2026 (Stage 2 Design completion)</p>
+<p><strong>Related Updates</strong>:</p>
+<ul>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement">Complete Visual Enhancement</a></li>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system">Comprehensive Visual Documentation</a></li>
+<li class=""><a class="" href="https://szemkoff.github.io/light-city-project/blog/github-launch">GitHub Launch</a></li>
+</ul>
+<hr>
+<p><strong>Get Involved</strong>: Interested in investing, residing, building, or researching? <a href="mailto:info@lightcityproject.org" target="_blank" rel="noopener noreferrer" class="">Contact us</a> or explore our <a class="" href="https://szemkoff.github.io/light-city-project/docs/START-HERE">documentation</a>.</p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
         </author>
-        <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
-        </author>
-        <category label="Facebook" term="Facebook"/>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="governance" term="governance"/>
+        <category label="financial-model" term="financial-model"/>
+        <category label="architecture" term="architecture"/>
+        <category label="investor-ready" term="investor-ready"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[MDX Blog Post]]></title>
-        <id>https://szemkoff.github.io/light-city-project/blog/mdx-blog-post</id>
-        <link href="https://szemkoff.github.io/light-city-project/blog/mdx-blog-post"/>
-        <updated>2021-08-01T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></summary>
-        <content type="html"><![CDATA[<p>Blog posts support <a href="https://docusaurus.io/docs/markdown-features" target="_blank" rel="noopener noreferrer">Docusaurus Markdown features</a>, such as <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">MDX</a>.</p>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Use the power of React to create interactive blog posts.</p></div></div>
-<!-- -->
-<p>For example, use JSX to create an interactive button:</p>
-<div class="language-js codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token operator" style="color:#393A34">&lt;</span><span class="token plain">button onClick</span><span class="token operator" style="color:#393A34">=</span><span class="token punctuation" style="color:#393A34">{</span><span class="token punctuation" style="color:#393A34">(</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token arrow operator" style="color:#393A34">=&gt;</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">alert</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">'button clicked!'</span><span class="token punctuation" style="color:#393A34">)</span><span class="token punctuation" style="color:#393A34">}</span><span class="token operator" style="color:#393A34">&gt;</span><span class="token maybe-class-name">Click</span><span class="token plain"> me</span><span class="token operator" style="color:#393A34">!</span><span class="token operator" style="color:#393A34">&lt;</span><span class="token operator" style="color:#393A34">/</span><span class="token plain">button</span><span class="token operator" style="color:#393A34">&gt;</span><br></span></code></pre></div></div>
-<button>Click me!</button>]]></content>
+        <title type="html"><![CDATA[Complete Visual Enhancement - Every Page Now Illustrated]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement"/>
+        <updated>2025-11-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today marks a significant milestone in the Light City documentation: every major page now includes rich visual content that brings the concepts to life.]]></summary>
+        <content type="html"><![CDATA[<p>Today marks a significant milestone in the Light City documentation: <strong>every major page now includes rich visual content</strong> that brings the concepts to life.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-new">What's New<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="enhanced-documentation-pages">Enhanced Documentation Pages<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#enhanced-documentation-pages" class="hash-link" aria-label="Direct link to Enhanced Documentation Pages" title="Direct link to Enhanced Documentation Pages" translate="no">​</a></h3>
+<p>We've added carefully selected visualizations to all remaining pages that previously had only text:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="philosophy-page">Philosophy Page<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#philosophy-page" class="hash-link" aria-label="Direct link to Philosophy Page" title="Direct link to Philosophy Page" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Hero Image</strong>: Light City Vision 2 - demonstrating how philosophical principles manifest in architectural form</li>
+<li class=""><strong>Sacred Geometry</strong>: Flower of Life diagram illustrating the fundamental patterns underlying our philosophy</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="purpose--mission-page">Purpose &amp; Mission Page<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#purpose--mission-page" class="hash-link" aria-label="Direct link to Purpose &amp; Mission Page" title="Direct link to Purpose &amp; Mission Page" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Hero Image</strong>: Delphin aerial view - showing that our vision is achievable reality, not just philosophy</li>
+<li class=""><strong>Development Roadmap</strong>: Complete 6-stage visual timeline from vision to thriving civilization</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-language-page">Visual Language Page<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#visual-language-page" class="hash-link" aria-label="Direct link to Visual Language Page" title="Direct link to Visual Language Page" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Hero Image</strong>: Light City Vision 1 - showcasing the crystalline, luminous visual identity</li>
+<li class=""><strong>Golden Ratio Spiral</strong>: Fundamental pattern in our visual language</li>
+<li class=""><strong>Merkaba</strong>: Representing the light body and dimensional bridge in our visual system</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="color--light-page">Color &amp; Light Page<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#color--light-page" class="hash-link" aria-label="Direct link to Color &amp; Light Page" title="Direct link to Color &amp; Light Page" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Hero Image</strong>: Delphin Crystal City - demonstrating the interplay of light, crystal, and color in a living city</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="layout-diagrams-page">Layout Diagrams Page<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#layout-diagrams-page" class="hash-link" aria-label="Direct link to Layout Diagrams Page" title="Direct link to Layout Diagrams Page" translate="no">​</a></h4>
+<p>Now features a complete gallery of completed diagrams:</p>
+<ul>
+<li class=""><strong>City Layout</strong>: Top-down view of concentric ring structure</li>
+<li class=""><strong>Energy Flow System</strong>: Complete distribution from cosmic source to infrastructure</li>
+<li class=""><strong>Vesica Piscis</strong>: Portal geometry for doorways and transformation spaces</li>
+<li class=""><strong>Metatron's Cube</strong>: Master template forming the city's energy grid</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="image-quality-improvements">Image Quality Improvements<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#image-quality-improvements" class="hash-link" aria-label="Direct link to Image Quality Improvements" title="Direct link to Image Quality Improvements" translate="no">​</a></h3>
+<p>We've also upgraded several diagrams from SVG to high-quality JPG/WebP formats:</p>
+<ul>
+<li class=""><strong>Platonic Solids</strong>: Now using detailed JPG illustration</li>
+<li class=""><strong>Golden Ratio Spiral</strong>: Upgraded to high-resolution JPG</li>
+<li class=""><strong>Sri Yantra</strong>: Now using beautiful WebP image</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-content-summary">Visual Content Summary<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#visual-content-summary" class="hash-link" aria-label="Direct link to Visual Content Summary" title="Direct link to Visual Content Summary" translate="no">​</a></h2>
+<p>The Light City documentation now includes:</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="inspiration-images-4">Inspiration Images (4)<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#inspiration-images-4" class="hash-link" aria-label="Direct link to Inspiration Images (4)" title="Direct link to Inspiration Images (4)" translate="no">​</a></h3>
+<ul>
+<li class="">2 AI-generated Light City visions</li>
+<li class="">2 Delphin aerial views (real crystal city)</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sacred-geometry-diagrams-10">Sacred Geometry Diagrams (10+)<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#sacred-geometry-diagrams-10" class="hash-link" aria-label="Direct link to Sacred Geometry Diagrams (10+)" title="Direct link to Sacred Geometry Diagrams (10+)" translate="no">​</a></h3>
+<ul>
+<li class="">Flower of Life</li>
+<li class="">Merkaba</li>
+<li class="">Golden Ratio Spiral</li>
+<li class="">Platonic Solids</li>
+<li class="">Vesica Piscis</li>
+<li class="">Metatron's Cube</li>
+<li class="">Sri Yantra</li>
+<li class="">City Layout</li>
+<li class="">Energy Flow System</li>
+<li class="">Development Roadmap</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="architectural-inspiration-4">Architectural Inspiration (4+)<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#architectural-inspiration-4" class="hash-link" aria-label="Direct link to Architectural Inspiration (4+)" title="Direct link to Architectural Inspiration (4+)" translate="no">​</a></h3>
+<ul>
+<li class="">Borobudur Temple images</li>
+<li class="">Angkor Wat images</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-cleanup">Documentation Cleanup<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#documentation-cleanup" class="hash-link" aria-label="Direct link to Documentation Cleanup" title="Direct link to Documentation Cleanup" translate="no">​</a></h2>
+<p>As part of this update, we've also:</p>
+<ul>
+<li class=""><strong>Removed the Technical section</strong> from the menu (GitHub/Docusaurus setup guide)</li>
+<li class=""><strong>Streamlined the sidebar</strong> to focus on core content</li>
+<li class="">Made the documentation more accessible and visually engaging</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="impact">Impact<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#impact" class="hash-link" aria-label="Direct link to Impact" title="Direct link to Impact" translate="no">​</a></h2>
+<p>Every major concept page now has:</p>
+<ol>
+<li class=""><strong>Visual context</strong> at the top to immediately engage readers</li>
+<li class=""><strong>Relevant diagrams</strong> throughout to illustrate complex ideas</li>
+<li class=""><strong>Sacred geometry examples</strong> showing the patterns in action</li>
+<li class=""><strong>Real-world references</strong> (Delphin) validating the vision</li>
+</ol>
+<p>This transformation makes Light City documentation not just informative, but <strong>inspiring and immediately graspable</strong>.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-next">What's Next<a href="https://szemkoff.github.io/light-city-project/blog/complete-visual-enhancement#whats-next" class="hash-link" aria-label="Direct link to What's Next" title="Direct link to What's Next" translate="no">​</a></h2>
+<p>With comprehensive visual documentation in place, we can now focus on:</p>
+<ul>
+<li class="">Creating interactive 3D models</li>
+<li class="">Developing animated energy flow visualizations</li>
+<li class="">Building virtual reality experiences</li>
+<li class="">Expanding the architectural inspiration gallery</li>
+</ul>
+<hr>
+<p><strong>View the enhanced documentation</strong>: <a href="https://szemkoff.github.io/light-city-project/" target="_blank" rel="noopener noreferrer" class="">Light City Project</a></p>
+<p>The vision is becoming clearer with every update. ✨</p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
         </author>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="visualization" term="visualization"/>
+        <category label="design" term="design"/>
+        <category label="images" term="images"/>
+        <category label="sacred-geometry" term="sacred-geometry"/>
+        <category label="progress" term="progress"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Long Blog Post]]></title>
-        <id>https://szemkoff.github.io/light-city-project/blog/long-blog-post</id>
-        <link href="https://szemkoff.github.io/light-city-project/blog/long-blog-post"/>
-        <updated>2019-05-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is the summary of a very long blog post,]]></summary>
-        <content type="html"><![CDATA[<p>This is the summary of a very long blog post,</p>
-<p>Use a <code>&lt;!--</code> <code>truncate</code> <code>--&gt;</code> comment to limit blog post size in the list view.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <title type="html"><![CDATA[Comprehensive Visual Documentation System Complete]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/visual-documentation-system</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system"/>
+        <updated>2025-11-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We're excited to announce the completion of Light City's comprehensive visual documentation system! The project has been transformed from text-based documentation to a richly illustrated knowledge base with professional diagrams, sacred geometry visualizations, and architectural references.]]></summary>
+        <content type="html"><![CDATA[<p>We're excited to announce the completion of Light City's comprehensive visual documentation system! The project has been transformed from text-based documentation to a richly illustrated knowledge base with professional diagrams, sacred geometry visualizations, and architectural references.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-new">What's New<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-custom-sacred-geometry-diagrams">10 Custom Sacred Geometry Diagrams<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#10-custom-sacred-geometry-diagrams" class="hash-link" aria-label="Direct link to 10 Custom Sacred Geometry Diagrams" title="Direct link to 10 Custom Sacred Geometry Diagrams" translate="no">​</a></h3>
+<p>We've created a complete suite of professional SVG diagrams illustrating the sacred geometric principles underlying Light City's design:</p>
+<ul>
+<li class=""><strong>Flower of Life</strong> - The fundamental creation pattern</li>
+<li class=""><strong>Merkaba</strong> - Light body vehicle showing dimensional travel geometry</li>
+<li class=""><strong>Golden Ratio Spiral</strong> - Divine proportion found throughout nature</li>
+<li class=""><strong>Platonic Solids</strong> - All five elemental building blocks with applications</li>
+<li class=""><strong>Vesica Piscis</strong> - Sacred intersection representing portals and birth</li>
+<li class=""><strong>Metatron's Cube</strong> - The complete blueprint containing all Platonic solids</li>
+<li class=""><strong>Sri Yantra</strong> - Cosmic manifestation pattern with masculine/feminine union</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="city-planning-visualizations">City Planning Visualizations<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#city-planning-visualizations" class="hash-link" aria-label="Direct link to City Planning Visualizations" title="Direct link to City Planning Visualizations" translate="no">​</a></h3>
+<p>Three comprehensive diagrams show the practical manifestation:</p>
+<ul>
+<li class=""><strong>City Layout</strong> - Top-down view with concentric rings, communospheres, and central spire</li>
+<li class=""><strong>Energy Flow System</strong> - Complete visualization from cosmic source to city infrastructure</li>
+<li class=""><strong>Development Roadmap</strong> - Six-stage timeline with current progress indicators</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="interactive-mermaid-diagrams">Interactive Mermaid Diagrams<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#interactive-mermaid-diagrams" class="hash-link" aria-label="Direct link to Interactive Mermaid Diagrams" title="Direct link to Interactive Mermaid Diagrams" translate="no">​</a></h3>
+<p>Five interactive diagrams integrated throughout the documentation:</p>
+<ul>
+<li class="">Light City Dimensions (multidimensional nature)</li>
+<li class="">City Layout Structure (architectural organization)</li>
+<li class="">Energy Flow &amp; Resonance Systems (power distribution)</li>
+<li class="">Communosphere Structure (living space design)</li>
+<li class="">Sacred Geometry Reference (geometric relationships)</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="enhanced-documentation">Enhanced Documentation<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#enhanced-documentation" class="hash-link" aria-label="Direct link to Enhanced Documentation" title="Direct link to Enhanced Documentation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sacred-geometry-page">Sacred Geometry Page<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#sacred-geometry-page" class="hash-link" aria-label="Direct link to Sacred Geometry Page" title="Direct link to Sacred Geometry Page" translate="no">​</a></h3>
+<p>Now features complete visual illustrations for every geometric form, with detailed explanations of their significance and applications in Light City architecture.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="architecture-page">Architecture Page<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#architecture-page" class="hash-link" aria-label="Direct link to Architecture Page" title="Direct link to Architecture Page" translate="no">​</a></h3>
+<p>Includes the new city layout diagram, plus historical inspirations from Borobudur Temple and Angkor Wat, showing how sacred geometry has been used in actual construction.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="energy-systems-page">Energy Systems Page<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#energy-systems-page" class="hash-link" aria-label="Direct link to Energy Systems Page" title="Direct link to Energy Systems Page" translate="no">​</a></h3>
+<p>Complete visualization of how cosmic energy flows through the crystal spire, into the sacred geometric grid, and distributes to all city structures.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="development-stages-page">Development Stages Page<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#development-stages-page" class="hash-link" aria-label="Direct link to Development Stages Page" title="Direct link to Development Stages Page" translate="no">​</a></h3>
+<p>Full six-stage roadmap showing the journey from current Stage 1 (60% complete) through to thriving civilization.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="resource-guides">Resource Guides<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#resource-guides" class="hash-link" aria-label="Direct link to Resource Guides" title="Direct link to Resource Guides" translate="no">​</a></h2>
+<p>We've also created three comprehensive guides to help expand visual content:</p>
+<ol>
+<li class=""><strong>Curated Image Recommendations</strong> - Direct links to 60+ free stock photo sources</li>
+<li class=""><strong>Adding Images Guide</strong> - Complete tutorial on AI generation, stock photos, and SVG creation</li>
+<li class=""><strong>Diagram Inventory</strong> - Full catalog of all visual assets with usage guidelines</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-means">What This Means<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#what-this-means" class="hash-link" aria-label="Direct link to What This Means" title="Direct link to What This Means" translate="no">​</a></h2>
+<p>Light City documentation is now <strong>visually complete</strong> at the conceptual level. Complex spiritual and architectural concepts are immediately graspable through professional illustrations. The project now has a complete visual language that matches its visionary scope.</p>
+<p>This visual foundation supports:</p>
+<ul>
+<li class=""><strong>Education</strong> - Teaching Light City principles</li>
+<li class=""><strong>Presentations</strong> - Sharing the vision with potential collaborators</li>
+<li class=""><strong>Development</strong> - Clear reference for future design work</li>
+<li class=""><strong>Inspiration</strong> - Bringing the vision to life for all who encounter it</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-next">What's Next<a href="https://szemkoff.github.io/light-city-project/blog/visual-documentation-system#whats-next" class="hash-link" aria-label="Direct link to What's Next" title="Direct link to What's Next" translate="no">​</a></h2>
+<p>With Stage 1 documentation now at 70% completion, we're preparing for:</p>
+<ul>
+<li class="">Stage 2: Deep research into consciousness technology and materials science</li>
+<li class="">Building cross-section diagrams</li>
+<li class="">Prototype communosphere designs</li>
+<li class="">Interactive 3D city model</li>
+</ul>
+<p>The visual foundation is complete. Now we build upon it.</p>
+<hr>
+<p><em>View all diagrams at: <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/sacred-geometry">Sacred Geometry</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/architecture">Architecture</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/energy-systems">Energy Systems</a></em></p>]]></content>
         <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
         </author>
-        <category label="Hello" term="Hello"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="milestone" term="milestone"/>
+        <category label="visualization" term="visualization"/>
+        <category label="sacred-geometry" term="sacred-geometry"/>
+        <category label="diagrams" term="diagrams"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>https://szemkoff.github.io/light-city-project/blog/first-blog-post</id>
-        <link href="https://szemkoff.github.io/light-city-project/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet...]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet...</p>
-<p>...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <title type="html"><![CDATA[Light City Goes Public - GitHub Repository and Documentation Site Launch]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/github-launch</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/github-launch"/>
+        <updated>2025-10-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Today marks a significant milestone: Light City is now publicly accessible through GitHub and has a beautiful documentation website powered by Docusaurus!]]></summary>
+        <content type="html"><![CDATA[<p>Today marks a significant milestone: Light City is now publicly accessible through GitHub and has a beautiful documentation website powered by Docusaurus!</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="whats-launched">What's Launched<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#whats-launched" class="hash-link" aria-label="Direct link to What's Launched" title="Direct link to What's Launched" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="github-repository">GitHub Repository<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#github-repository" class="hash-link" aria-label="Direct link to GitHub Repository" title="Direct link to GitHub Repository" translate="no">​</a></h3>
+<p>The complete Light City project is now available at <a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer" class="">github.com/szemkoff/light-city-project</a></p>
+<p>This includes:</p>
+<ul>
+<li class="">Complete documentation structure</li>
+<li class="">Development roadmaps and planning</li>
+<li class="">Research materials and references</li>
+<li class="">Asset organization and management</li>
+<li class="">Full version control history</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="live-documentation-site">Live Documentation Site<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#live-documentation-site" class="hash-link" aria-label="Direct link to Live Documentation Site" title="Direct link to Live Documentation Site" translate="no">​</a></h3>
+<p>Visit our beautiful Docusaurus-powered site at <a href="https://szemkoff.github.io/light-city-project/" target="_blank" rel="noopener noreferrer" class="">szemkoff.github.io/light-city-project</a></p>
+<p>Features:</p>
+<ul>
+<li class="">Professional navigation and search</li>
+<li class="">Organized documentation by category</li>
+<li class="">Mobile-responsive design</li>
+<li class="">Dark mode support</li>
+<li class="">Fast, modern browsing experience</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-documentation">New Documentation<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#new-documentation" class="hash-link" aria-label="Direct link to New Documentation" title="Direct link to New Documentation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="visual-design-system">Visual Design System<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#visual-design-system" class="hash-link" aria-label="Direct link to Visual Design System" title="Direct link to Visual Design System" translate="no">​</a></h3>
+<ul>
+<li class="">Design principles and tokens</li>
+<li class="">Color palette and lighting rules</li>
+<li class="">Layout diagram placeholders</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="research-infrastructure">Research Infrastructure<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#research-infrastructure" class="hash-link" aria-label="Direct link to Research Infrastructure" title="Direct link to Research Infrastructure" translate="no">​</a></h3>
+<ul>
+<li class="">Bibliography compilation system</li>
+<li class="">Open questions tracking</li>
+<li class="">Research methodology</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="governance">Governance<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#governance" class="hash-link" aria-label="Direct link to Governance" title="Direct link to Governance" translate="no">​</a></h3>
+<ul>
+<li class="">Code of Conduct for contributors</li>
+<li class="">MIT License for code</li>
+<li class="">CC BY-SA 4.0 for documentation</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-guides">Technical Guides<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#technical-guides" class="hash-link" aria-label="Direct link to Technical Guides" title="Direct link to Technical Guides" translate="no">​</a></h3>
+<ul>
+<li class="">GitHub and Docusaurus setup guide</li>
+<li class="">Deployment workflows</li>
+<li class="">Contribution guidelines</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="inspiration-gallery">Inspiration Gallery<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#inspiration-gallery" class="hash-link" aria-label="Direct link to Inspiration Gallery" title="Direct link to Inspiration Gallery" translate="no">​</a></h2>
+<p>We've organized all visual inspiration including:</p>
+<ul>
+<li class="">Your original AI-generated Light City visions</li>
+<li class="">Delphin aerial views (crystal city from another world)</li>
+<li class="">Sacred architecture examples</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-means">What This Means<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#what-this-means" class="hash-link" aria-label="Direct link to What This Means" title="Direct link to What This Means" translate="no">​</a></h2>
+<p>Light City is no longer a private vision—it's now an open project ready for:</p>
+<ul>
+<li class=""><strong>Collaboration</strong> - Others can contribute and build upon the foundation</li>
+<li class=""><strong>Visibility</strong> - Reaching people who resonate with the vision</li>
+<li class=""><strong>Professional Development</strong> - Proper version control and project management</li>
+<li class=""><strong>Community Building</strong> - Infrastructure for a growing team</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="project-status">Project Status<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#project-status" class="hash-link" aria-label="Direct link to Project Status" title="Direct link to Project Status" translate="no">​</a></h2>
+<p><strong>Stage 1: Foundation &amp; Vision - 60% Complete</strong></p>
+<p>Core concepts documented, architecture outlined, and infrastructure established. Moving toward Stage 2 (Research &amp; Design) in Q1 2026.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="get-involved">Get Involved<a href="https://szemkoff.github.io/light-city-project/blog/github-launch#get-involved" class="hash-link" aria-label="Direct link to Get Involved" title="Direct link to Get Involved" translate="no">​</a></h2>
+<p>The project is open for contributions:</p>
+<ul>
+<li class="">Review documentation and suggest improvements</li>
+<li class="">Add research materials and references</li>
+<li class="">Share relevant sacred architecture examples</li>
+<li class="">Join the vision and help manifest Light City</li>
+</ul>
+<hr>
+<p><em>Start exploring at: <a class="" href="https://szemkoff.github.io/light-city-project/docs/START-HERE">Start Here</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/core-concepts">Core Concepts</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/architecture">Architecture</a></em></p>]]></content>
         <author>
-            <name>Sébastien Lorber</name>
-            <uri>https://sebastienlorber.com</uri>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
         </author>
+        <category label="milestone" term="milestone"/>
+        <category label="launch" term="launch"/>
+        <category label="github" term="github"/>
+        <category label="docusaurus" term="docusaurus"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Major Discovery - Integrating Knowledge from Delphin Crystal City]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/delphin-integration</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/delphin-integration"/>
+        <updated>2025-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A profound development in the Light City project—we've integrated detailed information about Delphin, an existing crystal city on another planet. This transforms Light City from pure vision to a project grounded in documented, functioning technology.]]></summary>
+        <content type="html"><![CDATA[<p>A profound development in the Light City project—we've integrated detailed information about Delphin, an existing crystal city on another planet. This transforms Light City from pure vision to a project grounded in documented, functioning technology.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-discovery">The Discovery<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#the-discovery" class="hash-link" aria-label="Direct link to The Discovery" title="Direct link to The Discovery" translate="no">​</a></h2>
+<p>Through channeled contact, we've received detailed technical and architectural information about Delphin, a crystal city on the planet Israel (in another star system). This isn't speculation—it's a working model we can reference and adapt.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-we-learned">What We Learned<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#what-we-learned" class="hash-link" aria-label="Direct link to What We Learned" title="Direct link to What We Learned" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-central-crystal-spire">The Central Crystal Spire<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#the-central-crystal-spire" class="hash-link" aria-label="Direct link to The Central Crystal Spire" title="Direct link to The Central Crystal Spire" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Height</strong>: 40,000 feet (~12 km / 7.6 miles)</li>
+<li class=""><strong>Function</strong>: Generates and distributes all energy for the entire city</li>
+<li class=""><strong>Technology</strong>: Crystal-based energy conversion from cosmic/universal sources</li>
+<li class=""><strong>Impact</strong>: Zero external power requirements, completely self-sufficient</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="communospheres">Communospheres<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#communospheres" class="hash-link" aria-label="Direct link to Communospheres" title="Direct link to Communospheres" translate="no">​</a></h3>
+<p>Revolutionary spherical living structures that maintain consciousness connection:</p>
+<ul>
+<li class=""><strong>Large-scale</strong>: Each houses ~10,000 people</li>
+<li class=""><strong>Design</strong>: Complete geodesic spheres "hooked into" the ground</li>
+<li class=""><strong>Function</strong>: Maintains resonant frequency keeping inhabitants consciously connected</li>
+<li class=""><strong>Result</strong>: Knowledge learned by anyone is instantly accessible to all through resonance field</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="resonance-technology">Resonance Technology<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#resonance-technology" class="hash-link" aria-label="Direct link to Resonance Technology" title="Direct link to Resonance Technology" translate="no">​</a></h3>
+<p>The entire city operates on a maintained frequency:</p>
+<ul>
+<li class="">Generated by the crystal spire</li>
+<li class="">Distributed through sacred geometric grid</li>
+<li class="">Maintains consciousness connection among all inhabitants</li>
+<li class="">Enables instantaneous knowledge transfer</li>
+<li class="">Creates unified awareness field</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="city-layout">City Layout<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#city-layout" class="hash-link" aria-label="Direct link to City Layout" title="Direct link to City Layout" translate="no">​</a></h3>
+<ul>
+<li class="">Concentric rings radiating from central spire</li>
+<li class="">12+ communospheres positioned around outer ring</li>
+<li class="">Dense urban development in middle rings</li>
+<li class="">Natural surroundings (forests) at periphery</li>
+<li class="">Radial pathways connecting center to edge</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-this-means-for-light-city">What This Means for Light City<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#what-this-means-for-light-city" class="hash-link" aria-label="Direct link to What This Means for Light City" title="Direct link to What This Means for Light City" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="validation">Validation<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#validation" class="hash-link" aria-label="Direct link to Validation" title="Direct link to Validation" translate="no">​</a></h3>
+<p>Our vision isn't fantasy—similar structures already exist and function on other worlds. We're not inventing something impossible; we're adapting proven technology.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="concrete-specifications">Concrete Specifications<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#concrete-specifications" class="hash-link" aria-label="Direct link to Concrete Specifications" title="Direct link to Concrete Specifications" translate="no">​</a></h3>
+<p>We now have actual measurements, population capacities, and functional descriptions instead of purely conceptual ideas.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-direction">Technical Direction<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#technical-direction" class="hash-link" aria-label="Direct link to Technical Direction" title="Direct link to Technical Direction" translate="no">​</a></h3>
+<p>Clear pathways for research:</p>
+<ul>
+<li class="">Crystal energy generation mechanisms</li>
+<li class="">Resonance field technology</li>
+<li class="">Consciousness connection systems</li>
+<li class="">Sacred geometric grid design</li>
+<li class="">Communosphere construction</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="confidence">Confidence<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#confidence" class="hash-link" aria-label="Direct link to Confidence" title="Direct link to Confidence" translate="no">​</a></h3>
+<p>Knowing it works elsewhere gives confidence this can work on Earth.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updated-documentation">Updated Documentation<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#updated-documentation" class="hash-link" aria-label="Direct link to Updated Documentation" title="Direct link to Updated Documentation" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-documents">New Documents<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#new-documents" class="hash-link" aria-label="Direct link to New Documents" title="Direct link to New Documents" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Communospheres</strong> - Complete concept documentation</li>
+<li class=""><strong>Energy Systems</strong> - Detailed crystal technology and resonance</li>
+<li class=""><strong>Delphin Channeled Information</strong> - Full technical specifications</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="updated-documents">Updated Documents<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#updated-documents" class="hash-link" aria-label="Direct link to Updated Documents" title="Direct link to Updated Documents" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Architecture</strong> - Delphin-inspired model section with 40,000-foot spire</li>
+<li class=""><strong>Core Concepts</strong> - Delphin as validation and living example</li>
+<li class=""><strong>Development Stages</strong> - Research priorities updated</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-path-forward">The Path Forward<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#the-path-forward" class="hash-link" aria-label="Direct link to The Path Forward" title="Direct link to The Path Forward" translate="no">​</a></h2>
+<p>This discovery accelerates our research focus:</p>
+<ol>
+<li class=""><strong>Energy Technology</strong> - How do crystals convert cosmic energy?</li>
+<li class=""><strong>Resonance Engineering</strong> - How to maintain consciousness-connecting frequencies?</li>
+<li class=""><strong>Communosphere Design</strong> - How to build large spherical living structures?</li>
+<li class=""><strong>Knowledge Transfer</strong> - How does information move through resonance fields?</li>
+</ol>
+<p>We're no longer purely visionary—we have a working example to study and adapt for Earth.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="significance">Significance<a href="https://szemkoff.github.io/light-city-project/blog/delphin-integration#significance" class="hash-link" aria-label="Direct link to Significance" title="Direct link to Significance" translate="no">​</a></h2>
+<p>This represents a quantum leap in the project. Light City went from:</p>
+<ul>
+<li class=""><strong>Pure vision</strong> → <strong>Documented technology</strong></li>
+<li class=""><strong>Conceptual architecture</strong> → <strong>Concrete specifications</strong></li>
+<li class=""><strong>Spiritual aspiration</strong> → <strong>Proven possibility</strong></li>
+</ul>
+<p>The foundation is no longer just our vision—it's validated by an existing, functioning civilization.</p>
+<hr>
+<p><em>Learn more: <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/communospheres">Communospheres</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/energy-systems">Energy Systems</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/architecture">Architecture</a></em></p>]]></content>
         <author>
-            <name>Yangshun Tay</name>
-            <uri>https://linkedin.com/in/yangshun</uri>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
         </author>
-        <category label="Hola" term="Hola"/>
-        <category label="Docusaurus" term="Docusaurus"/>
+        <category label="breakthrough" term="breakthrough"/>
+        <category label="delphin" term="delphin"/>
+        <category label="energy-systems" term="energy-systems"/>
+        <category label="communospheres" term="communospheres"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Light City Project - Foundation Begins]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/project-launch</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/project-launch"/>
+        <updated>2025-10-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to the Light City Project—a vision for a higher-consciousness civilization anchored in sacred geometry, crystalline architecture, and unity consciousness. Today marks the beginning of documenting and manifesting this vision into reality.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to the Light City Project—a vision for a higher-consciousness civilization anchored in sacred geometry, crystalline architecture, and unity consciousness. Today marks the beginning of documenting and manifesting this vision into reality.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-light-city">What is Light City?<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#what-is-light-city" class="hash-link" aria-label="Direct link to What is Light City?" title="Direct link to What is Light City?" translate="no">​</a></h2>
+<p>Light City is a multidimensional vision existing simultaneously across several planes:</p>
+<ol>
+<li class=""><strong>Etheric Blueprint</strong> - A higher-dimensional template of white-gold crystalline architecture</li>
+<li class=""><strong>Collective Vision</strong> - A future potential timeline for humanity operating from higher ethics</li>
+<li class=""><strong>Personal Mission</strong> - A calling to help build something that bridges spiritual and physical</li>
+</ol>
+<p>It's not utopia (which means "no place") but a real, achievable future we can consciously create.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-vision">The Vision<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#the-vision" class="hash-link" aria-label="Direct link to The Vision" title="Direct link to The Vision" translate="no">​</a></h2>
+<p>Imagine a city where:</p>
+<ul>
+<li class="">A massive crystal spire generates all energy needs from cosmic sources</li>
+<li class="">Spherical living structures (communospheres) maintain consciousness connection</li>
+<li class="">Sacred geometry informs every architectural decision</li>
+<li class="">Knowledge transfers instantly through resonance fields</li>
+<li class="">Higher ethics, compassion, and unity are natural states</li>
+<li class="">Physical beauty reflects spiritual principles</li>
+</ul>
+<p>This isn't fantasy—it's the natural evolution of human civilization when we align with higher consciousness.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-principles">Core Principles<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#core-principles" class="hash-link" aria-label="Direct link to Core Principles" title="Direct link to Core Principles" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="spirit-before-structure">Spirit Before Structure<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#spirit-before-structure" class="hash-link" aria-label="Direct link to Spirit Before Structure" title="Direct link to Spirit Before Structure" translate="no">​</a></h3>
+<p>Internal transformation must precede external manifestation. We build Light City first within ourselves.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="sacred-geometry-as-foundation">Sacred Geometry as Foundation<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#sacred-geometry-as-foundation" class="hash-link" aria-label="Direct link to Sacred Geometry as Foundation" title="Direct link to Sacred Geometry as Foundation" translate="no">​</a></h3>
+<p>All design based on circle, golden ratio, Platonic solids, Flower of Life, and Merkaba—forms that naturally elevate consciousness.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="unity-consciousness">Unity Consciousness<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#unity-consciousness" class="hash-link" aria-label="Direct link to Unity Consciousness" title="Direct link to Unity Consciousness" translate="no">​</a></h3>
+<p>Recognition of fundamental interconnection. Not enforced but naturally arising from the city's resonant field.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="beauty-and-functionality">Beauty and Functionality<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#beauty-and-functionality" class="hash-link" aria-label="Direct link to Beauty and Functionality" title="Direct link to Beauty and Functionality" translate="no">​</a></h3>
+<p>Every element serves both practical and aesthetic purposes. Form follows both function and frequency.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="six-stage-development-plan">Six-Stage Development Plan<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#six-stage-development-plan" class="hash-link" aria-label="Direct link to Six-Stage Development Plan" title="Direct link to Six-Stage Development Plan" translate="no">​</a></h2>
+<p><strong>Stage 1: Foundation &amp; Vision</strong> (Current - 30% complete)</p>
+<ul>
+<li class="">Core documentation</li>
+<li class="">Vision articulation</li>
+<li class="">Team formation</li>
+<li class="">Initial research</li>
+</ul>
+<p><strong>Stage 2: World-Building &amp; Design</strong></p>
+<ul>
+<li class="">Detailed architecture</li>
+<li class="">Energy system specifications</li>
+<li class="">Visual representations</li>
+<li class="">Site selection criteria</li>
+</ul>
+<p><strong>Stage 3: Research &amp; Development</strong></p>
+<ul>
+<li class="">Sacred architecture studies</li>
+<li class="">Crystal energy technology</li>
+<li class="">Consciousness research</li>
+<li class="">Material science</li>
+</ul>
+<p><strong>Stage 4: Community &amp; Resources</strong></p>
+<ul>
+<li class="">Team building</li>
+<li class="">Funding strategies</li>
+<li class="">Legal structures</li>
+<li class="">Partnerships</li>
+</ul>
+<p><strong>Stage 5: Pilot &amp; Testing</strong></p>
+<ul>
+<li class="">Prototype structures</li>
+<li class="">Small-scale community</li>
+<li class="">Technology validation</li>
+<li class="">Iterative refinement</li>
+</ul>
+<p><strong>Stage 6: Full Manifestation</strong></p>
+<ul>
+<li class="">Complete city construction</li>
+<li class="">Population integration</li>
+<li class="">Living, breathing civilization</li>
+<li class="">Model for global transformation</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="documentation-structure">Documentation Structure<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#documentation-structure" class="hash-link" aria-label="Direct link to Documentation Structure" title="Direct link to Documentation Structure" translate="no">​</a></h2>
+<p>We're building comprehensive documentation across:</p>
+<p><strong>Concepts</strong> - Philosophy, purpose, sacred geometry, core principles
+<strong>Design</strong> - Architecture, visual language, color and light
+<strong>Project</strong> - Development stages, structure, tools, workflows
+<strong>Research</strong> - Bibliography, open questions, references
+<strong>Technical</strong> - Implementation guides, specifications</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="current-focus">Current Focus<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#current-focus" class="hash-link" aria-label="Direct link to Current Focus" title="Direct link to Current Focus" translate="no">​</a></h2>
+<p>Stage 1 priorities:</p>
+<ul>
+<li class="">Document the vision with clarity and depth</li>
+<li class="">Establish organizational structure</li>
+<li class="">Create visual representations</li>
+<li class="">Begin technical research</li>
+<li class="">Form initial team</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-now">Why Now?<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#why-now" class="hash-link" aria-label="Direct link to Why Now?" title="Direct link to Why Now?" translate="no">​</a></h2>
+<p>Humanity stands at a choice point. We can continue old patterns or consciously evolve. Light City represents that choice—a practical demonstration that higher consciousness civilization is possible.</p>
+<p>The technology exists. The knowledge is available. The blueprint is visible to those who can see it. Now we document, design, and ultimately build.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="get-involved">Get Involved<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#get-involved" class="hash-link" aria-label="Direct link to Get Involved" title="Direct link to Get Involved" translate="no">​</a></h2>
+<p>This project requires many gifts:</p>
+<ul>
+<li class=""><strong>Visionaries</strong> - Hold and refine the vision</li>
+<li class=""><strong>Researchers</strong> - Investigate sacred architecture, energy systems, consciousness</li>
+<li class=""><strong>Designers</strong> - Create visual representations and architectural plans</li>
+<li class=""><strong>Engineers</strong> - Develop technical specifications</li>
+<li class=""><strong>Builders</strong> - Ultimately manifest the physical structures</li>
+<li class=""><strong>Community</strong> - Live the principles and attract others</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-journey-begins">The Journey Begins<a href="https://szemkoff.github.io/light-city-project/blog/project-launch#the-journey-begins" class="hash-link" aria-label="Direct link to The Journey Begins" title="Direct link to The Journey Begins" translate="no">​</a></h2>
+<p>This is not a quick project. It may take years or decades. But every great city began as a vision, then a plan, then dedicated work over time.</p>
+<p>Light City's foundation starts today. Join us.</p>
+<hr>
+<p><em>Start exploring: <a class="" href="https://szemkoff.github.io/light-city-project/docs/concepts/core-concepts">Core Concepts</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/architecture">Architecture</a> | <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages">Development Stages</a></em></p>]]></content>
+        <author>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
+        </author>
+        <category label="milestone" term="milestone"/>
+        <category label="foundation" term="foundation"/>
+        <category label="vision" term="vision"/>
+        <category label="documentation" term="documentation"/>
     </entry>
 </feed>

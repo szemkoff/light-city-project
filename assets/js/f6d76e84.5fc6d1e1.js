@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklight_city_docusaurus=self.webpackChunklight_city_docusaurus||[]).push([[6959],{70923:function(t){t.exports=JSON.parse('{"metadata":{"permalink":"/light-city-project/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":6,"blogDescription":"Progress updates and insights on the Light City Project","blogTitle":"Light City Updates"}}')}}]);
