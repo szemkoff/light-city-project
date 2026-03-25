@@ -144,11 +144,11 @@
   <!-- Key Characteristics -->
   <g transform="translate(50, 100)">
     <text x="0" y="0" class="label-text">Key Characteristics:</text>
-    <text x="0" y="20" class="desc-text">✓ Instantaneous transfer</text>
-    <text x="0" y="35" class="desc-text">✓ No conscious effort required</text>
-    <text x="0" y="50" class="desc-text">✓ Elevated knowledge form</text>
-    <text x="0" y="65" class="desc-text">✓ Automatic integration</text>
-    <text x="0" y="80" class="desc-text">✓ "They all know the same thing"</text>
+    <text x="0" y="20" class="desc-text">Field-mediated learning (hypothesis)</text>
+    <text x="0" y="35" class="desc-text">Protocols TBD; not automatic</text>
+    <text x="0" y="50" class="desc-text">Shared curriculum goals</text>
+    <text x="0" y="65" class="desc-text">Measured outcomes only</text>
+    <text x="0" y="80" class="desc-text">Reference: Delphin narrative (not proof)</text>
   </g>
   
   <!-- Result -->
