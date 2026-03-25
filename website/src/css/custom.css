@@ -206,3 +206,27 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/* Docs / blog navbar: horizontal Light City wordmark (PNG includes text) */
+.navbar__brand .navbar__title {
+  display: none;
+}
+
+.navbar__logo {
+  height: auto;
+}
+
+.navbar__logo img {
+  height: 2rem;
+  width: auto;
+  max-width: min(220px, 58vw);
+  object-fit: contain;
+  display: block;
+}
+
+@media (min-width: 997px) {
+  .navbar__logo img {
+    height: 2.25rem;
+    max-width: 260px;
+  }
+}

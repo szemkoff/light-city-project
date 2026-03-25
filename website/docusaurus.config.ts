@@ -59,10 +59,11 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Light City',
+      // Wordmark is baked into the logo image (see static/img/light-city-logo-navbar.png)
+      title: '',
       logo: {
-        alt: 'Light City Logo',
-        src: 'img/logo.svg',
+        alt: 'Light City',
+        src: 'img/light-city-logo-navbar.png',
         href: '/',
       },
       items: [
