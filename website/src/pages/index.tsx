@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import { useLocation } from '@docusaurus/router';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import PageLayout from '../components/PageLayout';
+import { FORMSUBMIT_ENDPOINT } from '../contactConfig';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -28,8 +30,8 @@ function HeroSection() {
               <Link className={clsx('button', styles.buttonSecondary)} to="/investors">
                 View Financial Model
               </Link>
-              <Link className={clsx('button', styles.buttonSecondary)} to="/investors">
-                Get Involved
+              <Link className={clsx('button', styles.buttonSecondary)} to="/contact">
+                Contact
               </Link>
             </div>
           </div>
@@ -208,9 +210,14 @@ function DelphinSection() {
 }
 
 function JoinSection() {
+  const { siteConfig } = useDocusaurusContext();
+  const location = useLocation();
+  const newsletterOk = new URLSearchParams(location.search).get('newsletter') === '1';
+  const nextHome = `${siteConfig.url.replace(/\/$/, '')}${siteConfig.baseUrl}?newsletter=1`;
   const investorsIcon = useBaseUrl('img/icons/investors-icon.svg');
   const residentsIcon = useBaseUrl('img/icons/residents-icon.svg');
   const buildersIcon = useBaseUrl('img/icons/builders-icon.svg');
+  const researchersIcon = useBaseUrl('img/icons/researchers-icon.svg');
   const roles = [
     {
       iconPath: investorsIcon,
@@ -233,6 +240,13 @@ function JoinSection() {
       detail: 'TRL 7-9 technologies, phased construction',
       link: '/builders',
     },
+    {
+      iconPath: researchersIcon,
+      title: 'Researchers',
+      description: 'Protocols & Open Questions',
+      detail: 'TRL 1-3 scope, ethics-first measurement',
+      link: '/researchers',
+    },
   ];
 
   return (
@@ -252,18 +266,34 @@ function JoinSection() {
           ))}
         </div>
         <div className={styles.newsletterBox}>
-          <h3 className={styles.newsletterTitle}>Stay Connected</h3>
-          <form className={styles.newsletterForm}>
-            <input 
-              type="email" 
-              placeholder="Enter your email for updates" 
+          <h3 className={styles.newsletterTitle}>Stay connected</h3>
+          {newsletterOk ? (
+            <p className={styles.newsletterThanks} role="status">
+              Thanks — your interest is recorded. You will receive a confirmation from the form service if required.
+            </p>
+          ) : null}
+          <form className={styles.newsletterForm} action={FORMSUBMIT_ENDPOINT} method="POST">
+            <input type="hidden" name="_subject" value="Light City Project - Newsletter signup" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="name" value="Newsletter signup" />
+            <input type="hidden" name="role" value="Newsletter" />
+            <input type="hidden" name="message" value="Signed up from homepage." />
+            <input type="hidden" name="_next" value={nextHome} />
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Email for project updates"
               className={styles.newsletterInput}
+              autoComplete="email"
             />
             <button type="submit" className={clsx('button', styles.buttonPrimary)}>
               Subscribe
             </button>
           </form>
-          <p className={styles.newsletterDisclaimer}>We respect your privacy. Unsubscribe anytime.</p>
+          <p className={styles.newsletterDisclaimer}>
+            For a full inquiry, use the <Link to="/contact">contact form</Link> with your role. We respect your privacy.
+          </p>
         </div>
       </div>
     </section>

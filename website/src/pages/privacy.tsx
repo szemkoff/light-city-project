@@ -14,9 +14,10 @@ export default function Privacy(): JSX.Element {
         pages.
       </p>
       <p>
-        If you contact the project by email, your message and address are used only to respond and are
-        not sold to third parties. There are no account systems or payment flows on this documentation
-        site at this time.
+        If you use the <Link to="/contact">contact form</Link> or email, your message and address are used
+        only to respond and are not sold to third parties. The contact form is delivered through a
+        third-party form service (FormSubmit); review their terms if needed. There are no account systems
+        or payment flows on this documentation site at this time.
       </p>
       <p>
         For the open-source repository and issue tracker, see{' '}

@@ -449,9 +449,15 @@
 
 .rolesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-bottom: 4rem;
+}
+
+@media (max-width: 1200px) and (min-width: 997px) {
+  .rolesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .roleCard {
@@ -583,6 +589,17 @@
 .newsletterInput:focus {
   outline: none;
   border-color: #d4af37;
+}
+
+.newsletterThanks {
+  font-size: 0.95rem;
+  color: #1a5c1a;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+[data-theme='dark'] .newsletterThanks {
+  color: #a8e6a8;
 }
 
 .newsletterDisclaimer {

@@ -249,5 +249,5 @@ These enhancements represent a significant step forward in Light City's developm
 
 ---
 
-**Get Involved**: Interested in investing, residing, building, or researching? [Contact us](mailto:info@lightcityproject.org) or explore our [documentation](/docs/START-HERE).
+**Get Involved**: Interested in investing, residing, building, or researching? Use the [contact form](/contact) or explore our [documentation](/docs/START-HERE).
 
