@@ -28,8 +28,7 @@ export default function Researchers(): JSX.Element {
       </ul>
       <h2>Contact</h2>
       <p>
-        Use the <Link to="/contact">contact form</Link> and choose <strong>Researcher</strong>. To copy our address
-        manually, use the image on the contact page.
+        Use the <Link to="/contact">contact form</Link> and choose <strong>Researcher</strong>.
       </p>
       <div className={styles.ctaRow}>
         <Link className="button button--primary" to="/contact">

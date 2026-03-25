@@ -15,8 +15,7 @@ export default function Privacy(): JSX.Element {
       </p>
       <p>
         If you use the <Link to="/contact">contact form</Link>, your message is sent through a third-party form
-        provider (Web3Forms) to the project inbox configured in that service. We do not publish our project email as
-        plain text on the site (an optional image is provided for manual copying). There are no account systems
+        provider (Web3Forms). The project does not publish a team email address on this website. There are no account systems
         or payment flows on this documentation site at this time.
       </p>
       <p>

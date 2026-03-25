@@ -31,8 +31,7 @@ export default function Builders(): JSX.Element {
       <h2>Contact</h2>
       <p>
         Technical or build collaboration: use the <Link to="/contact">contact form</Link> and choose{' '}
-        <strong>Collaborator (builder, partner, service)</strong>. To copy our address manually, use the image on the
-        contact page.
+        <strong>Collaborator (builder, partner, service)</strong>.
       </p>
       <div className={styles.ctaRow}>
         <Link className="button button--primary" to="/contact">

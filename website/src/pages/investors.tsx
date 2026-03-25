@@ -30,8 +30,7 @@ export default function Investors(): JSX.Element {
       </ul>
       <h2>Contact</h2>
       <p>
-        Use the <Link to="/contact">contact form</Link> and choose <strong>Investor</strong>. To copy our address
-        manually, use the image on the contact page (we do not publish the address as plain text).
+        Use the <Link to="/contact">contact form</Link> and choose <strong>Investor</strong>.
       </p>
       <div className={styles.ctaRow}>
         <Link className="button button--primary" to="/contact">

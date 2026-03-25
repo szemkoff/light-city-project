@@ -3,7 +3,6 @@ import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import MarketingPageLayout from '../components/MarketingPageLayout';
-import ContactEmailImage from '../components/ContactEmailImage';
 import { WEB3FORMS_SUBMIT_URL, buildSiteAbsoluteUrl } from '../contactConfig';
 import styles from './contact.module.css';
 import pageStyles from '../components/MarketingPageLayout/styles.module.css';
@@ -23,13 +22,13 @@ export default function Contact(): JSX.Element {
       subtitle="Send a message about investment, collaboration, residency, research, or general questions. We read every note."
     >
       <p className={styles.hint}>
-        Submit the form below — your message is delivered by a secure form service (no project email is shown as
-        text on this page). After sending, you will be redirected back here with a confirmation.
+        Submit the form below. Your message is sent through Web3Forms; after submission you will be redirected back here
+        for confirmation.
       </p>
 
       {sent ? (
         <p className={styles.success} role="status">
-          Thank you — your message was submitted. If you do not hear back within a few days, try the image below.
+          Thank you — your message was submitted.
         </p>
       ) : null}
 
@@ -54,7 +53,7 @@ export default function Contact(): JSX.Element {
           </div>
 
           <div className={styles.row}>
-            <label htmlFor="contact-email">Your email</label>
+            <label htmlFor="contact-email">Email (for replies)</label>
             <input
               id="contact-email"
               className={styles.input}
@@ -62,7 +61,7 @@ export default function Contact(): JSX.Element {
               name="email"
               required
               autoComplete="email"
-              placeholder="Your email address"
+              placeholder="So we can reach you"
             />
           </div>
 
@@ -95,18 +94,32 @@ export default function Contact(): JSX.Element {
             <button type="submit" className="button button--primary">
               Send message
             </button>
-            <span className={styles.inlineNote}>Delivered via Web3Forms to the inbox you set in their dashboard.</span>
+            <span className={styles.inlineNote}>
+              Delivered through Web3Forms. Notification destination is set in your Web3Forms account (not on this site).
+            </span>
           </div>
         </form>
       ) : (
-        <p className={styles.hint} role="status">
-          The contact form is not enabled in this build. Add repository secret{' '}
-          <code>WEB3FORMS_ACCESS_KEY</code> and redeploy (see project README or maintainer notes). You can still use
-          the manual address below.
-        </p>
+        <div className={styles.hint} role="status">
+          <p>
+            <strong>Form not active in this build.</strong> To enable it, the site maintainer must:
+          </p>
+          <ol style={{ margin: '0.5rem 0 0', paddingLeft: '1.25rem', lineHeight: 1.6 }}>
+            <li>
+              Create a free access key at{' '}
+              <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer">
+                web3forms.com
+              </a>{' '}
+              (use the inbox where you want submissions).
+            </li>
+            <li>
+              In GitHub: <strong>Repository → Settings → Secrets and variables → Actions</strong>, add secret{' '}
+              <code>WEB3FORMS_ACCESS_KEY</code> with that key.
+            </li>
+            <li>Push a commit or re-run the Actions workflow so the site rebuilds with the secret.</li>
+          </ol>
+        </div>
       )}
-
-      <ContactEmailImage />
 
       <h2>Documentation</h2>
       <p>

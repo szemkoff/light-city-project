@@ -29,7 +29,6 @@ export default function Residents(): JSX.Element {
       <h2>Contact</h2>
       <p>
         Use the <Link to="/contact">contact form</Link> and choose <strong>Future resident / community member</strong>.
-        To copy our address manually, use the image on the contact page.
       </p>
       <div className={styles.ctaRow}>
         <Link className="button button--primary" to="/contact">

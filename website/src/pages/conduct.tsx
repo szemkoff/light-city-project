@@ -24,8 +24,7 @@ export default function Conduct(): JSX.Element {
         .
       </p>
       <p>
-        Concerns may be reported via the <Link to="/contact">contact form</Link> (choose <strong>Other</strong>). To
-        copy our address manually, use the image on the contact page.
+        Concerns may be reported via the <Link to="/contact">contact form</Link> (choose <strong>Other</strong>).
       </p>
       <p>
         <Link to="/">Back to home</Link>

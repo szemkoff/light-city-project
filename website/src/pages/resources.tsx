@@ -29,7 +29,7 @@ export default function Resources(): JSX.Element {
       </ul>
       <p>
         FAQ and glossary pages are not split out yet; use the documentation index and search, or reach out via the{' '}
-        <Link to="/contact">contact form</Link> (manual address on that page as an image only).
+        <Link to="/contact">contact form</Link>.
       </p>
       <h2>Repository</h2>
       <p>
