@@ -149,7 +149,7 @@ export default function Home(): JSX.Element {
 
       {/* IMAGE BAND */}
       <section className="band">
-        <img src={img('dome-interior')} alt="Sunlight streams through a timber gridshell dome over trees, a reflecting pool, a quartz crystal and a sunken fire circle where people gather" width="1400" height="788" loading="lazy" />
+        <img src={img('dome-interior')} alt="Sunlight streams through a timber gridshell dome over trees, a reflecting pool, a single vertical quartz point on a stone pedestal and a sunken fire circle where people gather" width="1400" height="788" loading="lazy" />
         <div className="band-in wrap">
           <blockquote>Ambitious in form.<br />Conservative in engineering.</blockquote>
           <p>Every structure uses materials already standing elsewhere — from Norway's 85.4 m Mjøstårnet timber tower to timber gridshells, earth domes and 3D-printed homes of local soil.</p>

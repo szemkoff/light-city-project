@@ -243,16 +243,22 @@ html:has(.lc-home){scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-s
 /* ROADMAP */
 .lc-home .roadmap{position:relative;padding-block:clamp(var(--space-20),10vw,var(--space-32));overflow:hidden;isolation:isolate}
 .lc-home .roadmap-bg{position:absolute;right:-8%;top:0;height:100%;width:55%;object-fit:cover;z-index:-1;opacity:.35;mask-image:linear-gradient(90deg,transparent,#000 60%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 60%)}
-.lc-home .stages{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:var(--space-2)}
-.lc-home .stages::before{content:"";position:absolute;left:0;right:0;top:21px;height:2px;background:var(--night-line)}
-.lc-home .stages::after{content:"";position:absolute;left:0;top:21px;height:2px;width:calc(var(--prog,0)*1%);background:linear-gradient(90deg,var(--gold),var(--gold-glow));transition:width 1.6s var(--ease)}
-.lc-home .stage{position:relative;z-index:1;text-align:left;padding-top:0;min-height:44px}
-.lc-home .stage .dot{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--night);border:1.5px solid var(--night-line);font:400 1rem var(--display);transition:all .3s}
+/* Roadmap stepper: each stage is a self-contained block (dot + connector + label), so rows never shift */
+.lc-home .stages{--dot:44px;--gap:var(--space-4);position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--gap);margin:0;padding:0;list-style:none}
+.lc-home .stage{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0;min-width:0;margin:0;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.lc-home .stage::before{content:"";position:absolute;top:calc(var(--dot)/2 - 1px);left:calc(var(--dot) + 6px);right:calc(-1*var(--gap) + 6px);height:2px;border-radius:1px;background:var(--night-line)}
+.lc-home .stage:last-child::before{display:none}
+.lc-home .stage.done::before{background:var(--gold-glow)}
+.lc-home .stage.current::before{background:linear-gradient(90deg,var(--gold-hi) 0,var(--gold-hi) 35%,var(--night-line) 35%)}
+.lc-home .stage .dot{flex:0 0 auto;display:grid;place-items:center;width:var(--dot);height:var(--dot);border-radius:50%;background:var(--night);border:1.5px solid var(--night-line);font:400 1rem/1 var(--display);transition:box-shadow .3s,border-color .3s,background .3s}
+.lc-home .stage:hover .dot,.lc-home .stage:focus-visible .dot{border-color:var(--gold-glow)}
+.lc-home .stage:focus-visible{outline:none}
 .lc-home .stage.done .dot{border-color:var(--gold-glow);color:var(--gold-glow)}
 .lc-home .stage.current .dot{background:var(--gold-hi);color:var(--ink);border-color:var(--gold-hi);box-shadow:0 0 0 6px rgba(233,184,90,.18)}
 .lc-home .stage[aria-selected="true"] .dot{box-shadow:0 0 0 6px rgba(246,211,140,.32)}
-.lc-home .stage .st{display:block;margin-top:var(--space-4);font-weight:600;font-size:var(--text-sm)}
-.lc-home .stage .sd{display:block;font-size:var(--text-xs);color:var(--night-muted)}
+.lc-home .stage .st{display:block;margin-top:var(--space-4);font-weight:600;font-size:var(--text-sm);line-height:1.3;white-space:nowrap}
+.lc-home .stage .sd{display:block;margin-top:2px;font-size:var(--text-xs);line-height:1.4;color:var(--night-muted)}
+.lc-home .stage[aria-selected="true"] .st{color:var(--gold-glow)}
 .lc-home .stage-detail{margin-top:var(--space-12);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);max-width:960px;background:rgba(20,23,37,.7);backdrop-filter:blur(10px);border:1px solid var(--night-line);border-radius:var(--r-lg);padding:var(--space-8)}
 .lc-home .stage-detail h3{font:400 var(--text-xl)/1.1 var(--display)}
 .lc-home .stage-detail .when{color:var(--gold-glow);font-size:var(--text-sm);margin-top:var(--space-2)}
@@ -343,7 +349,9 @@ html:has(.lc-home){scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-s
   .lc-home .kpis>div:nth-child(n+3){border-top:1px solid var(--night-line)}
   .lc-home .day-scroll{overflow-x:auto;margin:0 calc(-1 * var(--space-5));padding:0 var(--space-5);scrollbar-width:none}
   .lc-home .day-track{min-width:560px}
-  .lc-home .stages{grid-template-columns:repeat(6,minmax(96px,1fr));overflow-x:auto;padding-bottom:var(--space-3)}
+  .lc-home .stages{display:flex;grid-template-columns:none;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--space-3);-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px var(--space-3) var(--space-3);margin-inline:calc(-1*var(--space-3))}
+  .lc-home .stages::-webkit-scrollbar{display:none}
+  .lc-home .stage{flex:0 0 128px;scroll-snap-align:start}
   .lc-home .stage-detail{grid-template-columns:1fr;padding:var(--space-6)}
   .lc-home .compare{grid-template-columns:1fr}
   .lc-home .cmp-a,.lc-home .cmp-b,.lc-home .cmp-c,.lc-home .cmp-d{grid-column:auto;grid-row:auto}

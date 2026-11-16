@@ -2,7 +2,7 @@
 
 *Palette and lighting rules for the website, diagrams, photos and the built city*
 
-![Dome interior at dusk: warm LED light, clay walls, a fire bowl and crystal accents](/img/home/dome-interior.webp)
+![Dome interior at dusk: warm LED light, clay walls, a fire bowl and a single quartz point on a stone pedestal](/img/home/dome-interior.webp)
 
 *Modern Organic light: warm integrated LED, daylight through glass, clay and timber surfaces, and a place for fire.*
 
@@ -42,6 +42,7 @@ Use light tints (about 15–30% opacity) of the nature accents for panel fills. 
 - **Warm and circadian.** Evening light is warm (2,200–3,000 K) and dimmable; daytime light can be cooler. Integrated LED lines sit in timber ribs and coves, not bare fixtures.
 - **Fire stays.** Fire bowls, hearths and sculptural fire features are part of shared spaces, indoors and out, with proper ventilation.
 - **Crystal as accent.** Quartz and glass catch and split light in small doses: a centerpiece, a window, a lamp. Never a whole wall of crystal.
+- **Crystals are placed, not scattered.** Show natural quartz as one, two or three vertical points, set with intention into the ground on a stone or earth base, or on a simple pedestal or stand. No clusters shooting in every direction and no glowing, game-style crystals.
 - **Dark skies.** Exterior light points down, is shielded and is warm, so stars stay visible.
 - **Spire light.** The spire crown can carry programmable light for gatherings; it stays off or low on ordinary nights.
 

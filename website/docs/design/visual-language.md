@@ -22,7 +22,7 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 
 Use this style note at the end of every image prompt:
 
-> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm integrated LED, quartz crystal accents, sculptural fire features. People in linen, cotton and raw silk in off-white, sand, sage and terracotta. Realistic documentary photo with a quiet sense of wonder. No text or logos. Avoid medieval, rustic cabins and fantasy.
+> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm integrated LED, quartz crystal accents (one to three vertical points on a pedestal or set into the ground, never game-style clusters), local stone, sculptural fire features. People in linen, cotton and raw silk in off-white, sand, sage and terracotta. Realistic documentary photo with a quiet sense of wonder. No text or logos. Avoid medieval, rustic cabins and fantasy.
 
 - **Scale.** Domes 30–45 m across, 3–5 levels; the spire is slender, not a skyscraper.
 - **People.** Diverse ages and backgrounds, doing ordinary things: cooking, working, building, resting.

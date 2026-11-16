@@ -172,9 +172,12 @@ const ST: Array<[string, string, string, string, string[], string[]]> = [
   ['Operational', '2032 onward', '', 'Break-even and the move to community governance.', [], ['200 residents, break-even at 180', 'Community Council with 80% consent threshold', 'Phase 2 planning (1,500 residents)']],
 ];
 const stages = $('#stages'), sd = $('#stageDetail');
-stages.innerHTML = ST.map(([n, w, st], i) => `<button class="stage ${st === 'current' ? 'current' : ''}" role="tab" aria-selected="false" data-i="${i}"><span class="dot">${i + 1}</span><span class="st">${n}</span><span class="sd">${w}</span></button>`).join('');
+const cur = ST.findIndex(r => r[2] === 'current');
+stages.innerHTML = ST.map(([n, w, st], i) => `<button type="button" class="stage ${st === 'current' ? 'current' : i < cur ? 'done' : ''}" role="tab" aria-selected="false" data-i="${i}"><span class="dot">${i + 1}</span><span class="st">${n}</span><span class="sd">${w}</span></button>`).join('');
 function stage(i: number) {
   $$('.stage').forEach(b => b.setAttribute('aria-selected', String(+b.dataset.i === i)));
+  const btn = stages.children[i] as HTMLElement;
+  if (btn && stages.scrollWidth > stages.clientWidth) stages.scrollTo({left: Math.max(0, btn.offsetLeft - 12), behavior: 'smooth'});
   const [n, w, st, d, done, todo] = ST[i];
   const label = st === 'current' ? 'In progress' : st === 'next' ? 'Up next' : 'Planned';
   sd.innerHTML = `<div><h3>Stage ${i + 1} · ${n}</h3><p class="when">${w} · ${label}</p><p>${d}</p>${st === 'current' ? `<p class="upd">Schedule updated November 2026</p>` : ''}</div><ul>${done.map(x => `<li class="done">${x}</li>`).join('')}${todo.map(x => `<li${st === 'current' ? ' class="todo"' : ''}>${x}</li>`).join('')}</ul>`;
