@@ -118,8 +118,8 @@ export default function Home(): JSX.Element {
             <a className="link" href={u('docs/concepts/core-concepts')}>Read the core concepts <span aria-hidden="true">→</span></a>
           </div>
           <figure className="vision-art">
-            <img src={img('vision-2')} alt="A lone figure walks a golden path toward a radiant crystal spire surrounded by glowing crystal forms in a misty canyon" width="896" height="1152" loading="lazy" />
-            <figcaption>The archetype: a spire of light at the heart of the community.</figcaption>
+            <img src={img('vision-village')} alt="Families, children on bikes and neighbours share a garden path between curved timber buildings with green roofs and glass domes" width="1400" height="788" loading="lazy" />
+            <figcaption>The vision, made real: curved timber homes, green roofs and a shared garden street.</figcaption>
           </figure>
         </div>
         <div className="wrap stats" id="stats">
