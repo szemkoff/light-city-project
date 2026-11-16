@@ -20,14 +20,14 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 
 ## 3D reference model
 
-Every illustration of the city as a whole starts from one shared 3D model, so the radial design never drifts. The model has three phases that grow from the same plan ([compared in Architecture](/docs/design/architecture#phased-development--scale)). Phase 1 shows the spire on a round plaza, five rings, 12 straight radial paths, one temple and two learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land. Phase 2 (village) and Phase 3 (town) keep all of that and add domes, rings of homes and a food and energy belt outward.
+Every illustration of the city as a whole starts from one shared 3D model, so the radial design never drifts. The model has three phases that grow from the same plan ([compared in Architecture](/docs/design/architecture#phased-development--scale)). Phase 1 shows the spire on a round plaza, five rings, 12 straight radial paths, one temple and two learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land. Phase 2 (village) and Phase 3 (town) keep all of that unchanged and add domes on reserved plots, sections on the same spire, and rings of homes and food and energy belts outward (build once, grow outward).
 
 ![3D reference model of the Phase 1 plan: top view and aerial view of the five rings and 12 radial paths](/img/diagrams/model-reference.webp)
 
 *The Phase 1 model, top and aerial views. Open the interactive model to orbit it: [Phase 1](pathname:///model/index.html?phase=1), [Phase 2](pathname:///model/index.html?phase=2), [Phase 3](pathname:///model/index.html?phase=3).*
 
 - **How to use it.** Pick the phase the image shows, then render the closest named view (aerial, top, low aerial, radial path, homes ring, plaza or solar ring) with `PHASE=1|2|3 node scripts/render-model.cjs <view>`. Give that render to the image tool as the layout reference, with the current photo as a style reference.
-- **Label the phase.** Any image of the whole city says which phase it shows, and must match that phase's model: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3.
+- **Label the phase.** Any image of the whole city says which phase it shows, and must match that phase's model: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a flared lattice of stacked sections: three in Phase 1, five in Phase 2, eight in Phase 3.
 - **What must match.** One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.
 - **Changing the plan.** Update `static/model/city.js` and the plan diagram together, then re-render the views and the affected images.
 

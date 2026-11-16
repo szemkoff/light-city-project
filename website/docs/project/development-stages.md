@@ -501,6 +501,10 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 - Serve as a living example and inspiration
 - Expand to Phase 2 (village) and Phase 3 (town)
 
+### Growth rule: build once, grow outward
+
+Each phase must work as a finished place on its own. Expansion fills plots reserved in Phase 1 and adds new rings outside the existing ones; nothing built earlier is demolished. The spire grows by adding sections to the Phase 1 tower, whose foundation is sized for the final height. Only movable assets such as solar panels, greenhouses and nursery trees are relocated. Details: [Architecture → Phased development & scale](/docs/design/architecture#phased-development--scale).
+
 ### Key Deliverables
 - [ ] Sustainable operations model (break-even or profitable)
 - [ ] Continuous improvement processes (kaizen, retrospectives)

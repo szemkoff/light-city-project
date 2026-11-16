@@ -32,6 +32,8 @@ Light City is a planned, regenerative community. It starts as a 200-person **pil
 | **Food** | 1–2 ha agroforestry + greenhouses | 5–10 ha, near self-sufficiency | Regional food system |
 | **Earliest start** | Construction Dec 2028; residents 2031 | After Phase 1 proves out (mid-2030s) | 2040s+ |
 
+**Build once, grow outward.** Each phase keeps everything built before it: later phases fill reserved plots, add sections to the same spire and add rings outside the existing ones. See [Architecture → Phased development & scale](/docs/design/architecture#phased-development--scale).
+
 **Land.** We are looking for a rural or semi-rural site of **100–500 acres**. That is enough for the Phase 1 core, agriculture, buffers and room to grow into Phase 2. The site must sit at least 350 ft (107 m) above sea level. Five candidate regions in four countries (northern New Mexico and southern Oregon in the US, central Portugal, the Granada highlands in Spain and northern Costa Rica) are compared in [Site Locations](/docs/project/site-locations).
 
 ## Signature structures
