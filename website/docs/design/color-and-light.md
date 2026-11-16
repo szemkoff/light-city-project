@@ -2,9 +2,9 @@
 
 *Palette and lighting rules for the website, diagrams, photos and the built city*
 
-![Dome interior at dusk: warm LED light, clay walls, a fire bowl and a single quartz point on a stone pedestal](/img/home/dome-interior.webp)
+![Dome interior at dusk: warm LED light, clay walls, a stone water basin and planting](/img/home/dome-interior.webp)
 
-*Modern Organic light: warm integrated LED, daylight through glass, clay and timber surfaces, and a place for fire.*
+*Modern Organic light: daylight through glass, warm shielded lamps, clay and timber surfaces.*
 
 ## Palette
 
@@ -40,11 +40,12 @@ Use light tints (about 15–30% opacity) of the nature accents for panel fills. 
 
 - **Daylight first.** Domes and studios are planned for daylight through glazing and an oculus; artificial light fills in.
 - **Warm and circadian.** Evening light is warm (2,200–3,000 K) and dimmable; daytime light can be cooler. Integrated LED lines sit in timber ribs and coves, not bare fixtures.
-- **Fire stays.** Fire bowls, hearths and sculptural fire features are part of shared spaces, indoors and out, with proper ventilation.
+- **Fire stays outdoors.** No open fire indoors: it is a health, fire-code and fuel problem. Indoor gathering spaces use daylight, warm lamps and water. Outdoor fire pits appear occasionally, small and modest.
 - **Crystal as accent.** Quartz and glass catch and split light in small doses: a centerpiece, a window, a lamp. Never a whole wall of crystal.
-- **Crystals are placed, not scattered.** Show natural quartz as one, two or three vertical points, set with intention into the ground on a stone or earth base, or on a simple pedestal or stand. No clusters shooting in every direction and no glowing, game-style crystals.
+- **Crystals are occasional.** Most images show none. Where one appears (the temple, a home shelf), show natural quartz as one, two or three vertical points, set with intention into the ground on a stone or earth base, or on a simple pedestal or stand. No clusters shooting in every direction and no glowing, game-style crystals.
 - **Dark skies.** Exterior light points down, is shielded and is warm, so stars stay visible.
-- **Spire light.** The spire crown can carry programmable light for gatherings; it stays off or low on ordinary nights.
+- **Spire light.** The spire crown can carry programmable light for gatherings; it stays off or low on ordinary nights and never shines upward.
+- **Protect the night.** Outdoor lights are shielded, aimed down, 3000 K or warmer and dimmed when not needed, following [DarkSky](https://darksky.org/what-we-do/international-dark-sky-places/apply/) guidance. No glowing ground orbs, rows of candles or uplit domes. See [Light on the land](/docs/design/light-on-the-land).
 
 ## Usage guidance
 

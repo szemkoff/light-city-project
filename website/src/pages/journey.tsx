@@ -26,7 +26,7 @@ export default function Journey(): JSX.Element {
         <Feature
           id="awakening"
           img="journey-awakening"
-          alt="A person in a cotton knit reflecting by a city apartment window at dawn, a small quartz point on a stand and tea beside her"
+          alt="A person in a cotton knit reflecting by a city apartment window at dawn, a cup of tea and a notebook beside her"
           kicker="Movement 1 · Now – 2027 · Stages 1–3"
           title="Awakening"
           tag="From distraction to attention"
@@ -38,7 +38,7 @@ export default function Journey(): JSX.Element {
           reverse
           id="gathering"
           img="journey-gathering"
-          alt="A circle of people in linen and cotton around a stone fire bowl at a modern retreat pavilion"
+          alt="A circle of people in everyday clothes around an outdoor stone fire pit beside a modern retreat pavilion at dusk"
           kicker="Movement 2 · 2027 – 2028 · Stage 4"
           title="Gathering"
           tag="From me to we"
@@ -61,7 +61,7 @@ export default function Journey(): JSX.Element {
           reverse
           id="flourishing"
           img="journey-flourishing"
-          alt="A shared dinner at long timber tables inside a glass dome, a fire hearth and a quartz point on a stone pedestal nearby"
+          alt="A shared dinner at long timber tables inside a glass dome under warm pendant lamps"
           kicker="Movement 4 · 2032+ · Stage 6"
           title="Flourishing"
           tag="From survival to contribution"
@@ -72,7 +72,7 @@ export default function Journey(): JSX.Element {
         <Feature
           id="radiating"
           img="journey-radiating"
-          alt="A mature modern organic town of domes and green roofs with a glowing spire at sunset"
+          alt="A mature modern organic town of domes and green roofs with a slender spire at sunset"
           kicker="Movement 5 · 2035+ · Phases 2–3"
           title="Radiating"
           tag="From one place to a pattern"

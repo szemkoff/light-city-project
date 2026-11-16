@@ -51,7 +51,7 @@ export default function City(): JSX.Element {
         <Feature
           reverse
           img="city-dome-cutaway"
-          alt="Inside a timber gridshell dome: terraced apartments, a garden atrium, tall quartz points on stone pedestals and a sunken fire lounge"
+          alt="Inside a timber gridshell dome: terraced apartments, a garden atrium and a sunken lounge with sofas around a low table"
           kicker="Neighborhood"
           title="Communosphere"
           tag="TRL 7–9"
@@ -61,18 +61,18 @@ export default function City(): JSX.Element {
         </Feature>
         <Feature
           img="city-temple"
-          alt="Circular timber temple with an oculus lighting a single tall quartz point on a round stone pedestal and a fire bowl"
+          alt="Circular timber temple with an oculus lighting a single quartz point on a stone pedestal and a shallow water basin, people seated on cushions"
           kicker="Inner ring"
           title="Temple & plaza"
           tag="TRL 9"
           specs={[['Use', 'Meditation, ceremony, gatherings'], ['Access', 'Open to all, no doctrine'], ['Build', 'Timber, rammed earth, stone'], ['Plaza', 'Markets, festivals, daily life']]}>
-          <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry, with a single upright quartz point on a stone pedestal under the oculus and a fire bowl for evening gatherings. Participation in any practice is always voluntary.</p>
+          <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry, with a single upright quartz point on a stone pedestal under the oculus and a shallow water basin at the center. Participation in any practice is always voluntary.</p>
           <p>The plaza beside it is the city's living room: morning markets, performances, seasonal festivals and the everyday crossing point of the whole community.</p>
         </Feature>
         <Feature
           reverse
           img="city-studios"
-          alt="Modern maker studio with a CNC router, 3D printer, woodworking benches and a quartz point on a timber stand"
+          alt="Modern maker studio with a CNC router, 3D printer, woodworking benches and a pottery corner"
           kicker="Middle ring"
           title="Studios & workshops"
           tag="TRL 9"
@@ -142,15 +142,26 @@ export default function City(): JSX.Element {
         <div style={{marginTop: '3rem'}} />
         <Cards items={[
           {title: 'Clay plaster everywhere', kicker: 'Healthy interiors', img: 'form-earth-dome', text: 'Holds indoor humidity steady and removes ozone. The cheapest health upgrade, and it works on curves and in existing homes.'},
-          {title: 'Local stone', kicker: 'Materials follow the place', text: 'Plinths, terrace walls, hearths and paths in the stone of each region: granite and schist in Portugal, sandstone in New Mexico, basalt on volcanic land. Lowest carbon when quarried nearby.'},
+          {title: 'Local stone', kicker: 'Materials follow the place', text: 'Plinths, terrace walls, benches and paths in the stone of each region: granite and schist in Portugal, sandstone in New Mexico, basalt on volcanic land. Lowest carbon when quarried nearby.'},
           {title: 'Thin shells', kicker: 'Canopies & floors', img: 'form-thin-shell', text: 'Arched shells carry load in compression, using over 70% less concrete and allowing earth or recycled mixes.'},
           {title: 'Curved shell, efficient core', kicker: 'Practical', text: 'Kitchens, baths and storage stay straight inside curved rooms, so standard fittings still work and costs stay down.'},
           {title: 'Bio-resonance as research', kicker: 'Frontier', text: 'We will compare matched curved and boxy rooms for sleep, stress and acoustics with university partners, and publish results either way.'},
+          {title: 'Light on the land', kicker: 'Nature first', to: '/docs/design/light-on-the-land', text: 'Compact building, more habitat after than before, our own sun and rain, and dark, bird-safe nights.'},
         ]} />
         <p style={{marginTop: '1.5rem'}}><Link to="/docs/design/organic-forms-and-materials">Read Beyond the Box in the library: methods, costs, evidence and trade-offs →</Link></p>
       </Section>
 
-      <Section alt id="language" eyebrow="Design language" title="Four rules shape every building.">
+      <Section id="light-on-the-land" alt eyebrow="Light on the land" title="Mostly wild land, measured every year." lead="Zero impact is not possible, but half a normal footprint is: ecovillages like Findhorn and Sieben Linden already live at about half their national averages. We build a compact core, run on our own sun and rain, protect the night and leave more nature than we found.">
+        <Cards items={[
+          {title: 'Build small', kicker: 'Land', text: 'A 20–30 acre core on a 100–500 acre site. At least half the land stays permanent habitat, with wildlife corridors kept open.'},
+          {title: 'More life after', kicker: 'Biodiversity', text: 'A baseline survey before design and at least 20% biodiversity net gain, monitored for 30 years.'},
+          {title: 'Own sun and rain', kicker: 'Energy & water', text: 'No fossil fuels, 105% of energy from on-site solar, and no net draw on groundwater. Greywater is cleaned in planted wetlands.'},
+          {title: 'Protect the night', kicker: 'Light & birds', text: 'Shielded, warm outdoor lights that never shine upward, and bird-safe patterned glass on every dome.'},
+        ]} />
+        <p style={{marginTop: '1.5rem'}}><Link to="/docs/design/light-on-the-land">Read Light on the Land: what is possible today, honest limits and ten commitments →</Link></p>
+      </Section>
+
+      <Section id="language" eyebrow="Design language" title="Four rules shape every building.">
         <Cards items={[
           {title: 'Sacred geometry', kicker: 'Proportion', text: 'Circles, spirals and the golden ratio set the plan, room proportions and facade rhythms, giving the city a coherent, calming order.'},
           {title: 'Biophilic design', kicker: 'Nature', text: 'Daylight, planting, natural materials and views to green in every space. Proven to lower stress and improve wellbeing.'},
@@ -159,7 +170,7 @@ export default function City(): JSX.Element {
         ]} />
       </Section>
 
-      <Section eyebrow="Go deeper" title="The city in the library.">
+      <Section alt eyebrow="Go deeper" title="The city in the library.">
         <DocLinks items={[
           {to: '/docs/design/architecture', tag: 'City', title: 'Architecture', text: 'Ring layout, building types and construction approach.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'Dome neighborhoods in detail.'},
