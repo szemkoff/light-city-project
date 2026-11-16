@@ -1,139 +1,85 @@
 import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import PageLayout from '../components/PageLayout';
-import styles from './about.module.css';
+import Site, {Section, Cards, DocLinks, Cta} from '../components/Site';
 
 export default function About(): JSX.Element {
-  const iconSpirit = useBaseUrl('img/icons/consciousness-icon.svg');
-  const iconEarth = useBaseUrl('img/icons/regenerative-icon.svg');
-  const iconCollective = useBaseUrl('img/icons/architecture-icon.svg');
-
+  const delphin = useBaseUrl('img/home/delphin.webp');
   return (
-    <PageLayout title="About Light City" description="Vision & Philosophy">
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.container}>
-          <h1>Vision & Philosophy</h1>
-          <p className={styles.subtitle}>
-            Light City is a multidimensional project: an etheric blueprint, a collective vision, 
-            and a practical implementation plan.
-          </p>
-        </div>
-      </section>
+    <Site
+      title="Vision & Philosophy"
+      description="Light City is an etheric blueprint, a collective vision and a practical implementation plan for regenerative, consciousness-integrated community."
+      eyebrow="Vision & philosophy"
+      heading={<>Spirit before structure. <em>Engineering that keeps the promise.</em></>}
+      sub="Light City is a multidimensional project: an etheric blueprint, a collective vision and a practical implementation plan."
+      image="vision-1">
+      <Section eyebrow="Core principles" title="Three ideas hold the whole project together." lead="Everything we design, finance and build is checked against these principles first.">
+        <Cards items={[
+          {kicker: 'I', title: 'Spirit before structure', img: 'spire', text: 'Light City begins as an etheric template, a higher-dimensional pattern. Physical implementation follows spiritual alignment.'},
+          {kicker: 'II', title: "Gaia's memory", img: 'tech-agroforestry', text: 'Earth holds the memory of what Light City can be. We co-create with planetary consciousness rather than impose on it.'},
+          {kicker: 'III', title: 'Collective co-creation', img: 'dome-interior', text: "Light City is not a single person's vision but an emergent pattern drawing from many consciousness streams."},
+        ]} />
+      </Section>
 
-      {/* Core Principles */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Core Principles</h2>
-          <div className={styles.cardGrid}>
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <img src={iconSpirit} alt="" width={48} height={48} />
-              </div>
-              <h3>Spirit Before Structure</h3>
-              <p>
-                Light City begins as an etheric template—a higher-dimensional pattern. 
-                Physical implementation follows spiritual alignment.
-              </p>
-            </div>
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <img src={iconEarth} alt="" width={48} height={48} />
-              </div>
-              <h3>Gaia's Memory</h3>
-              <p>
-                Earth (Gaia) holds the memory of what Light City can be. We are co-creating 
-                with planetary consciousness, not imposing.
-              </p>
-            </div>
-            <div className={styles.card}>
-              <div className={styles.cardIcon}>
-                <img src={iconCollective} alt="" width={48} height={48} />
-              </div>
-              <h3>Collective Co-Creation</h3>
-              <p>
-                Light City is not a single person's vision but an emergent pattern drawing 
-                from many consciousness streams.
-              </p>
+      <Section alt>
+        <div className="pg-split">
+          <img src={delphin} alt="Concept image of a crystal city with a tall central spire of light" loading="lazy" />
+          <div>
+            <p className="eyebrow">What is Light City?</p>
+            <h2>An archetype, translated for Earth.</h2>
+            <div className="pg-prose" style={{marginTop: 'var(--space-6)'}}>
+              <p><strong>Etheric blueprint.</strong> A higher-dimensional pattern that exists in non-physical realms. Inspired by Delphin, described in channeled information as a crystal city on another world, Light City adapts those archetypal principles to Earth's constraints.</p>
+              <p><strong>Collective vision.</strong> A shared aspiration across consciousness streams drawn to regenerative living, unity consciousness and sacred geometry. It is an emergent pattern, not one person's project.</p>
+              <p><strong>Personal mission.</strong> Stan's role is to anchor the vision in the physical, bringing decades of technology experience, systems thinking and a commitment to rigorous implementation. It is both spiritual service and practical engineering.</p>
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* What is Light City */}
-      <section className={styles.sectionAlt}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>What is Light City?</h2>
-          <div className={styles.definitionGrid}>
-            <div className={styles.definition}>
-              <h3>Etheric Blueprint</h3>
-              <p>
-                A higher-dimensional pattern or template that exists in non-physical realms. 
-                Inspired by Delphin (described in channeled information as a crystal city on 
-                another world), Light City adapts these archetypal principles to Earth's constraints.
-              </p>
-            </div>
-            <div className={styles.definition}>
-              <h3>Collective Vision</h3>
-              <p>
-                A shared aspiration across consciousness streams—yours, mine, and others drawn 
-                to regenerative living, unity consciousness, and sacred geometry. This is not 
-                one person's project; it's an emergent pattern.
-              </p>
-            </div>
-            <div className={styles.definition}>
-              <h3>Personal Mission</h3>
-              <p>
-                My role (Stan) is to anchor this vision in the physical. I'm bringing decades 
-                of technology experience, systems thinking, and a commitment to rigorous 
-                implementation. This is both spiritual service and practical engineering.
-              </p>
-            </div>
-          </div>
+      <Section night>
+        <p className="eyebrow">Purpose &amp; mission</p>
+        <p className="pg-quote">To demonstrate that regenerative, consciousness-integrated communities are <em>buildable, scalable and financially viable</em> using proven technologies and transparent governance.</p>
+      </Section>
+
+      <Section eyebrow="Horizons" title="From blueprint to living city." lead="Stage 1 (Foundation) is finishing now. Later stages follow in sequence.">
+        <ol className="pg-steps">
+          <li className="now">
+            <p className="when">Now – Q2 2027</p>
+            <h3>Short term <span className="pg-badge">Current</span></h3>
+            <ul>
+              <li>Complete Stage 1: Foundation (documentation, financial model, governance)</li>
+              <li>Complete Stage 2: Design (architecture, engineering, permit prep)</li>
+              <li>Build awareness and community</li>
+            </ul>
+          </li>
+          <li>
+            <p className="when">Q3 2027 – Q4 2028</p>
+            <h3>Medium term</h3>
+            <ul>
+              <li>Stage 3: Digital platform (website, CRM, applications)</li>
+              <li>Stage 4: Community building (retreats, pilot programs)</li>
+              <li>Secure land and permits</li>
+            </ul>
+          </li>
+          <li>
+            <p className="when">2029 – 2032+</p>
+            <h3>Long term</h3>
+            <ul>
+              <li>Stage 5: Physical construction (200–300 residents, Phase 1)</li>
+              <li>Stage 6: Operational community (break-even, scaling)</li>
+              <li>Phase 2 and 3 expansion (1,500+, then 8,000+ residents)</li>
+            </ul>
+          </li>
+        </ol>
+        <div style={{marginTop: 'var(--space-12)'}}>
+          <DocLinks items={[
+            {to: '/docs/concepts/purpose-and-mission', tag: 'Concepts', title: 'Purpose & mission', text: 'The full mission statement and what success looks like.'},
+            {to: '/docs/concepts/core-concepts', tag: 'Concepts', title: 'Core concepts', text: 'Sacred architecture, regenerative living and unity consciousness.'},
+            {to: '/docs/project/development-stages', tag: 'Project', title: 'Development stages', text: 'The six-stage roadmap with dates, costs and status.'},
+          ]} />
         </div>
-      </section>
+      </Section>
 
-      {/* Purpose & Mission */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Purpose & Mission</h2>
-          <div className={styles.missionBox}>
-            <p className={styles.missionStatement}>
-              To demonstrate that regenerative, consciousness-integrated communities are 
-              buildable, scalable, and financially viable using proven technologies and 
-              transparent governance.
-            </p>
-          </div>
-
-          <div className={styles.timelineGrid}>
-            <div className={styles.timelineCard}>
-              <h4>Short-Term (Now - Q2 2027)</h4>
-              <ul>
-                <li>Complete Stage 1: Foundation (documentation, financial model, governance)</li>
-                <li>Complete Stage 2: Design (architecture, engineering, permits prep)</li>
-                <li>Build awareness and community</li>
-              </ul>
-            </div>
-            <div className={styles.timelineCard}>
-              <h4>Medium-Term (Q3 2027 - Q4 2028)</h4>
-              <ul>
-                <li>Complete Stage 3: Digital platform (website, CRM, applications)</li>
-                <li>Complete Stage 4: Community building (retreats, pilot programs)</li>
-                <li>Secure land and permits</li>
-              </ul>
-            </div>
-            <div className={styles.timelineCard}>
-              <h4>Long-Term (2029-2032+)</h4>
-              <ul>
-                <li>Stage 5: Physical construction (200-300 residents, Phase 1)</li>
-                <li>Stage 6: Operational community (break-even, scaling)</li>
-                <li>Phase 2 & 3 expansion (1,500+, 8,000+ residents)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </PageLayout>
+      <Cta title="Help light the first dome." text="Join the founding circle for early updates, resident applications and investor materials." primary={{to: '/#join', label: 'Join the founding circle'}} secondary={{to: '/contact', label: 'Contact us'}} />
+    </Site>
   );
 }
-
