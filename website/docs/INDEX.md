@@ -43,6 +43,7 @@ Every document in the library, in the same order as the sidebar. New readers sho
 
 ## 6. Roadmap
 - [Development Stages](/docs/project/development-stages): six stages, timeline, financial model and gates
+- [Site Locations](/docs/project/site-locations): four candidate regions, scored and mapped
 
 ## 7. Research
 - [Open Questions](/docs/research/open-questions): the research agenda

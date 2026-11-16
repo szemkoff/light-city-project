@@ -1,0 +1,60 @@
+.lc-page .lm{display:grid;gap:var(--space-6)}
+.lc-page .lm-map{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--space-4);overflow:hidden}
+.lc-page .lm-map svg{display:block;width:100%;height:auto}
+.lc-page .lm-land{fill:#efe6d6}
+.lc-page .lm-hl{fill:#f3ddb0}
+.lc-page .lm-borders{fill:none;stroke:#cdbfa6;stroke-width:1}
+.lc-page .lm-outline{fill:none;stroke:#a89a82;stroke-width:1.4}
+.lc-page .lm-stage{position:relative}
+.lc-page .lm-stage > .lm-pin,.lc-page .lm-stage > .lm-also{position:absolute;transform:translate(-50%,-50%)}
+.lc-page .lm-pin{width:34px;height:34px;border-radius:50%;border:2.5px solid var(--card);background:var(--gold);color:#fff;font:700 15px/1 var(--body);cursor:pointer;box-shadow:0 0 0 8px rgba(233,184,90,.35);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.lc-page .lm-pin:hover{transform:translate(-50%,-50%) scale(1.1)}
+.lc-page .lm-pin.on{background:var(--ink);box-shadow:0 0 0 10px rgba(233,184,90,.55)}
+.lc-page .lm-pin:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.lc-page .lm-also{display:flex;align-items:center;gap:6px;font-size:var(--text-xs);color:var(--muted);white-space:nowrap;transform:translate(-7px,-50%)!important}
+.lc-page .lm-also.left{flex-direction:row-reverse;transform:translate(calc(-100% + 7px),-50%)!important}
+.lc-page .lm-also i{width:12px;height:12px;border-radius:50%;border:2.5px solid var(--muted);background:var(--card);flex:none}
+.lc-page .lm-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2)}
+.lc-page .lm-tabs button{display:flex;align-items:center;gap:var(--space-3);text-align:left;padding:var(--space-3) var(--space-4);border:1px solid var(--line);border-radius:var(--r-md);background:var(--card);color:var(--ink);font:500 var(--text-sm)/1.25 var(--body);cursor:pointer}
+.lc-page .lm-tabs button b{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;font-size:13px}
+.lc-page .lm-tabs button.on{border-color:var(--gold);background:#fff6e3}
+.lc-page .lm-tabs button.on b{background:var(--ink)}
+.lc-page .lm-card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.lc-page .lm-card-art{margin:0;min-height:100%}
+.lc-page .lm-card-art img{width:100%;height:100%;object-fit:cover;display:block}
+.lc-page .lm-card-body{padding:var(--space-8)}
+.lc-page .lm-card-body h3{font-family:var(--display);font-weight:400;font-size:var(--text-xl);margin:0 0 var(--space-2)}
+.lc-page .lm-best{color:var(--muted);margin:0 0 var(--space-5)}
+.lc-page .lm-climate{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin:0 0 var(--space-6)}
+.lc-page .lm-climate div{background:#fff;padding:var(--space-3) var(--space-4)}
+.lc-page .lm-climate dt{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.lc-page .lm-climate dd{margin:2px 0 0;font-size:var(--text-sm);font-weight:500}
+.lc-page .lm-lists{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)}
+.lc-page .lm-lists h4{font-size:var(--text-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 var(--space-3)}
+.lc-page .lm-lists ul{list-style:none;padding:0;margin:0;display:grid;gap:var(--space-2)}
+.lc-page .lm-lists li{position:relative;padding-left:18px;font-size:var(--text-sm);line-height:1.45}
+.lc-page .lm-lists li::before{content:'';position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:#6e8b6a}
+.lc-page .lm-lists ul.risk li::before{background:#b5643c}
+.lc-page .lm-scores{margin-top:var(--space-6);padding-top:var(--space-5);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-2) var(--space-5)}
+.lc-page .lm-score{display:flex;justify-content:space-between;align-items:center;gap:var(--space-2);font-size:var(--text-xs);color:var(--muted)}
+.lc-page .lm-dots{display:flex;gap:3px}
+.lc-page .lm-dots i{width:9px;height:9px;border-radius:50%;background:var(--pearl-2);border:1px solid #d8cdba}
+.lc-page .lm-dots i.f{background:var(--gold);border-color:var(--gold)}
+.lc-page .lm-total{grid-column:1/-1;font-size:var(--text-sm);color:var(--muted)}
+.lc-page .lm-total b{color:var(--ink);font-size:var(--text-lg);font-family:var(--display);font-weight:400}
+@media (max-width:900px){
+  .lc-page .lm-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lc-page .lm-card{grid-template-columns:1fr}
+  .lc-page .lm-card-art{aspect-ratio:16/10}
+  .lc-page .lm-scores{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:600px){
+  .lc-page .lm-map{padding:var(--space-2)}
+  .lc-page .lm-pin{width:22px;height:22px;font-size:11px;border-width:2px;box-shadow:0 0 0 4px rgba(233,184,90,.35)}
+  .lc-page .lm-pin[data-id=san-luis-valley]{margin-top:-11px}
+  .lc-page .lm-pin[data-id=northern-new-mexico]{margin-top:11px}
+  .lc-page .lm-also span{display:none}
+  .lc-page .lm-card-body{padding:var(--space-5)}
+  .lc-page .lm-lists{grid-template-columns:1fr}
+  .lc-page .lm-climate{grid-template-columns:1fr}
+}

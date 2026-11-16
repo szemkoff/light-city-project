@@ -97,7 +97,7 @@ export default function City(): JSX.Element {
           kicker="Edge"
           title="Microgrid"
           tag="TRL 8–9"
-          specs={[['Solar', '2–5 MWp'], ['Storage', '8–20 MWh batteries'], ['Backup', 'Grid tie and biogas'], ['Monitoring', 'Open, real-time dashboard']]}>
+          specs={[['Solar', '2–5 MWp'], ['Storage', '8–20 MWh batteries'], ['Backup', 'Grid tie, biogas or bio-ethanol (no diesel)'], ['Monitoring', 'Open, real-time dashboard']]}>
           <p>A community-owned solar microgrid with battery storage powers homes, workshops and greenhouses. It stays connected to the regional grid for resilience and can island during outages.</p>
           <p>All of this is proven, off-the-shelf technology. The design work is in sizing, siting and making the energy flows visible to residents.</p>
         </Feature>
@@ -163,6 +163,7 @@ export default function City(): JSX.Element {
           {to: '/docs/design/architecture', tag: 'City', title: 'Architecture', text: 'Ring layout, building types and construction approach.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'Dome neighborhoods in detail.'},
           {to: '/docs/design/organic-forms-and-materials', tag: 'Design', title: 'Beyond the box', text: 'Curved forms and healthy, low-cost materials.'},
+          {to: '/locations', tag: 'Land', title: 'Locations', text: 'Four candidate regions, scored and mapped.'},
           {to: '/docs/at-a-glance', tag: 'Facts', title: 'At a glance', text: 'Every key number for each phase.'},
           {to: '/docs/concepts/sacred-geometry', tag: 'Design', title: 'Sacred geometry', text: 'The proportions behind the plan.'},
         ]} />

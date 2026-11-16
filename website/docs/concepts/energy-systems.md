@@ -38,7 +38,8 @@ Light City operates on multiple energy levels simultaneously, with clear separat
 **Sources**:
 - Solar PV (rooftop, canopies, BIPV)
 - Battery storage (lithium-ion or flow batteries)
-- Backup generator (diesel/propane for resilience)
+- Renewable backup: bio-ethanol or biogas generators, no diesel (see [Resilience without diesel](#resilience-without-diesel))
+- Site-dependent: micro-hydro and geothermal heat where the land offers them
 - Grid interconnect (if available)
 
 **Status**: Proven, permittable, fundable  
@@ -90,10 +91,26 @@ Delphin's crystal spire and energy system in action (visible as the central glow
   - Lithium-ion (4-hour duration) or flow batteries (8-12 hour)
   - Day-to-night load shifting
   - Peak shaving and grid services (if interconnected)
-- **Backup**: 500 kW - 2 MW diesel/propane genset
-  - 7-14 days fuel storage on-site
+- **Backup**: 500 kW - 2 MW renewable gensets (bio-ethanol or biogas; no diesel)
+  - 7-14 days of renewable fuel on-site (ethanol tank or biogas holder)
   - Automatic transfer switch
-  - Emissions controls (Tier 4 Final)
+  - Runs only after batteries and grid tie are exhausted
+
+### Resilience without diesel
+
+Light City does not use diesel. Backup power comes in layers, from the cleanest and most proven to the most site-specific:
+
+| Layer | What it is | Readiness | Notes |
+|---|---|---|---|
+| 1. Batteries | 8-20 MWh LFP or sodium-ion | TRL 9 | Covers every night and most cloudy days |
+| 2. Grid tie | Import/export with the regional utility | TRL 9 | Where a substation is within reach |
+| 3. Biogas gensets | Engines running on methane from on-site digesters (food waste, manure, garden waste) | TRL 9 | Closes the loop with the food system; digestate goes back to the soil |
+| 4. Bio-ethanol gensets | Engines or fuel cells running on plant-based ethanol | TRL 6-8 | Ethanol gensets already replace diesel in Brazil, e.g. the [Liconic Ecogerador](https://contest.techbriefs.com/2024/entries/sustainable-technology/13212); an EU bioethanol fuel-cell backup reached TRL 6 ([PEMBeyond, CORDIS](https://cordis.europa.eu/project/id/621218/reporting/it)). Ethanol holds about 40% less energy per litre than diesel, so tanks are larger. |
+| 5. Gas (transition only) | Renewable natural gas first; pipeline gas only as a temporary fallback | TRL 9 | Phased out as biogas output grows |
+| 6. Micro-hydro | Run-of-river turbines, no dams | TRL 9 | Only where the site has a year-round stream with head |
+| 7. Geothermal heat | Ground-source heat pumps everywhere; direct-use hot water where the rock allows | TRL 9 (heat pumps, direct use) | Deep geothermal power is site-dependent and stays a Phase 2 option; confirmed only after test wells |
+
+Hydro and geothermal are treated as bonuses, not promises: they depend on the land chosen. See [Site Locations](/docs/project/site-locations) for how each candidate region scores.
 
 **Distribution**:
 - **AC Feeders**: 480V 3-phase for heavy loads (HVAC, kitchens, workshops)
@@ -213,7 +230,7 @@ graph TD
     subgraph "PHYSICAL MICROGRID (Proven — TRL 6-9)"
         PV["Solar PV<br/>2-5 MWp"]
         BATT["Battery Storage<br/>8-20 MWh"]
-        GEN["Backup Genset<br/>500 kW - 2 MW"]
+        GEN["Renewable Backup<br/>Biogas / Bio-ethanol<br/>500 kW - 2 MW"]
         
         PV --> BATT
         GEN --> BATT
@@ -452,7 +469,7 @@ graph TD
 **Physical Microgrid**:
 - [ ] Install 2-5 MWp solar PV (rooftop, canopies, BIPV)
 - [ ] Install 8-20 MWh battery storage (LFP or sodium-ion; see [Technology Horizon](/docs/technical/technology-horizon))
-- [ ] Install backup genset (500 kW - 2 MW)
+- [ ] Install renewable backup gensets (biogas or bio-ethanol, 500 kW - 2 MW) and on-site digester
 - [ ] Commission microgrid controller and monitoring
 - [ ] Achieve 99.5%+ uptime
 

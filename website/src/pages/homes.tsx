@@ -181,6 +181,7 @@ export default function Homes(): JSX.Element {
           {to: '/docs/project/contribution-based-residency', tag: 'Living', title: 'Contribution-based residency', text: 'Tiers, contribution areas, selection and how the pilot runs.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'How the dome neighborhoods are organized, inside and out.'},
           {to: '/docs/design/organic-forms-and-materials', tag: 'Build', title: 'Beyond the Box', text: 'Curved, low-cost forms and healthy materials, including earth tiny homes.'},
+          {to: '/locations', tag: 'Land', title: 'Where it could be', text: 'Four candidate regions and what each means for daily life.'},
           {to: '/docs/project/governance', tag: 'Living', title: 'Governance', text: 'How residents take part in decisions and resolve conflicts.'},
           {to: '/docs/at-a-glance', tag: 'Facts', title: 'Light City at a glance', text: 'Every key number: homes, costs, timeline.'},
         ]} />
