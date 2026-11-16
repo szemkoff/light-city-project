@@ -30,7 +30,7 @@ Read these essential documents:
 Review the project structure:
 
 - **[Project Structure](project-structure.md)** - How everything is organized
-- Browse the `docs/` folder to see what's available
+- Browse the `website/docs/` folder (or the [library](/docs/START-HERE)) to see what's available
 - Look at the `assets/` folder for visual inspiration
 
 ### 3. Set Up Your Environment (30 minutes)
@@ -55,7 +55,7 @@ Review the project structure:
 Pick based on what resonates:
 
 **If you're a writer/philosopher:**
-→ Start expanding `docs/concepts/` documentation
+→ Start expanding `website/docs/concepts/` documentation
 
 **If you're a designer/artist:**
 → Begin creating visual concepts in `assets/images/concept-art/`
@@ -67,7 +67,7 @@ Pick based on what resonates:
 → Gather materials in `research/` folders
 
 **If you're a developer:**
-→ Review `docs/technical/` and prepare for Stage 3
+→ Review `website/docs/technical/` and prepare for Stage 3
 
 ## Current Stage: Foundation & Vision
 
@@ -93,15 +93,15 @@ Priority tasks for Stage 1:
 ### Where to Focus
 
 **High Priority:**
-1. `docs/concepts/` - Expand philosophical foundations
-2. `docs/design/architecture.md` - Document architectural vision
+1. `website/docs/concepts/` - Expand philosophical foundations
+2. `website/docs/design/architecture.md` - Document architectural vision
 3. `research/` - Gather relevant materials
 4. `assets/images/inspiration/` - Collect visual references
 
 **Medium Priority:**
 1. `planning/` - Create detailed task lists
-2. `docs/community/` - Prepare for future collaboration
-3. `docs/technical/` - Plan technical implementation
+2. `website/docs/community/` - Prepare for future collaboration
+3. `website/docs/technical/` - Plan technical implementation
 
 ## Daily Workflow Suggestions
 
@@ -170,7 +170,7 @@ Work simultaneously on:
 
 ### "Where should I start?"
 
-Start with what calls to you most. If unclear, begin by expanding `docs/concepts/core-concepts.md` with your own understanding.
+Start with what calls to you most. If unclear, begin by expanding `website/docs/concepts/core-concepts.md` with your own understanding.
 
 ### "How much time should I spend?"
 
@@ -219,7 +219,7 @@ Pick 2-3 to get started:
 
 ### Within This Project
 
-- All `docs/` files
+- All `website/docs/` files
 - `planning/` for roadmaps and tasks
 - `research/` for collected materials
 
@@ -270,6 +270,6 @@ Welcome, builder. Let's begin.
 
 ---
 
-**Last Updated**: October 10, 2025  
+**Last reviewed**: November 2026  
 **Next**: [Core Concepts](../concepts/core-concepts.md) | [Development Stages](development-stages.md)
 

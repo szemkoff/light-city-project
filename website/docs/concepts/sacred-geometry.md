@@ -338,6 +338,6 @@ Sacred geometry in Light City isn't academic—it's lived:
 ---
 
 **Status**: Foundation document - to be significantly expanded  
-**Last Updated**: October 10, 2025  
+**Last reviewed**: November 2026  
 **Related**: [Architecture](/docs/design/architecture), [Core Concepts](/docs/concepts/core-concepts)
 

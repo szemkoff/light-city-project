@@ -3,7 +3,7 @@
 
 **Status**: Framework defined, implementation in Stage 4-5  
 **Version**: 1.0  
-**Last Updated**: November 14, 2025  
+**Last reviewed**: November 2026  
 **Last Reviewed**: November 14, 2025
 
 ---
@@ -212,7 +212,7 @@ CBR residents provide **labor that would otherwise need to be paid for** (garden
 ### **Revenue Impact Analysis**
 
 #### **Scenario: 200-person community**
-- 140 paying residents (70%) @ $1,200/month avg = $168,000/month
+- 140 paying residents (70%) @ ~$960/month avg = ~$134,000/month (mid-range of the [canonical home prices](/docs/at-a-glance#homes-monthly-all-inclusive))
 - 60 CBR residents (30%) providing 6,000 hrs/month labor
 - Equivalent labor cost if hired: $90,000/month
 - Actual cost to support CBR residents: $45,000/month
@@ -330,13 +330,13 @@ Focus is on **understanding and support**, not punishment. Most issues stem from
 
 | Resident Type | Count | Monthly Fee | Monthly Revenue |
 |---------------|-------|-------------|-----------------|
-| Tiny Home (Paying) | 30 | $500 | $15,000 |
-| Studio (Paying) | 50 | $1,000 | $50,000 |
-| 1-Bedroom (Paying) | 40 | $1,500 | $60,000 |
-| 2-Bedroom (Paying) | 20 | $1,700 | $34,000 |
+| Tiny Home (Paying) | 30 | $600 | $18,000 |
+| Studio (Paying) | 50 | $825 | $41,250 |
+| 1-Bedroom (Paying) | 40 | $1,125 | $45,000 |
+| 2-Bedroom (Paying) | 20 | $1,500 | $30,000 |
 | **CBR Residents (Tier 1)** | **50** | **$0** | **$0** |
 | **CBR Residents (Tier 2)** | **10** | **$350** | **$3,500** |
-| **Total** | **200** | | **$162,500** |
+| **Total** | **200** | | **$137,750** |
 
 #### **CBR Cost**:
 - 60 CBR residents × $750/month = $45,000/month
@@ -345,10 +345,10 @@ Focus is on **understanding and support**, not punishment. Most issues stem from
 - 60 residents × 100 hrs/month × $15/hr = $90,000/month equivalent labor
 
 #### **Net Financial Impact**:
-- Revenue: $162,500
+- Revenue: $137,750
 - CBR Cost: $45,000
 - CBR Value: $90,000
-- **Effective Revenue**: $207,500/month
+- **Effective Revenue**: $182,750/month (about $1.65M/year in resident fees, consistent with the [financial model](/docs/project/development-stages))
 
 :::tip Financial Win-Win
 CBR residents **increase** community capacity and reduce operational costs while providing housing access to those who need it most.

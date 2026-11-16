@@ -13,6 +13,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Interactive 3D city model
 - Prototype communosphere designs
 
+## [0.5.0] - 2026-11-16
+
+### Added
+- Light City at a Glance: a single canonical fact sheet for scale, costs, homes, timeline and readiness
+- The Transition: five movements from present-day life to the Light City future, mapped to the stages
+- Technology Horizon: Proven / Scaling / Emerging / Frontier technologies with sourced 2026 status
+- Glossary, an expanded research agenda and a graded bibliography
+
+### Changed
+- Library reorganized into a narrative reading order (Why → Transition → City → Technology → Living → Roadmap → Research)
+- Numbers harmonized across all documents; horizon tags added to every Technology Catalog entry
+- Catalog roadmap aligned with stage dates; solid-state and vertical-farming entries updated for 2026 realities
+- Start Here and README rewritten
+
+### Removed
+- Stale root `docs/` copy, root working notes and scripts moved to `archive/`
+
 ## [0.4.0] - 2025-11-06
 
 ### Added - Comprehensive Visual Documentation System

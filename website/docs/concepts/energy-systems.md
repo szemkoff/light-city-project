@@ -9,7 +9,7 @@ sidebar_label: Energy Systems
 *This document explores the energy generation, distribution, and consciousness technologies of Light City*
 
 **Status**: Research & Development  
-**Last Updated**: November 7, 2025  
+**Last reviewed**: November 2026  
 **Owner**: Technical Working Group  
 **Related**: [Architecture](/docs/design/architecture), [Technology Catalog](/docs/technical/technology-catalog), [Development Stages](/docs/project/development-stages)
 
@@ -38,7 +38,7 @@ Light City operates on multiple energy levels simultaneously, with clear separat
 - Grid interconnect (if available)
 
 **Status**: Proven, permittable, fundable  
-**Budget**: $3M-$10M (Phase 1: 2-5 MWp + 8-20 MWh storage)
+**Budget**: $3M-$10M, $6M target (Phase 1: 2-5 MWp + 8-20 MWh storage; part of the $44M target construction budget)
 
 ### Track 2: Subtle/Consciousness Energy (Research — TRL 1-3)
 
@@ -445,7 +445,7 @@ graph TD
 
 **Physical Microgrid**:
 - [ ] Install 2-5 MWp solar PV (rooftop, canopies, BIPV)
-- [ ] Install 8-20 MWh battery storage (lithium-ion or flow)
+- [ ] Install 8-20 MWh battery storage (LFP or sodium-ion; see [Technology Horizon](/docs/technical/technology-horizon))
 - [ ] Install backup genset (500 kW - 2 MW)
 - [ ] Commission microgrid controller and monitoring
 - [ ] Achieve 99.5%+ uptime
@@ -515,7 +515,7 @@ graph TD
 ---
 
 **Status**: Foundation document with investor-safe framing  
-**Last Updated**: November 7, 2025  
+**Last reviewed**: November 2026  
 **Last Reviewed**: November 7, 2025  
 **Owner**: Technical Working Group  
 **Priority**: High - Core to Light City function  

@@ -49,5 +49,5 @@
 
 ---
 
-**Last Updated**: October 10, 2025  
+**Last reviewed**: November 2026  
 **Related**: `visual-language.md`, `sacred-geometry.md`

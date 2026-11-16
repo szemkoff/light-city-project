@@ -62,7 +62,7 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 #### Terrestrial prototype (Earth implementation)
 
-**Phase 1 (18-24 months)**: 3 geodesic domes
+**Phase 1 (built in Stage 5, Dec 2028 – Nov 2031)**: 3 geodesic domes
 - **Size**: 30-45 m diameter (100-150 ft)
 - **Height**: 3-5 levels, 15-25 m tall
 - **Capacity**: 80-120 residents per dome
@@ -70,16 +70,16 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 - **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
 - **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
 
-**Phase 2 (36-48 months)**: 6-12 domes expansion
+**Phase 2 (mid-2030s, after Phase 1 proves out)**: 6-12 domes expansion
 - **Size**: 45-60 m diameter (150-200 ft)
 - **Capacity**: 120-200 residents per dome
-- **Total**: 720-2,400 residents
+- **Total in domes**: 720-2,400 residents (Village total 1,500-3,000 including ring housing)
 - **Clustered**: Outer ring arrangement, connected by covered walkways
 
 **Phase 3 (Long-term vision)**: 12+ domes
 - **Size**: 60-90 m diameter (200-300 ft)
 - **Capacity**: 200-400 residents per dome
-- **Total**: 2,400-4,800+ residents
+- **Total in domes**: 2,400-4,800+ residents (Town total 8,000+ including ring housing)
 
 **Construction** (Terrestrial):
 - "Hooked in" to the ground—firmly anchored with deep foundations
@@ -204,8 +204,8 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 
 **Number** (Phased Approach):
 - **Phase 1**: 3 domes (200 residents target, 150-300 range)
-- **Phase 2**: 6-12 domes (720-2,400 residents)
-- **Phase 3**: 12+ domes (2,400-4,800+ residents)
+- **Phase 2**: 6-12 domes (720-2,400 residents in domes; Village 1,500 target)
+- **Phase 3**: 12+ domes (2,400-4,800+ residents in domes; Town 8,000+)
 - **Long-term Vision**: Inspired by Delphin's 12 mega-spheres (60,000-120,000 people off-world scale)
 
 **Architecture**:
@@ -443,7 +443,7 @@ This isn't speculation—it's adaptation of proven technology.
 
 **Status**: Scale-clarified, investor-ready framework  
 **Version**: 2.0 (Scale Separation)  
-**Last Updated**: November 14, 2025  
+**Last reviewed**: November 2026  
 **Last Reviewed**: November 14, 2025  
 **Priority**: High - Core architectural component  
 **Next Steps**: Integrate into architecture.md, develop detailed designs

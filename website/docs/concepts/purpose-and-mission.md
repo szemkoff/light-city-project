@@ -29,6 +29,10 @@ Create tangible connections between:
 - Individual calling and collective movement
 - Etheric potential and physical manifestation
 
+## From purpose to practice
+
+These purposes unfold as five movements: **Awakening, Gathering, Founding, Flourishing, Radiating**. Each is tied to a project stage and to measurable outcomes. See [The Transition](/docs/concepts/the-transition).
+
 ## Mission Statement
 
 **To document, develop, and manifest Light City as a living example of higher-consciousness civilization, serving humanity's evolution through integrated spiritual, creative, and practical work.**
@@ -74,7 +78,7 @@ Create tangible connections between:
    - Develop specific aspects in detail
    - Create educational materials
 
-### Long-Term (2029-2032+: Stages 5-6)
+### Long-Term (Dec 2028 – 2032+: Stages 5-6)
 
 **Timeline**: December 2028 - 2032+ (3+ years)  
 **Stage 5**: Physical manifestation (18-36 months)  
@@ -225,7 +229,7 @@ Use these questions to ensure ongoing alignment:
 ---
 
 **Version**: 2.0 (Timeline Aligned)  
-**Last Updated**: November 14, 2025  
+**Last reviewed**: November 2026  
 **Last Reviewed**: November 14, 2025  
 **Related**: [Core Concepts](core-concepts.md), [Philosophy](philosophy.md), [Development Stages](../project/development-stages.md)
 

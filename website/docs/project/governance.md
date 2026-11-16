@@ -9,7 +9,7 @@ sidebar_label: Governance
 *Decision-making, authority, and community structure for Light City*
 
 **Version**: 1.0  
-**Last Updated**: November 14, 2025  
+**Last reviewed**: November 2026  
 **Status**: Foundational Framework  
 **Related**: [Development Stages](/docs/project/development-stages), [Core Concepts](/docs/concepts/core-concepts)
 

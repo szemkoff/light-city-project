@@ -18,6 +18,10 @@ This page blends visionary language with practical design cues. Spiritual descri
 This is a **conceptual primer**. Take metaphysical language as **design intent**; take implementation details from the **Architecture**, **Development Stages**, and **Energy Systems** pages. Where claims could be controversial, we tag them as **hypotheses** and defer to peer-reviewed evidence.
 :::
 
+:::note Light City in one breath
+A 200-resident pilot hamlet of three timber-and-glass domes around a 60–120 m solar spire, built in Stage 5 (Dec 2028 – Nov 2031) for about $45M, then growing into a 1,500-person village and an 8,000+ person town. Every number lives on [At a Glance](/docs/at-a-glance). How people journey from today's life into this future is described in [The Transition](/docs/concepts/the-transition).
+:::
+
 Your original Light City visions that sparked this project:
 
 ![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
@@ -338,7 +342,7 @@ To deepen your understanding:
 
 ---
 
-**Last Updated**: November 7, 2025  
+**Last reviewed**: November 2026  
 **Last Reviewed**: November 7, 2025  
 **Owner**: Core Team  
 **Related**: [Architecture](/docs/design/architecture), [Energy Systems](/docs/concepts/energy-systems), [Development Stages](/docs/project/development-stages)

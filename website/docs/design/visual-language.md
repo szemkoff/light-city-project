@@ -97,5 +97,5 @@ This guide defines the visual system used across all Light City materials (docum
 
 ---
 
-**Last Updated**: October 10, 2025  
+**Last reviewed**: November 2026  
 **Related**: `color-and-light.md`, `architecture.md`, `sacred-geometry.md`

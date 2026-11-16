@@ -302,5 +302,5 @@ For Stage 1, set up these essentials:
 
 ---
 
-**Last Updated**: October 10, 2025
+**Last reviewed**: November 2026
 
