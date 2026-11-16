@@ -24,12 +24,6 @@ a form on the live site.
 When you edit `Code.gs` later, use **Deploy → Manage deployments → Edit → New version** so the
 URL stays the same.
 
-## Before the secret exists
-
-Until `FORMS_ENDPOINT_URL` is set, the site keeps sending forms through Web3Forms
-(`WEB3FORMS_ACCESS_KEY`), so this change can be merged at any time. Once the secret is added and
-the Deploy workflow re-runs, forms switch to the Sheet automatically.
-
 ## Adding another form
 
 Give the `<form>` a hidden `form` field with its name (that becomes the Sheet tab), a hidden
