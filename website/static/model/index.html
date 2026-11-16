@@ -28,24 +28,33 @@
   const phase = [1, 2, 3].includes(+q.get('phase')) ? +q.get('phase') : 1;
   const NOTES = {
     1: 'Phase 1, pilot hamlet: 200 residents on a 20–30 acre core. A 90 m spire of three lattice sections on a foundation built for the final height, one temple and two learning pavilions, three 40 m domes, 30 earth homes on ring 4 and solar on ring 5. Reserved dome plots are meadow and tree nursery.',
-    2: 'Phase 2, village: about 1,500 residents on roughly 160 acres. Everything from Phase 1 stays. The spire gains two sections (150 m), three more pavilions, five new 52 m domes on reserved plots, 24 more homes in the ring 4 gaps, a new ring of earth-home courtyard clusters and a food and energy belt.',
-    3: 'Phase 3, town: 8,000+ residents on about 1.2 square miles. The village and its food and energy belt stay as built, now a green belt. The spire reaches 240 m, the last four ring domes and two pavilions fill reserved plots, and outside the green belt come timber terraces with green roofs, six 80 m district domes and a new outer belt. Schematic, not a final master plan.',
+    2: 'Phase 2, village: about 1,500 residents on roughly 160 acres. Everything from Phase 1 stays; this view turns on what Phase 2 adds. The spire gains two sections (150 m), three more pavilions, five new 52 m domes on reserved plots, 24 more homes in the ring 4 gaps, a new ring of earth-home courtyard clusters and a food and energy belt.',
+    3: 'Phase 3, town: 8,000+ residents on about 1.2 square miles. The village and its food and energy belt stay as built, now a green belt; this view turns on what Phase 3 adds. The spire reaches 240 m, the last four ring domes and two pavilions fill reserved plots, and outside the green belt come timber terraces with green roofs, six 80 m district domes and a new outer belt. Schematic, not a final master plan.',
   };
 
-  document.getElementById('ttl').textContent = 'Light City, ' + PHASES[phase].name;
-  document.getElementById('note').textContent = NOTES[phase] + ' Drag to orbit, scroll or pinch to zoom.';
+  let app;
   const pb = document.getElementById('phases');
+  const showPhase = (n) => {
+    document.getElementById('ttl').textContent = 'Light City, ' + PHASES[n].name;
+    document.getElementById('note').textContent = NOTES[n] + ' Drag to orbit, scroll or pinch to zoom.';
+    pb.querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-checked', i + 1 === n));
+  };
   for (const n of [1, 2, 3]) {
     const b = document.createElement('button');
-    b.textContent = 'Phase ' + n; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', n === phase);
-    b.onclick = () => { const u = new URLSearchParams(location.search); u.set('phase', n); location.search = u.toString(); };
+    b.textContent = 'Phase ' + n; b.setAttribute('role', 'radio');
+    b.title = n === 1 ? 'Phase 1 only' : 'Turn on the structures Phase ' + n + ' adds';
+    b.onclick = () => {
+      app.setPhase(n); showPhase(n);
+      const u = new URLSearchParams(location.search); u.set('phase', n); history.replaceState(null, '', '?' + u);
+    };
     pb.appendChild(b);
   }
   const render = q.has('render');
   if (render) document.body.classList.add('render');
   const c = document.getElementById('c');
   if (render) { c.style.width = q.get('w') + 'px'; c.style.height = q.get('h') + 'px'; }
-  const app = start(c, {phase, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
+  app = start(c, {phase, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
+  showPhase(phase);
   const box = document.getElementById('views');
   for (const [k, v] of Object.entries(VIEWS)) {
     const b = document.createElement('button');
