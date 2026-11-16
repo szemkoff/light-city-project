@@ -41,6 +41,7 @@ Pick a question, check the [bibliography](/docs/research/bibliography) for start
 | B2 | What trial membership period and exit process best protect both people and community? | Retreat and residency pilots; research on [community durability](https://www.academia.edu/66624398/The_Durability_of_Collective_Action_When_do_Intentional_Communities_Survive_Challenges) |
 | B3 | How do we keep the founding spirit alive after the pioneering phase? | Study long-lived communities (Findhorn, Twin Oaks, kibbutzim, Auroville) |
 | B4 | Which land-holding structure (community land trust, cooperative, foundation) best secures the long term? | Legal comparison; [research on trust-held communities](https://researchcommons.waikato.ac.nz/server/api/core/bitstreams/fbfac45f-c75e-4963-9c6d-c83c38bd3ff9/content) |
+| B6 | What weekly share of Light hours is sustainable, which legal structure keeps them from becoming taxable barter, and what balance limits suit families? | Light hours pilot in 2027–2028; tax counsel; [Economy and Migration](/docs/project/economy-and-migration) |
 | B5 | How is privacy kept in a highly connected community, including any shared wellbeing data? | Data charter drafted with residents |
 
 ## C. Wellbeing and environment (answer in Stages 5–6)

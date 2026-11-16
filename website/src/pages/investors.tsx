@@ -133,6 +133,7 @@ export default function Investors(): JSX.Element {
             <li><strong>Not yet included:</strong> discounts for contribution-based residency (20–30% of homes) and founding-member discounts. Both lower income further.</li>
             <li><strong>Ways to close the gap, to test in Stage 2:</strong> more homes on the same infrastructure, a higher share of 1-, 2- and 3-bedroom homes, a higher member fee, a lower operating cost per home, or retreat income secured by pre-sales.</li>
             <li><strong>Capex:</strong> the cost plan assumed 50–100 homes. About 110 homes, including 10 three-bedroom homes, may add about 10% to the housing line; this will be re-estimated in Stage 2. A +20% overrun on all construction takes it to about $54M and adds about $9M to the raise.</li>
+            <li><strong>Economy plan:</strong> the inside economy moves step by step from dollar fees to Light hours, a time credit. The dial never goes below the edge bill (loan payments, taxes, insurance, outside costs and reserves), and it steps back automatically if that bill is not covered. See <a href={u('/docs/project/economy-and-migration')}>Economy and Migration</a>.</li>
             <li><strong>Open item, debt service:</strong> the operating model does not yet include interest. If the EPC share (about $9M) costs 6–8%, interest is $540K–$720K a year. Stage 2 will rebuild the model with debt terms, reserves and scenario IRRs.</li>
           </ul>
           <p>Full assumptions: <a href={stages + '#financial-model-notes--assumptions'}>financial model notes</a>.</p>

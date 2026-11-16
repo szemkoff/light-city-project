@@ -53,9 +53,13 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **Dry-stone walling**: Building walls from stones fitted together without mortar. A UNESCO-listed craft found from Ireland to Cyprus and the Azores. See [Beyond the Box](/docs/design/organic-forms-and-materials).
 
+**Dial**: The share of each home's monthly fee that can be paid in Light hours instead of dollars. It moves up one phase at a time after a measured gate and an 80% resident vote, and steps back automatically if the edge bill is not covered. See [Economy and Migration](/docs/project/economy-and-migration#the-four-phase-dial).
+
 **Digital twin**: A live digital model of the city. It is used first for design and community previews (Stage 3), then to operate buildings and energy efficiently.
 
 ## E
+
+**Edge bill**: The costs Light City must always pay in dollars: loan payments and investor returns, taxes, insurance, outside goods and services, and reserves. See [Economy and Migration](/docs/project/economy-and-migration#two-layers).
 
 **Earth build**: What we will physically construct, using standard engineering, permitting and safety practices.
 
@@ -110,6 +114,8 @@ Plain-language definitions of the terms used across the Light City library. Tech
 **kWp / MWp**: Kilowatt-peak and megawatt-peak: the rated output of solar panels under standard full sun. Phase 1 plans 2–5 MWp.
 
 ## L
+
+**Light hours**: Light City's time credit. One hour of work earns one Light hour, whatever the work. Accounts start at zero, carry no interest, have limits, and cannot be bought with or turned into dollars. See [Economy and Migration](/docs/project/economy-and-migration#light-hours).
 
 **LFP battery**: Lithium iron phosphate: the safe, long-lived lithium battery chemistry most common in stationary storage today. **Proven.**
 

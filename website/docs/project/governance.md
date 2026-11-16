@@ -77,6 +77,7 @@ Light City's governance evolves through development stages, transitioning from f
 | **Strategic Direction** | Founder + Advisory | Community Council | 80% consent |
 | **Annual Budget** | Founder | Community Council | 80% consent |
 | **Major Capital** (&gt;$100K) | Founder | Community Council | 80% consent |
+| **Economy dial** (move up a phase) | n/a | All residents | 80% consent, after the gate is met. Steps back automatically if the edge bill is not covered. Phase 3 is re-voted every year. See [Economy and Migration](/docs/project/economy-and-migration#how-the-dial-moves) |
 | **Policies** | Founder | Community Council | 66% majority |
 | **Operations** | Founder/Staff | Executive Director | N/A |
 | **Conflict Resolution** | Founder | Conflict Committee | Case-by-case |

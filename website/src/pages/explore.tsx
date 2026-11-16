@@ -3,9 +3,9 @@ import Site, {Section, Cards, Topic, Cta, Jump} from '../components/Site';
 
 const PARTS = [
   {id: 'orientation', part: 'Orientation', items: [
-    {to: '/docs/START-HERE', title: 'Start here', summary: 'How the library tells one story in eight parts, with reading paths for residents, investors, builders and researchers.', points: ['Eight-part reading order', 'Paths by audience', 'How vision and reality are held together']},
+    {to: '/docs/START-HERE', title: 'Start here', summary: 'How the library tells one story in nine parts, with reading paths for residents, investors, builders and researchers.', points: ['Nine-part reading order', 'Paths by audience', 'How vision and reality are held together']},
     {to: '/docs/at-a-glance', title: 'Light City at a glance', summary: 'The single source of truth for every number: residents, budgets, timeline, homes and systems for each phase.', points: ['Phase 1: 200 residents, ~$45M', 'Six stages, move-in 2031', 'Phase 2 and 3 targets']},
-    {to: '/docs/glossary', title: 'Glossary', summary: 'Plain-language definitions of 59 terms, from agrivoltaics to TRL, each tagged with its readiness horizon.', points: ['Technical and visionary terms', 'Horizon tag on every term', 'Linkable anchors']},
+    {to: '/docs/glossary', title: 'Glossary', summary: 'Plain-language definitions of 72 terms, from agrivoltaics to TRL, each tagged with its readiness horizon.', points: ['Technical and visionary terms', 'Horizon tag on every term', 'Linkable anchors']},
   ]},
   {id: 'why', part: '1 · Why', items: [
     {to: '/docs/concepts/core-concepts', title: 'Core concepts', summary: 'What Light City is: a regenerative community of timber-and-glass domes around a solar spire, designed so consciousness and daily life support each other.', points: ['Core principles', 'The architecture of light', 'Visionary archetype as inspiration']},
@@ -34,15 +34,18 @@ const PARTS = [
     {to: '/docs/project/governance', title: 'Governance', summary: 'From founder-led to community council: sociocracy-style circles, 80% consent, one representative per 50 residents.', points: ['Legal structure (Delaware LLC)', 'Five protected core principles', 'Four-step conflict resolution']},
     {to: '/docs/project/contribution-based-residency', title: 'Contribution-based residency', summary: 'Three work-for-living tiers that open 20–30% of homes to people who contribute time instead of full fees.', points: ['Tiers from $0 to $700/month', 'Contribution areas', 'Pilot in 2027–2028']},
   ]},
-  {id: 'roadmap', part: '6 · Roadmap', items: [
+  {id: 'economy', part: '6 · Economy', items: [
+    {to: '/docs/project/economy-and-migration', title: 'Economy and migration', summary: 'How Light City moves from monthly fees to Light hours, a time credit, and optionally to no money inside the community, with a measured gate and a resident vote before every step.', points: ['Light hours: one hour of work, one credit', 'Four-phase dial', 'Phase 3 is a yearly-reviewed option']},
+  ]},
+  {id: 'roadmap', part: '7 · Roadmap', items: [
     {to: '/docs/project/development-stages', title: 'Development stages', summary: 'Six stages from foundation to operation, each with costs, deliverables, KPIs, risks and a gate that must be met.', points: ['Stage 1 finishing Dec 2026', 'Financial model and IRR', 'Stage-gate checklist']},
     {to: '/docs/project/site-locations', title: 'Site locations', summary: 'Five candidate regions for the first city, all above 350 ft, scored on sun, water, geothermal, hydro, earth-building codes, land and community.', points: ['New Mexico, Oregon, Portugal, Spain, Costa Rica', 'Scorecard and map', 'Steps to choose the site']},
   ]},
-  {id: 'research', part: '7 · Research', items: [
+  {id: 'research', part: '8 · Research', items: [
     {to: '/docs/research/open-questions', title: 'Open questions', summary: 'The research agenda: practical, community, wellbeing and frontier questions, with when each answer is needed.', points: ['Preregistration and publishing', 'Independent partners', 'Research timeline']},
     {to: '/docs/research/bibliography', title: 'Bibliography', summary: 'Every source behind the library, graded from A (peer-reviewed) to E (visionary, non-empirical).', points: ['Source grades', 'Technology status sources', 'Community and wellbeing research']},
   ]},
-  {id: 'contribute', part: '8 · Contribute', items: [
+  {id: 'contribute', part: '9 · Contribute', items: [
     {to: '/docs/project/contributing', title: 'Contributing', summary: 'Ways to help with writing, design, technology, research and community, and how contributions are reviewed.', points: ['Contribution process', 'Licensing', 'What not to contribute']},
     {to: '/docs/project/quick-start-guide', title: 'Quick-start guide', summary: 'A short orientation for new contributors: what to read first and good first tasks.', points: ['First steps', 'Suggested tasks', 'Getting help']},
     {to: '/docs/project/project-structure', title: 'Project structure', summary: 'How the repository and library are organized, with naming and documentation standards.', points: ['Directory overview', 'File conventions', 'Documentation standards']},

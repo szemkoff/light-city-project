@@ -25,8 +25,9 @@ Read it in order, or jump to the part you care about. Each part leads naturally 
 | **3. The City** | What will it look and feel like? | [Architecture](/docs/design/architecture) → [Beyond the Box](/docs/design/organic-forms-and-materials) → [Light on the Land](/docs/design/light-on-the-land) → [Communospheres](/docs/concepts/communospheres) |
 | **4. Technology** | What makes it work, and what is real today? | [Technology Horizon](/docs/technical/technology-horizon) → [Energy Systems](/docs/concepts/energy-systems) → [Technology Catalog](/docs/technical/technology-catalog) |
 | **5. Living Together** | How will people live, decide and contribute? | [Governance](/docs/project/governance) → [Contribution-Based Residency](/docs/project/contribution-based-residency) |
-| **6. Roadmap** | When will it happen, and what will it cost? | [Development Stages](/docs/project/development-stages) |
-| **7. Research** | What don't we know yet? | [Open Questions](/docs/research/open-questions) → [Bibliography](/docs/research/bibliography) |
+| **6. Economy** | How do we move from money to contribution? | [Economy and Migration](/docs/project/economy-and-migration) |
+| **7. Roadmap** | When will it happen, and what will it cost? | [Development Stages](/docs/project/development-stages) |
+| **8. Research** | What don't we know yet? | [Open Questions](/docs/research/open-questions) → [Bibliography](/docs/research/bibliography) |
 
 The key facts — scale, costs, homes, timeline — are on one page: **[Light City at a Glance](/docs/at-a-glance)**. Unfamiliar terms are in the **[Glossary](/docs/glossary)**.
 
@@ -34,9 +35,9 @@ The key facts — scale, costs, homes, timeline — are on one page: **[Light Ci
 
 **New and curious (15 minutes).** Read [At a Glance](/docs/at-a-glance), then [Core Concepts](/docs/concepts/core-concepts), then [The Transition](/docs/concepts/the-transition).
 
-**Thinking of living there.** Start with [The Transition](/docs/concepts/the-transition), then [Communospheres](/docs/concepts/communospheres), [Contribution-Based Residency](/docs/project/contribution-based-residency) and [Governance](/docs/project/governance), and finish on the [Residents page](/residents).
+**Thinking of living there.** Start with [The Transition](/docs/concepts/the-transition), then [Communospheres](/docs/concepts/communospheres), [Contribution-Based Residency](/docs/project/contribution-based-residency), [Economy and Migration](/docs/project/economy-and-migration) and [Governance](/docs/project/governance), and finish on the [Residents page](/residents).
 
-**Investor or partner.** Read [At a Glance](/docs/at-a-glance), then [Development Stages](/docs/project/development-stages) (financial model) and [Technology Horizon](/docs/technical/technology-horizon), and finish on the [Investors page](/investors).
+**Investor or partner.** Read [At a Glance](/docs/at-a-glance), then [Development Stages](/docs/project/development-stages) (financial model), [Economy and Migration](/docs/project/economy-and-migration) and [Technology Horizon](/docs/technical/technology-horizon), and finish on the [Investors page](/investors).
 
 **Architect, engineer or builder.** Start with [Architecture](/docs/design/architecture), [Beyond the Box](/docs/design/organic-forms-and-materials) and [Light on the Land](/docs/design/light-on-the-land), then [Technology Catalog](/docs/technical/technology-catalog), [Energy Systems](/docs/concepts/energy-systems) and the [Urban Retrofit Guide](/docs/technical/urban-retrofit-guide).
 
