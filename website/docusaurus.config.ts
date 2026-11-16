@@ -23,6 +23,8 @@ const config: Config = {
   ],
 
   customFields: {
+    formsEndpoint: process.env.FORMS_ENDPOINT_URL ?? '',
+    // Fallback while the Google Sheet receiver is not set up yet.
     web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY ?? '',
   },
 

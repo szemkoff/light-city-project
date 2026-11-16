@@ -5,6 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useHistory} from '@docusaurus/router';
 import initHome from '../components/Home/initHome';
+import {formTarget} from '../contactConfig';
 import '../components/Home/home.css';
 
 export default function Home(): JSX.Element {
@@ -12,7 +13,7 @@ export default function Home(): JSX.Element {
   const base = useBaseUrl('/');
   const history = useHistory();
   const rootRef = useRef<HTMLDivElement>(null);
-  const key = (siteConfig.customFields as {web3formsAccessKey?: string} | undefined)?.web3formsAccessKey ?? '';
+  const forms = formTarget(siteConfig.customFields);
   const u = (p: string) => base + p;
   const img = (n: string) => base + 'img/home/' + n + '.webp';
 
@@ -20,7 +21,7 @@ export default function Home(): JSX.Element {
     const root = rootRef.current;
     if (!root) return undefined;
     root.classList.add('js');
-    return initHome(root, {base, img, key, navigate: (p) => history.push(p)});
+    return initHome(root, {base, img, forms, navigate: (p) => history.push(p)});
   }, []);
 
   return (
@@ -413,9 +414,8 @@ export default function Home(): JSX.Element {
         <div className="wrap join-in">
           <h2>Help light the first dome.</h2>
           <p>Join the founding circle for early updates, resident applications and investor materials.</p>
-          <form className="form" id="joinForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="subject" defaultValue="Light City Project - Founding circle signup" />
-            <input type="hidden" name="from_name" defaultValue="Light City website" />
+          <form className="form" id="joinForm" method="POST">
+            <input type="hidden" name="form" defaultValue="Founding circle signup" />
             <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" hidden />
             <label className="sr" htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required placeholder="you@example.com" />

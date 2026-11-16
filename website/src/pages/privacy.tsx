@@ -8,7 +8,7 @@ export default function Privacy(): JSX.Element {
       <Section>
         <div className="pg-prose">
           <p>This site is hosted on GitHub Pages and built with Docusaurus. Like most static sites, hosting providers may process standard server logs (such as IP address and user agent) when you load pages.</p>
-          <p>If you use the <Link to="/contact">contact form</Link> or the founding circle signup, your message is sent through a third-party form provider (Web3Forms). The project does not publish a team email address on this website. There are no account systems or payment flows on this site at this time.</p>
+          <p>If you use the <Link to="/contact">contact form</Link> or the founding circle signup, your submission is stored in a private Google Sheet (via Google Apps Script) that only the project team can access, and the team is notified by email. If that receiver is temporarily unavailable, submissions are delivered through a third-party form provider (Web3Forms) instead. The project does not publish a team email address on this website. There are no account systems or payment flows on this site at this time.</p>
           <p>For the open-source repository and issue tracker, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a> as it applies to your use of GitHub.</p>
         </div>
       </Section>
