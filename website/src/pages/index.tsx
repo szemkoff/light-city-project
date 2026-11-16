@@ -143,7 +143,7 @@ export default function Home(): JSX.Element {
             </div>
             <article className="zone" id="zone" aria-live="polite"></article>
           </div>
-          <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a></p>
+          <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a> <a className="link light" href={u('locations')} style={{marginLeft: 'var(--space-6)'}}>See the four candidate regions on a map <span aria-hidden="true">→</span></a></p>
         </div>
       </section>
 

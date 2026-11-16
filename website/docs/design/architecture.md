@@ -421,7 +421,8 @@ Light City operates on multiple energy levels:
 **Physical Energy** (Conventional, TRL 8-9):
 - Solar PV: 2-5 MWp (Phase 1), 5-15 MWp (Phase 2)
 - Battery storage: 8-20 MWh (Phase 1), 40-80 MWh (Phase 2)
-- Backup generator: 500 kW - 2 MW (diesel/propane)
+- Renewable backup: 500 kW - 2 MW (biogas or bio-ethanol; no diesel)
+- Site-dependent: micro-hydro and geothermal heat where available
 - **Powers**: All essential systems (HVAC, lighting, kitchens, water, communications)
 - Sustainable and regenerative
 - Excess may be given back to Earth's grid (if interconnected)
@@ -473,6 +474,8 @@ Light City maintains an energetic grid:
 - Phasing approach
 - Organic growth vs. master plan
 
+**Candidate regions**: see [Site Locations](/docs/project/site-locations) for four scored options and a map.
+
 **Initial Vision**: Moderate scale, potentially 500-5,000 inhabitants, expandable
 
 ## Relationship to Landscape
@@ -486,7 +489,8 @@ Light City maintains an energetic grid:
 - **Wind**: Prevailing winds 5-15 mph for comfort; avoid extreme wind zones
 - **Topography**: Gentle slopes (2-8%) for water terraces and passive solar
 - **Soils**: Class I-III agricultural soils for agroforestry (USDA classification)
-- **Water**: On-site springs, streams, or high water table; annual rainfall ≥ 30 inches
+- **Water**: Secure, legally usable supply (springs, streams, wells or water rights); annual rainfall ≥ 30 inches preferred, or proven well yield and rights in drier regions
+- **Geothermal / hydro** (bonus): Hot-water resource for direct-use heat, or a year-round stream with head for micro-hydro
 
 *Infrastructure*:
 - **Grid Access**: Within 5-10 miles of substation for interconnect (if hybrid system)

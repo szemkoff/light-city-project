@@ -41,8 +41,8 @@ export default function Technology(): JSX.Element {
           kicker="Energy"
           title="Solar microgrid & storage"
           tag="Proven · TRL 8–9"
-          specs={[['Generation', '2–5 MWp solar, incl. spire and domes'], ['Storage', '8–20 MWh, sodium-ion or LFP'], ['Resilience', 'Grid-tied, can island'], ['Later', 'Iron-air, geothermal in Phase 2']]}>
-          <p>Ground-mounted arrays, solar glass on the domes and panels on the spire feed a community-owned microgrid. Batteries cover the night; the regional grid and biogas cover long cloudy spells.</p>
+          specs={[['Generation', '2–5 MWp solar, incl. spire and domes'], ['Storage', '8–20 MWh, sodium-ion or LFP'], ['Resilience', 'Grid-tied, can island; biogas or bio-ethanol backup'], ['Later', 'Iron-air, geothermal in Phase 2']]}>
+          <p>Ground-mounted arrays, solar glass on the domes and panels on the spire feed a community-owned microgrid. Batteries cover the night; the regional grid and renewable gensets (biogas or bio-ethanol, never diesel) cover long cloudy spells. Micro-hydro and geothermal heat join where the chosen land has them.</p>
           <p>Sodium-ion is the preferred storage chemistry if 2026–2027 pricing holds. Multi-day iron-air storage becomes relevant when Phase 2 loads justify it.</p>
         </Feature>
         <Feature

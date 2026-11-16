@@ -45,6 +45,7 @@ export default function Investors(): JSX.Element {
       <Section eyebrow="Diligence" title="What to review first.">
         <DocLinks items={[
           {to: '/docs/project/development-stages', tag: 'Project', title: 'Development stages', text: 'Timeline, costs and financial model notes for all six stages.'},
+          {to: '/docs/project/site-locations', tag: 'Land', title: 'Site locations', text: 'Four candidate regions scored on energy, water, codes, land cost and risk. No land bought yet.'},
           {to: '/docs/project/governance', tag: 'Project', title: 'Governance', text: 'Decision rights, community structure and transparency commitments.'},
           {to: '/docs/design/architecture', tag: 'Design', title: 'Architecture', text: 'Earth-scale implementation compared with the inspirational reference.'},
           {to: '/docs/technical/technology-catalog', tag: 'Technical', title: 'Technology catalog', text: 'Every system we plan to use, with its readiness level.'},

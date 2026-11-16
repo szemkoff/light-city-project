@@ -32,7 +32,7 @@ Light City is a planned, regenerative community. It starts as a 200-person **pil
 | **Food** | 1–2 ha agroforestry + greenhouses | 5–10 ha, near self-sufficiency | Regional food system |
 | **Earliest start** | Construction Dec 2028; residents 2031 | After Phase 1 proves out (mid-2030s) | 2040s+ |
 
-**Land.** We are looking for a rural or semi-rural site of **100–500 acres**. That is enough for the Phase 1 core, agriculture, buffers and room to grow into Phase 2.
+**Land.** We are looking for a rural or semi-rural site of **100–500 acres**. That is enough for the Phase 1 core, agriculture, buffers and room to grow into Phase 2. Four candidate regions (northern New Mexico, Colorado's San Luis Valley, southern Oregon and western North Carolina) are compared in [Site Locations](/docs/project/site-locations).
 
 ## Signature structures
 

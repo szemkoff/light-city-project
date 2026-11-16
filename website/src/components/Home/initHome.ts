@@ -34,7 +34,7 @@ offs.push(() => spy.disconnect());
 /* ---------- PERSONA ---------- */
 const P = {
   resident: { t: 'Live inside the circle', d: 'All-inclusive homes from $500 a month, shared meals, a vote in governance and contribution-based residency tiers.', l: [['#living', 'A day in Light City', 'Rhythm, homes & pricing'], [D + 'project/contribution-based-residency/', 'Contribution-based residency', 'Work-for-living tiers'], [D + 'project/governance/', 'Governance', 'How decisions are made']] },
-  investor: { t: 'Diligence-ready from day one', d: 'Phased capex from $22M, three scenarios, 8–12% target impact IRR and break-even at 180 residents.', l: [['#invest', 'Scenarios & revenue', 'Low, mid and high cases'], [D + 'project/development-stages/', 'Development stages', 'Timeline, costs, model notes'], [D + 'project/governance/', 'Governance', 'Decision rights & structure']] },
+  investor: { t: 'Diligence-ready from day one', d: 'Phased capex from $22M, three scenarios, 8–12% target impact IRR and break-even at 180 residents.', l: [['#invest', 'Scenarios & revenue', 'Low, mid and high cases'], [D + 'project/development-stages/', 'Development stages', 'Timeline, costs, model notes'], [D + 'project/site-locations/', 'Site locations', 'Four candidate regions'], [D + 'project/governance/', 'Governance', 'Decision rights & structure']] },
   builder: { t: 'Proven materials, phased construction', d: 'Timber gridshells, earth and clay, mass timber and building-integrated solar — every system TRL 7–9 unless clearly marked as research.', l: [['#forms', 'Beyond the box', 'Curved, low-cost forms'], ['#technology', 'Technology', 'What we build with'], [D + 'design/architecture/', 'Architecture', 'Domes, spire, layout'], [D + 'technical/technology-catalog/', 'Technology catalog', 'Specs, suppliers, TRLs']] },
   researcher: { t: 'Open science, honest readiness', d: 'Pre-registered, IRB-approved studies with consent and opt-out zones. Engineering and consciousness hypotheses are kept separate.', l: [['#research', 'Research programs', 'Four tracks with TRL levels'], [D + 'research/open-questions/', 'Open questions', 'Where we need help'], [D + 'concepts/energy-systems/', 'Energy systems', 'Two-track measurement model']] },
   curious: { t: 'Start with the story', d: 'An archetypal city of light, translated into something buildable. Begin with the vision, then walk the city ring by ring.', l: [['#vision', 'The vision', 'Three pillars'], ['#city', 'Explore the city', 'Interactive plan'], [D + 'START-HERE/', 'Start here', 'A guided reading path']] },
@@ -206,6 +206,7 @@ const DOCS = [
   ['research/open-questions', 'Research', 'Open questions', 'What we don’t know yet — and how to test it.'],
   ['research/bibliography', 'Research', 'Bibliography', 'Sources, studies and further reading.'],
   ['project/development-stages', 'Project', 'Development stages', 'Six stages, timeline, costs and milestones.'],
+  ['project/site-locations', 'Project', 'Site locations', 'Four candidate regions, scored and mapped.'],
   ['project/governance', 'Project', 'Governance', 'Founder-led to community council, 80% consent.'],
   ['project/contribution-based-residency', 'Project', 'Contribution-based residency', 'Work-for-living tiers aligned with community needs.'],
   ['project/quick-start-guide', 'Project', 'Quick-start guide', 'Get oriented in fifteen minutes.'],

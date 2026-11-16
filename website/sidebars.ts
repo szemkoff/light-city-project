@@ -56,7 +56,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: '6 · Roadmap',
-      items: ['project/development-stages'],
+      items: ['project/development-stages', 'project/site-locations'],
     },
     {
       type: 'category',
