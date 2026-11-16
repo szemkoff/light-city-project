@@ -61,13 +61,19 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **fNIRS**: Functional near-infrared spectroscopy: using light to measure blood-oxygen changes in the brain. Some consumer headbands now combine it with EEG. **Emerging.**
 
+**Faceted curve**: A curved form approximated by many flat panels, so standard materials and glazing can be used. See [Beyond the Box](/docs/design/organic-forms-and-materials).
+
 **Frontier**: The fourth horizon: ideas that are still research questions or hypotheses (TRL 1–3). Light City studies them openly and never depends on them. See [Technology Horizon](/docs/technical/technology-horizon#frontier--study-openly-never-depend-on).
+
+**Funicular shell**: A curved structure shaped so it carries load in pure compression, like an arch or eggshell, allowing very thin sections and much less concrete. **Scaling.** See [Beyond the Box](/docs/design/organic-forms-and-materials).
 
 ## G
 
 **Gate**: The pass/fail criteria for moving from one stage to the next.
 
 **Glulam**: Glued laminated timber: wood layers glued into beams and columns. Used alongside CLT in mass timber buildings.
+
+**Gridshell**: A roof or shell made of thin timber laths laid flat as a grid, bent into a double curve and locked in place. Spans large spaces with little material. **Proven.** See [Beyond the Box](/docs/design/organic-forms-and-materials).
 
 **Ground-source heat pump**: A heat pump that exchanges heat with the stable temperature of the ground through buried pipes. **Proven** and usable almost anywhere. Not the same as enhanced geothermal.
 
@@ -109,6 +115,8 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **MWh / GWh**: Megawatt-hours and gigawatt-hours: amounts of stored or used energy. Phase 1 plans 8–20 MWh of storage.
 
+**Moisture buffering**: A wall finish's ability to absorb and release humidity, smoothing indoor humidity swings. Clay plaster is especially good at it. See [Beyond the Box](/docs/design/organic-forms-and-materials).
+
 **Mycelium materials**: Insulation, acoustic panels and packaging grown from fungal roots (mycelium) bonded to agricultural waste. **Emerging.**
 
 ## P
@@ -146,6 +154,8 @@ Plain-language definitions of the terms used across the Light City library. Tech
 **Solid-state battery**: A battery with a solid electrolyte instead of a liquid one, promising higher energy density and safety. Still pilot-scale in 2026. **Emerging**, aimed first at vehicles. See [Technology Horizon](/docs/technical/technology-horizon#emerging--leave-room-for-it-adopt-in-phase-2).
 
 **Spire (Light Spire)**: The central tower, 60–120 m in Phase 1, crowned by a solar canopy. It serves as the city's landmark, energy collector and gathering place.
+
+**Superadobe (earthbag)**: Building with long bags filled with moist earth, coiled into domes and vaults. Developed by Nader Khalili at Cal-Earth. Low cost and suited to self-build. **Proven**, though permits vary. See [Beyond the Box](/docs/design/organic-forms-and-materials).
 
 **Stage (S1–S6)**: A step in the project process: Foundation, Design, Digital, Community, Physical, Operations. Stage 5 builds Phase 1.
 

@@ -27,6 +27,7 @@ const sidebars: SidebarsConfig = {
       label: '3 · The City',
       items: [
         'design/architecture',
+        'design/organic-forms-and-materials',
         'concepts/communospheres',
         'concepts/sacred-geometry',
         'design/visual-language',

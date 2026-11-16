@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import Site, {Section, Cards, DocLinks, Cta, Feature, Jump} from '../components/Site';
 
 export default function City(): JSX.Element {
@@ -15,6 +16,7 @@ export default function City(): JSX.Element {
           {href: '#rings', label: 'The rings'},
           {href: '#structures', label: 'Key structures'},
           {href: '#phases', label: 'Growth by phase'},
+          {href: '#beyond-the-box', label: 'Beyond the box'},
           {href: '#language', label: 'Design language'},
         ]} />
         <div className="pg-facts">
@@ -116,7 +118,38 @@ export default function City(): JSX.Element {
         </div>
       </Section>
 
-      <Section id="language" eyebrow="Design language" title="Four rules shape every building.">
+      <Section id="beyond-the-box" eyebrow="Beyond the box" title="Curved, healthy and affordable." lead="High-tech design, low-tech materials: computers find efficient curved shapes, then we build them from earth, timber, bamboo and lime that residents can handle. Curves use less material, hold heat better and are rated more beautiful in brain-imaging studies.">
+        <Feature
+          img="form-printed-earth"
+          alt="A cluster of 3D-printed earth dwellings with green roofs and a printer finishing a fourth dome"
+          kicker="Tiny homes"
+          title="Earth homes from local soil"
+          tag="Proven to Emerging"
+          specs={[['Earthbag materials', '$5–15 per sq ft'], ['Printed earth', 'Local soil and rice husk'], ['Printer', '~€132–160k, reusable'], ['Best climate', 'Dry to mild first']]}>
+          <p>Tiny-home clusters can be built from superadobe (earth-filled bags coiled into domes) or printed from raw earth, as in the TECLA prototype in Italy. Residents can help build, and that work can count toward contribution-based residency.</p>
+          <p>Earth walls breathe, store heat and contain no synthetic finishes. Durability in wet or freezing climates still needs proof, so we test before we commit.</p>
+        </Feature>
+        <Feature
+          reverse
+          img="form-gridshell"
+          alt="Community studio under a sweeping timber gridshell roof"
+          kicker="Studios, domes, greenhouses"
+          title="Timber gridshells"
+          tag="Proven"
+          specs={[['Structure', 'Thin bent wood laths'], ['Material', 'Optimized designs ~26% less'], ['Weight', '~40% of a comparable glass-steel roof'], ['Cost driver', 'Skilled erection labor']]}>
+          <p>Thin wooden laths are laid flat, bent into a double curve and locked in place. They span large rooms with little wood, which suits studios, market halls, greenhouses and the communosphere roofs.</p>
+        </Feature>
+        <div style={{marginTop: '3rem'}} />
+        <Cards items={[
+          {title: 'Clay plaster everywhere', kicker: 'Healthy interiors', img: 'form-earth-dome', text: 'Holds indoor humidity steady and removes ozone. The cheapest health upgrade, and it works on curves and in existing homes.'},
+          {title: 'Thin shells', kicker: 'Canopies & floors', img: 'form-thin-shell', text: 'Arched shells carry load in compression, using over 70% less concrete and allowing earth or recycled mixes.'},
+          {title: 'Curved shell, efficient core', kicker: 'Practical', text: 'Kitchens, baths and storage stay straight inside curved rooms, so standard fittings still work and costs stay down.'},
+          {title: 'Bio-resonance as research', kicker: 'Frontier', text: 'We will compare matched curved and boxy rooms for sleep, stress and acoustics with university partners, and publish results either way.'},
+        ]} />
+        <p style={{marginTop: '1.5rem'}}><Link to="/docs/design/organic-forms-and-materials">Read Beyond the Box in the library: methods, costs, evidence and trade-offs →</Link></p>
+      </Section>
+
+      <Section alt id="language" eyebrow="Design language" title="Four rules shape every building.">
         <Cards items={[
           {title: 'Sacred geometry', kicker: 'Proportion', text: 'Circles, spirals and the golden ratio set the plan, room proportions and facade rhythms, giving the city a coherent, calming order.'},
           {title: 'Biophilic design', kicker: 'Nature', text: 'Daylight, planting, natural materials and views to green in every space. Proven to lower stress and improve wellbeing.'},
@@ -125,10 +158,11 @@ export default function City(): JSX.Element {
         ]} />
       </Section>
 
-      <Section alt eyebrow="Go deeper" title="The city in the library.">
+      <Section eyebrow="Go deeper" title="The city in the library.">
         <DocLinks items={[
           {to: '/docs/design/architecture', tag: 'City', title: 'Architecture', text: 'Ring layout, building types and construction approach.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'Dome neighborhoods in detail.'},
+          {to: '/docs/design/organic-forms-and-materials', tag: 'Design', title: 'Beyond the box', text: 'Curved forms and healthy, low-cost materials.'},
           {to: '/docs/at-a-glance', tag: 'Facts', title: 'At a glance', text: 'Every key number for each phase.'},
           {to: '/docs/concepts/sacred-geometry', tag: 'Design', title: 'Sacred geometry', text: 'The proportions behind the plan.'},
         ]} />

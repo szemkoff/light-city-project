@@ -24,6 +24,7 @@ Every document in the library, in the same order as the sidebar. New readers sho
 
 ## 3. The City: design
 - [Architecture](/docs/design/architecture): spire, domes and rings, from archetype to Earth build, plus the budget
+- [Beyond the Box: Organic Forms & Healthy Materials](/docs/design/organic-forms-and-materials): curved, low-cost, healthy building methods with costs and readiness
 - [Communospheres](/docs/concepts/communospheres): the dome neighborhoods
 - [Sacred Geometry](/docs/concepts/sacred-geometry): proportions behind the plan
 - [Visual Language](/docs/design/visual-language): forms, symbols and design tokens
