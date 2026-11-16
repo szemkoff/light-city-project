@@ -14,13 +14,7 @@ Sacred geometry is the study of geometric forms and their metaphysical meanings,
 
 ### Visual Inspiration
 
-The original visionary images show these principles (visionary archetype art, not a real place or a design):
-
-![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
-
-![Delphin aerial view, archetype art](/img/inspiration/delphin-aerial-view-1.png)
-
-Both show circular, concentric patterns around a central point. The Phase 1 plan keeps that idea in a buildable form: five rings around a plaza and spire.
+The original visionary images in [Architecture → Vision references](/docs/design/architecture#vision-references) show these principles. They show circular, concentric patterns around a central point. The Phase 1 plan keeps that idea in a buildable form: five rings around a plaza and spire.
 
 ---
 

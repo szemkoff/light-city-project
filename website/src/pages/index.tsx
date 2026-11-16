@@ -219,7 +219,7 @@ export default function Home(): JSX.Element {
       <section className="living" id="living">
         <div className="wrap living-grid">
           <figure className="living-art">
-            <img src={img('living')} alt="Residents in everyday clothes walk a garden path between curved timber homes with green roofs and a glass dome in morning light" width="1400" height="933" loading="lazy" />
+            <img src={img('living')} alt="Residents of many ages and backgrounds in varied natural clothing walk a garden path between curved timber homes with green roofs and a glass dome in morning light" width="1400" height="933" loading="lazy" />
           </figure>
           <div>
             <p className="eyebrow">05 — Living</p>

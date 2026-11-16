@@ -2,9 +2,9 @@
 
 *How Light City looks in photos, diagrams, type and icons: Modern Organic, a blend of nature and technology*
 
-![Light City at dusk: curved timber domes, gardens, people in natural fabrics and a slender spire](/img/home/hero.webp)
+![Homes and gardens of Light City: curved timber homes with green roofs, paths and wild planting](/img/home/homes-overview.webp)
 
-*Modern Organic: curved timber, glass and earth, living plants, warm light and people in natural fabrics.*
+*Modern Organic: curved timber, glass and earth, green roofs and wild land, people of many backgrounds in varied, natural clothing.*
 
 ## Purpose
 
@@ -22,17 +22,16 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 
 Use this style note at the end of every image prompt:
 
-> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm shielded lighting, local stone, and only occasionally a single vertical quartz point on a pedestal. People in ordinary, varied everyday clothing of many colors. Mixed daylight and weather, not always sunset. Realistic documentary photo of a place that could be built today. No text or logos. Avoid medieval, rustic cabins and fantasy.
+> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm shielded lighting, local stone, and only occasionally a single vertical quartz point on a pedestal. People of many ethnicities, ages and body types in varied, natural clothing: linen and cotton trousers, skirts and dresses, tunics, knitwear, shawls and work wear in earthy tones with warm accents, almost no denim. Mixed daylight and weather, not always sunset. Realistic documentary photo of a place that could be built today. No text or logos. Avoid medieval, rustic cabins and fantasy.
 
 - **Scale.** Domes 30–45 m across, 3–5 levels; the spire is slender, not a skyscraper.
-- **People.** Diverse ages and backgrounds, doing ordinary things: cooking, working, building, resting.
+- **People.** Diverse ages, ethnicities, body types and personal styles, doing ordinary things: cooking, working, building, resting.
+- **Clothing.** Varied and organic-looking, never a uniform look: natural fibres, many cuts (trousers, skirts, dresses, tunics, overalls, knitwear), earthy colors with some warmth. Avoid a crowd in jeans, and avoid costumes, robes or matching outfits.
 - **Technology.** Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.
 - **Reality check.** Before an image goes in, ask: could this be photographed in a real eco-village next year? No open fire indoors, no glowing ground lights or rows of candles, no uplit domes, handrails at every drop, bird-safe patterned glass on large glazing, plants at a believable size, wild land around the buildings rather than lawns. Crystals are occasional, at most one point in a scene, and most images have none.
 - **Formats.** 16:9 for heroes, 4:3 for cards, 1:1 for tiles. Export as WebP or JPG at about 1,400–2,000 px wide.
 
-![Earth dome and printed-earth homes](/img/home/form-earth-dome.webp)
-
-*Earth domes and printed-earth homes: low-cost forms that belong in the image library alongside timber domes.*
+Earth domes and printed-earth homes belong in the image library alongside timber domes; examples are in [Beyond the Box](/docs/design/organic-forms-and-materials).
 
 ## Diagrams
 
@@ -46,9 +45,7 @@ All diagrams in the library follow these rules:
 - **One idea per diagram.** If a diagram needs a paragraph to explain, split it.
 - **Geometry diagrams** pair the figure with two panels: "Traditional meaning" and "How Light City uses it."
 
-![Light City plan: five rings around the spire and plaza](/img/diagrams/city-layout.svg)
-
-*Example: numbered rings, a short legend and plain-language labels.*
+A good example is the city plan in [Architecture → Circular form](/docs/design/architecture#circular-form): numbered rings, a short legend and plain-language labels.
 
 ## Typography
 
@@ -71,13 +68,7 @@ All diagrams in the library follow these rules:
 - Circle, vesica piscis, Flower of Life, golden ratio, Platonic solids, star tetrahedron (Merkaba), Metatron's Cube, Sri Yantra.
 - Geometry guides proportion, plans and ornament. We do not claim physical effects from shapes.
 
-![Golden ratio](/img/diagrams/golden-ratio-spiral.svg)
-
-*The golden ratio: a proportion guide for rooms, windows and ring spacing, used as one tool among many.*
-
-![Star tetrahedron (Merkaba)](/img/diagrams/merkaba.svg)
-
-*The star tetrahedron: a motif for the spire crown, pavilion screens and lattice nodes.*
+- The golden ratio is a proportion guide for rooms, windows and ring spacing; the star tetrahedron is a motif for the spire crown, screens and lattice nodes. The diagrams are in [Sacred Geometry](/docs/concepts/sacred-geometry).
 
 ## Accessibility
 

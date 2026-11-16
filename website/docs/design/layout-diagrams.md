@@ -4,27 +4,16 @@
 
 ## Completed Diagrams
 
-### City Layout (Top-Down)
+Each diagram is shown once, on the page that explains it. This list points to it.
 
-![City Layout](/img/diagrams/city-layout.svg)
-
-*Five rings and 12 radial paths around the spire and plaza; three communosphere domes in Phase 1.*
-
-### Energy Flow System
-
-![Energy Flow](/img/diagrams/energy-flow-detailed.svg)
-
-*Phase 1 solar microgrid: make, store and steer, use. Proven technology only (TRL 8–9).*
-
-### Sacred Geometry Foundations
-
-![Vesica Piscis](/img/diagrams/vesica-piscis.svg)
-
-*The Vesica Piscis: the geometry of the pointed arch, used for doorways and gates.*
-
-![Metatron's Cube](/img/diagrams/metatrons-cube.svg)
-
-*Metatron's Cube: a study grid for gridshell node layouts and floor inlays.*
+| Diagram | What it shows | Where it lives |
+|---|---|---|
+| City layout (top-down) | Five rings and 12 radial paths around the spire and plaza; three domes in Phase 1 | [Architecture → Circular form](/docs/design/architecture#circular-form) |
+| Energy flow | Phase 1 solar microgrid: make, store and steer, use (TRL 8–9) | [Energy Systems](/docs/concepts/energy-systems#architecture) |
+| Development roadmap | The six stages from foundation to operations | [Development Stages](/docs/project/development-stages) |
+| Sacred geometry set | Vesica piscis, Flower of Life, Platonic solids, golden ratio, Merkaba, Metatron's Cube | [Sacred Geometry](/docs/concepts/sacred-geometry) |
+| Color palette | Core and nature colors with their uses | [Color and Light](/docs/design/color-and-light) |
+| Icon set | Stroke icons for city elements | [Visual Language](/docs/design/visual-language#iconography) |
 
 ## Required Diagram Set (Stage 1)
 - City Plan (Top-Down): Concentric rings, radial spokes, ~12 communospheres

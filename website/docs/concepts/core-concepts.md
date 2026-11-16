@@ -22,10 +22,7 @@ This is a **conceptual primer**. Take metaphysical language as **design intent**
 A 200-resident pilot hamlet of three timber-and-glass domes around a 60–120 m solar spire, built in Stage 5 (Dec 2028 – Nov 2031) for about $45M, then growing into a 1,500-person village and an 8,000+ person town. Every number lives on [At a Glance](/docs/at-a-glance). How people journey from today's life into this future is described in [The Transition](/docs/concepts/the-transition).
 :::
 
-Your original Light City visions that sparked this project:
-
-![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
-![Light City Vision 2](/img/inspiration/light-city-vision-2.jpg)
+The original visions that sparked this project are shown once, in [Architecture → Vision references](/docs/design/architecture#vision-references).
 
 ---
 

@@ -27,6 +27,10 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **Bankable**: Proven enough that lenders and insurers will finance it on normal terms. Light City buys **Scaling** technologies only once they become bankable.
 
+**Biodiversity net gain (BNG)**: Leaving the habitat of a site measurably better than before development, scored with a recognised metric. England has required at least 10% for most new development since February 2024, secured for 30 years. Light City aims for at least 20%. See [Light on the Land](/docs/design/light-on-the-land).
+
+**Bird-safe glass**: Glass with a visible pattern (fritting, etching or UV markings) spaced no more than about 2 by 4 inches apart, so birds see it as a barrier. **Proven.**
+
 **BIPV**: Building-integrated photovoltaics. Solar cells built into glazing, roofs or façades.
 
 ## C
@@ -43,13 +47,19 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 ## D
 
+**DarkSky lighting**: Outdoor lighting that is shielded, aimed down, warm in color (3000 K or warmer) and dimmed or switched off when not needed, following DarkSky International. **Proven.**
+
 **Delphin**: The channeled source of much of the original Light City vision. See [Philosophy](/docs/concepts/philosophy).
+
+**Dry-stone walling**: Building walls from stones fitted together without mortar. A UNESCO-listed craft found from Ireland to Cyprus and the Azores. See [Beyond the Box](/docs/design/organic-forms-and-materials).
 
 **Digital twin**: A live digital model of the city. It is used first for design and community previews (Stage 3), then to operate buildings and energy efficiently.
 
 ## E
 
 **Earth build**: What we will physically construct, using standard engineering, permitting and safety practices.
+
+**Embodied carbon**: The greenhouse gases released to make, transport and build with a material, before a building is used. Local stone, earth and timber are low; cement, steel and glass are high.
 
 **EEG**: Electroencephalography: measuring the brain's electrical activity through sensors on the scalp. Consumer EEG headbands are **Emerging** tools for practice and research.
 

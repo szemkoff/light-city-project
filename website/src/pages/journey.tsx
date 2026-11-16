@@ -9,7 +9,7 @@ export default function Journey(): JSX.Element {
       eyebrow="The transition"
       heading={<>From one person's attention <em>to a city of light.</em></>}
       sub="The transition happens in five movements. Each one is worthwhile on its own, each is voluntary, and each has a clear way to take part today."
-      image="journey-radiating">
+      image="journey-path">
       <Section>
         <Jump items={[
           {href: '#awakening', label: '1 · Awakening'},
@@ -38,7 +38,7 @@ export default function Journey(): JSX.Element {
           reverse
           id="gathering"
           img="journey-gathering"
-          alt="A circle of people in everyday clothes around an outdoor stone fire pit beside a modern retreat pavilion at dusk"
+          alt="A diverse circle of people in varied natural clothing around an outdoor stone fire pit beside a modern retreat pavilion at dusk"
           kicker="Movement 2 · 2027 – 2028 · Stage 4"
           title="Gathering"
           tag="From me to we"

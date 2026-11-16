@@ -36,8 +36,8 @@ export default function Residents(): JSX.Element {
       <Section eyebrow="Contribution-based residency" title="Contribute your skills, offset your living costs." lead="Work-for-living tiers align resident time and talent with what the community needs. A pilot is planned for 2027–2028.">
         <Cards items={[
           {title: 'Grow', img: 'tech-vertical-farm', text: 'Food systems, agroforestry and aquaponics that feed the community.'},
-          {title: 'Build & maintain', img: 'tech-clt-construction', text: 'Construction, energy systems and day-to-day care of shared infrastructure.'},
-          {title: 'Hold space', img: 'vision-2', text: 'Education, wellness, hospitality and the ceremonies that bind a community.'},
+          {title: 'Build & maintain', img: 'form-superadobe', text: 'Construction, energy systems and day-to-day care of shared infrastructure.'},
+          {title: 'Hold space', img: 'dome-interior', text: 'Education, wellness, hospitality and the ceremonies that bind a community.'},
         ]} />
       </Section>
 

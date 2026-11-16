@@ -26,11 +26,7 @@ How a Phase 1 communosphere could look: a timber gridshell dome with terraced ho
 
 ![Inside a timber dome: terraced homes around a planted atrium](/img/home/city-dome-cutaway.webp)
 
-The original visionary images that inspired the idea (visionary archetype art, not a real place or a design.):
-
-![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
-
-![Delphin aerial view, archetype art](/img/inspiration/delphin-aerial-view-1.png)
+The original visionary images that inspired the idea are collected in [Architecture → Vision references](/docs/design/architecture#vision-references).
 
 ---
 
@@ -212,7 +208,7 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 
 **Architecture**:
 - Geodesic dome or sphere structure
-- Crystal or crystalline material integration
+- Timber, glass and local stone; an occasional natural quartz point placed as an accent, never as structure
 - Semi-transparent to allow light
 - Beautiful, inspiring design
 

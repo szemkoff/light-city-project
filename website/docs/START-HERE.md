@@ -22,7 +22,7 @@ Read it in order, or jump to the part you care about. Each part leads naturally 
 |---|---|---|
 | **1. Why** | Why build Light City, and what is it for? | [Core Concepts](/docs/concepts/core-concepts) → [Philosophy](/docs/concepts/philosophy) → [Purpose & Mission](/docs/concepts/purpose-and-mission) |
 | **2. The Transition** | How do we get from today's life to that future? | [The Transition](/docs/concepts/the-transition) |
-| **3. The City** | What will it look and feel like? | [Architecture](/docs/design/architecture) → [Communospheres](/docs/concepts/communospheres) → [Sacred Geometry](/docs/concepts/sacred-geometry) |
+| **3. The City** | What will it look and feel like? | [Architecture](/docs/design/architecture) → [Beyond the Box](/docs/design/organic-forms-and-materials) → [Light on the Land](/docs/design/light-on-the-land) → [Communospheres](/docs/concepts/communospheres) |
 | **4. Technology** | What makes it work, and what is real today? | [Technology Horizon](/docs/technical/technology-horizon) → [Energy Systems](/docs/concepts/energy-systems) → [Technology Catalog](/docs/technical/technology-catalog) |
 | **5. Living Together** | How will people live, decide and contribute? | [Governance](/docs/project/governance) → [Contribution-Based Residency](/docs/project/contribution-based-residency) |
 | **6. Roadmap** | When will it happen, and what will it cost? | [Development Stages](/docs/project/development-stages) |
@@ -38,7 +38,7 @@ The key facts — scale, costs, homes, timeline — are on one page: **[Light Ci
 
 **Investor or partner.** Read [At a Glance](/docs/at-a-glance), then [Development Stages](/docs/project/development-stages) (financial model) and [Technology Horizon](/docs/technical/technology-horizon), and finish on the [Investors page](/investors).
 
-**Architect, engineer or builder.** Start with [Architecture](/docs/design/architecture), then [Technology Catalog](/docs/technical/technology-catalog), [Energy Systems](/docs/concepts/energy-systems) and the [Urban Retrofit Guide](/docs/technical/urban-retrofit-guide).
+**Architect, engineer or builder.** Start with [Architecture](/docs/design/architecture), [Beyond the Box](/docs/design/organic-forms-and-materials) and [Light on the Land](/docs/design/light-on-the-land), then [Technology Catalog](/docs/technical/technology-catalog), [Energy Systems](/docs/concepts/energy-systems) and the [Urban Retrofit Guide](/docs/technical/urban-retrofit-guide).
 
 **Researcher.** Begin with [Open Questions](/docs/research/open-questions), then [Bibliography](/docs/research/bibliography), and finish with the frontier section of [Technology Horizon](/docs/technical/technology-horizon#frontier--study-openly-never-depend-on).
 
@@ -51,13 +51,14 @@ Light City began as a vision received through inspired and channeled sources. We
 1. **Archetype vs. Earth build.** Pages say whether they describe the visionary archetype or what we will actually construct.
 2. **Four horizons.** Every technology is tagged **Proven, Scaling, Emerging or Frontier** ([Technology Horizon](/docs/technical/technology-horizon)). We build with what is proven, design for what is scaling and study what is frontier.
 3. **One set of numbers.** Every figure matches [At a Glance](/docs/at-a-glance).
+4. **Show each image once.** Every photo and diagram lives on one page; other pages link to it.
 
 ## Where we are now
 
 | | |
 |---|---|
 | **Current stage** | S1 Foundation, finishing (Oct 2025 – Dec 2026) |
-| **Done** | Vision and philosophy, architecture concept, financial model, governance and residency frameworks, technology research, a new public website and this library |
+| **Done** | Vision and philosophy, architecture concept, financial model, governance and residency frameworks, technology research, five candidate site regions, location-specific materials, nature commitments, a new public website and this library |
 | **Finishing in Stage 1** | Research agenda, partner outreach, founding-circle interest list |
 | **Next** | S2 Design (Jan – Jun 2027): site selection, structural feasibility of the spire, design development |
 | **First residents** | Targeted for 2031, at the end of Stage 5 |

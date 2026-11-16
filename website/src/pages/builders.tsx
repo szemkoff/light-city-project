@@ -9,7 +9,7 @@ export default function Builders(): JSX.Element {
       eyebrow="For builders"
       heading={<>Built from <em>what already works.</em></>}
       sub="Phased construction, geodesic and mass-timber options, acoustic targets and a two-track energy story: a physical microgrid plus optional subtle-environment research."
-      image="dome-interior">
+      image="form-gridshell">
       <Section eyebrow="Systems" title="Every structure uses materials already standing elsewhere." lead="From Norway's 85.4 m Mjøstårnet timber tower to commercial geodesic domes, each system carries a technology readiness level (TRL).">
         <Cards items={[
           {kicker: 'Structure · TRL 7–9', title: 'Communosphere domes', img: 'tech-geodesic-dome', text: '30–90 m domes in cross-laminated timber and solar glass. Geometry that is both beautiful and proven.'},
