@@ -31,7 +31,7 @@ export default function Homes(): JSX.Element {
       </Section>
 
       <Section alt id="types" eyebrow="Home types" title="Choose the scale of private life you need.">
-        <Feature
+        <Feature to="/docs/at-a-glance#homes-monthly-all-inclusive" id="tiny"
           img="home-tiny"
           alt="Four curved-timber tiny homes with green roofs and large windows around a courtyard garden with stone seating and planted beds, a glass dome behind"
           kicker="Tiny home · 200–300 sf"
@@ -44,7 +44,7 @@ export default function Homes(): JSX.Element {
             <li><strong>Built with:</strong> prefabricated CLT panels, a planted roof and a heat pump, or as an <a href="#earth">earth tiny home</a></li>
           </ul>
         </Feature>
-        <Feature
+        <Feature to="/docs/at-a-glance#homes-monthly-all-inclusive" id="studio"
           reverse
           img="home-studio"
           alt="Modern studio with curved timber walls, a bed niche, a glass pendant light and a window over the dome atrium"
@@ -58,7 +58,7 @@ export default function Homes(): JSX.Element {
             <li><strong>Includes:</strong> private bath, kitchenette and access to the dome's shared kitchen</li>
           </ul>
         </Feature>
-        <Feature
+        <Feature to="/docs/at-a-glance#homes-monthly-all-inclusive" id="one-bedroom"
           img="home-1br"
           alt="Modern one-bedroom with a stone counter, built-in shelves and glass walls onto a dome garden"
           kicker="1-bedroom · 600–800 sf"
@@ -71,7 +71,7 @@ export default function Homes(): JSX.Element {
             <li><strong>Includes:</strong> full kitchen, private balcony and a workspace nook</li>
           </ul>
         </Feature>
-        <Feature
+        <Feature to="/docs/at-a-glance#homes-monthly-all-inclusive" id="two-bedroom"
           reverse
           img="home-2br"
           alt="Curved timber family homes with green roofs along a car-free lane with e-bikes, cyclists and neighbors on benches, a spire and dome beyond"
@@ -89,7 +89,7 @@ export default function Homes(): JSX.Element {
 
 
       <Section id="earth" eyebrow="Beyond the box" title="Earth tiny homes: built from the ground they stand on." lead="An option for the tiny-home clusters: small curved homes of earthbag (superadobe) or 3D-printed local soil, finished in clay plaster. Lower cost, healthier air and a quiet, rounded shape.">
-        <Feature
+        <Feature to="/docs/design/organic-forms-and-materials#notes-on-the-strongest-options"
           img="form-superadobe"
           alt="A cluster of small superadobe earth domes with sand-colored clay plaster, round windows and planted roofs around a courtyard garden with a small outdoor fire pit"
           kicker="Earth option · tiny home"
@@ -101,7 +101,7 @@ export default function Homes(): JSX.Element {
             <li><strong>3D-printed earth:</strong> TECLA in Italy was printed from local soil by two coordinated printers (<a href="https://www.3dwasp.com/en/3d-printed-house-tecla/">WASP</a>), a model for a printed cluster.</li>
           </ul>
         </Feature>
-        <Feature
+        <Feature to="/docs/design/organic-forms-and-materials#an-accessibility-ladder"
           reverse
           img="form-earth-dome"
           alt="Inside an earth dome: smooth clay-plastered walls, a skylight oculus, a built-in bench and a low wooden tea table where people sit together"
@@ -145,10 +145,10 @@ export default function Homes(): JSX.Element {
 
       <Section id="shared" eyebrow="Shared spaces" title="Your home is the smallest room in the city." lead="Private homes stay modest because the shared spaces are generous. Everything here is within a ten-minute walk.">
         <Cards items={[
-          {title: 'Dome kitchens & long tables', img: 'journey-flourishing', kicker: 'Every communosphere', text: 'A shared kitchen and dining hall on each dome floor, for communal meals several times a week and private dinners whenever you like.'},
-          {title: 'Greenhouses & food forest', img: 'city-greenhouse', kicker: 'Outer ring', text: 'Year-round solar greenhouses, orchards and layered food forests. Residents can garden as much or as little as they like.'},
-          {title: 'Maker studios', img: 'city-studios', kicker: 'Middle ring', text: 'Woodshop, ceramics, textiles and digital fabrication, open to every resident with training and booking.'},
-          {title: 'Temple & plaza', img: 'city-temple', kicker: 'Inner ring', text: 'A non-denominational temple, quiet rooms and the central plaza for festivals, markets and morning practice.'},
+          {to: '/docs/concepts/communospheres#daily-life-in-a-communosphere', title: 'Dome kitchens & long tables', img: 'journey-flourishing', kicker: 'Every communosphere', text: 'A shared kitchen and dining hall on each dome floor, for communal meals several times a week and private dinners whenever you like.'},
+          {to: '/docs/design/architecture#6-gardens-and-nature-spaces', title: 'Greenhouses & food forest', img: 'city-greenhouse', kicker: 'Outer ring', text: 'Year-round solar greenhouses, orchards and layered food forests. Residents can garden as much or as little as they like.'},
+          {to: '/docs/design/architecture#5-creative-studios', title: 'Maker studios', img: 'city-studios', kicker: 'Middle ring', text: 'Woodshop, ceramics, textiles and digital fabrication, open to every resident with training and booking.'},
+          {to: '/docs/design/architecture#1-the-central-plaza', title: 'Temple & plaza', img: 'city-temple', kicker: 'Inner ring', text: 'A non-denominational temple, quiet rooms and the central plaza for festivals, markets and morning practice.'},
         ]} />
       </Section>
 

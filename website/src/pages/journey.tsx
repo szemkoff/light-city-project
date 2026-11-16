@@ -23,7 +23,7 @@ export default function Journey(): JSX.Element {
       </Section>
 
       <Section alt eyebrow="Five movements" title="Inner shift and outer form, together.">
-        <Feature
+        <Feature to="/docs/concepts/the-transition#1-awakening--attention-as-the-first-technology"
           id="awakening"
           img="journey-awakening"
           alt="A person in a cotton knit reflecting by a city apartment window at dawn, a cup of tea and a notebook beside her"
@@ -34,7 +34,7 @@ export default function Journey(): JSX.Element {
           <p>Every transition begins with a person who notices their own mind: meditation, breathwork, time in nature and honest reflection. Research on mindfulness programs shows solid, modest benefits. That is enough to justify a practice culture, and we never present it as a miracle cure.</p>
           <p><strong>Take part now:</strong> explore the open library, try a simple daily practice and join the founding circle mailing list.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/concepts/the-transition#2-gathering--practicing-together"
           reverse
           id="gathering"
           img="journey-gathering"
@@ -46,7 +46,7 @@ export default function Journey(): JSX.Element {
           <p>About half of intentional communities collapse within two years. The survivors share a common vision and a working way to resolve conflict. So Light City rehearses governance before pouring concrete: seasonal retreats, contribution-based residency pilots and real decisions made together.</p>
           <p><strong>Take part:</strong> attend a retreat, join the residency pilot or help facilitate circles.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/concepts/the-transition#3-founding--from-ideals-to-daily-life"
           id="founding"
           img="journey-founding"
           alt="Construction of a timber gridshell dome with a crane, a robotic arm and residents planting trees"
@@ -57,7 +57,7 @@ export default function Journey(): JSX.Element {
           <p>The Pilot Hamlet is built and the first residents move in as buildings open. This is where many communities lose their founding spirit, so organization grows carefully and residents help shape interiors, gardens and rituals.</p>
           <p><strong>Take part:</strong> invest, build, reserve a home or join a volunteer build season.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/concepts/the-transition#4-flourishing--a-regenerative-culture"
           reverse
           id="flourishing"
           img="journey-flourishing"
@@ -69,7 +69,7 @@ export default function Journey(): JSX.Element {
           <p>With housing, food and energy shared, people spend more of their life energy on creativity, care, learning and service. This is the heart of the vision: a culture where consciousness and contribution grow together.</p>
           <p><strong>Take part:</strong> live here, teach, study or visit as a researcher.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/concepts/the-transition#5-radiating--from-one-place-to-a-pattern"
           id="radiating"
           img="journey-radiating"
           alt="A mature modern organic town of domes and green roofs with a slender spire at sunset"
@@ -84,12 +84,12 @@ export default function Journey(): JSX.Element {
 
       <Section id="principles" eyebrow="Principles" title="What keeps the transition humane.">
         <Cards items={[
-          {title: 'Voluntary at every step', kicker: '1', text: 'No one is pressured to move to the next movement. Leaving is always respected.'},
-          {title: 'Each step stands alone', kicker: '2', text: 'The library, a practice circle and a retreat are worthwhile even if a city is never built.'},
-          {title: 'Evidence before promises', kicker: '3', text: 'Claims about health or consciousness follow the research, never the reverse.'},
-          {title: 'No single guru', kicker: '4', text: 'Inspiration comes from many sources; authority sits with transparent governance.'},
-          {title: 'Reversible and adaptive', kicker: '5', text: 'Every stage has a gate. If it is not met, we pause, learn and adjust.'},
-          {title: 'Beauty and care', kicker: '6', text: 'Sacred geometry, light and nature make daily life better, whether or not deeper hypotheses are confirmed.'},
+          {to: '/docs/project/contribution-based-residency#1-voluntary-participation', title: 'Voluntary at every step', kicker: '1', text: 'No one is pressured to move to the next movement. Leaving is always respected.'},
+          {to: '/docs/concepts/the-transition#principles-that-keep-the-transition-humane', title: 'Each step stands alone', kicker: '2', text: 'The library, a practice circle and a retreat are worthwhile even if a city is never built.'},
+          {to: '/docs/research/open-questions#research-principles', title: 'Evidence before promises', kicker: '3', text: 'Claims about health or consciousness follow the research, never the reverse.'},
+          {to: '/docs/project/governance#governance-principles', title: 'No single guru', kicker: '4', text: 'Inspiration comes from many sources; authority sits with transparent governance.'},
+          {to: '/docs/concepts/the-transition#principles-that-keep-the-transition-humane', title: 'Reversible and adaptive', kicker: '5', text: 'Every stage has a gate. If it is not met, we pause, learn and adjust.'},
+          {to: '/docs/design/visual-language', title: 'Beauty and care', kicker: '6', text: 'Sacred geometry, light and nature make daily life better, whether or not deeper hypotheses are confirmed.'},
         ]} />
       </Section>
 

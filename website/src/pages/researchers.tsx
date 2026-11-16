@@ -12,10 +12,10 @@ export default function Researchers(): JSX.Element {
       image="tech-aquaponics-system">
       <Section eyebrow="Research programs" title="Four programs, one standard of evidence.">
         <Cards items={[
-          {kicker: 'TRL 1–3', title: 'Consciousness field studies', img: 'research', text: 'HRV, EEG and heart-brain coherence across groups, with pre-registered protocols.'},
-          {kicker: 'TRL 2–4', title: 'Acoustic resonance', img: 'city-temple', text: 'RT60, SPL and listener studies inside the spire and domes.'},
-          {kicker: 'TRL 5–7', title: 'Biophilic health', img: 'home-studio', text: 'Stress markers, sleep quality and cognitive performance in biophilic spaces.'},
-          {kicker: 'TRL 7–9', title: 'Regenerative agriculture', img: 'tech-agroforestry', text: 'Soil carbon, biomass and lifecycle analysis across food systems.'},
+          {to: '/docs/research/open-questions#d-frontier-questions-study-openly-never-depend-on', kicker: 'TRL 1–3', title: 'Consciousness field studies', img: 'research', text: 'HRV, EEG and heart-brain coherence across groups, with pre-registered protocols.'},
+          {to: '/docs/concepts/energy-systems#resonanceacoustic-layer', kicker: 'TRL 2–4', title: 'Acoustic resonance', img: 'city-temple', text: 'RT60, SPL and listener studies inside the spire and domes.'},
+          {to: '/docs/research/open-questions#c-wellbeing-and-environment-answer-in-stages-56', kicker: 'TRL 5–7', title: 'Biophilic health', img: 'home-studio', text: 'Stress markers, sleep quality and cognitive performance in biophilic spaces.'},
+          {to: '/docs/technical/technology-catalog#3-agroforestry--food-forests', kicker: 'TRL 7–9', title: 'Regenerative agriculture', img: 'tech-agroforestry', text: 'Soil carbon, biomass and lifecycle analysis across food systems.'},
         ]} />
       </Section>
 

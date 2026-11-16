@@ -138,7 +138,7 @@ export function Cards({items}: {items: {title: string; text: React.ReactNode; im
               {c.kicker ? <p className="pg-kicker">{c.kicker}</p> : null}
               <h3>{c.title}</h3>
               <p>{c.text}</p>
-              {c.to ? <span className="pg-topic-go">Explore <span aria-hidden="true">→</span></span> : null}
+              {c.to ? <span className="pg-topic-go">{c.to.startsWith('/docs') ? 'Read more' : 'Explore'} <span aria-hidden="true">→</span></span> : null}
             </div>
           </>
         );
@@ -198,9 +198,9 @@ export function Cta({title, text, primary, secondary}: {
 
 /* ---------- detail blocks ---------- */
 
-export function Feature({img, alt, kicker, title, children, specs, tag, reverse, id}: {
+export function Feature({img, alt, kicker, title, children, specs, tag, reverse, id, to, more}: {
   img: string; alt: string; kicker?: string; title: string; children?: React.ReactNode;
-  specs?: [string, React.ReactNode][]; tag?: string; reverse?: boolean; id?: string;
+  specs?: [string, React.ReactNode][]; tag?: string; reverse?: boolean; id?: string; to?: string; more?: string;
 }): JSX.Element {
   const src = useBaseUrl(`img/home/${img}.webp`);
   return (
@@ -216,6 +216,7 @@ export function Feature({img, alt, kicker, title, children, specs, tag, reverse,
             {specs.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
           </dl>
         ) : null}
+        {to ? <Link className="pg-feature-more" to={to}>{more ?? 'Read more in the docs'} <span aria-hidden="true">→</span></Link> : null}
       </div>
     </article>
   );

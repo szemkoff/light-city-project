@@ -168,19 +168,19 @@ export default function Home(): JSX.Element {
             <p className="lead forms-lead">Curved shells carry load in compression, so they use less material, move air and light more freely and feel calmer inside. We build them from timber, earth and clay — low-tech where it can be, precise where it must be.</p>
           </div>
           <div className="forms-grid">
-            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials#the-toolbox')}>
               <img src={img('form-gridshell')} alt="A curved timber gridshell roof over a light-filled community hall" width="720" height="540" loading="lazy" />
               <span className="form-k">Domes · TRL 8–9</span><h3>Timber gridshell</h3><p>Bent lattices of thin timber: long spans, little material, warm light.</p>
             </a>
-            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials#notes-on-the-strongest-options')}>
               <img src={img('form-superadobe')} alt="A cluster of small superadobe earth domes with clay plaster, round windows and planted roofs around a courtyard fire circle" width="720" height="540" loading="lazy" />
               <span className="form-k">Homes · TRL 7–9</span><h3>Earthbag &amp; clay</h3><p>Superadobe domes of local soil with clay plaster that buffers humidity.</p>
             </a>
-            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials#an-accessibility-ladder')}>
               <img src={img('form-printed-earth')} alt="3D-printed earth homes with ribbed curved walls and green roofs along a garden path" width="720" height="540" loading="lazy" />
               <span className="form-k">Homes · TRL 6–7</span><h3>3D-printed earth</h3><p>Printers shape local soil into curved walls with almost no waste.</p>
             </a>
-            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials#the-toolbox')}>
               <img src={img('form-thin-shell')} alt="A thin concrete shell roof curving over an open-air gathering space" width="720" height="540" loading="lazy" />
               <span className="form-k">Pavilions · TRL 7–8</span><h3>Thin shells</h3><p>Funicular vaults a few centimeters thick for markets and gathering halls.</p>
             </a>
@@ -244,10 +244,10 @@ export default function Home(): JSX.Element {
             <p>All-inclusive: utilities, 10–15 communal meals a month, sauna, yoga, maintenance — and a vote in governance.</p>
           </div>
           <div className="home-list">
-            <div className="home"><span className="home-t">Tiny home</span><span className="home-s">200–300 sf</span><span className="home-p">$500–700<small>/mo</small></span></div>
-            <div className="home"><span className="home-t">Studio</span><span className="home-s">400–500 sf</span><span className="home-p">$700–950<small>/mo</small></span></div>
-            <div className="home"><span className="home-t">1-Bedroom</span><span className="home-s">600–800 sf</span><span className="home-p">$950–1,300<small>/mo</small></span></div>
-            <div className="home"><span className="home-t">2-Bedroom</span><span className="home-s">900–1,200 sf</span><span className="home-p">$1,300–1,700<small>/mo</small></span></div>
+            <a className="home" href={u('homes#tiny')}><span className="home-t">Tiny home</span><span className="home-s">200–300 sf</span><span className="home-p">$500–700<small>/mo</small></span></a>
+            <a className="home" href={u('homes#studio')}><span className="home-t">Studio</span><span className="home-s">400–500 sf</span><span className="home-p">$700–950<small>/mo</small></span></a>
+            <a className="home" href={u('homes#one-bedroom')}><span className="home-t">1-Bedroom</span><span className="home-s">600–800 sf</span><span className="home-p">$950–1,300<small>/mo</small></span></a>
+            <a className="home" href={u('homes#two-bedroom')}><span className="home-t">2-Bedroom</span><span className="home-s">900–1,200 sf</span><span className="home-p">$1,300–1,700<small>/mo</small></span></a>
           </div>
           <a className="link" href={u('homes')}>See every home type <span aria-hidden="true">→</span></a>
           <a className="link" href={u('docs/project/contribution-based-residency')}>How contribution-based residency works <span aria-hidden="true">→</span></a>

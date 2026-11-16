@@ -38,7 +38,7 @@ export default function City(): JSX.Element {
       </Section>
 
       <Section id="structures" eyebrow="Key structures" title="What gets built, and how ready it is." lead="Each structure shows its Technology Readiness Level (TRL): 9 means proven at scale, 1 means early research.">
-        <Feature
+        <Feature to="/docs/design/architecture#the-central-spire"
           img="spire"
           alt="Slender lattice spire rising above the central plaza"
           kicker="Central sanctum"
@@ -48,7 +48,7 @@ export default function City(): JSX.Element {
           <p>The spire is the city's orientation point: visible from every path by day, softly lit and shielded at night, and carrying building-integrated solar. Its first purpose is practical: a landmark, an observation deck, a communications mast and a solar collector.</p>
           <p>Tall timber-hybrid towers exist today, but a lattice spire of this height with integrated solar has not been built, so it will be engineered and reviewed in Stage 2. Phase 2 could extend it to 120–300 m.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/concepts/communospheres"
           reverse
           img="city-dome-cutaway"
           alt="Inside a timber gridshell dome: terraced apartments, a garden atrium and a sunken lounge with sofas around a low table"
@@ -59,7 +59,7 @@ export default function City(): JSX.Element {
           <p>Each communosphere is a neighborhood under one dome: apartments terraced around a planted atrium, a shared kitchen and dining hall, and wellness spaces. The shell creates a mild indoor climate, cutting heating and cooling needs.</p>
           <p>Geodesic domes and cross-laminated timber are both proven. The new part is combining them at this size with homes inside, which is a design challenge rather than a research one.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/design/architecture#2-temples-and-meditation-spaces"
           img="city-temple"
           alt="Circular timber temple with an oculus lighting a single quartz point on a stone pedestal and a shallow water basin, people seated on cushions"
           kicker="Inner ring"
@@ -69,7 +69,7 @@ export default function City(): JSX.Element {
           <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry, with a single upright quartz point on a stone pedestal under the oculus and a shallow water basin at the center. Participation in any practice is always voluntary.</p>
           <p>The plaza beside it is the city's living room: morning markets, performances, seasonal festivals and the everyday crossing point of the whole community.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/design/architecture#5-creative-studios"
           reverse
           img="city-studios"
           alt="Modern maker studio with a CNC router, 3D printer, woodworking benches and a pottery corner"
@@ -80,7 +80,7 @@ export default function City(): JSX.Element {
           <p>Shared studios make it possible to live in a small home and still have access to a full woodshop, ceramics, textiles, digital fabrication and quiet co-working.</p>
           <p>They also support the local economy: residents can teach workshops, sell what they make and repair what the city needs.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/technical/technology-catalog#food-production"
           img="city-greenhouse"
           alt="Curved timber-and-glass greenhouse beside a food forest with residents harvesting"
           kicker="Outer ring"
@@ -90,7 +90,7 @@ export default function City(): JSX.Element {
           <p>Year-round solar greenhouses, aquaponics and a layered food forest supply a meaningful share of fresh produce in Phase 1, growing to 5–10 ha and near self-sufficiency in Phase 2. Compost from kitchens returns to the soil, closing the loop.</p>
           <p>Phase 1 is deliberately modest: staple grains and some goods will still come from regional farms, which also builds ties with neighbors.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/concepts/energy-systems#track-1-physical-microgrid-conventional-power"
           reverse
           img="city-microgrid"
           alt="Curved solar canopies over a sheep meadow with timber battery pavilions"
@@ -119,7 +119,7 @@ export default function City(): JSX.Element {
       </Section>
 
       <Section id="beyond-the-box" eyebrow="Beyond the box" title="Curved, healthy and affordable." lead="High-tech design, low-tech materials: computers find efficient curved shapes, then we build them from earth, stone, timber, bamboo and lime that residents can handle, chosen from what each site provides. Curves use less material, hold heat better and are rated more beautiful in brain-imaging studies.">
-        <Feature
+        <Feature to="/docs/design/organic-forms-and-materials#notes-on-the-strongest-options"
           img="form-printed-earth"
           alt="A cluster of 3D-printed earth dwellings with green roofs and a printer finishing a fourth dome"
           kicker="Tiny homes"
@@ -129,7 +129,7 @@ export default function City(): JSX.Element {
           <p>Tiny-home clusters can be built from superadobe (earth-filled bags coiled into domes) or printed from raw earth, as in the TECLA prototype in Italy. Residents can help build, and that work can count toward contribution-based residency.</p>
           <p>Earth walls breathe, store heat and contain no synthetic finishes. Durability in wet or freezing climates still needs proof, so we test before we commit.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/design/organic-forms-and-materials#the-toolbox"
           reverse
           img="form-gridshell"
           alt="Community studio under a sweeping timber gridshell roof"
@@ -141,11 +141,11 @@ export default function City(): JSX.Element {
         </Feature>
         <div style={{marginTop: '3rem'}} />
         <Cards items={[
-          {title: 'Clay plaster everywhere', kicker: 'Healthy interiors', img: 'form-earth-dome', text: 'Holds indoor humidity steady and removes ozone. The cheapest health upgrade, and it works on curves and in existing homes.'},
-          {title: 'Local stone', kicker: 'Materials follow the place', text: 'Plinths, terrace walls, benches and paths in the stone of each region: granite and schist in Portugal, sandstone in New Mexico, basalt on volcanic land. Lowest carbon when quarried nearby.'},
-          {title: 'Thin shells', kicker: 'Canopies & floors', img: 'form-thin-shell', text: 'Arched shells carry load in compression, using over 70% less concrete and allowing earth or recycled mixes.'},
-          {title: 'Curved shell, efficient core', kicker: 'Practical', text: 'Kitchens, baths and storage stay straight inside curved rooms, so standard fittings still work and costs stay down.'},
-          {title: 'Bio-resonance as research', kicker: 'Frontier', text: 'We will compare matched curved and boxy rooms for sleep, stress and acoustics with university partners, and publish results either way.'},
+          {to: '/docs/design/organic-forms-and-materials#notes-on-the-strongest-options', title: 'Clay plaster everywhere', kicker: 'Healthy interiors', img: 'form-earth-dome', text: 'Holds indoor humidity steady and removes ozone. The cheapest health upgrade, and it works on curves and in existing homes.'},
+          {to: '/docs/design/organic-forms-and-materials#stone-and-materials-that-follow-the-place', title: 'Local stone', kicker: 'Materials follow the place', text: 'Plinths, terrace walls, benches and paths in the stone of each region: granite and schist in Portugal, sandstone in New Mexico, basalt on volcanic land. Lowest carbon when quarried nearby.'},
+          {to: '/docs/design/organic-forms-and-materials#the-toolbox', title: 'Thin shells', kicker: 'Canopies & floors', img: 'form-thin-shell', text: 'Arched shells carry load in compression, using over 70% less concrete and allowing earth or recycled mixes.'},
+          {to: '/docs/design/organic-forms-and-materials#honest-trade-offs', title: 'Curved shell, efficient core', kicker: 'Practical', text: 'Kitchens, baths and storage stay straight inside curved rooms, so standard fittings still work and costs stay down.'},
+          {to: '/docs/design/organic-forms-and-materials#bio-resonance-and-subtle-energy-a-research-track', title: 'Bio-resonance as research', kicker: 'Frontier', text: 'We will compare matched curved and boxy rooms for sleep, stress and acoustics with university partners, and publish results either way.'},
           {title: 'Light on the land', kicker: 'Nature first', to: '/docs/design/light-on-the-land', text: 'Compact building, more habitat after than before, our own sun and rain, and dark, bird-safe nights.'},
         ]} />
         <p style={{marginTop: '1.5rem'}}><Link to="/docs/design/organic-forms-and-materials">Read Beyond the Box in the library: methods, costs, evidence and trade-offs →</Link></p>
@@ -153,20 +153,20 @@ export default function City(): JSX.Element {
 
       <Section id="light-on-the-land" alt eyebrow="Light on the land" title="Mostly wild land, measured every year." lead="Zero impact is not possible, but half a normal footprint is: ecovillages like Findhorn and Sieben Linden already live at about half their national averages. We build a compact core, run on our own sun and rain, protect the night and leave more nature than we found.">
         <Cards items={[
-          {title: 'Build small', kicker: 'Land', text: 'A 20–30 acre core on a 100–500 acre site. At least half the land stays permanent habitat, with wildlife corridors kept open.'},
-          {title: 'More life after', kicker: 'Biodiversity', text: 'A baseline survey before design and at least 20% biodiversity net gain, monitored for 30 years.'},
-          {title: 'Own sun and rain', kicker: 'Energy & water', text: 'No fossil fuels, 105% of energy from on-site solar, and no net draw on groundwater. Greywater is cleaned in planted wetlands.'},
-          {title: 'Protect the night', kicker: 'Light & birds', text: 'Shielded, warm outdoor lights that never shine upward, and bird-safe patterned glass on every dome.'},
+          {to: '/docs/design/light-on-the-land#where-a-light-city-has-real-impact-and-what-to-do-about-it', title: 'Build small', kicker: 'Land', text: 'A 20–30 acre core on a 100–500 acre site. At least half the land stays permanent habitat, with wildlife corridors kept open.'},
+          {to: '/docs/design/light-on-the-land#ten-commitments-we-will-measure-and-publish', title: 'More life after', kicker: 'Biodiversity', text: 'A baseline survey before design and at least 20% biodiversity net gain, monitored for 30 years.'},
+          {to: '/docs/design/light-on-the-land#is-it-really-possible-what-has-already-been-done', title: 'Own sun and rain', kicker: 'Energy & water', text: 'No fossil fuels, 105% of energy from on-site solar, and no net draw on groundwater. Greywater is cleaned in planted wetlands.'},
+          {to: '/docs/design/color-and-light#lighting-principles', title: 'Protect the night', kicker: 'Light & birds', text: 'Shielded, warm outdoor lights that never shine upward, and bird-safe patterned glass on every dome.'},
         ]} />
         <p style={{marginTop: '1.5rem'}}><Link to="/docs/design/light-on-the-land">Read Light on the Land: what is possible today, honest limits and ten commitments →</Link></p>
       </Section>
 
       <Section id="language" eyebrow="Design language" title="Four rules shape every building.">
         <Cards items={[
-          {title: 'Sacred geometry', kicker: 'Proportion', text: 'Circles, spirals and the golden ratio set the plan, room proportions and facade rhythms, giving the city a coherent, calming order.'},
-          {title: 'Biophilic design', kicker: 'Nature', text: 'Daylight, planting, natural materials and views to green in every space. Proven to lower stress and improve wellbeing.'},
-          {title: 'Light & color', kicker: 'Atmosphere', text: 'Warm whites, pearl and gold, with lighting tuned to the time of day to support natural sleep and focus rhythms.'},
-          {title: 'Low-carbon materials', kicker: 'Materials', text: 'Cross-laminated timber, hempcrete, rammed earth and mycelium insulation store carbon instead of emitting it.'},
+          {to: '/docs/concepts/sacred-geometry#application-in-light-city', title: 'Sacred geometry', kicker: 'Proportion', text: 'Circles, spirals and the golden ratio set the plan, room proportions and facade rhythms, giving the city a coherent, calming order.'},
+          {to: '/docs/design/organic-forms-and-materials#why-curves-the-evidence', title: 'Biophilic design', kicker: 'Nature', text: 'Daylight, planting, natural materials and views to green in every space. Proven to lower stress and improve wellbeing.'},
+          {to: '/docs/design/color-and-light', title: 'Light & color', kicker: 'Atmosphere', text: 'Warm whites, pearl and gold, with lighting tuned to the time of day to support natural sleep and focus rhythms.'},
+          {to: '/docs/design/organic-forms-and-materials#the-toolbox', title: 'Low-carbon materials', kicker: 'Materials', text: 'Cross-laminated timber, hempcrete, rammed earth and mycelium insulation store carbon instead of emitting it.'},
         ]} />
       </Section>
 

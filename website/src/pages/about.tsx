@@ -14,9 +14,9 @@ export default function About(): JSX.Element {
       image="vision-1">
       <Section eyebrow="Core principles" title="Three ideas hold the whole project together." lead="Everything we design, finance and build is checked against these principles first.">
         <Cards items={[
-          {kicker: 'I', title: 'Spirit before structure', img: 'vision-1', text: 'Light City begins as an etheric template, a higher-dimensional pattern. Physical implementation follows spiritual alignment.'},
-          {kicker: 'II', title: "Gaia's memory", img: 'about-land', text: 'Earth holds the memory of what Light City can be. We co-create with planetary consciousness rather than impose on it.'},
-          {kicker: 'III', title: 'Collective co-creation', img: 'journey-founding', text: "Light City is not a single person's vision but an emergent pattern drawing from many consciousness streams."},
+          {to: '/docs/concepts/core-concepts#1-spirit-before-structure', kicker: 'I', title: 'Spirit before structure', img: 'vision-1', text: 'Light City begins as an etheric template, a higher-dimensional pattern. Physical implementation follows spiritual alignment.'},
+          {to: '/docs/concepts/core-concepts#2-gaias-memory', kicker: 'II', title: "Gaia's memory", img: 'about-land', text: 'Earth holds the memory of what Light City can be. We co-create with planetary consciousness rather than impose on it.'},
+          {to: '/docs/concepts/core-concepts#3-collective-co-creation', kicker: 'III', title: 'Collective co-creation', img: 'journey-founding', text: "Light City is not a single person's vision but an emergent pattern drawing from many consciousness streams."},
         ]} />
       </Section>
 
