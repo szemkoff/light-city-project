@@ -65,6 +65,7 @@ Methods ordered from cheapest and simplest to most engineered. Costs are indicat
 | **Hempcrete** | Curved walls cast in forms | Installed $260–400/sf for recent US homes ([HempBuild](https://www.hempbuildmag.com/home/3-us-hempcrete-homes-2026)) | Breathable, carbon-storing | **Scaling** ([IRC Appendix BL](https://www.portotheme.com/hempcrete-vs-traditional-insulation-vs-mycelium-performance-cost-and-use-cases/)) | Insulating infill in timber frames; not a cost saver yet |
 | **Timber gridshell** | Long-span double curves | Weald & Downland: gridshell 28% of £1,097/m² gross; erection labor is the main cost ([Univ. of Bath](https://purehost.bath.ac.uk/ws/portalfiles/portal/187940865/UnivBath_MPhil_2012_D_J_Naicu.pdf)) | Natural wood surfaces | **Proven** | Studios, greenhouses, dome roofs, market halls |
 | **Thin funicular shells** | Vaults, floors, canopies | 70%+ less concrete; can use earth or recycled mixes ([ETH BRG](https://block.arch.ethz.ch/brg/publications/1106)) | Less cement | **Scaling** | Plaza canopies, floors in multi-level domes |
+| **Local stone (dry-stone and lime-mortar masonry)** | Plinths, garden and terrace walls, thick curved walls, vaults | Lowest embodied carbon of common materials when quarried nearby; transport can outweigh extraction ([MPA, 2026](https://www.mineralproducts.org/MPA/media/root/Publications/2026/MPA-Dimension-Stone-naturally-low%E2%80%91carbon-report-Sept-2026.pdf)) | Inert, no off-gassing, high thermal mass | **Proven** for thousands of years | Foundations and plinths under earth walls, terraces, temple and hearth walls, paths |
 | **Airform domes** | Monolithic domes | Fast, durable; uses spray foam and concrete | Foam needs careful specification | **Proven** | Storage, workshops, storm shelters (not living spaces by default) |
 
 ### Notes on the strongest options
@@ -83,6 +84,31 @@ Methods ordered from cheapest and simplest to most engineered. Costs are indicat
 
 ![Open-air pavilion under a thin shell canopy](/img/home/form-thin-shell.webp)
 
+## Stone, and materials that follow the place
+
+Stone is one of the oldest and most widely used building materials on Earth, from mountain villages to volcanic islands. It belongs in Light City alongside earth and timber, with one rule: **the land decides the materials.** We build with what is underfoot or close by, and import only what the place cannot provide.
+
+**Why stone.** Locally quarried natural stone has among the lowest embodied carbon of common building materials, averaging about 0.09 kg CO₂e per kg, but shipping it far can outweigh the quarrying itself ([Mineral Products Association, 2026](https://www.mineralproducts.org/MPA/media/root/Publications/2026/MPA-Dimension-Stone-naturally-low%E2%80%91carbon-report-Sept-2026.pdf)). A French study found cut-stone load-bearing walls 1.4 times less impactful than CLT and 2.7 times less than slag concrete at typical thicknesses ([Buildings & Cities](https://reference-global.com/download/article/10.5334/bc.278.pdf)). Stone is durable, repairable and reusable, and its thermal mass evens out day and night temperatures.
+
+**A living craft.** Dry-stone building, without any mortar, is recognised by UNESCO as intangible cultural heritage across 13 European countries, including Spain ([UNESCO](https://ich.unesco.org/en/RL/the-art-of-dry-stone-walling-knowledge-and-techniques-02106)). On the Azores island of Pico, black basalt gathered on site built the walls, houses and cellars of a UNESCO World Heritage landscape ([UNESCO](https://whc.unesco.org/en/list/1117/)). In central Portugal, 27 restored schist villages show how local stone, clay and chestnut wood can be brought back to life ([Aldeias do Xisto](https://www.aldeiasdoxisto.com/en/villages/territory/)). In New Mexico, the ancestral Pueblo great houses of Chaco Canyon stand more than five storeys of sandstone and mud mortar after nearly a thousand years ([UNESCO](https://whc.unesco.org/en/list/353/)).
+
+**How we use it.** Stone works best where it is strongest: in compression, close to the ground and in contact with water. Typical uses are plinths that keep earth walls dry, retaining walls for terraces, paths and courtyards, hearths and fire circles, the temple's inner wall, and thick walls in hot-dry climates. Glulam gridshells and glass stay above for light and long spans.
+
+**Watch-outs.** Stone is heavy, so it needs careful engineering in earthquake zones (unreinforced masonry performs poorly). Dressing stone takes skilled labor, and only stone from the site or a nearby quarry keeps its low-carbon promise.
+
+### Materials by candidate region
+
+Each [candidate region](/docs/project/site-locations) has its own palette. The structure of the domes (glulam gridshell and glass) stays the same everywhere; walls, floors and landscape change with the place.
+
+| Region | Main local materials | How the city would look and feel |
+|---|---|---|
+| **Northern New Mexico** | Adobe, rammed earth, sandstone, ponderosa and piñon timber | Earth-colored walls on sandstone plinths, deep window reveals, flat earth roofs on small buildings, as in the state's earthen code |
+| **Klamath Basin, Oregon** | Mass timber and cob, local volcanic rock | Timber-forward buildings with cob infill, basalt plinths and garden walls, steep roofs for snow |
+| **Central Portugal** | Granite and schist, rammed earth (taipa), chestnut and cork | Stone plinths and terrace walls on the slopes, lime-washed earth walls, cork insulation, chestnut beams |
+| **Granada highlands, Spain** | Earth sheltering into clay hills, rammed earth, local stone | Homes partly dug into the hillside like the region's cave houses, white lime finishes, stone dry-walls on terraces |
+| **Northern Costa Rica** | Timber and bamboo frames, river and volcanic stone, earth infill | Light, open, raised frames for airflow and earthquakes, stone only at the base and in landscape walls, deep roofs for rain |
+| **Islands (if a future site is an island)** | Volcanic basalt or coral limestone, lime | Low, thick stone walls against wind and salt, as on Pico in the Azores |
+
 ---
 
 ## Applying it to Light City
@@ -92,7 +118,7 @@ Methods ordered from cheapest and simplest to most engineered. Costs are indicat
 | **Communosphere domes** | Steel frame and flat panels | CLT or glulam gridshell over curved terraces; clay-plastered interiors | Gridshell uses less wood; flat glazing panels |
 | **Tiny homes** | Rectangular modules | Earthbag or printed-earth pods in clusters of 3–6 around a shared courtyard | Local soil; resident labor counts toward contribution-based residency |
 | **Family ring housing** | Straight terraces | Gently curved terraces built from faceted prefab timber panels | Flat panels, curved plan |
-| **Temple & quiet rooms** | Hall with flat ceiling | Earth or timber dome tuned acoustically, with an oculus | Small spans; acoustic modeling is cheap compared with fixes |
+| **Temple & quiet rooms** | Hall with flat ceiling | Earth, stone or timber dome tuned acoustically, with an oculus and one vertical quartz point on a stone pedestal at the center | Small spans; acoustic modeling is cheap compared with fixes |
 | **Studios & market hall** | Shed | Timber or bamboo gridshell | Long span with little material |
 | **Greenhouses** | Glass box | Gridshell with polycarbonate or glass | Proven agricultural shapes |
 | **Plaza canopies & floors** | Concrete slab | Thin funicular shells | 70% less concrete |

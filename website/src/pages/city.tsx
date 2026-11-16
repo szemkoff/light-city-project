@@ -51,7 +51,7 @@ export default function City(): JSX.Element {
         <Feature
           reverse
           img="city-dome-cutaway"
-          alt="Inside a timber gridshell dome: terraced apartments, a garden atrium, a quartz crystal sculpture and a sunken fire lounge"
+          alt="Inside a timber gridshell dome: terraced apartments, a garden atrium, tall quartz points on stone pedestals and a sunken fire lounge"
           kicker="Neighborhood"
           title="Communosphere"
           tag="TRL 7–9"
@@ -61,18 +61,18 @@ export default function City(): JSX.Element {
         </Feature>
         <Feature
           img="city-temple"
-          alt="Circular timber temple with an oculus lighting a central quartz crystal and a fire bowl"
+          alt="Circular timber temple with an oculus lighting a single tall quartz point on a round stone pedestal and a fire bowl"
           kicker="Inner ring"
           title="Temple & plaza"
           tag="TRL 9"
           specs={[['Use', 'Meditation, ceremony, gatherings'], ['Access', 'Open to all, no doctrine'], ['Build', 'Timber, rammed earth, stone'], ['Plaza', 'Markets, festivals, daily life']]}>
-          <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry, with a central crystal under the oculus and a fire bowl for evening gatherings. Participation in any practice is always voluntary.</p>
+          <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry, with a single upright quartz point on a stone pedestal under the oculus and a fire bowl for evening gatherings. Participation in any practice is always voluntary.</p>
           <p>The plaza beside it is the city's living room: morning markets, performances, seasonal festivals and the everyday crossing point of the whole community.</p>
         </Feature>
         <Feature
           reverse
           img="city-studios"
-          alt="Modern maker studio with a CNC router, 3D printer, woodworking benches and crystal cutting"
+          alt="Modern maker studio with a CNC router, 3D printer, woodworking benches and a quartz point on a timber stand"
           kicker="Middle ring"
           title="Studios & workshops"
           tag="TRL 9"
@@ -118,7 +118,7 @@ export default function City(): JSX.Element {
         </div>
       </Section>
 
-      <Section id="beyond-the-box" eyebrow="Beyond the box" title="Curved, healthy and affordable." lead="High-tech design, low-tech materials: computers find efficient curved shapes, then we build them from earth, timber, bamboo and lime that residents can handle. Curves use less material, hold heat better and are rated more beautiful in brain-imaging studies.">
+      <Section id="beyond-the-box" eyebrow="Beyond the box" title="Curved, healthy and affordable." lead="High-tech design, low-tech materials: computers find efficient curved shapes, then we build them from earth, stone, timber, bamboo and lime that residents can handle, chosen from what each site provides. Curves use less material, hold heat better and are rated more beautiful in brain-imaging studies.">
         <Feature
           img="form-printed-earth"
           alt="A cluster of 3D-printed earth dwellings with green roofs and a printer finishing a fourth dome"
@@ -142,6 +142,7 @@ export default function City(): JSX.Element {
         <div style={{marginTop: '3rem'}} />
         <Cards items={[
           {title: 'Clay plaster everywhere', kicker: 'Healthy interiors', img: 'form-earth-dome', text: 'Holds indoor humidity steady and removes ozone. The cheapest health upgrade, and it works on curves and in existing homes.'},
+          {title: 'Local stone', kicker: 'Materials follow the place', text: 'Plinths, terrace walls, hearths and paths in the stone of each region: granite and schist in Portugal, sandstone in New Mexico, basalt on volcanic land. Lowest carbon when quarried nearby.'},
           {title: 'Thin shells', kicker: 'Canopies & floors', img: 'form-thin-shell', text: 'Arched shells carry load in compression, using over 70% less concrete and allowing earth or recycled mixes.'},
           {title: 'Curved shell, efficient core', kicker: 'Practical', text: 'Kitchens, baths and storage stay straight inside curved rooms, so standard fittings still work and costs stay down.'},
           {title: 'Bio-resonance as research', kicker: 'Frontier', text: 'We will compare matched curved and boxy rooms for sleep, stress and acoustics with university partners, and publish results either way.'},

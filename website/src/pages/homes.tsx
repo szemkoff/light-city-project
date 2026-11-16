@@ -33,11 +33,11 @@ export default function Homes(): JSX.Element {
       <Section alt id="types" eyebrow="Home types" title="Choose the scale of private life you need.">
         <Feature
           img="home-tiny"
-          alt="Four curved-timber tiny homes with green roofs and large windows around a courtyard garden with a sunken fire circle and a quartz crystal, a glass dome behind"
+          alt="Four curved-timber tiny homes with green roofs and large windows around a courtyard garden with a sunken fire circle and a vertical quartz point set on a stone base, a glass dome behind"
           kicker="Tiny home · 200–300 sf"
           title="Tiny home"
           tag="$500–700 / month">
-          <p>A self-contained curved-timber home with a sleeping niche, a compact kitchen and bath, big windows and a deck. Tiny homes are grouped in fours around a shared courtyard with planted beds, a sunken fire circle and a crystal centerpiece, so neighbors share outdoor space naturally.</p>
+          <p>A self-contained curved-timber home with a sleeping niche, a compact kitchen and bath, big windows and a deck. Tiny homes are grouped in fours around a shared courtyard with planted beds, a sunken fire circle and a single quartz point on a stone base, so neighbors share outdoor space naturally.</p>
           <ul>
             <li><strong>Best for:</strong> singles, artists, newcomers and contribution-based residents</li>
             <li><strong>Where:</strong> garden clusters on the outer ring, a short walk from a communosphere</li>
@@ -47,7 +47,7 @@ export default function Homes(): JSX.Element {
         <Feature
           reverse
           img="home-studio"
-          alt="Modern studio with curved timber walls, a bed niche, a crystal pendant light and a window over the dome atrium"
+          alt="Modern studio with curved timber walls, a bed niche, a glass pendant light and a window over the dome atrium"
           kicker="Studio · 400–500 sf"
           title="Studio"
           tag="$700–950 / month">
