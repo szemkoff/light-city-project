@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Light City 3D reference model</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #FBF8F2; font: 15px/1.4 system-ui, sans-serif; color: #1D1A15; }
+  canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+  .ui { position: fixed; left: 12px; top: 12px; right: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; pointer-events: none; }
+  .ui h1 { pointer-events: auto; font: 600 16px/1.2 Georgia, serif; margin: 0 8px 0 0; background: rgba(251,248,242,.9); padding: 8px 10px; border-radius: 8px; }
+  .ui button { pointer-events: auto; border: 1px solid #D8CDBA; background: rgba(251,248,242,.92); border-radius: 999px; padding: 6px 12px; font: inherit; cursor: pointer; }
+  .ui button[aria-pressed="true"] { background: #1D1A15; color: #FBF8F2; }
+  .note { position: fixed; left: 12px; bottom: 12px; right: 12px; max-width: 640px; background: rgba(251,248,242,.92); padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #5F584C; }
+  body.render .ui, body.render .note { display: none; }
+</style>
+<script type="importmap">{"imports": {"three": "./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+<canvas id="c" aria-label="3D model of the Light City Phase 1 plan"></canvas>
+<div class="ui"><h1>Light City, Phase 1 reference model · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><span id="views"></span></div>
+<p class="note">Drag to orbit, scroll or pinch to zoom. Five rings, 12 radial paths, a 90 m spire, four temple and learning pavilions, three 40 m domes, earth homes on ring 4 and solar on ring 5. Every city illustration is checked against this model.</p>
+<script type="module">
+  import {start, VIEWS} from './city.js';
+  const q = new URLSearchParams(location.search);
+  const render = q.has('render');
+  if (render) document.body.classList.add('render');
+  const c = document.getElementById('c');
+  if (render) { c.style.width = q.get('w') + 'px'; c.style.height = q.get('h') + 'px'; }
+  const app = start(c, {interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
+  const box = document.getElementById('views');
+  for (const [k, v] of Object.entries(VIEWS)) {
+    const b = document.createElement('button');
+    b.textContent = v.label; b.setAttribute('aria-pressed', k === (q.get('view') || 'aerial'));
+    b.onclick = () => { app.setView(k); box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); };
+    box.appendChild(b);
+  }
+  window.__ready = true;
+</script>
+</body>
+</html>
