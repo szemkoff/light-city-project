@@ -168,7 +168,7 @@
 .lc-page .pg-jump{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-12)}
 .lc-page .pg-jump a{padding:.5em 1em;border:1px solid var(--line);border-radius:999px;font-size:var(--text-sm);color:var(--ink);background:var(--card);transition:border-color .2s,background .2s}
 .lc-page .pg-jump a:hover{border-color:var(--gold-hi);background:#fffdf8}
-.lc-page .pg-topic-group+.pg-topic-group{margin-top:var(--space-16)}
+.lc-page .pg-topic-group+.pg-topic-group,.lc-page [id]+[id]>.pg-topic-group{margin-top:var(--space-16)}
 .lc-page .pg-topic-part{font:400 var(--text-xl)/1.2 var(--display);margin-bottom:var(--space-6);padding-bottom:var(--space-3);border-bottom:1px solid var(--line)}
 .lc-page .pg-topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-5)}
 .lc-page .pg-topic{display:flex;flex-direction:column;padding:var(--space-6);background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);color:var(--ink);transition:border-color .2s,transform .2s}
