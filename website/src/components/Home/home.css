@@ -382,3 +382,4 @@ html:has(.lc-home) .main-wrapper{overflow:visible}
 .lc-home ul,.lc-home ol{margin:0}
 .lc-home a:hover{text-decoration:none}
 .lc-home h1,.lc-home h2,.lc-home h3,.lc-home h4{color:inherit}
+.lc-home [hidden]{display:none !important}
