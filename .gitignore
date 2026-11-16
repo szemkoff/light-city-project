@@ -109,3 +109,6 @@ website/build/
 website/.cache-loader/
 website/yarn.lock
 
+
+# 3D model runtime (three.js, MIT)
+!website/static/model/vendor/
