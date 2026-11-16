@@ -28,6 +28,7 @@ Read it in order, or jump to the part you care about. Each part leads naturally 
 | **6. Economy** | How do we move from money to contribution? | [Economy and Migration](/docs/project/economy-and-migration) |
 | **7. Roadmap** | When will it happen, and what will it cost? | [Development Stages](/docs/project/development-stages) |
 | **8. Research** | What don't we know yet? | [Open Questions](/docs/research/open-questions) → [Bibliography](/docs/research/bibliography) |
+| **9. Where the Idea Came From** | What vision started it, and how do we treat it? | [The Archetype](/docs/concepts/the-archetype) |
 
 The key facts — scale, costs, homes, timeline — are on one page: **[Light City at a Glance](/docs/at-a-glance)**. Unfamiliar terms are in the **[Glossary](/docs/glossary)**.
 
