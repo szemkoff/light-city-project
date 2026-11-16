@@ -26,7 +26,7 @@ export default function Journey(): JSX.Element {
         <Feature
           id="awakening"
           img="journey-awakening"
-          alt="A person meditating by a city apartment window at dawn"
+          alt="A person in a cotton knit reflecting by a city apartment window at dawn, a small crystal and tea beside her"
           kicker="Movement 1 · Now – 2027 · Stages 1–3"
           title="Awakening"
           tag="From distraction to attention"
@@ -38,7 +38,7 @@ export default function Journey(): JSX.Element {
           reverse
           id="gathering"
           img="journey-gathering"
-          alt="A circle of people talking outdoors under trees at a retreat"
+          alt="A circle of people in linen and cotton around a stone fire bowl at a modern retreat pavilion"
           kicker="Movement 2 · 2027 – 2028 · Stage 4"
           title="Gathering"
           tag="From me to we"
@@ -49,7 +49,7 @@ export default function Journey(): JSX.Element {
         <Feature
           id="founding"
           img="journey-founding"
-          alt="Construction of a timber geodesic dome with workers and volunteers"
+          alt="Construction of a timber gridshell dome with a crane, a robotic arm and residents planting trees"
           kicker="Movement 3 · 2028 – 2031 · Stage 5"
           title="Founding"
           tag="From ideals to daily life"
@@ -61,7 +61,7 @@ export default function Journey(): JSX.Element {
           reverse
           id="flourishing"
           img="journey-flourishing"
-          alt="A shared community dinner at long tables inside a dome"
+          alt="A shared dinner at long timber tables inside a glass dome, a fire hearth and crystal glowing nearby"
           kicker="Movement 4 · 2032+ · Stage 6"
           title="Flourishing"
           tag="From survival to contribution"
@@ -72,7 +72,7 @@ export default function Journey(): JSX.Element {
         <Feature
           id="radiating"
           img="journey-radiating"
-          alt="A mature eco-town with many domes and a spire at sunset"
+          alt="A mature modern organic town of domes and green roofs with a glowing spire at sunset"
           kicker="Movement 5 · 2035+ · Phases 2–3"
           title="Radiating"
           tag="From one place to a pattern"
