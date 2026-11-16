@@ -2,11 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://szemkoff.github.io/light-city-project/blog</id>
     <title>Light City Project Blog</title>
-    <updated>2025-11-14T00:00:00.000Z</updated>
+    <updated>2026-11-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://szemkoff.github.io/light-city-project/blog"/>
     <subtitle>Light City Project Blog</subtitle>
     <icon>https://szemkoff.github.io/light-city-project/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Stage 1 progress: deliverables published, gate review in December]]></title>
+        <id>https://szemkoff.github.io/light-city-project/blog/stage-1-progress-november-2026</id>
+        <link href="https://szemkoff.github.io/light-city-project/blog/stage-1-progress-november-2026"/>
+        <updated>2026-11-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Date: November 16, 2026]]></summary>
+        <content type="html"><![CDATA[<p><strong>Date</strong>: November 16, 2026</p>
+<p>Stage 1 (Foundation) has run longer than planned, but all nine of its original deliverables are now published, along with work that was not in the first plan. Four open items remain before the Stage 1 gate review in December 2026.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-done">What is done<a href="https://szemkoff.github.io/light-city-project/blog/stage-1-progress-november-2026#what-is-done" class="hash-link" aria-label="Direct link to What is done" title="Direct link to What is done" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Library.</strong> Core concepts, the transition, architecture, <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/organic-forms-and-materials">Beyond the Box</a>, <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/light-on-the-land">Light on the Land</a>, the <a class="" href="https://szemkoff.github.io/light-city-project/docs/technical/technology-catalog">Technology catalog</a>, the <a class="" href="https://szemkoff.github.io/light-city-project/docs/technical/technology-horizon">Technology horizon</a> and the <a class="" href="https://szemkoff.github.io/light-city-project/docs/technical/urban-retrofit-guide">Urban retrofit guide</a>. The library is organized as one story in nine parts; see <a class="" href="https://szemkoff.github.io/light-city-project/docs/START-HERE">Start Here</a>.</li>
+<li class=""><strong>Visual system and 3D model.</strong> A shared <a class="" href="https://szemkoff.github.io/light-city-project/docs/design/visual-language">visual language</a>, color and light rules, layout diagrams, and a <a href="https://szemkoff.github.io/light-city-project/model/index.html?phase=1" target="_blank" rel="noopener noreferrer" class="">3D reference model</a> of the radial plan with Phase 1, 2 and 3 layers.</li>
+<li class=""><strong>Homes and households.</strong> Five home types from a tiny home to a draft three-bedroom family home, a who-fits-where guide, and a <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages#household-model-november-2026-draft">household financial model</a>: about 110 homes for 200 residents.</li>
+<li class=""><strong>Economy and migration.</strong> A draft plan to move the inside economy from dollar fees to Light hours, a time credit, in four steps that residents vote on. See <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/economy-and-migration">Economy and Migration</a>.</li>
+<li class=""><strong>Site locations.</strong> Five candidate regions in four countries, all above 350 ft, scored and mapped in <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/site-locations">Site locations</a>.</li>
+<li class=""><strong>Website.</strong> A new homepage, Explore pages, pages for residents, investors, builders and researchers, an investor diligence room and a <a class="" href="https://szemkoff.github.io/light-city-project/trust">Living here, honestly</a> page. The docs now share the same menu and footer as the rest of the site.</li>
+<li class=""><strong>Founding circle.</strong> Sign-up and contact forms now go to one sheet with email notification. Use the <a class="" href="https://szemkoff.github.io/light-city-project/contact">contact page</a> to join.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-is-open-before-the-gate">What is open before the gate<a href="https://szemkoff.github.io/light-city-project/blog/stage-1-progress-november-2026#what-is-open-before-the-gate" class="hash-link" aria-label="Direct link to What is open before the gate" title="Direct link to What is open before the gate" translate="no">​</a></h2>
+<ol>
+<li class="">Add debt service (interest and repayment on the construction loan) to the financial model.</li>
+<li class="">Confirm the household fee basis and how to close the gap at 90% occupancy, about 13% above mid fees.</li>
+<li class="">Confirm the draft thresholds in the economy plan: credit limits, the weekly share and the dial gates.</li>
+<li class="">Engage counsel for the entity and the securities path, and name the first advisors.</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="what-comes-next">What comes next<a href="https://szemkoff.github.io/light-city-project/blog/stage-1-progress-november-2026#what-comes-next" class="hash-link" aria-label="Direct link to What comes next" title="Direct link to What comes next" translate="no">​</a></h2>
+<p>Stage 2 (Design) is planned for January to June 2027: site selection, structural feasibility of the spire, and design development. The full plan is in <a class="" href="https://szemkoff.github.io/light-city-project/docs/project/development-stages">Development Stages</a>.</p>]]></content>
+        <author>
+            <name>Light City Project Team</name>
+            <uri>https://github.com/szemkoff/light-city-project</uri>
+        </author>
+        <category label="roadmap" term="roadmap"/>
+        <category label="financial-model" term="financial-model"/>
+        <category label="economy" term="economy"/>
+        <category label="website" term="website"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Major Documentation Enhancements - Governance, Financial Model & Scale Clarity]]></title>
         <id>https://szemkoff.github.io/light-city-project/blog/documentation-consistency-iteration</id>
