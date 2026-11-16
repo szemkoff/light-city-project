@@ -1,22 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Link from '@docusaurus/Link';
+import {useLocation} from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Site, {Section} from '../components/Site';
-import {submitToSheet} from '../contactConfig';
+import {WEB3FORMS_SUBMIT_URL, buildSiteAbsoluteUrl} from '../contactConfig';
 
 export default function Contact(): JSX.Element {
+  const location = useLocation();
+  const sent = new URLSearchParams(location.search).get('sent') === '1';
   const {siteConfig} = useDocusaurusContext();
-  const endpoint = (siteConfig.customFields as {formsEndpoint?: string} | undefined)?.formsEndpoint ?? '';
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const form = e.currentTarget;
-    setStatus('sending');
-    try {
-      if (await submitToSheet(endpoint, form)) { setStatus('sent'); form.reset(); } else setStatus('error');
-    } catch { setStatus('error'); }
-  }
+  const accessKey = (siteConfig.customFields as {web3formsAccessKey?: string} | undefined)?.web3formsAccessKey ?? '';
+  const nextContact = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, 'contact?sent=1');
 
   return (
     <Site
@@ -29,11 +23,12 @@ export default function Contact(): JSX.Element {
       <Section>
         <div className="pg-form-wrap">
           <div>
-            {status === 'sent' ? <p className="pg-success" role="status">Thank you. Your message was submitted.</p> : null}
-            {status === 'error' ? <p className="pg-success" role="alert">Something went wrong. Please try again in a moment.</p> : null}
-            {endpoint ? (
-              <form className="pg-form" method="POST" onSubmit={onSubmit}>
-                <input type="hidden" name="form" value="Contact" />
+            {sent ? <p className="pg-success" role="status">Thank you. Your message was submitted.</p> : null}
+            {accessKey ? (
+              <form className="pg-form" action={WEB3FORMS_SUBMIT_URL} method="POST">
+                <input type="hidden" name="access_key" value={accessKey} />
+                <input type="hidden" name="subject" value="Light City Project - Contact form" />
+                <input type="hidden" name="redirect" value={nextContact} />
                 <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{display: 'none'}} />
                 <div className="pg-field">
                   <label htmlFor="contact-name">Name</label>
@@ -58,11 +53,12 @@ export default function Contact(): JSX.Element {
                   <label htmlFor="contact-message">Message</label>
                   <textarea id="contact-message" name="message" required placeholder="Briefly describe your interest, timing and how we can help." />
                 </div>
-                <button type="submit" className="btn" disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</button>
+                <button type="submit" className="btn">Send message</button>
+                <p className="pg-small">Delivered through Web3Forms. You will be brought back here to confirm.</p>
               </form>
             ) : (
               <div className="pg-form" role="status">
-                <p><strong>The form is not active in this build.</strong> To enable it, add the <code>FORMS_ENDPOINT_URL</code> secret under Repository → Settings → Secrets and variables → Actions, then re-run the deploy workflow.</p>
+                <p><strong>The form is not active in this build.</strong> To enable it, add the <code>WEB3FORMS_ACCESS_KEY</code> secret under Repository → Settings → Secrets and variables → Actions, then re-run the deploy workflow.</p>
               </div>
             )}
           </div>

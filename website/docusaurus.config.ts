@@ -23,7 +23,7 @@ const config: Config = {
   ],
 
   customFields: {
-    formsEndpoint: process.env.FORMS_ENDPOINT_URL ?? '',
+    web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY ?? '',
   },
 
   i18n: {
