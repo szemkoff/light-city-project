@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
           <nav aria-label="Primary">
             <ul className="nav-links" id="navLinks">
               <li><a href="#vision">Vision</a></li>
-              <li><a href="#city">The City</a></li>
+              <li><a href="#city">The City</a><a href={u('model/index.html?phase=1')}>3D model</a></li>
               <li><a href="#living">Living</a></li>
               <li><a href="#invest">Invest</a></li>
               <li><a href="#research">Research</a></li>
@@ -142,6 +142,15 @@ export default function Home(): JSX.Element {
               </div>
             </div>
             <article className="zone" id="zone" aria-live="polite"></article>
+          </div>
+          <div className="model-card">
+            <a className="model-card-art" href={u('model/index.html?phase=1')} tabIndex={-1} aria-hidden="true"><img src={img('city-phase-3')} alt="" width="1600" height="1000" loading="lazy" /></a>
+            <div className="model-card-body">
+              <p className="eyebrow light">Interactive 3D</p>
+              <h3>Walk the whole city in 3D.</h3>
+              <p>One model of the plan. Orbit, zoom and switch between Phase 1, 2 and 3 to see what each step adds, from the pilot hamlet to the town.</p>
+              <a className="btn" href={u('model/index.html?phase=1')}>Explore the 3D model</a>
+            </div>
           </div>
           <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a> <a className="link light" href={u('locations')} style={{marginLeft: 'var(--space-6)'}}>See the four candidate regions on a map <span aria-hidden="true">→</span></a></p>
         </div>
