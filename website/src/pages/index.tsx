@@ -149,7 +149,7 @@ export default function Home(): JSX.Element {
 
       {/* IMAGE BAND */}
       <section className="band">
-        <img src={img('dome-interior')} alt="Sunlight streams through a timber gridshell dome over trees, a reflecting pool, a single vertical quartz point on a stone pedestal and a sunken fire circle where people gather" width="1400" height="788" loading="lazy" />
+        <img src={img('dome-interior')} alt="Sunlight streams through a timber gridshell dome over trees, a sunken seating circle around a stone water basin where people gather" width="1400" height="788" loading="lazy" />
         <div className="band-in wrap">
           <blockquote>Ambitious in form.<br />Conservative in engineering.</blockquote>
           <p>Every structure uses materials already standing elsewhere — from Norway's 85.4 m Mjøstårnet timber tower to timber gridshells, earth domes and 3D-printed homes of local soil.</p>
@@ -219,7 +219,7 @@ export default function Home(): JSX.Element {
       <section className="living" id="living">
         <div className="wrap living-grid">
           <figure className="living-art">
-            <img src={img('living')} alt="Residents in linen walk a garden path between curved timber homes with green roofs, a fire circle and a glass dome at golden hour" width="1400" height="933" loading="lazy" />
+            <img src={img('living')} alt="Residents in everyday clothes walk a garden path between curved timber homes with green roofs and a glass dome in morning light" width="1400" height="933" loading="lazy" />
           </figure>
           <div>
             <p className="eyebrow">05 — Living</p>

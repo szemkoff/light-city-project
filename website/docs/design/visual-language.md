@@ -22,11 +22,12 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 
 Use this style note at the end of every image prompt:
 
-> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm integrated LED, quartz crystal accents (one to three vertical points on a pedestal or set into the ground, never game-style clusters), local stone, sculptural fire features. People in linen, cotton and raw silk in off-white, sand, sage and terracotta. Realistic documentary photo with a quiet sense of wonder. No text or logos. Avoid medieval, rustic cabins and fantasy.
+> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm shielded lighting, local stone, and only occasionally a single vertical quartz point on a pedestal. People in ordinary, varied everyday clothing of many colors. Mixed daylight and weather, not always sunset. Realistic documentary photo of a place that could be built today. No text or logos. Avoid medieval, rustic cabins and fantasy.
 
 - **Scale.** Domes 30–45 m across, 3–5 levels; the spire is slender, not a skyscraper.
 - **People.** Diverse ages and backgrounds, doing ordinary things: cooking, working, building, resting.
 - **Technology.** Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.
+- **Reality check.** Before an image goes in, ask: could this be photographed in a real eco-village next year? No open fire indoors, no glowing ground lights or rows of candles, no uplit domes, handrails at every drop, bird-safe patterned glass on large glazing, plants at a believable size, wild land around the buildings rather than lawns. Crystals are occasional, at most one point in a scene, and most images have none.
 - **Formats.** 16:9 for heroes, 4:3 for cards, 1:1 for tiles. Export as WebP or JPG at about 1,400–2,000 px wide.
 
 ![Earth dome and printed-earth homes](/img/home/form-earth-dome.webp)

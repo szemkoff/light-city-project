@@ -42,6 +42,7 @@
 
 /* cards */
 .lc-page .pg-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--space-6)}
+.lc-page .pg-cards:has(> :nth-child(6):last-child){grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .lc-page .pg-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .lc-page .pg-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(29,26,21,.45)}
 .lc-page .pg-card img{width:100%;aspect-ratio:3/2;object-fit:cover}

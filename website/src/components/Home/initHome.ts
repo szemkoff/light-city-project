@@ -201,6 +201,7 @@ const DOCS = [
   ['concepts/energy-systems', 'Concepts', 'Energy systems', 'Solar microgrid plus the subtle-energy research track.'],
   ['design/architecture', 'Design', 'Architecture', 'Spire, domes, rings — archetype vs. Earth build.'],
   ['design/organic-forms-and-materials', 'Design', 'Beyond the box', 'Curved forms and healthy, low-cost materials, with costs.'],
+  ['design/light-on-the-land', 'Design', 'Light on the land', 'Minimal impact on nature: what is possible today, ten commitments.'],
   ['design/layout-diagrams', 'Design', 'Layout & diagrams', 'City plan, cross-sections and energy flows.'],
   ['design/visual-language', 'Design', 'Visual language', 'Symbols, forms and the look of the city.'],
   ['design/color-and-light', 'Design', 'Color & light', 'How light shapes every space and ritual.'],

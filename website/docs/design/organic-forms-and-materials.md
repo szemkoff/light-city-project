@@ -72,7 +72,7 @@ Methods ordered from cheapest and simplest to most engineered. Costs are indicat
 
 **Superadobe (earthbag).** Long bags filled with moist earth are coiled into domes and tied with barbed wire. Nader Khalili's Cal-Earth developed the method; bag rolls cost $445–1,295 ([Cal-Earth](https://calearth.org/pages/superadobe-bags)), and UN refugee shelters have been built from about $625 ([WIPO](https://www.wipo.int/ar/web/ip-advantage/w/stories/the-poetry-of-architecture)). It is the most accessible way to build a curved room, and work parties can build it together.
 
-![Earth dome meditation pod with clay plaster, hearth and oculus](/img/home/form-earth-dome.webp)
+![Earth dome room with clay plaster, an oculus and a low tea table](/img/home/form-earth-dome.webp)
 
 **3D-printed earth.** TECLA in Italy (WASP with Mario Cucinella Architects) printed two linked raw-earth domes in about 200 hours from 60 m³ of local soil, with average power under 6 kW ([WASP](https://www.3dwasp.com/en/3d-printed-house-tecla/)). An earlier WASP print used about €900 of wall material ([Faircompanies](https://faircompanies.com/videos/wasp-3d-prints-round-eco-homes-from-any-local-raw-earth/)). Durability in wet or freezing climates is not yet proven, so this belongs in dry, mild sites first.
 

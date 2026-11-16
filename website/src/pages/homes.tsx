@@ -33,11 +33,11 @@ export default function Homes(): JSX.Element {
       <Section alt id="types" eyebrow="Home types" title="Choose the scale of private life you need.">
         <Feature
           img="home-tiny"
-          alt="Four curved-timber tiny homes with green roofs and large windows around a courtyard garden with a sunken fire circle and a vertical quartz point set on a stone base, a glass dome behind"
+          alt="Four curved-timber tiny homes with green roofs and large windows around a courtyard garden with stone seating and planted beds, a glass dome behind"
           kicker="Tiny home · 200–300 sf"
           title="Tiny home"
           tag="$500–700 / month">
-          <p>A self-contained curved-timber home with a sleeping niche, a compact kitchen and bath, big windows and a deck. Tiny homes are grouped in fours around a shared courtyard with planted beds, a sunken fire circle and a single quartz point on a stone base, so neighbors share outdoor space naturally.</p>
+          <p>A self-contained curved-timber home with a sleeping niche, a compact kitchen and bath, big windows and a deck. Tiny homes are grouped in fours around a shared courtyard with planted beds and stone seating, so neighbors share outdoor space naturally.</p>
           <ul>
             <li><strong>Best for:</strong> singles, artists, newcomers and contribution-based residents</li>
             <li><strong>Where:</strong> garden clusters on the outer ring, a short walk from a communosphere</li>
@@ -60,7 +60,7 @@ export default function Homes(): JSX.Element {
         </Feature>
         <Feature
           img="home-1br"
-          alt="Modern one-bedroom with a stone counter, a fireplace and glass walls onto a dome garden"
+          alt="Modern one-bedroom with a stone counter, built-in shelves and glass walls onto a dome garden"
           kicker="1-bedroom · 600–800 sf"
           title="One-bedroom"
           tag="$950–1,300 / month">
@@ -74,7 +74,7 @@ export default function Homes(): JSX.Element {
         <Feature
           reverse
           img="home-2br"
-          alt="Curved timber family homes with green roofs along a car-free lane with e-bikes and a fire circle, a spire and dome beyond"
+          alt="Curved timber family homes with green roofs along a car-free lane with e-bikes, cyclists and neighbors on benches, a spire and dome beyond"
           kicker="2-bedroom · 900–1,200 sf"
           title="Two-bedroom family home"
           tag="$1,300–1,700 / month">
@@ -91,7 +91,7 @@ export default function Homes(): JSX.Element {
       <Section id="earth" eyebrow="Beyond the box" title="Earth tiny homes: built from the ground they stand on." lead="An option for the tiny-home clusters: small curved homes of earthbag (superadobe) or 3D-printed local soil, finished in clay plaster. Lower cost, healthier air and a quiet, rounded shape.">
         <Feature
           img="form-superadobe"
-          alt="A cluster of small superadobe earth domes with sand-colored clay plaster, round windows and planted roofs around a courtyard garden with a sunken fire circle"
+          alt="A cluster of small superadobe earth domes with sand-colored clay plaster, round windows and planted roofs around a courtyard garden with a small outdoor fire pit"
           kicker="Earth option · tiny home"
           title="Superadobe and printed-earth clusters"
           tag="Dry and mild climates first">
@@ -104,7 +104,7 @@ export default function Homes(): JSX.Element {
         <Feature
           reverse
           img="form-earth-dome"
-          alt="Inside an earth dome: smooth clay-plastered walls, a skylight oculus, a built-in bench and a central fire bowl"
+          alt="Inside an earth dome: smooth clay-plastered walls, a skylight oculus, a built-in bench and a low wooden tea table where people sit together"
           kicker="Inside · build together"
           title="Clay interiors, built with residents"
           tag="Pilot in Stage 4">
