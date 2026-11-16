@@ -14,13 +14,13 @@ Sacred geometry is the study of geometric forms and their metaphysical meanings,
 
 ### Visual Inspiration
 
-The sacred geometry principles manifest in both your vision and the real-world example of Delphin:
+The original visionary images show these principles (visionary archetype art, not a real place or a design):
 
 ![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
 
-![Delphin Sacred Geometry in Action](/img/inspiration/delphin-aerial-view-1.png)
+![Delphin aerial view, archetype art](/img/inspiration/delphin-aerial-view-1.png)
 
-Notice how both exhibit circular, concentric patterns with a central focus point—the manifestation of sacred geometric principles in actual form.
+Both show circular, concentric patterns around a central point. The Phase 1 plan keeps that idea in a buildable form: five rings around a plaza and spire.
 
 ---
 
@@ -122,7 +122,7 @@ The Flower of Life contains within it all the patterns of creation - the genesis
 **Application**: Building forms, crystal installations, meditation objects  
 **Energy**: Each solid carries specific properties and consciousness
 
-![Platonic Solids](/img/diagrams/Platonic-Solids.jpg)
+![Platonic Solids](/img/diagrams/platonic-solids.svg)
 
 The five Platonic Solids are the only regular polyhedra where each face is the same regular polygon and the same number of faces meet at each vertex. Each corresponds to an element and carries unique energetic properties:
 
@@ -140,7 +140,7 @@ In Light City, these forms are used in energy nodes, building structures, and me
 **Application**: All architectural proportions, layout ratios, aesthetic design  
 **Energy**: Creates natural resonance with human consciousness
 
-![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.jpg)
+![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.svg)
 
 The Golden Ratio appears throughout nature - in nautilus shells, flower petals, human proportions, and galaxy spirals. Light City's architecture uses these proportions to create spaces that resonate with natural consciousness.
 

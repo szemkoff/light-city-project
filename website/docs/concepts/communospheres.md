@@ -17,18 +17,20 @@ Communospheres represent a revolutionary approach to living spaces—spherical s
 :::info Scale Clarification
 **Delphin Scale** (Off-World Reference): 600-1,200 ft diameter spheres housing 10,000 people each represent advanced off-world technology and serve as inspirational reference.
 
-**Light City Scale** (Earth Implementation): 30-90 m (100-300 ft) diameter domes housing 80-400 residents each, using proven technologies (CLT, geodesic structures, BIPV). See [Architecture](/docs/design/architecture) for detailed specifications.
+**Light City Scale** (Earth Implementation): Phase 1 domes are 30–45 m (100–150 ft) across and house 80–120 residents each, using proven technologies (timber gridshells, CLT, clay interiors, BIPV). See [Beyond the Box](/docs/design/organic-forms-and-materials) for forms and materials.
 :::
 
 ### Visual Reference
 
-Your original vision of Light City showing the spherical communosphere concept:
+How a Phase 1 communosphere could look: a timber gridshell dome with terraced homes around a garden atrium.
+
+![Inside a timber dome: terraced homes around a planted atrium](/img/home/city-dome-cutaway.webp)
+
+The original visionary images that inspired the idea (visionary archetype art, not a real place or a design.):
 
 ![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
 
-Delphin's actual communospheres as they appear from above (aerial view showing multiple spheres):
-
-![Delphin Aerial View](/img/inspiration/delphin-aerial-view-1.png)
+![Delphin aerial view, archetype art](/img/inspiration/delphin-aerial-view-1.png)
 
 ---
 
@@ -46,7 +48,7 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 ![Communosphere Cross-Section](/img/diagrams/communosphere-cross-section.svg)
 
-*Detailed cross-section showing all interior levels, living spaces, and the central resonance core.*
+*Phase 1 cross-section: a 30–45 m timber gridshell, 15–25 m tall, with homes on 3–5 terraced levels, a garden atrium, shared kitchen and commons, clay-plastered rooms and a crown oculus for natural ventilation.*
 
 ### Physical Structure
 

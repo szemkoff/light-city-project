@@ -1,101 +1,91 @@
 # Visual Language
 
-*Principles, patterns, and design tokens that give Light City its recognizable look and feel*
+*How Light City looks in photos, diagrams, type and icons: Modern Organic, a blend of nature and technology*
 
-![Light City Visual Identity](/img/inspiration/light-city-vision-1.jpg)
+![Light City at dusk: curved timber domes, gardens, people in natural fabrics and a slender spire](/img/home/hero.webp)
 
-*The visual language of Light City - crystalline, luminous, and rooted in sacred geometry.*
+*Modern Organic: curved timber, glass and earth, living plants, warm light and people in natural fabrics.*
 
 ## Purpose
 
-This guide defines the visual system used across all Light City materials (documents, diagrams, concept art, web, and potential physical signage). It ensures coherence, beauty, and resonance with the Light City ethos.
+This guide keeps every Light City image, diagram and page consistent and readable. It covers concept photos, technical diagrams, typography, icons and how to label visionary art.
 
-## Core Principles
+## Core principles
 
-- **Light as material**: Light is a primary design element, not decoration.
-- **Crystalline clarity**: Faceted, precise, and harmonious compositions.
-- **Sacred geometry**: Circles, spirals, golden ratio, Platonic solids underpin layouts.
-- **Unity in diversity**: Consistent system with room for creative expression.
-- **Nature-integrated**: Forms echo mountains, crystals, water, sky.
+- **Modern Organic.** Nature and technology together: curved glulam and CLT, gridshells, glass, rammed earth and clay, living walls, solar glazing, warm integrated light. Not medieval, not rustic cabins, not science fiction.
+- **Buildable first.** Images of what we plan to build show Phase 1 facts: 30–45 m domes, a 60–120 m spire, 200 residents.
+- **Honest labels.** Visionary archetype art (Delphin, the original vision images) is always captioned as "Visionary archetype art, not a real place or a design."
+- **Readable.** If you cannot read a label on a phone, the diagram is not finished.
+- **Respectful.** Sacred symbols from living traditions are shown with their context and are not used as decoration only.
 
-## Design Tokens
+## Concept photos (Modern Organic)
 
-### Color Roles (see `color-and-light.md` for palette values)
+Use this style note at the end of every image prompt:
 
-- Primary: Celestial Blue
-- Secondary: Solar Gold
-- Accent: White-Gold Highlight
-- Support: Deep Space Blue, Mist Gray
-- States: Success (Emerald), Caution (Amber), Critical (Rose)
+> Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm integrated LED, quartz crystal accents, sculptural fire features. People in linen, cotton and raw silk in off-white, sand, sage and terracotta. Realistic documentary photo with a quiet sense of wonder. No text or logos. Avoid medieval, rustic cabins and fantasy.
 
-### Typography
+- **Scale.** Domes 30–45 m across, 3–5 levels; the spire is slender, not a skyscraper.
+- **People.** Diverse ages and backgrounds, doing ordinary things: cooking, working, building, resting.
+- **Technology.** Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.
+- **Formats.** 16:9 for heroes, 4:3 for cards, 1:1 for tiles. Export as WebP or JPG at about 1,400–2,000 px wide.
 
-- Headings: Geometric humanist sans (e.g., "Inter", "Avenir", or similar)
-- Body: Readable sans (e.g., "Inter"/"Nunito Sans")
-- Mono (technical): "JetBrains Mono"/"Fira Code"
-- Line length: 60–80 chars
-- Heading rhythm: 1.25 modular scale
+![Earth dome and printed-earth homes](/img/home/form-earth-dome.webp)
 
-### Iconography
+*Earth domes and printed-earth homes: low-cost forms that belong in the image library alongside timber domes.*
 
-- Stroke-based, rounded joins, 1.5px–2px weight
-- Geometry-derived icons (circle, hexagon, triangle)
-- Avoid skeuomorphism; prefer abstract sacred forms
+## Diagrams
 
-![Icon Set](/img/diagrams/icon-set.svg)
+All diagrams in the library follow these rules:
 
-*Complete Light City icon set based on sacred geometry principles.*
+- **Canvas.** Pearl background (`#FBF8F2`), rounded corners, width 1,100–1,300 px in SVG.
+- **Type.** Title in serif at 44 px; labels and body in sans at 19–22 px minimum (at 1,300 px wide). Nothing smaller than 17 px.
+- **Lines.** Ink for outlines, Gold for structure and the main flow, Terracotta for reference lines. 2–4 px strokes.
+- **Labels never overlap** lines, shapes or other labels. Use leader lines with a dot at the anchor.
+- **Facts.** Use the current numbers from [At a Glance](/docs/at-a-glance). Write the phase on the diagram.
+- **One idea per diagram.** If a diagram needs a paragraph to explain, split it.
+- **Geometry diagrams** pair the figure with two panels: "Traditional meaning" and "How Light City uses it."
 
-### Spacing & Grid
+![Light City plan: five rings around the spire and plaza](/img/diagrams/city-layout.svg)
 
-- 8pt spacing system (8, 16, 24, 32, 48, 64)
-- Layout grid: radial for city diagrams; 12-col for documents/web
-- Golden ratio overlays for hero compositions
+*Example: numbered rings, a short legend and plain-language labels.*
 
-## Imagery System
+## Typography
 
-- Architecture: Crystalline, semi-transparent, luminous
-- Nature: Forests, water, sky—integrated with structures
-- People: Diverse, contemplative, collaborative; respectful
-- Effects: Subtle bloom, diffraction, volumetric light
+- **Display and headings:** Zodiak (serif), falling back to Iowan Old Style or Georgia.
+- **Body and labels:** Switzer (sans), falling back to Inter or system sans.
+- **Mono (technical):** JetBrains Mono or Fira Code.
+- Line length 60–80 characters; body at 16 px or larger on the web.
 
-## Geometry Library
+## Iconography
 
-- Circle, Vesica Piscis, Seed/Flower of Life
-- Spirals (logarithmic, Fibonacci)
-- Platonic solids; Merkaba
-- Toroidal fields (for energy diagrams)
+- Stroke icons, 3 px ink lines with one gold accent, rounded joins, on a pearl disc.
+- Icons describe real things: spire, dome, earth home, gridshell, microgrid, water, food, temple, learning, community, research, governance.
 
-![Golden Ratio Spiral](/img/diagrams/golden-ratio-spiral.jpg)
+![Light City icon set](/img/diagrams/icon-set.svg)
 
-*The Golden Ratio spiral - a fundamental pattern in Light City's visual language.*
+*The Light City icon set.*
 
-![Merkaba](/img/diagrams/merkaba.svg)
+## Geometry library
 
-*The Merkaba - representing the light body and dimensional bridge in our visual system.*
+- Circle, vesica piscis, Flower of Life, golden ratio, Platonic solids, star tetrahedron (Merkaba), Metatron's Cube, Sri Yantra.
+- Geometry guides proportion, plans and ornament. We do not claim physical effects from shapes.
 
-## Diagram Conventions
+![Golden ratio](/img/diagrams/golden-ratio-spiral.svg)
 
-- Line color: Deep Space Blue (#0B2447) at 70% opacity
-- Highlight paths: Celestial Blue
-- Energy flows: Gold gradients → white
-- Nodes: Circles; Communospheres: domes/spheres; Spire: faceted obelisk
-- Label style: Small caps, letterspacing +2%, muted gray
+*The golden ratio: a proportion guide for rooms, windows and ring spacing, used as one tool among many.*
+
+![Star tetrahedron (Merkaba)](/img/diagrams/merkaba.svg)
+
+*The star tetrahedron: a motif for the spire crown, pavilion screens and lattice nodes.*
 
 ## Accessibility
 
-- Contrast ratio AA minimum for text
-- Non-color cues for states
-- Legible type at 16px+ base size
-- Motion/light effects kept subtle for sensitivity
-
-## Usage Examples
-
-- Web hero: Radial gradient sky → central spire silhouette; golden light column
-- Diagram: Concentric rings with 12 sphere nodes; radial spokes; legend
-- Poster: Seed of Life overlaid with city plan; blue/white/gold palette
+- Contrast at least AA (4.5:1 for body text).
+- Do not use color alone to carry meaning; add labels or patterns.
+- Every image has descriptive alt text.
+- Keep motion and light effects subtle.
 
 ---
 
 **Last reviewed**: November 2026  
-**Related**: `color-and-light.md`, `architecture.md`, `sacred-geometry.md`
+**Related**: [Color and Light](/docs/design/color-and-light), [Architecture](/docs/design/architecture), [Beyond the Box](/docs/design/organic-forms-and-materials), [Sacred Geometry](/docs/concepts/sacred-geometry)

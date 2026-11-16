@@ -20,12 +20,12 @@ Light City's architecture serves multiple purposes:
 
 ### Vision References
 
-Your conceptual vision of Light City:
+The original visionary images of Light City (archetype art, not designs):
 
 ![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
 ![Light City Vision 2](/img/inspiration/light-city-vision-2.jpg)
 
-Delphin - A real existing city on another world that embodies these principles:
+Delphin, the city described in the channeled source material. Visionary archetype art, not a real place or a design.
 
 ![Delphin Crystal City 1](/img/inspiration/delphin-aerial-view-1.png)
 ![Delphin Crystal City 2](/img/inspiration/delphin-aerial-view-2.png)
@@ -76,9 +76,13 @@ Connection across dimensions:
 
 ## Overall Layout
 
+![Aerial view of the Phase 1 hamlet: three timber domes, gardens and solar fields](/img/home/city-aerial.webp)
+
+*Phase 1 as planned: three 30–45 m timber domes around a plaza, with gardens and a solar microgrid at the edge.*
+
 ![City Scale Comparison](/img/diagrams/city-scale-comparison.svg)
 
-*Understanding Light City's scale: Phased growth from hamlet to town, with terrestrial spire scaled for Earth physics.*
+*Light City grows from a 200-person hamlet to a town only as each phase proves out. Spire heights drawn to scale next to familiar landmarks.*
 
 ### Phased Development & Scale
 
@@ -109,7 +113,7 @@ Connection across dimensions:
 
 ![Light City Layout](/img/diagrams/city-layout.svg)
 
-This top-down view shows the complete city structure with concentric rings, radial pathways, communospheres positioned around the outer ring, and the central crystal spire at the heart of the design. Each element is precisely positioned according to sacred geometric principles.
+This top-down plan shows five rings joined by 12 radial paths: the spire and plaza at the center, then temple and learning, studios and communosphere domes (three in Phase 1, more later), homes and gardens, and an outer energy and wild buffer. Everything sits within a 10-minute walk of the plaza.
 
 **Primary Structure**: Concentric circles radiating from center
 
@@ -154,7 +158,7 @@ graph TB
 
 ### Delphin-Inspired Model
 
-Based on the existing crystal city of Delphin (on planet Israel), Light City can incorporate proven architectural principles:
+The Delphin archetype from the channeled source material suggests these principles, which we translate into buildable forms:
 
 - **Central Crystal Spire**: Energy and consciousness hub
 - **Radial Urban Area**: Dense development in middle rings
@@ -168,12 +172,12 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 
 ![Central Spire Cross-Section](/img/diagrams/central-spire-cross-section.svg)
 
-*The Delphin spire (40,000 ft) serves as mythic reference and visionary archetype. Light City's terrestrial prototype is scaled for Earth physics.*
+*The Phase 1 Light Spire: a 60–120 m steel and timber lattice with a 200–500 kWp solar crown, an observation level and a gathering pavilion. Mjøstårnet (85.4 m) shows that tall timber is already built.*
 
 #### Vision source (off-world reference)
 
 **Delphin Spire**: 40,000 feet (~12 km / 7.6 miles)
-- Exists on planet Israel in another star system
+- Described in the channeled source material (not a verified place)
 - Provides total energy for entire crystal city
 - Demonstrates what's possible with advanced consciousness-matter technology
 - Serves as aspirational model and proportional guide

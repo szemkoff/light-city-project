@@ -8,23 +8,23 @@
 
 ![City Layout](/img/diagrams/city-layout.svg)
 
-*Concentric ring structure with central spire, radial pathways, and communospheres at the perimeter.*
+*Five rings and 12 radial paths around the spire and plaza; three communosphere domes in Phase 1.*
 
 ### Energy Flow System
 
 ![Energy Flow](/img/diagrams/energy-flow-detailed.svg)
 
-*Complete energy distribution from cosmic source through crystal spire to all city infrastructure.*
+*Phase 1 solar microgrid: make, store and steer, use. Proven technology only (TRL 8–9).*
 
 ### Sacred Geometry Foundations
 
 ![Vesica Piscis](/img/diagrams/vesica-piscis.svg)
 
-*The Vesica Piscis - portal geometry used in doorways and transformation spaces.*
+*The Vesica Piscis: the geometry of the pointed arch, used for doorways and gates.*
 
 ![Metatron's Cube](/img/diagrams/metatrons-cube.svg)
 
-*Metatron's Cube - the master template containing all Platonic Solids, forming the city's energy grid.*
+*Metatron's Cube: a study grid for gridshell node layouts and floor inlays.*
 
 ## Required Diagram Set (Stage 1)
 - City Plan (Top-Down): Concentric rings, radial spokes, ~12 communospheres

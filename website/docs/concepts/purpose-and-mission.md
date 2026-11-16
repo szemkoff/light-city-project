@@ -1,8 +1,8 @@
 # Purpose and Mission
 
-![Delphin - A Living Example](/img/inspiration/delphin-aerial-view-1.png)
+![Light City at dusk: timber domes, gardens and a slender spire](/img/home/hero.webp)
 
-*Delphin - A real crystal city demonstrating that our vision is not just philosophy, but achievable reality.*
+*Light City as we plan to build it: a 200-person hamlet of timber domes, gardens and a solar spire.*
 
 ## Project Purpose
 
