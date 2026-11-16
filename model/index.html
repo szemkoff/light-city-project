@@ -56,9 +56,11 @@
   app = start(c, {phase, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
   showPhase(phase);
   const box = document.getElementById('views');
-  for (const [k, v] of Object.entries(VIEWS)) {
+  // Three view buttons for visitors; the other views stay available by URL (?view=) for reference renders.
+  const BUTTONS = {aerial: 'Aerial', top: 'Plan', plaza: 'Street level'};
+  for (const [k, label] of Object.entries(BUTTONS)) {
     const b = document.createElement('button');
-    b.textContent = v.label; b.setAttribute('aria-pressed', k === (q.get('view') || 'aerial'));
+    b.textContent = label; b.title = VIEWS[k].label; b.setAttribute('aria-pressed', k === (q.get('view') || 'aerial'));
     b.onclick = () => { app.setView(k); box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); };
     box.appendChild(b);
   }
