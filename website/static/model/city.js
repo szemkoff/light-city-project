@@ -1,8 +1,29 @@
-// Light City Phase 1 reference model.
+// Light City reference model, Phases 1–3.
 // Source of truth: docs/design/architecture.md (Circular form) and img/diagrams/city-layout.svg.
 // Units are metres. North is -Z. Angles are measured counter-clockwise from east, as on the plan.
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
+
+// Three phases share one radial plan and grow outward from the same spire and plaza.
+// Phase facts: docs/at-a-glance.md (Scale by phase), docs/concepts/communospheres.md, docs/design/architecture.md.
+export const PHASES = {
+  1: {name: 'Phase 1 · Pilot hamlet', people: '200 residents', area: '20–30 acres',
+    spire: {height: 90, base: 9, top: 3.2, deck: 72},
+    inner: [[105, 10], [225, 7], [345, 7]],
+    domes: [[30, 40], [150, 40], [270, 40]],
+    homes: 30, extent: 222, view: 1},
+  2: {name: 'Phase 2 · Village', people: '1,500 residents', area: 'about 160 acres',
+    spire: {height: 150, base: 12, top: 3.6, deck: 120},
+    inner: [[105, 10], [225, 7], [345, 7], [45, 8], [165, 8], [285, 8]],
+    domes: [[30, 40], [150, 40], [270, 40], [90, 52], [210, 52], [330, 52], [0, 52], [180, 52]],
+    homes: 48, clusters: [255, 315], belt: [360, 460], extent: 460, view: 1.9},
+  3: {name: 'Phase 3 · Town', people: '8,000+ residents', area: 'about 1 square mile',
+    spire: {height: 240, base: 17, top: 4, deck: 190},
+    inner: [[105, 10], [225, 7], [345, 7], [45, 8], [165, 8], [285, 8], [15, 7], [195, 7]],
+    domes: [[30, 40], [150, 40], [270, 40], [90, 52], [210, 52], [330, 52], [0, 52], [180, 52], [60, 52], [120, 52], [240, 52], [300, 52]],
+    districts: {r: 455, d: 80, deg: [15, 75, 135, 195, 255, 315]},
+    homes: 60, terraces: [262, 325, 395, 520, 590], belt: [650, 910], extent: 910, view: 3.6},
+};
 
 export const PLAN = {
   rings: [
@@ -13,10 +34,8 @@ export const PLAN = {
     {n: 5, name: 'Energy & wild buffer', r: 222, color: 0x8d9d64},
   ],
   radialPaths: 12,
-  spire: {height: 90, base: 9, top: 3.2, deck: 72},
-  temples: {count: 4, radius: 58, startDeg: 45, size: 8},
-  domes: {radius: 109, diameter: 40, phase1Deg: [30, 150, 270], laterDeg: [0, 60, 90, 120, 180, 210, 240, 300, 330]},
-  homes: {radius: 160, count: 30, size: 4.5},
+  domeRing: 109,
+  homes: {radius: 160, size: 4.5},
   solar: {radius: 203, count: 16},
 };
 
@@ -24,104 +43,87 @@ const P = PLAN;
 const rad = (d) => (d * Math.PI) / 180;
 const polar = (r, deg) => new THREE.Vector3(Math.cos(rad(deg)) * r, 0, -Math.sin(rad(deg)) * r);
 
-export function buildCity(scene) {
+export function buildCity(scene, phase = 1) {
+  const F = PHASES[phase] || PHASES[1];
   const mat = (color, o = {}) => new THREE.MeshStandardMaterial({color, roughness: 0.9, metalness: 0, ...o});
+  const flat = (geo, m, y) => { const o = new THREE.Mesh(geo, m); o.rotation.x = -Math.PI / 2; o.position.y = y; o.receiveShadow = true; scene.add(o); return o; };
+
+  // Trees are instanced so the town phase stays fast
+  const treePts = [];
+  const tree = (x, z, s = 1) => treePts.push([x, z, s]);
 
   // Wild land beyond the city
-  const ground = new THREE.Mesh(new THREE.CircleGeometry(2200, 96), mat(0x7f8f58));
-  ground.rotation.x = -Math.PI / 2;
-  ground.receiveShadow = true;
-  scene.add(ground);
+  flat(new THREE.CircleGeometry(F.extent + 3600, 96), mat(0x7f8f58), 0);
 
-  // Ring bands, outermost first
-  [...P.rings].reverse().forEach((ring, i) => {
-    const m = new THREE.Mesh(new THREE.CircleGeometry(ring.r, 128), mat(ring.color));
-    m.rotation.x = -Math.PI / 2;
-    m.position.y = 0.02 + i * 0.02;
-    m.receiveShadow = true;
-    scene.add(m);
-  });
+  // Outer bands added by later phases (drawn first so the core sits on top)
+  if (F.belt) {
+    flat(new THREE.CircleGeometry(F.belt[1], 160), mat(0x8d9d64), 0.005);
+    flat(new THREE.CircleGeometry(F.belt[0], 160), mat(0x98ab72), 0.01);
+  }
+
+  // Core ring bands, outermost first
+  [...P.rings].reverse().forEach((ring, i) => flat(new THREE.CircleGeometry(ring.r, 128), mat(ring.color), 0.02 + i * 0.02));
 
   // Ring paths (gravel)
   const path = mat(0xe6dcc6);
-  P.rings.slice(0, 4).forEach((ring) => {
-    const m = new THREE.Mesh(new THREE.RingGeometry(ring.r - 1.6, ring.r + 1.6, 160), path);
-    m.rotation.x = -Math.PI / 2;
-    m.position.y = 0.15;
-    m.receiveShadow = true;
-    scene.add(m);
-  });
+  const ringPath = (r, w = 3.2) => flat(new THREE.RingGeometry(r - w / 2, r + w / 2, Math.max(160, Math.round(r))), path, 0.15);
+  P.rings.slice(0, 4).forEach((ring) => ringPath(ring.r));
+  if (F.belt) { ringPath(P.rings[4].r); ringPath(F.belt[0], 4); }
 
-  // 12 radial paths
-  for (let i = 0; i < P.radialPaths; i++) {
-    const deg = i * (360 / P.radialPaths);
-    const len = P.rings[4].r + 20 - P.rings[0].r;
-    const m = new THREE.Mesh(new THREE.PlaneGeometry(len, 3.2), path);
-    m.rotation.x = -Math.PI / 2;
+  // Radial paths: 12 from the plaza, plus 12 more in the town's outer rings
+  const radial = (deg, r0, r1, w) => {
+    const len = r1 - r0;
+    const m = flat(new THREE.PlaneGeometry(len, w), path, 0.16);
     m.rotation.z = rad(deg);
-    const mid = polar(P.rings[0].r + len / 2, deg);
-    m.position.set(mid.x, 0.16, mid.z);
-    m.receiveShadow = true;
-    scene.add(m);
-  }
+    const mid = polar(r0 + len / 2, deg);
+    m.position.x = mid.x; m.position.z = mid.z;
+  };
+  const edge = (F.belt ? F.belt[1] : P.rings[4].r) + 20;
+  for (let i = 0; i < P.radialPaths; i++) radial(i * 30, P.rings[0].r, edge, phase === 1 ? 3.2 : 4.5);
+  if (phase === 3) for (let i = 0; i < 12; i++) radial(15 + i * 30, 360, edge, 3.2);
 
   // Plaza: stone with a ring-shaped reflecting pool
-  const plaza = new THREE.Mesh(new THREE.CircleGeometry(P.rings[0].r - 1.6, 96), mat(0xcfc3aa));
-  plaza.rotation.x = -Math.PI / 2;
-  plaza.position.y = 0.18;
-  plaza.receiveShadow = true;
-  scene.add(plaza);
-  const pool = new THREE.Mesh(new THREE.RingGeometry(14, 24, 96), mat(0x7f9aa6, {roughness: 0.15, metalness: 0.2}));
-  pool.rotation.x = -Math.PI / 2;
-  pool.position.y = 0.22;
-  scene.add(pool);
+  flat(new THREE.CircleGeometry(P.rings[0].r - 1.6, 96), mat(0xcfc3aa), 0.18);
+  const pool = flat(new THREE.RingGeometry(14, 24, 96), mat(0x7f9aa6, {roughness: 0.15, metalness: 0.2}), 0.22);
+  pool.receiveShadow = false;
 
-  // Spire: tapered steel and timber lattice with an observation deck and a solar crown
-  const S = P.spire;
+  // Spire: tapered steel and timber lattice with an observation deck and a solar crown.
+  // Later phases extend the same tower, so it widens at the base and grows taller.
+  const S = F.spire;
   const timber = mat(0xb98a55, {roughness: 0.7});
   const steel = mat(0x8d8a84, {roughness: 0.5, metalness: 0.4});
-  const legs = 8;
-  for (let i = 0; i < legs; i++) {
-    const a = (i / legs) * Math.PI * 2;
+  const legW = S.height / 90;
+  for (let i = 0; i < 8; i++) {
+    const a = (i / 8) * Math.PI * 2;
     const b = new THREE.Vector3(Math.cos(a) * S.base, 0, Math.sin(a) * S.base);
     const t = new THREE.Vector3(Math.cos(a + 0.5) * S.top, S.height, Math.sin(a + 0.5) * S.top);
-    const len = b.distanceTo(t);
-    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.45, 0.7, len, 8), timber);
+    const leg = new THREE.Mesh(new THREE.CylinderGeometry(0.45 * legW, 0.7 * legW, b.distanceTo(t), 8), timber);
     leg.position.copy(b.clone().add(t).multiplyScalar(0.5));
     leg.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), t.clone().sub(b).normalize());
     leg.castShadow = true;
     scene.add(leg);
   }
   for (let h = 8; h < S.height; h += 8) {
-    const r = S.base + (S.top - S.base) * (h / S.height);
-    const ring = new THREE.Mesh(new THREE.TorusGeometry(r, 0.25, 6, 32), steel);
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(S.base + (S.top - S.base) * (h / S.height), 0.25 * legW, 6, 32), steel);
     ring.rotation.x = Math.PI / 2;
     ring.position.y = h;
     scene.add(ring);
   }
   const deck = new THREE.Mesh(new THREE.CylinderGeometry(7, 6, 3, 32), mat(0xd8cfbf));
-  deck.position.y = S.deck;
-  deck.castShadow = true;
-  scene.add(deck);
+  deck.position.y = S.deck; deck.castShadow = true; scene.add(deck);
   const crown = new THREE.Mesh(new THREE.CylinderGeometry(9, 4, 1.2, 32), mat(0x2c3a4a, {roughness: 0.3, metalness: 0.5}));
-  crown.position.y = S.height;
-  crown.castShadow = true;
-  scene.add(crown);
+  crown.position.y = S.height; crown.castShadow = true; scene.add(crown);
 
-  // Temple and learning pavilions (ring 2)
-  for (let i = 0; i < P.temples.count; i++) {
-    const p = polar(P.temples.radius, P.temples.startDeg + i * 90);
-    const d = new THREE.Mesh(new THREE.SphereGeometry(P.temples.size, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), mat(0xc79a62, {roughness: 0.6}));
-    d.position.copy(p);
-    d.castShadow = true;
-    scene.add(d);
-    const base = new THREE.Mesh(new THREE.CylinderGeometry(P.temples.size + 2, P.temples.size + 2, 0.6, 32), mat(0xbdb29c));
-    base.position.copy(p).setY(0.3);
-    scene.add(base);
-  }
+  // Temple and learning pavilions (ring 2), between the radial paths. The first is the temple.
+  const pavilion = (p, size, color = 0xc79a62) => {
+    const d = new THREE.Mesh(new THREE.SphereGeometry(size, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), mat(color, {roughness: 0.6}));
+    d.position.copy(p); d.castShadow = true; scene.add(d);
+    const base = new THREE.Mesh(new THREE.CylinderGeometry(size + 2, size + 2, 0.6, 32), mat(0xbdb29c));
+    base.position.copy(p).setY(0.3); scene.add(base);
+  };
+  F.inner.forEach(([deg, size]) => pavilion(polar(58, deg), size));
 
-  // Phase 1 communosphere domes (ring 3): glazed geodesic shell with timber ribs and a green-roof cap
-  const domeR = P.domes.diameter / 2;
+  // Communosphere domes: glazed geodesic shell with timber ribs and a green-roof cap
   const half = (r, detail) => {
     const g = new THREE.IcosahedronGeometry(r, detail);
     const pos = g.attributes.position;
@@ -129,94 +131,157 @@ export function buildCity(scene) {
     g.computeVertexNormals();
     return g;
   };
-  P.domes.phase1Deg.forEach((deg) => {
-    const p = polar(P.domes.radius, deg);
-    const glass = new THREE.Mesh(half(domeR, 3), mat(0x9fb6bf, {roughness: 0.15, metalness: 0.3, transparent: true, opacity: 0.85}));
-    glass.position.copy(p);
-    glass.castShadow = true;
-    scene.add(glass);
-    const ribs = new THREE.LineSegments(new THREE.WireframeGeometry(half(domeR + 0.15, 3)), new THREE.LineBasicMaterial({color: 0xa0743f}));
-    ribs.position.copy(p);
-    scene.add(ribs);
-    const cap = new THREE.Mesh(new THREE.SphereGeometry(domeR + 0.3, 32, 8, 0, Math.PI * 2, 0, 0.55), mat(0x6f8a4a));
-    cap.position.copy(p);
-    scene.add(cap);
-  });
-  // Later-phase plots: orchards for now
-  const leaf = mat(0x5f7a3d);
-  const trunk = mat(0x6b5038);
-  const tree = (x, z, s = 1) => {
-    const t = new THREE.Mesh(new THREE.CylinderGeometry(0.25 * s, 0.35 * s, 3 * s, 6), trunk);
-    t.position.set(x, 1.5 * s, z);
-    const c = new THREE.Mesh(new THREE.SphereGeometry(2.4 * s, 10, 8), leaf);
-    c.position.set(x, 4.2 * s, z);
-    c.castShadow = true;
-    scene.add(t, c);
+  const glassM = mat(0x9fb6bf, {roughness: 0.15, metalness: 0.3, transparent: true, opacity: 0.85});
+  const ribM = new THREE.LineBasicMaterial({color: 0xa0743f});
+  const capM = mat(0x6f8a4a);
+  const dome = (p, diameter, squash = 1) => {
+    const r = diameter / 2;
+    const g = new THREE.Mesh(half(r, diameter > 60 ? 4 : 3), glassM);
+    g.scale.y = squash; g.position.copy(p); g.castShadow = true; scene.add(g);
+    const ribs = new THREE.LineSegments(new THREE.WireframeGeometry(half(r + 0.15, diameter > 60 ? 4 : 3)), ribM);
+    ribs.scale.y = squash; ribs.position.copy(p); scene.add(ribs);
+    const cap = new THREE.Mesh(new THREE.SphereGeometry(r + 0.3, 32, 8, 0, Math.PI * 2, 0, 0.55), capM);
+    cap.scale.y = squash; cap.position.copy(p); scene.add(cap);
   };
-  P.domes.laterDeg.forEach((deg) => {
-    const p = polar(P.domes.radius, deg);
-    for (let k = 0; k < 7; k++) {
-      const a = (k / 7) * Math.PI * 2;
-      tree(p.x + Math.cos(a) * 8, p.z + Math.sin(a) * 8, 0.9);
-    }
-  });
+  const built = new Set(F.domes.map(([d]) => d));
+  F.domes.forEach(([deg, d]) => dome(polar(P.domeRing, deg), d, d > 45 ? 0.8 : 1));
+  // Empty dome plots stay as orchards until a later phase
+  for (let deg = 0; deg < 360; deg += 30) if (!built.has(deg)) {
+    const p = polar(P.domeRing, deg);
+    for (let k = 0; k < 7; k++) { const a = (k / 7) * Math.PI * 2; tree(p.x + Math.cos(a) * 8, p.z + Math.sin(a) * 8, 0.9); }
+  }
 
-  // Earth homes with green roofs (ring 4), skipping the radial paths
-  for (let i = 0; i < P.homes.count; i++) {
-    const deg = (i + 0.5) * (360 / P.homes.count);
-    const p = polar(P.homes.radius, deg);
-    const h = new THREE.Mesh(new THREE.SphereGeometry(P.homes.size, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2), mat(0xc98d64, {roughness: 0.95}));
-    h.scale.set(1.3, 0.75, 1);
-    h.rotation.y = rad(deg);
-    h.position.copy(p);
-    h.castShadow = true;
-    scene.add(h);
-    const roof = new THREE.Mesh(new THREE.SphereGeometry(P.homes.size + 0.15, 20, 6, 0, Math.PI * 2, 0, 0.7), mat(0x6f8a4a));
-    roof.scale.copy(h.scale);
-    roof.rotation.copy(h.rotation);
-    roof.position.copy(p);
-    scene.add(roof);
-    tree(...(() => { const q = polar(P.homes.radius + 10, deg + 4); return [q.x, q.z]; })(), 0.8);
+  // Earth homes with green roofs (ring 4), between the radial paths
+  const earthM = mat(0xc98d64, {roughness: 0.95});
+  const earthHome = (p, deg, size, sx = 1.3) => {
+    const h = new THREE.Mesh(new THREE.SphereGeometry(size, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2), earthM);
+    h.scale.set(sx, 0.75, 1); h.rotation.y = rad(deg); h.position.copy(p); h.castShadow = true; scene.add(h);
+    const roof = new THREE.Mesh(new THREE.SphereGeometry(size + 0.15, 20, 6, 0, Math.PI * 2, 0, 0.7), capM);
+    roof.scale.copy(h.scale); roof.rotation.copy(h.rotation); roof.position.copy(p); scene.add(roof);
+  };
+  const offPath = (deg, gapDeg) => { const m = ((deg % 30) + 30) % 30; return m > gapDeg && m < 30 - gapDeg; };
+  for (let i = 0; i < F.homes; i++) {
+    const deg = (i + 0.5) * (360 / F.homes);
+    if (F.homes > 30 && !offPath(deg, 2.2)) continue;
+    earthHome(polar(P.homes.radius, deg), deg, P.homes.size);
+    const q = polar(P.homes.radius + 10, deg + 4); tree(q.x, q.z, 0.8);
   }
 
   // Solar arrays with meadow beneath (ring 5)
   const pv = mat(0x24313f, {roughness: 0.35, metalness: 0.4});
-  for (let i = 0; i < P.solar.count; i++) {
-    const deg = (i + 0.5) * (360 / P.solar.count);
-    const p = polar(P.solar.radius, deg);
-    const a = new THREE.Mesh(new THREE.BoxGeometry(22, 0.3, 9), pv);
-    a.position.copy(p).setY(2.2);
-    a.rotation.y = rad(deg) + Math.PI / 2;
-    a.rotateX(-0.45);
-    a.castShadow = true;
-    scene.add(a);
+  const array = (p, deg, w = 22, d = 9) => {
+    const a = new THREE.Mesh(new THREE.BoxGeometry(w, 0.3, d), pv);
+    a.position.copy(p).setY(2.2); a.rotation.y = rad(deg) + Math.PI / 2; a.rotateX(-0.45); a.castShadow = true; scene.add(a);
+  };
+  for (let i = 0; i < P.solar.count; i++) { const deg = (i + 0.5) * (360 / P.solar.count); array(polar(P.solar.radius, deg), deg); }
+
+  // Phase 2: village neighborhoods of earth-home courtyard clusters (six homes round a shared garden)
+  if (F.clusters) {
+    const garden = mat(0xb5c08c);
+    F.clusters.forEach((r) => {
+      for (let i = 0; i < 24; i++) {
+        const deg = 7.5 + i * 15;
+        const c = polar(r, deg);
+        flat(new THREE.CircleGeometry(9, 32), garden, 0.2).position.set(c.x, 0.2, c.z);
+        for (let k = 0; k < 6; k++) {
+          const a = deg + k * 60;
+          const p = c.clone().add(polar(15, a));
+          earthHome(p, a + 90, 4, 1.2);
+        }
+        tree(c.x, c.z, 0.9);
+      }
+      ringPath(r + 30, 2.4);
+    });
   }
 
-  // Scattered trees in ring 2 and wild woodland beyond ring 5
+  // Phase 3: two-to-three storey timber terraces with green roofs, in crescents along the rings
+  if (F.terraces) {
+    const wall = mat(0xc4a27a, {roughness: 0.8});
+    const roofM = mat(0x6f8a4a);
+    F.terraces.forEach((r, row) => {
+      const n = r > 360 ? 24 : 12, step = 360 / n, gap = (8 / r) * (180 / Math.PI);
+      for (let i = 0; i < n; i++) {
+        const a0 = i * step + gap, a1 = (i + 1) * step - gap;
+        const mid = (a0 + a1) / 2;
+        if (F.districts && Math.abs(r - F.districts.r) < 90 && F.districts.deg.some((d) => Math.abs(((mid - d + 540) % 360) - 180) < step)) continue;
+        const h = 7 + ((i + row) % 3) * 2.5;
+        const shape = new THREE.Shape();
+        const r0 = r - 8, r1 = r + 8;
+        shape.absarc(0, 0, r1, rad(a0), rad(a1), false);
+        shape.absarc(0, 0, r0, rad(a1), rad(a0), true);
+        const geo = new THREE.ExtrudeGeometry(shape, {depth: h, bevelEnabled: false, curveSegments: 24});
+        geo.rotateX(-Math.PI / 2);
+        const m = new THREE.Mesh(geo, wall); m.castShadow = true; m.receiveShadow = true; scene.add(m);
+        const roofGeo = new THREE.ShapeGeometry(shape, 24); roofGeo.rotateX(-Math.PI / 2);
+        const roof = new THREE.Mesh(roofGeo, roofM); roof.position.y = h + 0.05; scene.add(roof);
+      }
+      ringPath(r + 22, 2.4); ringPath(r - 22, 2.4);
+      for (let i = 0; i < n * 3; i++) { const q = polar(r + 30, (i + 0.5) * (360 / (n * 3))); tree(q.x, q.z, 0.85); }
+    });
+    // District hubs: large communosphere domes with a small temple and a market green
+    F.districts.deg.forEach((deg) => {
+      const c = polar(F.districts.r, deg);
+      flat(new THREE.CircleGeometry(F.districts.d / 2 + 22, 48), mat(0xcfc3aa), 0.19).position.set(c.x, 0.19, c.z);
+      dome(c, F.districts.d, 0.7);
+      pavilion(c.clone().add(polar(F.districts.d / 2 + 12, deg + 90)), 6);
+    });
+  }
+
+  // Food and energy belt: agrivoltaic arrays, solar greenhouses and food-forest rows by sector
+  if (F.belt) {
+    const [b0, b1] = F.belt;
+    const gh = mat(0xd6e2e4, {roughness: 0.2, metalness: 0.1, transparent: true, opacity: 0.8});
+    const sectors = 24;
+    for (let s = 0; s < sectors; s++) {
+      const kind = s % 3;
+      for (let r = b0 + 22; r < b1 - 12; r += kind === 0 ? 16 : 26) {
+        const span = 15 - (24 / r) * (180 / Math.PI) * 2;
+        const count = Math.max(1, Math.floor((rad(span) * r) / (kind === 0 ? 26 : 34)));
+        for (let k = 0; k < count; k++) {
+          const deg = s * 15 + (24 / r) * (180 / Math.PI) + (k + 0.5) * (span / count);
+          const p = polar(r, deg);
+          if (kind === 0) array(p, deg, 22, 7);
+          else if (kind === 1) {
+            const g = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 26, 16, 1, false, 0, Math.PI), gh);
+            g.rotation.z = Math.PI / 2; g.rotation.y = rad(deg); g.position.copy(p); g.castShadow = true; scene.add(g);
+          } else for (let t = -1; t <= 1; t++) { const q = polar(r, deg + t * (9 / r) * (180 / Math.PI)); tree(q.x, q.z, 0.8); }
+        }
+      }
+    }
+  }
+
+  // Scattered trees in ring 2 and wild woodland beyond the city
   let seed = 7;
   const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
   for (let i = 0; i < 90; i++) {
-    const deg = rnd() * 360;
-    const r = 40 + rnd() * 36;
+    const deg = rnd() * 360, r = 40 + rnd() * 36;
     if (Math.abs(((deg - 45) % 90 + 90) % 90 - 45) > 40) continue;
-    const p = polar(r, deg);
-    tree(p.x, p.z, 0.7);
+    if (F.inner.some(([d]) => Math.abs(((deg - d + 540) % 360) - 180) < 12)) continue;
+    const p = polar(r, deg); tree(p.x, p.z, 0.7);
   }
-  for (let i = 0; i < 700; i++) {
-    const deg = rnd() * 360;
-    const r = 235 + rnd() * 600;
-    const p = polar(r, deg);
-    tree(p.x, p.z, 1 + rnd() * 0.8);
+  const wild = 700 * F.view;
+  for (let i = 0; i < wild; i++) {
+    const deg = rnd() * 360, r = F.extent + 13 + rnd() * 600 * Math.sqrt(F.view);
+    const p = polar(r, deg); tree(p.x, p.z, 1 + rnd() * 0.8);
   }
   // Distant hills
   for (let i = 0; i < 9; i++) {
     const deg = i * 40 + rnd() * 20;
-    const p = polar(1500 + rnd() * 400, deg);
-    const hill = new THREE.Mesh(new THREE.SphereGeometry(500 + rnd() * 300, 24, 12), mat(0x6f7f55));
-    hill.scale.y = 0.22 + rnd() * 0.12;
-    hill.position.copy(p);
-    scene.add(hill);
+    const p = polar(F.extent + 1280 * Math.sqrt(F.view) + rnd() * 400, deg);
+    const hill = new THREE.Mesh(new THREE.SphereGeometry((500 + rnd() * 300) * Math.sqrt(F.view), 24, 12), mat(0x6f7f55));
+    hill.scale.y = 0.22 + rnd() * 0.12; hill.position.copy(p); scene.add(hill);
   }
+
+  // Build all trees as two instanced meshes
+  const trunks = new THREE.InstancedMesh(new THREE.CylinderGeometry(0.25, 0.35, 3, 6), mat(0x6b5038), treePts.length);
+  const crowns = new THREE.InstancedMesh(new THREE.SphereGeometry(2.4, 10, 8), mat(0x5f7a3d), treePts.length);
+  crowns.castShadow = true;
+  const m4 = new THREE.Matrix4(), q = new THREE.Quaternion();
+  treePts.forEach(([x, z, s], i) => {
+    m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s)); trunks.setMatrixAt(i, m4);
+    m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s, s)); crowns.setMatrixAt(i, m4);
+  });
+  scene.add(trunks, crowns);
 }
 
 // Named camera views used to make reference renders for illustrations
@@ -230,7 +295,16 @@ export const VIEWS = {
   solar: {pos: [120, 8, 210], target: [0, 20, -40], fov: 55, label: 'From the solar ring'},
 };
 
-export function start(canvas, {interactive = true, view = 'aerial', width, height} = {}) {
+// Wide views scale with the phase so the whole city stays in frame
+const WIDE = ['aerial', 'top', 'hero'];
+export function viewFor(name, phase = 1) {
+  const v = VIEWS[name] || VIEWS.aerial;
+  const k = WIDE.includes(name) ? (PHASES[phase] || PHASES[1]).view : 1;
+  return {...v, pos: v.pos.map((c) => c * k), target: [v.target[0], v.target[1] * Math.sqrt(k), v.target[2]]};
+}
+
+export function start(canvas, {interactive = true, view = 'aerial', width, height, phase = 1} = {}) {
+  const F = PHASES[phase] || PHASES[1];
   const renderer = new THREE.WebGLRenderer({canvas, antialias: true, preserveDrawingBuffer: true});
   renderer.setPixelRatio(interactive ? Math.min(window.devicePixelRatio, 2) : 1);
   renderer.shadowMap.enabled = true;
@@ -240,22 +314,26 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
 
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0xc9dbe6);
-  scene.fog = new THREE.Fog(0xc9dbe6, 700, 2600);
+  scene.fog = new THREE.Fog(0xc9dbe6, 700 * F.view, 2600 * F.view);
   scene.add(new THREE.HemisphereLight(0xeef4f8, 0x6b6a4a, 1.3));
   const sun = new THREE.DirectionalLight(0xfff1dc, 2.2);
   sun.position.set(300, 420, 200);
   sun.castShadow = true;
+  sun.shadow.bias = -0.0004;
+  sun.shadow.normalBias = 0.6 * F.view;
   sun.shadow.mapSize.set(4096, 4096);
-  Object.assign(sun.shadow.camera, {left: -320, right: 320, top: 320, bottom: -320, near: 10, far: 1400});
+  const ext = F.extent + 100;
+  sun.position.multiplyScalar(F.view);
+  Object.assign(sun.shadow.camera, {left: -ext, right: ext, top: ext, bottom: -ext, near: 10, far: 1400 * F.view});
   scene.add(sun);
-  buildCity(scene);
+  buildCity(scene, phase);
 
-  const camera = new THREE.PerspectiveCamera(45, W / H, 0.5, 6000);
+  const camera = new THREE.PerspectiveCamera(45, W / H, 0.5, 6000 * F.view);
   const controls = interactive ? new OrbitControls(camera, canvas) : null;
   if (controls) { controls.enableDamping = true; controls.maxPolarAngle = Math.PI / 2 - 0.02; }
 
   const setView = (name) => {
-    const v = VIEWS[name] || VIEWS.aerial;
+    const v = viewFor(name, phase);
     camera.fov = v.fov;
     camera.position.set(...v.pos);
     camera.lookAt(...v.target);

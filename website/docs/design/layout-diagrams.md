@@ -8,7 +8,8 @@ Each diagram is shown once, on the page that explains it. This list points to it
 
 | Diagram | What it shows | Where it lives |
 |---|---|---|
-| 3D reference model | Interactive Phase 1 model used as the layout reference for every city image | [Visual Language → 3D reference model](/docs/design/visual-language#3d-reference-model) |
+| 3D reference model | Interactive models of Phases 1, 2 and 3 used as the layout reference for every city image | [Visual Language → 3D reference model](/docs/design/visual-language#3d-reference-model) |
+| Three phases (plan and aerial views) | Top views of the three models side by side, and an aerial photo of each phase | [Architecture → Phased development & scale](/docs/design/architecture#phased-development--scale) |
 | City layout (top-down) | Five rings and 12 radial paths around the spire and plaza; three domes in Phase 1 | [Architecture → Circular form](/docs/design/architecture#circular-form) |
 | Energy flow | Phase 1 solar microgrid: make, store and steer, use (TRL 8–9) | [Energy Systems](/docs/concepts/energy-systems#architecture) |
 | Development roadmap | The six stages from foundation to operations | [Development Stages](/docs/project/development-stages) |

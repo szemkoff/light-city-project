@@ -126,19 +126,19 @@ export function Section({eyebrow, title, lead, night, alt, children, id}: {
   );
 }
 
-export function Cards({items}: {items: {title: string; text: React.ReactNode; img?: string; kicker?: string; to?: string}[]}): JSX.Element {
+export function Cards({items}: {items: {title: string; text: React.ReactNode; img?: string; alt?: string; kicker?: string; to?: string; more?: string}[]}): JSX.Element {
   const base = useBaseUrl('/');
   return (
     <div className="pg-cards">
       {items.map((c) => {
         const inner = (
           <>
-            {c.img ? <img src={`${base}img/home/${c.img}.webp`} alt="" loading="lazy" width="600" height="400" /> : null}
+            {c.img ? <img src={`${base}img/home/${c.img}.webp`} alt={c.alt ?? ''} loading="lazy" width="600" height="400" /> : null}
             <div className="pg-card-body">
               {c.kicker ? <p className="pg-kicker">{c.kicker}</p> : null}
               <h3>{c.title}</h3>
               <p>{c.text}</p>
-              {c.to ? <span className="pg-topic-go">{c.to.startsWith('/docs') ? 'Read more' : 'Explore'} <span aria-hidden="true">→</span></span> : null}
+              {c.to ? <span className="pg-topic-go">{c.more ?? (c.to.startsWith('/docs') ? 'Read more' : 'Explore')} <span aria-hidden="true">→</span></span> : null}
             </div>
           </>
         );
