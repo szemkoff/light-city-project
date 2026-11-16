@@ -17,7 +17,7 @@
   --r-sm:6px;--r-md:12px;--r-lg:20px;
 }
 .lc-home *,.lc-home *::before,.lc-home *::after{box-sizing:border-box}
-html:has(.lc-home){scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+html:has(.lc-home:not(.lc-chrome)){scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
 .lc-home{margin:0;background:var(--pearl);color:var(--ink);font:400 var(--text-base)/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .lc-home img{display:block;max-width:100%;height:auto}
 .lc-home a{color:inherit}
@@ -384,8 +384,10 @@ html:has(.lc-home){scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-s
 .lc-home .nav-links a.nav-docs{border:1px solid currentColor;border-radius:99px;padding-inline:var(--space-3)}
 
 /* Homepage takes over the chrome: hide the Docusaurus navbar on this page only */
-html:has(.lc-home) .navbar{display:none}
-html:has(.lc-home) .main-wrapper{overflow:visible}
+html:has(.lc-home:not(.lc-chrome)) .navbar{display:none}
+html:has(.lc-home:not(.lc-chrome)) .main-wrapper{overflow:visible}
+/* Shared footer inside the docs and blog chrome */
+.lc-home.lc-chrome{min-height:0;background:var(--night)}
 .lc-home{min-height:100vh}
 .lc-home ul,.lc-home ol{margin:0}
 .lc-home a:hover{text-decoration:none}
