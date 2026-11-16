@@ -217,6 +217,7 @@ const DOCS = [
   ['project/site-locations', 'Project', 'Site locations', 'Five regions in four countries, scored and mapped.'],
   ['project/governance', 'Project', 'Governance', 'Founder-led to community council, 80% consent.'],
   ['project/contribution-based-residency', 'Project', 'Contribution-based residency', 'Work-for-living tiers aligned with community needs.'],
+  ['project/economy-and-migration', 'Project', 'Economy and migration', 'From dollar fees to Light hours, step by step with resident votes.'],
   ['project/quick-start-guide', 'Project', 'Quick-start guide', 'Get oriented in fifteen minutes.'],
   ['project/contributing', 'Project', 'Contributing', 'How to help — writing, design, research, code.'],
 ];

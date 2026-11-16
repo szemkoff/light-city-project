@@ -45,7 +45,10 @@ const PARTS = [
     {to: '/docs/research/open-questions', title: 'Open questions', summary: 'The research agenda: practical, community, wellbeing and frontier questions, with when each answer is needed.', points: ['Preregistration and publishing', 'Independent partners', 'Research timeline']},
     {to: '/docs/research/bibliography', title: 'Bibliography', summary: 'Every source behind the library, graded from A (peer-reviewed) to E (visionary, non-empirical).', points: ['Source grades', 'Technology status sources', 'Community and wellbeing research']},
   ]},
-  {id: 'contribute', part: '9 · Contribute', items: [
+  {id: 'origin', part: '9 · Where the idea came from', items: [
+    {to: '/docs/concepts/the-archetype', title: 'The archetype', summary: 'The visionary source behind Light City, described in its own terms and kept separate from what we plan to build.', points: ['What the source describes', 'How the archetype is translated', 'Claims we test, not assume']},
+  ]},
+  {id: 'contribute', part: 'Contribute', items: [
     {to: '/docs/project/contributing', title: 'Contributing', summary: 'Ways to help with writing, design, technology, research and community, and how contributions are reviewed.', points: ['Contribution process', 'Licensing', 'What not to contribute']},
     {to: '/docs/project/quick-start-guide', title: 'Quick-start guide', summary: 'A short orientation for new contributors: what to read first and good first tasks.', points: ['First steps', 'Suggested tasks', 'Getting help']},
     {to: '/docs/project/project-structure', title: 'Project structure', summary: 'How the repository and library are organized, with naming and documentation standards.', points: ['Directory overview', 'File conventions', 'Documentation standards']},

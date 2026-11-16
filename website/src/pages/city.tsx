@@ -17,7 +17,6 @@ export default function City(): JSX.Element {
       actions={<><a className="btn" href={model}>Explore the 3D model</a><a className="btn btn-ghost" href="#phases">See the three phases</a></>}>
       <Section>
         <Jump items={[
-          {href: '#model', label: '3D model'},
           {href: '#rings', label: 'The rings'},
           {href: '#structures', label: 'Key structures'},
           {href: '#phases', label: 'Growth by phase'},
