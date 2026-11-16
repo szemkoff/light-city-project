@@ -69,7 +69,7 @@ export default function Investors(): JSX.Element {
 
       <Section alt id="raise" eyebrow="1 · The raise now" title="Small, staged and tied to milestones." lead="We are not raising $45M today. Capital is raised stage by stage, and each stage must pass a written gate before the next begins.">
         <div className="pg-facts">
-          <div className="pg-fact"><b>Stage 1</b><span>Foundation · finishing Dec 2026 · budget $5K–$15K, about $2,500 spent</span></div>
+          <div className="pg-fact"><b>Stage 1</b><span>Foundation · deliverables published, gate review Dec 2026 · budget $5K–$15K, about $2,500 spent</span></div>
           <div className="pg-fact"><b>Stage 2</b><span>Design · Jan–Jun 2027 · $25K–$85K · grants, patronage and crowdfunding</span></div>
           <div className="pg-fact"><b>Stage 5</b><span>Physical build · Dec 2028–Nov 2031 · target raise $35M–$55M</span></div>
         </div>

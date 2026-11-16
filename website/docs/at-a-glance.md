@@ -102,7 +102,7 @@ Prices are per home and cover one adult. Each additional adult pays about $300 a
 
 | Stage | Dates | Investment | Status |
 |---|---|---|---|
-| S1 Foundation | Oct 2025 – Dec 2026 | $5K–15K | **Current — finishing** |
+| S1 Foundation | Oct 2025 – Dec 2026 | $5K–15K | **Current — deliverables published, gate review Dec 2026** |
 | S2 Design | Jan – Jun 2027 | $25K–85K | Next |
 | S3 Digital | Jul – Nov 2027 | $35K–125K | Planned |
 | S4 Community | Dec 2027 – Nov 2028 | $85K–280K | Planned |

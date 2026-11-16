@@ -17,13 +17,15 @@ This roadmap runs from initial vision through design, community, construction, a
 ## Executive Summary
 
 :::note Schedule update — November 2026
-Stage 1 has run longer than the original two-to-three-month plan and is still being finished. Every later stage has moved back by about one year. Durations and budgets are unchanged.
+Stage 1 has run longer than the original two-to-three-month plan. Every later stage has moved back by about one year. Durations and budgets are unchanged.
+
+As of November 16, 2026, all nine original Stage 1 deliverables are published, along with work that was not in the first plan: a household financial model, an economy and migration plan, candidate site regions and a 3D reference model. Four open items remain before the Stage 1 gate review in December 2026 (see [Stage 1](#stage-1-foundation--vision)).
 :::
 
 ### Project Timeline (2025-2032+)
 | Stage | Duration | Timeline | Investment | Status |
 |-------|----------|----------|------------|--------|
-| **S1: Foundation** | Extended | Oct 2025-Dec 2026 | $5K-$15K | Current: finishing |
+| **S1: Foundation** | Extended | Oct 2025-Dec 2026 | $5K-$15K | Current: deliverables done, gate review Dec 2026 |
 | **S2: Design** | 4-6 months | Jan-Jun 2027 | $25K-$85K | Upcoming |
 | **S3: Digital** | 3-5 months | Jul-Nov 2027 | $35K-$125K | Planned |
 | **S4: Community** | 6-12 months | Dec 2027-Nov 2028 | $85K-$280K | Planned |
@@ -58,7 +60,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 ## Stage 1: Foundation & Vision
 
 **Duration**: Planned 2-3 months; extended (Oct 2025 - Dec 2026)  
-**Status**: CURRENT (finishing remaining deliverables)  
+**Status**: CURRENT (deliverables published; four open items before the gate review in December 2026)  
 **Total Budget**: $5K-$15K  
 **Funding Sources**: Founder equity, personal investment
 
@@ -77,7 +79,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 
 ![Stage Progress](/img/diagrams/stage-progress.svg)
 
-*Current status: Stage 1 - Foundation & Vision, finishing remaining deliverables (updated November 2026)*
+*Current status: Stage 1 - Foundation & Vision, deliverables published, gate review December 2026 (updated November 16, 2026)*
 
 ### Objectives
 - Establish core philosophical and spiritual foundations
@@ -93,9 +95,24 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 - [x] Initial world-building documentation
 - [x] Development roadmap
 - [x] Tool selection and setup
-- [ ] Technology catalog
-- [ ] Urban retrofit guide
-- [ ] Complete visual documentation system
+- [x] [Technology catalog](/docs/technical/technology-catalog), with readiness (TRL), cost and supplier notes for every system
+- [x] [Urban retrofit guide](/docs/technical/urban-retrofit-guide)
+- [x] Visual documentation system: [visual language](/docs/design/visual-language), [color and light](/docs/design/color-and-light), [layout diagrams](/docs/design/layout-diagrams) and the [3D reference model](/docs/design/visual-language#3d-reference-model)
+
+**Added during Stage 1** (not in the first plan)
+- [x] [Household financial model](#household-model-november-2026-draft): about 110 homes for 200 residents, with operating margin by occupancy and fee level
+- [x] [Governance](/docs/project/governance) and [contribution-based residency](/docs/project/contribution-based-residency) frameworks
+- [x] [Economy and migration plan](/docs/project/economy-and-migration): Light hours and the four-phase dial (draft thresholds)
+- [x] [Site locations](/docs/project/site-locations): five candidate regions in four countries, all above 350 ft
+- [x] [Technology horizon](/docs/technical/technology-horizon), [Beyond the Box](/docs/design/organic-forms-and-materials) and [Light on the Land](/docs/design/light-on-the-land)
+- [x] Public website: homepage, Explore pages (homes, city, technology, transition), pages for residents, investors, builders and researchers, an investor diligence room and a [Living here, honestly](/trust) page
+- [x] Founding-circle sign-up and contact forms, collected in one sheet with email notification
+
+**Open before the Stage 1 gate**
+- [ ] Add debt service to the financial model (interest and repayment on the construction loan)
+- [ ] Confirm the household fee basis and how to close the gap at 90% occupancy (about +13% above mid fees)
+- [ ] Confirm the draft thresholds in the economy plan (credit limits, weekly share, dial gates)
+- [ ] Engage counsel for the entity and the securities path; name the first advisors
 
 ### Activities
 - Research and document spiritual/metaphysical foundations
@@ -118,7 +135,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 - **Isolation**: Working alone → Share early; invite feedback
 
 ### Gate & RACI
-- **Gate (Pass/Fail)**: All key deliverables documented + GitHub/Docusaurus operational + personal clarity achieved
+- **Gate (Pass/Fail)**: All key deliverables documented + GitHub/Docusaurus operational + personal clarity achieved + the four open items above closed or carried into Stage 2 with an owner and date
 - **RACI**: Founder (R/A), Early advisors (C), Future community (I)
 
 ---
@@ -153,14 +170,14 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 
 ### Key Deliverables
 - [ ] Complete architectural documentation (all building types)
-- [ ] Professional concept art and visualizations (10-20 renders) that pass the [reality check](/docs/design/visual-language#concept-photos-modern-organic)
+- [ ] Professional concept art and visualizations (10-20 renders) that pass the [reality check](/docs/design/visual-language#concept-photos-modern-organic). Concept images are in place across the site; professional renders are still to be commissioned
 - [ ] Baseline ecological survey of the chosen site and a biodiversity net gain plan ([Light on the Land](/docs/design/light-on-the-land))
 - [ ] Materials palette for the chosen region, including local stone and embodied-carbon estimates
 - [ ] City layout and sacred geometry maps (CAD/GIS)
 - [ ] Cultural framework documentation
 - [ ] Energy system technical specifications
 - [ ] Inhabitant profiles and stories (10+ personas)
-- [ ] 3D model or interactive visualization
+- [x] 3D model or interactive visualization: an early [3D reference model](/docs/design/visual-language#3d-reference-model) of the radial plan with Phase 1–3 layers is live; a site-specific model follows site selection
 
 ### Activities
 - Create detailed architectural plans
@@ -219,10 +236,11 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 
 ### Key Deliverables
 - [x] Project website (Docusaurus site operational)
-- [ ] Enhanced interactive features (3D models, VR/AR)
+- [x] 3D model in the browser (orbit, zoom, switch phases)
+- [ ] VR/AR walkthroughs
 - [ ] Social media presence (Twitter, Instagram, YouTube)
 - [ ] Community platforms (Discord, forum, Circle)
-- [ ] Interactive visualizations or experiences
+- [x] Interactive visualizations: ring plan with phase growth, a day-in-the-life timeline, scenario and revenue charts on the homepage
 - [ ] Newsletter or blog (regular cadence)
 - [ ] Digital asset library (downloadable resources)
 - [ ] Online courses or workshops

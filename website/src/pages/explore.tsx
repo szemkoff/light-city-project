@@ -38,7 +38,7 @@ const PARTS = [
     {to: '/docs/project/economy-and-migration', title: 'Economy and migration', summary: 'How Light City moves from monthly fees to Light hours, a time credit, and optionally to no money inside the community, with a measured gate and a resident vote before every step.', points: ['Light hours: one hour of work, one credit', 'Four-phase dial', 'Phase 3 is a yearly-reviewed option']},
   ]},
   {id: 'roadmap', part: '7 · Roadmap', items: [
-    {to: '/docs/project/development-stages', title: 'Development stages', summary: 'Six stages from foundation to operation, each with costs, deliverables, KPIs, risks and a gate that must be met.', points: ['Stage 1 finishing Dec 2026', 'Financial model and IRR', 'Stage-gate checklist']},
+    {to: '/docs/project/development-stages', title: 'Development stages', summary: 'Six stages from foundation to operation, each with costs, deliverables, KPIs, risks and a gate that must be met.', points: ['Stage 1 gate review Dec 2026', 'Financial model and IRR', 'Stage-gate checklist']},
     {to: '/docs/project/site-locations', title: 'Site locations', summary: 'Five candidate regions for the first city, all above 350 ft, scored on sun, water, geothermal, hydro, earth-building codes, land and community.', points: ['New Mexico, Oregon, Portugal, Spain, Costa Rica', 'Scorecard and map', 'Steps to choose the site']},
   ]},
   {id: 'research', part: '8 · Research', items: [

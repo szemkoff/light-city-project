@@ -42,7 +42,7 @@ These purposes unfold as five movements: **Awakening, Gathering, Founding, Flour
 ### Short-Term (Q4 2025 - Q2 2027: Stages 1-2)
 
 **Timeline**: October 2025 - June 2027 (Stage 1 extended; Stage 2 Jan-Jun 2027)  
-**Current Status**: Finishing Stage 1 (as of Nov 16, 2026)
+**Current Status**: Stage 1 deliverables published; gate review December 2026 (as of Nov 16, 2026)
 
 1. **Complete Foundational Documentation**
    - Core concepts fully articulated
