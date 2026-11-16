@@ -35,7 +35,7 @@ offs.push(() => spy.disconnect());
 const P = {
   resident: { t: 'Live inside the circle', d: 'All-inclusive homes from $500 a month, shared meals, a vote in governance and contribution-based residency tiers.', l: [['#living', 'A day in Light City', 'Rhythm, homes & pricing'], [D + 'project/contribution-based-residency/', 'Contribution-based residency', 'Work-for-living tiers'], [D + 'project/governance/', 'Governance', 'How decisions are made']] },
   investor: { t: 'Diligence-ready from day one', d: 'Phased capex from $22M, three scenarios, 8–12% target impact IRR and break-even at 180 residents.', l: [['#invest', 'Scenarios & revenue', 'Low, mid and high cases'], [D + 'project/development-stages/', 'Development stages', 'Timeline, costs, model notes'], [D + 'project/governance/', 'Governance', 'Decision rights & structure']] },
-  builder: { t: 'Proven materials, phased construction', d: 'Mass timber, geodesic domes and building-integrated solar — every system TRL 7–9 unless clearly marked as research.', l: [['#technology', 'Technology', 'What we build with'], [D + 'design/architecture/', 'Architecture', 'Domes, spire, layout'], [D + 'technical/technology-catalog/', 'Technology catalog', 'Specs, suppliers, TRLs']] },
+  builder: { t: 'Proven materials, phased construction', d: 'Timber gridshells, earth and clay, mass timber and building-integrated solar — every system TRL 7–9 unless clearly marked as research.', l: [['#forms', 'Beyond the box', 'Curved, low-cost forms'], ['#technology', 'Technology', 'What we build with'], [D + 'design/architecture/', 'Architecture', 'Domes, spire, layout'], [D + 'technical/technology-catalog/', 'Technology catalog', 'Specs, suppliers, TRLs']] },
   researcher: { t: 'Open science, honest readiness', d: 'Pre-registered, IRB-approved studies with consent and opt-out zones. Engineering and consciousness hypotheses are kept separate.', l: [['#research', 'Research programs', 'Four tracks with TRL levels'], [D + 'research/open-questions/', 'Open questions', 'Where we need help'], [D + 'concepts/energy-systems/', 'Energy systems', 'Two-track measurement model']] },
   curious: { t: 'Start with the story', d: 'An archetypal city of light, translated into something buildable. Begin with the vision, then walk the city ring by ring.', l: [['#vision', 'The vision', 'Three pillars'], ['#city', 'Explore the city', 'Interactive plan'], [D + 'START-HERE/', 'Start here', 'A guided reading path']] },
 };
@@ -56,10 +56,10 @@ persona('resident');
 /* ---------- CITY PLAN ---------- */
 const Z = {
   spire: { k: 'The heart', t: 'Light Spire & Central Plaza', img: 'spire', d: 'A 60–120 m steel and mass-timber light and acoustic tower rising from a reflecting plaza — the ceremonial and energetic center of the city.', s: [['Height', '60–120 m (Phase 1)'], ['Structure', 'Steel / CLT hybrid'], ['Function', 'Ceremony, acoustics, 200–500 kWp solar'], ['Readiness', 'TRL 4–5 · tall timber proven to 85 m']], l: [D + 'design/architecture/', 'Spire design'] },
-  inner: { k: 'Inner ring', t: 'Temples & Learning Centers', img: 'dome-interior', d: 'Primary gathering spaces: the temple dome, meditation halls, a school and the community library. Quiet, light-filled and acoustically tuned.', s: [['Uses', 'Temple, meditation, school, library'], ['Form', 'Gathering domes, 30–45 m'], ['Character', 'Calm, acoustic, daylit']], l: [D + 'concepts/sacred-geometry/', 'Sacred geometry'] },
+  inner: { k: 'Inner ring', t: 'Temples & Learning Centers', img: 'dome-interior', d: 'Primary gathering spaces: the temple dome, meditation halls, a school and the community library. Quiet, light-filled and acoustically tuned.', s: [['Uses', 'Temple, meditation, school, library'], ['Form', 'Acoustically tuned earth or timber dome'], ['Character', 'Calm, acoustic, daylit']], l: [D + 'concepts/sacred-geometry/', 'Sacred geometry'] },
   middle: { k: 'Middle ring', t: 'Studios & Collaboration', img: 'research', d: 'Creative studios, workshops, the research pavilion and shared offices — where residents make, build and study together.', s: [['Uses', 'Studios, labs, co-working, makerspace'], ['Research', 'Biophilic health, acoustics, coherence'], ['Access', 'Radial paths from every home']], l: [D + 'research/open-questions/', 'Research questions'] },
-  outer: { k: 'Outer ring', t: 'Communospheres & Gardens', img: 'living', d: 'Residential communospheres — each a self-governing neighborhood of 80–120 people — woven through gardens and the nature interface.', s: [['Domes', '3 in Phase 1 → 12+ at full build'], ['Size', '30–45 m diameter, 80–120 residents'], ['Envelope', 'BIPV + insulated panels · R-30 / R-50']], l: [D + 'concepts/communospheres/', 'Communospheres'] },
-  agri: { k: 'Living edge', t: 'Food, Water & Energy Belt', img: 'tech-agroforestry', d: 'Food forests, aquaponics, rainwater catchment, living-machine water treatment and the solar microgrid that powers the city.', s: [['Solar', '2–5 MWp Phase 1 → 15–50 MWp'], ['Food', 'Agroforestry, aquaponics, vertical farms'], ['Water', 'Rainwater, living machines, AWG backup']], l: [D + 'concepts/energy-systems/', 'Energy systems'] },
+  outer: { k: 'Outer ring', t: 'Communospheres & Gardens', img: 'living', d: 'Residential communospheres — each a self-governing neighborhood of 80–120 people — woven through gardens, with clusters of earth tiny homes between them.', s: [['Domes', '3 in Phase 1 → 12+ at full build'], ['Size', '30–45 m diameter, 80–120 residents'], ['Envelope', 'Timber gridshell + BIPV, clay interiors'], ['Tiny homes', 'Earth clusters of 3–6 around a courtyard']], l: [D + 'concepts/communospheres/', 'Communospheres'] },
+  agri: { k: 'Living edge', t: 'Food, Water & Energy Belt', img: 'tech-agroforestry', d: 'Food forests, aquaponics, rainwater catchment, living-machine water treatment and the solar microgrid that powers the city.', s: [['Solar', '2–5 MWp Phase 1 → 15–50 MWp'], ['Food', 'Agroforestry, solar greenhouses, aquaponics'], ['Water', 'Rainwater, living machines, AWG backup']], l: [D + 'concepts/energy-systems/', 'Energy systems'] },
 };
 const R = [['spire', 0, 42], ['inner', 42, 96], ['middle', 96, 150], ['outer', 150, 206], ['agri', 206, 252]];
 const plan = $('#plan'), ns = 'http://www.w3.org/2000/svg';
@@ -94,21 +94,25 @@ selZone('outer'); phase(1);
 
 /* ---------- TECH ---------- */
 const T = [
+  ['form-gridshell', 'structure', 'Timber gridshell', 'Bent lattices of thin timber for the domes: long spans with very little material.', 8, 9],
+  ['form-superadobe', 'structure', 'Earthbag & superadobe', 'Domes and vaults of bagged local soil for tiny homes and quiet rooms.', 7, 9],
+  ['form-printed-earth', 'structure', '3D-printed earth', 'Curved walls printed from local soil, as in the TECLA prototype.', 6, 7],
+  ['form-clay-plaster', 'structure', 'Clay plaster', 'Breathable interior finish that buffers humidity and softens sound.', 9, 9],
   ['clt-construction', 'structure', 'Cross-laminated timber', 'Mass-timber panels for dome frames and homes. Stores carbon; proven to 85 m.', 8, 9],
   ['geodesic-dome', 'structure', 'Geodesic dome systems', 'Light, strong spherical frames that enclose the most space with the least material.', 7, 8],
-  ['hempcrete', 'structure', 'Hempcrete', 'Breathable, carbon-negative wall infill with excellent thermal mass.', 8, 9],
+  ['hempcrete', 'structure', 'Hempcrete', 'Breathable, carbon-storing wall infill; costs more than standard walls today.', 8, 9],
   ['mycelium-insulation', 'structure', 'Mycelium insulation', 'Grown, compostable insulation panels — early commercial.', 6, 7],
   ['bipv-solar-facade', 'energy', 'Building-integrated PV', 'Solar glass that is also the dome skin — every surface makes power.', 8, 9],
   ['flow-battery', 'energy', 'Flow batteries', 'Long-duration, non-flammable storage to carry the microgrid through the night.', 7, 8],
   ['rainwater-harvesting', 'water', 'Rainwater harvesting', 'Dome surfaces catch and store water for gardens and households.', 9, 9],
   ['living-machine', 'water', 'Living machines', 'Biological wastewater treatment through plant-filled tanks and wetlands.', 8, 9],
   ['atmospheric-water', 'water', 'Atmospheric water', 'Backup drinking water drawn from humid air.', 7, 8],
-  ['vertical-farm', 'food', 'Vertical farming', 'Year-round greens in stacked hydroponic towers inside the domes.', 8, 9],
-  ['aquaponics-system', 'food', 'Aquaponics', 'Fish and plants in one closed nutrient loop.', 8, 9],
   ['agroforestry', 'food', 'Agroforestry', 'Layered food forests on the city edge — perennial, resilient, carbon-rich.', 9, 9],
+  ['aquaponics-system', 'food', 'Aquaponics', 'Fish and plants in one closed nutrient loop.', 8, 9],
+  ['vertical-farm', 'food', 'Vertical farming', 'Small, for greens only. Solar greenhouses come first because they use far less energy.', 8, 9],
 ];
 const rail = $('#techRail');
-rail.innerHTML = T.map(([img, c, t, d, a, b]) => `<article class="tcard" data-c="${c}"><img src="${opts.img('tech-' + img)}" alt="${t}" width="720" height="540" loading="lazy"><div class="tcard-b"><div class="tcard-top"><span>${c}</span><span>TRL ${a === b ? a : a + '–' + b}</span></div><h3>${t}</h3><p>${d}</p><div class="trl-meter" aria-hidden="true">${Array.from({ length: 9 }, (_, i) => `<i class="${i < b ? 'on' : ''}"></i>`).join('')}</div></div></article>`).join('');
+rail.innerHTML = T.map(([img, c, t, d, a, b]) => `<article class="tcard" data-c="${c}"><img src="${opts.img(/^form-/.test(img) ? img : 'tech-' + img)}" alt="${t}" width="720" height="540" loading="lazy"><div class="tcard-b"><div class="tcard-top"><span>${c}</span><span>TRL ${a === b ? a : a + '–' + b}</span></div><h3>${t}</h3><p>${d}</p><div class="trl-meter" aria-hidden="true">${Array.from({ length: 9 }, (_, i) => `<i class="${i < b ? 'on' : ''}"></i>`).join('')}</div></div></article>`).join('');
 $$('#techChips .chip').forEach(b => b.onclick = () => {
   $$('#techChips .chip').forEach(x => x.classList.toggle('active', x === b));
   $$('.tcard').forEach(c => c.hidden = !(b.dataset.f === 'all' || c.dataset.c === b.dataset.f));

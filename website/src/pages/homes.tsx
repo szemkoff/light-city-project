@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Site, {Section, Cards, DocLinks, Cta, Feature, Jump} from '../components/Site';
 
 export default function Homes(): JSX.Element {
@@ -13,6 +15,7 @@ export default function Homes(): JSX.Element {
       <Section>
         <Jump items={[
           {href: '#types', label: 'Home types'},
+          {href: '#earth', label: 'Earth tiny homes'},
           {href: '#included', label: 'What is included'},
           {href: '#shared', label: 'Shared spaces'},
           {href: '#contribute', label: 'Contribution-based residency'},
@@ -38,7 +41,7 @@ export default function Homes(): JSX.Element {
           <ul>
             <li><strong>Best for:</strong> singles, artists, newcomers and contribution-based residents</li>
             <li><strong>Where:</strong> garden clusters on the outer ring, a short walk from a communosphere</li>
-            <li><strong>Built with:</strong> prefabricated CLT panels, a planted roof and a heat pump</li>
+            <li><strong>Built with:</strong> prefabricated CLT panels, a planted roof and a heat pump, or as an <a href="#earth">earth tiny home</a></li>
           </ul>
         </Feature>
         <Feature
@@ -84,7 +87,38 @@ export default function Homes(): JSX.Element {
         </Feature>
       </Section>
 
-      <Section id="included" eyebrow="One fee" title="What is included, and what is not.">
+
+      <Section id="earth" eyebrow="Beyond the box" title="Earth tiny homes: built from the ground they stand on." lead="An option for the tiny-home clusters: small curved homes of earthbag (superadobe) or 3D-printed local soil, finished in clay plaster. Lower cost, healthier air and a quiet, rounded shape.">
+        <Feature
+          img="form-superadobe"
+          alt="A cluster of small superadobe earth domes with sand-colored clay plaster, round windows and planted roofs around a courtyard garden with a sunken fire circle"
+          kicker="Earth option · tiny home"
+          title="Superadobe and printed-earth clusters"
+          tag="Dry and mild climates first">
+          <p>Three to six rounded earth homes share a courtyard with planted beds and a fire circle. Each home keeps the tiny-home layout: a sleeping niche, a compact kitchen and bath, and big windows. The curved walls carry load in compression, so they need little steel or concrete.</p>
+          <ul>
+            <li><strong>Earthbag (superadobe):</strong> long bags filled with moistened local soil, coiled into domes and vaults. Materials can run about $5–15 per square foot and owner-built homes about $10–50 per square foot (<a href="https://earth.dev/building-methods/earthbag">earth.dev</a>).</li>
+            <li><strong>3D-printed earth:</strong> TECLA in Italy was printed from local soil by two coordinated printers (<a href="https://www.3dwasp.com/en/3d-printed-house-tecla/">WASP</a>), a model for a printed cluster.</li>
+          </ul>
+        </Feature>
+        <Feature
+          reverse
+          img="form-earth-dome"
+          alt="Inside an earth dome: smooth clay-plastered walls, a skylight oculus, a built-in bench and a central fire bowl"
+          kicker="Inside · build together"
+          title="Clay interiors, built with residents"
+          tag="Pilot in Stage 4">
+          <p>Inside, curved clay walls, an oculus for daylight and built-in benches make a small home feel calm and generous. Earth homes can be built partly by the people who will live in them, with trained leads. Hours on the build can count toward <Link to="/docs/project/contribution-based-residency">contribution-based residency</Link>, lowering monthly costs further.</p>
+          <ul>
+            <li><strong>Clay plaster:</strong> clay buffers humidity and avoids synthetic finishes, which supports healthier indoor air and soft acoustics.</li>
+            <li><strong>Climate:</strong> earth walls suit dry and mild climates best; wet or very cold sites need extra roof overhang and insulation.</li>
+            <li><strong>Permits:</strong> earth building codes vary by place, so the site choice in Stage 2 decides which method we use.</li>
+            <li><strong>Learn more:</strong> <Link to="/docs/design/organic-forms-and-materials">Beyond the Box</Link> and the <a href={useBaseUrl('/city') + '#beyond-the-box'}>organic forms on the City page</a>.</li>
+          </ul>
+        </Feature>
+      </Section>
+
+      <Section alt id="included" eyebrow="One fee" title="What is included, and what is not.">
         <div className="pg-split" style={{alignItems: 'start'}}>
           <div className="pg-prose">
             <h2 style={{marginTop: 0}}>Included in every home</h2>
@@ -109,7 +143,7 @@ export default function Homes(): JSX.Element {
         </div>
       </Section>
 
-      <Section alt id="shared" eyebrow="Shared spaces" title="Your home is the smallest room in the city." lead="Private homes stay modest because the shared spaces are generous. Everything here is within a ten-minute walk.">
+      <Section id="shared" eyebrow="Shared spaces" title="Your home is the smallest room in the city." lead="Private homes stay modest because the shared spaces are generous. Everything here is within a ten-minute walk.">
         <Cards items={[
           {title: 'Dome kitchens & long tables', img: 'journey-flourishing', kicker: 'Every communosphere', text: 'A shared kitchen and dining hall on each dome floor, for communal meals several times a week and private dinners whenever you like.'},
           {title: 'Greenhouses & food forest', img: 'city-greenhouse', kicker: 'Outer ring', text: 'Year-round solar greenhouses, orchards and layered food forests. Residents can garden as much or as little as they like.'},
@@ -118,7 +152,7 @@ export default function Homes(): JSX.Element {
         ]} />
       </Section>
 
-      <Section id="contribute" eyebrow="Contribution-based residency" title="Contribute your time, lower your costs." lead="About 20–30% of homes are offered to residents who contribute regular work in exchange for reduced fees. A pilot runs in 2027–2028.">
+      <Section alt id="contribute" eyebrow="Contribution-based residency" title="Contribute your time, lower your costs." lead="About 20–30% of homes are offered to residents who contribute regular work in exchange for reduced fees. A pilot runs in 2027–2028.">
         <div className="pg-table-wrap">
           <table className="pg-table">
             <thead><tr><th>Tier</th><th>Contribution</th><th>Monthly cost</th><th>Includes</th><th>Best for</th></tr></thead>
@@ -132,7 +166,7 @@ export default function Homes(): JSX.Element {
         <p className="pg-note">Contribution areas include food systems, facilities and maintenance, education and facilitation, care and support, creative work, and administration. Contribution-based residents have the same rights as paying residents.</p>
       </Section>
 
-      <Section alt id="path" eyebrow="Path to moving in" title="From interest to keys, in five steps.">
+      <Section id="path" eyebrow="Path to moving in" title="From interest to keys, in five steps.">
         <ol className="pg-steps">
           <li className="now"><span className="when">Now</span><h3>Join the interest list</h3><p>Get updates, early invitations and a say in how homes are designed.</p></li>
           <li><span className="when">2027–2028</span><h3>Visit a retreat</h3><p>Seasonal retreats let you experience the rhythms, food and people before committing.</p></li>
@@ -142,10 +176,11 @@ export default function Homes(): JSX.Element {
         </ol>
       </Section>
 
-      <Section eyebrow="Go deeper" title="Read before you reserve.">
+      <Section alt eyebrow="Go deeper" title="Read before you reserve.">
         <DocLinks items={[
           {to: '/docs/project/contribution-based-residency', tag: 'Living', title: 'Contribution-based residency', text: 'Tiers, contribution areas, selection and how the pilot runs.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'How the dome neighborhoods are organized, inside and out.'},
+          {to: '/docs/design/organic-forms-and-materials', tag: 'Build', title: 'Beyond the Box', text: 'Curved, low-cost forms and healthy materials, including earth tiny homes.'},
           {to: '/docs/project/governance', tag: 'Living', title: 'Governance', text: 'How residents take part in decisions and resolve conflicts.'},
           {to: '/docs/at-a-glance', tag: 'Facts', title: 'Light City at a glance', text: 'Every key number: homes, costs, timeline.'},
         ]} />

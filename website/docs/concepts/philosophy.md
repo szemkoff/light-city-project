@@ -8,7 +8,7 @@ Light City is built upon a synthesis of ancient wisdom, spiritual understanding,
 
 ![Light City Vision](/img/inspiration/light-city-vision-2.jpg)
 
-*The philosophical foundation manifests in architectural form - where consciousness and matter unite.*
+*Visionary archetype art from the original vision: an inspiration, not a design.*
 
 ## Core Philosophical Questions
 
@@ -91,7 +91,7 @@ Spiritual principles must be integrated with practical action. Mysticism and pra
 
 ![Sacred Geometry - Flower of Life](/img/diagrams/flower-of-life.svg)
 
-*The Flower of Life - a fundamental pattern underlying Light City's philosophical and architectural principles.*
+*The Flower of Life: a pattern found in many cultures. Light City uses it as a planning grid and decorative motif.*
 
 ## Ethical Framework
 

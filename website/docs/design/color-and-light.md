@@ -1,53 +1,58 @@
 # Color and Light
 
-*Palette, gradients, and lighting rules for Light City materials*
+*Palette and lighting rules for the website, diagrams, photos and the built city*
 
-![Delphin Crystal City](/img/inspiration/delphin-aerial-view-2.png)
+![Dome interior at dusk: warm LED light, clay walls, a fire bowl and crystal accents](/img/home/dome-interior.webp)
 
-*Delphin demonstrates the interplay of light, crystal, and color in a living city.*
+*Modern Organic light: warm integrated LED, daylight through glass, clay and timber surfaces, and a place for fire.*
 
 ## Palette
 
-![Color Palette](/img/diagrams/color-palette.svg)
+![Light City palette: pearl, card, ink, muted, gold, gold light, glow and night, plus sage, terracotta, clay and sky glass](/img/diagrams/color-palette.svg)
 
-*Complete Light City color palette with core colors, extended palette, and key gradients.*
+*The palette matches the website. Diagrams use the same colors, so documents, site and print look like one family.*
 
-### Core
-- Celestial Blue: `#4A9EFF` (primary)
-- Deep Space Blue: `#0B2447` (text/lines)
-- Solar Gold: `#E6B400` (accents/energy)
-- White Gold: `#FFF6E0` (highlights)
-- Mist Gray: `#E6ECF3` (surfaces)
+### Core interface colors
 
-### Extended
-- Emerald: `#22C55E` (success)
-- Amber: `#F59E0B` (caution)
-- Rose: `#EF4444` (critical)
-- Sky Light: `#A0CBFF` (soft backgrounds)
+| Name | Hex | Use |
+|---|---|---|
+| Pearl | `#F6F1E7` | Page surfaces, diagram backgrounds |
+| Card | `#FBF8F2` | Cards, panels |
+| Ink | `#1D1A15` | Text, lines |
+| Muted | `#5F584C` | Secondary text, captions |
+| Gold | `#8A5F17` | Links, accents, structure lines in diagrams |
+| Gold light | `#E9B85A` | Accent on dark backgrounds |
+| Glow | `#F6D38C` | Highlights, "current" markers |
+| Night | `#0C0E15` | Dark sections, night scenes |
 
-## Gradients
-- Dawn: `linear-gradient(135deg, #4A9EFF 0%, #A0CBFF 100%)`
-- Spire Beam: `linear-gradient(180deg, rgba(230,180,0,0.0) 0%, rgba(230,180,0,0.45) 40%, rgba(255,246,224,0.75) 100%)`
-- Night Sky: `radial-gradient(circle at 50% 0%, #1B2A4B 0%, #0B2447 60%, #081426 100%)`
+### Nature accents (diagrams and illustrations)
 
-## Lighting Principles
-- Light is a structural element—depict rays, diffraction, and internal glow
-- Prefer internal luminance over external light sources
-- Use bloom subtly; avoid harsh glows
-- Crystal refraction: introduce faint prismatic fringes on edges
+| Name | Hex | Use |
+|---|---|---|
+| Sage | `#6E8B6A` | Food, nature, homes |
+| Terracotta | `#B5643C` | People, warmth, earth, reference lines |
+| Clay | `#D9C3A5` | Earth materials, plaster |
+| Sky glass | `#9DB7C4` | Domes, glazing, water, air |
 
-## Usage Guidance
-- Primary actions and highlights use Celestial Blue
-- Energy flows, sacred nodes, and resonance lines use Solar Gold → White Gold
-- Backgrounds stay quiet (Mist Gray / Sky Light) to elevate content
-- Text uses Deep Space Blue for excellent contrast
+Use light tints (about 15–30% opacity) of the nature accents for panel fills. Keep text on tints in Ink.
 
-## Example Applications
-- Diagrams: rings (Deep Space Blue 70%), flow lines (Solar Gold → White Gold)
-- Website hero: Night Sky background with Spire Beam
-- Posters: Dawn gradient with crystalline overlays
+## Lighting principles
+
+- **Daylight first.** Domes and studios are planned for daylight through glazing and an oculus; artificial light fills in.
+- **Warm and circadian.** Evening light is warm (2,200–3,000 K) and dimmable; daytime light can be cooler. Integrated LED lines sit in timber ribs and coves, not bare fixtures.
+- **Fire stays.** Fire bowls, hearths and sculptural fire features are part of shared spaces, indoors and out, with proper ventilation.
+- **Crystal as accent.** Quartz and glass catch and split light in small doses: a centerpiece, a window, a lamp. Never a whole wall of crystal.
+- **Dark skies.** Exterior light points down, is shielded and is warm, so stars stay visible.
+- **Spire light.** The spire crown can carry programmable light for gatherings; it stays off or low on ordinary nights.
+
+## Usage guidance
+
+- Text is Ink or Muted on Pearl or Card. On Night, use `#F3EEE4` text and Gold light accents.
+- Gold marks links, structure lines and the most important item in a diagram. Use it sparingly.
+- Terracotta is for people, warmth and reference lines (for example the Mjøstårnet height line).
+- Check contrast: body text needs at least 4.5:1, large titles 3:1.
 
 ---
 
 **Last reviewed**: November 2026  
-**Related**: `visual-language.md`, `sacred-geometry.md`
+**Related**: [Visual Language](/docs/design/visual-language), [Beyond the Box](/docs/design/organic-forms-and-materials), [Sacred Geometry](/docs/concepts/sacred-geometry)

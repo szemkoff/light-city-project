@@ -97,7 +97,7 @@ export default function Home(): JSX.Element {
             <ol className="pillars">
               <li>
                 <span className="pillar-n">I</span>
-                <div><h3>Sacred architecture</h3><p>30–90 m communosphere domes in cross-laminated timber and solar glass. Geometry that is both beautiful and proven.</p><span className="tag">TRL 7–9</span></div>
+                <div><h3>Sacred architecture</h3><p>Three 30–45 m timber gridshell domes in Phase 1, with clay-plastered interiors, solar glazing and clusters of earth tiny homes. Curved, healthy and already proven.</p><span className="tag">TRL 7–9</span></div>
               </li>
               <li>
                 <span className="pillar-n">II</span>
@@ -152,7 +152,40 @@ export default function Home(): JSX.Element {
         <img src={img('dome-interior')} alt="Sunlight streams through a timber gridshell dome over trees, a reflecting pool, a quartz crystal and a sunken fire circle where people gather" width="1400" height="788" loading="lazy" />
         <div className="band-in wrap">
           <blockquote>Ambitious in form.<br />Conservative in engineering.</blockquote>
-          <p>Every structure uses materials already standing elsewhere — from Norway's 85.4 m Mjøstårnet timber tower to commercial geodesic domes.</p>
+          <p>Every structure uses materials already standing elsewhere — from Norway's 85.4 m Mjøstårnet timber tower to timber gridshells, earth domes and 3D-printed homes of local soil.</p>
+        </div>
+      </section>
+
+
+      {/* BEYOND THE BOX */}
+      <section className="forms" id="forms">
+        <div className="wrap">
+          <div className="sec-head row">
+            <div>
+              <p className="eyebrow">03 — Beyond the box</p>
+              <h2>Curves instead of boxes.<br />Healthy, simple, affordable.</h2>
+            </div>
+            <p className="lead forms-lead">Curved shells carry load in compression, so they use less material, move air and light more freely and feel calmer inside. We build them from timber, earth and clay — low-tech where it can be, precise where it must be.</p>
+          </div>
+          <div className="forms-grid">
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+              <img src={img('form-gridshell')} alt="A curved timber gridshell roof over a light-filled community hall" width="720" height="540" loading="lazy" />
+              <span className="form-k">Domes · TRL 8–9</span><h3>Timber gridshell</h3><p>Bent lattices of thin timber: long spans, little material, warm light.</p>
+            </a>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+              <img src={img('form-superadobe')} alt="A cluster of small superadobe earth domes with clay plaster, round windows and planted roofs around a courtyard fire circle" width="720" height="540" loading="lazy" />
+              <span className="form-k">Homes · TRL 7–9</span><h3>Earthbag &amp; clay</h3><p>Superadobe domes of local soil with clay plaster that buffers humidity.</p>
+            </a>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+              <img src={img('form-printed-earth')} alt="3D-printed earth homes with ribbed curved walls and green roofs along a garden path" width="720" height="540" loading="lazy" />
+              <span className="form-k">Homes · TRL 6–7</span><h3>3D-printed earth</h3><p>Printers shape local soil into curved walls with almost no waste.</p>
+            </a>
+            <a className="form-tile" href={u('docs/design/organic-forms-and-materials')}>
+              <img src={img('form-thin-shell')} alt="A thin concrete shell roof curving over an open-air gathering space" width="720" height="540" loading="lazy" />
+              <span className="form-k">Pavilions · TRL 7–8</span><h3>Thin shells</h3><p>Funicular vaults a few centimeters thick for markets and gathering halls.</p>
+            </a>
+          </div>
+          <p className="forms-more"><a className="link" href={u('docs/design/organic-forms-and-materials')}>Read Beyond the Box <span aria-hidden="true">→</span></a> <a className="link" href={u('homes#earth')}>Earth tiny homes <span aria-hidden="true">→</span></a></p>
         </div>
       </section>
 
@@ -161,7 +194,7 @@ export default function Home(): JSX.Element {
         <div className="wrap">
           <div className="sec-head row">
             <div>
-              <p className="eyebrow">03 — Proven technology</p>
+              <p className="eyebrow">04 — Proven technology</p>
               <h2>Built from what already works.</h2>
             </div>
             <div className="chips" id="techChips" role="group" aria-label="Filter technologies">
@@ -189,7 +222,7 @@ export default function Home(): JSX.Element {
             <img src={img('living')} alt="Residents in linen walk a garden path between curved timber homes with green roofs, a fire circle and a glass dome at golden hour" width="1400" height="933" loading="lazy" />
           </figure>
           <div>
-            <p className="eyebrow">04 — Living</p>
+            <p className="eyebrow">05 — Living</p>
             <h2>A day that follows the sun.</h2>
             <p className="lead">Drag the sun across the sky — or tap an hour — to see how life in a communosphere is paced.</p>
           </div>
@@ -226,7 +259,7 @@ export default function Home(): JSX.Element {
         <div className="wrap">
           <div className="sec-head row">
             <div>
-              <p className="eyebrow light">05 — For investors</p>
+              <p className="eyebrow light">06 — For investors</p>
               <h2>Patient capital.<br />Measurable returns.</h2>
             </div>
             <div className="scen" role="radiogroup" aria-label="Investment scenario">
@@ -268,7 +301,7 @@ export default function Home(): JSX.Element {
       <section className="research" id="research">
         <div className="wrap research-grid">
           <div>
-            <p className="eyebrow">06 — Research</p>
+            <p className="eyebrow">07 — Research</p>
             <h2>A living laboratory,<br />held to open-science standards.</h2>
             <p className="lead">Engineering deliverables and consciousness hypotheses are kept on separate tracks — each with an honest readiness level.</p>
             <div className="trl" id="trl" aria-label="Technology readiness scale from 1 to 9">
@@ -294,7 +327,7 @@ export default function Home(): JSX.Element {
         <img className="roadmap-bg" src={img('spire')} alt="" width="1200" height="960" loading="lazy" />
         <div className="wrap">
           <div className="sec-head">
-            <p className="eyebrow light">07 — Roadmap</p>
+            <p className="eyebrow light">08 — Roadmap</p>
             <h2>Six stages, from blueprint<br />to living city.</h2>
           </div>
           <div className="stages" id="stages" role="tablist" aria-label="Development stages"></div>
@@ -306,7 +339,7 @@ export default function Home(): JSX.Element {
       <section className="inspo" id="inspiration">
         <div className="wrap">
           <div className="sec-head">
-            <p className="eyebrow">08 — Inspiration</p>
+            <p className="eyebrow">09 — Inspiration</p>
             <h2>An archetype, translated for Earth.</h2>
             <p className="lead">Delphin — described in contact accounts as a crystal city on another world — is treated as a design archetype, not evidence. Its principles meet the temple cities humans have already built.</p>
           </div>
@@ -337,7 +370,7 @@ export default function Home(): JSX.Element {
         <div className="wrap">
           <div className="sec-head row">
             <div>
-              <p className="eyebrow">09 — Library</p>
+              <p className="eyebrow">10 — Library</p>
               <h2>Everything we've written, in one place.</h2>
             </div>
             <label className="search">

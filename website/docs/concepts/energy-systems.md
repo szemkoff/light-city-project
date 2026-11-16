@@ -8,6 +8,10 @@ sidebar_label: Energy Systems
 
 *This document explores the energy generation, distribution, and consciousness technologies of Light City*
 
+![Solar microgrid at the edge of Light City: canopy arrays, a battery building and gardens](/img/home/city-microgrid.webp)
+
+*The Phase 1 microgrid: 2–5 MWp of solar and 8–20 MWh of batteries, all proven technology.*
+
 **Status**: Research & Development  
 **Last reviewed**: November 2026  
 **Owner**: Technical Working Group  
@@ -74,6 +78,8 @@ Delphin's crystal spire and energy system in action (visible as the central glow
 ### Architecture
 
 ![Energy Flow System](/img/diagrams/energy-flow-detailed.svg)
+
+*Phase 1 microgrid: roof, canopy and spire solar feed a controller and 8–20 MWh of batteries, with a grid tie and backup. Subtle-energy research is measured separately and never powers anything.*
 
 **Generation**:
 - **Solar PV**: 2-5 MWp (Phase 1), 5-15 MWp (Phase 2)
@@ -174,7 +180,7 @@ Delphin's crystal spire and energy system in action (visible as the central glow
 
 ![Knowledge Transfer Mechanism](/img/diagrams/knowledge-transfer-mechanism.svg)
 
-*How information flows from individual learning through the resonance field to instant collective reception.*
+*How we would test the archetype's idea of shared learning: a pre-registered study comparing group practice with sham and normal classes, with open results. This is a hypothesis (TRL 1–3), not a claim.*
 
 **Delphin Model** (Off-World Reference): "Whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
 
