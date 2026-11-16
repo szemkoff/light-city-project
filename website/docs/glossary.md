@@ -21,7 +21,7 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **AI building controls**: Software that learns how a building behaves and adjusts heating, cooling and lighting automatically, often using **reinforcement learning**. Reviews report 15–40% energy savings. **Scaling.** See [Technology Horizon](/docs/technical/technology-horizon#ai-building-digital-twins).
 
-**Archetype**: The visionary, channeled image of Light City, at planetary scale with crystal spires and enormous spheres. It is used as inspiration and contrasted with the **Earth build**.
+**Archetype**: The image of Light City described by the visionary source, at planetary scale with crystal spires and enormous spheres. It is used as inspiration and contrasted with the **Earth build**. See [The Archetype](/docs/concepts/the-archetype).
 
 ## B
 
@@ -49,7 +49,7 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **DarkSky lighting**: Outdoor lighting that is shielded, aimed down, warm in color (3000 K or warmer) and dimmed or switched off when not needed, following DarkSky International. **Proven.**
 
-**Delphin**: The channeled source of much of the original Light City vision. See [Philosophy](/docs/concepts/philosophy).
+**Delphin**: A city the visionary source describes on another world, and the origin of the spire and communosphere ideas. Inspiration, not a real place. See [The Archetype](/docs/concepts/the-archetype).
 
 **Dry-stone walling**: Building walls from stones fitted together without mortar. A UNESCO-listed craft found from Ireland to Cyprus and the Azores. See [Beyond the Box](/docs/design/organic-forms-and-materials).
 

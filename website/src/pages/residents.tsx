@@ -43,6 +43,7 @@ export default function Residents(): JSX.Element {
 
       <Section alt eyebrow="Start here" title="Read before you apply.">
         <DocLinks items={[
+          {to: '/trust', tag: 'Trust', title: 'Living here, honestly', text: 'Our promises, exit and refund terms, data rights and safeguards.'},
           {to: '/docs/project/contribution-based-residency', tag: 'Project', title: 'Contribution-based residency', text: 'Tiers, expectations and how the pilot will run.'},
           {to: '/docs/concepts/purpose-and-mission', tag: 'Concepts', title: 'Purpose & mission', text: 'What the community is for and how it measures success.'},
           {to: '/docs/project/governance', tag: 'Project', title: 'Governance', text: 'How residents take part in decisions.'},

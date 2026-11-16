@@ -62,9 +62,9 @@ Light City operates on multiple energy levels simultaneously, with clear separat
 
 ## Visual Reference
 
-The visionary images of the crystal spire and Delphin's energy system are in [Architecture → Vision references](/docs/design/architecture#vision-references).
+The visionary images of the crystal spire and the energy system the source describes for Delphin are in [Architecture → Vision references](/docs/design/architecture#vision-references); the full account is on [The Archetype](/docs/concepts/the-archetype).
 
-**Note**: Delphin represents an off-world reference model with advanced technology. Light City's Earth implementation uses the two-track system above.
+**Note**: the source describes Delphin's spire as powering a whole city. That is inspiration only; Light City's Earth implementation uses the two-track system above.
 
 ---
 
@@ -193,7 +193,7 @@ Hydro and geothermal are treated as bonuses, not promises: they depend on the la
 
 *How we would test the archetype's idea of shared learning: a pre-registered study comparing group practice with sham and normal classes, with open results. This is a hypothesis (TRL 1–3), not a claim.*
 
-**Delphin Model** (Off-World Reference): "Whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
+**What the source describes** (visionary reference): "Whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
 
 **Research Approach**: We treat "field-mediated learning" as a **testable phenomenon**:
 - **Preregistered protocols**: Hypothesis, methods, analysis plan published before data collection
@@ -500,7 +500,7 @@ graph TD
 4. What is break-even cost per kWh (LCOE)?
 
 **Resonance/Consciousness**:
-1. What is the specific frequency used in Delphin (if measurable)?
+1. Do specific sound frequencies or acoustics in shared spaces have measurable effects on calm or attention?
 2. Can knowledge transfer be scientifically measured (controlled trials)?
 3. What materials best maintain resonance in architecture?
 4. How do we balance accessibility with sacred protection?

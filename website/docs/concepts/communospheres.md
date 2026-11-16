@@ -6,16 +6,16 @@ sidebar_label: Communospheres
 
 # Communospheres
 
-*Living spaces that maintain consciousness resonance and enable collective awareness*
+*Shared timber domes where a community of about a hundred people lives, eats and gathers*
 
 ## Overview
 
-Communospheres represent a revolutionary approach to living spaces—spherical structures that maintain a specific resonant frequency, keeping inhabitants consciously connected to each other and the city's collective awareness field.
+A communosphere is a large shared dome with private homes inside or around it and common spaces at its heart. The source describes communospheres as spheres that hold a resonant frequency and keep their inhabitants consciously connected; on Earth we build the social and architectural idea and treat any wider effect as a research question.
 
-**Origin**: This concept comes from the city of Delphin on planet Israel, as shared through contact/channeling. It provides a concrete example of how higher-consciousness civilizations structure their living environments.
+**Origin**: The idea comes from the project's visionary source, which describes communospheres in Delphin, a city said to exist on another world. We treat that account as inspiration, not fact; it is kept on [The Archetype](/docs/concepts/the-archetype).
 
 :::info Scale Clarification
-**Delphin Scale** (Off-World Reference): 600-1,200 ft diameter spheres housing 10,000 people each represent advanced off-world technology and serve as inspirational reference.
+**In the source** (visionary reference): spheres 600–1,200 ft across, each housing 10,000 people.
 
 **Light City Scale** (Earth Implementation): Phase 1 domes are 30–45 m (100–150 ft) across and house 80–120 residents each, using proven technologies (timber gridshells, CLT, clay interiors, BIPV). See [Beyond the Box](/docs/design/organic-forms-and-materials) for forms and materials.
 :::
@@ -33,12 +33,12 @@ The original visionary images that inspired the idea are collected in [Architect
 ## Core Concept
 
 A communosphere is:
-- **Physical**: A large spherical structure
-- **Energetic**: A resonance-maintaining chamber
+- **Physical**: A large timber gridshell dome
 - **Social**: A complete community living environment
-- **Technological**: A consciousness-connection device
+- **Sensory**: A calm space shaped by light, acoustics and plants
+- **Research**: A place to study, with consent, how shared space affects wellbeing
 
-It's simultaneously architecture, energy technology, and consciousness tool.
+It is architecture first, and a living laboratory second.
 
 ## Key Characteristics
 
@@ -50,13 +50,9 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 **Shape**: Spherical (dome visible from exterior)
 
-#### Vision source (off-world reference)
+#### In the source (visionary reference)
 
-**Delphin Communospheres**: 600-1,200 ft diameter mega-spheres
-- Each houses 10,000 people
-- Complete self-contained cities within spheres
-- Demonstrates far-future pavilion scale with advanced consciousness-matter technology
-- Serves as aspirational model and proportional guide
+The source describes mega-spheres 600–1,200 ft across, each a self-contained city of 10,000 people. We use the image only as a proportional guide; see [The Archetype](/docs/concepts/the-archetype).
 
 #### Terrestrial prototype (Earth implementation)
 
@@ -89,15 +85,14 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 
 ### Energetic Function
 
-**Primary Purpose**: Maintain resonant frequency
+**What the source describes**: the spire holds a base frequency, each communosphere maintains it, and inhabitants stay "consciously connected" through it.
 
-**How It Works** (Research Hypothesis, TRL 1-3):
-1. Central city spire generates/holds base RESONANCE frequency (acoustic/consciousness)
-2. Communospheres receive and maintain this acoustic resonance
-3. Living spaces within sphere hold steady harmonic environment
-4. Inhabitants remain "consciously connected" through this experiential field
-5. **Note**: This is experiential/acoustic resonance, NOT electrical power
-6. **Physical power**: Provided by microgrid (solar PV + batteries)
+**What we design and test** (research hypothesis, TRL 1-3):
+1. Domes are tuned acoustically for calm, clear sound
+2. Shared spaces are designed for gathering and quiet
+3. Any effect on felt connection or wellbeing is studied with consent and protocols
+4. **Note**: This is about acoustics and experience, NOT electrical power
+5. **Physical power**: Provided by the microgrid (solar PV + batteries)
 
 **Field Effects** (experiential hypotheses, not established science):
 - Coherent acoustic and spatial environment
@@ -110,10 +105,10 @@ It's simultaneously architecture, energy technology, and consciousness tool.
 **Community Scale**: Complete self-sufficient communities
 
 **Population**: 
-- Delphin example: ~10,000 people per sphere
+- Phase 1: 80–120 people per dome
 - Large enough for diversity and culture
 - Small enough for genuine community
-- Optimal size for conscious connection
+- Close to the size at which people can still know each other well
 
 **Living Arrangement**:
 - Multiple families/individuals per sphere
@@ -167,18 +162,11 @@ graph TB
 
 ---
 
-### Consciousness Technology
+### Shared Learning
 
-**Collective Awareness**:
-- Inhabitants maintain constant connection
-- "They all know the same thing"
-- Knowledge learned by anyone transfers to all
-- Unity consciousness in practice
+**What the source describes**: in Delphin, "whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
 
-**Knowledge Transfer System**:
-
-**Delphin Model** (Off-World Reference):
-"Whatever they learn in some elevated knowledge form gets transferred to all of the spheres. So they all know the same thing."
+**What we build**: ordinary ways to share knowledge well: open documentation, learning circles, mentoring and shared meals.
 
 **Light City Research Approach**:
 We treat "field-mediated learning" as a **testable hypothesis**:
@@ -196,7 +184,7 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 
 **Layout**:
 - Position communospheres in outer ring(s)
-- Connect to central spire energetically
+- Connect to the central spire along the radial paths
 - Arrange in geometric pattern (circle, 12 positions, etc.)
 - Pathways connecting to central area
 
@@ -204,7 +192,7 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 - **Phase 1**: 3 domes (200 residents target, 150-300 range)
 - **Phase 2**: 6-12 domes (720-2,400 residents in domes; Village 1,500 target)
 - **Phase 3**: 12+ domes (2,400-4,800+ residents in domes; Town 8,000+)
-- **Long-term Vision**: Inspired by Delphin's 12 mega-spheres (60,000-120,000 people off-world scale)
+- **In the source**: 12 mega-spheres for 60,000–120,000 people, used only as inspiration
 
 **Architecture**:
 - Geodesic dome or sphere structure
@@ -382,7 +370,7 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 ### Solutions to Explore
 
 1. **Privacy**: Different field intensity zones within sphere
-2. **Individuality**: Unity consciousness includes diversity
+2. **Individuality**: unity includes diversity
 3. **Scale**: Test with smaller prototypes, scale up
 4. **Technology**: Research crystal energy, sacred geometry
 5. **Materials**: Phased approach—start simple, upgrade
@@ -417,25 +405,22 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 - [Architecture](/docs/design/architecture) - Overall city design
 - [Sacred Geometry](/docs/concepts/sacred-geometry) - Sphere significance
 - [Energy Systems](/docs/concepts/energy-systems) - Resonance technology
-- [Core Concepts](/docs/concepts/core-concepts) - Unity consciousness
+- [Core Concepts](/docs/concepts/core-concepts) - Shared values
+- [The Archetype](/docs/concepts/the-archetype) - The visionary source
 
 ### Integration Points
 - Communospheres are key component of Light City layout
-- They embody unity consciousness principles
+- They put shared living and care into built form
 - They demonstrate sacred geometry (sphere, perfect form)
 - They integrate spiritual and practical
 
-## Inspiration and Validation
+## Inspiration and Evidence
 
-The communosphere concept comes from actual implementation in Delphin, demonstrating:
+The communosphere idea comes from the project's visionary source, which describes it as already built in Delphin ([The Archetype](/docs/concepts/the-archetype)). We do not treat that as evidence. What we can point to on Earth:
 
-1. **It's possible** - Already exists on other worlds
-2. **It works** - Functional system for consciousness connection
-3. **It's scalable** - Large populations can live this way
-4. **It's practical** - Meets both physical and spiritual needs
-5. **It's the model** - Example for Earth implementation
-
-This isn't speculation—it's adaptation of proven technology.
+1. **Shared domes work as buildings**: timber gridshells and geodesic domes stand around the world ([Beyond the Box](/docs/design/organic-forms-and-materials)).
+2. **Shared living works at this scale**: co-housing and ecovillages of 100–500 people, such as Findhorn and Sieben Linden, have lasted for decades ([Bibliography](/docs/research/bibliography)).
+3. **The rest is research**: any effect of shared space on wellbeing or connection is measured with consent ([Open Questions](/docs/research/open-questions)).
 
 ---
 

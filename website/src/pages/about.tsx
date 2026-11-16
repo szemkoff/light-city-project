@@ -4,32 +4,33 @@ import Site, {Section, Cards, DocLinks, Cta} from '../components/Site';
 
 export default function About(): JSX.Element {
   const delphin = useBaseUrl('img/home/delphin.webp');
+  const archetype = useBaseUrl('/docs/concepts/the-archetype');
   return (
     <Site
       title="Vision & Philosophy"
-      description="Light City is an etheric blueprint, a collective vision and a practical implementation plan for regenerative, consciousness-integrated community."
+      description="Light City began as a visionary image and is now a practical, open plan for a regenerative community."
       eyebrow="Vision & philosophy"
       heading={<>Spirit before structure. <em>Engineering that keeps the promise.</em></>}
-      sub="Light City is a multidimensional project: an etheric blueprint, a collective vision and a practical implementation plan."
+      sub="Light City is three things: a visionary image, a set of shared values and a practical plan anyone can read, question and help build."
       image="vision-1">
       <Section eyebrow="Core principles" title="Three ideas hold the whole project together." lead="Everything we design, finance and build is checked against these principles first.">
         <Cards items={[
-          {to: '/docs/concepts/core-concepts#1-spirit-before-structure', kicker: 'I', title: 'Spirit before structure', img: 'vision-1', text: 'Light City begins as an etheric template, a higher-dimensional pattern. Physical implementation follows spiritual alignment.'},
-          {to: '/docs/concepts/core-concepts#2-gaias-memory', kicker: 'II', title: "Gaia's memory", img: 'about-land', text: 'Earth holds the memory of what Light City can be. We co-create with planetary consciousness rather than impose on it.'},
-          {to: '/docs/concepts/core-concepts#3-collective-co-creation', kicker: 'III', title: 'Collective co-creation', img: 'journey-founding', text: "Light City is not a single person's vision but an emergent pattern drawing from many consciousness streams."},
+          {to: '/docs/concepts/core-concepts#1-spirit-before-structure', kicker: 'I', title: 'Spirit before structure', img: 'vision-1', text: 'Values and community come first. A founding circle lives by the principles together before anything is built, and spiritual practice is always optional.'},
+          {to: '/docs/concepts/core-concepts#2-listen-to-the-land', kicker: 'II', title: 'Listen to the land', img: 'about-land', text: 'The plan adapts to the place: its water, soil, climate and wildlife, and the people and cultures already there.'},
+          {to: '/docs/concepts/core-concepts#3-collective-co-creation', kicker: 'III', title: 'Collective co-creation', img: 'journey-founding', text: "Light City is not one person's project. It grows through open collaboration and moves from founder-led to community-led governance."},
         ]} />
       </Section>
 
       <Section alt>
         <div className="pg-split">
-          <img src={delphin} alt="Concept image of a crystal city with a tall central spire of light" loading="lazy" />
+          <img src={delphin} alt="Visionary archetype art of a crystal city with a tall central spire of light, not a real place or a design" loading="lazy" />
           <div>
             <p className="eyebrow">What is Light City?</p>
             <h2>An archetype, translated for Earth.</h2>
             <div className="pg-prose" style={{marginTop: 'var(--space-6)'}}>
-              <p><strong>Etheric blueprint.</strong> A higher-dimensional pattern that exists in non-physical realms. Inspired by Delphin, described in channeled information as a crystal city on another world, Light City adapts those archetypal principles to Earth's constraints.</p>
-              <p><strong>Collective vision.</strong> A shared aspiration across consciousness streams drawn to regenerative living, unity consciousness and sacred geometry. It is an emergent pattern, not one person's project.</p>
-              <p><strong>Personal mission.</strong> Stan's role is to anchor the vision in the physical, bringing decades of technology experience, systems thinking and a commitment to rigorous implementation. It is both spiritual service and practical engineering.</p>
+              <p><strong>A visionary image.</strong> The project's source describes an "etheric blueprint" and Delphin, a crystal city on another world. We share that account openly on <a className="link" href={archetype}>The Archetype</a> and use it as a design brief, not a claim of fact.</p>
+              <p><strong>Shared values.</strong> A shared aspiration toward regenerative living, care for one another and beautiful, meaningful places. No one needs to hold any belief to take part.</p>
+              <p><strong>A practical plan.</strong> Stan's role is to turn the vision into something buildable, bringing decades of technology experience, systems thinking and a commitment to rigorous, open implementation.</p>
             </div>
           </div>
         </div>
@@ -37,7 +38,7 @@ export default function About(): JSX.Element {
 
       <Section night>
         <p className="eyebrow">Purpose &amp; mission</p>
-        <p className="pg-quote">To demonstrate that regenerative, consciousness-integrated communities are <em>buildable, scalable and financially viable</em> using proven technologies and transparent governance.</p>
+        <p className="pg-quote">To demonstrate that regenerative communities, with room for inner life, are <em>buildable, scalable and financially viable</em> using proven technologies and transparent governance.</p>
       </Section>
 
       <Section eyebrow="Horizons" title="From blueprint to living city." lead="Stage 1 (Foundation) is finishing now. Later stages follow in sequence.">
@@ -73,7 +74,7 @@ export default function About(): JSX.Element {
         <div style={{marginTop: 'var(--space-12)'}}>
           <DocLinks items={[
             {to: '/docs/concepts/purpose-and-mission', tag: 'Concepts', title: 'Purpose & mission', text: 'The full mission statement and what success looks like.'},
-            {to: '/docs/concepts/core-concepts', tag: 'Concepts', title: 'Core concepts', text: 'Sacred architecture, regenerative living and unity consciousness.'},
+            {to: '/docs/concepts/core-concepts', tag: 'Concepts', title: 'Core concepts', text: 'The vision in plain words: three layers and five principles.'},
             {to: '/docs/project/development-stages', tag: 'Project', title: 'Development stages', text: 'The six-stage roadmap with dates, costs and status.'},
           ]} />
         </div>

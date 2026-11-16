@@ -44,13 +44,14 @@ Thank you for your interest in contributing to the Light City project! This docu
 - Share the vision with others
 - Support other contributors
 
-### 6. Visionary Contributions
+### 6. Visionary and Reflective Contributions
 
-- Share your visions and intuitions
-- Channel insights about Light City
-- Contribute to the living blueprint
-- Offer spiritual perspectives
-- Connect with the etheric template
+- Share your images, intuitions and ideas for Light City
+- Offer perspectives from your own spiritual or cultural tradition, with credit to its sources
+- Suggest how a visionary idea could be tested or translated into design
+- Help keep [The Archetype](/docs/concepts/the-archetype) page accurate and clearly labeled
+
+Visionary contributions are welcome and are always labeled as inspiration. They never replace evidence in the design, finance or research pages.
 
 ## Getting Started
 
@@ -280,7 +281,7 @@ If you have questions about contributing:
 
 ## Thank You
 
-Your contribution, whatever form it takes, is a sacred act of service. You are helping to bridge a vision from etheric potential into manifest reality. 
+Your contribution, whatever form it takes, matters. You are helping to turn a vision into plans, and plans into a place where people can live well.
 
 Thank you for being part of this co-creation.
 

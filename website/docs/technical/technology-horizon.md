@@ -83,7 +83,7 @@ Placing solar panels over crops can work, but it depends on the climate. A 2026 
 
 ## Frontier — study openly, never depend on
 
-These ideas come from the visionary and channeled sources of the project. We take them seriously as **research questions**:
+These ideas come from the project's visionary source ([The Archetype](/docs/concepts/the-archetype)). We take them seriously as **research questions**:
 
 - **Group coherence and field effects.** Can shared practice measurably synchronize physiology or affect wellbeing beyond the individual? (TRL 1–3)
 - **Acoustic and resonance spaces.** Do specific frequencies or room geometries improve rest, focus or emotion? (TRL 2–4)

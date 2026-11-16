@@ -65,7 +65,7 @@ export default function Home(): JSX.Element {
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
           <h1>A city designed<br />to <em>hold light.</em></h1>
-          <p className="hero-sub">A living blueprint for regenerative community: luminous timber domes, a solar light spire and an open-science home for unity consciousness. Built only with technology that already stands somewhere on Earth.</p>
+          <p className="hero-sub">A living blueprint for regenerative community: luminous timber domes, a solar light spire and open, consent-based research on wellbeing and connection. Built only with technology that already stands somewhere on Earth.</p>
           <div className="hero-ctas">
             <a href="#city" className="btn">Explore the city</a>
             <a href="#vision" className="btn btn-ghost">Read the vision</a>
@@ -105,7 +105,7 @@ export default function Home(): JSX.Element {
               </li>
               <li>
                 <span className="pillar-n">III</span>
-                <div><h3>Unity consciousness</h3><p>Pre-registered, ethics-first protocols for group coherence, HRV and EEG studies. Open data — null results published.</p><span className="tag">TRL 1–3</span></div>
+                <div><h3>Inner life, studied openly</h3><p>Practice is always optional. Group coherence studies (HRV, EEG) are pre-registered, consent-based and ethics-first. Open data — null results published.</p><span className="tag">TRL 1–3</span></div>
               </li>
             </ol>
             <a className="link" href={u('journey')}>Follow the five-step transition <span aria-hidden="true">→</span></a>
@@ -341,12 +341,12 @@ export default function Home(): JSX.Element {
           <div className="sec-head">
             <p className="eyebrow">09 — Inspiration</p>
             <h2>An archetype, translated for Earth.</h2>
-            <p className="lead">Delphin — described in contact accounts as a crystal city on another world — is treated as a design archetype, not evidence. Its principles meet the temple cities humans have already built.</p>
+            <p className="lead">The project's visionary source describes Delphin, a crystal city on another world. We treat it as a design archetype, not evidence, and pair it with the temple cities humans have already built.</p>
           </div>
           <div className="compare">
             <figure className="cmp cmp-a">
               <img src={img('delphin')} alt="Concept rendering of Delphin: a towering dark crystal spire over a radial city with white domes in forest" width="936" height="524" loading="lazy" />
-              <figcaption><span>Delphin · off-world reference</span>Spire 40,000 ft · spheres for 10,000 people · consciousness-matter technology</figcaption>
+              <figcaption><span>Delphin · visionary archetype, not a real place</span>As the source describes it: a 40,000 ft spire and spheres for 10,000 people</figcaption>
             </figure>
             <figure className="cmp cmp-b">
               <img src={img('vision-1')} alt="Concept art of Light City: a circular white city with a glowing central spire on a lake among mountains" width="1216" height="832" loading="lazy" />
@@ -362,6 +362,7 @@ export default function Home(): JSX.Element {
             </figure>
           </div>
           <a className="link" href={u('docs/design/architecture')}>Architecture: archetype vs. Earth implementation <span aria-hidden="true">→</span></a>
+          <a className="link" href={u('docs/concepts/the-archetype')}>The Archetype: the visionary source in full <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -418,11 +419,11 @@ export default function Home(): JSX.Element {
         <div className="wrap foot-grid">
           <div>
             <a href="#top" className="brand"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M4 26a12 12 0 0 1 24 0" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M16 26V4" stroke="currentColor" strokeWidth="1.6"/><circle cx="16" cy="4" r="2.2" fill="currentColor"/></svg><span>Light City</span></a>
-            <p>A regenerative community project combining sacred architecture, proven technology and unity consciousness. Built in the open.</p>
+            <p>A regenerative community project combining sacred architecture, proven technology and room for inner life. Built in the open.</p>
           </div>
           <div><h4>Explore</h4><a href="#vision">Vision</a><a href="#city">The City</a><a href="#living">Living</a><a href="#invest">Invest</a><a href="#research">Research</a></div>
           <div><h4>Documentation</h4><a href={u('docs/START-HERE')}>Start here</a><a href={u('docs/project/development-stages')}>Development stages</a><a href={u('blog')}>Updates</a><a href="https://github.com/szemkoff/light-city-project">GitHub</a><a href={u('about')}>About the project</a></div>
-          <div><h4>Contact</h4><a href={u('contact')}>Contact form</a><a href={u('conduct')}>Code of conduct</a><a href={u('privacy')}>Privacy</a></div>
+          <div><h4>Contact</h4><a href={u('trust')}>Living here, honestly</a><a href={u('investors')}>Investor diligence</a><a href={u('contact')}>Contact form</a><a href={u('conduct')}>Code of conduct</a><a href={u('privacy')}>Privacy</a></div>
         </div>
         <div className="wrap foot-base"><span>© {new Date().getFullYear()} Light City Project</span><span>MIT (code) · CC BY-SA 4.0 (docs)</span></div>
       </footer>

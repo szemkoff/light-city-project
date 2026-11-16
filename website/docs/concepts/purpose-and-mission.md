@@ -9,25 +9,25 @@
 The Light City project exists to:
 
 ### 1. Anchor the Vision
-Translate the etheric blueprint of Light City into documentable, shareable form—making the vision accessible to those who resonate with it.
+Translate the project's visionary source (the "etheric blueprint" it describes; see [The Archetype](/docs/concepts/the-archetype)) into documented, shareable plans that anyone can read and test.
 
 ### 2. Create a Blueprint
-Develop comprehensive documentation that can guide manifestation across multiple dimensions—spiritual, creative, technical, and physical.
+Develop documentation that can guide the whole project: its values, design, technology, finance and community life.
 
 ### 3. Inspire and Catalyze
-Spark the imagination and activation of individuals who are meant to participate in building new Earth paradigms.
+Spark the imagination of people who want to help build better ways of living.
 
 ### 4. Build Community
 Connect those who hold similar visions and facilitate collaborative co-creation.
 
 ### 5. Demonstrate Principles
-Model the consciousness and practices that Light City represents—embodying the vision while documenting it.
+Live the values and practices Light City stands for while we document them, starting with the founding circle.
 
-### 6. Bridge Dimensions
+### 6. Bridge Vision and Practice
 Create tangible connections between:
-- Spiritual vision and practical action
-- Individual calling and collective movement
-- Etheric potential and physical manifestation
+- Inspiration and practical action
+- Individual calling and collective work
+- An idea on paper and a place people can live
 
 ## From purpose to practice
 
@@ -35,7 +35,7 @@ These purposes unfold as five movements: **Awakening, Gathering, Founding, Flour
 
 ## Mission Statement
 
-**To document, develop, and manifest Light City as a living example of higher-consciousness civilization, serving humanity's evolution through integrated spiritual, creative, and practical work.**
+**To document, develop and build Light City as a living example of a regenerative, caring and open community, showing that it can be designed, financed and governed in the open.**
 
 ## Specific Goals
 
@@ -81,11 +81,11 @@ These purposes unfold as five movements: **Awakening, Gathering, Founding, Flour
 ### Long-Term (Dec 2028 – 2032+: Stages 5-6)
 
 **Timeline**: December 2028 - 2032+ (3+ years)  
-**Stage 5**: Physical manifestation (18-36 months)  
+**Stage 5**: Physical build (18-36 months)  
 **Stage 6**: Operations and evolution (ongoing)
 
-1. **Physical Manifestation**
-   - Explore real-world implementations
+1. **Physical Build**
+   - Choose and secure a site
    - Create pilot projects or installations
    - Establish physical community spaces
 
@@ -96,7 +96,7 @@ These purposes unfold as five movements: **Awakening, Gathering, Founding, Flour
 
 3. **Serve Larger Movement**
    - Inspire other Light City initiatives
-   - Contribute to new Earth emergence
+   - Support similar projects and urban retrofits
    - Share learnings and frameworks
 
 The six-stage roadmap diagram, from vision to a thriving city, is in [Development Stages](/docs/project/development-stages).
@@ -110,26 +110,26 @@ The six-stage roadmap diagram, from vision to a thriving city, is in [Developmen
 ### Primary Beneficiaries
 
 1. **Visionaries and Builders**
-   - Those who feel called to create new paradigms
-   - People seeking practical frameworks for spiritual visions
-   - Individuals ready to participate in conscious creation
+   - Those who want to create new ways of living
+   - People seeking practical frameworks for big ideas
+   - Individuals ready to take part in building a community
 
 2. **Seekers and Students**
-   - Those exploring higher consciousness
+   - Those exploring contemplative practice and community
    - People interested in sacred architecture
    - Anyone drawn to the Light City concept
 
 3. **Future Humanity**
    - Coming generations who will inherit our work
-   - The collective consciousness evolving toward unity
-   - Earth herself, as we align with her evolution
+   - Communities that adapt what we learn
+   - The land and its living systems, which we aim to restore
 
 ### Indirect Beneficiaries
 
-1. **The Collective Field**
-   - Adding coherent vision to morphic field
-   - Strengthening new Earth timeline
-   - Contributing to planetary consciousness shift
+1. **The Wider Movement**
+   - Adding a well-documented example to the regenerative movement
+   - Sharing open data, including what fails
+   - Showing that spiritual inspiration and engineering rigor can work together
 
 2. **Other Projects**
    - Providing frameworks others can adapt
@@ -158,7 +158,7 @@ The six-stage roadmap diagram, from vision to a thriving city, is in [Developmen
 
 ### How We Work
 
-1. **Spirit-Led**: Follow inspiration and inner guidance
+1. **Inspired, then tested**: Welcome inspiration, then check it against evidence
 2. **Quality-Focused**: Depth over speed, excellence over quantity
 3. **Inclusive**: Welcome diverse contributions and perspectives
 4. **Transparent**: Open documentation and decision-making
@@ -169,19 +169,19 @@ The six-stage roadmap diagram, from vision to a thriving city, is in [Developmen
 
 1. **Ego-Driven**: Not about personal glory or control
 2. **Dogmatic**: Not claiming exclusive truth
-3. **Rushed**: Not forcing manifestation prematurely
+3. **Rushed**: Not building before each stage gate is passed
 4. **Exploitative**: Not extracting from community or Earth
 5. **Rigid**: Not clinging to fixed forms
-6. **Disconnected**: Not losing spiritual foundation
+6. **Disconnected**: Not losing sight of why we started
 
 ## Relationship to Other Movements
 
 Light City is:
 
-- **Complementary** to other new Earth initiatives
-- **Part of** the broader consciousness evolution
+- **Complementary** to other ecovillages, co-housing and regenerative projects
+- **Part of** a wider movement toward low-impact, connected living
 - **Unique** in its specific vision and expression
-- **Connected** to the collective awakening
+- **Open** to learning from others, including spiritual and secular traditions
 
 It is not:
 - **Exclusive** or claiming to be "the only way"
@@ -190,27 +190,22 @@ It is not:
 
 ## Timeline Philosophy
 
-We trust:
-- **Divine timing** over forced manifestation
-- **Organic unfolding** over rigid plans
-- **Readiness** over urgency
+We prefer:
+- **Readiness** over urgency: each stage starts only when the last one passes its gate
+- **Honest dates** over hopeful ones: when a stage runs late, the timeline is updated in public
 - **Quality** over speed
 
-Light City will manifest:
-- When consciousness is ready
-- When resources align
-- When the collective field supports it
-- In perfect timing
+The dated plan is in [Development Stages](/docs/project/development-stages).
 
 ## Call to Action
 
 This project invites you to:
 
-1. **Attune** to the Light City vision
-2. **Discover** your role in its manifestation
-3. **Contribute** your unique gifts
-4. **Embody** the principles it represents
-5. **Co-create** the new Earth reality
+1. **Read** the plan and question it
+2. **Find** your role: building, hosting, research, funding or simply following along
+3. **Contribute** your skills and time
+4. **Practice** the principles in your own life
+5. **Co-create** the first community with us
 
 ---
 
@@ -218,9 +213,9 @@ This project invites you to:
 
 Use these questions to ensure ongoing alignment:
 
-- Does this work serve the vision?
-- Am I acting from unity consciousness?
-- Is this the highest expression possible?
+- Does this work serve the project's purpose?
+- Am I acting with care for everyone affected?
+- Is this the best we can do with what we know?
 - Does this honor all beings?
 - Am I building in hearts as well as structures?
 

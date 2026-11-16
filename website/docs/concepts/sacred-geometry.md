@@ -160,13 +160,13 @@ Metatron's Cube is one of the most powerful sacred geometric patterns, containin
 
 ### Sri Yantra
 **Form**: 9 interlocking triangles within circles and lotus petals  
-**Symbolism**: Union of masculine and feminine, manifestation pattern  
-**Application**: Manifestation chambers, creation spaces, balance points  
-**Energy**: Transforms thought into form, spiritual into physical
+**Traditional meaning**: In Shakta Hindu tradition (Shri Vidya), the union of Shiva and Shakti and a map of creation  
+**Application**: Considered only for contemplation spaces, and only with guidance from practitioners of the tradition  
+**Note**: The Sri Yantra is a living sacred object for many people, not a decorative pattern
 
 ![Sri Yantra](/img/diagrams/sri-yantra.svg)
 
-The Sri Yantra is one of the most ancient and sacred geometric patterns, representing the entire cosmos and the union of Shiva (masculine) and Shakti (feminine) energies. Light City incorporates this powerful yantra in spaces designed for manifestation, creation, and the integration of spiritual and physical realities.
+The Sri Yantra is one of the most revered geometric figures in Hindu tradition, where it represents the whole cosmos and the union of Shiva and Shakti. Light City would use it only with credit, context and consultation with people who practice the tradition; see [Respect for traditions](/trust#traditions).
 
 ## Application in Light City
 

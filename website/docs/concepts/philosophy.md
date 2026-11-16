@@ -6,14 +6,18 @@
 
 Light City is built upon a synthesis of ancient wisdom, spiritual understanding, and visionary thinking about humanity's potential. This philosophy section will expand over time as understanding deepens.
 
-The visionary images behind this philosophy are in [Architecture → Vision references](/docs/design/architecture#vision-references).
+The visionary images behind this philosophy are in [Architecture → Vision references](/docs/design/architecture#vision-references), and the full account of the visionary source is on [The Archetype](/docs/concepts/the-archetype).
+
+:::note Views offered, not beliefs required
+This page sets out views held in the project's visionary source and by some contributors, as questions for reflection. Where it says "the source holds", it reports a view, not a fact. No one needs to share these views to live in, build or fund Light City.
+:::
 
 ## Core Philosophical Questions
 
 ### On Reality
 - What is the nature of reality beyond physical matter?
 - How do consciousness and materiality interact?
-- What are the mechanics of manifestation?
+- How do intention and action shape what gets built?
 
 ### On Humanity
 - What is humanity's purpose and potential?
@@ -29,12 +33,12 @@ The visionary images behind this philosophy are in [Architecture → Vision refe
 
 ### 1. Consciousness as Primary
 
-Reality is fundamentally consciousness, not matter. Material reality emerges from and is shaped by consciousness.
+The source holds that reality is fundamentally consciousness, not matter, and that material reality emerges from and is shaped by consciousness. This is a philosophical position (related to idealism and some contemplative traditions), not a scientific finding.
 
-**Implications for Light City:**
-- We must shift consciousness before shifting matter
-- The etheric blueprint exists in consciousness field
-- Physical manifestation follows conscious intention
+**What we take from it in practice:**
+- Values and relationships come before buildings
+- The source's "etheric blueprint" is used as a design brief ([The Archetype](/docs/concepts/the-archetype))
+- Intention matters, and is tested against results
 
 ### 2. Unity Within Diversity
 

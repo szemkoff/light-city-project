@@ -14,7 +14,7 @@ Most utopias fail because they ask people to make a leap: drop everything, move 
 This chapter connects the inner journey (how people grow in awareness, connection and purpose) with the outer journey (the buildings, technology and governance that support it). Each step is mapped onto the [development stages](/docs/project/development-stages).
 
 :::info How we hold the vision
-The long-term vision of Light City comes from inspired and channeled sources (see [Philosophy](/docs/concepts/philosophy)). We treat that vision as a **direction, not a prediction**. The steps below rely only on what is achievable now. Wherever a step depends on an unproven idea, we call it a hypothesis and describe how we will test it.
+The long-term vision of Light City comes from a visionary source (see [The Archetype](/docs/concepts/the-archetype)). We treat that vision as a **direction, not a prediction**. The steps below rely only on what is achievable now. Wherever a step depends on an unproven idea, we call it a hypothesis and describe how we will test it.
 :::
 
 ## The five movements
@@ -103,7 +103,7 @@ flowchart LR
 
 ## 5. Radiating — from one place to a pattern
 
-**Inner shift.** From "our city" to "a way of living anyone can adopt." The archetype in the channeled vision is planetary: a network of light cities. On Earth, that becomes **replication and retrofit**.
+**Inner shift.** From "our city" to "a way of living anyone can adopt." The source describes the archetype as planetary: a network of light cities. On Earth, that becomes **replication and retrofit**.
 
 **Outer form (Phase 2–3, 2035+).**
 - The Village (1,500–3,000 residents), then the Town (8,000+).

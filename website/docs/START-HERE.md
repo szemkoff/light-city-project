@@ -46,7 +46,7 @@ The key facts — scale, costs, homes, timeline — are on one page: **[Light Ci
 
 ## How we hold vision and reality together
 
-Light City began as a vision received through inspired and channeled sources. We honor that vision **and** we build with engineering discipline. Three conventions run through every page:
+Light City began as a vision that its founder and others describe receiving through meditation and channeled sources. We share that account openly on [The Archetype](/docs/concepts/the-archetype), and we build with engineering discipline. Elsewhere, visionary material is written as "the source describes…". Three conventions run through every page:
 
 1. **Archetype vs. Earth build.** Pages say whether they describe the visionary archetype or what we will actually construct.
 2. **Four horizons.** Every technology is tagged **Proven, Scaling, Emerging or Frontier** ([Technology Horizon](/docs/technical/technology-horizon)). We build with what is proven, design for what is scaling and study what is frontier.
