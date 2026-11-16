@@ -10,8 +10,8 @@
 
 
 
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500&amp;f[]=switzer@400,500,600&amp;display=swap"><link rel="stylesheet" href="/light-city-project/assets/css/styles.cfee7a29.css">
-<script src="/light-city-project/assets/js/runtime~main.10b83e06.js" defer="defer"></script>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500&amp;f[]=switzer@400,500,600&amp;display=swap"><link rel="stylesheet" href="/light-city-project/assets/css/styles.e7f57da1.css">
+<script src="/light-city-project/assets/js/runtime~main.b059a199.js" defer="defer"></script>
 <script src="/light-city-project/assets/js/main.d5c01eed.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -33,11 +33,12 @@
 <li class=""><strong>Respectful.</strong> Sacred symbols from living traditions are shown with their context and are not used as decoration only.</li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="3d-reference-model">3D reference model<a href="#3d-reference-model" class="hash-link" aria-label="Direct link to 3D reference model" title="Direct link to 3D reference model" translate="no">​</a></h2>
-<p>Every illustration of the city as a whole starts from one shared 3D model of the Phase 1 plan, so the radial design never drifts: the spire on a round plaza, five rings, 12 straight radial paths, four temple and learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land.</p>
+<p>Every illustration of the city as a whole starts from one shared 3D model, so the radial design never drifts. The model has three phases that grow from the same plan (<a class="" href="/light-city-project/docs/design/architecture#phased-development--scale">compared in Architecture</a>). Phase 1 shows the spire on a round plaza, five rings, 12 straight radial paths, one temple and two learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land. Phase 2 (village) and Phase 3 (town) keep all of that and add domes, rings of homes and a food and energy belt outward.</p>
 <p><img decoding="async" loading="lazy" alt="3D reference model of the Phase 1 plan: top view and aerial view of the five rings and 12 radial paths" src="/light-city-project/assets/images/model-reference-720726190352f16f05389991f0cc4931.webp" width="1742" height="620" class="img_ev3q"></p>
-<p><em>The 3D reference model, top and aerial views. <a href="/light-city-project/model/index.html" target="_blank" rel="noopener noreferrer" class="">Open the interactive model</a> to orbit it.</em></p>
+<p><em>The Phase 1 model, top and aerial views. Open the interactive model to orbit it: <a href="/light-city-project/model/index.html?phase=1" target="_blank" rel="noopener noreferrer" class="">Phase 1</a>, <a href="/light-city-project/model/index.html?phase=2" target="_blank" rel="noopener noreferrer" class="">Phase 2</a>, <a href="/light-city-project/model/index.html?phase=3" target="_blank" rel="noopener noreferrer" class="">Phase 3</a>.</em></p>
 <ul>
-<li class=""><strong>How to use it.</strong> Render the closest named view (aerial, top, low aerial, radial path, homes ring, plaza or solar ring) with <code>scripts/render-model.cjs</code>, then give that render to the image tool as the layout reference, with the current photo as a style reference.</li>
+<li class=""><strong>How to use it.</strong> Pick the phase the image shows, then render the closest named view (aerial, top, low aerial, radial path, homes ring, plaza or solar ring) with <code>PHASE=1|2|3 node scripts/render-model.cjs &lt;view&gt;</code>. Give that render to the image tool as the layout reference, with the current photo as a style reference.</li>
+<li class=""><strong>Label the phase.</strong> Any image of the whole city says which phase it shows, and must match that phase&#x27;s model: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3.</li>
 <li class=""><strong>What must match.</strong> One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.</li>
 <li class=""><strong>Changing the plan.</strong> Update <code>static/model/city.js</code> and the plan diagram together, then re-render the views and the affected images.</li>
 </ul>
