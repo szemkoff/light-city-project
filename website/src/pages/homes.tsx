@@ -7,14 +7,15 @@ export default function Homes(): JSX.Element {
   return (
     <Site
       title="Homes"
-      description="The four Light City home types, what is included, shared spaces, contribution-based residency and the path to moving in."
+      description="The five Light City home types, who each one fits, what is included, shared spaces, contribution-based residency and the path to moving in."
       eyebrow="Homes & daily life"
       heading={<>Private homes, <em>shared abundance.</em></>}
-      sub="Four home types, one all-inclusive monthly fee. Every home sits within walking distance of shared gardens, kitchens, studios and the plaza."
+      sub="Five home types, from a tiny home for one to a three-bedroom family home. One all-inclusive monthly fee. Every home sits within walking distance of shared gardens, kitchens, studios and the plaza."
       image="homes-overview">
       <Section>
         <Jump items={[
           {href: '#types', label: 'Home types'},
+          {href: '#fit', label: 'Who fits where'},
           {href: '#earth', label: 'Earth tiny homes'},
           {href: '#included', label: 'What is included'},
           {href: '#shared', label: 'Shared spaces'},
@@ -22,12 +23,12 @@ export default function Homes(): JSX.Element {
           {href: '#path', label: 'Path to moving in'},
         ]} />
         <div className="pg-facts">
-          <div className="pg-fact"><b>4</b><span>home types, from 200 to 1,200 sf</span></div>
-          <div className="pg-fact"><b>$500–1,700</b><span>per month, all-inclusive</span></div>
+          <div className="pg-fact"><b>5</b><span>home types, from 200 to 1,600 sf</span></div>
+          <div className="pg-fact"><b>$500–2,200</b><span>per home, per month, all-inclusive</span></div>
           <div className="pg-fact"><b>10–15</b><span>communal meals included each month</span></div>
           <div className="pg-fact"><b>20–30%</b><span>of homes reserved for contribution-based residency</span></div>
         </div>
-        <p className="pg-note">Phase 1 figures for the 200-resident Pilot Hamlet. Sizes, mix and prices are planning ranges and will be finalized during Stage 2 (Design, 2027) once a site is chosen. First residents are targeted for 2031.</p>
+        <p className="pg-note">Phase 1 figures for the 200-resident Pilot Hamlet, planned as about 110 homes. Sizes, mix and prices are planning ranges and will be finalized during Stage 2 (Design, 2027) once a site is chosen. First residents are targeted for 2031.</p>
       </Section>
 
       <Section alt id="types" eyebrow="Home types" title="Choose the scale of private life you need.">
@@ -80,15 +81,56 @@ export default function Homes(): JSX.Element {
           tag="$1,300–1,700 / month">
           <p>A two-story timber home with its own front garden on a car-free lane. Children can roam safely between homes, gardens and the learning spaces. Rooftop solar, a green roof and a heat pump keep running costs, which are already included, low.</p>
           <ul>
-            <li><strong>Best for:</strong> families, multi-generational households and shared living</li>
+            <li><strong>Best for:</strong> a family of three or four, two adults sharing, or a couple with a parent</li>
             <li><strong>Where:</strong> ring housing between the domes and the food-growing edge</li>
             <li><strong>Includes:</strong> private garden, storage and room for a home office</li>
           </ul>
         </Feature>
+        <Feature to="/docs/at-a-glance#homes-monthly-all-inclusive" id="three-bedroom"
+          img="home-3br"
+          alt="A two-story curved-timber family home with a planted roof and a wide balcony, a front garden with vegetable beds, a lawn and a wooden climbing frame, three children playing while their parents garden and a grandmother sits on the porch bench"
+          kicker="3-bedroom · 1,300–1,600 sf · draft"
+          title="Three-bedroom family home"
+          tag="$1,700–2,200 / month">
+          <p>A larger two-story timber home for bigger and multi-generational families, on the same car-free lanes as the two-bedroom homes. Three bedrooms, a family kitchen, a bath on each floor and a garden with room to play and grow food. This home type is a draft for Stage 2 design; about 10 are planned in Phase 1.</p>
+          <ul>
+            <li><strong>Best for:</strong> families with two or three children, and three-generation households</li>
+            <li><strong>Where:</strong> ring housing beside the learning pavilions and the food-growing edge</li>
+            <li><strong>Includes:</strong> private garden, two baths, extra storage and a flexible ground-floor room that can become a bedroom for a grandparent</li>
+          </ul>
+        </Feature>
+      </Section>
+
+      <Section id="fit" eyebrow="Who fits where" title="Match the home to the household." lead="A guide, not a rule. Each home has a comfortable size and a maximum, so nobody is crowded and no home sits half empty.">
+        <div className="pg-table-wrap">
+          <table className="pg-table">
+            <thead><tr><th>Household</th><th>Suggested home</th><th>Comfortable for</th><th>Up to</th><th>Example monthly cost</th></tr></thead>
+            <tbody>
+              <tr><th>One person</th><td><a href="#tiny">Tiny home</a> or <a href="#studio">studio</a></td><td>1</td><td>1 (tiny), 2 (studio)</td><td>$500–950</td></tr>
+              <tr><th>Couple, or one person who works from home</th><td><a href="#studio">Studio</a> or <a href="#one-bedroom">one-bedroom</a></td><td>1–2</td><td>2, or 2 + a baby</td><td>$950–1,300 + $300 for a second adult</td></tr>
+              <tr><th>Couple with one or two children</th><td><a href="#two-bedroom">Two-bedroom</a></td><td>3–4</td><td>4</td><td>$1,300–1,700 + $300 + $150 per child</td></tr>
+              <tr><th>Single parent with one or two children</th><td><a href="#two-bedroom">Two-bedroom</a></td><td>2–3</td><td>4</td><td>$1,300–1,700 + $150 per child</td></tr>
+              <tr><th>Family with three or more children</th><td><a href="#three-bedroom">Three-bedroom</a></td><td>4–6</td><td>6</td><td>$1,700–2,200 + $300 + $150 per child</td></tr>
+              <tr><th>Three generations</th><td><a href="#three-bedroom">Three-bedroom</a>, or a two-bedroom plus a nearby tiny home</td><td>4–6</td><td>6</td><td>Home fee + $300 per extra adult + $150 per child</td></tr>
+              <tr><th>Two or three adults sharing</th><td><a href="#two-bedroom">Two-bedroom</a> or <a href="#three-bedroom">three-bedroom</a></td><td>2–3</td><td>3</td><td>Home fee + $300 per extra adult</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="pg-prose" style={{marginTop: 'var(--space-8)'}}>
+          <h2>How the fee works for a household</h2>
+          <ul>
+            <li><strong>Home fee:</strong> the monthly price of the home. It covers the home, utilities, maintenance and one adult's meals, wellness and programs.</li>
+            <li><strong>Each additional adult:</strong> about $300 a month for communal meals, wellness and programs.</li>
+            <li><strong>Each child under 18:</strong> about $150 a month. Learning programs on site are included.</li>
+            <li><strong>Example:</strong> two parents and two children in a two-bedroom home pay about $1,500 + $300 + $150 + $150 = $2,100 a month.</li>
+          </ul>
+          <p>Families can move to a larger or smaller home as they change, when one is free. Residents already living here get first choice.</p>
+        </div>
+        <p className="pg-note">Draft. The household fees and size limits above are planning assumptions for Stage 2 (Design, 2027) and will be tested in the waitlist survey before they are final. Local building and occupancy codes at the chosen site take priority.</p>
       </Section>
 
 
-      <Section id="earth" eyebrow="Beyond the box" title="Earth tiny homes: built from the ground they stand on." lead="An option for the tiny-home clusters: small curved homes of earthbag (superadobe) or 3D-printed local soil, finished in clay plaster. Lower cost, healthier air and a quiet, rounded shape.">
+      <Section alt id="earth" eyebrow="Beyond the box" title="Earth tiny homes: built from the ground they stand on." lead="An option for the tiny-home clusters: small curved homes of earthbag (superadobe) or 3D-printed local soil, finished in clay plaster. Lower cost, healthier air and a quiet, rounded shape.">
         <Feature to="/docs/design/organic-forms-and-materials#notes-on-the-strongest-options"
           img="form-superadobe"
           alt="A cluster of small superadobe earth domes with sand-colored clay plaster, round windows and planted roofs around a courtyard garden with a small outdoor fire pit"
@@ -118,7 +160,7 @@ export default function Homes(): JSX.Element {
         </Feature>
       </Section>
 
-      <Section alt id="included" eyebrow="One fee" title="What is included, and what is not.">
+      <Section id="included" eyebrow="One fee" title="What is included, and what is not.">
         <div className="pg-split" style={{alignItems: 'start'}}>
           <div className="pg-prose">
             <h2 style={{marginTop: 0}}>Included in every home</h2>
@@ -143,7 +185,7 @@ export default function Homes(): JSX.Element {
         </div>
       </Section>
 
-      <Section id="shared" eyebrow="Shared spaces" title="Your home is the smallest room in the city." lead="Private homes stay modest because the shared spaces are generous. Everything here is within a ten-minute walk.">
+      <Section alt id="shared" eyebrow="Shared spaces" title="Your home is the smallest room in the city." lead="Private homes stay modest because the shared spaces are generous. Everything here is within a ten-minute walk.">
         <Cards items={[
           {to: '/docs/concepts/communospheres#daily-life-in-a-communosphere', title: 'Dome kitchens & long tables', img: 'journey-flourishing', kicker: 'Every communosphere', text: 'A shared kitchen and dining hall on each dome floor, for communal meals several times a week and private dinners whenever you like.'},
           {to: '/docs/design/architecture#6-gardens-and-nature-spaces', title: 'Greenhouses & food forest', img: 'city-greenhouse', kicker: 'Outer ring', text: 'Year-round solar greenhouses, orchards and layered food forests. Residents can garden as much or as little as they like.'},
@@ -152,7 +194,7 @@ export default function Homes(): JSX.Element {
         ]} />
       </Section>
 
-      <Section alt id="contribute" eyebrow="Contribution-based residency" title="Contribute your time, lower your costs." lead="About 20–30% of homes are offered to residents who contribute regular work in exchange for reduced fees. A pilot runs in 2027–2028.">
+      <Section id="contribute" eyebrow="Contribution-based residency" title="Contribute your time, lower your costs." lead="About 20–30% of homes are offered to residents who contribute regular work in exchange for reduced fees. A pilot runs in 2027–2028.">
         <div className="pg-table-wrap">
           <table className="pg-table">
             <thead><tr><th>Tier</th><th>Contribution</th><th>Monthly cost</th><th>Includes</th><th>Best for</th></tr></thead>
@@ -166,7 +208,7 @@ export default function Homes(): JSX.Element {
         <p className="pg-note">Contribution areas include food systems, facilities and maintenance, education and facilitation, care and support, creative work, and administration. Contribution-based residents have the same rights as paying residents.</p>
       </Section>
 
-      <Section id="path" eyebrow="Path to moving in" title="From interest to keys, in five steps.">
+      <Section alt id="path" eyebrow="Path to moving in" title="From interest to keys, in five steps.">
         <ol className="pg-steps">
           <li className="now"><span className="when">Now</span><h3>Join the interest list</h3><p>Get updates, early invitations and a say in how homes are designed.</p></li>
           <li><span className="when">2027–2028</span><h3>Visit a retreat</h3><p>Seasonal retreats let you experience the rhythms, food and people before committing.</p></li>
@@ -176,7 +218,7 @@ export default function Homes(): JSX.Element {
         </ol>
       </Section>
 
-      <Section alt eyebrow="Go deeper" title="Read before you reserve.">
+      <Section eyebrow="Go deeper" title="Read before you reserve.">
         <DocLinks items={[
           {to: '/docs/project/contribution-based-residency', tag: 'Living', title: 'Contribution-based residency', text: 'Tiers, contribution areas, selection and how the pilot runs.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'How the dome neighborhoods are organized, inside and out.'},

@@ -134,7 +134,7 @@ export default function City(): JSX.Element {
               <tr><th>Domes</th><td>3 domes, 30–45 m</td><td>6–12 domes, 45–60 m</td><td>Up to 90 m, 400 residents each</td></tr>
               <tr><th>Spire</th><td>60–120 m</td><td>120–300 m</td><td>Up to 300 m</td></tr>
               <tr><th>Timing</th><td>Move-in 2031</td><td>Mid-2030s</td><td>2040s+</td></tr>
-              <tr><th>Gate to next phase</th><td>Break-even at 180 residents</td><td>Proven operations and demand</td><td>Regional partnerships</td></tr>
+              <tr><th>Gate to next phase</th><td>Operating break-even with about 110 homes full</td><td>Proven operations and demand</td><td>Regional partnerships</td></tr>
             </tbody>
           </table>
         </div>

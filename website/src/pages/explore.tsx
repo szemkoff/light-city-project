@@ -61,7 +61,7 @@ export default function Explore(): JSX.Element {
       image="city-aerial">
       <Section eyebrow="Visual guides" title="Four ways into the vision.">
         <Cards items={[
-          {title: 'Homes & daily life', img: 'home-2br', kicker: 'Homes', text: 'Four home types, what is included, contribution-based residency and the path to moving in.'},
+          {title: 'Homes & daily life', img: 'home-2br', kicker: 'Homes', text: 'Five home types, who fits where, what is included, contribution-based residency and the path to moving in.'},
           {title: 'The city', img: 'city-dome-cutaway', kicker: 'City', text: 'The rings, the spire, domes, temple, studios, greenhouses and microgrid, with Phase 1 specifications.'},
           {title: 'Technology', img: 'city-microgrid', kicker: 'Technology', text: 'Proven, scaling, emerging and frontier technologies, and how each is used or studied.'},
           {title: 'The transition', img: 'journey-gathering', kicker: 'Journey', text: 'Five movements from today to the Light City future, and how to take part at each one.'},
