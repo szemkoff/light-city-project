@@ -32,12 +32,12 @@ jobs:
       - name: Install dependencies
         run: cd website && npm ci --legacy-peer-deps
 
-      # Contact + newsletter forms need a Web3Forms access key at build time (not stored in git).
-      # 1) Create key at https://web3forms.com (choose the inbox that should receive submissions).
-      # 2) Repo → Settings → Secrets → Actions → WEB3FORMS_ACCESS_KEY = <paste key>
+      # Signup + contact forms post to a Google Apps Script web app (Sheet row + email notification).
+      # Setup: integrations/google-sheets/README.md. Repo → Settings → Secrets → Actions →
+      # FORMS_ENDPOINT_URL = <web app /exec URL>
       - name: Build site
         env:
-          WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
+          FORMS_ENDPOINT_URL: ${{ secrets.FORMS_ENDPOINT_URL }}
         run: cd website && npm run build
 
       - name: Verify build output
