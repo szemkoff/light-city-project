@@ -104,7 +104,7 @@ html:has(.lc-home:not(.lc-chrome)){scroll-behavior:smooth;scroll-padding-top:72p
 .lc-home .pillar-n{font:italic 300 var(--text-xl)/1 var(--display);color:var(--gold)}
 .lc-home .pillars p{color:var(--muted);margin-top:var(--space-2);max-width:52ch}
 .lc-home .vision-art{margin:0;position:sticky;top:96px}
-.lc-home .vision-art img{border-radius:var(--r-lg);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 40px 80px -40px rgba(138,95,23,.45)}
+.lc-home .vision-art img{border-radius:var(--r-lg);aspect-ratio:1400/788;height:auto;object-fit:cover;width:100%;box-shadow:0 40px 80px -40px rgba(138,95,23,.45)}
 .lc-home .vision-art figcaption{font-size:var(--text-xs);color:var(--muted);margin-top:var(--space-3)}
 .lc-home .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(var(--space-16),8vw,var(--space-24));border-top:1px solid var(--line)}
 .lc-home .stats>div{padding:var(--space-8) var(--space-6) 0 0}
