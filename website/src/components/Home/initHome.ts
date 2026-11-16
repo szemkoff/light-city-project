@@ -253,7 +253,7 @@ if (!reduce) {
   on(window, 'scroll', () => { const r = bandSec.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) band.style.transform = `translateY(${(r.top / innerHeight) * -8}%)`; }, { passive: true });
 }
 
-/* ---------- FORM (Google Sheet via Apps Script, FORMS_ENDPOINT_URL; falls back to Web3Forms) ---------- */
+/* ---------- FORM (Google Sheet via Apps Script, FORMS_ENDPOINT_URL) ---------- */
 $('#joinForm').onsubmit = async (e: Event) => {
   e.preventDefault();
   const f = e.target as HTMLFormElement, m = $('#formMsg'), btn = f.querySelector('button') as HTMLButtonElement;
