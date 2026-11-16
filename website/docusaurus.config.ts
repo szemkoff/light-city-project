@@ -102,69 +102,32 @@ const config: Config = {
         href: '/',
       },
       items: [
+        // Same menu as the main pages (src/components/Site/index.tsx NAV)
+        {to: '/about', label: 'Vision', position: 'right'},
+        {to: '/explore', label: 'Explore', position: 'right'},
+        {to: '/residents', label: 'Residents', position: 'right'},
+        {to: '/investors', label: 'Investors', position: 'right'},
+        {to: '/builders', label: 'Builders', position: 'right'},
+        {to: '/researchers', label: 'Researchers', position: 'right'},
+        {to: '/contact', label: 'Contact', position: 'right'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentation',
-        },
-        {to: '/blog', label: 'Updates', position: 'left'},
-        {
-          href: 'https://github.com/szemkoff/light-city-project',
-          label: 'GitHub',
           position: 'right',
+          label: 'Docs',
+          className: 'nav-docs',
+        },
+        {
+          href: 'pathname:///light-city-project/#join',
+          label: 'Join the founding circle',
+          position: 'right',
+          className: 'nav-cta',
+          target: '_self',
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Documentation',
-          items: [
-            {
-              label: 'Start Here',
-              to: '/docs/START-HERE',
-            },
-            {
-              label: 'Core Concepts',
-              to: '/docs/concepts/core-concepts',
-            },
-            {
-              label: 'Architecture',
-              to: '/docs/design/architecture',
-            },
-          ],
-        },
-        {
-          title: 'Project',
-          items: [
-            {
-              label: 'Development Stages',
-              to: '/docs/project/development-stages',
-            },
-            {
-              label: 'Contributing',
-              to: '/docs/project/contributing',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Updates',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/szemkoff/light-city-project',
-            },
-          ],
-        },
-      ],
-      copyright: `Light City Project © ${new Date().getFullYear()}. Built with Docusaurus.`,
-    },
+    // Footer is rendered by src/theme/Footer (the shared SiteFooter)
+    footer: {style: 'dark', links: []},
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,

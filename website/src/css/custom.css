@@ -234,3 +234,53 @@ a {
   font-size: 1.2rem;
   letter-spacing: -0.01em;
 }
+
+/* ---------- Docs and blog menu, matched to the main pages (.lc-home .nav) ---------- */
+:root { --ifm-navbar-height: 68px; --ifm-navbar-item-padding-horizontal: 0.75rem; }
+.navbar { font-family: var(--ifm-font-family-base); }
+.navbar__inner { gap: 1rem; }
+.navbar__items--right { gap: 0.25rem; }
+.navbar__items--right > .navbar__link {
+  font-size: clamp(.875rem, .8rem + .35vw, 1rem);
+  font-weight: 400;
+  color: var(--ifm-font-color-base);
+  padding: .5rem .75rem;
+  border-radius: 99px;
+  opacity: .82;
+  transition: opacity .2s, background .2s;
+}
+.navbar__items--right > .navbar__link:hover,
+.navbar__items--right > .navbar__link--active {
+  opacity: 1;
+  color: var(--ifm-font-color-base);
+  background: rgba(127, 117, 99, .16);
+}
+.navbar__items--right > .navbar__link.nav-docs { border: 1px solid currentColor; }
+.navbar.navbar-sidebar--show { backdrop-filter: none; -webkit-backdrop-filter: none; }
+.navbar__items--right > .navbar__link.nav-cta {
+  opacity: 1;
+  margin-left: .75rem;
+  min-height: 40px;
+  align-items: center;
+  padding: 0 1.25rem;
+  background: #e9b85a;
+  color: #1d1a15;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s, background .3s;
+}
+.navbar__items--right > .navbar__link.nav-cta:hover {
+  background: #f6d38c;
+  color: #1d1a15;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(233, 184, 90, .8);
+}
+@media (min-width: 997px) { .navbar__items--right > .navbar__link.nav-cta { display: inline-flex; } }
+.navbar__link.nav-cta svg { display: none; }
+/* Mobile drawer: keep the CTA as a gold button */
+.menu__link.nav-cta { background: #e9b85a; color: #1d1a15; font-weight: 600; margin-top: .5rem; justify-content: center; border-radius: 99px; }
+.menu__link.nav-cta svg { display: none; }
+.menu__link.nav-docs { font-weight: 600; }
+/* Old docs footer styles no longer apply; the shared footer sits flush */
+.footer { display: none; }
+.navbar-sidebar { background-color: var(--ifm-background-color); }
