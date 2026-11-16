@@ -102,8 +102,25 @@ const config: Config = {
       },
       items: [
         // Same menu as the main pages (src/components/Site/index.tsx NAV)
-        {to: '/about', label: 'Vision', position: 'right'},
-        {to: '/explore', label: 'Explore', position: 'right'},
+        {
+          type: 'dropdown', label: 'Vision', to: '/about', position: 'right',
+          items: [
+            {to: '/about', label: 'Vision & philosophy'},
+            {to: '/trust', label: 'Living here, honestly'},
+            {to: '/resources', label: 'Resources'},
+          ],
+        },
+        {
+          type: 'dropdown', label: 'Explore', to: '/explore', position: 'right',
+          items: [
+            {to: '/explore', label: 'All topics'},
+            {to: '/homes', label: 'Homes'},
+            {to: '/city', label: 'The city'},
+            {to: '/technology', label: 'Technology'},
+            {to: '/journey', label: 'The transition'},
+            {to: '/locations', label: 'Locations'},
+          ],
+        },
         {to: '/residents', label: 'Residents', position: 'right'},
         {to: '/investors', label: 'Investors', position: 'right'},
         {to: '/builders', label: 'Builders', position: 'right'},

@@ -240,7 +240,8 @@ a {
 .navbar { font-family: var(--ifm-font-family-base); }
 .navbar__inner { gap: 1rem; }
 .navbar__items--right { gap: 0.25rem; }
-.navbar__items--right > .navbar__link {
+.navbar__items--right > .navbar__link,
+.navbar__items--right > .dropdown > .navbar__link {
   font-size: clamp(.875rem, .8rem + .35vw, 1rem);
   font-weight: 400;
   color: var(--ifm-font-color-base);
@@ -250,7 +251,8 @@ a {
   transition: opacity .2s, background .2s;
 }
 .navbar__items--right > .navbar__link:hover,
-.navbar__items--right > .navbar__link--active {
+.navbar__items--right > .navbar__link--active,
+.navbar__items--right > .dropdown:hover > .navbar__link {
   opacity: 1;
   color: var(--ifm-font-color-base);
   background: rgba(127, 117, 99, .16);
@@ -284,3 +286,16 @@ a {
 /* Old docs footer styles no longer apply; the shared footer sits flush */
 .footer { display: none; }
 .navbar-sidebar { background-color: var(--ifm-background-color); }
+
+.navbar .dropdown__menu { background: var(--ifm-background-color); border: 1px solid rgba(29,26,21,.12); border-radius: 12px; padding: .5rem; min-width: 220px; box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); }
+.navbar .dropdown__link { border-radius: 6px; padding: .5rem .75rem; font-size: .95rem; }
+.navbar .dropdown__link { font-weight: 400; color: var(--ifm-font-color-base); }
+.navbar__items--right > .dropdown > .navbar__link::after {
+  border: 0; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  width: .38em; height: .38em; margin-left: .45em; top: auto; position: relative;
+  transform: translateY(-.2em) rotate(45deg); opacity: .7; display: inline-block; content: "";
+}
+.navbar__items--right > .dropdown { padding: 0; }
+.navbar__title { white-space: nowrap; }
+/* Same as the main pages: the Join button leaves the bar below 1200 px (it stays in the phone menu) */
+@media (max-width: 1200px) and (min-width: 997px) { .navbar__items--right > .navbar__link.nav-cta { display: none; } }

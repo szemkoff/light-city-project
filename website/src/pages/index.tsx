@@ -8,6 +8,7 @@ import initHome from '../components/Home/initHome';
 import {formTarget} from '../contactConfig';
 import '../components/Home/home.css';
 import SiteFooter from '../components/Site/SiteFooter';
+import {EXPLORE_SUB, VISION_SUB} from '../components/Site/menu';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
@@ -49,7 +50,12 @@ export default function Home(): JSX.Element {
               <li><a href="#invest">Invest</a></li>
               <li><a href="#research">Research</a></li>
               <li><a href="#roadmap">Roadmap</a></li>
-              <li><a href={u('explore')}>Explore</a></li>
+              <li className="has-sub"><a href={u('explore')} aria-haspopup="true">Explore</a>
+                <ul className="sub" aria-label="Explore">
+                  {EXPLORE_SUB.map((c) => <li key={c.to}><a href={u(c.to.slice(1))}>{c.label}</a></li>)}
+                  {VISION_SUB.map((c) => <li key={c.to}><a href={u(c.to.slice(1))}>{c.label}</a></li>)}
+                </ul>
+              </li>
               <li><a href={u('docs/START-HERE')} className="nav-docs">Docs</a></li>
             </ul>
           </nav>
