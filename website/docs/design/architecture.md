@@ -88,7 +88,7 @@ Connection across dimensions:
 
 ### Phased Development & Scale
 
-The city grows in three phases from one radial plan. Each phase has its own interactive 3D model: [Phase 1](pathname:///model/index.html?phase=1), [Phase 2](pathname:///model/index.html?phase=2), [Phase 3](pathname:///model/index.html?phase=3). The spire, plaza, rings and 12 radial paths stay where they are; later phases fill the empty dome plots, extend the same spire and add rings outward.
+The city grows in three phases from one radial plan. It is one interactive 3D model: every structure is tagged with the phase that builds it, and the phase switch turns on what each later phase adds ([Phase 1](pathname:///model/index.html?phase=1), [Phase 2](pathname:///model/index.html?phase=2), [Phase 3](pathname:///model/index.html?phase=3)). The spire, plaza, rings and 12 radial paths stay where they are; later phases fill the empty dome plots, extend the same spire and add rings outward.
 
 **Rule: build once, grow outward.** Nothing built in one phase is torn down in the next. Every phase has to work as a finished place on its own, in case the next one never comes.
 
@@ -98,7 +98,7 @@ The city grows in three phases from one radial plan. Each phase has its own inte
 - **One spire, built in sections.** The foundation, base and 72 m deck are sized for the final height in Phase 1. Later phases add lattice sections on top and lift the solar crown, the way the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) in Moscow was built from stacked sections lifted into place.
 - **Only movable things move.** Solar panels, greenhouses and nursery trees may be relocated. Buildings, paths, mature trees and soil are not.
 
-![Top views of the three phase models side by side: the Phase 1 hamlet with three domes, the Phase 2 village with eight domes and courtyard homes, and the Phase 3 town with eighteen domes and timber terraces](/img/diagrams/model-phases.webp)
+![Top views of the one model at each phase, side by side: the Phase 1 hamlet with three domes, the Phase 2 village with eight domes and courtyard homes, and the Phase 3 town with eighteen domes and timber terraces](/img/diagrams/model-phases.webp)
 
 *Top views of the three 3D models. Each panel is drawn at its own scale.*
 
