@@ -19,8 +19,8 @@
   <circle cx="500" cy="180" r="80" fill="none" stroke="#4A9EFF" stroke-width="16" 
           stroke-dasharray="301.59" stroke-dashoffset="120.64" 
           transform="rotate(-90 500 180)" stroke-linecap="round"/>
-  <text x="500" y="195" text-anchor="middle" class="progress-text">60%</text>
-  <text x="500" y="220" text-anchor="middle" class="subtitle-text">Complete</text>
+  <text x="500" y="195" text-anchor="middle" class="progress-text">S1</text>
+  <text x="500" y="220" text-anchor="middle" class="subtitle-text">Finishing · updated Nov 2026</text>
   
   <!-- Stage Timeline -->
   <g transform="translate(50, 300)">

@@ -4,18 +4,18 @@
 
 .hero {
   padding: 6rem 2rem 4rem;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(138, 95, 23, 0.1) 0%, rgba(233, 184, 90, 0.15) 100%);
   text-align: center;
 }
 
 [data-theme='light'] .hero {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(138, 95, 23, 0.05) 0%, rgba(233, 184, 90, 0.1) 100%);
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #FFD700 100%);
+  background: linear-gradient(135deg, #8a5f17 0%, #e9b85a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 }
 
 [data-theme='light'] .sectionTitle {
-  color: #667eea;
+  color: #8a5f17;
 }
 
 /* Card Grid */
@@ -72,7 +72,7 @@
 
 .card {
   background: rgba(26, 26, 46, 0.5);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(138, 95, 23, 0.2);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -82,17 +82,17 @@
 .card:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 215, 0, 0.5);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 10px 30px rgba(138, 95, 23, 0.2);
 }
 
 [data-theme='light'] .card {
   background: #ffffff;
-  border-color: rgba(102, 126, 234, 0.2);
+  border-color: rgba(138, 95, 23, 0.2);
 }
 
 [data-theme='light'] .card:hover {
-  border-color: rgba(102, 126, 234, 0.5);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+  border-color: rgba(138, 95, 23, 0.5);
+  box-shadow: 0 10px 30px rgba(138, 95, 23, 0.1);
 }
 
 .cardIcon {
@@ -145,7 +145,7 @@
 }
 
 [data-theme='light'] .definition h3 {
-  color: #667eea;
+  color: #8a5f17;
 }
 
 .definition p {
@@ -160,7 +160,7 @@
 
 /* Mission Box */
 .missionBox {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(138, 95, 23, 0.1);
   border-left: 4px solid #FFD700;
   padding: 2rem;
   border-radius: 8px;
@@ -168,8 +168,8 @@
 }
 
 [data-theme='light'] .missionBox {
-  background: rgba(102, 126, 234, 0.05);
-  border-left-color: #667eea;
+  background: rgba(138, 95, 23, 0.05);
+  border-left-color: #8a5f17;
 }
 
 .missionStatement {
@@ -192,7 +192,7 @@
 
 .timelineCard {
   background: rgba(26, 26, 46, 0.5);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(138, 95, 23, 0.2);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -205,7 +205,7 @@
 
 [data-theme='light'] .timelineCard {
   background: #ffffff;
-  border-color: rgba(102, 126, 234, 0.2);
+  border-color: rgba(138, 95, 23, 0.2);
 }
 
 .timelineCard h4 {
@@ -215,7 +215,7 @@
 }
 
 [data-theme='light'] .timelineCard h4 {
-  color: #667eea;
+  color: #8a5f17;
 }
 
 .timelineCard ul {

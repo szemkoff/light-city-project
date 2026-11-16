@@ -1,331 +1,396 @@
-import React from 'react';
-import Link from '@docusaurus/Link';
-import { useLocation } from '@docusaurus/router';
+import React, {useEffect, useRef} from 'react';
+import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import PageLayout from '../components/PageLayout';
-import { WEB3FORMS_SUBMIT_URL, buildSiteAbsoluteUrl } from '../contactConfig';
-import clsx from 'clsx';
-import styles from './index.module.css';
-
-function HeroSection() {
-  const heroImg = useBaseUrl('img/inspiration/light-city-vision-1.jpg');
-
-  return (
-    <section className={styles.heroSection}>
-      <div className="container">
-        <div className={styles.heroContent}>
-          <div className={styles.heroText}>
-            <h1 className={styles.heroTitle}>
-              <span className={styles.heroTitleGold}>Light City:</span>{' '}
-              <span className={styles.heroTitleGray}>Anchoring Higher-Consciousness Civilization</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              A living blueprint for regenerative communities, sacred architecture, and unity consciousness
-            </p>
-            <div className={styles.heroButtons}>
-              <Link className={clsx('button', styles.buttonPrimary)} to="/about">
-                Explore the Vision
-              </Link>
-              <Link className={clsx('button', styles.buttonSecondary)} to="/investors">
-                View Financial Model
-              </Link>
-              <Link className={clsx('button', styles.buttonSecondary)} to="/contact">
-                Contact
-              </Link>
-            </div>
-          </div>
-          <div className={styles.heroImage}>
-            <img src={heroImg} alt="Light City Vision" />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FeaturesSection() {
-  const architectureIcon = useBaseUrl('img/icons/architecture-icon.svg');
-  const consciousnessIcon = useBaseUrl('img/icons/consciousness-icon.svg');
-  const regenerativeIcon = useBaseUrl('img/icons/regenerative-icon.svg');
-  const features = [
-    {
-      iconPath: architectureIcon,
-      title: 'Sacred Architecture',
-      description: '30-90m communosphere domes using proven CLT & BIPV technology',
-      link: '/about',
-    },
-    {
-      iconPath: consciousnessIcon,
-      title: 'Unity Consciousness',
-      description: 'Research-grade protocols for consciousness field studies (TRL 1-3)',
-      link: '/researchers',
-    },
-    {
-      iconPath: regenerativeIcon,
-      title: 'Regenerative Living',
-      description: 'Zero-waste, renewable energy, permaculture food systems',
-      link: '/builders',
-    },
-  ];
-
-  return (
-    <section className={styles.featuresSection}>
-      <div className="container">
-        <div className={styles.featuresGrid}>
-          {features.map((feature, idx) => (
-            <div key={idx} className={styles.featureCard}>
-              <div className={styles.featureIconWrapper}>
-                <img src={feature.iconPath} alt={feature.title} className={styles.featureIcon} />
-              </div>
-              <h3 className={styles.featureTitle}>{feature.title}</h3>
-              <p className={styles.featureDescription}>{feature.description}</p>
-              <Link to={feature.link} className={styles.featureLink}>
-                Learn More →
-              </Link>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FoundationsSection() {
-  const foundations = [
-    {
-      title: 'Proven Technology',
-      description: 'Using commercially available technologies (TRL 7-9): Cross-Laminated Timber, Building-Integrated Photovoltaics, geodesic structures',
-      highlight: '85.4m tall CLT tower proven (Mjøstårnet, Norway)',
-      label: 'Proven Technology',
-    },
-    {
-      title: 'Phased Development',
-      description: 'Start small (200 residents, 3 domes), scale systematically (Phase 2: 1,500 residents, Phase 3: 8,000+ residents)',
-      highlight: '2025-2031+ with clear milestones',
-      label: 'Phased Development',
-    },
-    {
-      title: 'Transparent Governance',
-      description: 'Founder-led development (Stages 1-4) transitioning to community governance (Stages 5-6) with clear decision-making framework',
-      highlight: 'Community Council voting with 80% consent threshold',
-      label: 'Transparent Governance',
-    },
-    {
-      title: 'Investor-Ready',
-      description: 'Complete financial model with 3 scenarios, sensitivity analysis, 8-12% IRR for impact investors',
-      highlight: 'Break-even at 180 residents',
-      label: 'Investor-Ready',
-    },
-  ];
-
-  return (
-    <section className={styles.foundationsSection}>
-      <div className="container">
-        <h2 className={styles.sectionTitle}>Built on Proven Foundations</h2>
-        <div className={styles.foundationsGrid}>
-          {foundations.map((foundation, idx) => (
-            <div key={idx} className={styles.foundationCard}>
-              <div className={styles.foundationContent}>
-                <h3 className={styles.foundationTitle}>{foundation.title}</h3>
-                <p className={styles.foundationDescription}>{foundation.description}</p>
-                <div className={styles.foundationHighlight}>
-                  <span className={styles.checkIcon}>✓</span>
-                  <span>{foundation.highlight}</span>
-                </div>
-              </div>
-              <div className={styles.foundationLabel}>{foundation.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function StatsSection() {
-  const stats = [
-    { value: '15+', label: 'Visual Diagrams', description: 'Comprehensive documentation' },
-    { value: '85%', label: 'Stage 1 Complete', description: 'Active development' },
-    { value: '6', label: 'Development Stages', description: 'Clear roadmap' },
-    { value: '$22M-$95M', label: 'Investment Range', description: 'Phased capital needs' },
-  ];
-
-  return (
-    <section className={styles.statsSection}>
-      <div className="container">
-        <div className={styles.statsGrid}>
-          {stats.map((stat, idx) => (
-            <div key={idx} className={styles.statCard}>
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-              <p className={styles.statDescription}>{stat.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function DelphinSection() {
-  const comparison = [
-    { aspect: 'Spire', delphin: '40,000 ft (12 km)', lightCity: '60-300m (200-1,000 ft)' },
-    { aspect: 'Communospheres', delphin: '600-1,200 ft, 10K people', lightCity: '30-90m, 80-400 people' },
-    { aspect: 'Technology', delphin: 'Advanced consciousness-matter', lightCity: 'Proven: CLT, BIPV, geodesic' },
-    { aspect: 'Status', delphin: 'Aspirational reference', lightCity: 'Buildable, investor-ready' },
-  ];
-
-  return (
-    <section className={styles.delphinSection}>
-      <div className="container">
-        <h2 className={styles.sectionTitle}>Inspired by Delphin: An Archetypal Crystal City</h2>
-        <p className={styles.delphinIntro}>
-          Delphin is described in channeled/contact information as a crystal city on planet Israel (another star system). 
-          We treat this as inspirational reference and design archetype rather than empirical evidence. 
-          The principles—central spire, communospheres, sacred geometry—align with Light City's vision and provide a coherent design pattern.
-        </p>
-        <div className={styles.comparisonTable}>
-          <div className={styles.tableHeader}>
-            <div className={styles.tableCell}>Aspect</div>
-            <div className={styles.tableCell}>Delphin (Off-World)</div>
-            <div className={styles.tableCell}>Light City (Earth)</div>
-          </div>
-          {comparison.map((row, idx) => (
-            <div key={idx} className={styles.tableRow}>
-              <div className={styles.tableCell}>{row.aspect}</div>
-              <div className={styles.tableCell}>{row.delphin}</div>
-              <div className={styles.tableCell}>{row.lightCity}</div>
-            </div>
-          ))}
-        </div>
-        <div className={styles.delphinCTA}>
-          <Link to="/about" className={clsx('button', styles.buttonPrimary)}>
-            Learn More About Our Design
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function JoinSection() {
-  const { siteConfig } = useDocusaurusContext();
-  const location = useLocation();
-  const newsletterOk = new URLSearchParams(location.search).get('newsletter') === '1';
-  const accessKey =
-    (siteConfig.customFields as { web3formsAccessKey?: string } | undefined)?.web3formsAccessKey ?? '';
-  const nextHome = buildSiteAbsoluteUrl(siteConfig.url, siteConfig.baseUrl, '?newsletter=1');
-
-  const investorsIcon = useBaseUrl('img/icons/investors-icon.svg');
-  const residentsIcon = useBaseUrl('img/icons/residents-icon.svg');
-  const buildersIcon = useBaseUrl('img/icons/builders-icon.svg');
-  const researchersIcon = useBaseUrl('img/icons/researchers-icon.svg');
-  const roles = [
-    {
-      iconPath: investorsIcon,
-      title: 'Investors',
-      description: 'Review Financial Model',
-      detail: '8-12% IRR, impact-first',
-      link: '/investors',
-    },
-    {
-      iconPath: residentsIcon,
-      title: 'Residents',
-      description: 'Explore Living Experience',
-      detail: '$500-$1,700/month, community governance',
-      link: '/residents',
-    },
-    {
-      iconPath: buildersIcon,
-      title: 'Builders',
-      description: 'See Technical Specs',
-      detail: 'TRL 7-9 technologies, phased construction',
-      link: '/builders',
-    },
-    {
-      iconPath: researchersIcon,
-      title: 'Researchers',
-      description: 'Protocols & Open Questions',
-      detail: 'TRL 1-3 scope, ethics-first measurement',
-      link: '/researchers',
-    },
-  ];
-
-  return (
-    <section className={styles.joinSection}>
-      <div className="container">
-        <h2 className={styles.sectionTitle}>Join the Movement</h2>
-        <div className={styles.rolesGrid}>
-          {roles.map((role, idx) => (
-            <Link key={idx} to={role.link} className={styles.roleCard}>
-              <div className={styles.roleIconWrapper}>
-                <img src={role.iconPath} alt={role.title} className={styles.roleIcon} />
-              </div>
-              <h3 className={styles.roleTitle}>{role.title}</h3>
-              <p className={styles.roleDescription}>{role.description}</p>
-              <p className={styles.roleDetail}>{role.detail}</p>
-            </Link>
-          ))}
-        </div>
-        <div className={styles.newsletterBox}>
-          <h3 className={styles.newsletterTitle}>Stay connected</h3>
-          {newsletterOk ? (
-            <p className={styles.newsletterThanks} role="status">
-              Thanks — your signup was sent. If the form service is configured, you should receive a confirmation.
-            </p>
-          ) : null}
-          {accessKey ? (
-            <form className={styles.newsletterForm} action={WEB3FORMS_SUBMIT_URL} method="POST">
-              <input type="hidden" name="access_key" value={accessKey} />
-              <input type="hidden" name="subject" value="Light City Project - Newsletter signup" />
-              <input type="hidden" name="redirect" value={nextHome} />
-              <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
-              <input type="hidden" name="name" value="Newsletter signup" />
-              <input type="hidden" name="role" value="Newsletter" />
-              <input type="hidden" name="message" value="Signed up from homepage." />
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Email for project updates"
-                className={styles.newsletterInput}
-                autoComplete="email"
-              />
-              <button type="submit" className={clsx('button', styles.buttonPrimary)}>
-                Subscribe
-              </button>
-            </form>
-          ) : (
-            <p className={styles.newsletterDisclaimer}>
-              Newsletter uses the same backend as the <Link to="/contact">contact form</Link> once{' '}
-              <code>WEB3FORMS_ACCESS_KEY</code> is set for the site build.
-            </p>
-          )}
-          <p className={styles.newsletterDisclaimer}>
-            For a full inquiry, use the <Link to="/contact">contact form</Link> and choose your role. We respect your
-            privacy.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
+import {useHistory} from '@docusaurus/router';
+import initHome from '../components/Home/initHome';
+import '../components/Home/home.css';
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
+  const base = useBaseUrl('/');
+  const history = useHistory();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const key = (siteConfig.customFields as {web3formsAccessKey?: string} | undefined)?.web3formsAccessKey ?? '';
+  const u = (p: string) => base + p;
+  const img = (n: string) => base + 'img/home/' + n + '.webp';
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return undefined;
+    root.classList.add('js');
+    return initHome(root, {base, img, key, navigate: (p) => history.push(p)});
+  }, []);
+
   return (
-    <PageLayout
-      title={siteConfig.title}
-      description="A living blueprint for regenerative communities, sacred architecture, and unity consciousness">
-      <main>
-        <HeroSection />
-        <FeaturesSection />
-        <FoundationsSection />
-        <StatsSection />
-        <DelphinSection />
-        <JoinSection />
+    <Layout
+      title="A city designed to hold light"
+      description="Light City is a buildable blueprint for regenerative community: timber communosphere domes, a solar light spire and an open-science home for consciousness research."
+      noFooter>
+      <Head>
+        <link rel="preload" as="image" href={img('hero')} />
+        <meta property="og:image" content={siteConfig.url + img('hero')} />
+      </Head>
+      <div className="lc-home" ref={rootRef}>
+      <header className="nav" id="nav">
+        <div className="nav-in">
+          <a href="#top" className="brand" aria-label="Light City home">
+            <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path d="M4 26a12 12 0 0 1 24 0" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M16 26V4" stroke="currentColor" strokeWidth="1.6"/><circle cx="16" cy="4" r="2.2" fill="currentColor"/></svg>
+            <span>Light City</span>
+          </a>
+          <nav aria-label="Primary">
+            <ul className="nav-links" id="navLinks">
+              <li><a href="#vision">Vision</a></li>
+              <li><a href="#city">The City</a></li>
+              <li><a href="#living">Living</a></li>
+              <li><a href="#invest">Invest</a></li>
+              <li><a href="#research">Research</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+              <li><a href="#library">Library</a></li>
+              <li><a href={u('docs/START-HERE')} className="nav-docs">Docs</a></li>
+            </ul>
+          </nav>
+          <a href="#join" className="btn btn-sm nav-cta">Join the founding circle</a>
+          <button className="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+        </div>
+      </header>
+
+      <main id="main">
+
+      {/* HERO */}
+      <section className="hero" id="top">
+        <img className="hero-img" src={img('hero')} alt="Aerial view at dawn of a circular community: a glowing central spire ringed by gardens and twelve glass-and-timber domes beside a lake" width="1516" height="1037" />
+        <div className="hero-veil"></div>
+        <div className="hero-in wrap">
+          <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
+          <h1>A city designed<br />to <em>hold light.</em></h1>
+          <p className="hero-sub">A living blueprint for regenerative community: luminous timber domes, a solar light spire and an open-science home for unity consciousness. Built only with technology that already stands somewhere on Earth.</p>
+          <div className="hero-ctas">
+            <a href="#city" className="btn">Explore the city</a>
+            <a href="#vision" className="btn btn-ghost">Read the vision</a>
+          </div>
+        </div>
+
+        <div className="persona wrap" id="persona">
+          <div className="persona-card">
+            <p className="persona-q">I'm here as…</p>
+            <div className="persona-tabs" role="tablist" aria-label="Choose your interest">
+              <button role="tab" aria-selected="true" data-p="resident">A future resident</button>
+              <button role="tab" aria-selected="false" data-p="investor">An investor</button>
+              <button role="tab" aria-selected="false" data-p="builder">A builder</button>
+              <button role="tab" aria-selected="false" data-p="researcher">A researcher</button>
+              <button role="tab" aria-selected="false" data-p="curious">Simply curious</button>
+            </div>
+            <div className="persona-panel" role="tabpanel" id="personaPanel" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* VISION */}
+      <section className="vision" id="vision">
+        <div className="wrap vision-grid">
+          <div className="vision-text">
+            <p className="eyebrow">01 — The vision</p>
+            <h2>Spirit before structure.<br />Engineering that keeps the promise.</h2>
+            <p className="lead">Light City begins as an archetype — a crystal city of light, central spire and gathering spheres — and translates it into something buildable, financeable and governed in the open.</p>
+            <ol className="pillars">
+              <li>
+                <span className="pillar-n">I</span>
+                <div><h3>Sacred architecture</h3><p>30–90 m communosphere domes in cross-laminated timber and solar glass. Geometry that is both beautiful and proven.</p><span className="tag">TRL 7–9</span></div>
+              </li>
+              <li>
+                <span className="pillar-n">II</span>
+                <div><h3>Regenerative living</h3><p>Zero-waste loops, 2–5 MWp of solar in Phase 1, agroforestry and permaculture food systems that return carbon to the soil.</p><span className="tag">TRL 7–8</span></div>
+              </li>
+              <li>
+                <span className="pillar-n">III</span>
+                <div><h3>Unity consciousness</h3><p>Pre-registered, ethics-first protocols for group coherence, HRV and EEG studies. Open data — null results published.</p><span className="tag">TRL 1–3</span></div>
+              </li>
+            </ol>
+            <a className="link" href={u('docs/concepts/core-concepts')}>Read the core concepts <span aria-hidden="true">→</span></a>
+          </div>
+          <figure className="vision-art">
+            <img src={img('vision-2')} alt="A lone figure walks a golden path toward a radiant crystal spire surrounded by glowing crystal forms in a misty canyon" width="896" height="1152" loading="lazy" />
+            <figcaption>The archetype: a spire of light at the heart of the community.</figcaption>
+          </figure>
+        </div>
+        <div className="wrap stats" id="stats">
+          <div><span className="stat-n" data-count="200">200</span><span className="stat-l">Phase 1 residents</span></div>
+          <div><span className="stat-n" data-count="12" data-suffix="+">12+</span><span className="stat-l">Communospheres at full build</span></div>
+          <div><span className="stat-n">8–12%</span><span className="stat-l">Target impact IRR</span></div>
+          <div><span className="stat-n" data-count="180">180</span><span className="stat-l">Residents to break even</span></div>
+        </div>
+      </section>
+
+      {/* CITY PLAN */}
+      <section className="night city" id="city">
+        <div className="wrap">
+          <div className="sec-head">
+            <p className="eyebrow light">02 — The city</p>
+            <h2>Concentric by design.<br />Walk it from the spire outward.</h2>
+            <p className="lead">Select a ring to see what lives there, then grow the city phase by phase.</p>
+          </div>
+          <div className="city-grid">
+            <div className="plan-wrap">
+              <svg id="plan" viewBox="-260 -260 520 520" role="group" aria-label="Interactive top-down plan of Light City"></svg>
+              <div className="phase-switch" role="radiogroup" aria-label="Development phase">
+                <button role="radio" aria-checked="true" data-phase="1">Phase 1<small>200 people</small></button>
+                <button role="radio" aria-checked="false" data-phase="2">Phase 2<small>1,500 people</small></button>
+                <button role="radio" aria-checked="false" data-phase="3">Phase 3<small>8,000+ people</small></button>
+              </div>
+            </div>
+            <article className="zone" id="zone" aria-live="polite"></article>
+          </div>
+        </div>
+      </section>
+
+      {/* IMAGE BAND */}
+      <section className="band">
+        <img src={img('dome-interior')} alt="Sunlight streams through the timber and glass lattice of a large dome over trees and a sunken gathering circle" width="1672" height="941" loading="lazy" />
+        <div className="band-in wrap">
+          <blockquote>Ambitious in form.<br />Conservative in engineering.</blockquote>
+          <p>Every structure uses materials already standing elsewhere — from Norway's 85.4 m Mjøstårnet timber tower to commercial geodesic domes.</p>
+        </div>
+      </section>
+
+      {/* TECHNOLOGY */}
+      <section className="tech" id="technology">
+        <div className="wrap">
+          <div className="sec-head row">
+            <div>
+              <p className="eyebrow">03 — Proven technology</p>
+              <h2>Built from what already works.</h2>
+            </div>
+            <div className="chips" id="techChips" role="group" aria-label="Filter technologies">
+              <button className="chip active" data-f="all">All</button>
+              <button className="chip" data-f="structure">Structure</button>
+              <button className="chip" data-f="energy">Energy</button>
+              <button className="chip" data-f="water">Water</button>
+              <button className="chip" data-f="food">Food</button>
+            </div>
+          </div>
+        </div>
+        <div className="rail-wrap">
+          <div className="rail" id="techRail" tabIndex={0} aria-label="Technology cards, scroll horizontally"></div>
+          <div className="wrap rail-ctrl">
+            <a className="link" href={u('docs/technical/technology-catalog')}>Full technology catalog <span aria-hidden="true">→</span></a>
+            <div><button className="arrow" id="railPrev" aria-label="Previous technologies">←</button><button className="arrow" id="railNext" aria-label="Next technologies">→</button></div>
+          </div>
+        </div>
+      </section>
+
+      {/* LIVING */}
+      <section className="living" id="living">
+        <div className="wrap living-grid">
+          <figure className="living-art">
+            <img src={img('living')} alt="Garden path between timber homes with green roofs and raised beds, a glowing dome in the misty background at golden hour" width="1400" height="788" loading="lazy" />
+          </figure>
+          <div>
+            <p className="eyebrow">04 — Living</p>
+            <h2>A day that follows the sun.</h2>
+            <p className="lead">Drag the sun across the sky — or tap an hour — to see how life in a communosphere is paced.</p>
+          </div>
+        </div>
+        <div className="wrap day">
+          <div className="day-scroll"><div className="day-track">
+          <div className="arc-wrap"><svg className="sun-arc" viewBox="0 0 1000 220" preserveAspectRatio="none" aria-hidden="true">
+            <rect x="0" y="-20" width="1000" height="250" fill="transparent"/><path id="arcPath" d="M20 210 Q500 -150 980 210" fill="none" stroke="currentColor" strokeDasharray="3 7"/>
+
+          </svg><span className="sun" id="sun" aria-hidden="true"></span></div>
+          <input type="range" id="dayRange" min="0" max="6" step="1" defaultValue={0} aria-label="Time of day" />
+          <ol className="hours" id="hours"></ol>
+          </div></div>
+          <div className="hour-detail" id="hourDetail" aria-live="polite"></div>
+        </div>
+        <div className="wrap homes">
+          <div className="homes-head">
+            <h3>Homes</h3>
+            <p>All-inclusive: utilities, 10–15 communal meals a month, sauna, yoga, maintenance — and a vote in governance.</p>
+          </div>
+          <div className="home-list">
+            <div className="home"><span className="home-t">Tiny home</span><span className="home-s">200–300 sf</span><span className="home-p">$500–700<small>/mo</small></span></div>
+            <div className="home"><span className="home-t">Studio</span><span className="home-s">400–500 sf</span><span className="home-p">$700–950<small>/mo</small></span></div>
+            <div className="home"><span className="home-t">1-Bedroom</span><span className="home-s">600–800 sf</span><span className="home-p">$950–1,300<small>/mo</small></span></div>
+            <div className="home"><span className="home-t">2-Bedroom</span><span className="home-s">900–1,200 sf</span><span className="home-p">$1,300–1,700<small>/mo</small></span></div>
+          </div>
+          <a className="link" href={u('docs/project/contribution-based-residency')}>How contribution-based residency works <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      {/* INVEST */}
+      <section className="night invest" id="invest">
+        <div className="wrap">
+          <div className="sec-head row">
+            <div>
+              <p className="eyebrow light">05 — For investors</p>
+              <h2>Patient capital.<br />Measurable returns.</h2>
+            </div>
+            <div className="scen" role="radiogroup" aria-label="Investment scenario">
+              <button role="radio" aria-checked="false" data-s="0">Low</button>
+              <button role="radio" aria-checked="true" data-s="1">Mid · target</button>
+              <button role="radio" aria-checked="false" data-s="2">High</button>
+            </div>
+          </div>
+          <div className="kpis">
+            <div><span className="kpi-l">Capital expenditure</span><span className="kpi-n" id="kCapex">$45M</span></div>
+            <div><span className="kpi-l">Annual operating cost</span><span className="kpi-n" id="kOpex">$2.5M</span></div>
+            <div><span className="kpi-l">Resident capacity</span><span className="kpi-n" id="kCap">200</span></div>
+            <div><span className="kpi-l">Break-even residents</span><span className="kpi-n" id="kBe">180</span></div>
+          </div>
+          <div className="invest-grid">
+            <div>
+              <h3>Revenue mix <small>per year</small></h3>
+              <ul className="bars" id="bars"></ul>
+            </div>
+            <div>
+              <h3>Risks already priced in</h3>
+              <dl className="risks">
+                <div><dt>Wildfire</dt><dd>Fire-resistant materials, defensible space, insurance</dd></div>
+                <div><dt>Wind loads</dt><dd>Wind-tunnel testing and dome reinforcement</dd></div>
+                <div><dt>Water rights</dt><dd>Legal review, well permits, backup sources</dd></div>
+                <div><dt>Budget creep</dt><dd>20% contingency and phased value engineering</dd></div>
+                <div><dt>Neighbors</dt><dd>Early engagement and benefit sharing</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div className="invest-links">
+            <a className="link light" href={u('docs/project/development-stages')}>Timeline, costs and financial model notes <span aria-hidden="true">→</span></a>
+            <a className="link light" href={u('docs/project/governance')}>Governance and decision rights <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      {/* RESEARCH */}
+      <section className="research" id="research">
+        <div className="wrap research-grid">
+          <div>
+            <p className="eyebrow">06 — Research</p>
+            <h2>A living laboratory,<br />held to open-science standards.</h2>
+            <p className="lead">Engineering deliverables and consciousness hypotheses are kept on separate tracks — each with an honest readiness level.</p>
+            <div className="trl" id="trl" aria-label="Technology readiness scale from 1 to 9">
+              <div className="trl-scale"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+              <ul className="trl-rows">
+                <li style={{['--a' as string]: 0, ['--b' as string]: 2} as React.CSSProperties}><span className="trl-name">Consciousness field studies</span><span className="trl-bar"></span><span className="trl-d">HRV, EEG and heart-brain coherence across groups</span></li>
+                <li style={{['--a' as string]: 1, ['--b' as string]: 3} as React.CSSProperties}><span className="trl-name">Acoustic resonance</span><span className="trl-bar"></span><span className="trl-d">RT60, SPL and listener studies inside the spire</span></li>
+                <li style={{['--a' as string]: 4, ['--b' as string]: 6} as React.CSSProperties}><span className="trl-name">Biophilic health</span><span className="trl-bar"></span><span className="trl-d">Stress markers, sleep and cognitive performance</span></li>
+                <li style={{['--a' as string]: 6, ['--b' as string]: 8} as React.CSSProperties}><span className="trl-name">Regenerative agriculture</span><span className="trl-bar"></span><span className="trl-d">Soil carbon, biomass and lifecycle analysis</span></li>
+              </ul>
+            </div>
+            <p className="fine">Pre-registered on OSF · IRB approval · informed consent · opt-out zones · public anonymized datasets</p>
+            <a className="link" href={u('docs/research/open-questions')}>Open research questions <span aria-hidden="true">→</span></a>
+          </div>
+          <figure className="research-art">
+            <img src={img('research')} alt="A circle of meditation cushions with small sensors inside a sunlit timber pavilion, a laptop showing waveforms on a desk" width="1400" height="788" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      {/* ROADMAP */}
+      <section className="night roadmap" id="roadmap">
+        <img className="roadmap-bg" src={img('spire')} alt="" width="1200" height="960" loading="lazy" />
+        <div className="wrap">
+          <div className="sec-head">
+            <p className="eyebrow light">07 — Roadmap</p>
+            <h2>Six stages, from blueprint<br />to living city.</h2>
+          </div>
+          <div className="stages" id="stages" role="tablist" aria-label="Development stages"></div>
+          <div className="stage-detail" id="stageDetail" aria-live="polite"></div>
+        </div>
+      </section>
+
+      {/* INSPIRATION */}
+      <section className="inspo" id="inspiration">
+        <div className="wrap">
+          <div className="sec-head">
+            <p className="eyebrow">08 — Inspiration</p>
+            <h2>An archetype, translated for Earth.</h2>
+            <p className="lead">Delphin — described in contact accounts as a crystal city on another world — is treated as a design archetype, not evidence. Its principles meet the temple cities humans have already built.</p>
+          </div>
+          <div className="compare">
+            <figure className="cmp cmp-a">
+              <img src={img('delphin')} alt="Concept rendering of Delphin: a towering dark crystal spire over a radial city with white domes in forest" width="936" height="524" loading="lazy" />
+              <figcaption><span>Delphin · off-world reference</span>Spire 40,000 ft · spheres for 10,000 people · consciousness-matter technology</figcaption>
+            </figure>
+            <figure className="cmp cmp-b">
+              <img src={img('vision-1')} alt="Concept art of Light City: a circular white city with a glowing central spire on a lake among mountains" width="1216" height="832" loading="lazy" />
+              <figcaption><span>Light City · Earth</span>Spire 60–300 m · spheres for 80–400 people · CLT, BIPV, geodesic</figcaption>
+            </figure>
+            <figure className="cmp cmp-c">
+              <img src={img('borobudur')} alt="Stone stupas of Borobudur temple at sunrise" width="1000" height="562" loading="lazy" />
+              <figcaption><span>Borobudur</span>A mandala you walk through</figcaption>
+            </figure>
+            <figure className="cmp cmp-d">
+              <img src={img('angkor')} alt="Towers of Angkor Wat reflected in water" width="768" height="768" loading="lazy" />
+              <figcaption><span>Angkor</span>Water, axis and the sacred center</figcaption>
+            </figure>
+          </div>
+          <a className="link" href={u('docs/design/architecture')}>Architecture: archetype vs. Earth implementation <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      {/* LIBRARY */}
+      <section className="library" id="library">
+        <div className="wrap">
+          <div className="sec-head row">
+            <div>
+              <p className="eyebrow">09 — Library</p>
+              <h2>Everything we've written, in one place.</h2>
+            </div>
+            <label className="search">
+              <span className="sr">Search the library</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" strokeWidth="1.8"/><path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/></svg>
+              <input type="search" id="libSearch" placeholder="Search governance, domes, energy…" autoComplete="off" />
+            </label>
+          </div>
+          <div className="chips" id="libChips" role="group" aria-label="Filter library by section">
+            <button className="chip active" data-f="all">All</button>
+            <button className="chip" data-f="Concepts">Concepts</button>
+            <button className="chip" data-f="Design">Design</button>
+            <button className="chip" data-f="Technical">Technical</button>
+            <button className="chip" data-f="Research">Research</button>
+            <button className="chip" data-f="Project">Project</button>
+          </div>
+          <div className="docs" id="docs"></div>
+          <p className="empty" id="libEmpty" hidden={true}>No documents match that search. Try “energy”, “residency” or “geometry”.</p>
+        </div>
+      </section>
+
+      {/* JOIN */}
+      <section className="join" id="join">
+        <img src={img('spire')} alt="" width="1200" height="960" loading="lazy" className="join-bg" />
+        <div className="join-veil"></div>
+        <div className="wrap join-in">
+          <h2>Help light the first dome.</h2>
+          <p>Join the founding circle for early updates, resident applications and investor materials.</p>
+          <form className="form" id="joinForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="subject" defaultValue="Light City Project - Founding circle signup" />
+            <input type="hidden" name="from_name" defaultValue="Light City website" />
+            <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" hidden />
+            <label className="sr" htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            <label className="sr" htmlFor="interest">I'm interested as</label>
+            <select id="interest" name="interest"><option>Future resident</option><option>Investor</option><option>Builder</option><option>Researcher</option><option>Supporter</option></select>
+            <button className="btn" type="submit">Join</button>
+          </form>
+          <p className="form-msg" id="formMsg" role="status"></p>
+        </div>
+      </section>
       </main>
-    </PageLayout>
+
+      <footer className="foot">
+        <div className="wrap foot-grid">
+          <div>
+            <a href="#top" className="brand"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M4 26a12 12 0 0 1 24 0" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M16 26V4" stroke="currentColor" strokeWidth="1.6"/><circle cx="16" cy="4" r="2.2" fill="currentColor"/></svg><span>Light City</span></a>
+            <p>A regenerative community project combining sacred architecture, proven technology and unity consciousness. Built in the open.</p>
+          </div>
+          <div><h4>Explore</h4><a href="#vision">Vision</a><a href="#city">The City</a><a href="#living">Living</a><a href="#invest">Invest</a><a href="#research">Research</a></div>
+          <div><h4>Documentation</h4><a href={u('docs/START-HERE')}>Start here</a><a href={u('docs/project/development-stages')}>Development stages</a><a href={u('blog')}>Updates</a><a href="https://github.com/szemkoff/light-city-project">GitHub</a><a href={u('about')}>About the project</a></div>
+          <div><h4>Contact</h4><a href={u('contact')}>Contact form</a><a href={u('conduct')}>Code of conduct</a><a href={u('privacy')}>Privacy</a></div>
+        </div>
+        <div className="wrap foot-base"><span>© {new Date().getFullYear()} Light City Project</span><span>MIT (code) · CC BY-SA 4.0 (docs)</span></div>
+      </footer>
+      </div>
+    </Layout>
   );
 }

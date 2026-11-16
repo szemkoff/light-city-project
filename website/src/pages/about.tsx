@@ -107,7 +107,7 @@ export default function About(): JSX.Element {
 
           <div className={styles.timelineGrid}>
             <div className={styles.timelineCard}>
-              <h4>Short-Term (Q4 2025 - Q2 2026)</h4>
+              <h4>Short-Term (Now - Q2 2027)</h4>
               <ul>
                 <li>Complete Stage 1: Foundation (documentation, financial model, governance)</li>
                 <li>Complete Stage 2: Design (architecture, engineering, permits prep)</li>
@@ -115,7 +115,7 @@ export default function About(): JSX.Element {
               </ul>
             </div>
             <div className={styles.timelineCard}>
-              <h4>Medium-Term (Q3 2026 - Q4 2027)</h4>
+              <h4>Medium-Term (Q3 2027 - Q4 2028)</h4>
               <ul>
                 <li>Complete Stage 3: Digital platform (website, CRM, applications)</li>
                 <li>Complete Stage 4: Community building (retreats, pilot programs)</li>
@@ -123,7 +123,7 @@ export default function About(): JSX.Element {
               </ul>
             </div>
             <div className={styles.timelineCard}>
-              <h4>Long-Term (2028-2031+)</h4>
+              <h4>Long-Term (2029-2032+)</h4>
               <ul>
                 <li>Stage 5: Physical construction (200-300 residents, Phase 1)</li>
                 <li>Stage 6: Operational community (break-even, scaling)</li>
