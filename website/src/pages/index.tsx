@@ -8,7 +8,7 @@ import initHome from '../components/Home/initHome';
 import {formTarget} from '../contactConfig';
 import '../components/Home/home.css';
 import SiteFooter from '../components/Site/SiteFooter';
-import {EXPLORE_SUB, VISION_SUB} from '../components/Site/menu';
+import {NAV} from '../components/Site/menu';
 
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
@@ -44,18 +44,16 @@ export default function Home(): JSX.Element {
           </a>
           <nav aria-label="Primary">
             <ul className="nav-links" id="navLinks">
-              <li><a href="#vision">Vision</a></li>
-              <li><a href="#city">The City</a></li>
-              <li><a href="#living">Living</a></li>
-              <li><a href="#invest">Invest</a></li>
-              <li><a href="#research">Research</a></li>
-              <li><a href="#roadmap">Roadmap</a></li>
-              <li className="has-sub"><a href={u('explore')} aria-haspopup="true">Explore</a>
-                <ul className="sub" aria-label="Explore">
-                  {EXPLORE_SUB.map((c) => <li key={c.to}><a href={u(c.to.slice(1))}>{c.label}</a></li>)}
-                  {VISION_SUB.map((c) => <li key={c.to}><a href={u(c.to.slice(1))}>{c.label}</a></li>)}
-                </ul>
-              </li>
+              {NAV.map((n) => (
+                <li key={n.to} className={n.children ? 'has-sub' : undefined}>
+                  <a href={u(n.to.slice(1))} aria-haspopup={n.children ? 'true' : undefined}>{n.label}</a>
+                  {n.children ? (
+                    <ul className="sub" aria-label={n.label}>
+                      {n.children.map((c) => <li key={c.to}><a href={u(c.to.slice(1))}>{c.label}</a></li>)}
+                    </ul>
+                  ) : null}
+                </li>
+              ))}
               <li><a href={u('docs/START-HERE')} className="nav-docs">Docs</a></li>
             </ul>
           </nav>
