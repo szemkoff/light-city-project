@@ -47,7 +47,7 @@ export default function Home(): JSX.Element {
               <li><a href="#invest">Invest</a></li>
               <li><a href="#research">Research</a></li>
               <li><a href="#roadmap">Roadmap</a></li>
-              <li><a href="#library">Library</a></li>
+              <li><a href={u('explore')}>Explore</a></li>
               <li><a href={u('docs/START-HERE')} className="nav-docs">Docs</a></li>
             </ul>
           </nav>
@@ -108,6 +108,7 @@ export default function Home(): JSX.Element {
                 <div><h3>Unity consciousness</h3><p>Pre-registered, ethics-first protocols for group coherence, HRV and EEG studies. Open data — null results published.</p><span className="tag">TRL 1–3</span></div>
               </li>
             </ol>
+            <a className="link" href={u('journey')}>Follow the five-step transition <span aria-hidden="true">→</span></a>
             <a className="link" href={u('docs/concepts/core-concepts')}>Read the core concepts <span aria-hidden="true">→</span></a>
           </div>
           <figure className="vision-art">
@@ -142,6 +143,7 @@ export default function Home(): JSX.Element {
             </div>
             <article className="zone" id="zone" aria-live="polite"></article>
           </div>
+          <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a></p>
         </div>
       </section>
 
@@ -174,7 +176,7 @@ export default function Home(): JSX.Element {
         <div className="rail-wrap">
           <div className="rail" id="techRail" tabIndex={0} aria-label="Technology cards, scroll horizontally"></div>
           <div className="wrap rail-ctrl">
-            <a className="link" href={u('docs/technical/technology-catalog')}>Full technology catalog <span aria-hidden="true">→</span></a>
+            <span><a className="link" href={u('technology')}>How the city's systems work <span aria-hidden="true">→</span></a> <a className="link" href={u('docs/technical/technology-catalog')}>Full technology catalog <span aria-hidden="true">→</span></a></span>
             <div><button className="arrow" id="railPrev" aria-label="Previous technologies">←</button><button className="arrow" id="railNext" aria-label="Next technologies">→</button></div>
           </div>
         </div>
@@ -214,6 +216,7 @@ export default function Home(): JSX.Element {
             <div className="home"><span className="home-t">1-Bedroom</span><span className="home-s">600–800 sf</span><span className="home-p">$950–1,300<small>/mo</small></span></div>
             <div className="home"><span className="home-t">2-Bedroom</span><span className="home-s">900–1,200 sf</span><span className="home-p">$1,300–1,700<small>/mo</small></span></div>
           </div>
+          <a className="link" href={u('homes')}>See every home type <span aria-hidden="true">→</span></a>
           <a className="link" href={u('docs/project/contribution-based-residency')}>How contribution-based residency works <span aria-hidden="true">→</span></a>
         </div>
       </section>

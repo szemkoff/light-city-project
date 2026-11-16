@@ -8,11 +8,11 @@ import './site.css';
 
 const NAV = [
   {to: '/about', label: 'Vision'},
+  {to: '/explore', label: 'Explore'},
   {to: '/residents', label: 'Residents'},
   {to: '/investors', label: 'Investors'},
   {to: '/builders', label: 'Builders'},
   {to: '/researchers', label: 'Researchers'},
-  {to: '/resources', label: 'Resources'},
   {to: '/contact', label: 'Contact'},
 ];
 
@@ -93,6 +93,7 @@ export default function Site({title, description, eyebrow, heading, sub, image, 
               <Link to="/" className="brand"><Mark s={22} /><span>Light City</span></Link>
               <p>A regenerative community project combining sacred architecture, proven technology and unity consciousness. Built in the open.</p>
             </div>
+            <div><h4>Explore</h4><Link to="/explore">All topics</Link><Link to="/homes">Homes</Link><Link to="/city">The city</Link><Link to="/technology">Technology</Link><Link to="/journey">The transition</Link></div>
             <div><h4>Get involved</h4><Link to="/residents">Residents</Link><Link to="/investors">Investors</Link><Link to="/builders">Builders</Link><Link to="/researchers">Researchers</Link><a href={base + '#join'}>Founding circle</a></div>
             <div><h4>Documentation</h4><Link to="/docs/START-HERE">Start here</Link><Link to="/docs/project/development-stages">Development stages</Link><Link to="/docs/technical/technology-catalog">Technology catalog</Link><Link to="/blog">Updates</Link><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer">GitHub</a></div>
             <div><h4>Project</h4><Link to="/about">Vision &amp; philosophy</Link><Link to="/resources">Resources</Link><Link to="/contact">Contact form</Link><Link to="/conduct">Code of conduct</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div>
@@ -125,20 +126,26 @@ export function Section({eyebrow, title, lead, night, alt, children, id}: {
   );
 }
 
-export function Cards({items}: {items: {title: string; text: React.ReactNode; img?: string; kicker?: string}[]}): JSX.Element {
+export function Cards({items}: {items: {title: string; text: React.ReactNode; img?: string; kicker?: string; to?: string}[]}): JSX.Element {
   const base = useBaseUrl('/');
   return (
     <div className="pg-cards">
-      {items.map((c) => (
-        <article className="pg-card" key={c.title}>
-          {c.img ? <img src={`${base}img/home/${c.img}.webp`} alt="" loading="lazy" width="600" height="400" /> : null}
-          <div className="pg-card-body">
-            {c.kicker ? <p className="pg-kicker">{c.kicker}</p> : null}
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
-          </div>
-        </article>
-      ))}
+      {items.map((c) => {
+        const inner = (
+          <>
+            {c.img ? <img src={`${base}img/home/${c.img}.webp`} alt="" loading="lazy" width="600" height="400" /> : null}
+            <div className="pg-card-body">
+              {c.kicker ? <p className="pg-kicker">{c.kicker}</p> : null}
+              <h3>{c.title}</h3>
+              <p>{c.text}</p>
+              {c.to ? <span className="pg-topic-go">Explore <span aria-hidden="true">→</span></span> : null}
+            </div>
+          </>
+        );
+        return c.to
+          ? <Link className="pg-card pg-card-link" key={c.title} to={c.to}>{inner}</Link>
+          : <article className="pg-card" key={c.title}>{inner}</article>;
+      })}
     </div>
   );
 }
@@ -186,5 +193,56 @@ export function Cta({title, text, primary, secondary}: {
         </div>
       </div>
     </section>
+  );
+}
+
+/* ---------- detail blocks ---------- */
+
+export function Feature({img, alt, kicker, title, children, specs, tag, reverse, id}: {
+  img: string; alt: string; kicker?: string; title: string; children?: React.ReactNode;
+  specs?: [string, React.ReactNode][]; tag?: string; reverse?: boolean; id?: string;
+}): JSX.Element {
+  const src = useBaseUrl(`img/home/${img}.webp`);
+  return (
+    <article className={'pg-feature' + (reverse ? ' rev' : '')} id={id}>
+      <figure className="pg-feature-art"><img src={src} alt={alt} loading="lazy" width="1200" height="900" /></figure>
+      <div className="pg-feature-body">
+        {kicker ? <p className="pg-kicker">{kicker}</p> : null}
+        <h3>{title}</h3>
+        {tag ? <span className="pg-ready">{tag}</span> : null}
+        <div className="pg-feature-text">{children}</div>
+        {specs ? (
+          <dl className="pg-specs">
+            {specs.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
+          </dl>
+        ) : null}
+      </div>
+    </article>
+  );
+}
+
+export function Jump({items}: {items: {href: string; label: string}[]}): JSX.Element {
+  return (
+    <nav className="pg-jump" aria-label="On this page">
+      {items.map((i) => <a key={i.href} href={i.href}>{i.label}</a>)}
+    </nav>
+  );
+}
+
+export function Topic({part, items}: {part: string; items: {to: string; title: string; summary: string; points: string[]}[]}): JSX.Element {
+  return (
+    <div className="pg-topic-group">
+      <h3 className="pg-topic-part">{part}</h3>
+      <div className="pg-topics">
+        {items.map((t) => (
+          <Link key={t.to} to={t.to} className="pg-topic">
+            <h4>{t.title}</h4>
+            <p>{t.summary}</p>
+            <ul>{t.points.map((p) => <li key={p}>{p}</li>)}</ul>
+            <span className="pg-topic-go">Read in the library <span aria-hidden="true">→</span></span>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
