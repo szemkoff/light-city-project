@@ -102,7 +102,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 
 *Top views of the three 3D models. Each panel is drawn at its own scale.*
 
-![Aerial view of the Phase 1 pilot hamlet: a slender spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, surrounded by woodland](/img/home/city-phase-1.webp)
+![Aerial view of the Phase 1 pilot hamlet: a lattice spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, surrounded by woodland](/img/home/city-phase-1.webp)
 
 **Phase 1 - Pilot Hamlet** (built in Stage 5, Dec 2028 – Nov 2031):
 - **Population**: 200 residents target (150-300 range)

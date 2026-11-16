@@ -1,6 +1,6 @@
 # Purpose and Mission
 
-![Light City at dusk: timber domes, gardens and a slender spire](/img/home/hero.webp)
+![Light City at dusk: timber domes, gardens and a wide-based lattice spire with a solar crown](/img/home/hero.webp)
 
 *Light City as we plan to build it: a 200-person hamlet of timber domes, gardens and a solar spire.*
 

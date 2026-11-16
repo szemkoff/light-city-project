@@ -1,7 +1,8 @@
 /* eslint-disable */
 // @ts-nocheck
 // Interactive behaviour for the homepage (ported from the front-end concept).
-export interface HomeOpts { base: string; img: (name: string) => string; key: string; navigate: (path: string) => void; }
+import {submitToSheet} from '../../contactConfig';
+export interface HomeOpts { base: string; img: (name: string) => string; endpoint: string; navigate: (path: string) => void; }
 
 export default function initHome(root: HTMLElement, opts: HomeOpts): () => void {
 
@@ -250,15 +251,14 @@ if (!reduce) {
   on(window, 'scroll', () => { const r = bandSec.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) band.style.transform = `translateY(${(r.top / innerHeight) * -8}%)`; }, { passive: true });
 }
 
-/* ---------- FORM (Web3Forms; key injected at build from WEB3FORMS_ACCESS_KEY) ---------- */
+/* ---------- FORM (Google Sheet + email via Apps Script; endpoint injected at build from FORMS_ENDPOINT_URL) ---------- */
 $('#joinForm').onsubmit = async (e: Event) => {
   e.preventDefault();
-  const f = e.target as HTMLFormElement, m = $('#formMsg'), btn = f.querySelector('button') as HTMLButtonElement, key = opts.key;
-  if (!key) { m.innerHTML = `Signups open soon. Until then, please use the <a href="${opts.base}contact">contact form</a>.`; return; }
-  const d = new FormData(f); d.append('access_key', key); btn.disabled = true; m.textContent = 'Sending…';
+  const f = e.target as HTMLFormElement, m = $('#formMsg'), btn = f.querySelector('button') as HTMLButtonElement;
+  if (!opts.endpoint) { m.innerHTML = `Signups open soon. Until then, please use the <a href="${opts.base}contact">contact form</a>.`; return; }
+  btn.disabled = true; m.textContent = 'Sending…';
   try {
-    const r = await fetch(f.action, { method: 'POST', headers: { Accept: 'application/json' }, body: d }); const j = await r.json().catch(() => ({}));
-    if (r.ok && j.success) { m.textContent = 'Thank you — you’re on the list. We’ll be in touch as the next stage opens.'; f.reset(); } else throw 0;
+    if (await submitToSheet(opts.endpoint, f)) { m.textContent = 'Thank you — you’re on the list. We’ll be in touch as the next stage opens.'; f.reset(); } else throw 0;
   } catch { m.innerHTML = `Something went wrong. Please try again or use the <a href="${opts.base}contact">contact form</a>.`; }
   finally { btn.disabled = false; }
 };
@@ -268,7 +268,9 @@ on(root, 'click', (e: MouseEvent) => {
   const a = (e.target as HTMLElement).closest('a') as HTMLAnchorElement | null;
   if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || a.target) return;
   const href = a.getAttribute('href') || '';
-  if (href.startsWith(opts.base) && !href.startsWith('#')) { e.preventDefault(); opts.navigate(href); }
+  // Static files (the 3D model, PDFs, images) are not app routes: let the browser load them.
+  const isFile = /\.[a-z0-9]+$/i.test(href.split(/[?#]/)[0]);
+  if (href.startsWith(opts.base) && !href.startsWith('#') && !isFile) { e.preventDefault(); opts.navigate(href); }
 });
 
 return () => { offs.forEach(fn => fn()); io.disconnect(); };

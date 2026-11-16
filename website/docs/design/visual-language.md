@@ -37,7 +37,7 @@ Use this style note at the end of every image prompt:
 
 > Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm shielded lighting, local stone, and only occasionally a single vertical quartz point on a pedestal. People of many ethnicities, ages and body types in varied, natural clothing: linen and cotton trousers, skirts and dresses, tunics, knitwear, shawls and work wear in earthy tones with warm accents, almost no denim. Mixed daylight and weather, not always sunset. Realistic documentary photo of a place that could be built today. No text or logos. Avoid medieval, rustic cabins and fantasy.
 
-- **Scale.** Domes 30–45 m across, 3–5 levels; the spire is slender, not a skyscraper.
+- **Scale.** Domes 30–45 m across, 3–5 levels; the spire is a wide-based lattice tower (36 m base, 90 m in Phase 1), not a skyscraper.
 - **People.** Diverse ages, ethnicities, body types and personal styles, doing ordinary things: cooking, working, building, resting.
 - **Clothing.** Varied and organic-looking, never a uniform look: natural fibres, many cuts (trousers, skirts, dresses, tunics, overalls, knitwear), earthy colors with some warmth. Avoid a crowd in jeans, and avoid costumes, robes or matching outfits.
 - **Technology.** Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.

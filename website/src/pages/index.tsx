@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
   const base = useBaseUrl('/');
   const history = useHistory();
   const rootRef = useRef<HTMLDivElement>(null);
-  const key = (siteConfig.customFields as {web3formsAccessKey?: string} | undefined)?.web3formsAccessKey ?? '';
+  const endpoint = (siteConfig.customFields as {formsEndpoint?: string} | undefined)?.formsEndpoint ?? '';
   const u = (p: string) => base + p;
   const img = (n: string) => base + 'img/home/' + n + '.webp';
 
@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
     const root = rootRef.current;
     if (!root) return undefined;
     root.classList.add('js');
-    return initHome(root, {base, img, key, navigate: (p) => history.push(p)});
+    return initHome(root, {base, img, endpoint, navigate: (p) => history.push(p)});
   }, []);
 
   return (
@@ -42,7 +42,7 @@ export default function Home(): JSX.Element {
           <nav aria-label="Primary">
             <ul className="nav-links" id="navLinks">
               <li><a href="#vision">Vision</a></li>
-              <li><a href="#city">The City</a><a href={u('model/index.html?phase=1')}>3D model</a></li>
+              <li><a href="#city">The City</a></li>
               <li><a href="#living">Living</a></li>
               <li><a href="#invest">Invest</a></li>
               <li><a href="#research">Research</a></li>
@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a slender lattice spire ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
+        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a wide-based timber lattice spire with a solar crown, ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
@@ -409,9 +409,8 @@ export default function Home(): JSX.Element {
         <div className="wrap join-in">
           <h2>Help light the first dome.</h2>
           <p>Join the founding circle for early updates, resident applications and investor materials.</p>
-          <form className="form" id="joinForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="subject" defaultValue="Light City Project - Founding circle signup" />
-            <input type="hidden" name="from_name" defaultValue="Light City website" />
+          <form className="form" id="joinForm" method="POST">
+            <input type="hidden" name="form" defaultValue="Founding circle signup" />
             <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" hidden />
             <label className="sr" htmlFor="email">Email</label>
             <input type="email" id="email" name="email" required placeholder="you@example.com" />
@@ -430,7 +429,7 @@ export default function Home(): JSX.Element {
             <a href="#top" className="brand"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M4 26a12 12 0 0 1 24 0" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M16 26V4" stroke="currentColor" strokeWidth="1.6"/><circle cx="16" cy="4" r="2.2" fill="currentColor"/></svg><span>Light City</span></a>
             <p>A regenerative community project combining sacred architecture, proven technology and room for inner life. Built in the open.</p>
           </div>
-          <div><h4>Explore</h4><a href="#vision">Vision</a><a href="#city">The City</a><a href="#living">Living</a><a href="#invest">Invest</a><a href="#research">Research</a></div>
+          <div><h4>Explore</h4><a href="#vision">Vision</a><a href="#city">The City</a><a href={u('model/index.html?phase=1')}>3D model</a><a href="#living">Living</a><a href="#invest">Invest</a><a href="#research">Research</a></div>
           <div><h4>Documentation</h4><a href={u('docs/START-HERE')}>Start here</a><a href={u('docs/project/development-stages')}>Development stages</a><a href={u('blog')}>Updates</a><a href="https://github.com/szemkoff/light-city-project">GitHub</a><a href={u('about')}>About the project</a></div>
           <div><h4>Contact</h4><a href={u('trust')}>Living here, honestly</a><a href={u('investors')}>Investor diligence</a><a href={u('contact')}>Contact form</a><a href={u('conduct')}>Code of conduct</a><a href={u('privacy')}>Privacy</a></div>
         </div>
