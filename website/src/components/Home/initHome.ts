@@ -1,8 +1,8 @@
 /* eslint-disable */
 // @ts-nocheck
 // Interactive behaviour for the homepage (ported from the front-end concept).
-import {submitToSheet} from '../../contactConfig';
-export interface HomeOpts { base: string; img: (name: string) => string; endpoint: string; navigate: (path: string) => void; }
+import {submitForm, formsEnabled, type FormTarget} from '../../contactConfig';
+export interface HomeOpts { base: string; img: (name: string) => string; forms: FormTarget; navigate: (path: string) => void; }
 
 export default function initHome(root: HTMLElement, opts: HomeOpts): () => void {
 
@@ -252,14 +252,14 @@ if (!reduce) {
   on(window, 'scroll', () => { const r = bandSec.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) band.style.transform = `translateY(${(r.top / innerHeight) * -8}%)`; }, { passive: true });
 }
 
-/* ---------- FORM (Google Sheet + email via Apps Script; endpoint injected at build from FORMS_ENDPOINT_URL) ---------- */
+/* ---------- FORM (Google Sheet via Apps Script, FORMS_ENDPOINT_URL; falls back to Web3Forms) ---------- */
 $('#joinForm').onsubmit = async (e: Event) => {
   e.preventDefault();
   const f = e.target as HTMLFormElement, m = $('#formMsg'), btn = f.querySelector('button') as HTMLButtonElement;
-  if (!opts.endpoint) { m.innerHTML = `Signups open soon. Until then, please use the <a href="${opts.base}contact">contact form</a>.`; return; }
+  if (!formsEnabled(opts.forms)) { m.innerHTML = `Signups open soon. Until then, please use the <a href="${opts.base}contact">contact form</a>.`; return; }
   btn.disabled = true; m.textContent = 'Sending…';
   try {
-    if (await submitToSheet(opts.endpoint, f)) { m.textContent = 'Thank you — you’re on the list. We’ll be in touch as the next stage opens.'; f.reset(); } else throw 0;
+    if (await submitForm(opts.forms, f)) { m.textContent = 'Thank you — you’re on the list. We’ll be in touch as the next stage opens.'; f.reset(); } else throw 0;
   } catch { m.innerHTML = `Something went wrong. Please try again or use the <a href="${opts.base}contact">contact form</a>.`; }
   finally { btn.disabled = false; }
 };

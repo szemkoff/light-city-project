@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Site, {Section} from '../components/Site';
-import {submitToSheet} from '../contactConfig';
+import {submitForm, formTarget, formsEnabled} from '../contactConfig';
 
 export default function Contact(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
-  const endpoint = (siteConfig.customFields as {formsEndpoint?: string} | undefined)?.formsEndpoint ?? '';
+  const forms = formTarget(siteConfig.customFields);
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -14,7 +14,7 @@ export default function Contact(): JSX.Element {
     const form = e.currentTarget;
     setStatus('sending');
     try {
-      if (await submitToSheet(endpoint, form)) { setStatus('sent'); form.reset(); } else setStatus('error');
+      if (await submitForm(forms, form)) { setStatus('sent'); form.reset(); } else setStatus('error');
     } catch { setStatus('error'); }
   }
 
@@ -31,7 +31,7 @@ export default function Contact(): JSX.Element {
           <div>
             {status === 'sent' ? <p className="pg-success" role="status">Thank you. Your message was submitted.</p> : null}
             {status === 'error' ? <p className="pg-success" role="alert">Something went wrong. Please try again in a moment.</p> : null}
-            {endpoint ? (
+            {formsEnabled(forms) ? (
               <form className="pg-form" method="POST" onSubmit={onSubmit}>
                 <input type="hidden" name="form" value="Contact" />
                 <input type="checkbox" name="botcheck" tabIndex={-1} autoComplete="off" style={{display: 'none'}} />

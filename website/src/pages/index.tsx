@@ -5,6 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {useHistory} from '@docusaurus/router';
 import initHome from '../components/Home/initHome';
+import {formTarget} from '../contactConfig';
 import '../components/Home/home.css';
 
 export default function Home(): JSX.Element {
@@ -12,7 +13,7 @@ export default function Home(): JSX.Element {
   const base = useBaseUrl('/');
   const history = useHistory();
   const rootRef = useRef<HTMLDivElement>(null);
-  const endpoint = (siteConfig.customFields as {formsEndpoint?: string} | undefined)?.formsEndpoint ?? '';
+  const forms = formTarget(siteConfig.customFields);
   const u = (p: string) => base + p;
   const img = (n: string) => base + 'img/home/' + n + '.webp';
 
@@ -20,7 +21,7 @@ export default function Home(): JSX.Element {
     const root = rootRef.current;
     if (!root) return undefined;
     root.classList.add('js');
-    return initHome(root, {base, img, endpoint, navigate: (p) => history.push(p)});
+    return initHome(root, {base, img, forms, navigate: (p) => history.push(p)});
   }, []);
 
   return (
