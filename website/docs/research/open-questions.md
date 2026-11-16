@@ -31,7 +31,7 @@ Pick a question, check the [bibliography](/docs/research/bibliography) for start
 | A4 | LFP or sodium-ion stationary storage? When is long-duration storage justified? | Scaling | Lifecycle cost model; supplier quotes | S5 |
 | A5 | What dome diameter and floor count best balance cost, daylight and community size? | Proven | Digital models, daylight and energy simulation | S3 |
 | A6 | Which permitting route (planned development, agricultural village, special district)? | Proven | Land-use attorney review per shortlisted site | S2–S4 |
-| A7 | What is the right mix of home types and fees for 180-resident break-even? | Proven | Waitlist survey, financial model sensitivity | S4 |
+| A7 | What mix of home types, home fees and member fees lets about 110 homes (200 residents) break even? | Proven | Waitlist survey, financial model sensitivity | S4 |
 
 ## B. Community and governance (answer in Stage 4)
 

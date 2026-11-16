@@ -78,9 +78,9 @@ The full construction budget breakdown is in [Architecture → Budget Framework]
 |---|---|---|---|
 | Annual operating cost | $1.8M | **$2.5M** | $4.5M |
 | Annual revenue | $2.3M | **$3.5M** | $4.5M |
-| Break-even residents | 160 | **180** | 220 |
+| Break-even | See note | **Fees ~13% above mid at 90% occupancy** | See note |
 
-Revenue mix: resident fees about 60%, retreats 20%, events and agritourism 10%, licensing and consulting 10%. Target impact return: **8–12% IRR** over years 5–10. See [Development Stages → Financial Model](/docs/project/development-stages).
+Phase 1 is planned as about 110 homes for 200 residents. Fees are per home plus a member fee for each extra person, so break-even is being rebuilt around households ([Household Model](/docs/project/development-stages#household-model-november-2026-draft)). Revenue mix: resident fees about 60%, retreats 20%, events and agritourism 10%, licensing and consulting 10%. Target impact return: **8–12% IRR** over years 5–10. See [Development Stages → Financial Model](/docs/project/development-stages).
 
 ## Homes (monthly, all-inclusive)
 
@@ -90,8 +90,9 @@ Revenue mix: resident fees about 60%, retreats 20%, events and agritourism 10%, 
 | Studio | 400–500 sf | $700–950 |
 | 1-bedroom | 600–800 sf | $950–1,300 |
 | 2-bedroom | 900–1,200 sf | $1,300–1,700 |
+| 3-bedroom (draft) | 1,300–1,600 sf | $1,700–2,200 |
 
-The price includes utilities, 10–15 communal meals a month, wellness access, events and maintenance. [Contribution-based residency](/docs/project/contribution-based-residency) lowers fees in exchange for work hours, and pilots run from 2027 to 2028.
+Prices are per home and cover one adult. Each additional adult pays about $300 a month and each child about $150 (draft). See [who fits where](/homes#fit). The price includes utilities, 10–15 communal meals a month, wellness access, events and maintenance. [Contribution-based residency](/docs/project/contribution-based-residency) lowers fees in exchange for work hours, and pilots run from 2027 to 2028.
 
 ## Timeline
 

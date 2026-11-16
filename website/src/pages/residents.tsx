@@ -29,8 +29,9 @@ export default function Residents(): JSX.Element {
           <div className="pg-fact"><b>$700–950</b><span>Studio · 400–500 sf / month</span></div>
           <div className="pg-fact"><b>$950–1,300</b><span>1-bedroom · 600–800 sf / month</span></div>
           <div className="pg-fact"><b>$1,300–1,700</b><span>2-bedroom · 900–1,200 sf / month</span></div>
+          <div className="pg-fact"><b>$1,700–2,200</b><span>3-bedroom · 1,300–1,600 sf / month (draft)</span></div>
         </div>
-        <p style={{marginTop: 'var(--space-6)'}}><a className="link" href={useBaseUrl('/homes')}>See every home type, with photos and what is included →</a></p>
+        <p style={{marginTop: 'var(--space-6)'}}><a className="link" href={useBaseUrl('/homes')}>See every home type, who fits where and what is included →</a></p>
       </Section>
 
       <Section eyebrow="Contribution-based residency" title="Contribute your skills, offset your living costs." lead="Work-for-living tiers align resident time and talent with what the community needs. A pilot is planned for 2027–2028.">

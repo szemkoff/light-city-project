@@ -2,11 +2,26 @@ import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Site, {Section, Cards, DocLinks, Cta} from '../components/Site';
 
+// Household model: 110 homes, ~200 residents. Home fees at mid prices + member fees ($300 per extra adult, $150 per child).
+// Operating cost $2.5M a year. Columns: other income $850K (base), $600K (low retreats).
 const SENS: [string, string, string][] = [
-  ['70% · 140 residents', '−$96K', '−$346K'],
-  ['80% · 160 residents', '+$126K', '−$124K'],
-  ['90% · 180 residents (base)', '+$348K', '+$98K'],
-  ['100% · 200 residents', '+$570K', '+$320K'],
+  ['80% · 88 homes', '−$355K', '−$605K'],
+  ['90% · 99 homes (base)', '−$194K', '−$444K'],
+  ['100% · 110 homes', '−$32K', '−$282K'],
+];
+
+const SENS_HIGH: [string, string, string][] = [
+  ['80% · 88 homes', '−$195K', '−$445K'],
+  ['90% · 99 homes', '−$13K', '−$263K'],
+  ['100% · 110 homes', '+$169K', '−$81K'],
+];
+
+const MIX: [string, string, string, string, string][] = [
+  ['Tiny home', '25', '1', '25', '$500–700'],
+  ['Studio', '35', '1–2', '42', '$700–950'],
+  ['1-bedroom', '25', '1–2', '43', '$950–1,300'],
+  ['2-bedroom', '15', '2–4', '45', '$1,300–1,700'],
+  ['3-bedroom (draft)', '10', '4–6', '45', '$1,700–2,200'],
 ];
 
 const S2: [string, string][] = [
@@ -43,7 +58,8 @@ export default function Investors(): JSX.Element {
           <div className="pg-fact"><b>$44M</b><span>Construction capex, Phase 1 (range $22M–$95M for all stages)</span></div>
           <div className="pg-fact"><b>$45M</b><span>All stages, 1 to 5 (mid case)</span></div>
           <div className="pg-fact"><b>$2.5M</b><span>Annual operating cost</span></div>
-          <div className="pg-fact"><b>≈149</b><span>Residents to cover operating cost (base case)</span></div>
+          <div className="pg-fact"><b>110</b><span>Homes for about 200 residents (draft household plan)</span></div>
+          <div className="pg-fact"><b>+13%</b><span>Fee lift above mid prices needed to cover operating cost at 90% occupancy</span></div>
           <div className="pg-fact"><b>8–12%</b><span>Target impact IRR (mid case, not yet modeled by scenario)</span></div>
         </div>
         <div className="pg-prose" style={{marginTop: 'var(--space-8)'}}>
@@ -85,21 +101,39 @@ export default function Investors(): JSX.Element {
         </div>
       </Section>
 
-      <Section id="model" eyebrow="4 · Financial model and sensitivity" title="Where the model holds, and where it does not." lead="Base case: 200 homes, average fee $925 a month ($11,100 a year), operating cost $2.5M a year, other income (retreats, events, licensing) $850K a year.">
-        <h3 style={{margin: '0 0 var(--space-4)'}}>Annual operating margin by occupancy</h3>
+      <Section id="model" eyebrow="4 · Financial model and sensitivity" title="Where the model holds, and where it does not." lead="Rebuilt around households. Earlier versions counted every resident as paying a full home fee ($925 a month each). Fees are charged per home, so the model now counts homes: about 110 homes for 200 residents, plus a member fee for each extra person.">
+        <h3 style={{margin: '0 0 var(--space-4)'}}>Phase 1 home mix (draft)</h3>
+        <div className="pg-table-wrap">
+          <table className="pg-table">
+            <thead><tr><th>Home</th><th>Homes</th><th>People per home</th><th>Residents</th><th>Home fee / month</th></tr></thead>
+            <tbody>
+              {MIX.map(([h, n, p, r, f]) => <tr key={h}><th>{h}</th><td>{n}</td><td>{p}</td><td>{r}</td><td>{f}</td></tr>)}
+              <tr><th>Total</th><td>110</td><td>1.8 average</td><td>200</td><td>Member fees: $300 per extra adult, $150 per child</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="pg-inline" style={{marginTop: 'var(--space-4)'}}>At full occupancy and mid prices, home fees bring in about $1.37M a year and member fees about $250K (about 50 extra adults and 40 children), so $1.62M in all. The earlier per-resident method gave $2.0M at 90% occupancy. Who lives in which home: <a href={u('/homes#fit')}>who fits where</a>.</p>
+        <h3 style={{margin: 'var(--space-10) 0 var(--space-4)'}}>Annual operating margin, mid prices</h3>
         <div className="pg-table-wrap">
           <table className="pg-table">
             <thead><tr><th>Occupancy</th><th>Other income $850K (base)</th><th>Other income $600K (low retreats)</th></tr></thead>
             <tbody>{SENS.map(([o, a, b]) => <tr key={o}><th>{o}</th><td>{a}</td><td>{b}</td></tr>)}</tbody>
           </table>
         </div>
+        <h3 style={{margin: 'var(--space-10) 0 var(--space-4)'}}>Annual operating margin, top of each price range</h3>
+        <div className="pg-table-wrap">
+          <table className="pg-table">
+            <thead><tr><th>Occupancy</th><th>Other income $850K (base)</th><th>Other income $600K (low retreats)</th></tr></thead>
+            <tbody>{SENS_HIGH.map(([o, a, b]) => <tr key={o}><th>{o}</th><td>{a}</td><td>{b}</td></tr>)}</tbody>
+          </table>
+        </div>
         <div className="pg-prose" style={{marginTop: 'var(--space-8)'}}>
           <ul>
-            <li><strong>Break-even:</strong> about 149 residents with base other income, about 171 with low retreat income. (The development stages table lists 180; that is the base case, which earns about $350K.)</li>
-            <li><strong>Fees, at 90% occupancy:</strong> fees 15% lower gives +$48K; 15% higher gives +$648K.</li>
-            <li><strong>Operating cost:</strong> 15% higher at 90% occupancy gives −$27K.</li>
-            <li><strong>Capex overrun:</strong> +20% takes construction to about $54M and adds about $9M to the raise.</li>
-            <li><strong>Open item, debt service:</strong> the operating model does not yet include interest. If the EPC share (about $9M) costs 6–8%, interest is $540K–$720K a year, more than the base margin. Stage 2 will rebuild the model with debt terms, reserves and scenario IRRs.</li>
+            <li><strong>Break-even:</strong> at mid prices, the operating budget falls short even when every home is full. Fees about 13% above mid prices (close to the top of each range) are needed to break even at 90% occupancy with base other income, and about 30% above mid with low retreat income.</li>
+            <li><strong>Not yet included:</strong> discounts for contribution-based residency (20–30% of homes) and founding-member discounts. Both lower income further.</li>
+            <li><strong>Ways to close the gap, to test in Stage 2:</strong> more homes on the same infrastructure, a higher share of 1-, 2- and 3-bedroom homes, a higher member fee, a lower operating cost per home, or retreat income secured by pre-sales.</li>
+            <li><strong>Capex:</strong> the cost plan assumed 50–100 homes. About 110 homes, including 10 three-bedroom homes, may add about 10% to the housing line; this will be re-estimated in Stage 2. A +20% overrun on all construction takes it to about $54M and adds about $9M to the raise.</li>
+            <li><strong>Open item, debt service:</strong> the operating model does not yet include interest. If the EPC share (about $9M) costs 6–8%, interest is $540K–$720K a year. Stage 2 will rebuild the model with debt terms, reserves and scenario IRRs.</li>
           </ul>
           <p>Full assumptions: <a href={stages + '#financial-model-notes--assumptions'}>financial model notes</a>.</p>
         </div>

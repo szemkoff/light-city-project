@@ -147,8 +147,10 @@ on(dayEl, 'pointerup', () => dragging = false);
 hour(0);
 
 /* ---------- INVEST ---------- */
-const SC = [['$22.1M', '$1.8M', '150', '160', 0], ['$45M', '$2.5M', '200', '180', .5], ['$95.5M', '$4.5M', '300', '220', 1]];
-const REV = [['Resident fees', 1.85, 2.52], ['Retreats', .4, .9], ['Events & agritourism', .2, .45], ['Licensing', .2, .45]];
+const SC = [['$22.1M', '$1.8M', '150', '≈85', 0], ['$45M', '$2.5M', '200', '110', .5], ['$95.5M', '$4.5M', '300', '≈165', 1]];
+// Per scenario [low, mid, high], $M a year at 90% occupancy. Resident fees use the household model (home fee + member fees).
+const REV = [['Resident fees', [.99, 1.46, 2.46]], ['Retreats', [.4, .65, .9]], ['Events & agritourism', [.2, .325, .45]], ['Licensing', [.2, .325, .45]]];
+const REVMAX = 2.46;
 const fmt = v => v >= 1 ? '$' + v.toFixed(2).replace(/0$/, '') + 'M' : '$' + Math.round(v * 1000) + 'K';
 const bars = $('#bars');
 bars.innerHTML = REV.map(([n]) => `<li><span>${n}</span><span class="v"></span><span class="track"><span class="fill"></span></span></li>`).join('');
@@ -156,8 +158,7 @@ let barsSeen = false;
 function scen(i) {
   $$('.scen button').forEach(b => b.setAttribute('aria-checked', +b.dataset.s === i));
   ['kCapex', 'kOpex', 'kCap', 'kBe'].forEach((id, j) => { const el = $('#' + id); el.textContent = SC[i][j]; el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); });
-  const f = SC[i][4];
-  $$('#bars li').forEach((li, j) => { const [, lo, hi] = REV[j], v = lo + (hi - lo) * f; li.querySelector('.v').textContent = fmt(v); if (barsSeen) li.querySelector('.fill').style.width = (v / 2.52 * 100) + '%'; li.dataset.w = (v / 2.52 * 100); });
+  $$('#bars li').forEach((li, j) => { const v = REV[j][1][i]; li.querySelector('.v').textContent = fmt(v); if (barsSeen) li.querySelector('.fill').style.width = (v / REVMAX * 100) + '%'; li.dataset.w = (v / REVMAX * 100); });
 }
 $$('.scen button').forEach(b => b.onclick = () => scen(+b.dataset.s));
 scen(1);
@@ -171,7 +172,7 @@ const ST: Array<[string, string, string, string, string[], string[]]> = [
   ['Digital', 'Jul – Nov 2027', '', 'CRM, resident applications and investor portal.', [], ['Founding-circle CRM', 'Resident and investor applications', 'Community platform']],
   ['Community', 'Dec 2027 – Nov 2028', '', 'Retreats, pilot programs, land and permits.', [], ['Retreats and pilot residencies', 'Founding community formed', 'Land secured and permits filed']],
   ['Physical', 'Dec 2028 – Nov 2031', '', 'Capital raise and Phase 1 construction.', [], ['Capital raise closes', '3 communospheres and the first spire', '2–5 MWp solar microgrid']],
-  ['Operational', '2032 onward', '', 'Break-even and the move to community governance.', [], ['200 residents, break-even at 180', 'Community Council with 80% consent threshold', 'Phase 2 planning (1,500 residents)']],
+  ['Operational', '2032 onward', '', 'Break-even and the move to community governance.', [], ['200 residents in about 110 homes; operating break-even is the gate', 'Community Council with 80% consent threshold', 'Phase 2 planning (1,500 residents)']],
 ];
 const stages = $('#stages'), sd = $('#stageDetail');
 const cur = ST.findIndex(r => r[2] === 'current');

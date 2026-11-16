@@ -37,10 +37,10 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 | **Phase 1 Capacity** | 150 residents | 200 residents | 300 residents |
 | **Annual OPEX (S6)** | $1.8M/year | $2.5M/year | $4.5M/year |
 | **Annual Revenue (S6)** | $2.3M/year | $3.5M/year | $4.5M/year |
-| **Break-even** | 160 residents | 180 residents | 220 residents |
+| **Break-even** | See household model | Fees ~13% above mid at 90% occupancy | See household model |
 | **ROI Timeline** | 8-12 years | 6-9 years | 10-15 years |
 
-**Target Scenario**: $45M CAPEX, 200 residents, $2.5M OPEX, $3.5M revenue, break-even Year 3
+**Target Scenario**: $45M CAPEX, 200 residents in about 110 homes, $2.5M OPEX. Revenue and break-even are being rebuilt around households; see [Household Model](#household-model-november-2026-draft).
 
 ---
 
@@ -347,7 +347,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 |----------|-----|------|-------|
 | **Site Work & Infrastructure** | $3M | $12M | Roads, utilities, grading, drainage |
 | **Communospheres (3-6 units)** | $4M | $18M | Geodesic domes, CLT, BIPV, interiors |
-| **Residential Units (50-100)** | $5M | $25M | Tiny homes, studios, 1-2BR units |
+| **Residential Units (50-100)** | $5M | $25M | Tiny homes, studios, 1-3BR units. Draft plan is about 110 homes incl. 10 three-bedroom; may add ~10%, re-estimate in Stage 2 |
 | **Central Spire (Prototype)** | $1M | $4M | Observation/meditation tower (50-100 ft) |
 | **Energy Systems** | $800K | $3M | Solar, batteries, microgrid, backup |
 | **Water Systems** | $400K | $1.5M | Wells, rainwater, treatment, storage |
@@ -576,13 +576,13 @@ These stages are guideposts, not rigid requirements. The project may:
 #### Stage 6 Revenue Streams (Annual, Steady-State)
 | Revenue Source | Annual | % of Total | Notes |
 |----------------|--------|------------|-------|
-| **Resident Fees** | $1.5M-$2.7M | 60% | 200 residents @ $625-$1,125/month |
+| **Resident Fees** | $1.3M-$1.6M | 60% | Household model: 110 homes at 90% occupancy, home fees plus member fees (earlier figure of $1.5M-$2.7M counted every resident as a full fee) |
 | **Retreat Programs** | $400K-$900K | 20% | 800-1,500 guests @ $500-$600/visit |
 | **Events & Agritourism** | $200K-$450K | 10% | Workshops, tours, farm sales |
 | **Licensing & Consulting** | $200K-$450K | 10% | Replication support, IP licensing |
 | **TOTAL REVENUE** | **$2.3M-$4.5M** | **100%** | |
 
-**Break-even**: 160-180 residents + 600-800 retreat guests/year  
+**Break-even**: under review. With per-home fees, fees about 13% above mid prices are needed at 90% occupancy and base retreat income. See [Household Model](#household-model-november-2026-draft).  
 **Profitability Target**: 10-15% margin → $250K-$500K/year for expansion
 
 ### Resident Fee Structure (Monthly)
@@ -591,8 +591,10 @@ These stages are guideposts, not rigid requirements. The project may:
 | **Tiny Home** | 200-300 sf | $500-$700 | $6K-$8.4K | Shared facilities |
 | **Studio** | 400-500 sf | $700-$950 | $8.4K-$11.4K | Private bath, kitchenette |
 | **1-Bedroom** | 600-800 sf | $950-$1,300 | $11.4K-$15.6K | Full kitchen, private |
-| **2-Bedroom** | 900-1,200 sf | $1,300-$1,700 | $15.6K-$20.4K | Families, shared living |
+| **2-Bedroom** | 900-1,200 sf | $1,300-$1,700 | $15.6K-$20.4K | Families of 3-4, shared living |
+| **3-Bedroom** (draft) | 1,300-1,600 sf | $1,700-$2,200 | $20.4K-$26.4K | Families of 4-6, three generations |
 
+**Fee basis**: the home fee covers the home and one adult. Each additional adult pays a member fee of about $300/month and each child under 18 about $150/month, for meals, wellness and programs (draft).  
 **Includes**: Utilities, communal meals (10-15/month), wellness access, events, maintenance  
 **Additional**: Private meals, workshops, personal services (à la carte)
 
@@ -609,11 +611,12 @@ These stages are guideposts, not rigid requirements. The project may:
 | Studio | $700-$950 | $8.4K-$11.4K | $8.7K-$18K | ≈ Break-even |
 | 1-Bedroom | $950-$1,300 | $11.4K-$15.6K | $8.7K-$18K | Profitable (model) |
 | 2-Bedroom | $1,300-$1,700 | $15.6K-$20.4K | $8.7K-$18K | Profitable (model) |
+| 3-Bedroom (draft) | $1,700-$2,200 | $20.4K-$26.4K | $8.7K-$18K | Profitable per home; more people per home |
 
 **Cross-Subsidy Strategy**:
-1. **Tiny homes** (25% of units) operate at loss, subsidized by larger units + retreat revenue
-2. **Studios** (40% of units) approximately break-even
-3. **1-BR and 2-BR** (35% of units) generate profit margin
+1. **Tiny homes** (25 of 110 homes, about 23%) operate at loss, subsidized by larger units + retreat revenue
+2. **Studios** (35 homes, about 32%) approximately break-even
+3. **1-BR, 2-BR and 3-BR** (50 homes, about 45%) generate profit margin
 4. **Retreat revenue** ($400K-$900K/year) is **essential**, not optional
 
 ### Critical Success Factors
@@ -622,7 +625,7 @@ These stages are guideposts, not rigid requirements. The project may:
 - **Occupancy**: 90%+ required for break-even (80% occupancy = operating loss)
 - **Retreat Revenue**: Must achieve 800-1,500 guests/year @ $500-$600/guest
 - **Unit Mix**: Cannot exceed 25% tiny homes without increasing fees
-- **Pricing Power**: Must maintain fees within $500-$1,700 range (market competitive)
+- **Pricing Power**: Must maintain fees within $500-$2,200 per home range (market competitive)
 
 ### Sensitivity Analysis
 
@@ -641,7 +644,42 @@ These stages are guideposts, not rigid requirements. The project may:
 4. **Limit tiny homes** to 25% of total units (currently appropriate)
 5. **Diversify revenue** (events, agritourism, licensing)
 
-### Break-Even Analysis
+### Household Model (November 2026 draft)
+
+Fees are charged per home, not per person, so revenue depends on how many homes there are and who lives in them. The earlier break-even analysis below counted 180 residents each paying the $925 average home fee, which overstates resident income for a 200-person community living in about 110 homes.
+
+**Draft home mix for 200 residents**
+
+| Home | Homes | People per home | Residents | Home fee / month (mid) |
+|------|-------|-----------------|-----------|------------------------|
+| Tiny home | 25 | 1 | 25 | $600 |
+| Studio | 35 | 1-2 (avg 1.2) | 42 | $825 |
+| 1-Bedroom | 25 | 1-2 (avg 1.7) | 43 | $1,125 |
+| 2-Bedroom | 15 | 2-4 (avg 3) | 45 | $1,500 |
+| 3-Bedroom (draft) | 10 | 4-6 (avg 4.5) | 45 | $1,950 |
+| **Total** | **110** | **1.8 avg** | **200** | |
+
+**Member fees**: about 50 additional adults at $300/month and 40 children at $150/month = about $250K/year.
+
+**Resident income at full occupancy**: home fees $1.37M (mid prices) + member fees $0.25M = **$1.62M/year**. At 90% occupancy: $1.46M. (Earlier method: $2.0M.)
+
+**Annual operating margin** (operating cost $2.5M, other income $850K base / $600K low retreats):
+
+| Occupancy | Mid prices, $850K | Mid prices, $600K | Top of range, $850K | Top of range, $600K |
+|-----------|-------------------|-------------------|---------------------|---------------------|
+| 80% (88 homes) | -$355K | -$605K | -$195K | -$445K |
+| 90% (99 homes) | -$194K | -$444K | -$13K | -$263K |
+| 100% (110 homes) | -$32K | -$282K | +$169K | -$81K |
+
+**What this means**
+- At mid prices the operating budget does not break even, even at full occupancy.
+- Break-even at 90% occupancy needs fees about 13% above mid (close to the top of each range) with base other income, or about 30% above mid with low retreat income.
+- Not yet included: contribution-based residency discounts (20-30% of homes), founding-member discounts and debt service. All three widen the gap.
+- Levers to test in Stage 2: more homes on the same infrastructure, a larger share of 1-3 bedroom homes, higher member fees, lower operating cost per home and pre-sold retreat income.
+
+### Break-Even Analysis (earlier per-resident method, superseded)
+
+The cases below count each resident as paying a full home fee. They are kept for reference until the Stage 2 model replaces them.
 
 **Base Case** (Mid Scenario):
 - **Residents**: 180 @ average $925/month = $2.0M/year

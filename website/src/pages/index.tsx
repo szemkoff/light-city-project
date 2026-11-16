@@ -120,7 +120,7 @@ export default function Home(): JSX.Element {
           <div><span className="stat-n" data-count="200">200</span><span className="stat-l">Phase 1 residents</span></div>
           <div><span className="stat-n" data-count="12" data-suffix="+">12+</span><span className="stat-l">Communospheres at full build</span></div>
           <div><span className="stat-n">8–12%</span><span className="stat-l">Target impact IRR</span></div>
-          <div><span className="stat-n" data-count="180">180</span><span className="stat-l">Residents to break even</span></div>
+          <div><span className="stat-n" data-count="110">110</span><span className="stat-l">Homes for 200 residents</span></div>
         </div>
       </section>
 
@@ -257,7 +257,9 @@ export default function Home(): JSX.Element {
             <a className="home" href={u('homes#studio')}><span className="home-t">Studio</span><span className="home-s">400–500 sf</span><span className="home-p">$700–950<small>/mo</small></span></a>
             <a className="home" href={u('homes#one-bedroom')}><span className="home-t">1-Bedroom</span><span className="home-s">600–800 sf</span><span className="home-p">$950–1,300<small>/mo</small></span></a>
             <a className="home" href={u('homes#two-bedroom')}><span className="home-t">2-Bedroom</span><span className="home-s">900–1,200 sf</span><span className="home-p">$1,300–1,700<small>/mo</small></span></a>
+            <a className="home" href={u('homes#three-bedroom')}><span className="home-t">3-Bedroom</span><span className="home-s">1,300–1,600 sf</span><span className="home-p">$1,700–2,200<small>/mo</small></span></a>
           </div>
+          <a className="link" href={u('homes#fit')}>Which home fits your household <span aria-hidden="true">→</span></a>
           <a className="link" href={u('homes')}>See every home type <span aria-hidden="true">→</span></a>
           <a className="link" href={u('docs/project/contribution-based-residency')}>How contribution-based residency works <span aria-hidden="true">→</span></a>
         </div>
@@ -281,11 +283,11 @@ export default function Home(): JSX.Element {
             <div><span className="kpi-l">Capital expenditure</span><span className="kpi-n" id="kCapex">$45M</span></div>
             <div><span className="kpi-l">Annual operating cost</span><span className="kpi-n" id="kOpex">$2.5M</span></div>
             <div><span className="kpi-l">Resident capacity</span><span className="kpi-n" id="kCap">200</span></div>
-            <div><span className="kpi-l">Break-even residents</span><span className="kpi-n" id="kBe">180</span></div>
+            <div><span className="kpi-l">Homes (draft)</span><span className="kpi-n" id="kBe">110</span></div>
           </div>
           <div className="invest-grid">
             <div>
-              <h3>Revenue mix <small>per year</small></h3>
+              <h3>Revenue mix <small>per year, 90% occupancy</small></h3>
               <ul className="bars" id="bars"></ul>
             </div>
             <div>
@@ -296,10 +298,12 @@ export default function Home(): JSX.Element {
                 <div><dt>Water rights</dt><dd>Legal review, well permits, backup sources</dd></div>
                 <div><dt>Budget creep</dt><dd>20% contingency and phased value engineering</dd></div>
                 <div><dt>Neighbors</dt><dd>Early engagement and benefit sharing</dd></div>
+                <div><dt>Household mix</dt><dd>Fees are per home plus a member fee per person, and the model counts homes, not heads</dd></div>
               </dl>
             </div>
           </div>
           <div className="invest-links">
+            <a className="link light" href={u('investors#model')}>Financial model and sensitivity <span aria-hidden="true">→</span></a>
             <a className="link light" href={u('docs/project/development-stages')}>Timeline, costs and financial model notes <span aria-hidden="true">→</span></a>
             <a className="link light" href={u('docs/project/governance')}>Governance and decision rights <span aria-hidden="true">→</span></a>
           </div>
