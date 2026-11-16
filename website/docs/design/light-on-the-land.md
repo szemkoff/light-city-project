@@ -38,7 +38,7 @@ These are not concepts. Each one has been built, measured and independently repo
 |---|---|---|---|
 | **Land taken** | Every building and road replaces habitat | Compact core of 20–30 acres for Phase 1 on a 100–500 acre site; build on already farmed or degraded ground, never old forest or wetland; keep at least half the site as permanent habitat | **Proven** (planning choice) |
 | **Biodiversity** | Fragmented, sprayed land loses species | Baseline ecological survey before design; wildlife corridors kept open between habitat patches; native planting; no pesticides; aim for at least 20% biodiversity net gain using a recognised metric | **Proven** method, needs ecologists |
-| **Energy** | Fossil fuel is the largest climate impact | All-electric, no combustion fuels; rooftop solar plus agrivoltaic fields with grazing and pollinator meadows; batteries; aim for 105% or more of annual use, the Living Building threshold | **Proven** |
+| **Energy** | Fossil fuel is the largest climate impact | All-electric daily life with no fossil fuels; renewable-fuel backup only during long outages; rooftop solar plus agrivoltaic fields with grazing and pollinator meadows; batteries; aim for 105% or more of annual use, the Living Building threshold | **Proven** |
 | **Water** | Arid sites can drain aquifers | Rainwater harvesting, low-flow fixtures, greywater reuse through constructed wetlands, composting or vacuum toilets; no net drawdown of groundwater | **Proven**, but permits for drinking rainwater vary by country |
 | **Materials and carbon** | Concrete, steel and glass carry heavy embodied carbon | Local stone, earth, timber and bamboo; minimal concrete; measure embodied carbon for every building and publish it (see [Beyond the Box](/docs/design/organic-forms-and-materials)) | **Proven** to Emerging |
 | **Night light** | Artificial light at night disrupts birds, bats, insects and sleep | Outdoor lights shielded and pointed down, warm color (3000 K or warmer), dimmed or off when not needed, no uplighting of the spire or domes; work toward International Dark Sky Community status | **Proven** ([DarkSky](https://darksky.org/what-we-do/international-dark-sky-places/apply/)) |
@@ -64,7 +64,7 @@ Some of our earlier imagery showed things that would *increase* impact, and we a
 
 1. **Build small.** Developed area stays at or under 15% of the site; at least 50% is placed under a permanent conservation agreement.
 2. **More life after than before.** At least 20% biodiversity net gain against a pre-construction baseline, monitored for 30 years.
-3. **Net-positive energy.** 105% or more of annual energy from on-site renewables, with no fossil combustion.
+3. **Net-positive energy.** 105% or more of annual energy from on-site renewables, with no fossil fuel; renewable-fuel backup runs only during long outages.
 4. **Live within the rain.** No net groundwater drawdown; water reused at least once before it returns to the land.
 5. **Count the carbon in buildings.** Embodied carbon measured and published for every building, with a falling target each phase.
 6. **Protect the night.** DarkSky-compliant outdoor lighting from day one.

@@ -34,6 +34,17 @@ Citation style: link inline at the point of use, and note the access date for we
 - **Agrivoltaics.** [PNAS 2026 via PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12974514/) (A). [Michigan State University](https://www.canr.msu.edu/news/the-future-of-farming-may-be-shaded) (B).
 - **Vertical farming economics.** [Vertical Farm Daily](https://www.verticalfarmdaily.com/article/9882055/can-vertical-farming-find-a-more-focused-future/) (C). [Agritecture](https://www.agritecture.com/blog/odyssey-teachings-about-vertical-farming) (C).
 
+## Low-impact living and nature
+
+- **Findhorn ecological footprint.** 2.71 gha per person against a UK average of 5.4 ([Findhorn footprint study](https://base.socioeco.org/docs/ff_20footprint.pdf)) (B).
+- **Sieben Linden carbon footprint.** About 5.0 t CO₂ per person against a German average of 10.5 t ([Sieben Linden](https://siebenlinden.org/de/oekologischer-fussabdruck/)) (B). Straw-bale homes ([World Habitat](https://world-habitat.org/awards/winners/straw-bale-housing-in-the-sieben-linden-ecovillage/)) (B).
+- **Net-positive building.** Kendeda Building, Living Building Challenge ([Georgia Tech](https://livingbuilding.gatech.edu/)) (A).
+- **Agrivoltaics and pollinators.** [NREL/NLR](https://www.nlr.gov/solar/market-research-analysis/agrivoltaics) (A). [USDA Climate Hubs](https://www.climatehubs.usda.gov/hubs/northwest/topic/agrivoltaics-pairing-solar-power-and-agriculture-northwest) (A).
+- **Biodiversity net gain.** [GOV.UK guidance](https://www.gov.uk/guidance/understanding-biodiversity-net-gain) (A).
+- **Night lighting.** [DarkSky International](https://darksky.org/what-we-do/international-dark-sky-places/apply/) (A).
+- **Bird-safe glass.** [US Fish and Wildlife Service](https://www.fws.gov/story/federal-agencies-treating-glass-reduce-bird-collisions) (A).
+- **Stone.** [UNESCO, dry-stone walling](https://ich.unesco.org/en/RL/the-art-of-dry-stone-walling-knowledge-and-techniques-02106) (A). [MPA, dimension stone and carbon](https://www.mineralproducts.org/MPA/media/root/Publications/2026/MPA-Dimension-Stone-naturally-low%E2%80%91carbon-report-Sept-2026.pdf) (B).
+
 ## Wellbeing, practice and consciousness
 
 - Mindfulness and gratitude interventions, 30-study meta-analysis ([PMC, 2026](https://pmc.ncbi.nlm.nih.gov/articles/PMC12984879/)) (A).

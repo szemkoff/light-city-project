@@ -99,9 +99,7 @@ These purposes unfold as five movements: **Awakening, Gathering, Founding, Flour
    - Contribute to new Earth emergence
    - Share learnings and frameworks
 
-![Development Roadmap](/img/diagrams/development-roadmap.svg)
-
-*The complete 6-stage journey from vision to thriving civilization.*
+The six-stage roadmap diagram, from vision to a thriving city, is in [Development Stages](/docs/project/development-stages).
 
 ![Daily Life Timeline](/img/diagrams/daily-life-timeline.svg)
 

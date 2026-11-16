@@ -62,13 +62,7 @@ Light City operates on multiple energy levels simultaneously, with clear separat
 
 ## Visual Reference
 
-Your visionary conception of Light City's crystalline energy architecture:
-
-![Light City Energy Vision](/img/inspiration/light-city-vision-2.jpg)
-
-Delphin's crystal spire and energy system in action (visible as the central glowing structure):
-
-![Delphin Energy System](/img/inspiration/delphin-aerial-view-2.png)
+The visionary images of the crystal spire and Delphin's energy system are in [Architecture → Vision references](/docs/design/architecture#vision-references).
 
 **Note**: Delphin represents an off-world reference model with advanced technology. Light City's Earth implementation uses the two-track system above.
 
@@ -98,7 +92,7 @@ Delphin's crystal spire and energy system in action (visible as the central glow
 
 ### Resilience without diesel
 
-Light City does not use diesel. Backup power comes in layers, from the cleanest and most proven to the most site-specific:
+Light City does not use diesel or any fossil fuel. Daily life is all-electric; fuel is burned only during long outages, and only renewable fuel. Backup power comes in layers, from the cleanest and most proven to the most site-specific:
 
 | Layer | What it is | Readiness | Notes |
 |---|---|---|---|
@@ -106,7 +100,7 @@ Light City does not use diesel. Backup power comes in layers, from the cleanest 
 | 2. Grid tie | Import/export with the regional utility | TRL 9 | Where a substation is within reach |
 | 3. Biogas gensets | Engines running on methane from on-site digesters (food waste, manure, garden waste) | TRL 9 | Closes the loop with the food system; digestate goes back to the soil |
 | 4. Bio-ethanol gensets | Engines or fuel cells running on plant-based ethanol | TRL 6-8 | Ethanol gensets already replace diesel in Brazil, e.g. the [Liconic Ecogerador](https://contest.techbriefs.com/2024/entries/sustainable-technology/13212); an EU bioethanol fuel-cell backup reached TRL 6 ([PEMBeyond, CORDIS](https://cordis.europa.eu/project/id/621218/reporting/it)). Ethanol holds about 40% less energy per litre than diesel, so tanks are larger. |
-| 5. Gas (transition only) | Renewable natural gas first; pipeline gas only as a temporary fallback | TRL 9 | Phased out as biogas output grows |
+| 5. Renewable natural gas (optional) | Upgraded biomethane bought from regional digesters, never fossil pipeline gas | TRL 9 | Only if the site cannot make enough biogas itself |
 | 6. Micro-hydro | Run-of-river turbines, no dams | TRL 9 | Only where the site has a year-round stream with head |
 | 7. Geothermal heat | Ground-source heat pumps everywhere; direct-use hot water where the rock allows | TRL 9 (heat pumps, direct use) | Deep geothermal power is site-dependent and stays a Phase 2 option; confirmed only after test wells |
 
@@ -150,7 +144,7 @@ Hydro and geothermal are treated as bonuses, not promises: they depend on the la
 **Primary Functions** (Terrestrial Model):
 - **Ceremonial signaling**: Programmable LED lighting visible for miles
 - **Acoustic resonance**: Generates harmonic tones (Schumann, Solfeggio frequencies)
-- **Wayfinding beacon**: Visual and energetic landmark
+- **Wayfinding landmark**: Visible by day; at night only shielded, downward lighting (see [Light on the Land](/docs/design/light-on-the-land))
 - **Research platform**: Consciousness field studies, instrumentation
 
 **NOT Primary Function**: Baseload power generation (that's the microgrid's job)

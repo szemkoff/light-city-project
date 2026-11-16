@@ -45,6 +45,19 @@ Light City is a planned, regenerative community. It starts as a 200-person **pil
 
 TRL means [Technology Readiness Level](https://en.wikipedia.org/wiki/Technology_readiness_level), from 1 (idea) to 9 (proven in operation).
 
+## Nature
+
+| Commitment | Target |
+|---|---|
+| **Land** | At most 15% of the site developed; at least 50% kept as permanent habitat |
+| **Biodiversity** | At least 20% net gain over a pre-construction baseline, monitored for 30 years |
+| **Energy** | 105% or more from on-site renewables; no fossil fuel; renewable-fuel backup only in long outages |
+| **Water** | No net groundwater drawdown; water reused at least once |
+| **Night and glass** | DarkSky-compliant outdoor lighting; bird-safe glass on every dome |
+| **Footprint** | Residents at or below half the host country's average by year 3 |
+
+Zero impact is not possible; these are the measurable targets. Evidence, limits and all ten commitments: [Light on the Land](/docs/design/light-on-the-land).
+
 ## Money
 
 ### Capital cost (CAPEX)

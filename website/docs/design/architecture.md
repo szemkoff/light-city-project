@@ -25,6 +25,8 @@ The original visionary images of Light City (archetype art, not designs):
 ![Light City Vision 1](/img/inspiration/light-city-vision-1.jpg)
 ![Light City Vision 2](/img/inspiration/light-city-vision-2.jpg)
 
+These four images are shown only here; other pages link to this section.
+
 Delphin, the city described in the channeled source material. Visionary archetype art, not a real place or a design.
 
 ![Delphin Crystal City 1](/img/inspiration/delphin-aerial-view-1.png)
@@ -201,7 +203,7 @@ The Delphin archetype from the channeled source material suggests these principl
 
 **Function - Terrestrial Model**:
 - **Symbolic & Ceremonial**: Axis mundi, focal point for consciousness work
-- **Lighting & Signaling**: Programmable light shows, wayfinding beacon
+- **Lighting**: Daylight landmark; at night only shielded, warm, downward lighting with no uplighting or light shows, to protect wildlife and the stars ([Light on the Land](/docs/design/light-on-the-land))
 - **Acoustic Resonance**: Generates harmonic tones, amplifies ceremony sound
 - **Consciousness Hub**: Anchors meditation and collective intention (subtle energy)
 - **Solar Generation**: Contributes to renewable micro-grid (physical energy)
@@ -410,7 +412,7 @@ The Delphin archetype from the channeled source material suggests these principl
 - Integrated throughout city
 - Sacred geometry in planting
 - Permaculture principles
-- Native and crystalline plants
+- Native and drought-adapted plants
 
 ## Energy Systems
 
@@ -632,7 +634,7 @@ Light City builds upon these principles with modern understanding and advanced t
 
 **Central Plaza**: 1-1.5 hectares (2.5-3.7 acres)
 - Gathering capacity: 500-1,000 people
-- Features: Central fountain, fire pit, amphitheater seating
+- Features: Central fountain, small outdoor fire circle for festivals, amphitheater seating
 - Materials: Stone, permeable paving, native plantings
 
 **Temple**: 1,200-2,000 m² (13,000-21,500 sq ft)

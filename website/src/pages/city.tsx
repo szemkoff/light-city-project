@@ -45,7 +45,7 @@ export default function City(): JSX.Element {
           title="The spire"
           tag="TRL 4–5 at full scale"
           specs={[['Height', '60–120 m (Phase 1)'], ['Structure', 'Steel and CLT lattice'], ['Solar', '200–500 kWp integrated'], ['Role', 'Landmark, observation, energy']]}>
-          <p>The spire is the city's orientation point: visible from every path, lit at night, and carrying building-integrated solar. Its first purpose is practical: a landmark, an observation deck, a communications mast and a solar collector.</p>
+          <p>The spire is the city's orientation point: visible from every path by day, softly lit and shielded at night, and carrying building-integrated solar. Its first purpose is practical: a landmark, an observation deck, a communications mast and a solar collector.</p>
           <p>Tall timber-hybrid towers exist today, but a lattice spire of this height with integrated solar has not been built, so it will be engineered and reviewed in Stage 2. Phase 2 could extend it to 120–300 m.</p>
         </Feature>
         <Feature

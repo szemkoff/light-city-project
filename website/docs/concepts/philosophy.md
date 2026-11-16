@@ -6,9 +6,7 @@
 
 Light City is built upon a synthesis of ancient wisdom, spiritual understanding, and visionary thinking about humanity's potential. This philosophy section will expand over time as understanding deepens.
 
-![Light City Vision](/img/inspiration/light-city-vision-2.jpg)
-
-*Visionary archetype art from the original vision: an inspiration, not a design.*
+The visionary images behind this philosophy are in [Architecture → Vision references](/docs/design/architecture#vision-references).
 
 ## Core Philosophical Questions
 
@@ -89,9 +87,7 @@ Spiritual principles must be integrated with practical action. Mysticism and pra
 - Mathematical harmony in nature
 - Form as expression of principle
 
-![Sacred Geometry - Flower of Life](/img/diagrams/flower-of-life.svg)
-
-*The Flower of Life: a pattern found in many cultures. Light City uses it as a planning grid and decorative motif.*
+The Flower of Life, a pattern found in many cultures, is used as a planning grid and decorative motif; see the diagram in [Sacred Geometry](/docs/concepts/sacred-geometry).
 
 ## Ethical Framework
 

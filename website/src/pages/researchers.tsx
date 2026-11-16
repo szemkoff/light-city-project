@@ -9,12 +9,12 @@ export default function Researchers(): JSX.Element {
       eyebrow="For researchers"
       heading={<>A living laboratory, <em>held to open-science standards.</em></>}
       sub="Engineering deliverables and consciousness hypotheses stay on separate tracks, each with an honest readiness level."
-      image="research">
+      image="tech-aquaponics-system">
       <Section eyebrow="Research programs" title="Four programs, one standard of evidence.">
         <Cards items={[
-          {kicker: 'TRL 1–3', title: 'Consciousness field studies', img: 'vision-2', text: 'HRV, EEG and heart-brain coherence across groups, with pre-registered protocols.'},
-          {kicker: 'TRL 2–4', title: 'Acoustic resonance', img: 'spire', text: 'RT60, SPL and listener studies inside the spire and domes.'},
-          {kicker: 'TRL 5–7', title: 'Biophilic health', img: 'dome-interior', text: 'Stress markers, sleep quality and cognitive performance in biophilic spaces.'},
+          {kicker: 'TRL 1–3', title: 'Consciousness field studies', img: 'research', text: 'HRV, EEG and heart-brain coherence across groups, with pre-registered protocols.'},
+          {kicker: 'TRL 2–4', title: 'Acoustic resonance', img: 'city-temple', text: 'RT60, SPL and listener studies inside the spire and domes.'},
+          {kicker: 'TRL 5–7', title: 'Biophilic health', img: 'home-studio', text: 'Stress markers, sleep quality and cognitive performance in biophilic spaces.'},
           {kicker: 'TRL 7–9', title: 'Regenerative agriculture', img: 'tech-agroforestry', text: 'Soil carbon, biomass and lifecycle analysis across food systems.'},
         ]} />
       </Section>

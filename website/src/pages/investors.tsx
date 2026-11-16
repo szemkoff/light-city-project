@@ -9,7 +9,7 @@ export default function Investors(): JSX.Element {
       eyebrow="For investors"
       heading={<>Patient capital. <em>Measurable returns.</em></>}
       sub="Light City is structured for serious diligence: phased capital expenditure, documented assumptions, governance milestones and a clear line between proven infrastructure and exploratory research."
-      image="spire">
+      image="investors-site">
       <Section eyebrow="Phase 1 at a glance" title="The numbers behind the first 200 residents." lead="Mid-case figures from the financial model. Full assumptions and ranges are in the development stages documentation.">
         <div className="pg-facts">
           <div className="pg-fact"><b>$45M</b><span>Capital expenditure, Phase 1</span></div>
@@ -24,7 +24,7 @@ export default function Investors(): JSX.Element {
         <Cards items={[
           {title: 'Proven infrastructure', img: 'tech-bipv-solar-facade', text: 'Microgrid, mass timber and geodesic structures already stand elsewhere. 2–5 MWp of solar in Phase 1 is carried as engineering, not research.'},
           {title: 'Phased commitments', img: 'tech-clt-construction', text: 'Capital is staged with each development stage, so every tranche is tied to a documented milestone and decision point.'},
-          {title: 'Separated research track', img: 'research', text: 'Consciousness and experiential programs run on their own track with honest readiness levels, so they never carry the core business case.'},
+          {title: 'Separated research track', img: 'journey-awakening', text: 'Consciousness and experiential programs run on their own track with honest readiness levels, so they never carry the core business case.'},
         ]} />
       </Section>
 

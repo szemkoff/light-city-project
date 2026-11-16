@@ -153,7 +153,9 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 
 ### Key Deliverables
 - [ ] Complete architectural documentation (all building types)
-- [ ] Professional concept art and visualizations (10-20 renders)
+- [ ] Professional concept art and visualizations (10-20 renders) that pass the [reality check](/docs/design/visual-language#concept-photos-modern-organic)
+- [ ] Baseline ecological survey of the chosen site and a biodiversity net gain plan ([Light on the Land](/docs/design/light-on-the-land))
+- [ ] Materials palette for the chosen region, including local stone and embodied-carbon estimates
 - [ ] City layout and sacred geometry maps (CAD/GIS)
 - [ ] Cultural framework documentation
 - [ ] Energy system technical specifications
@@ -503,7 +505,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 - [ ] Sustainable operations model (break-even or profitable)
 - [ ] Continuous improvement processes (kaizen, retrospectives)
 - [ ] Regular updates and evolution (quarterly reviews)
-- [ ] Impact measurement and documentation (KPIs, case studies)
+- [ ] Impact measurement and documentation (KPIs, case studies), including the annual, independently reviewed nature and footprint report
 - [ ] Knowledge sharing and teaching (courses, tours, consulting)
 - [ ] Replication frameworks (playbooks, licensing, support)
 - [ ] Phase 2 expansion (1,500-3,000 residents)
