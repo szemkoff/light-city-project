@@ -206,7 +206,7 @@ const DOCS = [
   ['research/open-questions', 'Research', 'Open questions', 'What we don’t know yet — and how to test it.'],
   ['research/bibliography', 'Research', 'Bibliography', 'Sources, studies and further reading.'],
   ['project/development-stages', 'Project', 'Development stages', 'Six stages, timeline, costs and milestones.'],
-  ['project/site-locations', 'Project', 'Site locations', 'Four candidate regions, scored and mapped.'],
+  ['project/site-locations', 'Project', 'Site locations', 'Five regions in four countries, scored and mapped.'],
   ['project/governance', 'Project', 'Governance', 'Founder-led to community council, 80% consent.'],
   ['project/contribution-based-residency', 'Project', 'Contribution-based residency', 'Work-for-living tiers aligned with community needs.'],
   ['project/quick-start-guide', 'Project', 'Quick-start guide', 'Get oriented in fifteen minutes.'],
