@@ -18,6 +18,18 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 - **Readable.** If you cannot read a label on a phone, the diagram is not finished.
 - **Respectful.** Sacred symbols from living traditions are shown with their context and are not used as decoration only.
 
+## 3D reference model
+
+Every illustration of the city as a whole starts from one shared 3D model of the Phase 1 plan, so the radial design never drifts: the spire on a round plaza, five rings, 12 straight radial paths, four temple and learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land.
+
+![3D reference model of the Phase 1 plan: top view and aerial view of the five rings and 12 radial paths](/img/diagrams/model-reference.webp)
+
+*The 3D reference model, top and aerial views. [Open the interactive model](pathname:///model/index.html) to orbit it.*
+
+- **How to use it.** Render the closest named view (aerial, top, low aerial, radial path, homes ring, plaza or solar ring) with `scripts/render-model.cjs`, then give that render to the image tool as the layout reference, with the current photo as a style reference.
+- **What must match.** One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.
+- **Changing the plan.** Update `static/model/city.js` and the plan diagram together, then re-render the views and the affected images.
+
 ## Concept photos (Modern Organic)
 
 Use this style note at the end of every image prompt:
@@ -28,6 +40,7 @@ Use this style note at the end of every image prompt:
 - **People.** Diverse ages, ethnicities, body types and personal styles, doing ordinary things: cooking, working, building, resting.
 - **Clothing.** Varied and organic-looking, never a uniform look: natural fibres, many cuts (trousers, skirts, dresses, tunics, overalls, knitwear), earthy colors with some warmth. Avoid a crowd in jeans, and avoid costumes, robes or matching outfits.
 - **Technology.** Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.
+- **Radial plan.** Any image that shows more than a single building must agree with the [3D reference model](#3d-reference-model).
 - **Reality check.** Before an image goes in, ask: could this be photographed in a real eco-village next year? No open fire indoors, no glowing ground lights or rows of candles, no uplit domes, handrails at every drop, bird-safe patterned glass on large glazing, plants at a believable size, wild land around the buildings rather than lawns. Crystals are occasional, at most one point in a scene, and most images have none.
 - **Formats.** 16:9 for heroes, 4:3 for cards, 1:1 for tiles. Export as WebP or JPG at about 1,400–2,000 px wide.
 

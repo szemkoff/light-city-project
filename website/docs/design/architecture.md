@@ -115,7 +115,7 @@ Connection across dimensions:
 
 ![Light City Layout](/img/diagrams/city-layout.svg)
 
-This top-down plan shows five rings joined by 12 radial paths: the spire and plaza at the center, then temple and learning, studios and communosphere domes (three in Phase 1, more later), homes and gardens, and an outer energy and wild buffer. Everything sits within a 10-minute walk of the plaza.
+This top-down plan shows five rings joined by 12 radial paths: the spire and plaza at the center, then temple and learning, studios and communosphere domes (three in Phase 1, more later), homes and gardens, and an outer energy and wild buffer. Everything sits within a 10-minute walk of the plaza. The same plan is built as an [interactive 3D model](pathname:///model/index.html), which every city illustration follows.
 
 **Primary Structure**: Concentric circles radiating from center
 
