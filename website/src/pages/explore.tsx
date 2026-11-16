@@ -74,7 +74,7 @@ export default function Explore(): JSX.Element {
         ].map((c, i) => ({...c, to: ['/homes', '/city', '/technology', '/journey'][i]}))} />
       </Section>
 
-      <Section alt eyebrow="The library" title="Every topic, summarized." lead="The library is open and free. It is organized as one story in eight parts, from why to how to get involved.">
+      <Section alt eyebrow="The library" title="Every topic, summarized." lead="The library is open and free. It is organized as one story in nine parts, from why to how to get involved.">
         <Jump items={PARTS.map((p) => ({href: `#${p.id}`, label: p.part}))} />
         {PARTS.map((p) => (
           <div key={p.id} id={p.id} style={{scrollMarginTop: 110}}>
