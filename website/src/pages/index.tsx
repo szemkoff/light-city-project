@@ -53,7 +53,7 @@ export default function Home(): JSX.Element {
               <li><a href={u('docs/START-HERE')} className="nav-docs">Docs</a></li>
             </ul>
           </nav>
-          <a href="#join" className="btn btn-sm nav-cta">Join the founding circle</a>
+          <a href={u('contact')} className="btn btn-sm nav-cta">Join the founding circle</a>
           <button className="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
         </div>
       </header>

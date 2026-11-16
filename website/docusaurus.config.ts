@@ -108,7 +108,6 @@ const config: Config = {
         {to: '/investors', label: 'Investors', position: 'right'},
         {to: '/builders', label: 'Builders', position: 'right'},
         {to: '/researchers', label: 'Researchers', position: 'right'},
-        {to: '/contact', label: 'Contact', position: 'right'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -117,11 +116,10 @@ const config: Config = {
           className: 'nav-docs',
         },
         {
-          href: 'pathname:///light-city-project/#join',
+          to: '/contact',
           label: 'Join the founding circle',
           position: 'right',
           className: 'nav-cta',
-          target: '_self',
         },
       ],
     },

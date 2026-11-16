@@ -15,7 +15,6 @@ const NAV = [
   {to: '/investors', label: 'Investors'},
   {to: '/builders', label: 'Builders'},
   {to: '/researchers', label: 'Researchers'},
-  {to: '/contact', label: 'Contact'},
 ];
 
 
@@ -63,7 +62,7 @@ export default function Site({title, description, eyebrow, heading, sub, image, 
                 <li><Link to="/docs/START-HERE" className="nav-docs">Docs</Link></li>
               </ul>
             </nav>
-            <a href={base + '#join'} className="btn btn-sm nav-cta">Join the founding circle</a>
+            <Link to="/contact" className="btn btn-sm nav-cta">Join the founding circle</Link>
             <button className="menu" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="navLinks" onClick={() => setOpen((o) => !o)}>
               <span></span><span></span>
             </button>
