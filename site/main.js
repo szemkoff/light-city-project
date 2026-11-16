@@ -36,5 +36,13 @@ document.querySelectorAll('.scen-switch button').forEach(b=>b.onclick=()=>{docum
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal,.bar').forEach(el=>io.observe(el));
 document.querySelectorAll('[data-count]').forEach(el=>{const n=+el.dataset.count,t0=performance.now();(function f(t){const k=Math.min((t-t0)/1600,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)});
-// form
-document.getElementById('joinForm').onsubmit=async e=>{e.preventDefault();const f=e.target,m=document.getElementById('formMsg');m.textContent='Thank you — you\u2019re on the list. We\u2019ll be in touch as Stage 2 opens.';f.reset()};
+// form → Web3Forms. Key is injected at deploy time (replace __WEB3FORMS_ACCESS_KEY__ from the WEB3FORMS_ACCESS_KEY secret).
+document.getElementById('joinForm').onsubmit=async e=>{e.preventDefault();const f=e.target,m=document.getElementById('formMsg'),btn=f.querySelector('button'),key=(document.querySelector('meta[name="web3forms-key"]')||{}).content||'';
+ m.classList.remove('err');
+ if(!key||key.startsWith('__')){m.classList.add('err');m.textContent='Signups open soon. Until then, write to hello@lightcityproject.org.';return}
+ const d=new FormData(f);d.append('access_key',key);btn.disabled=true;m.textContent='Sending…';
+ try{const r=await fetch(f.action,{method:'POST',headers:{Accept:'application/json'},body:d});const j=await r.json().catch(()=>({}));
+  if(r.ok&&j.success){m.textContent='Thank you \u2014 you\u2019re on the list. We\u2019ll be in touch as Stage 2 opens.';f.reset()}
+  else throw new Error(j.message||r.status)}
+ catch(_){m.classList.add('err');m.textContent='Something went wrong. Please try again or write to hello@lightcityproject.org.'}
+ finally{btn.disabled=false}};

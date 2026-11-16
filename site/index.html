@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="web3forms-key" content="__WEB3FORMS_ACCESS_KEY__"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Light City — A Buildable Blueprint for Regenerative Civilization</title>
 <meta name="description" content="Light City: sacred architecture, regenerative living and consciousness research, built with proven CLT, BIPV and geodesic technology.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -186,9 +186,12 @@
   <div class="wrap narrow">
     <h2 class="reveal">Help light the first dome.</h2>
     <p class="muted reveal">Join the founding circle for early updates, resident applications and investor materials.</p>
-    <form class="form reveal" id="joinForm">
-      <input type="email" required placeholder="you@example.com" aria-label="Email">
-      <select aria-label="I'm interested as"><option>Future resident</option><option>Investor</option><option>Builder</option><option>Researcher</option></select>
+    <form class="form reveal" id="joinForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="subject" value="Light City Project - Founding circle signup">
+      <input type="hidden" name="from_name" value="Light City website">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden>
+      <input type="email" name="email" required placeholder="you@example.com" aria-label="Email">
+      <select name="interest" aria-label="I'm interested as"><option>Future resident</option><option>Investor</option><option>Builder</option><option>Researcher</option></select>
       <button class="btn" type="submit">Join</button>
     </form>
     <p class="form-msg" id="formMsg" role="status"></p>
