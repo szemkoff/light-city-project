@@ -56,12 +56,17 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '6 · Roadmap',
+      label: '6 · Economy',
+      items: ['project/economy-and-migration'],
+    },
+    {
+      type: 'category',
+      label: '7 · Roadmap',
       items: ['project/development-stages', 'project/site-locations'],
     },
     {
       type: 'category',
-      label: '7 · Research',
+      label: '8 · Research',
       items: [
         'research/open-questions',
         'research/bibliography',
@@ -69,7 +74,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '8 · Where the Idea Came From',
+      label: '9 · Where the Idea Came From',
       items: ['concepts/the-archetype'],
     },
     {

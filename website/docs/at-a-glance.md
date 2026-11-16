@@ -82,6 +82,10 @@ The full construction budget breakdown is in [Architecture → Budget Framework]
 
 Phase 1 is planned as about 110 homes for 200 residents. Fees are per home plus a member fee for each extra person, so break-even is being rebuilt around households ([Household Model](/docs/project/development-stages#household-model-november-2026-draft)). Revenue mix: resident fees about 60%, retreats 20%, events and agritourism 10%, licensing and consulting 10%. Target impact return: **8–12% IRR** over years 5–10. See [Development Stages → Financial Model](/docs/project/development-stages).
 
+## Economy
+
+The inside economy moves in four phases from dollar fees to **Light hours**, a time credit where one hour of work earns one credit. A dial sets how much of each fee can be paid in Light hours: 0% in the 2027–2028 pilot, 20–30% at move-in, 50–90% once basics are earned by doing your share. Phase 3, no money inside the community, is an option residents can vote for and review every year. Loan payments, taxes and outside costs always stay in dollars. See [Economy and Migration](/docs/project/economy-and-migration).
+
 ## Homes (monthly, all-inclusive)
 
 | Home | Size | Monthly |

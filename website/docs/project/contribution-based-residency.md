@@ -10,6 +10,10 @@
 
 ## Overview
 
+:::info Light hours
+From move-in, contribution hours are counted in **Light hours** (one hour of work, one Light hour). These tiers become the first version of the weekly share in the four-phase plan. See [Economy and Migration](/docs/project/economy-and-migration).
+:::
+
 Light City offers a **Contribution-Based Residency (CBR)** program where community members can live rent-free by contributing their time, skills, and energy to the community. This model recognizes that **value comes in many forms** - not just money - and creates pathways for people who are rich in time, skills, or passion but may not have financial resources.
 
 :::tip Philosophy
@@ -492,6 +496,8 @@ CBR is a **financial asset**, not a liability:
 ---
 
 ## Related Documents
+
+- [Economy and Migration](/docs/project/economy-and-migration): Light hours and the four-phase dial
 
 - [Governance Framework](./governance.md) - Decision-making and community structure
 - [Development Stages](./development-stages.md) - Financial model and timeline
