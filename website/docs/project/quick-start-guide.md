@@ -8,12 +8,12 @@ Welcome to the Light City project! This guide will help you get started quickly.
 
 ## What is This Project?
 
-Light City is a multi-dimensional vision of a higher-consciousness civilization. This project documents, develops, and works toward manifesting that vision through:
+Light City is a plan for a regenerative community: a 200-person hamlet of timber domes around a solar spire, growing over time into a village and a town. It began as a visionary image (see [The Archetype](/docs/concepts/the-archetype)). This project documents and develops it through:
 
-- Spiritual and philosophical foundations
+- Values and philosophical foundations
 - Architectural and design concepts
 - Digital presence and community
-- Physical manifestation (long-term)
+- A physical build (long-term)
 
 ## First Steps
 
@@ -228,7 +228,7 @@ Pick 2-3 to get started:
 - Sacred architecture examples
 - Intentional community models
 - Visionary art and concepts
-- Spiritual teachings on ascension
+- Contemplative and spiritual traditions, credited to their sources
 - Sustainable design practices
 
 ### Tools Setup

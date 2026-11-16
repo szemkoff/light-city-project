@@ -27,7 +27,7 @@ The original visionary images of Light City (archetype art, not designs):
 
 These four images are shown only here; other pages link to this section.
 
-Delphin, the city described in the channeled source material. Visionary archetype art, not a real place or a design.
+Delphin, the city the visionary source describes on another world (full account on [The Archetype](/docs/concepts/the-archetype)). Visionary archetype art, not a real place or a design.
 
 ![Delphin Crystal City 1](/img/inspiration/delphin-aerial-view-1.png)
 ![Delphin Crystal City 2](/img/inspiration/delphin-aerial-view-2.png)
@@ -132,7 +132,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Food**: 20-50 ha regenerative agriculture
 - **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m, eight pavilions, all twelve ring domes and 60 ring homes, then outside the green belt crescents of two-to-three storey timber terraces with green roofs, six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan.
 
-**Note on Delphin Scale**: The 40,000-ft spire and 60,000-120,000 population represent the off-world reference model. Light City's terrestrial implementation follows the phased approach above.
+**Note on the source's scale**: the source describes a 40,000 ft spire and 60,000–120,000 people ([The Archetype](/docs/concepts/the-archetype)). That is inspiration only; the Earth build follows the phases above.
 
 ### Circular Form
 
@@ -181,15 +181,15 @@ graph TB
 
 ---
 
-### Delphin-Inspired Model
+### From the Archetype to the Plan
 
-The Delphin archetype from the channeled source material suggests these principles, which we translate into buildable forms:
+The source describes a city with these features ([The Archetype](/docs/concepts/the-archetype)). Each is translated into something buildable:
 
-- **Central Crystal Spire**: Energy and consciousness hub
-- **Radial Urban Area**: Dense development in middle rings
-- **Communospheres**: Large spherical living structures at perimeter
-- **Natural Surroundings**: Integration with forests and landscape
-- **Resonance Field**: Maintained throughout entire city structure
+- **Central crystal spire** → a timber and steel lattice spire with solar panels and an observation deck
+- **Radial urban area** → denser homes and studios in the middle rings
+- **Communospheres** → shared timber domes on ring 3
+- **Natural surroundings** → woodland, wild buffer and food belts around the city
+- **Resonance field** → acoustics, daylight and gardens designed for calm; any wider effect is a research question
 
 *See [Communospheres](/docs/concepts/communospheres) for detailed explanation*
 
@@ -199,13 +199,9 @@ The Delphin archetype from the channeled source material suggests these principl
 
 *The Phase 1 Light Spire: a 60–120 m steel and timber lattice with a 200–500 kWp solar crown, an observation level and a gathering pavilion. Mjøstårnet (85.4 m) shows that tall timber is already built.*
 
-#### Vision source (off-world reference)
+#### In the source (visionary reference)
 
-**Delphin Spire**: 40,000 feet (~12 km / 7.6 miles)
-- Described in the channeled source material (not a verified place)
-- Provides total energy for entire crystal city
-- Demonstrates what's possible with advanced consciousness-matter technology
-- Serves as aspirational model and proportional guide
+The source describes a 40,000 ft (about 12 km) crystal spire that powers the whole city. It is not a verified place or a buildable design; we use it only as a proportional guide ([The Archetype](/docs/concepts/the-archetype)).
 
 #### Terrestrial prototype (Earth implementation)
 
@@ -351,15 +347,11 @@ The Delphin archetype from the channeled source material suggests these principl
 
 ### 4. Living Spaces - Communospheres
 
-**Purpose**: Conscious community living environments that maintain resonance
+**Purpose**: Shared community living under one roof, with private homes and common spaces
 
-#### Vision source (off-world reference)
+#### In the source (visionary reference)
 
-**Delphin Communospheres**: 600-1,200 ft diameter mega-spheres
-- Each houses 10,000 people
-- Complete self-contained cities within spheres
-- Demonstrates far-future pavilion scale
-- Serves as aspirational model
+The source describes mega-spheres 600–1,200 ft across for 10,000 people each, used here only as inspiration ([The Archetype](/docs/concepts/the-archetype)).
 
 #### Terrestrial prototype (buildable kit-of-parts)
 
@@ -394,7 +386,7 @@ The Delphin archetype from the channeled source material suggests these principl
 
 **Living Experience**:
 - Balance of privacy (private units) and community (shared meals 2-3x/week)
-- Unity consciousness through regular ceremonies and councils
+- Connection through shared meals, councils and optional ceremonies
 - Natural alignment through biophilic design and acoustic environment
 - Knowledge sharing through workshops, skill exchanges, and study groups
 
@@ -581,7 +573,7 @@ Light City architecture is:
 
 ## Architectural Inspirations
 
-Light City draws wisdom from existing sacred architecture on Earth. These structures demonstrate how geometric principles, consciousness-elevating design, and spiritual intention can be manifest in stone and space:
+Light City draws wisdom from existing sacred architecture on Earth. These structures show how geometry, contemplative design and spiritual intention can be expressed in stone and space:
 
 ### Borobudur Temple - Indonesia
 
@@ -620,9 +612,9 @@ Both Borobudur and Angkor Wat demonstrate that:
 1. **Large-scale spiritual spaces can be built** with ancient techniques
 2. **Sacred geometry works** in creating consciousness-elevating environments
 3. **Symbolic and practical can integrate** seamlessly
-4. **Community effort can manifest visions** across generations
+4. **Community effort can realize a vision** across generations
 
-Light City builds upon these principles with modern understanding and advanced technology to create spaces even more aligned with consciousness evolution.
+Light City builds on these principles with modern materials and engineering, and with respect for the traditions that created them.
 
 ---
 

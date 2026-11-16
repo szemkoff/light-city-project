@@ -1,3 +1,4 @@
+import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import React, {useEffect, useState} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -91,10 +92,10 @@ export default function Site({title, description, eyebrow, heading, sub, image, 
           <div className="wrap foot-grid">
             <div>
               <Link to="/" className="brand"><Mark s={22} /><span>Light City</span></Link>
-              <p>A regenerative community project combining sacred architecture, proven technology and unity consciousness. Built in the open.</p>
+              <p>A regenerative community project combining sacred architecture, proven technology and room for inner life. Built in the open.</p>
             </div>
             <div><h4>Explore</h4><Link to="/explore">All topics</Link><Link to="/homes">Homes</Link><Link to="/city">The city</Link><Link to="/technology">Technology</Link><Link to="/locations">Locations</Link><Link to="/journey">The transition</Link></div>
-            <div><h4>Get involved</h4><Link to="/residents">Residents</Link><Link to="/investors">Investors</Link><Link to="/builders">Builders</Link><Link to="/researchers">Researchers</Link><a href={base + '#join'}>Founding circle</a></div>
+            <div><h4>Get involved</h4><Link to="/residents">Residents</Link><Link to="/trust">Living here, honestly</Link><Link to="/investors">Investors</Link><Link to="/builders">Builders</Link><Link to="/researchers">Researchers</Link><a href={base + '#join'}>Founding circle</a></div>
             <div><h4>Documentation</h4><Link to="/docs/START-HERE">Start here</Link><Link to="/docs/project/development-stages">Development stages</Link><Link to="/docs/technical/technology-catalog">Technology catalog</Link><Link to="/blog">Updates</Link><a href="https://github.com/szemkoff/light-city-project" target="_blank" rel="noopener noreferrer">GitHub</a></div>
             <div><h4>Project</h4><Link to="/about">Vision &amp; philosophy</Link><Link to="/resources">Resources</Link><Link to="/contact">Contact form</Link><Link to="/conduct">Code of conduct</Link><Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link></div>
           </div>
@@ -110,6 +111,8 @@ export default function Site({title, description, eyebrow, heading, sub, image, 
 export function Section({eyebrow, title, lead, night, alt, children, id}: {
   eyebrow?: string; title?: React.ReactNode; lead?: React.ReactNode; night?: boolean; alt?: boolean; id?: string; children?: React.ReactNode;
 }): JSX.Element {
+  const brokenLinks = useBrokenLinks();
+  if (id) brokenLinks.collectAnchor(id);
   return (
     <section id={id} className={'pg-sec' + (night ? ' night' : '') + (alt ? ' alt' : '')}>
       <div className="wrap">

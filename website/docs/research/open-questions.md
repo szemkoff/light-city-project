@@ -55,7 +55,7 @@ Pick a question, check the [bibliography](/docs/research/bibliography) for start
 
 ## D. Frontier questions (study openly, never depend on)
 
-These come from the visionary and channeled sources ([Philosophy](/docs/concepts/philosophy)). We restate them as testable questions.
+These come from the project's visionary source ([The Archetype](/docs/concepts/the-archetype)). We restate them as testable questions.
 
 | # | Original idea | Testable question | Horizon |
 |---|---|---|---|

@@ -173,7 +173,7 @@
 .lc-page .pg-topic ul{margin:var(--space-4) 0 var(--space-5);padding-left:1.1em;font-size:var(--text-sm);color:var(--ink)}
 .lc-page .pg-topic li{margin-top:var(--space-1)}
 .lc-page .pg-topic-go{margin-top:auto;font-size:var(--text-sm);font-weight:600;color:var(--gold)}
-.lc-page .pg-table{width:100%;border-collapse:collapse;font-size:var(--text-sm);background:var(--card);border-radius:var(--r-md);overflow:hidden}
+.lc-page .pg-table{display:table;width:100%;border-collapse:collapse;font-size:var(--text-sm);background:var(--card);border-radius:var(--r-md);overflow:hidden}
 .lc-page .pg-table th,.lc-page .pg-table td{padding:var(--space-3) var(--space-4);border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .lc-page .pg-table thead th{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--pearl-2)}
 .lc-page .pg-table tbody th{font-weight:600}

@@ -119,7 +119,7 @@ How we sort technologies into **Proven, Scaling, Emerging and Frontier** is expl
 
 ## Language we use consistently
 
-- **Archetype** describes the visionary, channeled image of Light City, at planetary scale. **Earth build** is what we will actually construct. Documents label which one they mean.
+- **Archetype** describes the image of Light City in the visionary source, at planetary scale ([The Archetype](/docs/concepts/the-archetype)). **Earth build** is what we will actually construct. Documents label which one they mean.
 - **Communosphere** is a dome neighborhood. **Spire** is the central light tower. **Hamlet → Village → Town** are Phases 1–3.
 - **Stages (S1–S6)** are steps in the project process. **Phases (1–3)** are physical growth of the city. Stage 5 builds Phase 1.
 

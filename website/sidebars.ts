@@ -69,6 +69,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '8 · Where the Idea Came From',
+      items: ['concepts/the-archetype'],
+    },
+    {
+      type: 'category',
       label: 'Contribute',
       items: [
         'project/contributing',

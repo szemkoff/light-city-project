@@ -56,7 +56,7 @@ Light City's governance evolves through development stages, transitioning from f
 
 **Structure** (Post-Transition):
 - **Community Council**: Elected representatives (1 per 50 residents)
-- **Founder**: Vision Keeper (advisory role, veto on core principles only)
+- **Founder**: Founding adviser (advisory role, veto on core principles only)
 - **Executive Director**: Day-to-day operations (hired by council)
 - **Committees**: Finance, Facilities, Programs, Conflict Resolution
 
@@ -84,7 +84,7 @@ Light City's governance evolves through development stages, transitioning from f
 ### Core Principles (Founder Veto Rights)
 
 **Immutable Principles** (require founder consent to change):
-1. Unity consciousness and higher ethics as foundational values
+1. Unity, compassion and higher ethics as shared values (a shared aspiration, never a required belief or practice)
 2. Sacred geometry and biophilic design in all structures
 3. Commitment to regenerative practices (zero waste, renewable energy)
 4. Consent-based participation (no coercion in consciousness practices)

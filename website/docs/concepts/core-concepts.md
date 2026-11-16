@@ -9,13 +9,13 @@ sidebar_label: Core Concepts
 This document outlines the foundational concepts and principles of the Light City project.
 
 :::info Scope & Framing
-This page blends visionary language with practical design cues. Spiritual descriptions are presented as the project's working lens. **All physical infrastructure on Earth follows standard engineering, permitting, and safety practices.** For implementation details, see [Architecture](/docs/design/architecture), [Energy Systems](/docs/concepts/energy-systems), and [Development Stages](/docs/project/development-stages).
+This page translates the project's visionary source into plain design intent. Where it refers to the source, it says so; the full account is on [The Archetype](/docs/concepts/the-archetype). **All physical infrastructure on Earth follows standard engineering, permitting, and safety practices.** For implementation details, see [Architecture](/docs/design/architecture), [Energy Systems](/docs/concepts/energy-systems), and [Development Stages](/docs/project/development-stages).
 :::
 
 ## Vision
 
 :::tip How to Read This Page
-This is a **conceptual primer**. Take metaphysical language as **design intent**; take implementation details from the **Architecture**, **Development Stages**, and **Energy Systems** pages. Where claims could be controversial, we tag them as **hypotheses** and defer to peer-reviewed evidence.
+This is a **conceptual primer**. Read anything attributed to "the source" as **design intent**, not a claim of fact; take implementation details from the **Architecture**, **Development Stages**, and **Energy Systems** pages. Where claims could be controversial, we tag them as **hypotheses** and defer to peer-reviewed evidence.
 :::
 
 :::note Light City in one breath
@@ -28,270 +28,183 @@ The original visions that sparked this project are shown once, in [Architecture 
 
 ## What is Light City?
 
-Light City is a multidimensional vision that exists simultaneously across several planes of reality:
-
-### Light City Dimensions
+Light City is three things at once. Each is useful on its own, and none asks you to adopt a belief.
 
 ```mermaid
 graph TB
-    LC["Light City<br/>Multidimensional vision"]
-    
-    LC -->|Dimension 1| EB["Etheric Blueprint<br/>Higher-dimensional"]
-    LC -->|Dimension 2| CV["Collective Vision<br/>Future timeline"]
-    LC -->|Dimension 3| PM["Personal Mission<br/>Individual calling"]
-    
-    EB -->|Characteristics| EBC1["White-Gold Crystal"]
-    EB -->|Characteristics| EBC2["Semi-Transparent"]
-    EB -->|Characteristics| EBC3["Harmonic Tone"]
-    EB -->|Characteristics| EBC4["Central Spire Hub"]
-    
-    CV -->|Principles| CVP1["Higher Ethics"]
-    CV -->|Principles| CVP2["Compassion"]
-    CV -->|Principles| CVP3["Unity Consciousness"]
-    CV -->|Manifests| CVM["Collective Alignment"]
-    
-    PM -->|Forms| PMF1["Physical Building"]
-    PM -->|Forms| PMF2["Energetic Holding"]
-    PM -->|Forms| PMF3["Bridge Roles"]
-    PM -->|Requires| PMR["Personal Transformation"]
-    
-    EB -.->|Informs| CV
-    CV -.->|Guides| PM
-    PM -.->|Anchors| EB
-    
-    style LC fill:#667eea,stroke:#fff,color:#fff,stroke-width:3px
-    style EB fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style CV fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style PM fill:#764ba2,stroke:#fff,color:#fff,stroke-width:2px
-    style CVM fill:#f093fb,stroke:#fff,color:#fff
-    style PMR fill:#f093fb,stroke:#fff,color:#fff
-    style EBC1 fill:#a0d8ff,stroke:#333
-    style EBC2 fill:#a0d8ff,stroke:#333
-    style EBC3 fill:#a0d8ff,stroke:#333
-    style EBC4 fill:#a0d8ff,stroke:#333
-    style CVP1 fill:#a0d8ff,stroke:#333
-    style CVP2 fill:#a0d8ff,stroke:#333
-    style CVP3 fill:#a0d8ff,stroke:#333
-    style PMF1 fill:#a0d8ff,stroke:#333
-    style PMF2 fill:#a0d8ff,stroke:#333
-    style PMF3 fill:#a0d8ff,stroke:#333
+    LC["Light City"]
+    LC --> SRC["The source<br/>A visionary image"]
+    LC --> ASP["A shared aspiration<br/>Values many people hold"]
+    LC --> INV["An invitation<br/>Roles anyone can take up"]
+    SRC --> SRC1["Circle, rings, central spire"]
+    SRC --> SRC2["Light, sound, sacred geometry"]
+    ASP --> ASP1["Ethics and care"]
+    ASP --> ASP2["Unity and regeneration"]
+    INV --> INV1["Build"]
+    INV --> INV2["Teach and host"]
+    INV --> INV3["Research"]
+    style LC fill:#1D1A15,stroke:#C9A24A,color:#FBF8F2,stroke-width:2px
+    style SRC fill:#F1EADB,stroke:#C9A24A,color:#1D1A15
+    style ASP fill:#F1EADB,stroke:#C9A24A,color:#1D1A15
+    style INV fill:#F1EADB,stroke:#C9A24A,color:#1D1A15
 ```
 
----
+### 1. The source: a visionary image
 
-### 1. The Etheric Blueprint
+The source describes Light City as an "etheric blueprint", a pattern sensed in meditation and vision: white-gold crystalline buildings, a soft harmonic tone, a circular plan with a central spire. We use that image as a **design brief**, not as a claim about reality. The circle, rings, radial paths, spire and the care for light and sound all carry into the Earth design. The full account, including the off-world city of Delphin, is on [The Archetype](/docs/concepts/the-archetype).
 
-We describe Light City as an **etheric template**—a pattern referenced in certain spiritual traditions and accessible through contemplative practice. In this lens, the city's forms (white-gold crystalline geometries, harmonic tone, central spire) orient our design metaphors and community rituals.
+### 2. A shared aspiration
 
-**Key Attributes:**
-- White-gold crystalline architecture
-- Semi-transparent, light-refracting structures
-- Emits a soft harmonic tone (like singing bowls layered)
-- Circular layout with central spire as communication hub
-- Connects to both cosmic and terrestrial energies
+Light City is also a picture of how people could live together:
 
-### 2. The Collective Vision
+- **Ethics**: decisions made for the common good, in the open.
+- **Compassion**: care and empathy as everyday practice.
+- **Unity**: a sense that people, land and other living things are connected.
 
-Light City represents a **future potential timeline** where human civilization operates from:
+It is not a utopia (literally "no place"). It is a choice a group of people can make, test and improve.
 
-- **Higher Ethics**: Decisions based on unity consciousness and collective good
-- **Compassion**: Empathy and care as foundational principles
-- **Unity**: Recognition of fundamental interconnection
+### 3. An invitation
 
-This is not a utopia (which means "no place") but a **collective choice point**—a potential reality that manifests when enough individuals align their vision and actions.
+Many people feel drawn to help build something like this. There are many ways in:
 
-### 3. The Personal Mission
+- **Building**: structures, energy, water, food and the institutions that run them.
+- **Teaching and hosting**: retreats, workshops, hospitality, care.
+- **Research**: measuring what works, including honest tests of the bolder ideas.
 
-Light City is also a **personal calling**—the sense that you are meant to help build something, either:
-
-- **Physically**: Creating actual structures, communities, or institutions
-- **Energetically**: Holding the vision, teaching principles, inspiring others
-- **Both**: Bridging the spiritual blueprint with material reality
-
-> *"To build it on Terra, begin building it in hearts. Structures follow spirit."*
+> *"To build it on Terra, begin building it in hearts. Structures follow spirit."*, from the source
 
 ## Core Principles
 
 ### 1. Spirit Before Structure
 
-**Principle**: The internal transformation must precede external manifestation.
+**Principle**: Values and community come before buildings.
 
-Before we can build Light City physically, we must:
-- Embody its principles personally
-- Cultivate higher consciousness
-- Practice unity, compassion, and ethical action
-- Build the "city" first as an internal reality
+Before we build, a founding group lives by the principles together: retreats, a residency pilot and shared decisions. If the community does not work at small scale, no amount of construction will fix it.
 
-**Application**: This project begins with documentation, vision, and principle—not with construction plans. The structure follows when the spirit is ready.
+**Application**: The project began with documentation, values and governance, not construction. Building starts only when the stage gates are passed (see [Development Stages](/docs/project/development-stages#stage-gate-checklist)). Spiritual practice is always optional.
 
-### 2. Gaia's Memory
+### 2. Listen to the Land
 
-**Principle**: The blueprint already exists in Earth's energetic field.
+**Principle**: The plan adapts to the place, not the other way round.
 
-Light City is not invented but **remembered and anchored**:
-- The pattern exists in what some call Gaia's memory or the Akashic field
-- Our work is to attune to this pattern
-- We download, interpret, and manifest what already exists in potential
-- Individual visions of Light City may vary but share core resonance
+The source speaks of a pattern held in "Gaia's memory". On Earth we translate that as listening: to the land's water, soil, climate and wildlife, and to the people and cultures already there.
 
-**Application**: Approach this work as *discovery* rather than pure creation. Listen, attune, and receive guidance.
+**Application**: Site selection starts with water, risk and community conversations before any purchase (see [Site Locations](/docs/project/site-locations)). The final plan follows the land's contours and aims to leave more habitat than it found.
 
 ### 3. Collective Co-Creation
 
-**Principle**: Light City manifests through collective alignment, not individual control.
+**Principle**: Light City grows through collaboration, not one person's control.
 
 This is not one person's vision imposed on others, but:
-- A shared dream that many hold
+- A shared aspiration that many hold
 - Co-created through collaboration and contribution
-- Emerges from collective resonance
-- Respects diverse expressions within unified principles
+- Governed with transparent, consent-based decisions
+- Open to diverse traditions and expressions within shared principles
 
-**Application**: This project welcomes contributions, variations, and different expressions of the core vision.
+**Application**: This project welcomes contributions, variations and dissent. Governance moves from founder-led to community-led as the project grows (see [Governance](/docs/project/governance)).
 
-### 4. Multi-Dimensional Integration
+### 4. Whole-Person Design
 
-**Principle**: Bridge the spiritual and material, etheric and physical.
+**Principle**: Design for body, mind, relationships and meaning, not only shelter.
 
-Light City exists across dimensions:
-- **Spiritual**: Consciousness, intention, vision
-- **Energetic**: Subtle fields, sacred geometry, vibrational patterns
-- **Mental**: Ideas, documentation, plans
-- **Emotional**: Inspiration, connection, community
-- **Physical**: Actual structures, gatherings, institutions
+A good place to live works on several levels:
+- **Physical**: healthy materials, daylight, clean air and water
+- **Sensory**: light, sound, geometry and nature that feel good to be in
+- **Mental**: learning, documentation and clear plans
+- **Social**: shared meals, councils and celebrations
+- **Meaning**: room for reflection and, for those who want it, spiritual practice
 
-**Application**: Work on all levels simultaneously. Don't wait for physical manifestation to begin the work.
+**Application**: Each level has its own pages: [Beyond the Box](/docs/design/organic-forms-and-materials), [Light on the Land](/docs/design/light-on-the-land), [Governance](/docs/project/governance) and [Open Questions](/docs/research/open-questions).
 
-### 5. Higher-Vibrational Living
+### 5. Regenerative Living
 
-**Principle**: Light City operates at a higher frequency than current paradigms.
+**Principle**: Leave people and land better off than we found them.
 
 This means:
-- Decisions from unity consciousness vs. separation
-- Abundance mindset vs. scarcity
-- Collaboration vs. competition
-- Service vs. exploitation
-- Regeneration vs. extraction
+- Decisions made for the common good rather than narrow interest
+- Sharing and sufficiency rather than scarcity thinking
+- Collaboration rather than competition
+- Service rather than exploitation
+- Regeneration rather than extraction
 
-**Application**: Practice these principles in current life as training for Light City citizenship.
+**Application**: Practice these principles now, in current life and in the founding circle. The ecological targets are published and measured (see [Energy Systems](/docs/concepts/energy-systems)).
 
 ## The Architecture of Light
 
-### Physical/Visual Description
+### What the source describes
 
-**Materials**: 
-- Crystalline structures (literal or metaphorical)
-- Semi-transparent to allow light passage
-- White-gold coloring
-- Refracts light into rainbow patterns
+**Materials**: crystalline, semi-transparent, white-gold structures that refract light into rainbows.
 
 **Layout**:
 - **Circular design** with concentric rings
-- **Central spire/pillar** acting as:
-  - Communication hub with cosmos
-  - Grounding point with Earth's grid
-  - Symbolic and functional axis mundi
-- **Radial pathways** connecting center to periphery
-- **Sacred geometry** underlying all design
+- **Central spire** described as a hub between Earth and cosmos and an axis mundi
+- **Radial pathways** connecting center to edge
+- **Sacred geometry** underlying the whole design
 
-**Energy**:
-- The entire city **hums** with harmonic resonance
-- Light and sound work together
-- Creates a field that elevates consciousness
-- Self-sustaining energetic system
+**Atmosphere**: the city "hums" with harmonic resonance, and light and sound work together.
 
-> **Terminology Clarification:** Here "energetic" denotes **experiential resonance** (light/sound/coherence), not electrical baseload. **Physical electrical power** is provided by a renewable **microgrid** (PV + batteries + backup); see [Energy Systems](/docs/concepts/energy-systems) for details.
+### What we build
 
-### Energetic/Metaphysical Description
+- **Materials**: timber, glass, clay and local stone, with warm, shielded light at night ([Beyond the Box](/docs/design/organic-forms-and-materials), [Light on the Land](/docs/design/light-on-the-land)).
+- **Layout**: the same circle, five rings and 12 radial paths around a 60–300 m lattice spire ([Architecture → Circular form](/docs/design/architecture#circular-form)).
+- **Atmosphere**: acoustics, daylight and gardens designed for calm. Any effect on wellbeing is a research question, measured with consent ([Open Questions](/docs/research/open-questions)).
 
-**Purpose**: 
-Acts as a **convergence point** between:
-- Awakened humanity and higher consciousness
-- Visiting benevolent extraterrestrial civilizations
-- Earth's crystalline grid and cosmic energies
-- The physical and etheric planes
+> **Terminology:** where older pages say "energetic", they mean **experiential** (light, sound, a sense of connection), not electrical. **Electrical power** comes from a renewable **microgrid** (solar, batteries, renewable backup); see [Energy Systems](/docs/concepts/energy-systems).
 
-**Function**:
-- Embassy for consciousness exchange
-- Healing and transformation center
-- Teaching and learning hub
-- Demonstration of higher-paradigm living
-- Anchor point for new Earth frequencies
+### Purpose
+
+The source describes the city as a meeting point between worlds (see [The Archetype](/docs/concepts/the-archetype#a-meeting-point-between-worlds)). On Earth its purpose is:
+
+- A place to live well with a small footprint
+- A healing, retreat and learning center
+- A demonstration that regenerative communities can be financed and governed in the open
+- A model others can copy or adapt to existing towns ([Urban Retrofit Guide](/docs/technical/urban-retrofit-guide))
 
 ## Key Questions
 
-### Is Light City Guaranteed?
+### Is Light City guaranteed?
 
-**No.** Light City exists as a **potential timeline**, not a certainty. 
+**No.** It is a plan with stage gates, not a certainty. It happens only if enough people commit their skills, time and money, and if each stage proves itself before the next.
 
-It manifests through collective choice:
-- If enough individuals hold the vision
-- If enough people embody the principles
-- If humanity collectively chooses unity over separation
+> **Your contribution** (skills, stewardship, research, resources) is what turns the vision into buildable plans. This is an invitation, not a guarantee.
 
-> **Your contribution** (skills, stewardship, research, resources) is what collapses potential into buildable plans. This is an invitation to agency, not a guarantee.
+### How do we build it?
 
-### How Do We Build It?
+**Three kinds of work, in parallel:**
 
-**Three levels of work:**
+1. **Community work**: forming a founding circle that can live and decide together.
+2. **Design and documentation**: plans, numbers and research, published openly.
+3. **Construction**: when the community, the site and the funding are ready.
 
-1. **Inner Work**: Personal transformation and consciousness evolution
-2. **Visionary Work**: Holding the vision, documenting, teaching, inspiring
-3. **Manifest Work**: Physical creation when spirit, timing, and resources align
+The common failure is rushing to construction before the first two are in place.
 
-The mistake is skipping levels 1 and 2 to rush to level 3.
+### Where does it exist?
 
-### Where Does It Exist?
+- **Today**: in this documentation, the 3D model and the founding circle.
+- **Next**: on a site still to be chosen (see [Site Locations](/docs/project/site-locations)).
+- **As an idea**: in any community that adopts the principles, including existing towns.
 
-**Multiple locations:**
+The source also describes the city as existing in a non-physical realm and on another world. That account is on [The Archetype](/docs/concepts/the-archetype); nothing in the plan depends on it.
 
-- **Etherically**: In Earth's higher-dimensional field, accessible through meditation and vision
-- **Other Worlds**: Already manifested on other planets (e.g., Delphin on planet Israel)
-- **Potentially**: In physical locations on Earth where conditions align (to be discovered)
-- **Metaphorically**: In communities and hearts that embody the principles
-- **Literally**: In future physical structures built on these principles
-
-**Validation**: The discovery of Delphin—an existing crystal city on another planet with a 40,000-foot crystal spire (off-world scale, not Earth-feasible) and communosphere living spaces—confirms that Light City is not fantasy but an archetypal pattern already implemented elsewhere. Light City's Earth implementation will use scaled, buildable versions (60-300m spire).
-
-### Who Is This For?
+### Who is it for?
 
 **Anyone who:**
-- Feels called to create a higher way of living
-- Senses connection to the vision
-- Wants to contribute to humanity's evolution
-- Seeks to bridge spiritual and material
-- Recognizes themselves as a builder of new Earth
+- Wants to live more lightly and more connected
+- Is drawn to the vision, or simply to the design and the community
+- Wants to help prove a better way of building and living
+- Values both practical skill and inner life
 
-## Relation to Other Concepts
+You do not need to share any spiritual belief. See [Living Here, Honestly](/trust).
 
-Light City resonates with and connects to:
+## Relation to Other Ideas
 
-- **New Earth**: The evolving higher-frequency Earth timeline
-- **5D Consciousness**: Unity consciousness, heart-centered living
-- **Ascension**: Personal and collective spiritual evolution
-- **Sacred Architecture**: Structures designed for consciousness elevation
-- **Intentional Communities**: Physical communities with shared values
-- **Cosmic Citizenship**: Humanity's connection with broader galactic family
-- **Extraterrestrial Models**: Cities like Delphin that demonstrate the archetype
+Light City draws on and connects to:
 
-## Delphin (Off-World Archetype, Inspirational Reference)
-
-Recent contact information reveals **Delphin**—a crystal city on planet Israel (another star system) that embodies the Light City archetype:
-
-- **40,000-foot crystal spire** (off-world scale, ~12 km tall) generating power and consciousness frequency
-- **Communospheres**: Large spherical living spaces (600-1,200 ft diameter) maintaining resonance
-- **Knowledge transfer system**: Learning by one transfers to all
-- **Unified consciousness field**: All inhabitants consciously connected
-- **Archetypal reference from off-world narrative sources**: We treat it as design inspiration, not empirical proof
-
-**Important**: Delphin represents a mythic/visionary implementation of the archetype. Light City's **Earth implementation** uses **scaled, buildable versions** within Earth engineering standards:
-- **Spire**: 60-300m (200-1,000 ft) instead of 40,000 ft
-- **Communospheres**: 30-60m (100-200 ft) diameter instead of 600-1,200 ft
-- **Same principles**, different scale appropriate for Earth physics and construction
-- **Proven technologies**: Solar PV, battery storage, CLT/steel structures, BIPV glazing (see [Technology Catalog](/docs/technical/technology-catalog))
-
-This archetype validates that Light City is accessing a coherent design pattern, not creating from imagination alone.
-
-*See [Communospheres](/docs/concepts/communospheres) for details*
+- **Sacred architecture**: temples and gathering places designed to lift the spirit
+- **Intentional communities and ecovillages**: Findhorn, Sieben Linden and others ([Bibliography](/docs/research/bibliography))
+- **Biophilic and regenerative design**: buildings that work with nature
+- **Contemplative traditions**: practices of attention, compassion and service, offered with credit and respect
+- **Spiritual movements** such as "New Earth" and "ascension", which some contributors draw on; see [The Archetype](/docs/concepts/the-archetype#new-earth-5d-and-ascension)
 
 ## Living Questions
 
@@ -299,7 +212,7 @@ These questions guide ongoing exploration:
 
 1. What specific principles should govern Light City?
 2. What would daily life look like in Light City?
-3. How do we prepare ourselves to be worthy inhabitants?
+3. How do we prepare ourselves to live well together?
 4. What technologies (ancient and modern) support the vision?
 5. How do we handle governance, resources, and decisions?
 6. What role does Light City play in humanity's larger story?
@@ -311,7 +224,7 @@ These questions guide ongoing exploration:
 
 To deepen your understanding:
 
-1. Read [Philosophy](/docs/concepts/philosophy) for deeper conceptual exploration
+1. Read [Philosophy](/docs/concepts/philosophy) for deeper conceptual exploration, and [The Archetype](/docs/concepts/the-archetype) for the visionary source
 2. Explore [Architecture](/docs/design/architecture) for physical/energetic design
 3. Review [Purpose and Mission](/docs/concepts/purpose-and-mission) for project goals
 4. Study [Sacred Geometry](/docs/concepts/sacred-geometry) for underlying patterns
@@ -339,8 +252,7 @@ To deepen your understanding:
 
 ---
 
-**Last reviewed**: November 2026  
-**Last Reviewed**: November 7, 2025  
+**Last reviewed**: November 16, 2026  
 **Owner**: Core Team  
 **Related**: [Architecture](/docs/design/architecture), [Energy Systems](/docs/concepts/energy-systems), [Development Stages](/docs/project/development-stages)
 
