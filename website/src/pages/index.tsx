@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Aerial view at dawn of a circular community: a glowing central spire ringed by gardens and twelve glass-and-timber domes beside a lake" width="1516" height="1037" />
+        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a slender lattice spire ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
@@ -149,7 +149,7 @@ export default function Home(): JSX.Element {
 
       {/* IMAGE BAND */}
       <section className="band">
-        <img src={img('dome-interior')} alt="Sunlight streams through the timber and glass lattice of a large dome over trees and a sunken gathering circle" width="1672" height="941" loading="lazy" />
+        <img src={img('dome-interior')} alt="Sunlight streams through a timber gridshell dome over trees, a reflecting pool, a quartz crystal and a sunken fire circle where people gather" width="1400" height="788" loading="lazy" />
         <div className="band-in wrap">
           <blockquote>Ambitious in form.<br />Conservative in engineering.</blockquote>
           <p>Every structure uses materials already standing elsewhere — from Norway's 85.4 m Mjøstårnet timber tower to commercial geodesic domes.</p>
@@ -186,7 +186,7 @@ export default function Home(): JSX.Element {
       <section className="living" id="living">
         <div className="wrap living-grid">
           <figure className="living-art">
-            <img src={img('living')} alt="Garden path between timber homes with green roofs and raised beds, a glowing dome in the misty background at golden hour" width="1400" height="788" loading="lazy" />
+            <img src={img('living')} alt="Residents in linen walk a garden path between curved timber homes with green roofs, a fire circle and a glass dome at golden hour" width="1400" height="933" loading="lazy" />
           </figure>
           <div>
             <p className="eyebrow">04 — Living</p>

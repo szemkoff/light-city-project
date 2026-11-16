@@ -30,11 +30,11 @@ export default function Homes(): JSX.Element {
       <Section alt id="types" eyebrow="Home types" title="Choose the scale of private life you need.">
         <Feature
           img="home-tiny"
-          alt="Four small timber tiny homes with porches and green roofs around a shared courtyard garden, a glass dome in the background"
+          alt="Four curved-timber tiny homes with green roofs and large windows around a courtyard garden with a sunken fire circle and a quartz crystal, a glass dome behind"
           kicker="Tiny home · 200–300 sf"
           title="Tiny home"
           tag="$500–700 / month">
-          <p>A self-contained timber cottage with a sleeping loft, a compact kitchen and bath, and a covered porch. Tiny homes are grouped in fours around a shared courtyard with raised beds and a fire circle, so neighbors share outdoor space naturally.</p>
+          <p>A self-contained curved-timber home with a sleeping niche, a compact kitchen and bath, big windows and a deck. Tiny homes are grouped in fours around a shared courtyard with planted beds, a sunken fire circle and a crystal centerpiece, so neighbors share outdoor space naturally.</p>
           <ul>
             <li><strong>Best for:</strong> singles, artists, newcomers and contribution-based residents</li>
             <li><strong>Where:</strong> garden clusters on the outer ring, a short walk from a communosphere</li>
@@ -44,7 +44,7 @@ export default function Homes(): JSX.Element {
         <Feature
           reverse
           img="home-studio"
-          alt="Compact timber studio apartment with a bed alcove, kitchenette and a window over a dome garden atrium"
+          alt="Modern studio with curved timber walls, a bed niche, a crystal pendant light and a window over the dome atrium"
           kicker="Studio · 400–500 sf"
           title="Studio"
           tag="$700–950 / month">
@@ -57,7 +57,7 @@ export default function Homes(): JSX.Element {
         </Feature>
         <Feature
           img="home-1br"
-          alt="Open timber living room and kitchen with a balcony over a sunlit dome garden"
+          alt="Modern one-bedroom with a stone counter, a fireplace and glass walls onto a dome garden"
           kicker="1-bedroom · 600–800 sf"
           title="One-bedroom"
           tag="$950–1,300 / month">
@@ -71,7 +71,7 @@ export default function Homes(): JSX.Element {
         <Feature
           reverse
           img="home-2br"
-          alt="Row of two-story timber family homes with green roofs, gardens and a car-free lane, a spire and dome in the distance"
+          alt="Curved timber family homes with green roofs along a car-free lane with e-bikes and a fire circle, a spire and dome beyond"
           kicker="2-bedroom · 900–1,200 sf"
           title="Two-bedroom family home"
           tag="$1,300–1,700 / month">

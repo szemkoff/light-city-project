@@ -49,7 +49,7 @@ export default function City(): JSX.Element {
         <Feature
           reverse
           img="city-dome-cutaway"
-          alt="Inside a timber and glass geodesic dome with terraced apartments around a garden atrium"
+          alt="Inside a timber gridshell dome: terraced apartments, a garden atrium, a quartz crystal sculpture and a sunken fire lounge"
           kicker="Neighborhood"
           title="Communosphere"
           tag="TRL 7–9"
@@ -59,18 +59,18 @@ export default function City(): JSX.Element {
         </Feature>
         <Feature
           img="city-temple"
-          alt="Circular timber and earth temple beside a stone plaza"
+          alt="Circular timber temple with an oculus lighting a central quartz crystal and a fire bowl"
           kicker="Inner ring"
           title="Temple & plaza"
           tag="TRL 9"
           specs={[['Use', 'Meditation, ceremony, gatherings'], ['Access', 'Open to all, no doctrine'], ['Build', 'Timber, rammed earth, stone'], ['Plaza', 'Markets, festivals, daily life']]}>
-          <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry. Participation in any practice is always voluntary.</p>
+          <p>A non-denominational temple for silence, meditation and community ceremonies, proportioned with sacred geometry, with a central crystal under the oculus and a fire bowl for evening gatherings. Participation in any practice is always voluntary.</p>
           <p>The plaza beside it is the city's living room: morning markets, performances, seasonal festivals and the everyday crossing point of the whole community.</p>
         </Feature>
         <Feature
           reverse
           img="city-studios"
-          alt="Shared maker studio with woodworking benches, ceramics and tools"
+          alt="Modern maker studio with a CNC router, 3D printer, woodworking benches and crystal cutting"
           kicker="Middle ring"
           title="Studios & workshops"
           tag="TRL 9"
@@ -80,7 +80,7 @@ export default function City(): JSX.Element {
         </Feature>
         <Feature
           img="city-greenhouse"
-          alt="Timber solar greenhouse next to a food forest with residents harvesting"
+          alt="Curved timber-and-glass greenhouse beside a food forest with residents harvesting"
           kicker="Outer ring"
           title="Greenhouses & food forest"
           tag="TRL 8–9"
@@ -91,7 +91,7 @@ export default function City(): JSX.Element {
         <Feature
           reverse
           img="city-microgrid"
-          alt="Solar panels and battery containers at the edge of the eco-village"
+          alt="Curved solar canopies over a sheep meadow with timber battery pavilions"
           kicker="Edge"
           title="Microgrid"
           tag="TRL 8–9"
