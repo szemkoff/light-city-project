@@ -82,22 +82,22 @@ Connection across dimensions:
 
 ### Phased Development & Scale
 
-**Phase 1 - Pilot Hamlet** (18-24 months):
-- **Population**: 150-300 residents
+**Phase 1 - Pilot Hamlet** (built in Stage 5, Dec 2028 – Nov 2031):
+- **Population**: 200 residents target (150-300 range)
 - **Footprint**: 20-30 acres (8-12 hectares)
 - **Structures**: Central plaza, 1 temple, 3 communosphere domes, spire tower (60-120 m)
 - **Energy**: 2-5 MWp solar PV + 8-20 MWh storage
 - **Food**: 1-2 ha agroforestry, supplemented by external sources
 
-**Phase 2 - Village** (36-48 months):
-- **Population**: 1,500-3,000 residents
+**Phase 2 - Village** (mid-2030s, after Phase 1 proves out):
+- **Population**: 1,500 target (1,500-3,000 range)
 - **Footprint**: 150-300 acres (60-120 hectares)
 - **Structures**: Expanded plaza, 3-5 temples, 6-12 domes, taller spire (120-300 m)
 - **Energy**: 5-15 MWp solar + 40-80 MWh storage
 - **Food**: 5-10 ha food forests, approaching self-sufficiency
 
 **Phase 3 - Town** (Long-term vision):
-- **Population**: 8,000-12,000 residents
+- **Population**: 8,000+ residents (8,000-12,000 range)
 - **Footprint**: 1-3 square miles (2.6-7.8 km²)
 - **Structures**: Full concentric ring layout with 12+ domes
 - **Energy**: 15-50 MWp distributed renewable + storage
@@ -180,7 +180,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 
 #### Terrestrial prototype (Earth implementation)
 
-**Phase 1 (18-24 months)**: 60-120 m light/acoustic tower
+**Phase 1 (built in Stage 5, Dec 2028 – Nov 2031)**: 60-120 m light/acoustic tower
 - Feasible height range: 200-400 feet
 - Primary functions: Lighting, acoustic resonance, ceremonial focus
 - PV canopy integrated at top (200-500 kWp)
@@ -188,7 +188,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - Wind chimes tuned to harmonic series
 - LED programmable light art visible for miles
 
-**Phase 2 (36-48 months)**: 120-300 m expanded tower
+**Phase 2 (mid-2030s, after Phase 1 proves out)**: 120-300 m expanded tower
 - Height range: 400-1,000 feet
 - Enhanced public access and ceremonial spaces
 - Expanded PV capacity (500 kWp - 2 MWp)
@@ -333,7 +333,7 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 
 #### Terrestrial prototype (buildable kit-of-parts)
 
-**Phase 1 (18-24 months)**: 3 geodesic domes
+**Phase 1 (built in Stage 5, Dec 2028 – Nov 2031)**: 3 geodesic domes
 - **Size**: 30-45 m diameter (100-150 ft)
 - **Height**: 3-5 levels, 15-25 m tall
 - **Capacity**: 80-120 residents per dome
@@ -341,10 +341,10 @@ Based on the existing crystal city of Delphin (on planet Israel), Light City can
 - **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
 - **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
 
-**Phase 2 (36-48 months)**: 6-12 domes expansion
+**Phase 2 (mid-2030s, after Phase 1 proves out)**: 6-12 domes expansion
 - **Size**: 45-60 m diameter (150-200 ft)
 - **Capacity**: 120-200 residents per dome
-- **Total**: 720-2,400 residents
+- **Total in domes**: 720-2,400 residents (the rest of the Village lives in ring housing)
 - **Clustered**: Outer ring arrangement, connected by covered walkways
 
 **Features - Terrestrial Model**:
@@ -607,7 +607,7 @@ Light City builds upon these principles with modern understanding and advanced t
 
 ### Technology Readiness Levels (TRL) by Subsystem
 
-| Subsystem | Phase 1 (18-24 mo) | Phase 2 (36-48 mo) | Current TRL | Notes |
+| Subsystem | Phase 1 (built 2028–2031) | Phase 2 (mid-2030s) | Current TRL | Notes |
 |-----------|-------------------|-------------------|-------------|-------|
 | **Spire (Terrestrial)** | 60-120 m light/acoustic tower; PV canopy | 120-300 m tower; public deck | 3-4 | Steel/CLT hybrid proven; LED art systems mature |
 | **Communospheres** | 3 domes (30-45 m) | 6-12 domes (45-60 m) | 4-5 | Geodesic CLT domes built globally; BIPV glazing TRL 6-7 |
@@ -648,7 +648,7 @@ Light City builds upon these principles with modern understanding and advanced t
 
 ### Budget Framework (Phase 1 Hamlet)
 
-**Preliminary Cost Ranges** (2025 USD, order-of-magnitude):
+**Preliminary Cost Ranges** (2026 USD, order-of-magnitude):
 
 | Category | Low | Medium | High | Notes |
 |----------|-----|--------|------|-------|
@@ -661,7 +661,7 @@ Light City builds upon these principles with modern understanding and advanced t
 | **PV + Storage** | $3M | $6M | $10M | 2-5 MWp solar; 8-20 MWh batteries |
 | **Water/Septic/Food** | $1M | $2M | $4M | Wells, treatment, irrigation, orchards |
 | **Soft Costs** | $3M | $7M | $12M | Design, permits, legal, contingency (20-30%) |
-| **TOTAL** | **$19M** | **$44M** | **$81M** | Phase 1 capital cost range |
+| **TOTAL** | **$19M** | **$44M** | **$81M** | Phase 1 construction. Adding Stages 1–4 gives $22M / $45M / $95M for the whole project to opening — see [At a Glance](/docs/at-a-glance) |
 
 **Funding Strategies**:
 - Founder equity + friends/family
@@ -717,7 +717,7 @@ Light City builds upon these principles with modern understanding and advanced t
 
 **Status**: Upgraded to investor/permit-ready framework with phased implementation  
 **Version**: 2.0 (Energy Clarity)  
-**Last Updated**: November 14, 2025  
+**Last reviewed**: November 2026  
 **Last Reviewed**: November 14, 2025  
 **Related**: [Core Concepts](/docs/concepts/core-concepts), [Sacred Geometry](/docs/concepts/sacred-geometry), [Development Stages](/docs/project/development-stages), [Energy Systems](/docs/concepts/energy-systems)
 

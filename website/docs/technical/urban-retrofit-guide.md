@@ -701,6 +701,6 @@ Personal spaces aligned with principles
 
 ---
 
-**Last Updated**: November 7, 2025  
+**Last reviewed**: November 2026  
 **Related**: [Technology Catalog](/docs/technical/technology-catalog), [Architecture](/docs/design/architecture)
 

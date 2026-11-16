@@ -5,38 +5,30 @@ This document explains the organization and purpose of each directory in the Lig
 ## Directory Overview
 
 ```
-Light City Project/
-├── README.md                          # Project overview and entry point
-├── docs/                              # All documentation
-│   ├── concepts/                      # Core ideas and philosophy
-│   ├── design/                        # Visual and architectural design
-│   ├── technical/                     # Development and technical docs
-│   ├── community/                     # Community guidelines and info
-│   └── project/                       # Project management and planning
-├── assets/                            # Media files
-│   ├── images/                        # Images and concept art
-│   ├── models/                        # 3D models
-│   ├── audio/                         # Sound and music
-│   └── video/                         # Video content
-├── src/                               # Source code (when applicable)
-│   ├── web/                           # Website/web application
-│   ├── tools/                         # Utilities and scripts
-│   └── experiences/                   # Interactive experiences
-├── research/                          # Research materials and references
-│   ├── spiritual/                     # Spiritual and metaphysical research
-│   ├── architectural/                 # Architectural references
-│   ├── technological/                 # Technology research
-│   └── community/                     # Community building research
-├── planning/                          # Planning documents
-│   ├── roadmaps/                      # Project roadmaps
-│   ├── tasks/                         # Task tracking
-│   └── notes/                         # Meeting notes and brainstorms
-└── archive/                           # Archived materials
+light-city-project/
+├── README.md                 # Project overview and entry point
+├── website/                  # Docusaurus site (single source of truth)
+│   ├── docs/                 # The library
+│   │   ├── START-HERE.md     # Orientation and reading paths
+│   │   ├── at-a-glance.md    # Canonical numbers
+│   │   ├── glossary.md
+│   │   ├── concepts/         # Vision, philosophy, the transition, communospheres, energy
+│   │   ├── design/           # Architecture, visual language, color and light, diagrams
+│   │   ├── technical/        # Technology horizon, catalog, urban retrofit
+│   │   ├── project/          # Stages, governance, residency, contributing
+│   │   └── research/         # Open questions, bibliography
+│   ├── src/                  # Homepage, audience pages, components
+│   ├── static/img/           # Images and diagrams
+│   └── sidebars.ts           # Library reading order
+├── research/                 # Source material (spiritual, architectural)
+├── planning/                 # Stage task lists
+├── assets/                   # Working media
+└── archive/                  # Superseded docs, notes and scripts
 ```
 
-## Documentation Structure (`docs/`)
+## Documentation Structure (`website/docs/`)
 
-### Concepts (`docs/concepts/`)
+### Concepts (`website/docs/concepts/`)
 
 Core philosophical, spiritual, and conceptual documentation:
 
@@ -47,7 +39,7 @@ Core philosophical, spiritual, and conceptual documentation:
 - `consciousness.md` - Consciousness and awareness
 - `purpose-and-mission.md` - Project purpose
 
-### Design (`docs/design/`)
+### Design (`website/docs/design/`)
 
 Visual, architectural, and aesthetic documentation:
 
@@ -58,7 +50,7 @@ Visual, architectural, and aesthetic documentation:
 - `symbolism.md` - Symbolic elements
 - `color-and-light.md` - Color theory and light principles
 
-### Technical (`docs/technical/`)
+### Technical (`website/docs/technical/`)
 
 Development, implementation, and technical guides:
 
@@ -68,7 +60,7 @@ Development, implementation, and technical guides:
 - `deployment.md` - Deployment processes
 - `tools-setup.md` - Tool installation and setup
 
-### Community (`docs/community/`)
+### Community (`website/docs/community/`)
 
 Community engagement, collaboration, and governance:
 
@@ -78,7 +70,7 @@ Community engagement, collaboration, and governance:
 - `events.md` - Community events and gatherings
 - `resources.md` - Community resources
 
-### Project (`docs/project/`)
+### Project (`website/docs/project/`)
 
 Project management, planning, and meta-documentation:
 
@@ -242,7 +234,7 @@ Content...
 ### Version Control
 
 - Use meaningful commit messages
-- Document significant changes in `docs/project/changelog.md`
+- Document significant changes in `website/docs/project/changelog.md`
 - Tag major versions
 
 ## Navigation
@@ -250,18 +242,18 @@ Content...
 ### Key Entry Points
 
 1. **Project Overview**: `/README.md`
-2. **Getting Started**: `/docs/concepts/core-concepts.md`
-3. **Development Plan**: `/docs/project/development-stages.md`
-4. **Contributing**: `/docs/project/contributing.md`
+2. **Getting Started**: `website/docs/concepts/core-concepts.md`
+3. **Development Plan**: `website/docs/project/development-stages.md`
+4. **Contributing**: `website/docs/project/contributing.md`
 
 ### Finding Information
 
 - Use descriptive file names for easy searching
 - Maintain an index in each section's README
 - Cross-link related documents
-- Keep a site map in `/docs/site-map.md`
+- Keep a site map in `website/docs/site-map.md`
 
 ---
 
-**Last Updated**: October 10, 2025
+**Last reviewed**: November 2026
 

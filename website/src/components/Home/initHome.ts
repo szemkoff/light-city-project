@@ -181,7 +181,11 @@ stage(0);
 
 /* ---------- LIBRARY ---------- */
 const DOCS = [
-  ['START-HERE', 'Project', 'Start here', 'A guided path through the vision, design and plan.', 1],
+  ['START-HERE', 'Project', 'Start here', 'How the library is organized, plus a reading path for you.', 1],
+  ['at-a-glance', 'Project', 'Light City at a glance', 'Every key number in one place: scale, cost, homes, timeline.'],
+  ['concepts/the-transition', 'Concepts', 'The transition', 'Five movements from today’s life to the Light City future.', 1],
+  ['technical/technology-horizon', 'Technical', 'Technology horizon', 'Proven, scaling, emerging and frontier tech, with 2026 status.'],
+  ['glossary', 'Research', 'Glossary', 'Plain-language definitions of every Light City term.'],
   ['concepts/core-concepts', 'Concepts', 'Core concepts', 'Foundational principles behind Light City.'],
   ['concepts/philosophy', 'Concepts', 'Philosophy', 'Spirit before structure, Gaia’s memory, co-creation.'],
   ['concepts/purpose-and-mission', 'Concepts', 'Purpose & mission', 'Why this, why now, and how we measure it.'],

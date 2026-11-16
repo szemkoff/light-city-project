@@ -11,6 +11,7 @@ sidebar_label: Technology Catalog
 ## Overview
 
 This catalog identifies **currently available** and **near-term emerging** technologies that can be integrated into Light City's design. Each technology is assessed for:
+- **Horizon**: Proven, Scaling, Emerging or Frontier — the shared readiness scale defined in [Technology Horizon](/docs/technical/technology-horizon), which also gives sourced 2026 status for the newest technologies
 - **Availability**: Commercial, pilot, or R&D stage
 - **TRL (Technology Readiness Level)**: 1-9 scale
 - **Cost**: Relative cost indicator
@@ -25,6 +26,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![CLT Construction](/img/technology/clt-construction.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -58,6 +60,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Geodesic Dome](/img/technology/geodesic-dome.jpg)
 
 **Status**: Commercially Available (TRL 7-8)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium to High)
 
 **Description**:
@@ -91,6 +94,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Tensile Fabric Structure](/img/technology/tensile-fabric.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -118,6 +122,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![3D Printed Concrete](/img/technology/3d-printed-concrete.jpg)
 
 **Status**: Pilot/Early Commercial (TRL 6-7)  
+**Horizon**: Scaling — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ to $$ (Decreasing rapidly)
 
 **Description**:
@@ -152,6 +157,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![BIPV Solar Facade](/img/technology/bipv-solar-facade.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Scaling (tandem perovskite glazing) / Proven (silicon) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$$ (High, but decreasing)
 
 **Description**:
@@ -184,6 +190,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Flow Battery](/img/technology/flow-battery.jpg)
 
 **Status**: Commercially Available (TRL 7-8)  
+**Horizon**: Scaling — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium, competitive for 4+ hour storage)
 
 **Description**:
@@ -217,6 +224,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Micro-Hydro Turbine](/img/technology/micro-hydro.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven (site-dependent) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -247,14 +255,15 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ![Solid-State Battery](/img/technology/solid-state-battery.jpg)
 
-**Status**: Pilot/Near-Commercial (TRL 6-7)  
+**Status**: Pilot scale (TRL 5-6) as of late 2026  
+**Horizon**: Emerging — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$$ (High, but expected to drop)
 
 **Description**:
 - Solid electrolyte instead of liquid
 - Higher energy density, safer (non-flammable)
 - Longer lifespan, faster charging
-- Expected commercial availability: 2025-2027
+- Commercial availability has slipped: pilot lines opened in 2026 (QuantumScape Eagle Line); volume production is targeted for about 2028 ([Battery Design](https://www.batterydesign.net/solid-state-production-timelines/))
 
 **Companies**:
 - QuantumScape (US) - backed by VW
@@ -281,6 +290,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Living Machine](/img/technology/living-machine.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -313,6 +323,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Atmospheric Water Generator](/img/technology/atmospheric-water.jpg)
 
 **Status**: Commercially Available (TRL 7-8)  
+**Horizon**: Emerging (backup only) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -347,6 +358,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Composting Toilet](/img/technology/composting-toilet.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low to Medium)
 
 **Description**:
@@ -378,6 +390,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ### 4 Rainwater Harvesting Systems
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -410,9 +423,14 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ### 1 Vertical Hydroponic/Aeroponic Systems
 
+:::caution Realism note (2026)
+Several large vertical farms have failed (80 Acres Farms in 2026, after Bowery and Plenty), mostly because of energy costs ([Vertical Farm Daily](https://www.verticalfarmdaily.com/article/9882055/can-vertical-farming-find-a-more-focused-future/)). Light City's main food systems are solar greenhouses, agroforestry and fields. Vertical systems are reserved for herbs, microgreens and education.
+:::
+
 ![Vertical Farm](/img/technology/vertical-farm.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven technology, weak economics — niche crops only — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -446,6 +464,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Aquaponics System](/img/technology/aquaponics-system.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -479,6 +498,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Agroforestry](/img/technology/agroforestry.jpg)
 
 **Status**: Proven Traditional (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -515,6 +535,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Mycelium Cultivation](/img/technology/mycelium-cultivation.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -544,6 +565,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Building Management System](/img/technology/bms.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven (AI digital-twin controls: Scaling) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -571,6 +593,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Environmental Sensors](/img/technology/environmental-sensors.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -598,6 +621,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Circadian Lighting](/img/technology/circadian-lighting.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -633,6 +657,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Acoustic Resonance](/img/technology/acoustic-resonance.jpg)
 
 **Status**: Pilot/Custom (TRL 4-6)  
+**Horizon**: Frontier (healing claims) / Proven (room acoustics) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -666,6 +691,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Biofeedback System](/img/technology/biofeedback.jpg)
 
 **Status**: Commercially Available (TRL 7-8)  
+**Horizon**: Emerging (HRV biofeedback best supported) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -693,6 +719,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Red Light Therapy](/img/technology/red-light-therapy.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Emerging — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -720,6 +747,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Float Tank](/img/technology/float-tank.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven (wellness use) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -749,6 +777,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![EV Charging Station](/img/technology/ev-charging.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ to $$$ (Medium to High, decreasing)
 
 **Description**:
@@ -776,6 +805,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Cargo Bike](/img/technology/cargo-bike.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -803,6 +833,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Autonomous Shuttle](/img/technology/autonomous-shuttle.jpg)
 
 **Status**: Pilot/Early Commercial (TRL 6-7)  
+**Horizon**: Emerging — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$$ (High)
 
 **Description**:
@@ -832,6 +863,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Hempcrete](/img/technology/hempcrete.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -865,6 +897,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Mycelium Insulation](/img/technology/mycelium-insulation.jpg)
 
 **Status**: Pilot/Early Commercial (TRL 6-7)  
+**Horizon**: Emerging — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium, decreasing)
 
 **Description**:
@@ -892,6 +925,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Transparent Wood](/img/technology/transparent-wood.jpg)
 
 **Status**: R&D/Pilot (TRL 4-5)  
+**Horizon**: Emerging — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$$ (High, experimental)
 
 **Description**:
@@ -918,6 +952,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Self-Healing Concrete](/img/technology/self-healing-concrete.jpg)
 
 **Status**: Pilot/Early Commercial (TRL 6-7)  
+**Horizon**: Emerging — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$$ (High)
 
 **Description**:
@@ -946,6 +981,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Mesh Network](/img/technology/mesh-network.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ (Low)
 
 **Description**:
@@ -973,6 +1009,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Starlink](/img/technology/starlink.jpg)
 
 **Status**: Commercially Available (TRL 8-9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ (Medium)
 
 **Description**:
@@ -984,7 +1021,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 **Providers**:
 - Starlink (SpaceX)
 - OneWeb
-- Amazon Kuiper (coming 2024-2025)
+- Amazon Kuiper (rolling out)
 
 **Light City Applications**:
 - Primary internet (if remote location)
@@ -1001,6 +1038,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Environmental Monitoring](/img/technology/environmental-monitoring.jpg)
 
 **Status**: Commercially Available (TRL 9)  
+**Horizon**: Proven — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $ to $$ (Low to Medium)
 
 **Description**:
@@ -1028,6 +1066,7 @@ This catalog identifies **currently available** and **near-term emerging** techn
 ![Consciousness Research Equipment](/img/technology/consciousness-research.jpg)
 
 **Status**: Research/Custom (TRL 3-5)  
+**Horizon**: Frontier (research use only) — see [Technology Horizon](/docs/technical/technology-horizon)  
 **Cost**: $$ to $$$ (Medium to High)
 
 **Description**:
@@ -1052,32 +1091,27 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ## Technology Roadmap
 
-### Phase 1 (18-24 months) - Proven Tech Only
-- CLT structures
-- Geodesic domes
-- Solar PV + lithium batteries
-- Rainwater harvesting
-- Composting toilets
-- Living machines
-- Agroforestry
-- BMS and sensors
-- EV charging
+Aligned with the [development stages](/docs/project/development-stages) and the [Technology Horizon](/docs/technical/technology-horizon). Phase 1 is built in Stage 5 (Dec 2028 – Nov 2031).
 
-### Phase 2 (36-48 months) - Early Commercial
-- BIPV glazing
-- Flow batteries
-- 3D-printed concrete elements
-- Vertical farms
-- Mycelium materials
+### Phase 1 — Pilot Hamlet (built 2028–2031): Proven + bankable Scaling
+- CLT structures and geodesic domes
+- Silicon solar PV, with perovskite-tandem glazing on the spire and domes if field data supports it
+- LFP or sodium-ion battery storage (8–20 MWh)
+- Heat pumps, rainwater harvesting, composting toilets, living machines
+- Solar greenhouses and agroforestry
+- BMS and sensors with an AI digital-twin control layer
+- Robotic and 3D-printed site elements, EV charging
+
+### Phase 2 — Village (mid-2030s): Scaling at scale + selected Emerging
+- Long-duration storage (iron-air or flow batteries)
+- Enhanced geothermal or ground-source heat, where the site allows
+- Mycelium and bio-based materials, transparent wood daylighting pilots
 - Autonomous shuttles
-- Advanced acoustic systems
+- Advanced acoustic spaces as research facilities
 
-### Phase 3 (5-10 years) - Emerging Tech
-- Solid-state batteries
-- Transparent wood
-- Self-healing concrete
-- Advanced consciousness tech
-- AI-optimized systems
+### Phase 3 — Town (2040s+): Whatever has proven itself
+- Solid-state storage and next-generation materials
+- Frontier research results applied only where the evidence supports them
 
 ---
 
@@ -1093,6 +1127,6 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ---
 
-**Last Updated**: November 7, 2025  
+**Last reviewed**: November 2026  
 **Related**: [Architecture](/docs/design/architecture), [Development Stages](/docs/project/development-stages)
 

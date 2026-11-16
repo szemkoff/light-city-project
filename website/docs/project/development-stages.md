@@ -324,7 +324,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 
 **Duration**: 18-36 months (Dec 2028 - Nov 2031)  
 **Status**: FUTURE  
-**Total Budget**: $22M-$95M (Phase 1 Hamlet: 150-300 residents)  
+**Total Budget**: $22M-$95M, $45M target (Phase 1 Hamlet: 200 residents target, 150-300 range)  
 **Funding Sources**: Impact investors, green bonds, pre-sales, EPC finance, government grants
 
 ### Cost Breakdown (Stage 5) - Phase 1 Hamlet
@@ -381,7 +381,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 - [ ] Physical location assessment and site selection
 - [ ] Detailed architectural and engineering plans
 - [ ] Prototype designs (full construction documents)
-- [ ] Fundraising and capital secured ($19M-$81M Phase 1)
+- [ ] Fundraising and capital secured ($19M-$81M Phase 1 construction; $44M target)
 - [ ] Physical installations or structures (pilot projects)
 - [ ] Community spaces (retreat center, co-working, events)
 - [ ] Pilot projects (urban retrofits, installations)
@@ -411,7 +411,7 @@ Stage 1 has run longer than the original two-to-three-month plan and is still be
 ### KPIs (Stage 5)
 - **Land secured**: Site under contract or owned
 - **Permits approved**: All major permits issued
-- **Capital raised**: $19M-$81M (Phase 1 range)
+- **Capital raised**: $19M-$81M (Phase 1 construction range; $44M target)
 - **Pilot projects**: 3-5 physical installations completed
 - **Retreat attendance**: 100-500 people/year
 - **Construction progress**: On schedule (SPI ≥ 0.9, CPI ≥ 0.9)

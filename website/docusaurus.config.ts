@@ -63,6 +63,19 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
+    mermaid: {
+      theme: {light: 'base', dark: 'dark'},
+      options: {
+        themeVariables: {
+          primaryColor: '#fbf3e2',
+          primaryBorderColor: '#c9a35a',
+          primaryTextColor: '#2a2216',
+          lineColor: '#8a5f17',
+          fontFamily: 'Switzer, system-ui, sans-serif',
+          fontSize: '14px',
+        },
+      },
+    },
     image: 'img/light-city-vision-1.jpg',
     colorMode: {
       defaultMode: 'light',

@@ -114,7 +114,12 @@ Spiritual principles must be integrated with practical action. Mysticism and pra
 
 ---
 
-**Status**: Foundation document - to be significantly expanded  
-**Last Updated**: October 10, 2025  
-**Related**: [Core Concepts](core-concepts.md), [Purpose and Mission](purpose-and-mission.md)
+## From philosophy to a lived path
+
+These questions are not answered in theory alone. [The Transition](/docs/concepts/the-transition) turns the philosophy into a sequence of voluntary, livable steps, from personal practice today to a network of light cities. The governance questions above are being tested in the [research agenda](/docs/research/open-questions#b-community-and-governance-answer-in-stage-4).
+
+---
+
+**Last reviewed**: November 2026  
+**Related**: [Core Concepts](core-concepts.md), [Purpose and Mission](purpose-and-mission.md), [The Transition](the-transition.md)
 

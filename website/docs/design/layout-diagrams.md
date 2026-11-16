@@ -57,5 +57,5 @@
 
 ---
 
-**Last Updated**: October 10, 2025  
+**Last reviewed**: November 2026  
 **Related**: `architecture.md`, `energy-systems.md`, `visual-language.md`, `color-and-light.md`

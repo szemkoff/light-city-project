@@ -1,183 +1,54 @@
-# Documentation Index
-
-Complete index of all Light City project documentation.
-
-## Getting Started
-
-**New to the project?** Start here:
-1. [README.md (repository)](https://github.com/szemkoff/light-city-project/blob/main/README.md) - Project overview
-2. [Core Concepts](concepts/core-concepts.md) - Foundational ideas
-3. [Quick Start Guide](project/quick-start-guide.md) - How to begin
-4. [Development Stages](project/development-stages.md) - Project roadmap
-
-## Concepts & Philosophy
-
-### Core Documents
-- [Core Concepts](concepts/core-concepts.md) - Foundational principles and vision
-- [Philosophy](concepts/philosophy.md) - Philosophical underpinnings
-- [Purpose and Mission](concepts/purpose-and-mission.md) - Project goals and mission
-- [Sacred Geometry](concepts/sacred-geometry.md) - Geometric principles
-- [Communospheres](concepts/communospheres.md) - Living spaces and consciousness technology (recent)
-- [Energy Systems](concepts/energy-systems.md) - Energy generation and resonance (recent)
-
-### To Be Created
-- Consciousness and Awareness
-- Spiritual Foundations
-- Glossary of Terms
-
-## Design & Architecture
-
-### Current Documents
-- [Architecture](design/architecture.md) - Architectural vision and principles
-- [Visual Language](design/visual-language.md) - Design principles and design tokens (recent)
-- [Color and Light](design/color-and-light.md) - Color palette and lighting rules (recent)
-- [Layout Diagrams](design/layout-diagrams.md) - City layout diagrams and visualizations (recent)
-
-### To Be Created
-- Materials and Construction
-- Symbolism and Meaning
-- Landscape Integration
-- Detailed Communosphere Interiors
-
-## Technical
-
-### Current Documents
-- [Technology Catalog](technical/technology-catalog.md) - TRL, suppliers, applications
-
-### To Be Created
-- Technology Stack (Stage 3+)
-- Development Guide (Stage 3+)
-- Tools Setup (Stage 3+)
-- API Documentation (Stage 4+)
-
-## Community
-
-### To Be Created
-- Community Guidelines
-- Contribution Guide
-- Governance Structure
-- Events and Gatherings
-- Resources and Support
-
-## Project Management
-
-### Current Documents
-- [Development Stages](project/development-stages.md) - 6-phase roadmap
-- [Project Structure](project/project-structure.md) - Organization guide
-- [Tools and Workflows](project/tools-and-workflows.md) - Recommended tools
-- [Contributing](project/contributing.md) - How to contribute
-- [Quick Start Guide](project/quick-start-guide.md) - Getting started
-
-### To Be Created
-- Detailed Roadmap
-- Decision-Making Processes
-- Governance Frameworks
-- Risk Management
-
-## Planning
-
-See the [planning folder on GitHub](https://github.com/szemkoff/light-city-project/tree/main/planning):
-- [Stage 1 Tasks](https://github.com/szemkoff/light-city-project/blob/main/planning/stage-1-tasks.md) - Current task list
-
-## Research
-
-See the [research folder on GitHub](https://github.com/szemkoff/light-city-project/tree/main/research):
-- Research organization and notes
-- Spiritual/Metaphysical research
-- Architectural studies
-- Technology research
-- Community models
-
-## Assets
-
-See the [assets folder on GitHub](https://github.com/szemkoff/light-city-project/tree/main/assets):
-- Images (concept art, diagrams, inspiration)
-- 3D Models
-- Audio files
-- Video content
-
-## Additional Files
-
-- [CHANGELOG.md](https://github.com/szemkoff/light-city-project/blob/main/CHANGELOG.md) - Project version history
-- [CODE_OF_CONDUCT.md](https://github.com/szemkoff/light-city-project/blob/main/CODE_OF_CONDUCT.md) - Community guidelines
-- [LICENSE](https://github.com/szemkoff/light-city-project/blob/main/LICENSE) - MIT License for code
-- [LICENSE-DOCS](https://github.com/szemkoff/light-city-project/blob/main/LICENSE-DOCS) - CC BY-SA 4.0 for documentation
-- [.gitignore](https://github.com/szemkoff/light-city-project/blob/main/.gitignore) - Version control exclusions
-
-## Research Materials
-
-Hosted in the repository (browse on GitHub):
-- [Delphin Channeled Information](https://github.com/szemkoff/light-city-project/blob/main/research/spiritual/delphin-channeled-info.md) - Crystal city example
-- [Bibliography](research/bibliography.md) - Compiled research sources
-- [Open Questions](research/open-questions.md) - Research questions to explore
-- [Inspirational Buildings](https://github.com/szemkoff/light-city-project/blob/main/research/architectural/inspirational-buildings.md) - Architectural inspirations
-- Spiritual/Metaphysical research materials
-- Architectural studies and references
-- Technology research
-- Community models and case studies
-
-## Documentation Status
-
-| Category | Completion | Priority |
-|----------|------------|----------|
-| Concepts | 85% | HIGH |
-| Design | 50% | HIGH |
-| Technical | 20% | MEDIUM |
-| Community | 30% | MEDIUM |
-| Project | 90% | COMPLETE |
-| Research | 35% | HIGH |
-| Infrastructure | 100% | COMPLETE |
-
-**Last Updated**: October 15, 2025  
-**Latest Addition**: GitHub deployment + Docusaurus site live  
-**Repository**: [github.com/szemkoff/light-city-project](https://github.com/szemkoff/light-city-project)  
-**Live Site**: [szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/)
-
-## Navigation Tips
-
-### By Role
-
-**Writers/Philosophers**: Start with `concepts/`, contribute to philosophical depth
-
-**Designers/Artists**: Focus on `design/`, create visual content in `assets/`
-
-**Developers**: Review `project/tools-and-workflows.md`, prepare for Stage 3 `technical/`
-
-**Planners**: Work with `planning/` and `project/` sections
-
-**Researchers**: Organize materials in `research/`, inform `concepts/` and `design/`
-
-### By Stage
-
-**Stage 1 (Current)**: Focus on `concepts/`, `design/`, and `project/` documentation
-
-**Stage 2**: Expand `design/`, create content in `assets/`
-
-**Stage 3**: Build out `technical/`, create `src/` code
-
-**Stage 4+**: Develop `community/` fully, scale all areas
-
-## Contributing to Documentation
-
-1. Read [Contributing Guidelines](project/contributing.md)
-2. Check this index for gaps
-3. Create or expand documents
-4. Cross-reference related docs
-5. Update this index when adding new files
-6. Follow documentation standards from [Project Structure](project/project-structure.md)
-
-## Documentation Standards
-
-All documentation should include:
-- Clear title (H1)
-- Overview or introduction
-- Well-organized content
-- Cross-references to related docs
-- "Last Updated" date
-- Status note if incomplete
-
+---
+id: INDEX
+title: Library Index
+sidebar_label: Library Index
+description: Every document in the Light City library, in reading order.
 ---
 
-**Maintained By**: Project Contributors  
-**Last Updated**: October 10, 2025
+# Library Index
 
+Every document in the library, in the same order as the sidebar. New readers should begin with [Start Here](/docs/START-HERE).
+
+## Orientation
+- [Start Here](/docs/START-HERE): how the library is organized, with reading paths
+- [Light City at a Glance](/docs/at-a-glance): the canonical numbers (the single source of truth)
+- [Glossary](/docs/glossary): plain-language definitions
+
+## 1. Why: vision and philosophy
+- [Core Concepts](/docs/concepts/core-concepts): what Light City is
+- [Philosophy](/docs/concepts/philosophy): spirit before structure, and co-creation
+- [Purpose & Mission](/docs/concepts/purpose-and-mission): goals and how we measure them
+
+## 2. The Transition
+- [The Transition](/docs/concepts/the-transition): five movements from today to the Light City future
+
+## 3. The City: design
+- [Architecture](/docs/design/architecture): spire, domes and rings, from archetype to Earth build, plus the budget
+- [Communospheres](/docs/concepts/communospheres): the dome neighborhoods
+- [Sacred Geometry](/docs/concepts/sacred-geometry): proportions behind the plan
+- [Visual Language](/docs/design/visual-language): forms, symbols and design tokens
+- [Color & Light](/docs/design/color-and-light): palette and lighting
+- [Layout & Diagrams](/docs/design/layout-diagrams): plans, sections and flows
+
+## 4. Technology
+- [Technology Horizon](/docs/technical/technology-horizon): Proven, Scaling, Emerging and Frontier technologies, with 2026 status
+- [Energy Systems](/docs/concepts/energy-systems): solar microgrid, storage and the research track
+- [Technology Catalog](/docs/technical/technology-catalog): every system, with readiness, cost and suppliers
+- [Urban Retrofit Guide](/docs/technical/urban-retrofit-guide): Light City patterns for existing towns
+
+## 5. Living together
+- [Governance](/docs/project/governance): from founder-led to community council
+- [Contribution-Based Residency](/docs/project/contribution-based-residency): work-for-living tiers
+
+## 6. Roadmap
+- [Development Stages](/docs/project/development-stages): six stages, timeline, financial model and gates
+
+## 7. Research
+- [Open Questions](/docs/research/open-questions): the research agenda
+- [Bibliography](/docs/research/bibliography): graded sources
+
+## 8. Contribute
+- [Contributing](/docs/project/contributing)
+- [Quick-Start Guide](/docs/project/quick-start-guide)
+- [Project Structure](/docs/project/project-structure)
+- [Tools & Workflows](/docs/project/tools-and-workflows)
