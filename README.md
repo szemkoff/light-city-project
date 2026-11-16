@@ -48,6 +48,17 @@ View the complete documentation at **[szemkoff.github.io/light-city-project](htt
 - **Research**: Bibliography, open questions, and source materials
 - **Project**: Planning, stages, and management
 
+## Branches and Publishing
+
+| Branch / tag | Purpose |
+|---|---|
+| `main` | Default branch and single source of truth. The Docusaurus site lives in `website/`, documentation in `docs/`. |
+| `gh-pages` | Built site served at [szemkoff.github.io/light-city-project](https://szemkoff.github.io/light-city-project/). Generated automatically — do not edit. |
+| `archive/emergent-app` (tag) | Snapshot of the earlier Emergent-generated React/FastAPI app (former `Website` branch). |
+| `archive/luminous-prototype` (tag) | Snapshot of the single-page luminous design prototype (former PR #1). |
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds `website/` (with the `WEB3FORMS_ACCESS_KEY` secret for forms) and publishes it to `gh-pages`. New work goes in short-lived branches off `main` (e.g. `redesign/homepage`), reviewed via pull request, then deleted after merge.
+
 ## Repository & Community
 
 - **GitHub**: [github.com/szemkoff/light-city-project](https://github.com/szemkoff/light-city-project)
