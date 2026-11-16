@@ -20,14 +20,14 @@ export default function LocationsMap(): JSX.Element {
   return (
     <div className="lm">
       <div className="lm-map"><div className="lm-stage">
-        <svg viewBox={`0 0 ${M.W} ${M.H}`} role="img" aria-label="Map of the United States with four candidate regions">
+        <svg viewBox={`0 0 ${M.W} ${M.H}`} role="img" aria-label="Map of the Americas and Iberia with five candidate regions in the United States, Portugal, Spain and Costa Rica">
           <path d={M.land} className="lm-land" />
           {Object.entries(M.hl).map(([k, d]) => <path key={k} d={d} className="lm-hl" />)}
           <path d={M.borders} className="lm-borders" />
           <path d={M.land} className="lm-outline" />
         </svg>
         {ALSO.map((a) => (
-          <span key={a.id} className={'lm-also' + (a.id === 'homestead' ? ' left' : '')} style={pct(a.id)} title={a.note}>
+          <span key={a.id} className="lm-also" style={pct(a.id)} title={a.note}>
             <i aria-hidden="true"></i><span>{a.name}</span>
           </span>
         ))}

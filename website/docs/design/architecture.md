@@ -474,7 +474,7 @@ Light City maintains an energetic grid:
 - Phasing approach
 - Organic growth vs. master plan
 
-**Candidate regions**: see [Site Locations](/docs/project/site-locations) for four scored options and a map.
+**Candidate regions**: see [Site Locations](/docs/project/site-locations) for five scored options in four countries and a map.
 
 **Initial Vision**: Moderate scale, potentially 500-5,000 inhabitants, expandable
 
@@ -487,6 +487,7 @@ Light City maintains an energetic grid:
 *Environmental*:
 - **Solar Insolation**: ≥ 4.5 kWh/m²/day annual average (for PV viability)
 - **Wind**: Prevailing winds 5-15 mph for comfort; avoid extreme wind zones
+- **Elevation**: At least 350 ft (107 m) above sea level, clear of storm surge and coastal flooding
 - **Topography**: Gentle slopes (2-8%) for water terraces and passive solar
 - **Soils**: Class I-III agricultural soils for agroforestry (USDA classification)
 - **Water**: Secure, legally usable supply (springs, streams, wells or water rights); annual rainfall ≥ 30 inches preferred, or proven well yield and rights in drier regions
@@ -500,6 +501,7 @@ Light City maintains an energetic grid:
 
 *Legal & Social*:
 - **Zoning**: Rural mixed-use, agricultural, or PD (Planned Development) overlay potential
+- **Land ownership**: A clear legal path for an international founding circle to own or lease the land
 - **Water Rights**: Secure water rights for domestic + agricultural use
 - **Building Codes**: Jurisdiction open to alternative building methods (CLT, geodesic)
 - **Community**: Supportive local community or remote enough to minimize conflict

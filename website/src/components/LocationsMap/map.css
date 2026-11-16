@@ -1,5 +1,5 @@
 .lc-page .lm{display:grid;gap:var(--space-6)}
-.lc-page .lm-map{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--space-4);overflow:hidden}
+.lc-page .lm-map{position:relative;background:#eef1ec;border:1px solid var(--line);border-radius:var(--r-lg);padding:var(--space-4);overflow:hidden}
 .lc-page .lm-map svg{display:block;width:100%;height:auto}
 .lc-page .lm-land{fill:#efe6d6}
 .lc-page .lm-hl{fill:#f3ddb0}
@@ -14,7 +14,7 @@
 .lc-page .lm-also{display:flex;align-items:center;gap:6px;font-size:var(--text-xs);color:var(--muted);white-space:nowrap;transform:translate(-7px,-50%)!important}
 .lc-page .lm-also.left{flex-direction:row-reverse;transform:translate(calc(-100% + 7px),-50%)!important}
 .lc-page .lm-also i{width:12px;height:12px;border-radius:50%;border:2.5px solid var(--muted);background:var(--card);flex:none}
-.lc-page .lm-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2)}
+.lc-page .lm-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-2)}
 .lc-page .lm-tabs button{display:flex;align-items:center;gap:var(--space-3);text-align:left;padding:var(--space-3) var(--space-4);border:1px solid var(--line);border-radius:var(--r-md);background:var(--card);color:var(--ink);font:500 var(--text-sm)/1.25 var(--body);cursor:pointer}
 .lc-page .lm-tabs button b{flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;font-size:13px}
 .lc-page .lm-tabs button.on{border-color:var(--gold);background:#fff6e3}
@@ -25,7 +25,7 @@
 .lc-page .lm-card-body{padding:var(--space-8)}
 .lc-page .lm-card-body h3{font-family:var(--display);font-weight:400;font-size:var(--text-xl);margin:0 0 var(--space-2)}
 .lc-page .lm-best{color:var(--muted);margin:0 0 var(--space-5)}
-.lc-page .lm-climate{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin:0 0 var(--space-6)}
+.lc-page .lm-climate{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin:0 0 var(--space-6)}
 .lc-page .lm-climate div{background:#fff;padding:var(--space-3) var(--space-4)}
 .lc-page .lm-climate dt{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .lc-page .lm-climate dd{margin:2px 0 0;font-size:var(--text-sm);font-weight:500}
@@ -42,6 +42,9 @@
 .lc-page .lm-dots i.f{background:var(--gold);border-color:var(--gold)}
 .lc-page .lm-total{grid-column:1/-1;font-size:var(--text-sm);color:var(--muted)}
 .lc-page .lm-total b{color:var(--ink);font-size:var(--text-lg);font-family:var(--display);font-weight:400}
+@media (max-width:1100px){
+  .lc-page .lm-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
 @media (max-width:900px){
   .lc-page .lm-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
   .lc-page .lm-card{grid-template-columns:1fr}
@@ -51,10 +54,9 @@
 @media (max-width:600px){
   .lc-page .lm-map{padding:var(--space-2)}
   .lc-page .lm-pin{width:22px;height:22px;font-size:11px;border-width:2px;box-shadow:0 0 0 4px rgba(233,184,90,.35)}
-  .lc-page .lm-pin[data-id=san-luis-valley]{margin-top:-11px}
-  .lc-page .lm-pin[data-id=northern-new-mexico]{margin-top:11px}
+  .lc-page .lm-pin[data-id=central-portugal]{margin:-8px 0 0 -7px}
+  .lc-page .lm-pin[data-id=granada-highlands]{margin:8px 0 0 7px}
   .lc-page .lm-also span{display:none}
   .lc-page .lm-card-body{padding:var(--space-5)}
   .lc-page .lm-lists{grid-template-columns:1fr}
-  .lc-page .lm-climate{grid-template-columns:1fr}
 }

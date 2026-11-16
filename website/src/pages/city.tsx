@@ -163,7 +163,7 @@ export default function City(): JSX.Element {
           {to: '/docs/design/architecture', tag: 'City', title: 'Architecture', text: 'Ring layout, building types and construction approach.'},
           {to: '/docs/concepts/communospheres', tag: 'City', title: 'Communospheres', text: 'Dome neighborhoods in detail.'},
           {to: '/docs/design/organic-forms-and-materials', tag: 'Design', title: 'Beyond the box', text: 'Curved forms and healthy, low-cost materials.'},
-          {to: '/locations', tag: 'Land', title: 'Locations', text: 'Four candidate regions, scored and mapped.'},
+          {to: '/locations', tag: 'Land', title: 'Locations', text: 'Five regions in four countries, scored and mapped.'},
           {to: '/docs/at-a-glance', tag: 'Facts', title: 'At a glance', text: 'Every key number for each phase.'},
           {to: '/docs/concepts/sacred-geometry', tag: 'Design', title: 'Sacred geometry', text: 'The proportions behind the plan.'},
         ]} />

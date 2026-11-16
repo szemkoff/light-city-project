@@ -36,7 +36,7 @@ const PARTS = [
   ]},
   {id: 'roadmap', part: '6 · Roadmap', items: [
     {to: '/docs/project/development-stages', title: 'Development stages', summary: 'Six stages from foundation to operation, each with costs, deliverables, KPIs, risks and a gate that must be met.', points: ['Stage 1 finishing Dec 2026', 'Financial model and IRR', 'Stage-gate checklist']},
-    {to: '/docs/project/site-locations', title: 'Site locations', summary: 'Four candidate regions for the first city, scored on sun, water, geothermal, hydro, earth-building codes, land and community.', points: ['New Mexico, Colorado, Oregon, North Carolina', 'Scorecard and map', 'Steps to choose the site']},
+    {to: '/docs/project/site-locations', title: 'Site locations', summary: 'Five candidate regions for the first city, all above 350 ft, scored on sun, water, geothermal, hydro, earth-building codes, land and community.', points: ['New Mexico, Oregon, Portugal, Spain, Costa Rica', 'Scorecard and map', 'Steps to choose the site']},
   ]},
   {id: 'research', part: '7 · Research', items: [
     {to: '/docs/research/open-questions', title: 'Open questions', summary: 'The research agenda: practical, community, wellbeing and frontier questions, with when each answer is needed.', points: ['Preregistration and publishing', 'Independent partners', 'Research timeline']},
