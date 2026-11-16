@@ -24,15 +24,105 @@ const MIX: [string, string, string, string, string][] = [
   ['3-bedroom (draft)', '10', '4–6', '45', '$1,700–2,200'],
 ];
 
-const S2: [string, string][] = [
-  ['Architectural design', '$8K–$25K'],
-  ['Concept art and visualization', '$5K–$20K'],
-  ['Sacred-geometry site mapping', '$2K–$8K'],
-  ['3D model and VR walk-through', '$3K–$12K'],
-  ['Engineering and sustainability consultants', '$3K–$10K'],
-  ['Storytelling and documentation', '$2K–$5K'],
-  ['Contingency', 'included in total'],
+type Stage = {n: string; name: string; when: string; status: string; budget: string; funding: string; rows: [string, string, string][]; total: string; note: string};
+
+const STAGES: Stage[] = [
+  {n: '1', name: 'Foundation', when: 'Oct 2025 – Dec 2026', status: 'Now · gate review Dec 2026', budget: '$5K–$15K', funding: 'Founder equity and personal investment',
+    rows: [
+      ['Tools and software', '$500–$1.5K', 'GitHub, design tools, domain, hosting'],
+      ['Design assets', '$1K–$3K', 'Stock images, fonts, basic concept art'],
+      ['Consulting', '$1K–$5K', 'Legal entity setup, first advisors'],
+      ['Documentation', '$500–$2K', 'Writing, editing, formatting'],
+      ['Research', '$500–$1.5K', 'Books, courses, site visits'],
+      ['Contingency (20%)', '$700–$2K', 'Buffer for unknowns'],
+    ], total: '$4.2K–$15K', note: 'About $2,500 spent so far, on tools, the domain and research.'},
+  {n: '2', name: 'Design', when: 'Jan – Jun 2027', status: 'Next · raising now', budget: '$25K–$85K', funding: 'Arts and culture grants, patronage, crowdfunding',
+    rows: [
+      ['Architectural design', '$8K–$25K', 'Schematic design, concept plans, 3D models'],
+      ['Concept art and visualization', '$5K–$20K', '10–20 professional renders and illustrations'],
+      ['Sacred-geometry site mapping', '$2K–$8K', 'CAD and GIS work, overlays, technical drawings'],
+      ['3D model and VR walk-through', '$3K–$12K', 'Interactive models, virtual walk-throughs'],
+      ['Consultants', '$3K–$10K', 'Engineers, sustainability experts, advisors'],
+      ['Storytelling and content', '$2K–$5K', 'Writers, editors, narrative'],
+      ['Contingency (20%)', '$4.6K–$16K', 'Buffer for scope changes'],
+    ], total: '$27.6K–$96K', note: 'The headline $25K–$85K excludes contingency. Target of $10K–$30K from crowdfunding and early supporters.'},
+  {n: '3', name: 'Digital presence', when: 'Jul – Nov 2027', status: 'Future', budget: '$35K–$125K', funding: 'Digital products, memberships, donations, sponsorships',
+    rows: [
+      ['Website enhancement', '$5K–$20K', 'Interactive features, 3D and VR, UX'],
+      ['Platform development', '$8K–$30K', 'Community platform, CRM'],
+      ['Content creation', '$6K–$20K', 'Video, courses, guides'],
+      ['Marketing and PR', '$8K–$25K', 'Ads, PR, outreach'],
+      ['Community tools', '$3K–$10K', 'Forum, newsletter, analytics'],
+      ['Digital products', '$3K–$12K', 'Courses, ebooks, templates'],
+      ['Contingency (20%)', '$6.6K–$23.4K', 'Buffer for platform changes'],
+    ], total: '$39.6K–$140.4K', note: 'Revenue target of $15K–$60K. Break-even goal 8–12 months after launch.'},
+  {n: '4', name: 'Community', when: 'Dec 2027 – Nov 2028', status: 'Future', budget: '$85K–$280K', funding: 'Partnerships, sponsorships, events, memberships, foundation grants',
+    rows: [
+      ['Events and gatherings', '$20K–$60K', '4–12 retreats, workshops and conferences'],
+      ['Contributor stipends', '$15K–$60K', 'Part-time roles, project grants, fellowships'],
+      ['Platform and tools', '$8K–$25K', 'Governance and collaboration software'],
+      ['Community operations', '$12K–$40K', 'Community manager, moderation, support'],
+      ['Working groups', '$10K–$35K', 'Budgets for 5–10 groups'],
+      ['Marketing and outreach', '$10K–$30K', 'Campaigns, partnerships, PR'],
+      ['Contingency (20%)', '$15K–$50K', 'Buffer for fast growth'],
+    ], total: '$90K–$300K', note: 'Revenue target of $40K–$150K. Burn of $7K–$25K a month, with 12–18 months of runway secured.'},
+  {n: '5', name: 'Physical build', when: 'Dec 2028 – Nov 2031', status: 'Future', budget: '$35M–$55M target', funding: 'Impact investors, green bonds, pre-sales, EPC finance, grants',
+    rows: [
+      ['Land and pre-development', '$1.5M–$5.3M', 'Land, due diligence, master plan, design, permits, financing'],
+      ['Site work and infrastructure', '$3M–$12M', 'Roads, utilities, grading, drainage'],
+      ['Communospheres (3–6)', '$4M–$18M', 'Domes, CLT, solar glazing, interiors'],
+      ['Homes', '$5M–$25M', 'Draft plan of about 110 homes, re-estimated in Stage 2'],
+      ['Central spire prototype', '$1M–$4M', '50–100 ft observation and meditation tower'],
+      ['Energy, water and food', '$1.5M–$5.7M', 'Solar, batteries, microgrid, wells, greenhouses'],
+      ['Wellness facilities', '$500K–$2M', 'Float tanks, red light, acoustic spaces'],
+      ['Soft costs', '$2.7M–$11.3M', 'Project management, inspections, insurance, sales, furniture, landscaping'],
+      ['Contingency (15–20%)', '$2.5M–$11M', 'Construction risk buffer'],
+    ], total: '$21.7M–$94.3M', note: 'Planned as 40% impact investors, 30% resident pre-sales, 20% EPC finance and 10% grants. The $35M–$55M target is the mid-range, 200-resident case.'},
 ];
+
+function StageTabs(): JSX.Element {
+  const [cur, setCur] = React.useState(1);
+  const refs = React.useRef<(HTMLButtonElement | null)[]>([]);
+  const onKey = (e: React.KeyboardEvent, i: number) => {
+    const map: Record<string, number> = {ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: STAGES.length - 1};
+    if (!(e.key in map)) return;
+    e.preventDefault();
+    const n = (map[e.key] + STAGES.length) % STAGES.length;
+    setCur(n); refs.current[n]?.focus();
+  };
+  return (
+    <div className="pg-stages">
+      <div className="pg-stage-tabs" role="tablist" aria-label="Development stages">
+        {STAGES.map((st, i) => (
+          <button key={st.n} type="button" role="tab" id={`stage-tab-${st.n}`} aria-controls={`stage-panel-${st.n}`} aria-selected={cur === i} tabIndex={cur === i ? 0 : -1}
+            ref={(el) => { refs.current[i] = el; }} onClick={() => setCur(i)} onKeyDown={(e) => onKey(e, i)}>
+            <b>Stage {st.n}</b><span>{st.name}</span>
+          </button>
+        ))}
+      </div>
+      {STAGES.map((st, i) => (
+        <div key={st.n} role="tabpanel" id={`stage-panel-${st.n}`} aria-labelledby={`stage-tab-${st.n}`} hidden={cur !== i} className="pg-stage-panel">
+          <div className="pg-facts">
+            <div className="pg-fact"><b>{st.budget}</b><span>Budget</span></div>
+            <div className="pg-fact"><b>{st.when}</b><span>{st.status}</span></div>
+            <div className="pg-fact"><b className="pg-fact-sm">{st.funding}</b><span>Funding sources</span></div>
+          </div>
+          <h3 style={{margin: 'var(--space-8) 0 var(--space-4)'}}>Use of funds, Stage {st.n}</h3>
+          <div className="pg-table-wrap">
+            <table className="pg-table">
+              <thead><tr><th>Category</th><th>Budget</th><th>What it pays for</th></tr></thead>
+              <tbody>
+                {st.rows.map(([c, b, w]) => <tr key={c}><th>{c}</th><td className="pg-nowrap">{b}</td><td>{w}</td></tr>)}
+                <tr className="pg-total"><th>Total</th><td className="pg-nowrap">{st.total}</td><td></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="pg-inline" style={{marginTop: 'var(--space-4)'}}>{st.note}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 const COMPS: {name: string; facts: string; lesson: string; links: [string, string][]}[] = [
   {name: 'Findhorn (Scotland)', facts: 'Spiritual community since 1962, roughly 300–500 people in the wider community. The Findhorn Foundation closed its educational programmes in September 2023.', lesson: 'Retreat and education income can stop. We model a low-retreat case and keep it off the critical path.', links: [['Wikipedia', 'https://en.wikipedia.org/wiki/Findhorn_Foundation'], ['Moray Council report', 'https://www.moray.gov.uk/media/ef3nfyaf/file163230.pdf']]},
@@ -68,22 +158,8 @@ export default function Investors(): JSX.Element {
       </Section>
 
       <Section alt id="raise" eyebrow="1 · The raise now" title="Small, staged and tied to milestones." lead="We are not raising $45M today. Capital is raised stage by stage, and each stage must pass a written gate before the next begins.">
-        <div className="pg-facts">
-          <div className="pg-fact"><b>Stage 1</b><span>Foundation · deliverables published, gate review Dec 2026 · budget $5K–$15K, about $2,500 spent</span></div>
-          <div className="pg-fact"><b>Stage 2</b><span>Design · Jan–Jun 2027 · $25K–$85K · grants, patronage and crowdfunding</span></div>
-          <div className="pg-fact"><b>Stage 5</b><span>Physical build · Dec 2028–Nov 2031 · target raise $35M–$55M</span></div>
-        </div>
-        <h3 style={{margin: 'var(--space-10) 0 var(--space-4)'}}>Use of funds, Stage 2</h3>
-        <div className="pg-table-wrap">
-          <table className="pg-table">
-            <thead><tr><th>Category</th><th>Budget</th></tr></thead>
-            <tbody>
-              {S2.map(([c, b]) => <tr key={c}><th>{c}</th><td>{b}</td></tr>)}
-              <tr><th>Total with contingency</th><td>$27.6K–$96K (the headline $25K–$85K excludes contingency)</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="pg-inline" style={{marginTop: 'var(--space-6)'}}>Stage 5 is planned as 40% impact investors, 30% resident pre-sales, 20% EPC finance and 10% grants. Gate milestones: <a href={stages + '#stage-gate-checklist'}>stage-gate checklist</a>.</p>
+        <StageTabs />
+        <p className="pg-inline" style={{marginTop: 'var(--space-6)'}}>Each stage opens only after the one before passes its gate. Gate milestones: <a href={stages + '#stage-gate-checklist'}>stage-gate checklist</a>.</p>
       </Section>
 
       <Section id="team" eyebrow="2 · Team and advisors" title="Founder-led today, with open seats.">

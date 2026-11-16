@@ -196,3 +196,21 @@
 .lc-page .pg-feature-more{display:inline-block;margin-top:var(--space-5);font-size:var(--text-sm);font-weight:600;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
 .lc-page .pg-feature-more:hover{border-bottom-color:currentColor}
 .lc-page .pg-cards+.pg-table-wrap{margin-top:var(--space-10)}
+/* Investors: stage tabs */
+.lc-page .pg-stage-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--space-2);margin-bottom:var(--space-6)}
+.lc-page .pg-stage-tabs button{font:inherit;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:var(--space-4);color:var(--ink);transition:border-color .2s,background .2s,box-shadow .2s}
+.lc-page .pg-stage-tabs button b{display:block;font:300 var(--text-xl)/1.1 var(--display);color:var(--gold)}
+.lc-page .pg-stage-tabs button span{display:block;font-size:var(--text-xs);color:var(--muted);margin-top:var(--space-1)}
+.lc-page .pg-stage-tabs button:hover{border-color:var(--gold)}
+.lc-page .pg-stage-tabs button[aria-selected="true"]{border-color:var(--gold);box-shadow:inset 0 -3px 0 var(--gold);background:var(--pearl,var(--card))}
+.lc-page .pg-stage-tabs button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lc-page .pg-fact b.pg-fact-sm{font-size:var(--text-lg);line-height:1.25}
+.lc-page .pg-nowrap{white-space:nowrap}
+.lc-page .pg-total th,.lc-page .pg-total td{font-weight:700}
+@media (max-width:700px){
+  .lc-page .pg-stage-tabs{gap:var(--space-1)}
+  .lc-page .pg-stage-tabs button{padding:var(--space-3) var(--space-1);text-align:center}
+  .lc-page .pg-stage-tabs button b{font-size:var(--text-base);white-space:nowrap}
+  .lc-page .pg-stage-tabs button span{display:none}
+  .lc-page .pg-stage-panel .pg-table th:nth-child(3),.lc-page .pg-stage-panel .pg-table td:nth-child(3){display:none}
+}
