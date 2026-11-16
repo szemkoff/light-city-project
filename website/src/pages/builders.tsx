@@ -12,10 +12,10 @@ export default function Builders(): JSX.Element {
       image="form-gridshell">
       <Section eyebrow="Systems" title="Every structure uses materials already standing elsewhere." lead="From Norway's 85.4 m Mjøstårnet timber tower to commercial geodesic domes, each system carries a technology readiness level (TRL).">
         <Cards items={[
-          {kicker: 'Structure · TRL 7–9', title: 'Communosphere domes', img: 'tech-geodesic-dome', text: '30–90 m domes in cross-laminated timber and solar glass. Geometry that is both beautiful and proven.'},
-          {kicker: 'Energy', title: 'Solar microgrid', img: 'tech-flow-battery', text: '2–5 MWp of solar in Phase 1, building-integrated photovoltaics and long-duration storage.'},
-          {kicker: 'Water', title: 'Closed water loops', img: 'tech-living-machine', text: 'Rainwater harvesting, living-machine treatment and atmospheric water as backup.'},
-          {kicker: 'Materials', title: 'Low-carbon envelope', img: 'tech-hempcrete', text: 'Hempcrete, mycelium insulation and mass timber chosen for embodied carbon and health.'},
+          {to: '/docs/technical/technology-catalog#geodesic-dome-systems', kicker: 'Structure · TRL 7–9', title: 'Communosphere domes', img: 'tech-geodesic-dome', text: '30–90 m domes in cross-laminated timber and solar glass. Geometry that is both beautiful and proven.'},
+          {to: '/docs/concepts/energy-systems#track-1-physical-microgrid-conventional-power', kicker: 'Energy', title: 'Solar microgrid', img: 'tech-flow-battery', text: '2–5 MWp of solar in Phase 1, building-integrated photovoltaics and long-duration storage.'},
+          {to: '/docs/technical/technology-catalog#water--waste-systems', kicker: 'Water', title: 'Closed water loops', img: 'tech-living-machine', text: 'Rainwater harvesting, living-machine treatment and atmospheric water as backup.'},
+          {to: '/docs/technical/technology-catalog#materials-science', kicker: 'Materials', title: 'Low-carbon envelope', img: 'tech-hempcrete', text: 'Hempcrete, mycelium insulation and mass timber chosen for embodied carbon and health.'},
         ]} />
       </Section>
 

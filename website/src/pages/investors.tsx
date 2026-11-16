@@ -22,9 +22,9 @@ export default function Investors(): JSX.Element {
 
       <Section alt eyebrow="Why it is investable" title="Ambitious in form. Conservative in engineering.">
         <Cards items={[
-          {title: 'Proven infrastructure', img: 'tech-bipv-solar-facade', text: 'Microgrid, mass timber and geodesic structures already stand elsewhere. 2–5 MWp of solar in Phase 1 is carried as engineering, not research.'},
-          {title: 'Phased commitments', img: 'tech-clt-construction', text: 'Capital is staged with each development stage, so every tranche is tied to a documented milestone and decision point.'},
-          {title: 'Separated research track', img: 'journey-awakening', text: 'Consciousness and experiential programs run on their own track with honest readiness levels, so they never carry the core business case.'},
+          {to: '/docs/technical/technology-horizon#proven--build-with-it-now', title: 'Proven infrastructure', img: 'tech-bipv-solar-facade', text: 'Microgrid, mass timber and geodesic structures already stand elsewhere. 2–5 MWp of solar in Phase 1 is carried as engineering, not research.'},
+          {to: '/docs/project/development-stages#stage-gate-checklist', title: 'Phased commitments', img: 'tech-clt-construction', text: 'Capital is staged with each development stage, so every tranche is tied to a documented milestone and decision point.'},
+          {to: '/docs/research/open-questions#research-principles', title: 'Separated research track', img: 'journey-awakening', text: 'Consciousness and experiential programs run on their own track with honest readiness levels, so they never carry the core business case.'},
         ]} />
       </Section>
 

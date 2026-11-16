@@ -35,7 +35,7 @@ export default function Technology(): JSX.Element {
       </Section>
 
       <Section id="systems" eyebrow="City systems" title="Five systems keep the city alive.">
-        <Feature
+        <Feature to="/docs/concepts/energy-systems#track-1-physical-microgrid-conventional-power"
           img="tech-bipv-solar-facade"
           alt="Building-integrated solar glass facade"
           kicker="Energy"
@@ -45,7 +45,7 @@ export default function Technology(): JSX.Element {
           <p>Ground-mounted arrays, solar glass on the domes and panels on the spire feed a community-owned microgrid. Batteries cover the night; the regional grid and renewable gensets (biogas or bio-ethanol, never diesel) cover long cloudy spells. Micro-hydro and geothermal heat join where the chosen land has them.</p>
           <p>Sodium-ion is the preferred storage chemistry if 2026–2027 pricing holds. Multi-day iron-air storage becomes relevant when Phase 2 loads justify it.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/technical/technology-catalog#water--waste-systems"
           reverse
           img="tech-living-machine"
           alt="Living machine water treatment with plants in tanks"
@@ -56,7 +56,7 @@ export default function Technology(): JSX.Element {
           <p>Rain is captured from dome and roof surfaces, stored and filtered. Wastewater passes through planted treatment systems and wetlands, then returns as irrigation for the food forest.</p>
           <p>Each step is proven. Sizing depends on the site's rainfall, which is why site selection in Stage 1 matters.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/technical/technology-catalog#food-production"
           img="tech-agroforestry"
           alt="Layered agroforestry with fruit trees and crops"
           kicker="Food"
@@ -65,7 +65,7 @@ export default function Technology(): JSX.Element {
           specs={[['Phase 1', '1–2 ha agroforestry + greenhouses'], ['Phase 2', '5–10 ha, near self-sufficiency'], ['Indoor', 'Herbs, microgreens, mushrooms'], ['Loop', 'Kitchen compost back to soil']]}>
           <p>Solar greenhouses and layered agroforestry use a fraction of the energy of indoor farms. Aquaponics adds fish and greens in one loop. Fully indoor growing is kept for niche crops only.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/technical/technology-catalog#structural-systems"
           reverse
           img="tech-clt-construction"
           alt="Cross-laminated timber panels being assembled"
@@ -76,7 +76,7 @@ export default function Technology(): JSX.Element {
           <p>Factory-made timber panels go up fast and store carbon. The tallest timber building today is 86.6 m, so a 60–120 m timber-steel spire sits within the demonstrated range, though its exact form is new.</p>
           <p>3D-printed construction handles foundations, garden walls and studios; prefabricated CLT remains the main method for the domes.</p>
         </Feature>
-        <Feature
+        <Feature to="/docs/research/open-questions#c-wellbeing-and-environment-answer-in-stages-56"
           img="research"
           alt="Researcher with environmental sensors in a calm interior"
           kicker="Wellbeing"
@@ -90,10 +90,10 @@ export default function Technology(): JSX.Element {
 
       <Section alt night id="scaling" eyebrow="Scaling in 2026" title="What changed this year." lead="These technologies moved from labs into factories in 2026. Light City will decide between them with field data from 2027–2028.">
         <Cards items={[
-          {title: 'Perovskite-silicon tandem solar', kicker: 'Energy', text: 'Commercial production began in the US with modules above 27% efficiency, delivering in 2027. Candidate for the spire canopy and dome glazing.'},
-          {title: 'Sodium-ion batteries', kicker: 'Storage', text: 'Mass production by end of 2026, safe and cold-tolerant, with costs approaching LFP. Preferred Phase 1 storage if pricing holds.'},
-          {title: 'Enhanced geothermal', kicker: 'Firm power', text: 'First commercial plant at 33 MW in Utah in 2026. Site-dependent option for always-on heat and power from Phase 2.'},
-          {title: 'AI building digital twins', kicker: 'Operations', text: 'Studies report 15–40% HVAC savings. The Stage 3 design model becomes the operating twin of the real city.'},
+          {to: '/docs/technical/technology-horizon#perovskite-silicon-tandem-solar', title: 'Perovskite-silicon tandem solar', kicker: 'Energy', text: 'Commercial production began in the US with modules above 27% efficiency, delivering in 2027. Candidate for the spire canopy and dome glazing.'},
+          {to: '/docs/technical/technology-horizon#sodium-ion-batteries', title: 'Sodium-ion batteries', kicker: 'Storage', text: 'Mass production by end of 2026, safe and cold-tolerant, with costs approaching LFP. Preferred Phase 1 storage if pricing holds.'},
+          {to: '/docs/technical/technology-horizon#enhanced-geothermal', title: 'Enhanced geothermal', kicker: 'Firm power', text: 'First commercial plant at 33 MW in Utah in 2026. Site-dependent option for always-on heat and power from Phase 2.'},
+          {to: '/docs/technical/technology-horizon#ai-building-digital-twins', title: 'AI building digital twins', kicker: 'Operations', text: 'Studies report 15–40% HVAC savings. The Stage 3 design model becomes the operating twin of the real city.'},
         ]} />
       </Section>
 

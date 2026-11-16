@@ -187,3 +187,6 @@
 .lc-page a.pg-card-link{color:inherit;text-decoration:none;transition:transform .2s,border-color .2s}
 .lc-page a.pg-card-link:hover{transform:translateY(-2px);border-color:var(--gold-hi)}
 .lc-page .pg-card-link .pg-topic-go{display:inline-block;margin-top:var(--space-3)}
+
+.lc-page .pg-feature-more{display:inline-block;margin-top:var(--space-5);font-size:var(--text-sm);font-weight:600;color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.lc-page .pg-feature-more:hover{border-bottom-color:currentColor}
