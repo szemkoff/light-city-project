@@ -146,7 +146,7 @@
   <!-- Current status indicator -->
   <rect x="50" y="520" width="150" height="60" fill="#667eea" opacity="0.2" stroke="#667eea" stroke-width="2" rx="5"/>
   <text x="125" y="545" font-family="Arial, sans-serif" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Current Status:</text>
-  <text x="125" y="565" font-family="Arial, sans-serif" font-size="12" fill="#667eea" text-anchor="middle" font-weight="bold">Stage 1 - 60%</text>
+  <text x="125" y="565" font-family="Arial, sans-serif" font-size="12" fill="#667eea" text-anchor="middle" font-weight="bold">Stage 1 - current (finishing)</text>
   
   <!-- Timeline estimate -->
   <rect x="220" y="520" width="460" height="60" fill="white" stroke="#667eea" stroke-width="2" rx="5" opacity="0.95"/>

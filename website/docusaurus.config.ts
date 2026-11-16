@@ -15,6 +15,13 @@ const config: Config = {
 
   onBrokenLinks: 'warn',
 
+  stylesheets: [
+    {
+      href: 'https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500&f[]=switzer@400,500,600&display=swap',
+      type: 'text/css',
+    },
+  ],
+
   customFields: {
     web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY ?? '',
   },
@@ -72,11 +79,11 @@ const config: Config = {
       },
     ],
     navbar: {
-      // Wordmark is baked into the logo image (see static/img/light-city-logo-navbar.png)
-      title: '',
+      title: 'Light City',
       logo: {
         alt: 'Light City',
-        src: 'img/light-city-logo-navbar.png',
+        src: 'img/light-city-mark.svg',
+        srcDark: 'img/light-city-mark-dark.svg',
         href: '/',
       },
       items: [

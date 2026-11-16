@@ -363,19 +363,19 @@ CBR residents **increase** community capacity and reduce operational costs while
 - Include in governance structure
 - Budget for CBR in financial model
 
-### **Stage 3: Pilot Program** (2026-2027)
+### **Stage 3: Pilot Program** (2027-2028)
 - Launch with 5-10 CBR residents
 - Test contribution tracking system
 - Refine policies based on experience
 - Gather testimonials and data
 
-### **Stage 4: Scale** (2027-2028)
+### **Stage 4: Scale** (2028-2029)
 - (planned) Expand to 20-30% of residents
 - (planned) Implement digital tracking platform
 - (planned) Establish CBR Council
 - (planned) Create training program for coordinators
 
-### **Stage 5-6: Mature System** (2028+)
+### **Stage 5-6: Mature System** (2029+)
 - (planned) CBR as core community feature
 - (planned) Replication guide for other communities
 - (planned) Research publication on outcomes
@@ -470,7 +470,7 @@ If you're drawn to Light City but concerned about affordability, **CBR might be 
 1. Read our [Governance Framework](./governance.md)
 2. Review [Development Stages](./development-stages.md)
 3. Join our mailing list for CBR program updates
-4. Apply when we launch pilot program (Q3 2026)
+4. Apply when we launch pilot program (Q3 2027)
 
 ### **For Paying Residents**:
 CBR residents **enhance** your experience by:

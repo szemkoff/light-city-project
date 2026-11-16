@@ -2,53 +2,61 @@
 
 /* Light Theme Colors */
 :root {
-  --ifm-color-primary: #667eea;
-  --ifm-color-primary-dark: #5a67d8;
-  --ifm-color-primary-darker: #4c51bf;
-  --ifm-color-primary-darkest: #3f46b8;
-  --ifm-color-primary-light: #7c8ff5;
-  --ifm-color-primary-lighter: #929dfd;
-  --ifm-color-primary-lightest: #c5cef8;
-  
+  /* Light City palette (shared with the homepage): pearl, ink and gold */
+  --ifm-color-primary: #8a5f17;
+  --ifm-color-primary-dark: #7c5615;
+  --ifm-color-primary-darker: #755013;
+  --ifm-color-primary-darkest: #614210;
+  --ifm-color-primary-light: #986819;
+  --ifm-color-primary-lighter: #9f6d1b;
+  --ifm-color-primary-lightest: #b47b1e;
+
+  --ifm-background-color: #fbf8f2;
+  --ifm-background-surface-color: #f6f1e7;
+  --ifm-font-color-base: #1d1a15;
+  --ifm-heading-color: #1d1a15;
+  --ifm-navbar-background-color: rgba(246, 241, 231, 0.92);
+  --ifm-footer-background-color: #0c0e15;
+
+  --ifm-font-family-base: 'Switzer', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-family: 'Zodiak', 'Iowan Old Style', Georgia, serif;
+  --ifm-heading-font-weight: 500;
+
   --ifm-code-font-size: 95%;
 }
 
-/* Dark Theme Colors - Light City Custom */
+/* Dark Theme Colors - Light City night palette */
 [data-theme='dark'] {
-  /* Primary Purple Gradient */
-  --ifm-color-primary: #667eea;
-  --ifm-color-primary-dark: #4c5ed4;
-  --ifm-color-primary-darker: #3d4fc7;
-  --ifm-color-primary-darkest: #2f3fa3;
-  --ifm-color-primary-light: #8098f0;
-  --ifm-color-primary-lighter: #96a8f3;
-  --ifm-color-primary-lightest: #c1ccf9;
-  
-  /* Backgrounds */
-  --ifm-background-color: #0a0a0a;
-  --ifm-background-surface-color: #1a1a2e;
-  
-  /* Text Colors */
-  --ifm-font-color-base: #e0e0e0;
-  --ifm-font-color-secondary: #b0b0b0;
-  --ifm-heading-color: #ffffff;
-  
-  /* Links - Gold Accent */
-  --ifm-link-color: #FFD700;
-  --ifm-link-hover-color: #FFA500;
-  
-  /* Code Blocks */
-  --ifm-code-background: #16213e;
-  
-  /* Navbar */
-  --ifm-navbar-background-color: rgba(10, 10, 10, 0.95);
-  --ifm-navbar-shadow: 0 1px 0 rgba(102, 126, 234, 0.1);
-  
-  /* Footer */
-  --ifm-footer-background-color: #0a0a0a;
-  
-  /* Cards & Containers */
-  --ifm-card-background-color: #1a1a2e;
+  --ifm-color-primary: #e9b85a;
+  --ifm-color-primary-dark: #e5aa3b;
+  --ifm-color-primary-darker: #e3a32c;
+  --ifm-color-primary-darkest: #c9881b;
+  --ifm-color-primary-light: #edc679;
+  --ifm-color-primary-lighter: #efcd88;
+  --ifm-color-primary-lightest: #f6dfb2;
+
+  --ifm-background-color: #0c0e15;
+  --ifm-background-surface-color: #141725;
+
+  --ifm-font-color-base: #f3eee4;
+  --ifm-font-color-secondary: #aaa395;
+  --ifm-heading-color: #f3eee4;
+
+  --ifm-link-color: #f6d38c;
+  --ifm-link-hover-color: #e9b85a;
+
+  --ifm-code-background: #141725;
+
+  --ifm-navbar-background-color: rgba(12, 14, 21, 0.92);
+  --ifm-navbar-shadow: 0 1px 0 rgba(243, 238, 228, 0.08);
+
+  --ifm-footer-background-color: #0c0e15;
+  --ifm-card-background-color: #141725;
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(29, 26, 21, 0.08);
 }
 
 /* Mermaid diagram styling */
@@ -113,25 +121,25 @@ html {
 
 /* Button Enhancements */
 .button--primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #e9b85a;
   border: none;
-  color: #ffffff !important;
+  color: #1d1a15 !important;
   transition: all 0.3s ease;
 }
 
 a.button--primary,
 a.button--primary:visited {
-  color: #ffffff !important;
+  color: #1d1a15 !important;
 }
 
 .button--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
-  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(233, 184, 90, 0.4);
+  color: #1d1a15 !important;
 }
 
 [data-theme='dark'] .button--primary:hover {
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
+  box-shadow: 0 8px 20px rgba(233, 184, 90, 0.6);
 }
 
 .button--secondary {
@@ -154,7 +162,7 @@ a.button--primary:visited {
 }
 
 [data-theme='dark'] .card:hover {
-  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 12px 24px rgba(233, 184, 90, 0.2);
 }
 
 /* Link Animations */
@@ -164,14 +172,14 @@ a {
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8a5f17 0%, #e9b85a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 [data-theme='dark'] .gradient-text {
-  background: linear-gradient(135deg, #8098f0 0%, #FFD700 100%);
+  background: linear-gradient(135deg, #e9b85a 0%, #f6d38c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -192,11 +200,11 @@ a {
 
 /* Glow Effect */
 .glow {
-  box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 0 20px rgba(233, 184, 90, 0.3);
 }
 
 [data-theme='dark'] .glow {
-  box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 0 30px rgba(233, 184, 90, 0.5);
 }
 
 /* Responsive Typography */
@@ -214,26 +222,15 @@ a {
   }
 }
 
-/* Docs / blog navbar: horizontal Light City wordmark (PNG includes text) */
-.navbar__brand .navbar__title {
-  display: none;
-}
-
+/* Docs / blog navbar: Light City line mark + wordmark (matches the homepage) */
 .navbar__logo {
-  height: auto;
+  height: 1.75rem;
+  margin-right: 0.5rem;
 }
 
-.navbar__logo img {
-  height: 2rem;
-  width: auto;
-  max-width: min(220px, 58vw);
-  object-fit: contain;
-  display: block;
-}
-
-@media (min-width: 997px) {
-  .navbar__logo img {
-    height: 2.25rem;
-    max-width: 260px;
-  }
+.navbar__title {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
 }

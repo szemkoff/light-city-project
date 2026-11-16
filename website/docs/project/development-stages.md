@@ -16,15 +16,19 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Executive Summary
 
-### Project Timeline (2025-2031+)
+:::note Schedule update — November 2026
+Stage 1 has run longer than the original two-to-three-month plan and is still being finished. Every later stage has moved back by about one year. Durations and budgets are unchanged.
+:::
+
+### Project Timeline (2025-2032+)
 | Stage | Duration | Timeline | Investment | Status |
 |-------|----------|----------|------------|--------|
-| **S1: Foundation** | 2-3 months | Oct-Dec 2025 | $5K-$15K | ~85% complete |
-| **S2: Design** | 4-6 months | Jan-Jun 2026 | $25K-$85K | Upcoming |
-| **S3: Digital** | 3-5 months | Jul-Nov 2026 | $35K-$125K | Planned |
-| **S4: Community** | 6-12 months | Dec 2026-Nov 2027 | $85K-$280K | Planned |
-| **S5: Physical** | 18-36 months | Dec 2027-Nov 2030 | $22M-$95M | Target |
-| **S6: Operations** | Ongoing | 2031+ | $1.8M-$4.5M/yr | Long-term |
+| **S1: Foundation** | Extended | Oct 2025-Dec 2026 | $5K-$15K | Current: finishing |
+| **S2: Design** | 4-6 months | Jan-Jun 2027 | $25K-$85K | Upcoming |
+| **S3: Digital** | 3-5 months | Jul-Nov 2027 | $35K-$125K | Planned |
+| **S4: Community** | 6-12 months | Dec 2027-Nov 2028 | $85K-$280K | Planned |
+| **S5: Physical** | 18-36 months | Dec 2028-Nov 2031 | $22M-$95M | Target |
+| **S6: Operations** | Ongoing | 2032+ | $1.8M-$4.5M/yr | Long-term |
 
 ### Financial Overview
 | Metric | Low Scenario | Mid Scenario | High Scenario |
@@ -53,8 +57,8 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Stage 1: Foundation & Vision
 
-**Duration**: 2-3 months (Oct 2025 - Dec 2025)  
-**Status**: CURRENT (85% complete)  
+**Duration**: Planned 2-3 months; extended (Oct 2025 - Dec 2026)  
+**Status**: CURRENT (finishing remaining deliverables)  
 **Total Budget**: $5K-$15K  
 **Funding Sources**: Founder equity, personal investment
 
@@ -73,7 +77,7 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ![Stage Progress](/img/diagrams/stage-progress.svg)
 
-*Current progress: 60% complete in Stage 1 - Foundation & Vision*
+*Current status: Stage 1 - Foundation & Vision, finishing remaining deliverables (updated November 2026)*
 
 ### Objectives
 - Establish core philosophical and spiritual foundations
@@ -121,7 +125,7 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Stage 2: World-Building & Design
 
-**Duration**: 4-6 months (Jan 2026 - Jun 2026)  
+**Duration**: 4-6 months (Jan 2027 - Jun 2027)  
 **Status**: UPCOMING  
 **Total Budget**: $25K-$85K  
 **Funding Sources**: Arts/culture grants, patronage, crowdfunding (Kickstarter/Patreon)
@@ -184,7 +188,7 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Stage 3: Digital Presence
 
-**Duration**: 3-5 months (Jul 2026 - Nov 2026)  
+**Duration**: 3-5 months (Jul 2027 - Nov 2027)  
 **Status**: FUTURE  
 **Total Budget**: $35K-$125K  
 **Funding Sources**: Digital products (courses, memberships), donations, sponsorships
@@ -250,7 +254,7 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Stage 4: Community & Collaboration
 
-**Duration**: 6-12 months (Dec 2026 - Nov 2027)  
+**Duration**: 6-12 months (Dec 2027 - Nov 2028)  
 **Status**: FUTURE  
 **Total Budget**: $85K-$280K  
 **Funding Sources**: Partnerships, sponsorships, event revenue, memberships, foundation grants
@@ -318,7 +322,7 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Stage 5: Physical Manifestation
 
-**Duration**: 18-36 months (Dec 2027 - Nov 2030)  
+**Duration**: 18-36 months (Dec 2028 - Nov 2031)  
 **Status**: FUTURE  
 **Total Budget**: $22M-$95M (Phase 1 Hamlet: 150-300 residents)  
 **Funding Sources**: Impact investors, green bonds, pre-sales, EPC finance, government grants
@@ -429,7 +433,7 @@ This roadmap runs from initial vision through design, community, construction, a
 
 ## Stage 6: Living System & Evolution
 
-**Duration**: Ongoing (perpetual, starting 2031+)  
+**Duration**: Ongoing (perpetual, starting 2032+)  
 **Status**: FUTURE  
 **Annual Operating Budget**: $1.8M-$4.5M/year (Phase 1 steady-state, 200 residents)  
 **Funding Sources**: Resident fees (60%), retreat revenue (20%), events/agritourism (10%), licensing/consulting (10%)
@@ -721,8 +725,8 @@ These stages are guideposts, not rigid requirements. The project may:
 
 ---
 
-**Last Updated**: November 14, 2025  
-**Last Reviewed**: November 14, 2025  
+**Last Updated**: November 16, 2026  
+**Last Reviewed**: November 16, 2026  
 **Version**: 2.0 (Comprehensive Financial Model)  
 **Author**: Stan Zemskoff (Founder)  
 **Related**: [Architecture](/docs/design/architecture), [Technology Catalog](/docs/technical/technology-catalog), [Energy Systems](/docs/concepts/energy-systems)
