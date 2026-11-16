@@ -1,8 +1,11 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Site, {Section, Cards, DocLinks, Cta, Feature, Jump} from '../components/Site';
 
 export default function City(): JSX.Element {
+  const model = useBaseUrl('/model/index.html?phase=1');
+  const modelImg = useBaseUrl('img/home/city-phase-3.webp');
   return (
     <Site
       title="The City"
@@ -10,9 +13,11 @@ export default function City(): JSX.Element {
       eyebrow="The city"
       heading={<>A city laid out <em>like a living system.</em></>}
       sub="Concentric rings from a central spire to a wild buffer: gathering at the heart, homes in the middle, food and energy at the edge. Everything is walkable."
-      image="city-aerial">
+      image="city-aerial"
+      actions={<><a className="btn" href={model}>Explore the 3D model</a><a className="btn btn-ghost" href="#phases">See the three phases</a></>}>
       <Section>
         <Jump items={[
+          {href: '#model', label: '3D model'},
           {href: '#rings', label: 'The rings'},
           {href: '#structures', label: 'Key structures'},
           {href: '#phases', label: 'Growth by phase'},
@@ -24,6 +29,18 @@ export default function City(): JSX.Element {
           <div className="pg-fact"><b>3</b><span>communosphere domes, 30–45 m across</span></div>
           <div className="pg-fact"><b>60–120 m</b><span>central spire in Phase 1</span></div>
           <div className="pg-fact"><b>10 min</b><span>walk from any home to the plaza</span></div>
+        </div>
+      </Section>
+
+      <Section id="model">
+        <div className="pg-model">
+          <img src={modelImg} alt="Rendering from the 3D model: the Phase 3 town with twelve domes around the central spire, timber terraces and a wide belt of solar and greenhouses" loading="lazy" width="1600" height="1000" />
+          <div>
+            <p className="eyebrow">Interactive 3D</p>
+            <h2>Walk the whole plan in 3D.</h2>
+            <p className="lead">One model of the city. Orbit, zoom and switch between Phase 1, 2 and 3 to see what each step adds, from the pilot hamlet to the town.</p>
+            <a className="btn" href={model}>Explore the 3D model</a>
+          </div>
         </div>
       </Section>
 
@@ -121,6 +138,7 @@ export default function City(): JSX.Element {
             </tbody>
           </table>
         </div>
+        <p style={{marginTop: 'var(--space-8)'}}><a className="btn" href={model}>Explore the 3D model</a></p>
       </Section>
 
       <Section id="beyond-the-box" eyebrow="Beyond the box" title="Curved, healthy and affordable." lead="High-tech design, low-tech materials: computers find efficient curved shapes, then we build them from earth, stone, timber, bamboo and lime that residents can handle, chosen from what each site provides. Curves use less material, hold heat better and are rated more beautiful in brain-imaging studies.">

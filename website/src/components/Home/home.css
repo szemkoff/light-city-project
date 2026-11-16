@@ -408,3 +408,12 @@ html:has(.lc-home) .main-wrapper{overflow:visible}
 
 .lc-home a.home{text-decoration:none;color:inherit;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .lc-home a.home:hover{transform:translateY(-2px);box-shadow:0 10px 24px -16px rgba(29,26,21,.4)}
+.lc-home .model-card{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(var(--space-6),4vw,var(--space-12));align-items:center;margin-top:var(--space-12);padding:clamp(var(--space-4),2vw,var(--space-6));border:1px solid rgba(255,255,255,.14);border-radius:var(--r-lg);background:rgba(255,255,255,.04)}
+.lc-home .model-card-art img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:calc(var(--r-lg) - 6px);transition:transform .6s var(--ease)}
+.lc-home .model-card-art{display:block;overflow:hidden;border-radius:calc(var(--r-lg) - 6px)}
+.lc-home .model-card-art:hover img{transform:scale(1.03)}
+.lc-home .model-card h3{font:400 var(--text-xl)/1.15 var(--display);color:#fff;margin:var(--space-2) 0 var(--space-3)}
+.lc-home .model-card p{color:var(--night-muted)}
+.lc-home .model-card .eyebrow{color:var(--gold-glow)}
+.lc-home .model-card .btn{margin-top:var(--space-6)}
+@media (max-width:860px){.lc-home .model-card{grid-template-columns:1fr}}
