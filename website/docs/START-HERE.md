@@ -59,9 +59,9 @@ Light City began as a vision that its founder and others describe receiving thro
 
 | | |
 |---|---|
-| **Current stage** | S1 Foundation, finishing (Oct 2025 – Dec 2026) |
-| **Done** | Vision and philosophy, architecture concept, financial model, governance and residency frameworks, technology research, five candidate site regions, location-specific materials, nature commitments, a new public website and this library |
-| **Finishing in Stage 1** | Research agenda, partner outreach, founding-circle interest list |
+| **Current stage** | S1 Foundation, deliverables published; gate review December 2026 (Oct 2025 – Dec 2026) |
+| **Done** | Vision and philosophy, architecture concept, household financial model, governance and residency frameworks, economy and migration plan (draft), technology catalog and urban retrofit guide, five candidate site regions, location-specific materials, nature commitments, a 3D reference model, a new public website with founding-circle sign-up, and this library |
+| **Open before the Stage 1 gate** | Debt service in the financial model, confirming the fee basis and economy thresholds, counsel for the entity and securities path, first advisors |
 | **Next** | S2 Design (Jan – Jun 2027): site selection, structural feasibility of the spire, design development |
 | **First residents** | Targeted for 2031, at the end of Stage 5 |
 
