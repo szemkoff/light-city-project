@@ -69,9 +69,11 @@ let h = '';
 for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; h += `<line class="spoke" x1="${Math.cos(a) * 44}" y1="${Math.sin(a) * 44}" x2="${Math.cos(a) * 252}" y2="${Math.sin(a) * 252}"/>`; }
 R.forEach(([k, a, b]) => { h += `<path class="ring" data-z="${k}" d="${ann(a, b)}" fill-rule="evenodd" tabindex="0" role="button" aria-label="${Z[k].t}"/>`; });
 // inner ring buildings (8), middle (12 small)
-for (let i = 0; i < 8; i++) { const a = (i + .5) / 8 * Math.PI * 2; h += `<circle class="bldg" data-ph="${i < 3 ? 1 : i < 6 ? 2 : 3}" cx="${Math.cos(a) * 69}" cy="${Math.sin(a) * 69}" r="9"/>`; }
+// Temple and learning pavilions at the 3D model's angles (counter-clockwise from east): 3, then 6, then 8
+[[105, 1], [225, 1], [345, 1], [45, 2], [165, 2], [285, 2], [15, 3], [195, 3]].forEach(([deg, ph]) => { const a = -deg * Math.PI / 180; h += `<circle class="bldg" data-ph="${ph}" cx="${Math.cos(a) * 69}" cy="${Math.sin(a) * 69}" r="9"/>`; });
 for (let i = 0; i < 16; i++) { const a = i / 16 * Math.PI * 2 + .1; h += `<rect class="bldg" data-ph="${i < 4 ? 1 : i < 10 ? 2 : 3}" x="${Math.cos(a) * 123 - 7}" y="${Math.sin(a) * 123 - 5}" width="14" height="10" rx="2" transform="rotate(${a * 180 / Math.PI + 90} ${Math.cos(a) * 123} ${Math.sin(a) * 123})"/>`; }
-const domeOrder = [0, 4, 8, 2, 6, 10, 1, 7, 3, 5, 9, 11];
+// Same order as the 3D model (static/model/city.js PHASES): 3 domes, then 8, then 12
+const domeOrder = [2, 10, 6, 0, 8, 4, 3, 9, 1, 11, 7, 5];
 for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2 - Math.PI / 2, rank = domeOrder.indexOf(i); h += `<circle class="dome" data-ph="${rank < 3 ? 1 : rank < 8 ? 2 : 3}" cx="${Math.cos(a) * 178}" cy="${Math.sin(a) * 178}" r="20"/>`; }
 for (let i = 0; i < 36; i++) { const a = i / 36 * Math.PI * 2; h += `<circle class="bldg lit" cx="${Math.cos(a) * 229}" cy="${Math.sin(a) * 229}" r="${i % 3 ? 3 : 5}" style="fill:rgba(140,190,120,${i % 3 ? .35 : .5})"/>`; }
 h += `<circle class="pulse" r="10"/><circle class="spire-dot" r="7"/>`;

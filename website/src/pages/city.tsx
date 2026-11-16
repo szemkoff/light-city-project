@@ -103,7 +103,12 @@ export default function City(): JSX.Element {
         </Feature>
       </Section>
 
-      <Section alt id="phases" eyebrow="Growth by phase" title="Built in steps, each one proven before the next.">
+      <Section alt id="phases" eyebrow="Growth by phase" title="Built in steps, each one proven before the next." lead="One radial plan grows outward from the same spire and plaza. Each phase has its own 3D model; open one to orbit it.">
+        <Cards items={[
+          {to: 'pathname:///model/index.html?phase=1', more: 'Open the Phase 1 model', img: 'city-phase-1', alt: 'Aerial view of the Phase 1 pilot hamlet: a slender spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, surrounded by woodland', kicker: 'Phase 1 · 200 residents', title: 'Pilot hamlet', text: 'A 90 m spire, one temple and two learning pavilions, three 40 m domes and about 30 earth homes on a 20–30 acre core. Empty dome plots stay as orchards.'},
+          {to: 'pathname:///model/index.html?phase=2', more: 'Open the Phase 2 model', img: 'city-phase-2', alt: 'Aerial view of the Phase 2 village: eight domes around the spire, rings of earth-home courtyard clusters and an outer belt of solar rows and greenhouses', kicker: 'Phase 2 · 1,500 residents', title: 'Village', text: 'The spire is extended to 150 m, eight domes stand on the dome ring, courtyard clusters of earth homes form a new ring and a food and energy belt is added. About 160 acres.'},
+          {to: 'pathname:///model/index.html?phase=3', more: 'Open the Phase 3 model', img: 'city-phase-3', alt: 'Aerial view of the Phase 3 town: twelve domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses', kicker: 'Phase 3 · 8,000+ residents', title: 'Town', text: 'A 240 m spire, twelve ring domes and six 80 m district domes, crescents of two-to-three storey timber terraces with green roofs and a wide food and energy belt. About one square mile.'},
+        ]} />
         <div className="pg-table-wrap">
           <table className="pg-table">
             <thead><tr><th></th><th>Phase 1 · Pilot Hamlet</th><th>Phase 2 · Village</th><th>Phase 3 · Town</th></tr></thead>
