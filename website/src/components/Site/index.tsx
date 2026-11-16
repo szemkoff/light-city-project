@@ -7,15 +7,8 @@ import {useLocation} from '@docusaurus/router';
 import '../Home/home.css';
 import './site.css';
 import SiteFooter, {Mark} from './SiteFooter';
+import {NAV} from './menu';
 
-const NAV = [
-  {to: '/about', label: 'Vision'},
-  {to: '/explore', label: 'Explore'},
-  {to: '/residents', label: 'Residents'},
-  {to: '/investors', label: 'Investors'},
-  {to: '/builders', label: 'Builders'},
-  {to: '/researchers', label: 'Researchers'},
-];
 
 
 type Props = {
@@ -54,11 +47,21 @@ export default function Site({title, description, eyebrow, heading, sub, image, 
             <Link to="/" className="brand" aria-label="Light City home"><Mark /><span>Light City</span></Link>
             <nav aria-label="Primary">
               <ul className={'nav-links' + (open ? ' open' : '')} id="navLinks">
-                {NAV.map((n) => (
-                  <li key={n.to}>
-                    <Link to={n.to} className={here(n.to) ? 'active' : undefined} aria-current={here(n.to) ? 'page' : undefined}>{n.label}</Link>
-                  </li>
-                ))}
+                {NAV.map((n) => {
+                  const on = here(n.to) || !!n.children?.some((c) => here(c.to));
+                  return (
+                    <li key={n.to} className={n.children ? 'has-sub' : undefined}>
+                      <Link to={n.to} className={on ? 'active' : undefined} aria-current={here(n.to) ? 'page' : undefined} aria-haspopup={n.children ? 'true' : undefined}>{n.label}</Link>
+                      {n.children ? (
+                        <ul className="sub" aria-label={n.label}>
+                          {n.children.map((c) => (
+                            <li key={c.to}><Link to={c.to} className={here(c.to) ? 'active' : undefined} aria-current={here(c.to) ? 'page' : undefined}>{c.label}</Link></li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  );
+                })}
                 <li><Link to="/docs/START-HERE" className="nav-docs">Docs</Link></li>
               </ul>
             </nav>
