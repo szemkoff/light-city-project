@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - Similar Movements: a sourced comparison of visionary cities, ecovillages, intentional communities and planned towns, with lessons for Light City
 - The Venus Project added to the "What others teach us" table in Economy and Migration
+- Planning principles: a sourced design page on walking distance, movement (car-free core, mobility hubs, morning and evening flows), scattered work, water, what goes inside a communosphere and a feng shui check of the plan
 
 ### Changed
 - 3D model: procedural textures (grass, crop rows, gravel paths, stone paving, water, timber, rammed earth, solar cells, glazing, facades and foliage), a sky gradient with reflections on glass, water and solar panels, and per-tree leaf colour
@@ -23,6 +24,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - 3D model: no more flicker on the ground when zooming (wider layer spacing and a logarithmic depth buffer); conifers in the woodland, gardens inside the domes, windows on the earth homes, natural hill shapes and softer tone mapping
 - 3D model: Phase 3 terraces redesigned from boxy blocks into flowing curved buildings with rolling green roofs, glass skylights, full-height glazing, thin-shell concrete floor and balcony bands, timber roof edges, living-wall ends, stone plinths and planted beds
 - 3D model: waterways and boat transport: a meandering river and a lake with a wooded island and a boat landing (Phase 1), a canal ring (Phase 2), an outer canal ring and S-curved canals through the town (Phase 3), stone and concrete quays with lamps, arched timber footbridges with landings, and solar-roofed electric boats lit at night; new views `?view=lake`, `?view=water` and `?view=canal`
+- 3D model replanned against the planning principles: the river now bends round the south of the town with the city inside its curve, the heart lake sits south-west and reaches the plaza by a canal, harbour and rill, low hills shelter the north, radial paths turn gently beyond the core, cars stop at solar mobility hubs on a north road, an arc road and an outer ring road, work hubs (market halls and workshop vaults) sit near every home, and communosphere domes now show terraced homes round a small garden atrium with a rain pool under an open oculus; new views `?view=heart`, `?view=dome`, `?view=hub` and `?view=work`
 
 ## [0.5.0] - 2026-11-16
 

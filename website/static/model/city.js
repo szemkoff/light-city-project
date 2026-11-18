@@ -48,7 +48,13 @@ export const PLAN = {
 
 const P = PLAN;
 const rad = (d) => (d * Math.PI) / 180;
-const polar = (r, deg) => new THREE.Vector3(Math.cos(rad(deg)) * r, 0, -Math.sin(rad(deg)) * r);
+const polar0 = (r, deg) => new THREE.Vector3(Math.cos(rad(deg)) * r, 0, -Math.sin(rad(deg)) * r);
+// Organic flow: the Phase 1 core keeps its true radial geometry, and beyond it the whole plan turns
+// gently, like the arms of a galaxy (after Auroville), so no long straight path aims at the centre
+// (feng shui: qi meanders, straight lines carry sha). Everything placed with polar() follows the turn.
+export const TWIST = {r0: 222, r1: 1000, deg: 9};
+const twist = (r) => (r <= TWIST.r0 ? 0 : TWIST.deg * Math.pow((Math.min(r, TWIST.r1 + 60) - TWIST.r0) / (TWIST.r1 - TWIST.r0), 1.3));
+const polar = (r, deg) => polar0(r, deg + twist(r));
 
 // One scene holds every phase. Each object belongs to a layer [from, to): it appears in the phase that
 // builds it and stays until a later phase replaces it (only movable things: the solar crown, nursery
@@ -114,28 +120,46 @@ export function buildCity(scene, env = null) {
   const treePts = [];
   let tFrom = 1, tTo = 4;
   const tree = (x, z, s = 1, kind = 0) => {
-    if (wet(x, z, 1 + 2.2 * s, tTo) || lanes.some(([d, r0, r1, hw]) => { const r = Math.hypot(x, z), a = rad(d);
-      return r > r0 && r < r1 && Math.abs(x * Math.sin(a) + z * Math.cos(a)) < hw; })) return;
+    if (wet(x, z, 1 + 2.2 * s, tTo) || blocked(x, z, 1 + 2 * s)) return;
     treePts.push([x, z, s, tFrom, tTo, kind]);
   };
   const trees = (from, to = 4) => { tFrom = from; tTo = to; };
+  // Roads, mobility hubs and work hubs keep their ground clear of trees and buildings
+  const OG = 40, ogrid = new Map();
+  const block = (x, z, r) => { const k = Math.floor(x / OG) + ',' + Math.floor(z / OG); if (!ogrid.has(k)) ogrid.set(k, []); ogrid.get(k).push([x, z, r]); };
+  const blocked = (x, z, pad = 0) => {
+    const gx = Math.floor(x / OG), gz = Math.floor(z / OG);
+    for (let i = -2; i <= 2; i++) for (let j = -2; j <= 2; j++) {
+      const c = ogrid.get(gx + i + ',' + (gz + j));
+      if (c) for (const [bx, bz, br] of c) if (Math.hypot(x - bx, z - bz) < br + pad) return true;
+    }
+    return false;
+  };
 
-  // Water: a meandering river along the north, widening into a lake (Phase 1); a canal ring that joins
-  // the lake (Phase 2); an outer canal ring and three S-curved canals through the town (Phase 3).
-  // Electric boats use all of it. The real course will follow the site's landform; this is schematic.
+  // Water, read with feng shui and Auroville in mind: higher ground behind the city to the north, and
+  // in front, to the south, a river that curves round the whole town like a belt (the city sits on the
+  // inside of the bend), fed from a lake south of the core by a winding creek. From the lake a winding heart canal brings boats to a harbour at
+  // the edge of the core, and a narrow stone rill carries the water on, between the domes, into the
+  // plaza pool at the foot of the spire. Phase 2 adds a canal ring through the lake; Phase 3 an outer
+  // ring and three S-curved canals. The real courses will follow the site's landform; this is schematic.
   // Each water is a centreline of [x, z, half-width] samples; `wet` tells whether a point is on water or its bank.
-  const waters = [], WG = 40, wgrid = new Map(), lanes = [];
+  const waters = [], WG = 40, wgrid = new Map();
   const addWater = (pts, from, kind, closed = false) => {
-    const w = {pts, from, kind, closed, bank: kind === 'river' ? 4 : 2.5};
+    const w = {pts, from, kind, closed, bank: kind === 'river' ? 4 : kind === 'creek' ? 3 : kind === 'rill' ? 0.9 : 2.5};
     waters.push(w);
     pts.forEach((pt, i) => { const k = Math.floor(pt[0] / WG) + ',' + Math.floor(pt[1] / WG); if (!wgrid.has(k)) wgrid.set(k, []); wgrid.get(k).push([w, i]); });
     return w;
   };
-  const LAKE = {x: 130, z: -372};
+  const HEART = 256;
+  const LAKE = (() => { const p = polar0(400, HEART); return {x: p.x, z: p.z}; })();
   const lakeR = (a) => 74 + 14 * Math.sin(2 * a + 0.7) + 8 * Math.sin(3 * a + 2) + 5 * Math.sin(5 * a);
+  const HARB = (() => { const p = polar0(238, HEART); return {x: p.x, z: p.z}; })();
+  const harbR = (a) => 13 + 2 * Math.sin(3 * a + 1);
+  const basins = [[LAKE, lakeR], [HARB, harbR]];
+  const inBasin = (x, z, pad = 0) => basins.some(([c, f]) => Math.hypot(x - c.x, z - c.z) < f(Math.atan2(z - c.z, x - c.x)) + pad);
   const inLake = (x, z, pad = 0) => Math.hypot(x - LAKE.x, z - LAKE.z) < lakeR(Math.atan2(z - LAKE.z, x - LAKE.x)) + pad;
   const wet = (x, z, pad = 0, to = 4) => {
-    if (to > 1 && inLake(x, z, pad + 3)) return true;
+    if (inBasin(x, z, pad + 3)) return true;
     const gx = Math.floor(x / WG), gz = Math.floor(z / WG);
     for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) {
       const c = wgrid.get(gx + i + ',' + (gz + j));
@@ -143,10 +167,25 @@ export function buildCity(scene, env = null) {
     }
     return false;
   };
+  const riverZ = (x) => 1130 - 0.00035 * x * x + 30 * Math.sin(x / 130) + 14 * Math.sin(x / 53 + 1);
+  // Heart rill: winds a few metres either side of 256°, through the gap between the domes at 240° and 270°
+  const rillA = (r) => HEART + (180 / Math.PI) * (3.2 * Math.sin((r - 30) / 40) + 1.2 * Math.sin((r - 30) / 17)) / r;
   {
     const river = [];
-    for (let x = -4200; x <= 4200; x += 3) river.push([x, -420 - 0.00009 * x * x + 30 * Math.sin(x / 130) + 14 * Math.sin(x / 53 + 1), 13 + 3 * Math.sin(x / 400)]);
+    for (let x = -3400; x <= 3400; x += 2) river.push([x, riverZ(x), 13 + 3 * Math.sin(x / 400)]);
     addWater(river, 1, 'river');
+    // The lake spills south into the river along a winding creek
+    const out = [];
+    for (let t = 0; t <= 1.0001; t += 0.005) { const x = LAKE.x - 70 * t + 28 * Math.sin(t * 9) * Math.min(1, t * 6), z0 = LAKE.z + 50, z1 = riverZ(LAKE.x - 70); out.push([x, z0 + (z1 - z0) * t, 6.5 + 1.5 * Math.sin(t * 13)]); }
+    addWater(out, 1, 'creek');
+    // Heart canal from the harbour to the lake, winding, for boats
+    const hc = [];
+    for (let r = 246; r <= 372; r += 3) { const p = polar0(r, HEART + (180 / Math.PI) * (7 * Math.sin((r - 246) / 21)) / r); hc.push([p.x, p.z, 5]); }
+    addWater(hc, 1, 'canal');
+    // Rill from the harbour to the plaza pool
+    const rl = [];
+    for (let r = 228; r >= 29; r -= 2) { const p = polar0(r, rillA(r)); rl.push([p.x, p.z, 1.1 + 0.5 * (r - 29) / 199]); }
+    addWater(rl, 1, 'rill');
     const ring = (r0, amp, f, hw, from) => {
       const pts = [], n = Math.round(2 * Math.PI * r0 / 3);
       for (let i = 0; i < n; i++) { const a = (i / n) * 2 * Math.PI, r = r0 + amp * Math.sin(f * a + 1) + amp * 0.4 * Math.sin((f * 2 + 1) * a); pts.push([Math.cos(a) * r, -Math.sin(a) * r, hw]); }
@@ -156,14 +195,29 @@ export function buildCity(scene, env = null) {
     ring(746, 4, 7, 6.5, 3);
     [0, 120, 240].forEach((d) => {
       const pts = [];
-      for (let r = 372; r <= 750; r += 3) { const a = rad(d + 5 * Math.sin(2 * Math.PI * (r - 377) / 369)); pts.push([Math.cos(a) * r, -Math.sin(a) * r, 7]); }
+      for (let r = 372; r <= 750; r += 3) { const p = polar(r, d + 5 * Math.sin(2 * Math.PI * (r - 377) / 369)); pts.push([p.x, p.z, 7]); }
       addWater(pts, 3, 'canal');
     });
   }
-  // Phase 1 lane from the north-east radial path to the lake landing
-  let landR = 240; while (!inLake(polar(landR, 60).x, polar(landR, 60).z)) landR += 1;
-  lanes.push([60, PHASES[1].extent + 10, landR + 2, 6]);
   const paths = [];
+  // A flat ribbon along a centreline of [x, z, half-width] samples, at offset ±(half-width + e)
+  const ribbon = (P, e, y, m, closed = false) => {
+    const n = P.length, pos = [], uv = [], nor = [];
+    const side = (i) => {
+      const a = P[(i - 1 + n) % n], b = P[(i + 1) % n], A = closed || i > 0 ? a : P[i], B = closed || i < n - 1 ? b : P[i];
+      const dx = B[0] - A[0], dz = B[1] - A[1], L = Math.hypot(dx, dz) || 1, h = P[i][2] + e;
+      return [[P[i][0] - dz / L * h, P[i][1] + dx / L * h], [P[i][0] + dz / L * h, P[i][1] - dx / L * h]];
+    };
+    const S = P.map((_, i) => side(i));
+    for (let i = 0; i < (closed ? n : n - 1); i++) {
+      const [l0, r0] = S[i], [l1, r1] = S[(i + 1) % n];
+      for (const v of [l0, l1, r0, r0, l1, r1]) { pos.push(v[0], y, v[1]); nor.push(0, 1, 0); uv.push(0, 0); }
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('normal', new THREE.Float32BufferAttribute(nor, 3)); g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+    const o = new THREE.Mesh(g, m); o.material.side = THREE.DoubleSide; o.receiveShadow = true; add(o);
+    return o;
+  };
 
   // Wild land beyond the city
   layer(1);
@@ -195,20 +249,88 @@ export function buildCity(scene, env = null) {
   layer(2); ringPath(P.rings[4].r); ringPath(360, 4);
   layer(3); ringPath(460, 4); ringPath(760, 4);
 
-  // Radial paths: 12 from the plaza, extended outward by each phase, plus 12 more in the town's outer rings
+  // Radial paths: 12 from the plaza, extended outward by each phase, plus 12 more in the town's outer rings.
+  // They are straight in the Phase 1 core and follow the plan's gentle turn beyond it.
   const radial = (deg, r0, r1, w) => {
-    paths.push({deg, r0, r1, w, from: cur.userData.from});
-    const len = r1 - r0;
-    const m = flat(new THREE.PlaneGeometry(len, w), path, 0.31);
-    m.rotation.z = rad(deg);
-    const mid = polar(r0 + len / 2, deg);
-    m.position.x = mid.x; m.position.z = mid.z;
-    for (let d = r0 + 14; d < r1 - 6; d += r0 > 300 ? 44 : 30) { const q = polar(d, deg).add(polar(w / 2 + 1.2, deg + 90)); lamp(q.x, q.z); }
+    const pts = [];
+    for (let r = r0; r < r1 + 3; r += 6) { const q = polar(Math.min(r, r1), deg); pts.push([q.x, q.z, w / 2]); }
+    paths.push({pts, w, from: cur.userData.from});
+    ribbon(pts, 0, 0.31, path);
+    for (let d = r0 + 14; d < r1 - 6; d += r0 > 300 ? 44 : 30) { const q = polar(d, deg).add(polar0(w / 2 + 1.2, deg + twist(d) + 90)); lamp(q.x, q.z); }
   };
   [[1, P.rings[0].r, PHASES[1].extent + 20], [2, PHASES[1].extent + 18, PHASES[2].extent + 20], [3, PHASES[2].extent + 18, FINAL.extent + 20]]
     .forEach(([n, r0, r1]) => { layer(n); for (let i = 0; i < P.radialPaths; i++) radial(i * 30, r0, r1, 4); });
   layer(3);
   for (let i = 0; i < 12; i++) radial(15 + i * 30, FINAL.town[0], FINAL.extent + 20, 3.2);
+
+  // Movement: walking, cycling and boats inside; cars stop at the edge (Houten, Vauban). A service road
+  // comes in from the north, behind the city, to a mobility hub with shared electric cars under solar
+  // canopies, e-bikes and a shuttle stop. Phase 2 adds a ring road outside the village that stays open to
+  // the south, so the lake and river front have no traffic; Phase 3 moves private cars to an outer ring
+  // road with six hubs, and the Phase 2 ring becomes the shuttle and service loop.
+  const roadM = ground(0x8a857a, TX.gravel(), 4, 0.25);
+  const road = (pts, w, from) => {
+    layer(from);
+    const P3 = pts.map(([x, z]) => [x, z, w / 2]);
+    paths.push({pts: P3, w, from, road: true});
+    ribbon(P3, 0, 0.315, roadM);
+    let acc = 0;
+    P3.forEach((q, i) => {
+      if (i) acc += Math.hypot(q[0] - P3[i - 1][0], q[1] - P3[i - 1][1]);
+      if (i % 2 === 0) block(q[0], q[1], w / 2 + 2);
+      if (i > 0 && i < P3.length - 1 && Math.floor(acc / 46) !== Math.floor((acc - Math.hypot(q[0] - P3[i - 1][0], q[1] - P3[i - 1][1])) / 46) && Math.hypot(q[0], q[1]) < FINAL.extent + 80) {
+        const dx = P3[i + 1][0] - P3[i - 1][0], dz = P3[i + 1][1] - P3[i - 1][1], L = Math.hypot(dx, dz);
+        lamp(q[0] + dz / L * (w / 2 + 1.2), q[1] - dx / L * (w / 2 + 1.2));
+      }
+    });
+  };
+  const arc = (r, d0, d1) => { const pts = []; const n = Math.ceil(Math.abs(d1 - d0) * r * Math.PI / 180 / 5); for (let i = 0; i <= n; i++) { const q = polar(r, d0 + (d1 - d0) * i / n); pts.push([q.x, q.z]); } return pts; };
+  // North service road: leaves the Phase 1 hub at 75° and bends into the valley between the northern hills
+  const ENTRY = 75;
+  const northRoad = (r0, r1) => { const pts = []; for (let r = r0; r <= r1; r += 5) { const s = Math.min(1, Math.max(0, (r - 1050) / 1500)); const q = polar0(r, ENTRY + twist(r) + 2 * Math.sin(r / 160) * Math.min(1, (r - r0) / 60) - 20 * s * s * (3 - 2 * s)); pts.push([q.x, q.z]); } return pts; };
+  road(northRoad(266, 1500), 6, 1);
+  road(northRoad(1500, 2300), 6, 2);
+  road(northRoad(2300, 3600), 6, 3);
+  road(arc(480, 300, 570), 6.5, 2);
+  road(arc(1035, 0, 360), 7, 3);
+  // Solar carports, car-share EVs, chargers and a shuttle stop
+  const carG = new THREE.BoxGeometry(4.3, 0.9, 1.8); carG.translate(0, 0.75, 0);
+  const cabG = new THREE.BoxGeometry(2.3, 0.6, 1.6); cabG.translate(-0.2, 1.5, 0);
+  const carMs = [0xf2f0ea, 0x9aa3a8, 0x4f6f86, 0xc9c2b2, 0x6b7b5e].map((c) => shiny(mat(c, {roughness: 0.35, metalness: 0.3})));
+  const cabM = atNight(shiny(mat(0x2a3238, {roughness: 0.1, metalness: 0.4})), warm(0x10181c, 0.1));
+  const shuttleG = new THREE.BoxGeometry(5.5, 2.5, 2.3); shuttleG.translate(0, 1.55, 0);
+  const shuttleM = atNight(shiny(mat(0xeef0ee, {roughness: 0.25})), warm(0xffd9a0, 0.35));
+  const padM = ground(0xcfc6b3, TX.paving(), 5, 0.1);
+  const carport = (c, deg, rows, len) => {
+    const R = Math.hypot(rows * 11, len) / 2 + 8;
+    flat(new THREE.CircleGeometry(R, 40), padM, 0.32).position.set(c.x, 0.32, c.z);
+    block(c.x, c.z, R + 3);
+    const t = rad(deg + 90), u = [Math.cos(t), -Math.sin(t)], v = [Math.cos(rad(deg)), -Math.sin(rad(deg))];
+    for (let k = 0; k < rows; k++) {
+      const off = (k - (rows - 1) / 2) * 11, cx = c.x + v[0] * off, cz = c.z + v[1] * off;
+      const roof = new THREE.Mesh(new THREE.BoxGeometry(len, 0.25, 5), pv);
+      roof.position.set(cx, 3.1, cz); roof.rotation.y = t; roof.rotateX(-0.12); roof.castShadow = true; add(roof);
+      for (let x = -len / 2 + 2; x <= len / 2 - 2; x += 6) place('carportPost', cpG, postM, new THREE.Vector3(cx + u[0] * x, 0, cz + u[1] * x));
+      for (let x = -len / 2 + 1.6, i = 0; x <= len / 2 - 1.6; x += 2.7, i++) {
+        if ((i * 7 + k * 3) % 5 === 4) continue;
+        for (const sd of [-1, 1]) {
+          if ((i * 3 + k + (sd > 0 ? 2 : 0)) % 4 === 3) continue;
+          const pos = new THREE.Vector3(cx + u[0] * x + v[0] * sd * 2.6, 0.32, cz + u[1] * x + v[1] * sd * 2.6), ci = (i + k * 2 + (sd > 0 ? 3 : 0)) % carMs.length;
+          place('car' + ci, carG, carMs[ci], pos, rad(deg) + (sd > 0 ? Math.PI : 0));
+          place('carCab', cabG, cabM, pos, rad(deg) + (sd > 0 ? Math.PI : 0));
+        }
+      }
+      for (let x = -len / 2 + 2; x <= len / 2 - 2; x += 12) glow('lamp', cx + u[0] * x, 2.9, cz + u[1] * x);
+    }
+    // Shuttle stop on the city side of the hub
+    const s = new THREE.Vector3(c.x - v[0] * (R - 3), 0.32, c.z - v[1] * (R - 3));
+    place('shuttle', shuttleG, shuttleM, s, t); glow('window', s.x, 2, s.z);
+  };
+  const cpG = new THREE.CylinderGeometry(0.12, 0.12, 3, 6); cpG.translate(0, 1.5, 0);
+  const pv = shiny(mat(0xffffff, {roughness: 0.25, metalness: 0.45, map: TX.solar()}));
+  layer(1); carport(polar(252, ENTRY), ENTRY, 2, 30); radial(ENTRY, P.rings[3].r + 1.6, 226, 3);
+  layer(2); [45, 165, 300].forEach((d) => carport(polar(495, d), d, 3, 36));
+  layer(3); [30, 90, 150, 210, 270, 330].forEach((d) => carport(polar(1012, d), d, 3, 48));
 
   // Plaza: stone with a ring-shaped reflecting pool
   layer(1);
@@ -218,6 +340,7 @@ export function buildCity(scene, env = null) {
   atNight(pool.material, warm(0x2f7f9a, 0.45));
   for (let i = 0; i < 24; i++) { const q = polar(30.5, i * 15); glow('cool', q.x, 0.6, q.z); }
   pool.receiveShadow = false;
+  const poolM = pool.material;
 
   // Spire: stacked hyperboloid lattice sections of straight timber and steel members.
   // The foundation, base and 72 m deck are built in Phase 1; each phase adds sections and lifts the solar crown.
@@ -280,7 +403,14 @@ export function buildCity(scene, env = null) {
   };
   FINAL.inner.forEach(([deg, size]) => { layer(firstIn('inner', ([d]) => d === deg)); pavilion(polar(58, deg), size); });
 
-  // Communosphere domes: glazed geodesic shell with timber ribs and a green-roof cap
+  const winG = new THREE.BoxGeometry(1.5, 0.9, 1);
+  const winM = atNight(mat(0x39444c, {roughness: 0.15, metalness: 0.3}), warm(0xffb55c, 2.2));
+  const doorG = new THREE.BoxGeometry(2.6, 2.4, 0.6);
+  // Communosphere domes, as in docs/concepts/communospheres.md: a timber gridshell with solar glazing,
+  // homes on terraced levels round the edge, a shared kitchen and commons at ground level, and a small
+  // garden atrium under an open oculus at the crown (warm air rises and leaves there).
+  // The shell mixes clear glazing low down (daylight for the homes), solar glass (BIPV) on the sunny
+  // south and green-roof panels on the north; the top is open.
   const half = (r, detail) => {
     const g = new THREE.IcosahedronGeometry(r, detail);
     const pos = g.attributes.position;
@@ -288,22 +418,75 @@ export function buildCity(scene, env = null) {
     g.computeVertexNormals();
     return g;
   };
-  const glassM = atNight(shiny(mat(0xa9c2cb, {roughness: 0.08, metalness: 0.35, transparent: true, opacity: 0.82, map: TX.repeated(TX.glass(), 3, 2)})), warm(0xffb768, 0.2));
-  const ribM = new THREE.LineBasicMaterial({color: 0xa0743f});
+  const glassM = atNight(shiny(mat(0xb4ccd4, {roughness: 0.06, metalness: 0.3, transparent: true, opacity: 0.38, depthWrite: false, map: TX.repeated(TX.glass(), 3, 2)})), warm(0xffb768, 0.35));
+  const bipvM = atNight(shiny(mat(0x6d86a0, {roughness: 0.45, metalness: 0.2, transparent: true, opacity: 0.72, depthWrite: false})), warm(0xffb768, 0.18));
+  if (bipvM.envMap) bipvM.envMapIntensity = 0.35;
+  const ribM = new THREE.LineBasicMaterial({color: 0x8a6236});
   const capM = mat(0x7a9550, {map: TX.repeated(TX.grass(13), 4, 1)});
+  const greenPanelM = mat(0x7f9a55, {roughness: 0.95, map: TX.repeated(TX.grass(13), 3, 3)});
+  const clayM = atNight(mat(0xe9dcc6, {roughness: 0.9, map: TX.repeated(TX.earth(), 6, 1)}), warm(0x6a3a14, 0.15));
+  const deckTM = mat(0xc2925e, {roughness: 0.75, map: TX.repeated(TX.timber(30), 6, 1)});
+  const atriumM = ground(0x93ad62, TX.grass(17), 7, 0.2);
+  const shellCache = new Map();
+  const shellParts = (diameter) => {
+    if (shellCache.has(diameter)) return shellCache.get(diameter);
+    const r = diameter / 2, src = half(r, diameter > 60 ? 4 : 3).toNonIndexed(), P = src.attributes.position, N = src.attributes.normal, U = src.attributes.uv;
+    const parts = [[], [], []].map(() => ({p: [], n: [], u: []}));
+    for (let f = 0; f < P.count; f += 3) {
+      let cx = 0, cy = 0, cz = 0;
+      for (let k = 0; k < 3; k++) { cx += P.getX(f + k) / 3; cy += P.getY(f + k) / 3; cz += P.getZ(f + k) / 3; }
+      const h = cy / r, south = cz / r;
+      if (h > 0.9 || cy < 0.05) continue;
+      // Clear glazing in the lower band, with a solid panel every few cells; solar glass on the south crown
+      const hash = Math.abs(Math.sin(cx * 12.9898 + cz * 78.233) * 43758.5453) % 1;
+      const kind = h < 0.5 ? (hash < 0.78 ? 0 : 2) : (south > -0.15 ? 1 : 2);
+      const t = parts[kind];
+      for (let k = 0; k < 3; k++) { t.p.push(P.getX(f + k), P.getY(f + k), P.getZ(f + k)); t.n.push(N.getX(f + k), N.getY(f + k), N.getZ(f + k)); t.u.push(U.getX(f + k), U.getY(f + k)); }
+    }
+    const geos = parts.map((t) => { const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(t.p, 3)); g.setAttribute('normal', new THREE.Float32BufferAttribute(t.n, 3)); g.setAttribute('uv', new THREE.Float32BufferAttribute(t.u, 2)); return g; });
+    const ribs = new THREE.WireframeGeometry(half(r + 0.15, diameter > 60 ? 4 : 3));
+    const out = {geos, ribs};
+    shellCache.set(diameter, out);
+    return out;
+  };
   const dome = (p, diameter, squash = 1) => {
-    const r = diameter / 2;
-    const g = new THREE.Mesh(half(r, diameter > 60 ? 4 : 3), glassM);
-    g.scale.y = squash; g.position.copy(p); g.castShadow = true; add(g);
-    const ribs = new THREE.LineSegments(new THREE.WireframeGeometry(half(r + 0.15, diameter > 60 ? 4 : 3)), ribM);
-    ribs.scale.y = squash; ribs.position.copy(p); add(ribs);
-    const cap = new THREE.Mesh(new THREE.SphereGeometry(r + 0.3, 32, 8, 0, Math.PI * 2, 0, 0.55), capM);
-    cap.scale.y = squash; cap.position.copy(p); add(cap);
-    // A garden inside each dome, and a warm glow from within at night
+    const r = diameter / 2, H = r * squash, S = shellParts(diameter);
+    [glassM, bipvM, greenPanelM].forEach((m, i) => {
+      const g = new THREE.Mesh(S.geos[i], m); g.scale.y = squash; g.position.copy(p); g.castShadow = i > 0; g.receiveShadow = i > 0; add(g);
+    });
+    const ribs = new THREE.LineSegments(S.ribs, ribM); ribs.scale.y = squash; ribs.position.copy(p); add(ribs);
+    // Oculus: a timber ring at the crown
+    const oy = 0.9 * H, orr = r * Math.sqrt(1 - 0.81);
+    const ring = new THREE.Mesh(new THREE.TorusGeometry(orr, 0.45, 6, 40), deckTM);
+    ring.rotation.x = Math.PI / 2; ring.position.set(p.x, oy, p.z); add(ring);
+    // Terraced homes: levels of 3.3 m stepping back towards the shell; level 0 is the kitchen and commons
+    const levels = diameter < 45 ? 3 : diameter < 60 ? 4 : 5, lh = 3.3, f0 = r * 0.4;
+    const wallR = (y) => r * Math.sqrt(Math.max(0, 1 - (y / H) * (y / H)));
+    for (let k = 0; k < levels; k++) {
+      const y0 = k * lh, fr = f0 + k * (r * 0.09), back = wallR(y0 + lh) - 0.6;
+      if (back - fr < 2.5) break;
+      const front = new THREE.Mesh(new THREE.CylinderGeometry(fr, fr, lh - 0.35, 48, 1, true), clayM);
+      front.position.set(p.x, y0 + (lh - 0.35) / 2, p.z); front.receiveShadow = true; add(front);
+      const floor = new THREE.Mesh(new THREE.RingGeometry(fr, back, 48), k === levels - 1 ? capM : deckTM);
+      floor.rotation.x = -Math.PI / 2; floor.position.set(p.x, y0 + lh - 0.3, p.z); floor.receiveShadow = true; add(floor);
+      // Windows of the homes face the atrium; the ground floor is the open commons and kitchen
+      const nW = Math.floor((2 * Math.PI * fr) / 3.6);
+      for (let i = 0; i < nW; i++) {
+        const a = (i / nW) * 360, q = p.clone().add(polar0(fr + 0.05, a)); q.y = y0 + 1.25;
+        place(k ? 'domeWin' : 'domeDoor', k ? winG : doorG, winM, q, rad(a) + Math.PI / 2);
+        if (i % 2 === 0) glow('window', q.x, q.y, q.z);
+      }
+      // Planters along each terrace edge
+      if (k > 0) for (let i = 0; i < nW; i += 3) { const q = p.clone().add(polar0(fr + 0.9, (i / nW) * 360 + 4)); treePts.push([q.x, q.z, 0.28, cur.userData.from, cur.userData.to, 2, y0 + lh - 0.3]); }
+    }
+    // Garden atrium: a lawn, a small pool under the oculus that catches rain, a few trees and shrubs
+    flat(new THREE.CircleGeometry(f0, 40), atriumM, 0.34).position.set(p.x, 0.34, p.z);
+    const pond = flat(new THREE.CircleGeometry(f0 * 0.28, 32), poolM, 0.36); pond.position.set(p.x, 0.36, p.z);
     const keep = [tFrom, tTo]; trees(cur.userData.from, cur.userData.to);
-    for (let k = 0; k < 14; k++) { const a = k * 137.5, d = r * 0.62 * Math.sqrt((k + 0.5) / 14), q = p.clone().add(polar(d, a)); tree(q.x, q.z, 0.75 + (k % 3) * 0.12); }
+    for (let k = 0; k < 3; k++) { const q = p.clone().add(polar0(f0 * 0.55, k * 120 + 30)); treePts.push([q.x, q.z, 0.7 + k * 0.08, tFrom, tTo, 0]); }
+    for (let k = 0; k < 7; k++) { const q = p.clone().add(polar0(f0 * (0.38 + (k % 2) * 0.35), k * 51 + 70)); treePts.push([q.x, q.z, 0.35, tFrom, tTo, 2]); }
     [tFrom, tTo] = keep;
-    glow('dome', p.x, r * 0.35 * squash, p.z, diameter * 1.3);
+    glow('dome', p.x, H * 0.35, p.z, diameter * 1.3);
   };
   // Each dome plot is meadow and tree nursery until its dome is built; the young trees are then moved out
   const meadow = ground(0xc2ca86, TX.meadow(), 10, 0);
@@ -319,8 +502,6 @@ export function buildCity(scene, env = null) {
   }
 
   // Earth homes with green roofs (ring 4), between the radial paths
-  const winG = new THREE.BoxGeometry(1.5, 0.9, 1);
-  const winM = atNight(mat(0x39444c, {roughness: 0.15, metalness: 0.3}), warm(0xffb55c, 2.2));
   const earthM = mat(0xd39a70, {roughness: 0.95, map: TX.repeated(TX.earth(), 5, 1.4)});
   const earthHome = (p, deg, size, sx = 1.3) => {
     const h = new THREE.Mesh(new THREE.SphereGeometry(size, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2), earthM);
@@ -337,7 +518,10 @@ export function buildCity(scene, env = null) {
   };
   // Fixed home plots: five per 30° sector. Phase 1 builds 30 of them, later phases fill the gaps; none move.
   for (let sec = 0; sec < 12; sec++) {
-    [[sec * 30 + 10, 1], [sec * 30 + 20, 1], [sec * 30 + 15, sec % 2 ? 3 : 1], [sec * 30 + 5, 2], [sec * 30 + 25, 2]].forEach(([deg, n]) => {
+    // In sector 8 the heart rill takes the middle plot, so its Phase 1 home moves to the first plot
+    const mid = sec === 8 ? 0 : sec % 2 ? 3 : 1, first = sec === 8 ? 1 : 2;
+    [[sec * 30 + 10, 1], [sec * 30 + 20, 1], [sec * 30 + 15, mid], [sec * 30 + 5, first], [sec * 30 + 25, 2]].forEach(([deg, n]) => {
+      if (!n) return;
       layer(n); trees(n);
       earthHome(polar(P.homes.radius, deg), deg, P.homes.size);
       const q = polar(P.homes.radius + 12, deg + 2.5); tree(q.x, q.z, 0.7);
@@ -346,12 +530,42 @@ export function buildCity(scene, env = null) {
 
   // Solar arrays with meadow beneath (ring 5)
   layer(1);
-  const pv = shiny(mat(0xffffff, {roughness: 0.25, metalness: 0.45, map: TX.solar()}));
   const array = (p, deg, w = 22, d = 9) => {
     const a = new THREE.Mesh(new THREE.BoxGeometry(w, 0.3, d), pv);
     a.position.copy(p).setY(2.2); a.rotation.y = rad(deg) + Math.PI / 2; a.rotateX(-0.45); a.castShadow = true; add(a);
   };
-  for (let i = 0; i < P.solar.count; i++) { const deg = (i + 0.5) * (360 / P.solar.count); array(polar(P.solar.radius, deg), deg); }
+  for (let i = 0; i < P.solar.count; i++) { const deg = (i + 0.5) * (360 / P.solar.count), q = polar(P.solar.radius, deg); if (!wet(q.x, q.z, 11)) array(q, deg); }
+
+  // Work is spread through the city, not gathered at the centre ("Scattered Work", the 15-minute city):
+  // each neighbourhood has a work hub with a market hall, timber workshops with solar roofs and a
+  // small square, so most people walk a few minutes to work and the morning flow runs both ways.
+  const shopG = new THREE.CylinderGeometry(5, 5, 22, 20, 1, false, 0, Math.PI); shopG.rotateZ(Math.PI / 2); shopG.rotateY(Math.PI / 2);
+  const shopEndG = new THREE.CircleGeometry(5, 20, 0, Math.PI);
+  const market = (c, deg, s = 1) => {
+    const m = new THREE.Mesh(new THREE.SphereGeometry(1, 36, 14, 0, Math.PI * 2, 0, Math.PI / 2), pavM(0xcf9e66));
+    m.scale.set(17 * s, 7.5 * s, 10 * s); m.rotation.y = rad(deg + twist(Math.hypot(c.x, c.z)) + 90); m.position.copy(c); m.castShadow = true; add(m);
+    const sky = new THREE.Mesh(new THREE.SphereGeometry(1, 24, 6, 0, Math.PI * 2, 0, 0.5), glassM);
+    sky.scale.set(17.2 * s, 7.6 * s, 10.2 * s); sky.rotation.copy(m.rotation); sky.position.copy(c); add(sky);
+    for (let i = 0; i < 10; i++) { const q = c.clone().add(polar0(13 * s, i * 36)); glow('lamp', q.x, 1.2, q.z); }
+    glow('halo', c.x, 0.8, c.z, 60 * s);
+  };
+  const workshop = (c, rotY) => {
+    const w = new THREE.Mesh(shopG, pavM(0xc08a55)); w.position.copy(c); w.rotation.y = rotY; w.castShadow = true; add(w);
+    const roof = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.15, 19), pv); roof.position.copy(c).setY(4.75); roof.rotation.y = rotY; add(roof);
+    for (const e of [-11, 11]) { const g = new THREE.Mesh(shopEndG, glassM); g.position.copy(c).add(new THREE.Vector3(Math.sin(rotY) * e, 0, Math.cos(rotY) * e)); g.rotation.y = rotY + (e > 0 ? 0 : Math.PI); add(g); glow('window', g.position.x, 2, g.position.z); }
+  };
+  const workHub = (c, deg) => {
+    flat(new THREE.CircleGeometry(34, 48), padM, 0.32).position.set(c.x, 0.32, c.z);
+    block(c.x, c.z, 38);
+    market(c, deg, 0.9);
+    const out = deg + twist(Math.hypot(c.x, c.z));
+    for (const da of [-48, 0, 48]) { const q = c.clone().add(polar0(24, out + da)); workshop(q, rad(out + da)); }
+    for (let i = 0; i < 14; i++) { const q = c.clone().add(polar0(38, i * (360 / 14) + 6)); if (!wet(q.x, q.z, 2)) treePts.push([q.x, q.z, 0.85, cur.userData.from, cur.userData.to, i % 4 === 1 ? 1 : 0]); }
+    for (let i = 0; i < 8; i++) { const q = c.clone().add(polar0(31, i * 45 + 20)); lamp(q.x, q.z); }
+  };
+  const HUBS2 = [45, 165, 285], HUBR2 = 285;
+  layer(2);
+  HUBS2.forEach((d) => workHub(polar(HUBR2, d), d));
 
   // Phase 2: village neighborhoods of earth-home courtyard clusters (six homes round a shared garden)
   layer(2); trees(2);
@@ -360,7 +574,7 @@ export function buildCity(scene, env = null) {
     for (let i = 0; i < 24; i++) {
       const deg = 7.5 + i * 15;
       const c = polar(r, deg);
-      if (wet(c.x, c.z, 32)) continue;
+      if (wet(c.x, c.z, 32) || blocked(c.x, c.z, 20) || HUBS2.some((d) => Math.hypot(c.x - polar(HUBR2, d).x, c.z - polar(HUBR2, d).z) < 52)) continue;
       flat(new THREE.CircleGeometry(9, 32), garden, 0.27).position.set(c.x, 0.27, c.z);
       for (let k = 0; k < 6; k++) {
         const a = deg + k * 60;
@@ -405,7 +619,7 @@ export function buildCity(scene, env = null) {
     const pt = (q, t) => ({x: q.x, z: q.z, t});
     for (let i = 0; i <= N; i++) { const t = t0 + ((t1 - t0) * i) / N; outer.push(pt(polar(rc(t) + R, ang(t)), t)); inner.push(pt(polar(rc(t) - R, ang(t)), t)); }
     for (const [t, out, dir] of [[t1, cap1, 1], [t0, cap0, -1]]) {
-      const a = rad(ang(t)), c = polar(rc(t), ang(t)), u = [Math.cos(a), -Math.sin(a)], tn = [-Math.sin(a), -Math.cos(a)];
+      const a = rad(ang(t) + twist(rc(t))), c = polar(rc(t), ang(t)), u = [Math.cos(a), -Math.sin(a)], tn = [-Math.sin(a), -Math.cos(a)];
       for (let j = 1; j < M; j++) {
         const th = (Math.PI * j) / M, k = dir > 0 ? th : Math.PI - th;
         out.push({x: c.x + R * (u[0] * Math.cos(k) + dir * tn[0] * Math.sin(k)), z: c.z + R * (u[1] * Math.cos(k) + dir * tn[1] * Math.sin(k)), t, end: true});
@@ -451,7 +665,7 @@ export function buildCity(scene, env = null) {
   };
   const building = (B) => {
     // Buildings give way to the canals and the river; their place becomes waterfront
-    for (let t = 0; t <= 1; t += 0.1) { const c = polar(B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), B.a0 + (B.a1 - B.a0) * t); if (wet(c.x, c.z, B.hw + 5)) return; }
+    for (let t = 0; t <= 1; t += 0.1) { const c = polar(B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), B.a0 + (B.a1 - B.a0) * t); if (wet(c.x, c.z, B.hw + 5) || blocked(c.x, c.z, B.hw + 3)) return; }
     const H = (t) => B.base + B.rise * Math.pow(Math.sin(Math.PI * t), 0.8) * (0.8 + 0.2 * Math.cos(2 * Math.PI * (t * 1.3 + B.ph)));
     const k = (v) => () => v;
     band(outline(B, 0.3), k(0), k(0.45), plinthM);
@@ -498,7 +712,12 @@ export function buildCity(scene, env = null) {
     const c = polar(D.r, deg);
     flat(new THREE.CircleGeometry(D.d / 2 + 22, 48), ground(0xddd2ba, TX.paving(), 5, 0), 0.27).position.set(c.x, 0.27, c.z);
     dome(c, D.d, 0.7);
-    pavilion(c.clone().add(polar(D.d / 2 + 12, deg + 90)), 6);
+    const t = deg + twist(D.r);
+    pavilion(c.clone().add(polar0(D.d / 2 + 12, t + 90)), 6);
+    // District work: a market hall on the other side of the square and a row of workshops behind
+    market(c.clone().add(polar0(D.d / 2 + 14, t - 90)), deg + 90, 1);
+    for (let k = -2; k <= 2; k++) { const q = polar(D.r + 72, deg + k * 3.4); workshop(q, rad(deg + twist(D.r + 72) + k * 3.4)); }
+    block(c.x, c.z, D.d / 2 + 30);
   });
 
   // Food and energy belts: agrivoltaic arrays, solar greenhouses and food-forest rows by sector
@@ -515,7 +734,7 @@ export function buildCity(scene, env = null) {
         for (let k = 0; k < count; k++) {
           const deg = s * 15 + (24 / r) * (180 / Math.PI) + (k + 0.5) * (span / count);
           const p = polar(r, deg);
-          if (wet(p.x, p.z, 14)) continue;
+          if (wet(p.x, p.z, 14) || blocked(p.x, p.z, 12)) continue;
           if (kind === 0) array(p, deg, 22, 7);
           else if (kind === 1) {
             const g = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 26, 16, 1, false, 0, Math.PI), gh);
@@ -543,15 +762,20 @@ export function buildCity(scene, env = null) {
     trees(1, [2, 3].find((n) => r < PHASES[n].extent + 13) || 4);
     const p = polar(r, deg); tree(p.x, p.z, s, (i * 7919) % 10 < 3 ? 1 : 0);
   }
-  // Distant hills: scenery that keeps its distance from the frame in each phase's view
+  // Distant hills, set out as the feng shui "armchair": the highest ground behind the city to the north
+  // (the Tortoise), a ridge on the east (the Dragon) a little higher than the one on the west (the Tiger),
+  // and an open south over the river and lake to one low, far hill (the Phoenix). The north road leaves
+  // through the valley between the Dragon and the Tortoise. A real site is chosen for this shape;
+  // here it is scenery that keeps its distance from the frame in each phase's view.
   const hillM = mat(0x75865a, {map: TX.repeated(TX.grass(29), 10, 3)});
+  const HILLS = [[88, 1.15, 0.4, 0.95], [104, 1.0, 0.36, 1], [120, 0.9, 0.3, 1.05], [70, 0.75, 0.3, 1.15], [138, 0.8, 0.25, 1.05],
+    [20, 0.85, 0.26, 1.05], [40, 0.75, 0.28, 1.0], [160, 0.85, 0.18, 1.05], [182, 0.7, 0.16, 1.15], [268, 0.9, 0.08, 2.0]];
   [1, 2, 3].forEach((n) => {
     layer(n, n + 1);
     const F = PHASES[n];
-    for (let i = 0; i < 9; i++) {
-      const deg = i * 40 + rnd() * 20;
-      const p = polar(F.extent + 1280 * Math.sqrt(F.view) + rnd() * 400, deg);
-      const hg = new THREE.SphereGeometry((500 + rnd() * 300) * Math.sqrt(F.view), 48, 20), hp = hg.attributes.position, ph = rnd() * 6;
+    HILLS.forEach(([deg, size, ht, dist]) => {
+      const p = polar0((F.extent + 1280 * Math.sqrt(F.view)) * dist + rnd() * 200, deg + (rnd() - 0.5) * 6);
+      const hg = new THREE.SphereGeometry((560 + rnd() * 120) * size * Math.sqrt(F.view), 48, 20), hp = hg.attributes.position, ph = rnd() * 6;
       for (let k = 0; k < hp.count; k++) {
         const x = hp.getX(k), y = hp.getY(k), z = hp.getZ(k), L = Math.hypot(x, y, z) || 1;
         const f = 1 + 0.07 * Math.sin(3 * x / L + ph) * Math.cos(2.5 * z / L) + 0.04 * Math.sin(7 * z / L + ph * 2) + 0.025 * Math.cos(11 * x / L);
@@ -559,8 +783,8 @@ export function buildCity(scene, env = null) {
       }
       hg.computeVertexNormals();
       const hill = new THREE.Mesh(hg, hillM);
-      hill.scale.y = 0.22 + rnd() * 0.12; hill.position.copy(p); add(hill);
-    }
+      hill.scale.y = ht; hill.position.copy(p); add(hill);
+    });
   });
 
   // Build the water: river, lake, canals, quays, bridges, landings and electric boats
@@ -569,23 +793,6 @@ export function buildCity(scene, env = null) {
     Object.assign(waterM, {roughness: 0.07, metalness: 0.3});
     const quayM = ground(0xd4ccbc, TX.paving(), 4, 0.1), sandM = ground(0xa79c74, TX.gravel(), 6, 0.35);
     const deckM = mat(0xb9895a, {roughness: 0.7, map: TX.repeated(TX.timber(12), 1, 1)});
-    // A flat ribbon along a centreline at offset ±(half-width + e)
-    const ribbon = (w, e, y, m) => {
-      const P = w.pts, n = P.length, pos = [], uv = [], nor = [];
-      const side = (i) => {
-        const a = P[(i - 1 + n) % n], b = P[(i + 1) % n], A = w.closed || i > 0 ? a : P[i], B = w.closed || i < n - 1 ? b : P[i];
-        const dx = B[0] - A[0], dz = B[1] - A[1], L = Math.hypot(dx, dz) || 1, h = P[i][2] + e;
-        return [[P[i][0] - dz / L * h, P[i][1] + dx / L * h], [P[i][0] + dz / L * h, P[i][1] - dx / L * h]];
-      };
-      const S = P.map((_, i) => side(i));
-      for (let i = 0; i < (w.closed ? n : n - 1); i++) {
-        const [l0, r0] = S[i], [l1, r1] = S[(i + 1) % n];
-        for (const v of [l0, l1, r0, r0, l1, r1]) { pos.push(v[0], y, v[1]); nor.push(0, 1, 0); uv.push(0, 0); }
-      }
-      const g = new THREE.BufferGeometry();
-      g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('normal', new THREE.Float32BufferAttribute(nor, 3)); g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
-      const o = new THREE.Mesh(g, m); o.material.side = THREE.DoubleSide; o.receiveShadow = true; add(o);
-    };
     const blob = (rf, y, m, c = LAKE) => {
       const sh = new THREE.Shape();
       for (let i = 0; i <= 160; i++) { const a = (i / 160) * 2 * Math.PI, r = rf(a), x = c.x + Math.cos(a) * r, z = c.z + Math.sin(a) * r; i ? sh.lineTo(x, -z) : sh.moveTo(x, -z); }
@@ -598,7 +805,23 @@ export function buildCity(scene, env = null) {
     const ISL = {x: LAKE.x + 14, z: LAKE.z - 8};
     blob((a) => 15 + 3 * Math.sin(3 * a + 1), 0.38, sandM, ISL); blob((a) => 12 + 3 * Math.sin(3 * a + 1), 0.4, ground(0x8ea35e, TX.grass(11), 12, 0.2), ISL);
     for (let i = 0; i < 9; i++) { const a = i * 2.4, r = 3 + (i % 3) * 3; treePts.push([ISL.x + Math.cos(a) * r, ISL.z + Math.sin(a) * r, 0.7 + (i % 4) * 0.15, 1, 4, i % 3 === 1 ? 1 : 0]); }
-    waters.forEach((w) => { layer(w.from); ribbon(w, w.bank, 0.335, w.kind === 'river' ? sandM : quayM); ribbon(w, 0, 0.36, waterM); });
+    waters.forEach((w) => { layer(w.from); ribbon(w.pts, w.bank, 0.335, w.kind === 'river' || w.kind === 'creek' ? sandM : quayM, w.closed); ribbon(w.pts, 0, 0.36, waterM, w.closed); });
+    // Harbour basin at the edge of the core, where the heart canal ends and the rill begins
+    layer(1);
+    blob((a) => harbR(a) + 3, 0.335, quayM, HARB); blob(harbR, 0.36, waterM, HARB);
+    // The rill glows softly at night, like the plaza pool it feeds
+    waters.filter((w) => w.kind === 'rill').forEach((w) => w.pts.forEach((q, i) => { if (i % 4 === 0) glow('cool', q[0], 0.5, q[1]); }));
+    // Towpath along the east bank of the heart canal, from the harbour to the lake
+    {
+      const hc = waters[2].pts, tp = [];
+      for (let i = 1; i < hc.length - 1; i++) {
+        const dx = hc[i + 1][0] - hc[i - 1][0], dz = hc[i + 1][1] - hc[i - 1][1], L = Math.hypot(dx, dz), o = hc[i][2] + 2.5 + 2;
+        const x = hc[i][0] + dz / L * o, z = hc[i][1] - dx / L * o;
+        if (!inLake(x, z, 2)) tp.push([x, z, 1.3]);
+      }
+      ribbon(tp, 0, 0.31, path);
+      tp.forEach((q, i) => { if (i % 10 === 5) lamp(q[0] + 2, q[1]); });
+    }
 
     // Electric boats: a white hull, timber deck and bench, and a solar canopy on four posts
     const hullG = new THREE.SphereGeometry(1, 20, 8, 0, 2 * Math.PI, Math.PI / 2, Math.PI / 2); hullG.scale(4, 0.9, 1.25); hullG.translate(0, 0.62, 0);
@@ -618,6 +841,7 @@ export function buildCity(scene, env = null) {
     };
     // Boats along each water; the river carries larger water buses
     waters.forEach((w) => {
+      if (w.kind === 'rill') return;
       layer(w.from);
       const P = w.pts, step = w.kind === 'river' ? 70 : 30, side = w.kind === 'river' ? 0.45 : 0.32;
       for (let i = 8, k = 0; i < P.length - 2; i += step, k++) {
@@ -635,22 +859,27 @@ export function buildCity(scene, env = null) {
     layer(1);
     for (let i = 0; i < 5; i++) { const a = 1.2 + i * 1.25, r = lakeR(a) * 0.62; boat(LAKE.x + Math.cos(a) * r, LAKE.z + Math.sin(a) * r, -a + Math.PI / 2, 1); }
 
-    // Phase 1 lane and timber landing on the lake
-    radial(60, PHASES[1].extent + 18, landR + 3, 3);
-    const pier = (c, deg, len, wid, from) => {
+    // Timber piers in the harbour and at the lake end of the heart canal, with moored boats
+    const pier = (c, rotY, len, wid, from) => {
       layer(from);
       const m = new THREE.Mesh(new THREE.BoxGeometry(len, 0.3, wid), deckM);
-      m.position.set(c.x, 0.75, c.z); m.rotation.y = rad(deg); m.castShadow = true; m.receiveShadow = true; add(m);
+      m.position.set(c.x, 0.75, c.z); m.rotation.y = rotY; m.castShadow = true; m.receiveShadow = true; add(m);
     };
-    pier(polar(landR + 12, 60), 60, 22, 3.2, 1);
-    pier(polar(landR + 20, 60), 150, 14, 2.6, 1);
-    boat(polar(landR + 17, 60).x + 3, polar(landR + 17, 60).z + 2, rad(150), 1);
+    pier(polar0(238, HEART - 2.2), rad(HEART), 12, 2.6, 1);
+    boat(polar0(234, HEART - 4.2).x, polar0(234, HEART - 4.2).z, rad(HEART), 1);
+    boat(polar0(243, HEART - 4.2).x, polar0(243, HEART - 4.2).z, rad(HEART), 1);
+    boat(polar0(240, HEART + 2.4).x, polar0(240, HEART + 2.4).z, rad(HEART) + Math.PI, 1);
+    {
+      let r = 330; while (!inLake(polar0(r, HEART + 3.2).x, polar0(r, HEART + 3.2).z)) r += 1;
+      pier(polar0(r + 6, HEART + 3.2), rad(HEART), 14, 2.8, 1);
+      boat(polar0(r + 7, HEART + 4.3).x, polar0(r + 7, HEART + 4.3).z, rad(HEART), 1);
+    }
 
     // Arched timber bridges where paths cross the river and canals, each with a small landing
     const segs = new Map();
-    const bridge = (cx, cz, tdx, tdz, len, wid, from, wdx, wdz) => {
+    const bridge = (cx, cz, tdx, tdz, len, wid, from, wdx, wdz, landing = true) => {
       layer(from);
-      const h = Math.min(2.6, 0.9 + len * 0.06), parts = [];
+      const h = Math.min(2.6, (len < 12 ? 0.5 : 0.9) + len * 0.06), parts = [];
       const deck = new THREE.BoxGeometry(len, 0.35, wid, 20, 1, 1), railA = new THREE.BoxGeometry(len, 0.12, 0.12, 20, 1, 1);
       parts.push([deck, 0.2], [railA.clone().translate(0, 0, wid / 2), 1.25], [railA.clone().translate(0, 0, -wid / 2), 1.25]);
       for (let t = -0.5; t <= 0.5; t += 1 / 8) { const pg = new THREE.CylinderGeometry(0.06, 0.06, 1.05, 4); pg.translate(t * len, 0.7, wid / 2); parts.push([pg, 0]); const pg2 = pg.clone().translate(0, 0, -wid); parts.push([pg2, 0]); }
@@ -664,33 +893,46 @@ export function buildCity(scene, env = null) {
       for (const sgn of [-1, 1]) lamp(cx + tdx * sgn * (len / 2 + 1) + tdz * (wid / 2 + 0.8), cz + tdz * sgn * (len / 2 + 1) - tdx * (wid / 2 + 0.8));
       // Landing beside the bridge, on the bank, with a moored boat
       const off = len / 2 - 2;
-      if ((segs.size % 2) === 0) {
+      if (landing && (segs.size % 2) === 0) {
         const lx = cx - tdx * off + wdx * (wid / 2 + 6), lz = cz - tdz * off + wdz * (wid / 2 + 6);
         const m = new THREE.Mesh(new THREE.BoxGeometry(9, 0.3, 2.6), deckM); m.position.set(lx, 0.7, lz); m.rotation.y = Math.atan2(-wdz, wdx); add(m);
         boat(lx + tdx * 2.6, lz + tdz * 2.6, Math.atan2(-wdz, wdx), 1);
       }
       segs.set(segs.size, 1);
     };
+    // Polyline paths and roads are indexed by segment so each water segment checks only its neighbours
+    const SG = 40, sgrid = new Map();
+    paths.forEach((pth) => { if (pth.ring) return; for (let i = 0; i < pth.pts.length - 1; i++) { const q = pth.pts[i], k = Math.floor(q[0] / SG) + ',' + Math.floor(q[1] / SG); if (!sgrid.has(k)) sgrid.set(k, []); sgrid.get(k).push([pth, i]); } });
     waters.forEach((w) => {
-      const P = w.pts, n = P.length;
+      const P = w.pts, n = P.length, done = new Set();
       for (let i = 0; i < (w.closed ? n : n - 1); i++) {
         const a = P[i], b = P[(i + 1) % n];
         const wdx0 = b[0] - a[0], wdz0 = b[1] - a[1], wl = Math.hypot(wdx0, wdz0), wdx = wdx0 / wl, wdz = wdz0 / wl;
-        if (Math.hypot(a[0], a[1]) > FINAL.extent + 30) continue;
-        paths.forEach((pth) => {
-          let f0, f1, tdx, tdz;
-          if (pth.ring && w.closed) return;
-          if (pth.ring) { f0 = Math.hypot(a[0], a[1]) - pth.r; f1 = Math.hypot(b[0], b[1]) - pth.r; }
-          else { const u = rad(pth.deg), sx = Math.sin(u), cz = Math.cos(u); f0 = a[0] * sx + a[1] * cz; f1 = b[0] * sx + b[1] * cz; }
-          if (f0 === 0 || (f0 < 0) === (f1 < 0)) return;
-          const t = f0 / (f0 - f1), cx = a[0] + (b[0] - a[0]) * t, cz = a[1] + (b[1] - a[1]) * t, r = Math.hypot(cx, cz);
-          if (pth.ring) { tdx = -cz / r; tdz = cx / r; }
-          else { const u = rad(pth.deg); tdx = Math.cos(u); tdz = -Math.sin(u); if (r < pth.r0 || r > pth.r1 || cx * tdx + cz * tdz < 0) return; }
-          if (inLake(cx, cz, 4)) return;
+        if (Math.hypot(a[0], a[1]) > FINAL.extent + 60) continue;
+        const cross = (cx, cz, tdx, tdz, pth) => {
+          if (inBasin(cx, cz, 4)) return;
           const sin = Math.abs(tdx * wdz - tdz * wdx);
           if (sin < 0.6) return;
-          const len = Math.min(70, (2 * (a[2] + w.bank) + 4) / sin);
-          bridge(cx, cz, tdx, tdz, len, pth.w + 0.8, Math.max(w.from, pth.from), wdx, wdz);
+          const len = Math.min(70, (2 * (a[2] + w.bank) + (w.kind === 'rill' ? 2.5 : 4)) / sin);
+          bridge(cx, cz, tdx, tdz, len, pth.w + 0.8, Math.max(w.from, pth.from), wdx, wdz, w.kind !== 'rill' && !pth.road);
+        };
+        paths.forEach((pth) => {
+          if (!pth.ring || w.closed) return;
+          const f0 = Math.hypot(a[0], a[1]) - pth.r, f1 = Math.hypot(b[0], b[1]) - pth.r;
+          if (f0 === 0 || (f0 < 0) === (f1 < 0)) return;
+          const t = f0 / (f0 - f1), cx = a[0] + (b[0] - a[0]) * t, cz = a[1] + (b[1] - a[1]) * t, r = Math.hypot(cx, cz);
+          cross(cx, cz, -cz / r, cx / r, pth);
+        });
+        const gx = Math.floor(a[0] / SG), gz = Math.floor(a[1] / SG);
+        for (let di = -1; di <= 1; di++) for (let dj = -1; dj <= 1; dj++) (sgrid.get(gx + di + ',' + (gz + dj)) || []).forEach(([pth, j]) => {
+          const c = pth.pts[j], d = pth.pts[j + 1], ex = d[0] - c[0], ez = d[1] - c[1];
+          const den = wdx0 * ez - wdz0 * ex; if (Math.abs(den) < 1e-9) return;
+          const t = ((c[0] - a[0]) * ez - (c[1] - a[1]) * ex) / den, u = ((c[0] - a[0]) * wdz0 - (c[1] - a[1]) * wdx0) / den;
+          if (t < 0 || t >= 1 || u < 0 || u >= 1) return;
+          const key = paths.indexOf(pth) + ':' + Math.round((c[0] + ex * u) / 25) + ',' + Math.round((c[1] + ez * u) / 25);
+          if (done.has(key)) return; done.add(key);
+          const L = Math.hypot(ex, ez);
+          cross(a[0] + wdx0 * t, a[1] + wdz0 * t, ex / L, ez / L, pth);
         });
       }
     });
@@ -715,12 +957,12 @@ export function buildCity(scene, env = null) {
     if (cones) cones.castShadow = true;
     let ci = 0;
     crowns.castShadow = true;
-    pts.forEach(([x, z, s], i) => {
+    pts.forEach(([x, z, s, , , , y0 = 0], i) => {
       const bush = pts[i][5] === 2;
       if (bush) m4.makeScale(0, 0, 0); else m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s));
       trunks.setMatrixAt(i, m4);
       const cone = pts[i][5] === 1;
-      if (bush) m4.compose(new THREE.Vector3(x, 1.1 * s, z), q, new THREE.Vector3(s * 1.3, s * 0.75, s * 1.3));
+      if (bush) m4.compose(new THREE.Vector3(x, 1.1 * s + y0, z), q, new THREE.Vector3(s * 1.3, s * 0.75, s * 1.3));
       else m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
       if (cone) { cones.setMatrixAt(ci, m4); m4.makeScale(0, 0, 0); }
       crowns.setMatrixAt(i, m4);
@@ -771,11 +1013,15 @@ export const VIEWS = {
   homes: {pos: [175, 22, 95], target: [0, 15, 0], fov: 55, label: 'Above the homes ring'},
   plaza: {pos: [0, 1.7, 75], target: [0, 32, 0], fov: 62, label: 'From the plaza edge'},
   solar: {pos: [120, 8, 210], target: [0, 20, -40], fov: 55, label: 'From the solar ring'},
-  terraces: {pos: [-361, 3, 401], target: [-232, 6, 497], fov: 60, label: 'Between the Phase 3 terraces'},
-  lake: {pos: [-30, 70, -190], target: [140, 0, -380], fov: 50, label: 'Over the lake and river'},
+  terraces: {pos: [-361, 3, -401], target: [-232, 6, -497], fov: 60, label: 'Between the Phase 3 terraces'},
+  lake: {pos: [80, 80, 190], target: [-94, 0, 400], fov: 50, label: 'Over the heart canal and the lake'},
   canal: {pos: [355, 3, 640], target: [470, 3, 590], fov: 60, label: 'On a canal quay, Phase 3'},
-  water: {pos: [520, 260, -60], target: [80, 0, -420], fov: 50, label: 'River, lake and canals from the east'},
-  terracesAir: {pos: [-289, 45, 370], target: [-192, 6, 526], fov: 55, label: 'Above the Phase 3 terraces'},
+  water: {pos: [900, 420, 300], target: [-100, 0, 700], fov: 50, label: 'Lake, creek and river from the east'},
+  terracesAir: {pos: [-289, 45, -370], target: [-192, 6, -526], fov: 55, label: 'Above the Phase 3 terraces'},
+  heart: {pos: [-95, 48, 330], target: [0, 18, 20], fov: 50, label: 'Along the heart rill to the spire'},
+  dome: {pos: [24, 44, 150], target: [0, 3, 109], fov: 52, label: 'Into a communosphere through its oculus'},
+  hub: {pos: [150, 45, -165], target: [62, 0, -242], fov: 50, label: 'Phase 1 mobility hub on the north road'},
+  work: {pos: [300, 70, -110], target: [200, 0, -202], fov: 50, label: 'A Phase 2 neighbourhood work hub'},
 };
 
 // Wide views scale with the phase so the whole city stays in frame
