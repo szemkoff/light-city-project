@@ -11,8 +11,13 @@
   .ui h1 { pointer-events: auto; font: 600 16px/1.2 Georgia, serif; margin: 0 8px 0 0; background: rgba(251,248,242,.9); padding: 8px 10px; border-radius: 8px; }
   .ui button { pointer-events: auto; border: 1px solid #D8CDBA; background: rgba(251,248,242,.92); border-radius: 999px; padding: 6px 12px; font: inherit; cursor: pointer; }
   .ui button[aria-pressed="true"], .ui button[aria-checked="true"] { background: #1D1A15; color: #FBF8F2; }
-  #phases { display: inline-flex; gap: 6px; margin-right: 10px; }
-  #phases button { border-color: #C9A24A; }
+  .ctl { pointer-events: auto; display: inline-flex; align-items: center; gap: 6px; background: rgba(251,248,242,.92); border: 1px solid #D8CDBA; border-radius: 999px; padding: 2px 4px 2px 12px; }
+  .ctl span { font-size: 12px; color: #5F584C; text-transform: uppercase; letter-spacing: .04em; }
+  .ctl select { font: inherit; color: inherit; border: 0; background: transparent; padding: 5px 22px 5px 4px; cursor: pointer; appearance: none; -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #5F584C 50%), linear-gradient(135deg, #5F584C 50%, transparent 50%);
+    background-position: calc(100% - 11px) 52%, calc(100% - 6px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
+  .ctl select:focus-visible { outline: 2px solid #C9A24A; border-radius: 6px; }
+  .ctl.phase { border-color: #C9A24A; }
   .note { position: fixed; left: 12px; bottom: 12px; right: 12px; max-width: 640px; background: rgba(251,248,242,.92); padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #5F584C; }
   body.render .ui, body.render .note { display: none; }
 </style>
@@ -20,7 +25,7 @@
 </head>
 <body>
 <canvas id="c" aria-label="3D model of the Light City plan"></canvas>
-<div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><span id="phases" role="radiogroup" aria-label="Phase"></span><span id="views"></span><span id="time" role="radiogroup" aria-label="Time of day" style="margin-left:10px;display:inline-flex;gap:6px"></span></div>
+<div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><label class="ctl phase"><span>Phase</span><select id="phaseSel" aria-label="Phase"></select></label><label class="ctl"><span>View</span><select id="viewSel" aria-label="View"></select></label><label class="ctl"><span>Time</span><select id="timeSel" aria-label="Time of day"></select></label></div>
 <p class="note" id="note"></p>
 <script type="module">
   import {start, VIEWS, PHASES} from './city.js';
@@ -28,27 +33,24 @@
   const phase = [1, 2, 3].includes(+q.get('phase')) ? +q.get('phase') : 1;
   const NOTES = {
     1: 'Phase 1, pilot hamlet: 200 residents on a 20–30 acre core. A 90 m spire of three lattice sections on a foundation built for the final height, one temple and two learning pavilions, three 40 m domes, 30 earth homes on ring 4 and solar on ring 5. Reserved dome plots are meadow and tree nursery. A heart lake to the south-west joins the plaza by a canal, harbour and rill; low hills shelter the north; cars stop at a solar mobility hub on the north road. Paths turn in a gentle spiral. Utilities sit behind the city in the northern woods, and a treatment wetland cleans the water where the creek meets the river.',
-    2: 'Phase 2, village: about 1,500 residents on roughly 160 acres. Everything from Phase 1 stays; this view turns on what Phase 2 adds. The spire gains two sections (150 m), three more pavilions, five new 52 m domes on reserved plots, 24 more homes in the ring 4 gaps, a new ring of earth-home courtyard clusters and a food and energy belt. Beyond the core the radial paths turn gently; three work hubs and three mobility hubs sit within a few minutes of every home.',
+    2: 'Phase 2, village: about 1,500 residents on roughly 160 acres. Everything from Phase 1 stays; this view turns on what Phase 2 adds. The spire gains two sections (150 m), three more pavilions, five new 52 m domes on reserved plots, 24 more homes in the ring 4 gaps, a new ring of earth-home courtyard clusters and a food and energy belt. The paths turn in a gentle spiral; three work hubs and three mobility hubs sit within a few minutes of every home.',
     3: 'Phase 3, town: 8,000+ residents on about 1.2 square miles. The village and its food and energy belt stay as built, now a green belt; this view turns on what Phase 3 adds. The spire reaches 240 m, the last four ring domes and two pavilions fill reserved plots, and outside the green belt come timber terraces with green roofs, six 80 m district domes and a new outer belt, with market halls and workshops in every district, a ring road with mobility hubs, and a slow river bending round the south. Schematic, not a final master plan.',
   };
 
   let app;
-  const pb = document.getElementById('phases');
+  const setQ = (k, v) => { const u = new URLSearchParams(location.search); if (v == null) u.delete(k); else u.set(k, v); history.replaceState(null, '', '?' + u); };
+  const opt = (sel, value, label, title) => { const o = document.createElement('option'); o.value = value; o.textContent = label; if (title) o.title = title; sel.appendChild(o); return o; };
+  const ps = document.getElementById('phaseSel');
+  const PHASE_LABELS = {1: '1 · Pilot hamlet', 2: '2 · Village', 3: '3 · Town'};
+  for (const n of [1, 2, 3]) opt(ps, n, PHASE_LABELS[n], n === 1 ? 'Phase 1 only' : 'Turn on the structures Phase ' + n + ' adds');
   const showPhase = (n) => {
     document.getElementById('ttl').textContent = 'Light City, ' + PHASES[n].name;
     document.getElementById('note').textContent = NOTES[n] + ' Drag to orbit, scroll or pinch to zoom.';
-    pb.querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-checked', i + 1 === n));
+    ps.value = n;
   };
-  for (const n of [1, 2, 3]) {
-    const b = document.createElement('button');
-    b.textContent = 'Phase ' + n; b.setAttribute('role', 'radio');
-    b.title = n === 1 ? 'Phase 1 only' : 'Turn on the structures Phase ' + n + ' adds';
-    b.onclick = () => {
-      app.setPhase(n); showPhase(n);
-      const u = new URLSearchParams(location.search); u.set('phase', n); history.replaceState(null, '', '?' + u);
-    };
-    pb.appendChild(b);
-  }
+  let curPhase = phase;
+  const goPhase = (n) => { curPhase = n; app.setPhase(n); showPhase(n); setQ('phase', n); };
+  ps.onchange = () => goPhase(+ps.value);
   const render = q.has('render');
   if (render) document.body.classList.add('render');
   const c = document.getElementById('c');
@@ -56,26 +58,32 @@
   const time = q.get('time') === 'night' ? 'night' : 'day';
   app = start(c, {phase, time, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
   showPhase(phase);
-  const box = document.getElementById('views');
-  // Three view buttons for visitors; the other views stay available by URL (?view=) for reference renders.
-  const BUTTONS = {aerial: 'Aerial', top: 'Plan', plaza: 'Street level'};
-  for (const [k, label] of Object.entries(BUTTONS)) {
-    const b = document.createElement('button');
-    b.textContent = label; b.title = VIEWS[k].label; b.setAttribute('aria-pressed', k === (q.get('view') || 'aerial'));
-    b.onclick = () => { app.setView(k); box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); };
-    box.appendChild(b);
+  // Views grouped by theme. A view that only exists in a later phase switches the phase up to it.
+  const GROUPS = [
+    ['Overview', [['aerial', 'Aerial'], ['top', 'Plan from above'], ['hero', 'Low aerial from the west'], ['water', 'Lake, creek and river']]],
+    ['Centre', [['plaza', 'Street level at the plaza'], ['heart', 'Along the heart rill'], ['path', 'On a spiral path'], ['homes', 'Homes ring'], ['solar', 'Solar ring'], ['dome', 'Inside a communosphere']]],
+    ['Water and boats', [['lake', 'Heart canal and lake'], ['harbour', 'Harbour crescent'], ['canal', 'Canal quay', 3]]],
+    ['Living and work', [['hub', 'Mobility hub'], ['work', 'Neighbourhood work hub', 2], ['terracesAir', 'Above the terraces', 3], ['terraces', 'Between the terraces', 3]]],
+    ['Infrastructure', [['utilities', 'Utility campus'], ['watermouth', 'Water mouth and wetland']]],
+  ];
+  const vs = document.getElementById('viewSel');
+  const MINP = {};
+  for (const [g, items] of GROUPS) {
+    const og = document.createElement('optgroup'); og.label = g; vs.appendChild(og);
+    for (const [k, label, minP] of items) { if (!VIEWS[k]) continue; MINP[k] = minP || 1; opt(og, k, label + (minP ? ' (Phase ' + minP + ')' : ''), VIEWS[k].label); }
   }
-  // Day and night toggle; the choice is kept in the URL (?time=night)
-  const tb = document.getElementById('time');
-  for (const [k, label] of [['day', 'Day'], ['night', 'Night']]) {
-    const b = document.createElement('button');
-    b.textContent = label; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', k === time);
-    b.onclick = () => {
-      app.setTime(k); tb.querySelectorAll('button').forEach(x => x.setAttribute('aria-checked', x === b));
-      const u = new URLSearchParams(location.search); if (k === 'night') u.set('time', 'night'); else u.delete('time'); history.replaceState(null, '', '?' + u);
-    };
-    tb.appendChild(b);
-  }
+  const startView = VIEWS[q.get('view')] ? q.get('view') : 'aerial';
+  if (!MINP[startView]) opt(vs, startView, VIEWS[startView].label);
+  vs.value = startView;
+  vs.onchange = () => {
+    const k = vs.value;
+    if ((MINP[k] || 1) > curPhase) goPhase(MINP[k]);
+    app.setView(k); setQ('view', k === 'aerial' ? null : k);
+  };
+  // Day and night; the choice is kept in the URL (?time=night)
+  const ts = document.getElementById('timeSel');
+  opt(ts, 'day', 'Day'); opt(ts, 'night', 'Night'); ts.value = time;
+  ts.onchange = () => { app.setTime(ts.value); setQ('time', ts.value === 'night' ? 'night' : null); };
   window.__ready = true;
 </script>
 </body>
