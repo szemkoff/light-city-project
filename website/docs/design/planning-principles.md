@@ -52,10 +52,37 @@ In the northern hemisphere "behind" means north and "in front" means south. On a
 | High ground behind | Hills all round, none behind in particular | The highest hills behind to the north, a ridge on the east a little higher than the one on the west, an open south |
 | Water in front, embracing | River to the north, bowing away from the city (a "reverse bow") | River to the south, curving round the whole town; the city sits on the inside of the bend |
 | Water reaching the heart | The lake never reached the centre; the plaza pool stood alone | A winding heart canal brings boats from the lake to a harbour, and a stone rill carries the water on, between the domes, into the plaza pool |
-| No straight arrows at the centre | 24 straight radial paths, all aimed at the spire | Straight only inside the 222 m Phase 1 core, ending at the plaza's ring of water; beyond it the plan turns gently, so outer paths curve |
+| No straight arrows at the centre | 24 straight radial paths, all aimed at the spire | No straight lines: every path turns in a gentle spiral from the plaza, and the outer paths also wander a few metres |
 | A quiet front, service behind | No defined road access | The service road comes from the north, behind the city; no road runs along the lake or river front |
 
-The core keeps its true radial geometry on purpose, because the [sacred geometry](/docs/concepts/sacred-geometry) of the 12 paths matters to the project. The paths there are short, end at the ring pool around the spire (water slows qi), and are lined with trees.
+The [sacred geometry](/docs/concepts/sacred-geometry) of the 12 paths is kept: they are still 12, evenly spaced, but they now run as the arms of a spiral rather than as spokes.
+
+### Feng shui in the plan, point by point
+
+Feng shui texts treat straight lines as the main thing to avoid. Straight roads and T-junctions aimed at a building are the classic "poison arrows", and qi is said to move well only along curving lines ([Feng Shui Practice](https://www.hpsst.com/uploads/6/2/9/3/62931075/chap_4_feng_shui_practice.pdf)). The second round of checks applied this to every path, road and building in the model:
+
+- **No straight lines.** Each of the 12 paths leaves the plaza at an angle and turns in a slow logarithmic spiral, about 11° from a true radius, all the way out. Beyond the core a spiral is almost straight over one block, so the outer paths also wander a few metres to either side. The north road and the outer roads bend the same way. No path or road now runs straight for more than 80 m.
+- **No path aimed at a door.** Where a path reaches a dome, it stops at the edge of the dome's forecourt. A round planted bed on the axis makes it turn aside before the door. The two ring paths near the dome ring bend round each forecourt instead of cutting through it. Paths reaching work hubs, district squares and workshop rows get the same planted bed.
+- **The bright hall (ming tang).** The open space in front of a site, where qi gathers, should be open, level and calm ([JCBAR](https://ojs.bonviewpress.com/index.php/JCBAR/article/download/4706/1506)). The plaza, the dome forecourts and the lake front stay open: no buildings or roads on them.
+- **The water mouth (shuikou).** Where water leaves a village, Huizhou villages "lock" it with a grove, a bridge and a pavilion, so that the water and its good fortune are not lost easily ([Atlantis Press](https://www.atlantis-press.com/article/25875955.pdf)). Shuikou woodland also measurably calms the wind around villages ([Scientific Reports](https://www.nature.com/articles/s41598-026-45973-5)). In the model, where the creek meets the river, there is now a grove, a pavilion and a bridge. Next to them, the treatment wetland cleans the city's water before it leaves (see [Infrastructure](/docs/design/infrastructure)).
+- **Feng shui woods behind.** Villages in southern China keep a crescent of forest on the slope behind them. It shelters them from wind, keeps moisture and soil on the hill and cools the summer ([HKU Forest Village](https://ccsg.hku.hk/forestvillage/index.php?route=information/page&page_id=28), [BBC](https://www.bbc.co.uk/travel/article/20201215-the-tiny-forests-designed-by-feng-shui)). The model now has a dense crescent of woodland north of the final city, from about 1,070 m to 1,400 m. It is planted in Phase 1, so it is mature by Phase 3, and the utility campus sits inside it.
+- **A curving harbour.** The heart canal used to end in a round basin, which read as a blunt end. The harbour is now a crescent lying along the ring. The canal enters at one horn, the rill leaves from the other, and trees frame the landward side.
+
+### Collisions and the layout audit
+
+A layout audit now runs on the model (`node website/scripts/audit-model.cjs`). For each phase it checks for buildings on paths or in water, buildings overlapping each other, path ends aimed at doors, straight runs over 80 m and trees on paths. The first run found real clashes:
+
+| Problem | Fix |
+|---|---|
+| Phase 2 carports on the 480 m ring road and on a Phase 3 terrace path | Hubs moved to 506 m with two rows of roofs; the ring path runs into the paved hub square and out the other side |
+| Ring path through each Phase 2 work hub's market hall | The ring path ends at the edge of the hub square, with a planted bed |
+| Ring-5 solar arrays on the spiral paths and the rill | Two arrays per sector, set clear of the paths |
+| Workshops overlapping each other at the work hubs | Set further apart round the square |
+| Terrace buildings at 510 m touching at the mid-crescent passage | Wider passage and a wider gap at each path |
+| Greenhouses end to end in the food belts | Spaced along the rows |
+| 24 to 29 trees standing on paths | Trees are now cleared off every path and road; a tree under a later phase's path is felled when that path is built |
+
+After the fixes the audit reports, in every phase: 0 buildings on paths or in water, 0 overlaps, 0 straight runs over 80 m and 0 trees on paths. Every path end that meets a building is screened by planting.
 
 ---
 

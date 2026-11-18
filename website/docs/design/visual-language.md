@@ -20,7 +20,7 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 
 ## 3D reference model
 
-Every illustration of the city as a whole starts from one shared 3D model, so the radial design never drifts. It is one model with three phases that grow from the same plan: every structure is tagged with the phase that builds it, and the phase switch turns later structures on or off ([compared in Architecture](/docs/design/architecture#phased-development--scale)). Phase 1 shows the spire on a round plaza, five rings, 12 radial paths (straight in the core, gently turning beyond it), one temple and two learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land. Phase 2 (village) and Phase 3 (town) keep all of that unchanged and add domes on reserved plots, sections on the same spire, and rings of homes and food and energy belts outward (build once, grow outward).
+Every illustration of the city as a whole starts from one shared 3D model, so the radial design never drifts. It is one model with three phases that grow from the same plan: every structure is tagged with the phase that builds it, and the phase switch turns later structures on or off ([compared in Architecture](/docs/design/architecture#phased-development--scale)). Phase 1 shows the spire on a round plaza, five rings, 12 paths that turn in a gentle spiral from the plaza, one temple and two learning pavilions, three 40 m domes on ring 3, earth homes on ring 4 and solar with meadow on ring 5, inside wild land. Phase 2 (village) and Phase 3 (town) keep all of that unchanged and add domes on reserved plots, sections on the same spire, and rings of homes and food and energy belts outward (build once, grow outward).
 
 ![3D reference model of the Phase 1 plan: top view and aerial view of the five rings and 12 radial paths](/img/diagrams/model-reference.webp)
 
@@ -30,6 +30,28 @@ Every illustration of the city as a whole starts from one shared 3D model, so th
 - **Label the phase.** Any image of the whole city says which phase it shows, and must match the model at that phase: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a flared lattice of stacked sections: three in Phase 1, five in Phase 2, eight in Phase 3.
 - **What must match.** One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.
 - **Changing the plan.** Update `static/model/city.js` and the plan diagram together, then re-render the views and the affected images.
+- **Check the layout.** After any change to the plan, run `node scripts/audit-model.cjs` from `website/`. For each phase it reports buildings on paths or in water, overlapping buildings, path ends aimed at doors without a planted bed, straight runs over 80 m and trees on paths. All counts should be zero before a change is merged ([Planning principles](/docs/design/planning-principles#collisions-and-the-layout-audit)).
+
+### What the model does not show yet
+
+The model shows the plan, the main buildings, water, movement and the [infrastructure](/docs/design/infrastructure). These parts of the documented design are not in it yet:
+
+| Missing from the model | Where it is described | Notes |
+|---|---|---|
+| Schools, a clinic and a library | [Architecture: learning centres](/docs/design/architecture#3-learning-centers), [Residency](/docs/project/contribution-based-residency) | The learning pavilions stand in for them; no separate buildings yet |
+| Inside the spire | [Architecture: the central spire](/docs/design/architecture#the-central-spire) | The lattice and solar crown are shown; the observation deck, lifts and gathering levels are not |
+| Plaza amphitheatre and fire circle | [Architecture: the central plaza](/docs/design/architecture#1-the-central-plaza) | The plaza is open paving round the ring pool |
+| Creative studios and maker spaces in detail | [Architecture: creative studios](/docs/design/architecture#5-creative-studios) | Shown as simple ring 3 buildings and work hub workshops |
+| Food processing, aquaponics, vertical farms and mushrooms | [Technology catalog](/docs/technical/technology-catalog#food-production) | Greenhouses and crop rows only |
+| Food forests and orchards | [Technology catalog](/docs/technical/technology-catalog#3-agroforestry--food-forests) | Woodland and meadow, not planted as food forest |
+| Guest and retreat housing | [Development stages](/docs/project/development-stages) | Retreat income is planned, but there is no guest building |
+| Housing counts per dome and per terrace | [At a Glance](/docs/at-a-glance) | Terraced levels are shown, not individual homes |
+| Pipes, cables and utility tunnels | [Infrastructure](/docs/design/infrastructure#utility-tunnels) | Underground, so not drawn |
+| Rain cisterns, swales and pump stations | [Infrastructure](/docs/design/infrastructure#water-supply) | Only the reservoirs, filters and wetland are drawn |
+| Micro-hydro and geothermal | [Energy systems](/docs/concepts/energy-systems#resilience-without-diesel) | Depend on the site |
+| Sound, healing and float rooms | [Technology catalog](/docs/technical/technology-catalog#consciousness--wellness-tech) | Inside the temples and domes, not modelled |
+| Sports fields, playgrounds and emergency services | Not yet described | Need a page before they go in the model |
+| The real landform | [Site locations](/docs/project/site-locations) | The hills, river and slopes are schematic until a site is chosen |
 
 ## Concept photos (Modern Organic)
 
