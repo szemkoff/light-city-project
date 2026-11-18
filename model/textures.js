@@ -207,6 +207,54 @@ export const glass = () => once('glass', () => {
   return toTexture(c);
 });
 
+// Meadow: grass with scattered wildflowers
+export const meadow = () => once('meadow', () => {
+  const [c, ctx] = canvas();
+  ctx.drawImage(grass(17).image, 0, 0);
+  const rnd = rng(81), cols = ['255,255,240', '255,236,120', '210,170,255', '255,200,210'];
+  for (let i = 0; i < 1800; i++) {
+    const x = rnd() * SIZE, y = rnd() * SIZE, r = 0.8 + rnd() * 1.4;
+    ctx.fillStyle = `rgba(${cols[Math.floor(rnd() * cols.length)]},0.85)`;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  }
+  return toTexture(c);
+});
+
+// Lit windows for the terrace facades at night: same layout as facade(), some rooms dark
+export const facadeLights = () => once('facadeLights', () => {
+  const [c, ctx] = canvas(512, 256);
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 512, 256);
+  const rnd = rng(41);
+  for (let i = 0; i < 6; i++) {
+    const x = 14 + i * 84 + rnd() * 6, w = 50;
+    if (i % 3 === 1) continue;
+    const g = ctx.createLinearGradient(0, 70, 0, 180);
+    g.addColorStop(0, '#ffcf8a'); g.addColorStop(1, '#ff9f45');
+    ctx.fillStyle = g; ctx.fillRect(x, 70, w, 110);
+  }
+  return toTexture(c);
+});
+
+// Soft round glow for lamps, windows and lit domes (additive sprites)
+export const glowDot = () => once('glowDot', () => {
+  const [c, ctx] = canvas(128, 128);
+  const g = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+  g.addColorStop(0, 'rgba(255,255,255,1)'); g.addColorStop(0.18, 'rgba(255,255,255,0.75)');
+  g.addColorStop(0.45, 'rgba(255,255,255,0.18)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, 128, 128);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t;
+});
+
+// Night sky: deep blue overhead, a faint glow at the horizon
+export const nightSky = () => once('nightSky', () => {
+  const [c, ctx] = canvas(4, 256);
+  const g = ctx.createLinearGradient(0, 0, 0, 256);
+  g.addColorStop(0, '#040914'); g.addColorStop(0.6, '#0b1830'); g.addColorStop(1, '#1d2c45');
+  ctx.fillStyle = g; ctx.fillRect(0, 0, 4, 256);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+});
+
 // Foliage: overlapping leaf clusters with light tops and shaded gaps (tinted per tree in city.js)
 export const leaves = () => once('leaves', () => {
   const rnd = rng(71);
