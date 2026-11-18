@@ -20,7 +20,7 @@
 </head>
 <body>
 <canvas id="c" aria-label="3D model of the Light City plan"></canvas>
-<div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><span id="phases" role="radiogroup" aria-label="Phase"></span><span id="views"></span></div>
+<div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><span id="phases" role="radiogroup" aria-label="Phase"></span><span id="views"></span><span id="time" role="radiogroup" aria-label="Time of day" style="margin-left:10px;display:inline-flex;gap:6px"></span></div>
 <p class="note" id="note"></p>
 <script type="module">
   import {start, VIEWS, PHASES} from './city.js';
@@ -53,7 +53,8 @@
   if (render) document.body.classList.add('render');
   const c = document.getElementById('c');
   if (render) { c.style.width = q.get('w') + 'px'; c.style.height = q.get('h') + 'px'; }
-  app = start(c, {phase, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
+  const time = q.get('time') === 'night' ? 'night' : 'day';
+  app = start(c, {phase, time, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
   showPhase(phase);
   const box = document.getElementById('views');
   // Three view buttons for visitors; the other views stay available by URL (?view=) for reference renders.
@@ -63,6 +64,17 @@
     b.textContent = label; b.title = VIEWS[k].label; b.setAttribute('aria-pressed', k === (q.get('view') || 'aerial'));
     b.onclick = () => { app.setView(k); box.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); };
     box.appendChild(b);
+  }
+  // Day and night toggle; the choice is kept in the URL (?time=night)
+  const tb = document.getElementById('time');
+  for (const [k, label] of [['day', 'Day'], ['night', 'Night']]) {
+    const b = document.createElement('button');
+    b.textContent = label; b.setAttribute('role', 'radio'); b.setAttribute('aria-checked', k === time);
+    b.onclick = () => {
+      app.setTime(k); tb.querySelectorAll('button').forEach(x => x.setAttribute('aria-checked', x === b));
+      const u = new URLSearchParams(location.search); if (k === 'night') u.set('time', 'night'); else u.delete('time'); history.replaceState(null, '', '?' + u);
+    };
+    tb.appendChild(b);
   }
   window.__ready = true;
 </script>
