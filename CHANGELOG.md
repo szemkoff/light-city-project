@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - 3D model: Day / Night toggle (`?time=night`) with street lamps, lit home windows and terraces, glowing domes, an uplit spire with LED rings and aviation lights, greenhouse grow-lights, stars and a moon
 - 3D model: no more flicker on the ground when zooming (wider layer spacing and a logarithmic depth buffer); conifers in the woodland, gardens inside the domes, windows on the earth homes, natural hill shapes and softer tone mapping
 - 3D model: Phase 3 terraces redesigned from boxy blocks into flowing curved buildings with rolling green roofs, glass skylights, full-height glazing, thin-shell concrete floor and balcony bands, timber roof edges, living-wall ends, stone plinths and planted beds
+- 3D model: waterways and boat transport: a meandering river and a lake with a wooded island and a boat landing (Phase 1), a canal ring (Phase 2), an outer canal ring and S-curved canals through the town (Phase 3), stone and concrete quays with lamps, arched timber footbridges with landings, and solar-roofed electric boats lit at night; new views `?view=lake`, `?view=water` and `?view=canal`
 
 ## [0.5.0] - 2026-11-16
 

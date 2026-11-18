@@ -110,7 +110,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Structures**: Central plaza, 1 temple, 3 communosphere domes, spire tower (60-120 m)
 - **Energy**: 2-5 MWp solar PV + 8-20 MWh storage
 - **Food**: 1-2 ha agroforestry, supplemented by external sources
-- **In the model**: 90 m spire (three lattice sections on a base built for 240 m), one temple and two learning pavilions, three 40 m domes, 30 earth homes on ring 4, solar on ring 5, reserved plots as meadow and nursery; plan radius 222 m
+- **In the model**: 90 m spire (three lattice sections on a base built for 240 m), one temple and two learning pavilions, three 40 m domes, 30 earth homes on ring 4, solar on ring 5, reserved plots as meadow and nursery; a meandering river to the north that widens into a lake with a wooded island, reached by a lane to a timber boat landing; plan radius 222 m
 
 ![Aerial view of the Phase 2 village: eight domes around the spire, rings of earth-home courtyard clusters and an outer belt of solar rows and greenhouses](/img/home/city-phase-2.webp)
 
@@ -120,7 +120,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Structures**: Expanded plaza, 3-5 temples, 6-12 domes, taller spire (120-300 m)
 - **Energy**: 5-15 MWp solar + 40-80 MWh storage
 - **Food**: 5-10 ha food forests, approaching self-sufficiency
-- **In the model**: everything from Phase 1 kept; spire extended to 150 m with two more sections, six pavilions (temples and learning), eight domes (five new at 52 m on reserved plots), 54 earth homes on ring 4, a new ring of courtyard clusters of six earth homes, and a food and energy belt of agrivoltaics, greenhouses and food forest; plan radius 460 m (about 160 acres)
+- **In the model**: everything from Phase 1 kept; spire extended to 150 m with two more sections, six pavilions (temples and learning), eight domes (five new at 52 m on reserved plots), 54 earth homes on ring 4, a new ring of courtyard clusters of six earth homes, and a food and energy belt of agrivoltaics, greenhouses and food forest; a soft canal ring with stone quays joins the lake, crossed by arched timber footbridges, with solar-roofed electric boats as a transport option; plan radius 460 m (about 160 acres)
 
 ![Aerial view of the Phase 3 town: twelve domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses](/img/home/city-phase-3.webp)
 
@@ -130,7 +130,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Structures**: Full concentric ring layout with 12+ domes
 - **Energy**: 15-50 MWp distributed renewable + storage
 - **Food**: 20-50 ha regenerative agriculture
-- **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m, eight pavilions, all twelve ring domes and 60 ring homes, then outside the green belt crescents of flowing two-to-three storey terraces (curved glass facades, thin-shell concrete floor and balcony bands, timber roof edges, green roofs with skylights and living-wall ends), six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan.
+- **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m, eight pavilions, all twelve ring domes and 60 ring homes, then outside the green belt crescents of flowing two-to-three storey terraces (curved glass facades, thin-shell concrete floor and balcony bands, timber roof edges, green roofs with skylights and living-wall ends), six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; an outer canal ring and three S-curved canals through the town link both rings, the lake and the river, so electric boats and water buses reach every district; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan: the course of the river, lake and canals will follow the site's real landform and drainage.
 
 **Note on the source's scale**: the source describes a 40,000 ft spire and 60,000–120,000 people ([The Archetype](/docs/concepts/the-archetype)). That is inspiration only; the Earth build follows the phases above.
 
