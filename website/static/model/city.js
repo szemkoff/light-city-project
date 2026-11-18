@@ -98,11 +98,13 @@ export function buildCity(scene, env = null) {
   const postM = mat(0x4a4a48, {roughness: 0.6, metalness: 0.5});
   const headM = atNight(mat(0xeee6d4), warm(0xffd9a0, 2.5));
   const lamp = (x, z) => {
+    if (wet(x, z, 0.8, cur.userData.to)) return;
     const v = new THREE.Vector3(x, 0, z);
     place('post', postG, postM, v); place('head', headG, headM, v);
     glow('lamp', x, 4.3, z); glow('halo', x, 0.8, z);
   };
 
+  const lampAt = (x, z) => lamp(x, z);
   // Textured materials: ground and paths are mapped in world metres, objects by their own UVs
   const ground = (color, tex, tile, macro) => TX.worldMapped(mat(color), tex, tile, macro);
   const shiny = (m) => { if (env) { m.envMap = env; m.envMapIntensity = 0.9; atNight(m, {envMapIntensity: 0.12}); } return m; };
@@ -111,8 +113,57 @@ export function buildCity(scene, env = null) {
   // Trees are instanced per layer so the town phase stays fast
   const treePts = [];
   let tFrom = 1, tTo = 4;
-  const tree = (x, z, s = 1, kind = 0) => treePts.push([x, z, s, tFrom, tTo, kind]);
+  const tree = (x, z, s = 1, kind = 0) => {
+    if (wet(x, z, 1 + 2.2 * s, tTo) || lanes.some(([d, r0, r1, hw]) => { const r = Math.hypot(x, z), a = rad(d);
+      return r > r0 && r < r1 && Math.abs(x * Math.sin(a) + z * Math.cos(a)) < hw; })) return;
+    treePts.push([x, z, s, tFrom, tTo, kind]);
+  };
   const trees = (from, to = 4) => { tFrom = from; tTo = to; };
+
+  // Water: a meandering river along the north, widening into a lake (Phase 1); a canal ring that joins
+  // the lake (Phase 2); an outer canal ring and three S-curved canals through the town (Phase 3).
+  // Electric boats use all of it. The real course will follow the site's landform; this is schematic.
+  // Each water is a centreline of [x, z, half-width] samples; `wet` tells whether a point is on water or its bank.
+  const waters = [], WG = 40, wgrid = new Map(), lanes = [];
+  const addWater = (pts, from, kind, closed = false) => {
+    const w = {pts, from, kind, closed, bank: kind === 'river' ? 4 : 2.5};
+    waters.push(w);
+    pts.forEach((pt, i) => { const k = Math.floor(pt[0] / WG) + ',' + Math.floor(pt[1] / WG); if (!wgrid.has(k)) wgrid.set(k, []); wgrid.get(k).push([w, i]); });
+    return w;
+  };
+  const LAKE = {x: 130, z: -372};
+  const lakeR = (a) => 74 + 14 * Math.sin(2 * a + 0.7) + 8 * Math.sin(3 * a + 2) + 5 * Math.sin(5 * a);
+  const inLake = (x, z, pad = 0) => Math.hypot(x - LAKE.x, z - LAKE.z) < lakeR(Math.atan2(z - LAKE.z, x - LAKE.x)) + pad;
+  const wet = (x, z, pad = 0, to = 4) => {
+    if (to > 1 && inLake(x, z, pad + 3)) return true;
+    const gx = Math.floor(x / WG), gz = Math.floor(z / WG);
+    for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) {
+      const c = wgrid.get(gx + i + ',' + (gz + j));
+      if (c) for (const [w, k] of c) { if (w.from >= to) continue; const q = w.pts[k]; if (Math.hypot(x - q[0], z - q[1]) < q[2] + w.bank + pad) return true; }
+    }
+    return false;
+  };
+  {
+    const river = [];
+    for (let x = -4200; x <= 4200; x += 3) river.push([x, -420 - 0.00009 * x * x + 30 * Math.sin(x / 130) + 14 * Math.sin(x / 53 + 1), 13 + 3 * Math.sin(x / 400)]);
+    addWater(river, 1, 'river');
+    const ring = (r0, amp, f, hw, from) => {
+      const pts = [], n = Math.round(2 * Math.PI * r0 / 3);
+      for (let i = 0; i < n; i++) { const a = (i / n) * 2 * Math.PI, r = r0 + amp * Math.sin(f * a + 1) + amp * 0.4 * Math.sin((f * 2 + 1) * a); pts.push([Math.cos(a) * r, -Math.sin(a) * r, hw]); }
+      addWater(pts, from, 'canal', true);
+    };
+    ring(377, 5, 4, 6, 2);
+    ring(746, 4, 7, 6.5, 3);
+    [0, 120, 240].forEach((d) => {
+      const pts = [];
+      for (let r = 372; r <= 750; r += 3) { const a = rad(d + 5 * Math.sin(2 * Math.PI * (r - 377) / 369)); pts.push([Math.cos(a) * r, -Math.sin(a) * r, 7]); }
+      addWater(pts, 3, 'canal');
+    });
+  }
+  // Phase 1 lane from the north-east radial path to the lake landing
+  let landR = 240; while (!inLake(polar(landR, 60).x, polar(landR, 60).z)) landR += 1;
+  lanes.push([60, PHASES[1].extent + 10, landR + 2, 6]);
+  const paths = [];
 
   // Wild land beyond the city
   layer(1);
@@ -134,6 +185,7 @@ export function buildCity(scene, env = null) {
   // Ring paths (gravel)
   const path = ground(0xf0e6d0, TX.gravel(), 5, 0.15);
   const ringPath = (r, w = 3.2) => {
+    paths.push({ring: true, r, w, from: cur.userData.from});
     flat(new THREE.RingGeometry(r - w / 2, r + w / 2, Math.max(160, Math.round(r))), path, 0.3);
     if (r < 30) return;
     const n = Math.max(8, Math.round((2 * Math.PI * r) / (r < 250 ? 26 : 42)));
@@ -145,6 +197,7 @@ export function buildCity(scene, env = null) {
 
   // Radial paths: 12 from the plaza, extended outward by each phase, plus 12 more in the town's outer rings
   const radial = (deg, r0, r1, w) => {
+    paths.push({deg, r0, r1, w, from: cur.userData.from});
     const len = r1 - r0;
     const m = flat(new THREE.PlaneGeometry(len, w), path, 0.31);
     m.rotation.z = rad(deg);
@@ -307,6 +360,7 @@ export function buildCity(scene, env = null) {
     for (let i = 0; i < 24; i++) {
       const deg = 7.5 + i * 15;
       const c = polar(r, deg);
+      if (wet(c.x, c.z, 32)) continue;
       flat(new THREE.CircleGeometry(9, 32), garden, 0.27).position.set(c.x, 0.27, c.z);
       for (let k = 0; k < 6; k++) {
         const a = deg + k * 60;
@@ -396,6 +450,8 @@ export function buildCity(scene, env = null) {
     }
   };
   const building = (B) => {
+    // Buildings give way to the canals and the river; their place becomes waterfront
+    for (let t = 0; t <= 1; t += 0.1) { const c = polar(B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), B.a0 + (B.a1 - B.a0) * t); if (wet(c.x, c.z, B.hw + 5)) return; }
     const H = (t) => B.base + B.rise * Math.pow(Math.sin(Math.PI * t), 0.8) * (0.8 + 0.2 * Math.cos(2 * Math.PI * (t * 1.3 + B.ph)));
     const k = (v) => () => v;
     band(outline(B, 0.3), k(0), k(0.45), plinthM);
@@ -459,6 +515,7 @@ export function buildCity(scene, env = null) {
         for (let k = 0; k < count; k++) {
           const deg = s * 15 + (24 / r) * (180 / Math.PI) + (k + 0.5) * (span / count);
           const p = polar(r, deg);
+          if (wet(p.x, p.z, 14)) continue;
           if (kind === 0) array(p, deg, 22, 7);
           else if (kind === 1) {
             const g = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 26, 16, 1, false, 0, Math.PI), gh);
@@ -505,6 +562,139 @@ export function buildCity(scene, env = null) {
       hill.scale.y = 0.22 + rnd() * 0.12; hill.position.copy(p); add(hill);
     }
   });
+
+  // Build the water: river, lake, canals, quays, bridges, landings and electric boats
+  {
+    const waterM = atNight(shiny(ground(0x6a8c99, TX.water(), 14, 0.2)), warm(0x103040, 0.35));
+    Object.assign(waterM, {roughness: 0.07, metalness: 0.3});
+    const quayM = ground(0xd4ccbc, TX.paving(), 4, 0.1), sandM = ground(0xa79c74, TX.gravel(), 6, 0.35);
+    const deckM = mat(0xb9895a, {roughness: 0.7, map: TX.repeated(TX.timber(12), 1, 1)});
+    // A flat ribbon along a centreline at offset ±(half-width + e)
+    const ribbon = (w, e, y, m) => {
+      const P = w.pts, n = P.length, pos = [], uv = [], nor = [];
+      const side = (i) => {
+        const a = P[(i - 1 + n) % n], b = P[(i + 1) % n], A = w.closed || i > 0 ? a : P[i], B = w.closed || i < n - 1 ? b : P[i];
+        const dx = B[0] - A[0], dz = B[1] - A[1], L = Math.hypot(dx, dz) || 1, h = P[i][2] + e;
+        return [[P[i][0] - dz / L * h, P[i][1] + dx / L * h], [P[i][0] + dz / L * h, P[i][1] - dx / L * h]];
+      };
+      const S = P.map((_, i) => side(i));
+      for (let i = 0; i < (w.closed ? n : n - 1); i++) {
+        const [l0, r0] = S[i], [l1, r1] = S[(i + 1) % n];
+        for (const v of [l0, l1, r0, r0, l1, r1]) { pos.push(v[0], y, v[1]); nor.push(0, 1, 0); uv.push(0, 0); }
+      }
+      const g = new THREE.BufferGeometry();
+      g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('normal', new THREE.Float32BufferAttribute(nor, 3)); g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2));
+      const o = new THREE.Mesh(g, m); o.material.side = THREE.DoubleSide; o.receiveShadow = true; add(o);
+    };
+    const blob = (rf, y, m, c = LAKE) => {
+      const sh = new THREE.Shape();
+      for (let i = 0; i <= 160; i++) { const a = (i / 160) * 2 * Math.PI, r = rf(a), x = c.x + Math.cos(a) * r, z = c.z + Math.sin(a) * r; i ? sh.lineTo(x, -z) : sh.moveTo(x, -z); }
+      const g = new THREE.ShapeGeometry(sh); g.rotateX(-Math.PI / 2);
+      const o = new THREE.Mesh(g, m); o.position.y = y; o.receiveShadow = true; add(o);
+    };
+    // Lake with a wooded island
+    layer(1);
+    blob((a) => lakeR(a) + 5, 0.335, sandM); blob(lakeR, 0.36, waterM);
+    const ISL = {x: LAKE.x + 14, z: LAKE.z - 8};
+    blob((a) => 15 + 3 * Math.sin(3 * a + 1), 0.38, sandM, ISL); blob((a) => 12 + 3 * Math.sin(3 * a + 1), 0.4, ground(0x8ea35e, TX.grass(11), 12, 0.2), ISL);
+    for (let i = 0; i < 9; i++) { const a = i * 2.4, r = 3 + (i % 3) * 3; treePts.push([ISL.x + Math.cos(a) * r, ISL.z + Math.sin(a) * r, 0.7 + (i % 4) * 0.15, 1, 4, i % 3 === 1 ? 1 : 0]); }
+    waters.forEach((w) => { layer(w.from); ribbon(w, w.bank, 0.335, w.kind === 'river' ? sandM : quayM); ribbon(w, 0, 0.36, waterM); });
+
+    // Electric boats: a white hull, timber deck and bench, and a solar canopy on four posts
+    const hullG = new THREE.SphereGeometry(1, 20, 8, 0, 2 * Math.PI, Math.PI / 2, Math.PI / 2); hullG.scale(4, 0.9, 1.25); hullG.translate(0, 0.62, 0);
+    const deckG = new THREE.CircleGeometry(1, 20); deckG.rotateX(-Math.PI / 2); deckG.scale(3.9, 1, 1.2); deckG.translate(0, 0.62, 0);
+    const benchG = new THREE.BoxGeometry(2.8, 0.45, 1.5); benchG.translate(-0.2, 0.85, 0);
+    const roofG = new THREE.BoxGeometry(4.6, 0.12, 2.3); roofG.translate(-0.2, 2.35, 0);
+    const postGs = [[-2.2, -0.9], [-2.2, 0.9], [1.8, -0.9], [1.8, 0.9]].map(([x, z]) => { const g = new THREE.CylinderGeometry(0.05, 0.05, 1.7, 5); g.translate(x, 1.45, z); return g.toNonIndexed(); });
+    const postsG = new THREE.BufferGeometry();
+    ['position', 'normal', 'uv'].forEach((a) => postsG.setAttribute(a, new THREE.Float32BufferAttribute(postGs.flatMap((g) => [...g.attributes[a].array]), a === 'uv' ? 2 : 3)));
+    const hullM = shiny(mat(0xf4f2ec, {roughness: 0.3}));
+    const boatLamp = atNight(mat(0xf4f2ec, {roughness: 0.3}), warm(0xffd9a0, 0.6));
+    const boat = (x, z, dir, s = 1) => {
+      const v = new THREE.Vector3(x, 0, z);
+      place('boatHull', hullG, hullM, v, dir, s); place('boatDeck', deckG, deckM, v, dir, s); place('boatBench', benchG, boatLamp, v, dir, s);
+      place('boatRoof', roofG, pv, v, dir, s); place('boatPost', postsG, postM, v, dir, s);
+      glow('window', x, 1.6 * s, z);
+    };
+    // Boats along each water; the river carries larger water buses
+    waters.forEach((w) => {
+      layer(w.from);
+      const P = w.pts, step = w.kind === 'river' ? 70 : 30, side = w.kind === 'river' ? 0.45 : 0.32;
+      for (let i = 8, k = 0; i < P.length - 2; i += step, k++) {
+        const [x, z, hw] = P[i], [x2, z2] = P[i + 2], dx = x2 - x, dz = z2 - z, L = Math.hypot(dx, dz);
+        if (Math.hypot(x, z) > FINAL.extent + 900 || (k * 7) % 5 > 2) continue;
+        const o = (k % 2 ? 1 : -1) * hw * side;
+        boat(x - dz / L * o, z + dx / L * o, Math.atan2(-dz, dx) + (k % 2 ? 0 : Math.PI), w.kind === 'river' ? 1.4 : 1);
+      }
+      // Lamps along the canal quays
+      if (w.kind === 'canal') for (let i = 0; i < P.length - 2; i += 14) {
+        const [x, z, hw] = P[i], [x2, z2] = P[i + 2], dx = x2 - x, dz = z2 - z, L = Math.hypot(dx, dz), o = hw + w.bank + 1.6;
+        const q = [x + dz / L * o, z - dx / L * o]; if (!wet(q[0], q[1], 0.5)) { const sv = cur; lampAt(q[0], q[1]); cur = sv; }
+      }
+    });
+    layer(1);
+    for (let i = 0; i < 5; i++) { const a = 1.2 + i * 1.25, r = lakeR(a) * 0.62; boat(LAKE.x + Math.cos(a) * r, LAKE.z + Math.sin(a) * r, -a + Math.PI / 2, 1); }
+
+    // Phase 1 lane and timber landing on the lake
+    radial(60, PHASES[1].extent + 18, landR + 3, 3);
+    const pier = (c, deg, len, wid, from) => {
+      layer(from);
+      const m = new THREE.Mesh(new THREE.BoxGeometry(len, 0.3, wid), deckM);
+      m.position.set(c.x, 0.75, c.z); m.rotation.y = rad(deg); m.castShadow = true; m.receiveShadow = true; add(m);
+    };
+    pier(polar(landR + 12, 60), 60, 22, 3.2, 1);
+    pier(polar(landR + 20, 60), 150, 14, 2.6, 1);
+    boat(polar(landR + 17, 60).x + 3, polar(landR + 17, 60).z + 2, rad(150), 1);
+
+    // Arched timber bridges where paths cross the river and canals, each with a small landing
+    const segs = new Map();
+    const bridge = (cx, cz, tdx, tdz, len, wid, from, wdx, wdz) => {
+      layer(from);
+      const h = Math.min(2.6, 0.9 + len * 0.06), parts = [];
+      const deck = new THREE.BoxGeometry(len, 0.35, wid, 20, 1, 1), railA = new THREE.BoxGeometry(len, 0.12, 0.12, 20, 1, 1);
+      parts.push([deck, 0.2], [railA.clone().translate(0, 0, wid / 2), 1.25], [railA.clone().translate(0, 0, -wid / 2), 1.25]);
+      for (let t = -0.5; t <= 0.5; t += 1 / 8) { const pg = new THREE.CylinderGeometry(0.06, 0.06, 1.05, 4); pg.translate(t * len, 0.7, wid / 2); parts.push([pg, 0]); const pg2 = pg.clone().translate(0, 0, -wid); parts.push([pg2, 0]); }
+      parts.forEach(([g, y0]) => {
+        g.translate(0, y0, 0);
+        const pa = g.attributes.position;
+        for (let i = 0; i < pa.count; i++) { const u = (2 * pa.getX(i)) / len; pa.setY(i, pa.getY(i) + h * (1 - u * u)); }
+        g.computeVertexNormals();
+        const m = new THREE.Mesh(g, deckM); m.rotation.y = Math.atan2(-tdz, tdx); m.position.set(cx, 0, cz); m.castShadow = true; add(m);
+      });
+      for (const sgn of [-1, 1]) lamp(cx + tdx * sgn * (len / 2 + 1) + tdz * (wid / 2 + 0.8), cz + tdz * sgn * (len / 2 + 1) - tdx * (wid / 2 + 0.8));
+      // Landing beside the bridge, on the bank, with a moored boat
+      const off = len / 2 - 2;
+      if ((segs.size % 2) === 0) {
+        const lx = cx - tdx * off + wdx * (wid / 2 + 6), lz = cz - tdz * off + wdz * (wid / 2 + 6);
+        const m = new THREE.Mesh(new THREE.BoxGeometry(9, 0.3, 2.6), deckM); m.position.set(lx, 0.7, lz); m.rotation.y = Math.atan2(-wdz, wdx); add(m);
+        boat(lx + tdx * 2.6, lz + tdz * 2.6, Math.atan2(-wdz, wdx), 1);
+      }
+      segs.set(segs.size, 1);
+    };
+    waters.forEach((w) => {
+      const P = w.pts, n = P.length;
+      for (let i = 0; i < (w.closed ? n : n - 1); i++) {
+        const a = P[i], b = P[(i + 1) % n];
+        const wdx0 = b[0] - a[0], wdz0 = b[1] - a[1], wl = Math.hypot(wdx0, wdz0), wdx = wdx0 / wl, wdz = wdz0 / wl;
+        if (Math.hypot(a[0], a[1]) > FINAL.extent + 30) continue;
+        paths.forEach((pth) => {
+          let f0, f1, tdx, tdz;
+          if (pth.ring && w.closed) return;
+          if (pth.ring) { f0 = Math.hypot(a[0], a[1]) - pth.r; f1 = Math.hypot(b[0], b[1]) - pth.r; }
+          else { const u = rad(pth.deg), sx = Math.sin(u), cz = Math.cos(u); f0 = a[0] * sx + a[1] * cz; f1 = b[0] * sx + b[1] * cz; }
+          if (f0 === 0 || (f0 < 0) === (f1 < 0)) return;
+          const t = f0 / (f0 - f1), cx = a[0] + (b[0] - a[0]) * t, cz = a[1] + (b[1] - a[1]) * t, r = Math.hypot(cx, cz);
+          if (pth.ring) { tdx = -cz / r; tdz = cx / r; }
+          else { const u = rad(pth.deg); tdx = Math.cos(u); tdz = -Math.sin(u); if (r < pth.r0 || r > pth.r1 || cx * tdx + cz * tdz < 0) return; }
+          if (inLake(cx, cz, 4)) return;
+          const sin = Math.abs(tdx * wdz - tdz * wdx);
+          if (sin < 0.6) return;
+          const len = Math.min(70, (2 * (a[2] + w.bank) + 4) / sin);
+          bridge(cx, cz, tdx, tdz, len, pth.w + 0.8, Math.max(w.from, pth.from), wdx, wdz);
+        });
+      }
+    });
+  }
 
   // Build trees as two instanced meshes per layer
   const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 6), crownG = new THREE.SphereGeometry(2.4, 10, 8);
@@ -582,6 +772,9 @@ export const VIEWS = {
   plaza: {pos: [0, 1.7, 75], target: [0, 32, 0], fov: 62, label: 'From the plaza edge'},
   solar: {pos: [120, 8, 210], target: [0, 20, -40], fov: 55, label: 'From the solar ring'},
   terraces: {pos: [-361, 3, 401], target: [-232, 6, 497], fov: 60, label: 'Between the Phase 3 terraces'},
+  lake: {pos: [-30, 70, -190], target: [140, 0, -380], fov: 50, label: 'Over the lake and river'},
+  canal: {pos: [355, 3, 640], target: [470, 3, 590], fov: 60, label: 'On a canal quay, Phase 3'},
+  water: {pos: [520, 260, -60], target: [80, 0, -420], fov: 50, label: 'River, lake and canals from the east'},
   terracesAir: {pos: [-289, 45, 370], target: [-192, 6, 526], fov: 55, label: 'Above the Phase 3 terraces'},
 };
 
