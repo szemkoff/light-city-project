@@ -30,6 +30,7 @@ const sidebars: SidebarsConfig = {
         'design/organic-forms-and-materials',
         'design/light-on-the-land',
         'design/planning-principles',
+        'design/infrastructure',
         'concepts/communospheres',
         'concepts/sacred-geometry',
         'design/visual-language',
