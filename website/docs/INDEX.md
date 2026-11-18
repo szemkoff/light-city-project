@@ -48,6 +48,7 @@ Every document in the library, in the same order as the sidebar. New readers sho
 
 ## 7. Research
 - [Open Questions](/docs/research/open-questions): the research agenda
+- [Similar Movements](/docs/research/similar-movements): visionary cities, ecovillages and planned towns compared
 - [Bibliography](/docs/research/bibliography): graded sources
 
 ## 8. Contribute

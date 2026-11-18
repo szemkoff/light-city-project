@@ -69,6 +69,7 @@ const sidebars: SidebarsConfig = {
       label: '8 · Research',
       items: [
         'research/open-questions',
+        'research/similar-movements',
         'research/bibliography',
       ],
     },
