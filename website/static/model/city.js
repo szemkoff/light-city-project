@@ -3,6 +3,7 @@
 // Units are metres. North is -Z. Angles are measured counter-clockwise from east, as on the plan.
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
+import * as TX from './textures.js';
 
 // Three phases share one radial plan and grow outward from the same spire and plaza.
 // Phase facts: docs/at-a-glance.md (Scale by phase), docs/concepts/communospheres.md, docs/design/architecture.md.
@@ -52,7 +53,7 @@ const polar = (r, deg) => new THREE.Vector3(Math.cos(rad(deg)) * r, 0, -Math.sin
 // One scene holds every phase. Each object belongs to a layer [from, to): it appears in the phase that
 // builds it and stays until a later phase replaces it (only movable things: the solar crown, nursery
 // trees on dome plots, wild woodland cleared for new rings, and the distant scenery).
-export function buildCity(scene) {
+export function buildCity(scene, env = null) {
   const FINAL = PHASES[3];
   const layers = new Map();
   let cur = null;
@@ -64,6 +65,9 @@ export function buildCity(scene) {
   };
   const add = (...o) => cur.add(...o);
   const mat = (color, o = {}) => new THREE.MeshStandardMaterial({color, roughness: 0.9, metalness: 0, ...o});
+  // Textured materials: ground and paths are mapped in world metres, objects by their own UVs
+  const ground = (color, tex, tile, macro) => TX.worldMapped(mat(color), tex, tile, macro);
+  const shiny = (m) => { if (env) { m.envMap = env; m.envMapIntensity = 0.9; } return m; };
   const flat = (geo, m, y) => { const o = new THREE.Mesh(geo, m); o.rotation.x = -Math.PI / 2; o.position.y = y; o.receiveShadow = true; add(o); return o; };
 
   // Trees are instanced per layer so the town phase stays fast
@@ -74,23 +78,23 @@ export function buildCity(scene) {
 
   // Wild land beyond the city
   layer(1);
-  flat(new THREE.CircleGeometry(FINAL.extent + 3600, 96), mat(0x7f8f58), 0);
+  flat(new THREE.CircleGeometry(FINAL.extent + 3600, 96), ground(0x86965e, TX.grass(3), 34, 0.6), 0);
 
   // Outer bands, outermost first: food and energy belts are darker, neighborhoods lighter.
   // Each band belongs to the phase whose belt adds it.
   const bands = [];
   FINAL.belts.forEach(([b0, b1]) => {
     const from = [2, 3].find((n) => (PHASES[n].belts || []).some(([x]) => x === b0));
-    bands.push([b1, 0x8d9d64, from], [b0, 0x98ab72, from]);
+    bands.push([b1, 0x94a46a, from, TX.fields()], [b0, 0xa0b37a, from, TX.grass(5)]);
   });
-  bands.sort((x, y) => y[0] - x[0]).forEach(([r, c, from], i) => { layer(from); flat(new THREE.CircleGeometry(r, 200), mat(c), 0.004 + i * 0.002); });
+  bands.sort((x, y) => y[0] - x[0]).forEach(([r, c, from, tex], i) => { layer(from); flat(new THREE.CircleGeometry(r, 200), ground(c, tex, tex === TX.fields() ? 26 : 22, 0.4), 0.004 + i * 0.002); });
 
   // Core ring bands, outermost first
   layer(1);
-  [...P.rings].reverse().forEach((ring, i) => flat(new THREE.CircleGeometry(ring.r, 128), mat(ring.color), 0.02 + i * 0.02));
+  [...P.rings].reverse().forEach((ring, i) => flat(new THREE.CircleGeometry(ring.r, 128), ground(new THREE.Color(ring.color).multiplyScalar(1.1), i === 4 ? TX.paving() : TX.grass(7), i === 4 ? 6 : 16, 0.3), 0.02 + i * 0.02));
 
   // Ring paths (gravel)
-  const path = mat(0xe6dcc6);
+  const path = ground(0xf0e6d0, TX.gravel(), 5, 0.15);
   const ringPath = (r, w = 3.2) => flat(new THREE.RingGeometry(r - w / 2, r + w / 2, Math.max(160, Math.round(r))), path, 0.15);
   P.rings.slice(0, 4).forEach((ring) => ringPath(ring.r));
   layer(2); ringPath(P.rings[4].r); ringPath(360, 4);
@@ -111,8 +115,9 @@ export function buildCity(scene) {
 
   // Plaza: stone with a ring-shaped reflecting pool
   layer(1);
-  flat(new THREE.CircleGeometry(P.rings[0].r - 1.6, 96), mat(0xcfc3aa), 0.18);
-  const pool = flat(new THREE.RingGeometry(22, 29.5, 96), mat(0x7f9aa6, {roughness: 0.15, metalness: 0.2}), 0.22);
+  flat(new THREE.CircleGeometry(P.rings[0].r - 1.6, 96), ground(0xddd2ba, TX.paving(), 5, 0), 0.18);
+  const pool = flat(new THREE.RingGeometry(22, 29.5, 96), shiny(ground(0x7f9aa6, TX.water(), 9, 0)), 0.22);
+  Object.assign(pool.material, {roughness: 0.08, metalness: 0.25});
   pool.receiveShadow = false;
 
   // Spire: stacked hyperboloid lattice sections of straight timber and steel members.
@@ -147,7 +152,7 @@ export function buildCity(scene) {
   const deck = new THREE.Mesh(new THREE.CylinderGeometry(dr + 2.5, dr + 2, 3, 40), mat(0xd8cfbf));
   deck.position.y = SP.deck; deck.castShadow = true; add(deck);
   // The solar crown is the one structure that moves: it is lifted to the top of each new section
-  const crownM = mat(0x2c3a4a, {roughness: 0.3, metalness: 0.5});
+  const crownM = shiny(mat(0xffffff, {roughness: 0.3, metalness: 0.45, map: TX.repeated(TX.solar(), 6, 1)}));
   [1, 2, 3].forEach((n) => {
     layer(n, n + 1);
     const top = PHASES[n].spireSections * SP.section, cr = rAt(top);
@@ -159,10 +164,13 @@ export function buildCity(scene) {
   const firstIn = (key, match) => [1, 2, 3].find((n) => (PHASES[n][key] || []).some(match));
 
   // Temple and learning pavilions (ring 2), between the radial paths. The first is the temple.
-  const pavilion = (p, size, color = 0xc79a62) => {
-    const d = new THREE.Mesh(new THREE.SphereGeometry(size, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), mat(color, {roughness: 0.6}));
+  const pavCache = new Map();
+  const pavM = (color) => { if (!pavCache.has(color)) pavCache.set(color, mat(color, {roughness: 0.65, map: TX.repeated(TX.timber(14), 8, 2)})); return pavCache.get(color); };
+  const stoneM = mat(0xc9bea8, {map: TX.repeated(TX.paving(), 6, 0.25)});
+  const pavilion = (p, size, color = 0xd4a670) => {
+    const d = new THREE.Mesh(new THREE.SphereGeometry(size, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), pavM(color));
     d.position.copy(p); d.castShadow = true; add(d);
-    const base = new THREE.Mesh(new THREE.CylinderGeometry(size + 2, size + 2, 0.6, 32), mat(0xbdb29c));
+    const base = new THREE.Mesh(new THREE.CylinderGeometry(size + 2, size + 2, 0.6, 32), stoneM);
     base.position.copy(p).setY(0.3); add(base);
   };
   FINAL.inner.forEach(([deg, size]) => { layer(firstIn('inner', ([d]) => d === deg)); pavilion(polar(58, deg), size); });
@@ -175,9 +183,9 @@ export function buildCity(scene) {
     g.computeVertexNormals();
     return g;
   };
-  const glassM = mat(0x9fb6bf, {roughness: 0.15, metalness: 0.3, transparent: true, opacity: 0.85});
+  const glassM = shiny(mat(0xa9c2cb, {roughness: 0.08, metalness: 0.35, transparent: true, opacity: 0.82, map: TX.repeated(TX.glass(), 3, 2)}));
   const ribM = new THREE.LineBasicMaterial({color: 0xa0743f});
-  const capM = mat(0x6f8a4a);
+  const capM = mat(0x7a9550, {map: TX.repeated(TX.grass(13), 4, 1)});
   const dome = (p, diameter, squash = 1) => {
     const r = diameter / 2;
     const g = new THREE.Mesh(half(r, diameter > 60 ? 4 : 3), glassM);
@@ -188,7 +196,7 @@ export function buildCity(scene) {
     cap.scale.y = squash; cap.position.copy(p); add(cap);
   };
   // Each dome plot is meadow and tree nursery until its dome is built; the young trees are then moved out
-  const meadow = mat(0xb9c27f);
+  const meadow = ground(0xc2ca86, TX.grass(17), 10, 0);
   for (let deg = 0; deg < 360; deg += 30) {
     const p = polar(P.domeRing, deg);
     const built = firstIn('domes', ([d]) => d === deg) || 4;
@@ -201,7 +209,7 @@ export function buildCity(scene) {
   }
 
   // Earth homes with green roofs (ring 4), between the radial paths
-  const earthM = mat(0xc98d64, {roughness: 0.95});
+  const earthM = mat(0xd39a70, {roughness: 0.95, map: TX.repeated(TX.earth(), 5, 1.4)});
   const earthHome = (p, deg, size, sx = 1.3) => {
     const h = new THREE.Mesh(new THREE.SphereGeometry(size, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2), earthM);
     h.scale.set(sx, 0.75, 1); h.rotation.y = rad(deg); h.position.copy(p); h.castShadow = true; add(h);
@@ -219,7 +227,7 @@ export function buildCity(scene) {
 
   // Solar arrays with meadow beneath (ring 5)
   layer(1);
-  const pv = mat(0x24313f, {roughness: 0.35, metalness: 0.4});
+  const pv = shiny(mat(0xffffff, {roughness: 0.25, metalness: 0.45, map: TX.solar()}));
   const array = (p, deg, w = 22, d = 9) => {
     const a = new THREE.Mesh(new THREE.BoxGeometry(w, 0.3, d), pv);
     a.position.copy(p).setY(2.2); a.rotation.y = rad(deg) + Math.PI / 2; a.rotateX(-0.45); a.castShadow = true; add(a);
@@ -228,7 +236,7 @@ export function buildCity(scene) {
 
   // Phase 2: village neighborhoods of earth-home courtyard clusters (six homes round a shared garden)
   layer(2); trees(2);
-  const garden = mat(0xb5c08c);
+  const garden = ground(0xbec894, TX.grass(19), 8, 0);
   FINAL.clusters.forEach((r) => {
     for (let i = 0; i < 24; i++) {
       const deg = 7.5 + i * 15;
@@ -245,8 +253,9 @@ export function buildCity(scene) {
 
   // Phase 3: two-to-three storey timber terraces with green roofs, in crescents along the rings
   layer(3); trees(3);
-  const wall = mat(0xc4a27a, {roughness: 0.8});
-  const roofM = mat(0x6f8a4a);
+  // Extruded terrace UVs are in metres: one facade tile is 16 m wide and one 3.2 m storey high
+  const wall = mat(0xd2b088, {roughness: 0.8, map: TX.repeated(TX.facade(), 1 / 16, 1 / 3.2)});
+  const roofM = ground(0x7a9550, TX.grass(23), 9, 0.2);
   const D = FINAL.districts;
   FINAL.terraces.forEach((r, row) => {
     const n = r > 360 ? 24 : 12, step = 360 / n, gap = (8 / r) * (180 / Math.PI);
@@ -271,13 +280,13 @@ export function buildCity(scene) {
   // District hubs: large communosphere domes with a small temple and a market green
   D.deg.forEach((deg) => {
     const c = polar(D.r, deg);
-    flat(new THREE.CircleGeometry(D.d / 2 + 22, 48), mat(0xcfc3aa), 0.19).position.set(c.x, 0.19, c.z);
+    flat(new THREE.CircleGeometry(D.d / 2 + 22, 48), ground(0xddd2ba, TX.paving(), 5, 0), 0.19).position.set(c.x, 0.19, c.z);
     dome(c, D.d, 0.7);
     pavilion(c.clone().add(polar(D.d / 2 + 12, deg + 90)), 6);
   });
 
   // Food and energy belts: agrivoltaic arrays, solar greenhouses and food-forest rows by sector
-  const gh = mat(0xd6e2e4, {roughness: 0.2, metalness: 0.1, transparent: true, opacity: 0.8});
+  const gh = shiny(mat(0xdbe7e9, {roughness: 0.12, metalness: 0.15, transparent: true, opacity: 0.8, map: TX.repeated(TX.glass(), 2, 1)}));
   FINAL.belts.forEach(([b0, b1]) => {
     const from = firstIn('belts', ([x]) => x === b0);
     layer(from); trees(from);
@@ -318,20 +327,24 @@ export function buildCity(scene) {
     const p = polar(r, deg); tree(p.x, p.z, s);
   }
   // Distant hills: scenery that keeps its distance from the frame in each phase's view
+  const hillM = mat(0x75865a, {map: TX.repeated(TX.grass(29), 10, 3)});
   [1, 2, 3].forEach((n) => {
     layer(n, n + 1);
     const F = PHASES[n];
     for (let i = 0; i < 9; i++) {
       const deg = i * 40 + rnd() * 20;
       const p = polar(F.extent + 1280 * Math.sqrt(F.view) + rnd() * 400, deg);
-      const hill = new THREE.Mesh(new THREE.SphereGeometry((500 + rnd() * 300) * Math.sqrt(F.view), 24, 12), mat(0x6f7f55));
+      const hill = new THREE.Mesh(new THREE.SphereGeometry((500 + rnd() * 300) * Math.sqrt(F.view), 24, 12), hillM);
       hill.scale.y = 0.22 + rnd() * 0.12; hill.position.copy(p); add(hill);
     }
   });
 
   // Build trees as two instanced meshes per layer
   const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 6), crownG = new THREE.SphereGeometry(2.4, 10, 8);
-  const trunkM = mat(0x6b5038), leafM = mat(0x5f7a3d);
+  const trunkM = mat(0x6b5038), leafM = mat(0xffffff, {map: TX.repeated(TX.leaves(), 3, 2)});
+  // Leaf colours vary per tree, from deep green to olive and the odd autumn-touched crown
+  const leafC = [0x56733a, 0x5f7a3d, 0x4d6a35, 0x6b8442, 0x738a3f, 0x47612f, 0x7d8a45].map((c) => new THREE.Color(c));
+  const tint = new THREE.Color();
   const byLayer = new Map();
   treePts.forEach((t) => { const k = t[3] + '-' + t[4]; if (!byLayer.has(k)) byLayer.set(k, []); byLayer.get(k).push(t); });
   const m4 = new THREE.Matrix4(), q = new THREE.Quaternion();
@@ -342,7 +355,8 @@ export function buildCity(scene) {
     crowns.castShadow = true;
     pts.forEach(([x, z, s], i) => {
       m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s)); trunks.setMatrixAt(i, m4);
-      m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s, s)); crowns.setMatrixAt(i, m4);
+      m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s)); crowns.setMatrixAt(i, m4);
+      tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar(1.05 + rnd() * 0.25); crowns.setColorAt(i, tint);
     });
     trunks.computeBoundingSphere(); crowns.computeBoundingSphere();
     add(trunks, crowns);
@@ -379,8 +393,9 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
   const W = width || canvas.clientWidth, H = height || canvas.clientHeight;
   renderer.setSize(W, H, false);
 
+  TX.setAnisotropy(Math.min(8, renderer.capabilities.getMaxAnisotropy()));
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xc9dbe6);
+  scene.background = TX.sky('#c9dbe6');
   scene.fog = new THREE.Fog(0xc9dbe6, 700, 2600);
   scene.add(new THREE.HemisphereLight(0xeef4f8, 0x6b6a4a, 1.3));
   const sun = new THREE.DirectionalLight(0xfff1dc, 2.2);
@@ -388,7 +403,18 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
   sun.shadow.bias = -0.0004;
   sun.shadow.mapSize.set(4096, 4096);
   scene.add(sun);
-  const showPhase = buildCity(scene);
+  // A small sky environment for reflections on glass, water and solar panels
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const skyScene = new THREE.Scene();
+  const skyGeo = new THREE.SphereGeometry(10, 32, 16), cols = [], top = new THREE.Color(0x6f9cc4), hor = new THREE.Color(0xdfe8ee), gnd = new THREE.Color(0x6d7a50);
+  for (let i = 0; i < skyGeo.attributes.position.count; i++) {
+    const y = skyGeo.attributes.position.getY(i) / 10, c = y > 0 ? hor.clone().lerp(top, Math.pow(y, 0.6)) : hor.clone().lerp(gnd, Math.min(1, -y * 4));
+    cols.push(c.r, c.g, c.b);
+  }
+  skyGeo.setAttribute('color', new THREE.Float32BufferAttribute(cols, 3));
+  skyScene.add(new THREE.Mesh(skyGeo, new THREE.MeshBasicMaterial({vertexColors: true, side: THREE.BackSide})));
+  const env = pmrem.fromScene(skyScene, 0.02).texture;
+  const showPhase = buildCity(scene, env);
 
   const camera = new THREE.PerspectiveCamera(45, W / H, 0.5, 6000);
   const controls = interactive ? new OrbitControls(camera, canvas) : null;

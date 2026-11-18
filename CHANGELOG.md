@@ -17,6 +17,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Similar Movements: a sourced comparison of visionary cities, ecovillages, intentional communities and planned towns, with lessons for Light City
 - The Venus Project added to the "What others teach us" table in Economy and Migration
 
+### Changed
+- 3D model: procedural textures (grass, crop rows, gravel paths, stone paving, water, timber, rammed earth, solar cells, glazing, facades and foliage), a sky gradient with reflections on glass, water and solar panels, and per-tree leaf colour
+
 ## [0.5.0] - 2026-11-16
 
 ### Added
