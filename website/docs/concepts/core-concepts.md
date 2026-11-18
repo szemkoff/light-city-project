@@ -201,7 +201,7 @@ You do not need to share any spiritual belief. See [Living Here, Honestly](/trus
 Light City draws on and connects to:
 
 - **Sacred architecture**: temples and gathering places designed to lift the spirit
-- **Intentional communities and ecovillages**: Findhorn, Sieben Linden and others ([Bibliography](/docs/research/bibliography))
+- **Intentional communities and ecovillages**: Findhorn, Sieben Linden, Auroville, Twin Oaks and others, plus visionary city projects such as The Venus Project and Arcosanti ([Similar Movements](/docs/research/similar-movements))
 - **Biophilic and regenerative design**: buildings that work with nature
 - **Contemplative traditions**: practices of attention, compassion and service, offered with credit and respect
 - **Spiritual movements** such as "New Earth" and "ascension", which some contributors draw on; see [The Archetype](/docs/concepts/the-archetype#new-earth-5d-and-ascension)

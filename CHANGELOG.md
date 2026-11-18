@@ -13,6 +13,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Interactive 3D city model
 - Prototype communosphere designs
 
+### Added
+- Similar Movements: a sourced comparison of visionary cities, ecovillages, intentional communities and planned towns, with lessons for Light City
+- The Venus Project added to the "What others teach us" table in Economy and Migration
+
 ## [0.5.0] - 2026-11-16
 
 ### Added

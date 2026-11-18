@@ -106,6 +106,7 @@ The operating budget of about $2.5M a year mixes two kinds of cost: work residen
 | **Sardex** (Sardinia, Italy) | Mutual credit among about 3,000 businesses. Accounts start at zero, carry no interest and have capped credit lines ([LSE paper](http://eprints.lse.ac.uk/67622/1/Dini_Self-funded%20social.pdf)). | Limits and a zero starting point stop hoarding and runaway debt. |
 | **WIR** (Switzerland) | A cooperative business currency since 1934, used alongside the Swiss franc and not convertible into it ([Levy Institute](https://www.levyinstitute.org/wp-content/uploads/2024/02/pn_16_1.pdf)). | Two currencies can run side by side for a very long time. Taxes stay in national currency. |
 | **Auroville** (India) | Aims for no money changing hands among residents and provides health care, education and classes in return for work and monthly contributions ([Auroville A to Z](https://www.auroville.org/page/auroville-a-to--z)). It still relies on outside support and grows about 15% of its own food. | Don't promise self-sufficiency on a date. Measure it, and gate each step on it. |
+| **The Venus Project** (Florida, US) | Proposes a resource-based economy that uses science and technology to reach "a sustainable civilization of abundance for all, without exception" ([The Venus Project](https://www.thevenusproject.com/)). The founders built their 21.5-acre Center in Venus, Florida, over decades from their own earnings. A 2017 volunteer design for a larger Center for Resource Management stopped when funding ran out ([Past Works](https://www.thevenusproject.com/portfolio/past-works-by-the-venus-project/)). | A whole new economy needs a funded first step. Keep the no-money phase as a voted option behind measured gates, and pay the edge in dollars until community income covers it. |
 
 ## Open questions
 
@@ -120,3 +121,4 @@ The operating budget of about $2.5M a year mixes two kinds of cost: work residen
 - [Governance](/docs/project/governance): the 80% consent votes that move the dial
 - [Development Stages](/docs/project/development-stages): the financial model and stage gates
 - [Investors](/investors#model): the household model and sensitivity
+- [Similar Movements](/docs/research/similar-movements): how other communities and planned cities compare
