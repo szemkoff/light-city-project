@@ -317,32 +317,125 @@ export function buildCity(scene, env = null) {
     ringPath(r + 30, 2.4);
   });
 
-  // Phase 3: two-to-three storey timber terraces with green roofs, in crescents along the rings
+  // Phase 3: flowing terraces in crescents along the rings, two storeys rising to three.
+  // No boxes: each building waves in plan, has round ends and a rolling roofline. Thin-shell
+  // concrete floor bands, full-height glazing, a curved timber roof edge, a green roof with a
+  // glass skylight ridge, a stone plinth and living-wall ends.
   layer(3); trees(3);
-  // Extruded terrace UVs are in metres: one facade tile is 16 m wide and one 3.2 m storey high
-  const wall = atNight(mat(0xd2b088, {roughness: 0.8, map: TX.repeated(TX.facade(), 1 / 16, 1 / 3.2),
-    emissive: 0xffffff, emissiveIntensity: 0, emissiveMap: TX.repeated(TX.facadeLights(), 1 / 16, 1 / 3.2)}), {emissiveIntensity: 1.3});
+  const concreteM = mat(0xece7dd, {roughness: 0.5, map: TX.repeated(TX.concrete(), 1 / 10, 1 / 10)});
+  const edgeM = atNight(mat(0xd2a26c, {roughness: 0.6, map: TX.repeated(TX.timber(24), 1 / 6, 1 / 1.5)}), warm(0x7a4a1c, 0.35));
+  const glazeM = atNight(shiny(mat(0xffffff, {roughness: 0.12, metalness: 0.25, map: TX.repeated(TX.glazing(), 1 / 9, 1 / 3),
+    emissive: 0xffffff, emissiveIntensity: 0, emissiveMap: TX.repeated(TX.glazingLights(), 1 / 9, 1 / 3)})), {emissiveIntensity: 1.25});
+  const railM = mat(0xd6e8ee, {roughness: 0.05, metalness: 0.2, transparent: true, opacity: 0.35, depthWrite: false});
+  const livingM = mat(0x6d9046, {roughness: 0.9, map: TX.repeated(TX.leaves(), 1 / 3, 1 / 3)});
+  const plinthM = mat(0xbdb3a2, {map: TX.repeated(TX.paving(), 1 / 4, 1 / 1.6)});
   const roofM = ground(0x7a9550, TX.grass(23), 9, 0.2);
+  // All terrace geometry is merged into one mesh per material
+  const batches = new Map();
+  const tri = (m, v, n, uv) => {
+    if (!batches.has(m)) batches.set(m, {p: [], n: [], u: []});
+    const b = batches.get(m);
+    // Wind each triangle so its face points along the wanted normal
+    const e1 = [v[1][0] - v[0][0], v[1][1] - v[0][1], v[1][2] - v[0][2]], e2 = [v[2][0] - v[0][0], v[2][1] - v[0][1], v[2][2] - v[0][2]];
+    const cx = e1[1] * e2[2] - e1[2] * e2[1], cy = e1[2] * e2[0] - e1[0] * e2[2], cz = e1[0] * e2[1] - e1[1] * e2[0];
+    const nm = [n[0][0] + n[1][0] + n[2][0], n[0][1] + n[1][1] + n[2][1], n[0][2] + n[1][2] + n[2][2]];
+    const order = cx * nm[0] + cy * nm[1] + cz * nm[2] < 0 ? [0, 2, 1] : [0, 1, 2];
+    order.forEach((k) => { b.p.push(...v[k]); b.n.push(...n[k]); b.u.push(...uv[k]); });
+  };
+  // Outline of one building at offset d from its wall line: outer edge, round end, inner edge, round end
+  const outline = (B, d) => {
+    const N = 28, M = 6, R = B.hw + d, outer = [], inner = [], cap0 = [], cap1 = [];
+    // t runs along the whole building; a part (t0..t1) such as a skylight follows the same wave
+    const t0 = B.t0 || 0, t1 = B.t1 === undefined ? 1 : B.t1;
+    const rc = (t) => B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), ang = (t) => B.a0 + (B.a1 - B.a0) * t;
+    const pt = (q, t) => ({x: q.x, z: q.z, t});
+    for (let i = 0; i <= N; i++) { const t = t0 + ((t1 - t0) * i) / N; outer.push(pt(polar(rc(t) + R, ang(t)), t)); inner.push(pt(polar(rc(t) - R, ang(t)), t)); }
+    for (const [t, out, dir] of [[t1, cap1, 1], [t0, cap0, -1]]) {
+      const a = rad(ang(t)), c = polar(rc(t), ang(t)), u = [Math.cos(a), -Math.sin(a)], tn = [-Math.sin(a), -Math.cos(a)];
+      for (let j = 1; j < M; j++) {
+        const th = (Math.PI * j) / M, k = dir > 0 ? th : Math.PI - th;
+        out.push({x: c.x + R * (u[0] * Math.cos(k) + dir * tn[0] * Math.sin(k)), z: c.z + R * (u[1] * Math.cos(k) + dir * tn[1] * Math.sin(k)), t, end: true});
+      }
+      out.center = {x: c.x, z: c.z, t};
+    }
+    const loop = [...outer, ...cap1, ...[...inner].reverse(), ...cap0];
+    let A = 0; loop.forEach((p, i) => { const q = loop[(i + 1) % loop.length]; A += p.x * q.z - q.x * p.z; });
+    const s = A > 0 ? 1 : -1;
+    loop.forEach((p, i) => {
+      const a = loop[(i - 1 + loop.length) % loop.length], b = loop[(i + 1) % loop.length], dx = b.x - a.x, dz = b.z - a.z, L = Math.hypot(dx, dz) || 1;
+      p.nx = (s * dz) / L; p.nz = (-s * dx) / L;
+    });
+    // Round ends belong to the segments touching them
+    outer[0].end = outer[N].end = inner[0].end = inner[N].end = true;
+    return {outer, inner, cap0, cap1, loop};
+  };
+  // A vertical band round the outline from y0(t) to y1(t); `pick` chooses the material per segment
+  const band = (O, y0, y1, pick) => {
+    let len = 0;
+    O.loop.forEach((p, i) => {
+      const q = O.loop[(i + 1) % O.loop.length], seg = Math.hypot(q.x - p.x, q.z - p.z);
+      const m = typeof pick === 'function' ? pick(p, q) : pick;
+      const a0 = [p.x, y0(p.t), p.z], a1 = [p.x, y1(p.t), p.z], b0 = [q.x, y0(q.t), q.z], b1 = [q.x, y1(q.t), q.z];
+      const np = [p.nx, 0, p.nz], nq = [q.nx, 0, q.nz];
+      tri(m, [a0, b0, b1], [np, nq, nq], [[len, a0[1]], [len + seg, b0[1]], [len + seg, b1[1]]]);
+      tri(m, [a0, b1, a1], [np, nq, np], [[len, a0[1]], [len + seg, b1[1]], [len, a1[1]]]);
+      len += seg;
+    });
+  };
+  // A horizontal surface over the outline at height y(t), facing up (dir 1) or down (dir -1)
+  const cap = (O, y, m, dir = 1) => {
+    const n = [0, dir, 0], P = (p) => [p.x, y(p.t), p.z], U = (p) => [p.x, p.z];
+    for (let i = 0; i < O.outer.length - 1; i++) {
+      const a = O.outer[i], b = O.outer[i + 1], c = O.inner[i + 1], d = O.inner[i];
+      tri(m, [P(a), P(b), P(c)], [n, n, n], [U(a), U(b), U(c)]);
+      tri(m, [P(a), P(c), P(d)], [n, n, n], [U(a), U(c), U(d)]);
+    }
+    for (const [cp, o, iN] of [[O.cap1, O.outer[O.outer.length - 1], O.inner[O.inner.length - 1]], [O.cap0, O.inner[0], O.outer[0]]]) {
+      const ring = [o, ...cp, iN], c = cp.center;
+      for (let j = 0; j < ring.length - 1; j++) tri(m, [P(c), P(ring[j]), P(ring[j + 1])], [n, n, n], [U(c), U(ring[j]), U(ring[j + 1])]);
+    }
+  };
+  const building = (B) => {
+    const H = (t) => B.base + B.rise * Math.pow(Math.sin(Math.PI * t), 0.8) * (0.8 + 0.2 * Math.cos(2 * Math.PI * (t * 1.3 + B.ph)));
+    const k = (v) => () => v;
+    band(outline(B, 0.3), k(0), k(0.45), plinthM);
+    band(outline(B, -0.4), k(0.45), k(3.2), (p, q) => (p.end && q.end ? livingM : glazeM));
+    // First-floor slab: a thin concrete shell that cantilevers into a balcony with a glass rail
+    const slab = outline(B, 1.9);
+    band(slab, k(3.2), k(3.6), concreteM); cap(slab, k(3.6), concreteM); cap(slab, k(3.2), concreteM, -1);
+    band(outline(B, 1.8), k(3.6), k(4.6), railM);
+    band(outline(B, -0.7), k(3.6), (t) => H(t) - 0.5, glazeM);
+    const roof = outline(B, 1.6);
+    band(roof, (t) => H(t) - 0.5, (t) => H(t) + 0.2, edgeM); cap(roof, (t) => H(t) - 0.5, edgeM, -1); cap(roof, (t) => H(t) + 0.2, roofM);
+    // Glass skylights over the tallest part of the roof
+    for (const [s0, s1] of [[0.2, 0.42], [0.5, 0.78]]) {
+      const sky = outline({...B, t0: s0, t1: s1}, -4.9);
+      band(sky, (t) => H(t) + 0.2, (t) => H(t) + 1.4, glassM); cap(sky, (t) => H(t) + 1.4, glassM);
+    }
+    // Planting beds of shrubs round the building, and a tree at each end
+    outline(B, 3.6).loop.forEach((p, i) => { if (i % 2 === 0) tree(p.x, p.z, 0.4 + ((i * 7) % 5) * 0.06, 2); });
+    for (const t of [0, 1]) { const q = polar(B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), B.a0 + (B.a1 - B.a0) * t + (t ? 1 : -1) * (7 / B.r) * (180 / Math.PI)); tree(q.x, q.z, 1.1); }
+  };
   const D = FINAL.districts;
   FINAL.terraces.forEach((r, row) => {
-    const n = r > 360 ? 24 : 12, step = 360 / n, gap = (8 / r) * (180 / Math.PI);
+    const n = r > 360 ? 24 : 12, step = 360 / n, gap = (8 / r) * (180 / Math.PI), split = (7 / r) * (180 / Math.PI);
     for (let i = 0; i < n; i++) {
       const a0 = i * step + gap, a1 = (i + 1) * step - gap;
       const mid = (a0 + a1) / 2;
       if (Math.abs(r - D.r) < 100 && D.deg.some((d) => Math.abs(((mid - d + 540) % 360) - 180) < step)) continue;
-      const h = 7 + ((i + row) % 3) * 2.5;
-      const shape = new THREE.Shape();
-      const r0 = r - 8, r1 = r + 8;
-      shape.absarc(0, 0, r1, rad(a0), rad(a1), false);
-      shape.absarc(0, 0, r0, rad(a1), rad(a0), true);
-      const geo = new THREE.ExtrudeGeometry(shape, {depth: h, bevelEnabled: false, curveSegments: 24});
-      geo.rotateX(-Math.PI / 2);
-      const m = new THREE.Mesh(geo, wall); m.castShadow = true; m.receiveShadow = true; add(m);
-      const roofGeo = new THREE.ShapeGeometry(shape, 24); roofGeo.rotateX(-Math.PI / 2);
-      const roof = new THREE.Mesh(roofGeo, roofM); roof.position.y = h + 0.05; add(roof);
+      // Two buildings per crescent, with a garden passage between them
+      [[a0, mid - split], [mid + split, a1]].forEach(([b0, b1], j) => building({r, a0: b0, a1: b1, hw: 7, amp: 3.6, ph: (i * 2 + j + row) * 1.9, base: 6.9, rise: 2.6 + ((i + j + row) % 3) * 0.7}));
     }
     ringPath(r + 22, 2.4); ringPath(r - 22, 2.4);
-    for (let i = 0; i < n * 3; i++) { const q = polar(r + 30, (i + 0.5) * (360 / (n * 3))); tree(q.x, q.z, 0.85); }
+    for (let i = 0; i < n * 6; i++) { const q = polar(r + 30 + ((i * 5) % 3 - 1) * 2.5, (i + 0.5) * (360 / (n * 6))); tree(q.x, q.z, 0.75 + ((i * 3) % 4) * 0.12, i % 5 === 2 ? 1 : 0); }
+  });
+  batches.forEach((b, m) => {
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(b.p, 3));
+    g.setAttribute('normal', new THREE.Float32BufferAttribute(b.n, 3));
+    g.setAttribute('uv', new THREE.Float32BufferAttribute(b.u, 2));
+    g.computeBoundingSphere();
+    const mesh = new THREE.Mesh(g, m); mesh.castShadow = true; mesh.receiveShadow = true; add(mesh);
   });
   // District hubs: large communosphere domes with a small temple and a market green
   D.deg.forEach((deg) => {
@@ -433,9 +526,12 @@ export function buildCity(scene, env = null) {
     let ci = 0;
     crowns.castShadow = true;
     pts.forEach(([x, z, s], i) => {
-      m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s)); trunks.setMatrixAt(i, m4);
+      const bush = pts[i][5] === 2;
+      if (bush) m4.makeScale(0, 0, 0); else m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s));
+      trunks.setMatrixAt(i, m4);
       const cone = pts[i][5] === 1;
-      m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
+      if (bush) m4.compose(new THREE.Vector3(x, 1.1 * s, z), q, new THREE.Vector3(s * 1.3, s * 0.75, s * 1.3));
+      else m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
       if (cone) { cones.setMatrixAt(ci, m4); m4.makeScale(0, 0, 0); }
       crowns.setMatrixAt(i, m4);
       tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar(1.05 + rnd() * 0.25);
@@ -485,6 +581,8 @@ export const VIEWS = {
   homes: {pos: [175, 22, 95], target: [0, 15, 0], fov: 55, label: 'Above the homes ring'},
   plaza: {pos: [0, 1.7, 75], target: [0, 32, 0], fov: 62, label: 'From the plaza edge'},
   solar: {pos: [120, 8, 210], target: [0, 20, -40], fov: 55, label: 'From the solar ring'},
+  terraces: {pos: [-361, 3, 401], target: [-232, 6, 497], fov: 60, label: 'Between the Phase 3 terraces'},
+  terracesAir: {pos: [-289, 45, 370], target: [-192, 6, 526], fov: 55, label: 'Above the Phase 3 terraces'},
 };
 
 // Wide views scale with the phase so the whole city stays in frame
