@@ -152,21 +152,6 @@ export const timber = (boards = 16) => once('timber' + boards, () => {
   return toTexture(c);
 });
 
-// Terrace facades: timber boards with a band of windows on each storey (tile = one storey high)
-export const facade = () => once('facade', () => {
-  const [c, ctx] = canvas(512, 256);
-  ctx.drawImage(timber(24).image, 0, 0, 512, 256);
-  const rnd = rng(41);
-  for (let i = 0; i < 6; i++) {
-    const x = 14 + i * 84 + rnd() * 6, w = 50;
-    ctx.fillStyle = 'rgb(70,86,96)'; ctx.fillRect(x, 70, w, 110);
-    ctx.fillStyle = 'rgba(200,225,235,0.45)'; ctx.fillRect(x + 4, 74, w / 2 - 6, 102);
-    ctx.fillStyle = 'rgb(120,90,60)'; ctx.fillRect(x + w / 2 - 2, 70, 4, 110); ctx.fillRect(x - 4, 180, w + 8, 6);
-  }
-  ctx.fillStyle = 'rgba(80,60,40,0.5)'; ctx.fillRect(0, 248, 512, 8);
-  return toTexture(c);
-});
-
 // Rammed earth: horizontal strata with pebbles, for the earth homes. Sphere UVs run v up the wall
 export const earth = () => once('earth', () => {
   const rnd = rng(51), n = fbm(rnd, [4, 8, 16, 32]);
@@ -220,17 +205,43 @@ export const meadow = () => once('meadow', () => {
   return toTexture(c);
 });
 
-// Lit windows for the terrace facades at night: same layout as facade(), some rooms dark
-export const facadeLights = () => once('facadeLights', () => {
-  const [c, ctx] = canvas(512, 256);
-  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 512, 256);
-  const rnd = rng(41);
-  for (let i = 0; i < 6; i++) {
-    const x = 14 + i * 84 + rnd() * 6, w = 50;
-    if (i % 3 === 1) continue;
-    const g = ctx.createLinearGradient(0, 70, 0, 180);
-    g.addColorStop(0, '#ffcf8a'); g.addColorStop(1, '#ff9f45');
-    ctx.fillStyle = g; ctx.fillRect(x, 70, w, 110);
+// Light thin-shell concrete: pale, smooth, faint form lines and pores
+export const concrete = () => once('concrete', () => {
+  const rnd = rng(91), n = fbm(rnd, [4, 8, 16, 32]);
+  const [c, ctx] = canvas();
+  paint(ctx, SIZE, SIZE, (u, v) => { const l = 0.9 + n(u, v) * 0.1 - (Math.abs(((v * 6) % 1) - 0.5) > 0.49 ? 0.04 : 0); return [l, l * 0.99, l * 0.97]; });
+  for (let i = 0; i < 2200; i++) { ctx.fillStyle = `rgba(110,105,95,${0.15 + rnd() * 0.25})`; ctx.fillRect(rnd() * SIZE, rnd() * SIZE, 1.2, 1.2); }
+  return toTexture(c);
+});
+
+// Full-height glazing for the terraces (one tile = 9 m wide, one 3 m storey high):
+// slim timber mullions, a transom, sky reflection and a hint of the rooms behind
+export const glazing = () => once('glazing', () => {
+  const rnd = rng(93), n = fbm(rnd, [2, 4, 8]);
+  const [c, ctx] = canvas(512, 172);
+  paint(ctx, 512, 172, (u, v) => { const l = 0.42 + (1 - v) * 0.22 + n(u, v) * 0.12; return [l * 0.92, l * 1.0, l * 1.06]; });
+  const panes = 6, pw = 512 / panes;
+  for (let i = 0; i < panes; i++) {
+    if (rnd() > 0.35) { ctx.fillStyle = `rgba(${200 + rnd() * 40},${160 + rnd() * 40},${110 + rnd() * 40},0.22)`; ctx.fillRect(i * pw + 10 + rnd() * 20, 90 + rnd() * 30, 30 + rnd() * 30, 60); }
+    ctx.fillStyle = 'rgba(255,255,255,0.12)'; ctx.beginPath(); ctx.moveTo(i * pw + pw * 0.2, 0); ctx.lineTo(i * pw + pw * 0.45, 0); ctx.lineTo(i * pw + pw * 0.1, 172); ctx.lineTo(i * pw - pw * 0.15, 172); ctx.fill();
+  }
+  ctx.fillStyle = '#7a5532';
+  for (let i = 0; i <= panes; i++) ctx.fillRect(i * pw - 3, 0, 6, 172);
+  ctx.fillRect(0, 0, 512, 6); ctx.fillRect(0, 166, 512, 6); ctx.fillRect(0, 34, 512, 3);
+  return toTexture(c);
+});
+
+// The same glazing lit from inside at night; some rooms are dark
+export const glazingLights = () => once('glazingLights', () => {
+  const rnd = rng(95);
+  const [c, ctx] = canvas(512, 172);
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 512, 172);
+  const panes = 6, pw = 512 / panes;
+  for (let i = 0; i < panes; i++) {
+    const k = rnd(); if (k < 0.25) continue;
+    const g = ctx.createLinearGradient(0, 0, 0, 172);
+    g.addColorStop(0, k > 0.6 ? '#ffd9a0' : '#c98a4a'); g.addColorStop(1, k > 0.6 ? '#ff9d4a' : '#7a4a22');
+    ctx.fillStyle = g; ctx.fillRect(i * pw + 3, 6, pw - 6, 160);
   }
   return toTexture(c);
 });

@@ -130,7 +130,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Structures**: Full concentric ring layout with 12+ domes
 - **Energy**: 15-50 MWp distributed renewable + storage
 - **Food**: 20-50 ha regenerative agriculture
-- **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m, eight pavilions, all twelve ring domes and 60 ring homes, then outside the green belt crescents of two-to-three storey timber terraces with green roofs, six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan.
+- **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m, eight pavilions, all twelve ring domes and 60 ring homes, then outside the green belt crescents of flowing two-to-three storey terraces (curved glass facades, thin-shell concrete floor and balcony bands, timber roof edges, green roofs with skylights and living-wall ends), six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan.
 
 **Note on the source's scale**: the source describes a 40,000 ft spire and 60,000–120,000 people ([The Archetype](/docs/concepts/the-archetype)). That is inspiration only; the Earth build follows the phases above.
 
