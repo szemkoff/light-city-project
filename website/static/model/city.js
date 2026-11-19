@@ -70,7 +70,11 @@ export function buildCity(scene, env = null) {
     cur = layers.get(k);
     return cur;
   };
-  const add = (...o) => cur.add(...o);
+  // Click info: every object added while a key is set is tagged with it (index.html shows the matching card)
+  let curInfo = null;
+  const I = (k) => { curInfo = k; };
+  const inf = (k, fn) => (...a) => { const prev = curInfo; curInfo = typeof k === 'function' ? k(...a) : k; try { return fn(...a); } finally { curInfo = prev; } };
+  const add = (...o) => { if (curInfo) o.forEach((x) => { if (!x.userData.info) x.userData.info = curInfo; }); cur.add(...o); };
   // Plan footprints of everything built, for the layout audit (index.html?audit, scripts/audit-model.cjs)
   const FOOT = [];
   const footC = (kind, x, z, r) => FOOT.push({kind, from: cur.userData.from, to: cur.userData.to, c: [x, z], r});
@@ -97,7 +101,8 @@ export function buildCity(scene, env = null) {
   // Small repeated parts (lamps, windows) are collected per layer and built as instanced meshes
   const instSets = new Map();
   const place = (name, geo, m, pos, rotY = 0, scale = 1) => {
-    if (!instSets.has(name)) instSets.set(name, {geo, m, by: new Map()});
+    if (!instSets.has(name)) instSets.set(name, {geo, m, by: new Map(), info: curInfo});
+    else if (instSets.get(name).info !== curInfo) instSets.get(name).info = null;
     const by = instSets.get(name).by;
     if (!by.has(cur)) by.set(cur, []);
     by.get(cur).push(new THREE.Matrix4().compose(pos, new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), rotY), new THREE.Vector3(scale, scale, scale)));
@@ -117,7 +122,8 @@ export function buildCity(scene, env = null) {
   const headG = new THREE.SphereGeometry(0.32, 8, 6); headG.translate(0, 4.3, 0);
   const postM = mat(0x4a4a48, {roughness: 0.6, metalness: 0.5});
   const headM = atNight(mat(0xeee6d4), warm(0xffd9a0, 2.5));
-  const lamp = (x, z) => {
+  const lamp = (x, z) => { const pI = curInfo; curInfo = null; lampB(x, z); curInfo = pI; };
+  const lampB = (x, z) => {
     if (wet(x, z, 0.8, cur.userData.to)) return;
     const v = new THREE.Vector3(x, 0, z);
     place('post', postG, postM, v); place('head', headG, headM, v);
@@ -274,7 +280,7 @@ export function buildCity(scene, env = null) {
   const BEDS = [];
   const inObst = (x, z, pad = 0) => OBST.some((o) => Math.hypot(x - o.x, z - o.z) < o.r + pad);
   const smin = (a, b, k = 2.5) => -k * Math.log(Math.exp(-a / k) + Math.exp(-b / k));
-  const ringPath = (r, w = 3.2) => {
+  const ringPathB = (r, w = 3.2) => {
     const hug = r > 60 && r < 160 ? OBST.filter((o) => o.dome) : [];
     const cuts = OBST.filter((o) => o.cut && Math.abs(Math.hypot(o.x, o.z) - r) < o.cut);
     if (cuts.length) {
@@ -312,6 +318,7 @@ export function buildCity(scene, env = null) {
     const step = Math.round(26 / 1.5);
     for (let i = step >> 1; i < n; i += step) { const q = pts[i], L = Math.hypot(q[0], q[1]), k = (L + w / 2 + 1.2) / L; lamp(q[0] * k, q[1] * k); }
   };
+  const ringPath = inf(null, ringPathB);
   P.rings.slice(0, 4).forEach((ring) => ringPath(ring.r));
   layer(2); ringPath(P.rings[4].r); ringPath(360, 4);
   layer(3); ringPath(460, 4); ringPath(760, 4);
@@ -322,7 +329,7 @@ export function buildCity(scene, env = null) {
   const meander = (r) => r <= 240 ? 0 : (180 / Math.PI) * (4 * Math.sin((r - 240) / 45) + 2 * Math.sin((r - 240) / 19)) * Math.min(1, (r - 240) / 60) / r;
   // A round planted bed a few metres into a square, where a path arrives, so the path turns aside
   const bedAt = (x, z, rIn, at) => { const o = OBST.find((ob) => ob.bed && Math.hypot(x - ob.x, z - ob.z) < ob.r + 1); if (!o) return; const q = at(rIn); BEDS.push([q.x, q.z, cur.userData.from]); };
-  const radial = (deg, r0, r1, w) => {
+  const radialB = (deg, r0, r1, w) => {
     // Sample the path and split it where it meets a plot; each run ends exactly at the plot's edge
     const at = (r) => polar(Math.min(r, r1), deg + meander(Math.min(r, r1))), runs = [];
     let run = [], prev = null;
@@ -342,6 +349,7 @@ export function buildCity(scene, env = null) {
       for (let d = ra + 14; d < rb - 6; d += r0 > 300 ? 44 : 30) { const q = at(d).add(polar0(w / 2 + 1.2, deg + meander(d) + twist(d) + 90)); if (!inObst(q.x, q.z, 1)) lamp(q.x, q.z); }
     });
   };
+  const radial = inf(null, radialB);
   [[1, P.rings[0].r, PHASES[1].extent + 20], [2, PHASES[1].extent + 18, PHASES[2].extent + 20], [3, PHASES[2].extent + 18, FINAL.extent + 20]]
     .forEach(([n, r0, r1]) => { layer(n); for (let i = 0; i < P.radialPaths; i++) radial(i * 30, r0, r1, 4); });
   layer(3);
@@ -385,7 +393,7 @@ export function buildCity(scene, env = null) {
   const shuttleM = atNight(shiny(mat(0xeef0ee, {roughness: 0.25})), warm(0xffd9a0, 0.35));
   const padM = ground(0xcfc6b3, TX.paving(), 5, 0.1);
   const batM = shiny(mat(0xe9ece8, {roughness: 0.35, metalness: 0.25})), concreteU = mat(0xbdb8ad, {roughness: 0.7, map: TX.repeated(TX.concrete(), 1, 1)});
-  const carport = (c, deg, rows, len) => {
+  const carportB = (c, deg, rows, len) => {
     const R = Math.hypot(rows * 11, len) / 2 + 8;
     flat(new THREE.CircleGeometry(R, 40), padM, 0.32).position.set(c.x, 0.32, c.z);
     block(c.x, c.z, R + 3);
@@ -408,8 +416,8 @@ export function buildCity(scene, env = null) {
     }
     // Microgrid node: battery storage container and a compact substation at the pad's end
     { const bx = c.x + u[0] * (len / 2 + 4.5), bz = c.z + u[1] * (len / 2 + 4.5);
-      const bat = new THREE.Mesh(new THREE.BoxGeometry(2.6, 2.6, 6.1), batM); bat.position.set(bx, 1.62, bz); bat.rotation.y = rad(deg); bat.castShadow = true; add(bat); footM('utility', bat);
-      const sub = new THREE.Mesh(new THREE.BoxGeometry(2.2, 2, 2.2), concreteU); sub.position.set(bx + v[0] * 5, 1.32, bz + v[1] * 5); sub.rotation.y = rad(deg); add(sub); footM('utility', sub);
+      const bat = new THREE.Mesh(new THREE.BoxGeometry(2.6, 2.6, 6.1), batM); bat.position.set(bx, 1.62, bz); bat.rotation.y = rad(deg); bat.castShadow = true; bat.userData.info = 'hubBattery'; add(bat); footM('utility', bat);
+      const sub = new THREE.Mesh(new THREE.BoxGeometry(2.2, 2, 2.2), concreteU); sub.position.set(bx + v[0] * 5, 1.32, bz + v[1] * 5); sub.rotation.y = rad(deg); sub.userData.info = 'hubBattery'; add(sub); footM('utility', sub);
       glow('window', bx, 2.2, bz); }
     // Shuttle stop on the city side of the hub
     const s = new THREE.Vector3(c.x - v[0] * (R - 3), 0.32, c.z - v[1] * (R - 3));
@@ -417,11 +425,13 @@ export function buildCity(scene, env = null) {
   };
   const cpG = new THREE.CylinderGeometry(0.12, 0.12, 3, 6); cpG.translate(0, 1.5, 0);
   const pv = shiny(mat(0xffffff, {roughness: 0.25, metalness: 0.45, map: TX.solar()}));
+  const carport = inf('hub', carportB);
   CARPORTS.forEach(([n, r, ds, rows, len]) => { layer(n); ds.forEach((d) => carport(polar(r, d), d + twist(r), rows, len)); });
   layer(1); radial(ENTRY, P.rings[3].r + 1.6, 240, 3);
   { const q = polar(P.rings[3].r - 4.5, ENTRY); BEDS.push([q.x, q.z, 1]); }
 
   // Plaza: stone with a ring-shaped reflecting pool
+  I('plaza');
   layer(1);
   flat(new THREE.CircleGeometry(P.rings[0].r - 1.6, 96), ground(0xddd2ba, TX.paving(), 5, 0), 0.26);
   const pool = flat(new THREE.RingGeometry(22, 29.5, 96), shiny(ground(0x7f9aa6, TX.water(), 9, 0)), 0.29);
@@ -431,6 +441,7 @@ export function buildCity(scene, env = null) {
   pool.receiveShadow = false;
   const poolM = pool.material;
 
+  I('spire');
   // Spire: stacked hyperboloid lattice sections of straight timber and steel members.
   // The foundation, base and 72 m deck are built in Phase 1; each phase adds sections and lifts the solar crown.
   // At night the spire is uplit warm and its steel rings carry cool LED bands
@@ -475,6 +486,7 @@ export function buildCity(scene, env = null) {
     for (let i = 0; i < 4; i++) { const q = polar(cr + 4, i * 90 + 45); glow('red', q.x, top + 1.2, q.z); }
   });
 
+  I(null);
   // Phase in which an item first appears in a phase list
   const firstIn = (key, match) => [1, 2, 3].find((n) => (PHASES[n][key] || []).some(match));
 
@@ -490,7 +502,8 @@ export function buildCity(scene, env = null) {
     for (let i = 0; i < 8; i++) { const q = p.clone().add(polar(size + 1.6, i * 45)); glow('lamp', q.x, 0.9, q.z); }
     glow('halo', p.x, 0.8, p.z, size * 3.2);
   };
-  FINAL.inner.forEach(([deg, size]) => { layer(firstIn('inner', ([d]) => d === deg)); pavilion(polar(58, deg), size); });
+  FINAL.inner.forEach(([deg, size], i) => { I(i ? 'learning' : 'temple'); layer(firstIn('inner', ([d]) => d === deg)); pavilion(polar(58, deg), size); });
+  I(null);
 
   const winG = new THREE.BoxGeometry(1.5, 0.9, 1);
   const winM = atNight(mat(0x39444c, {roughness: 0.15, metalness: 0.3}), warm(0xffb55c, 2.2));
@@ -538,7 +551,7 @@ export function buildCity(scene, env = null) {
     shellCache.set(diameter, out);
     return out;
   };
-  const dome = (p, diameter, squash = 1) => {
+  const domeB = (p, diameter, squash = 1) => {
     const r = diameter / 2, H = r * squash, S = shellParts(diameter);
     footC('dome', p.x, p.z, r);
     [glassM, bipvM, greenPanelM].forEach((m, i) => {
@@ -578,6 +591,7 @@ export function buildCity(scene, env = null) {
     [tFrom, tTo] = keep;
     glow('dome', p.x, H * 0.35, p.z, diameter * 1.3);
   };
+  const dome = inf((p, d) => (d < 45 ? 'dome40' : d < 60 ? 'dome52' : 'dome80'), domeB);
   // Each dome plot is meadow and tree nursery until its dome is built; the young trees are then moved out
   const meadow = ground(0xc2ca86, TX.meadow(), 10, 0);
   // Each dome plot has a forecourt (feng shui ming tang) where its path arrives. A round planted bed on
@@ -594,13 +608,15 @@ export function buildCity(scene, env = null) {
     const p = polar(P.domeRing, deg);
     const built = firstIn('domes', ([d]) => d === deg) || 4;
     if (built > 1) {
-      layer(1, built); trees(1, built);
+      I('nursery'); layer(1, built); trees(1, built);
       flat(new THREE.CircleGeometry(20, 40), meadow, 0.27).position.set(p.x, 0.27, p.z);
       for (let x = -9; x <= 9; x += 4.5) for (let z = -9; z <= 9; z += 4.5) if (x * x + z * z < 110) tree(p.x + x, p.z + z, 0.4);
     }
+    I(null);
     if (built < 4) { const d = FINAL.domes.find(([a]) => a === deg)[1]; layer(built); dome(p, d, d > 45 ? 0.8 : 1); }
   }
 
+  I('earthHome');
   // Earth homes with green roofs (ring 4), between the radial paths
   const earthM = mat(0xd39a70, {roughness: 0.95, map: TX.repeated(TX.earth(), 5, 1.4)});
   const earthHome = (p, deg, size, sx = 1.3) => {
@@ -628,6 +644,7 @@ export function buildCity(scene, env = null) {
     });
   }
 
+  I('solar');
   // Solar arrays with meadow beneath (ring 5)
   layer(1);
   const array = (p, deg, w = 22, d = 9) => {
@@ -637,12 +654,13 @@ export function buildCity(scene, env = null) {
   // Two arrays per 30° sector, set 9.5° either side of the sector's middle so they sit clear of the spiral paths
   for (let i = 0; i < 24; i++) { const deg = Math.floor(i / 2) * 30 + (i % 2 ? 20.5 : 9.5), q = polar(P.solar.radius, deg); if (!wet(q.x, q.z, 11) && !inObst(q.x, q.z, 12)) array(q, deg + twist(P.solar.radius)); }
 
+  I(null);
   // Work is spread through the city, not gathered at the centre ("Scattered Work", the 15-minute city):
   // each neighbourhood has a work hub with a market hall, timber workshops with solar roofs and a
   // small square, so most people walk a few minutes to work and the morning flow runs both ways.
   const shopG = new THREE.CylinderGeometry(5, 5, 22, 20, 1, false, 0, Math.PI); shopG.rotateZ(Math.PI / 2); shopG.rotateY(Math.PI / 2);
   const shopEndG = new THREE.CircleGeometry(5, 20, 0, Math.PI);
-  const market = (c, deg, s = 1) => {
+  const marketB = (c, deg, s = 1) => {
     const m = new THREE.Mesh(new THREE.SphereGeometry(1, 36, 14, 0, Math.PI * 2, 0, Math.PI / 2), pavM(0xcf9e66));
     m.scale.set(17 * s, 7.5 * s, 10 * s); m.rotation.y = rad(deg + twist(Math.hypot(c.x, c.z)) + 90); m.position.copy(c); m.castShadow = true; add(m); footM('market', m);
     const sky = new THREE.Mesh(new THREE.SphereGeometry(1, 24, 6, 0, Math.PI * 2, 0, 0.5), glassM);
@@ -650,12 +668,13 @@ export function buildCity(scene, env = null) {
     for (let i = 0; i < 10; i++) { const q = c.clone().add(polar0(13 * s, i * 36)); glow('lamp', q.x, 1.2, q.z); }
     glow('halo', c.x, 0.8, c.z, 60 * s);
   };
-  const workshop = (c, rotY) => {
+  const workshopB = (c, rotY) => {
     const w = new THREE.Mesh(shopG, pavM(0xc08a55)); w.position.copy(c); w.rotation.y = rotY; w.castShadow = true; add(w); footM('workshop', w);
     const roof = new THREE.Mesh(new THREE.BoxGeometry(2.6, 0.15, 19), pv); roof.position.copy(c).setY(4.75); roof.rotation.y = rotY; add(roof);
     for (const e of [-11, 11]) { const g = new THREE.Mesh(shopEndG, glassM); g.position.copy(c).add(new THREE.Vector3(Math.sin(rotY) * e, 0, Math.cos(rotY) * e)); g.rotation.y = rotY + (e > 0 ? 0 : Math.PI); add(g); glow('window', g.position.x, 2, g.position.z); }
   };
-  const workHub = (c, deg) => {
+  const market = inf('market', marketB), workshop = inf('workshop', workshopB);
+  const workHubB = (c, deg) => {
     flat(new THREE.CircleGeometry(34, 48), padM, 0.32).position.set(c.x, 0.32, c.z);
     block(c.x, c.z, 38);
     market(c, deg, 0.9);
@@ -664,9 +683,11 @@ export function buildCity(scene, env = null) {
     for (let i = 0; i < 14; i++) { const q = c.clone().add(polar0(38, i * (360 / 14) + 6)); if (!wet(q.x, q.z, 2) && Math.abs(Math.hypot(q.x, q.z) - Math.hypot(c.x, c.z)) > 5) treePts.push([q.x, q.z, 0.85, cur.userData.from, cur.userData.to, i % 4 === 1 ? 1 : 0]); }
     for (let i = 0; i < 8; i++) { const q = c.clone().add(polar0(31, i * 45 + 20)); lamp(q.x, q.z); }
   };
+  const workHub = inf('workHub', workHubB);
   layer(2);
   HUBS2.forEach((d) => workHub(polar(HUBR2, d), d));
 
+  I('courtyard');
   // Phase 2: village neighborhoods of earth-home courtyard clusters (six homes round a shared garden)
   layer(2); trees(2);
   const garden = ground(0xbec894, TX.grass(19), 8, 0);
@@ -685,6 +706,7 @@ export function buildCity(scene, env = null) {
     ringPath(r + 30, 2.4);
   });
 
+  I('terrace');
   // Phase 3: flowing terraces in crescents along the rings, two storeys rising to three.
   // No boxes: each building waves in plan, has round ends and a rolling roofline. Thin-shell
   // concrete floor bands, full-height glazing, a curved timber roof edge, a green roof with a
@@ -808,19 +830,21 @@ export function buildCity(scene, env = null) {
     g.computeBoundingSphere();
     const mesh = new THREE.Mesh(g, m); mesh.castShadow = true; mesh.receiveShadow = true; add(mesh);
   });
+  I('districtSquare');
   // District hubs: large communosphere domes with a small temple and a market green
   D.deg.forEach((deg) => {
     const c = polar(D.r, deg);
     flat(new THREE.CircleGeometry(D.d / 2 + 22, 48), ground(0xddd2ba, TX.paving(), 5, 0), 0.27).position.set(c.x, 0.27, c.z);
     dome(c, D.d, 0.7);
     const t = deg + twist(D.r);
-    pavilion(c.clone().add(polar0(D.d / 2 + 12, t + 90)), 6);
+    I('districtTemple'); pavilion(c.clone().add(polar0(D.d / 2 + 12, t + 90)), 6); I('districtSquare');
     // District work: a market hall on the other side of the square and a row of workshops behind
     market(c.clone().add(polar0(D.d / 2 + 14, t - 90)), deg + 90, 1);
     for (let k = -2; k <= 2; k++) { const q = polar(D.r + 72, deg + k * 3.4); workshop(q, rad(deg + twist(D.r + 72) + k * 3.4)); }
     block(c.x, c.z, D.d / 2 + 30);
   });
 
+  I(null);
   // Food and energy belts: agrivoltaic arrays, solar greenhouses and food-forest rows by sector
   const gh = atNight(shiny(mat(0xdbe7e9, {roughness: 0.12, metalness: 0.15, transparent: true, opacity: 0.8, map: TX.repeated(TX.glass(), 2, 1)})), warm(0xd59cff, 0.45));
   FINAL.belts.forEach(([b0, b1]) => {
@@ -836,8 +860,9 @@ export function buildCity(scene, env = null) {
           const deg = s * 15 + (24 / r) * (180 / Math.PI) + (k + 0.5) * (span / count);
           const p = polar(r, deg);
           if (wet(p.x, p.z, 14) || blocked(p.x, p.z, 12)) continue;
-          if (kind === 0) array(p, deg + twist(r), 22, 7);
+          if (kind === 0) { I('agrivoltaic'); array(p, deg + twist(r), 22, 7); I(null); }
           else if (kind === 1) {
+            I('greenhouse');
             const g = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 26, 16, 1, false, 0, Math.PI), gh);
             g.rotation.z = Math.PI / 2; g.rotation.y = rad(deg + twist(r)); g.position.copy(p); g.castShadow = true; add(g); footM('greenhouse', g);
           } else for (let t = -1; t <= 1; t++) { const q = polar(r, deg + t * (9 / r) * (180 / Math.PI)); tree(q.x, q.z, 0.8); }
@@ -846,6 +871,7 @@ export function buildCity(scene, env = null) {
     }
   });
 
+  I(null);
   // Scattered trees in ring 2, kept clear of every pavilion plot
   let seed = 7;
   const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
@@ -867,8 +893,9 @@ export function buildCity(scene, env = null) {
     const roadA = (r) => { const pts = northRoad(r, r); return Math.atan2(-pts[0][1], pts[0][0]) * 180 / Math.PI; };
     const UC = 121, URr = 1200, C = polar0(URr, UC), uv = [Math.cos(rad(UC + 90)), -Math.sin(rad(UC + 90))], vv = [Math.cos(rad(UC)), -Math.sin(rad(UC))];
     const at = (u, v) => new THREE.Vector3(C.x + uv[0] * u + vv[0] * v, 0, C.z + uv[1] * u + vv[1] * v);
-    flat(new THREE.CircleGeometry(60, 56), padM, 0.32).position.set(C.x, 0.32, C.z); block(C.x, C.z, 66);
+    I('utilityCampus'); flat(new THREE.CircleGeometry(60, 56), padM, 0.32).position.set(C.x, 0.32, C.z); block(C.x, C.z, 66); I(null);
     { const a0 = roadA(1180), pts = []; for (let d = a0 + 0.3; d <= UC - (54 / 1180) * 180 / Math.PI; d += 0.25) { const q = polar0(1180 + 4 * Math.sin((d - a0) * 0.9), d); pts.push([q.x, q.z]); } road(pts, 5, 1); }
+    I('reservoir');
     // Covered reservoir: two earth-sheltered cells on the high ground, feeding the city by gravity
     for (const u of [-17, 17]) {
       const q = at(u, 38);
@@ -876,28 +903,35 @@ export function buildCity(scene, env = null) {
       const top = new THREE.Mesh(new THREE.SphereGeometry(13.2, 40, 8, 0, Math.PI * 2, 0, 0.5), earthTop); top.scale.y = 0.5; top.position.copy(q).setY(4.6); add(top);
     }
     { const vh = new THREE.Mesh(new THREE.BoxGeometry(4, 3.4, 4), pavM(0xc49a68)); vh.position.copy(at(0, 27)).setY(1.7); vh.rotation.y = rad(UC); add(vh); footM('utility', vh); }
+    I('sandFilter');
     // Water treatment: slow sand filter beds and a pump house
     for (const u of [-9, 9]) { const b = new THREE.Mesh(new THREE.BoxGeometry(8, 0.9, 16), concreteU); b.position.copy(at(u, 14)).setY(0.45); b.rotation.y = rad(UC); add(b); footM('utility', b); const w = new THREE.Mesh(new THREE.PlaneGeometry(7, 15), waterU); w.rotation.x = -Math.PI / 2; w.rotation.z = rad(UC); w.position.copy(at(u, 14)).setY(0.92); add(w); }
+    I('recycling');
     // Recycling and repair hall with sorted-material bays
-    workshop(at(-18, -38), rad(UC));
+    workshopB(at(-18, -38), rad(UC));
     for (let k = 0; k < 4; k++) { const b = new THREE.Mesh(new THREE.BoxGeometry(4, 1.6, 3), binM[k]); b.position.copy(at(-30 + k * 7, -26)).setY(1.12); b.rotation.y = rad(UC); add(b); footM('utility', b); }
+    I('compost');
     // Compost windrows for food and garden waste
     for (let k = 0; k < 4; k++) { const m = new THREE.Mesh(new THREE.SphereGeometry(1, 18, 8, 0, Math.PI * 2, 0, Math.PI / 2), compostM); m.scale.set(11, 1.5, 1.8); m.rotation.y = rad(UC + 90); m.position.copy(at(30, -46 + k * 5)).setY(0.32); add(m); footM('utility', m); }
+    I('biogas');
     // Biogas: two digesters for sewage sludge and food waste, and a gas holder; the gas runs a small CHP unit
     for (const v of [6, -12]) { const d = new THREE.Mesh(new THREE.SphereGeometry(7, 28, 12, 0, Math.PI * 2, 0, Math.PI / 2), digM); d.scale.y = 0.85; d.position.copy(at(38, v)); d.castShadow = true; add(d); footM('utility', d); }
     { const g = new THREE.Mesh(new THREE.SphereGeometry(4, 24, 12), membM); g.position.copy(at(51, -3)).setY(3); add(g); footM('utility', g); }
+    I('substation');
     // Main substation and battery bank where the solar belts and the CHP join the microgrid
     for (const v of [9, 1]) { const b = new THREE.Mesh(new THREE.BoxGeometry(2.6, 2.6, 6.1), batM); b.position.copy(at(-42, v)).setY(1.62); b.rotation.y = rad(UC); add(b); footM('utility', b); }
     { const t = new THREE.Mesh(new THREE.BoxGeometry(5, 3.2, 4), concreteU); t.position.copy(at(-36, -9)).setY(1.92); t.rotation.y = rad(UC); add(t); footM('utility', t); }
     for (let i = 0; i < 10; i++) { const q = at(...[[-50, 20], [-50, -20], [0, 0], [20, 30], [-30, 50], [45, 30], [50, -30], [0, -50], [-45, -45], [25, -20]][i]); lamp(q.x, q.z); }
+    I('treatmentHall');
     // Water mouth (shuikou): where the creek meets the river the water is "locked" by a grove, a pavilion
     // and a bridge, and the treatment wetland cleans the city's water before it reaches the river
     const plant = new THREE.Mesh(new THREE.BoxGeometry(22, 4.5, 12), pavM(0xb98f62)); plant.position.set(122, 2.25, 1052); plant.rotation.y = Math.atan2(1052, 122) - Math.PI / 2; plant.castShadow = true; add(plant); footM('utility', plant);
     { const r = new THREE.Mesh(new THREE.BoxGeometry(22.4, 0.2, 12.4), pv); r.position.set(122, 4.6, 1052); r.rotation.copy(plant.rotation); add(r); block(122, 1052, 16); }
     WETLAND.forEach(([c, f]) => { block(c.x, c.z, 0); for (let a = 0; a < 2 * Math.PI; a += 0.5) { const R = f(a) - 2.5 - (Math.floor(a * 7) % 3); treePts.push([c.x + Math.cos(a) * R, c.z + Math.sin(a) * R, 0.35, 1, 4, 2]); } });
+    I(null);
     const promenade = []; for (let x = -280; x <= 280; x += 4) promenade.push([x, riverZ(x) - 26 - 6 * Math.sin(x / 70), 1.5]);
     paths.push({pts: promenade, w: 3, from: 1}); ribbon(promenade, 0, 0.31, path); promenade.forEach((q, i) => { if (i % 12 === 6) lamp(q[0], q[1] - 2.7); });
-    pavilion(new THREE.Vector3(-8, 0, 1098), 7);
+    I('shuikou'); pavilion(new THREE.Vector3(-8, 0, 1098), 7); I(null);
     for (let i = 0; i < 140; i++) { const a = i * 2.39996, rr = 6 + Math.sqrt(i) * 4, x = -12 + Math.cos(a) * rr * 1.4, z = 1090 + Math.sin(a) * rr * 0.7; tree(x, z, 0.9 + (i % 5) * 0.1, i % 4 === 1 ? 1 : 0); }
     // Feng shui woods: a dense crescent of forest behind the city to the north (the Tortoise's back),
     // sheltering it from winter wind and holding water and soil on the slope
@@ -906,6 +940,7 @@ export function buildCity(scene, env = null) {
       const q = polar0(r, deg); tree(q.x, q.z, 1 + rnd() * 0.6, rnd() < 0.45 ? 1 : 0);
     }
   }
+  I(null);
   // Wild woodland: one forest round the city; each phase clears only the land its new rings need
   const w0 = PHASES[1].extent + 13, w1 = FINAL.extent + 1200;
   for (let i = 0; i < 4600; i++) {
@@ -954,16 +989,17 @@ export function buildCity(scene, env = null) {
     };
     // Lake with a wooded island
     layer(1);
-    blob((a) => lakeR(a) + 5, 0.335, sandM); blob(lakeR, 0.36, waterM);
+    I('lake'); blob((a) => lakeR(a) + 5, 0.335, sandM); blob(lakeR, 0.36, waterM);
     const ISL = {x: LAKE.x + 14, z: LAKE.z - 8};
     blob((a) => 15 + 3 * Math.sin(3 * a + 1), 0.38, sandM, ISL); blob((a) => 12 + 3 * Math.sin(3 * a + 1), 0.4, ground(0x8ea35e, TX.grass(11), 12, 0.2), ISL);
     for (let i = 0; i < 9; i++) { const a = i * 2.4, r = 3 + (i % 3) * 3; treePts.push([ISL.x + Math.cos(a) * r, ISL.z + Math.sin(a) * r, 0.7 + (i % 4) * 0.15, 1, 4, i % 3 === 1 ? 1 : 0]); }
-    waters.forEach((w) => { layer(w.from); ribbon(w.pts, w.bank, 0.335, w.kind === 'river' || w.kind === 'creek' ? sandM : quayM, w.closed); ribbon(w.pts, 0, 0.36, waterM, w.closed); });
+    waters.forEach((w) => { I(w.kind === 'canal' ? (w.from === 1 ? 'heartCanal' : 'canal') : w.kind); layer(w.from); ribbon(w.pts, w.bank, 0.335, w.kind === 'river' || w.kind === 'creek' ? sandM : quayM, w.closed); ribbon(w.pts, 0, 0.36, waterM, w.closed); });
     // Harbour basin at the edge of the core, where the heart canal ends and the rill begins
     layer(1);
-    blob((a) => harbR(a) + 3, 0.335, quayM, HARB); blob(harbR, 0.36, waterM, HARB);
+    I('harbour'); blob((a) => harbR(a) + 3, 0.335, quayM, HARB); blob(harbR, 0.36, waterM, HARB);
     // Treatment wetland cells: shallow reed beds with gravel margins
-    WETLAND.forEach(([c, f]) => { blob((a) => f(a) + 2.5, 0.335, sandM, c); blob(f, 0.36, ground(0x6f8a72, TX.water(), 10, 0.2), c); });
+    I('wetland'); WETLAND.forEach(([c, f]) => { blob((a) => f(a) + 2.5, 0.335, sandM, c); blob(f, 0.36, ground(0x6f8a72, TX.water(), 10, 0.2), c); });
+    I(null);
     // The rill glows softly at night, like the plaza pool it feeds
     waters.filter((w) => w.kind === 'rill').forEach((w) => w.pts.forEach((q, i) => { if (i % 4 === 0) glow('cool', q[0], 0.5, q[1]); }));
     // Towpath along the east bank of the heart canal, from the harbour to the lake
@@ -1000,12 +1036,13 @@ export function buildCity(scene, env = null) {
     ['position', 'normal', 'uv'].forEach((a) => postsG.setAttribute(a, new THREE.Float32BufferAttribute(postGs.flatMap((g) => [...g.attributes[a].array]), a === 'uv' ? 2 : 3)));
     const hullM = shiny(mat(0xf4f2ec, {roughness: 0.3}));
     const boatLamp = atNight(mat(0xf4f2ec, {roughness: 0.3}), warm(0xffd9a0, 0.6));
-    const boat = (x, z, dir, s = 1) => {
+    const boatB = (x, z, dir, s = 1) => {
       const v = new THREE.Vector3(x, 0, z);
       place('boatHull', hullG, hullM, v, dir, s); place('boatDeck', deckG, deckM, v, dir, s); place('boatBench', benchG, boatLamp, v, dir, s);
       place('boatRoof', roofG, pv, v, dir, s); place('boatPost', postsG, postM, v, dir, s);
       glow('window', x, 1.6 * s, z);
     };
+    const boat = inf('boat', boatB);
     // Boats along each water; the river carries larger water buses
     waters.forEach((w) => {
       if (w.kind === 'rill') return;
@@ -1032,6 +1069,7 @@ export function buildCity(scene, env = null) {
       const m = new THREE.Mesh(new THREE.BoxGeometry(len, 0.3, wid), deckM);
       m.position.set(c.x, 0.75, c.z); m.rotation.y = rotY; m.castShadow = true; m.receiveShadow = true; add(m);
     };
+    I('pier');
     const hT = rad(HEART + twist(238));
     pier(polar(238, HEART - 2.2), hT, 12, 2.6, 1);
     boat(polar(234, HEART - 4.2).x, polar(234, HEART - 4.2).z, hT, 1);
@@ -1045,7 +1083,8 @@ export function buildCity(scene, env = null) {
 
     // Arched timber bridges where paths cross the river and canals, each with a small landing
     const segs = new Map();
-    const bridge = (cx, cz, tdx, tdz, len, wid, from, wdx, wdz, landing = true) => {
+    I(null);
+    const bridgeB = (cx, cz, tdx, tdz, len, wid, from, wdx, wdz, landing = true) => {
       layer(from);
       const h = Math.min(2.6, (len < 12 ? 0.5 : 0.9) + len * 0.06), parts = [];
       const deck = new THREE.BoxGeometry(len, 0.35, wid, 20, 1, 1), railA = new THREE.BoxGeometry(len, 0.12, 0.12, 20, 1, 1);
@@ -1068,6 +1107,7 @@ export function buildCity(scene, env = null) {
       }
       segs.set(segs.size, 1);
     };
+    const bridge = inf('bridge', bridgeB);
     // Polyline paths and roads are indexed by segment so each water segment checks only its neighbours
     const SG = 40, sgrid = new Map();
     paths.forEach((pth) => { if (pth.ring) return; for (let i = 0; i < pth.pts.length - 1; i++) { const q = pth.pts[i], k = Math.floor(q[0] / SG) + ',' + Math.floor(q[1] / SG); if (!sgrid.has(k)) sgrid.set(k, []); sgrid.get(k).push([pth, i]); } });
@@ -1168,8 +1208,8 @@ export function buildCity(scene, env = null) {
   });
 
   // Build the instanced parts and the night glows
-  instSets.forEach(({geo, m, by}) => by.forEach((mats, g) => {
-    const im = new THREE.InstancedMesh(geo, m, mats.length);
+  instSets.forEach(({geo, m, by, info}) => by.forEach((mats, g) => {
+    const im = new THREE.InstancedMesh(geo, m, mats.length); if (info) im.userData.info = info;
     mats.forEach((x, i) => im.setMatrixAt(i, x));
     im.computeBoundingSphere(); im.castShadow = geo === postG; g.add(im);
   }));
@@ -1334,5 +1374,24 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
     const loop = () => { controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop); };
     loop();
   }
-  return {setView, setPhase, setTime};
+  // Click picking: the nearest tagged structure under a screen point (x, y in -1..1). Trees, lamps and night
+  // glows let the ray pass on; bare ground, paths and roads stop it, so nothing hidden behind them is picked.
+  const ray = new THREE.Raycaster();
+  const shown = (o) => { for (; o; o = o.parent) if (!o.visible) return false; return true; };
+  const pick = (x, y) => {
+    ray.setFromCamera(new THREE.Vector2(x, y), camera);
+    // Only solid meshes that can be picked or that hide what is behind them; untagged instanced parts
+    // (trees, lamps) are skipped up front, which keeps a click fast
+    const objs = [];
+    scene.traverseVisible((o) => { if (o.isMesh && !(o.isInstancedMesh && !o.userData.info)) objs.push(o); });
+    for (const h of ray.intersectObjects(objs, false)) {
+      const o = h.object;
+      if (!shown(o)) continue;
+      if (o.userData.info) { let g = o; while (g && g.userData.from === undefined) g = g.parent; return {key: o.userData.info, from: g ? g.userData.from : 1, point: h.point.toArray()}; }
+      if (o.isInstancedMesh) continue;
+      return null;
+    }
+    return null;
+  };
+  return {setView, setPhase, setTime, pick};
 }
