@@ -26,15 +26,19 @@
   .note summary:focus-visible { outline: 2px solid #C9A24A; border-radius: 8px; }
   .note #noteSum { color: #1D1A15; }
   .note p { margin: 0; padding: 0 12px 9px; max-height: 40vh; overflow: auto; }
-  .card { position: fixed; z-index: 5; width: 300px; max-width: calc(100vw - 24px); background: rgba(251,248,242,.97); border: 1px solid #D8CDBA; border-radius: 10px; padding: 12px 14px 12px; box-shadow: 0 6px 24px rgba(29,26,21,.18); font-size: 14px; }
+  .card { position: fixed; z-index: 5; width: 300px; max-width: calc(100vw - 24px); background: rgba(251,248,242,.97); border: 1px solid #D8CDBA; border-radius: 10px; padding: 12px 14px 12px; box-shadow: 0 6px 24px rgba(29,26,21,.18); font-size: 14px; max-height: calc(100vh - 72px); overflow: auto; }
   .card[hidden] { display: none; }
+  .card .pic { display: block; margin: -12px -14px 10px; }
+  .card .pic[hidden] { display: none; }
+  .card .pic img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 10px 10px 0 0; background: #E9E1D2; }
+  .card .x { z-index: 1; background: rgba(251,248,242,.85) !important; }
   .card h2 { font: 600 16px/1.25 Georgia, serif; margin: 0 26px 4px 0; }
   .card .ph { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #8A6A1F; border: 1px solid #C9A24A; border-radius: 999px; padding: 1px 8px; margin-bottom: 6px; }
   .card p { margin: 0 0 8px; color: #3F3A31; }
   .card a { color: #1D1A15; font-weight: 600; }
   .card .x { position: absolute; right: 6px; top: 6px; border: 0; background: none; font: 20px/1 system-ui, sans-serif; color: #5F584C; cursor: pointer; padding: 4px 8px; border-radius: 6px; }
   .card .x:focus-visible, .card a:focus-visible { outline: 2px solid #C9A24A; }
-  @media (max-width: 600px) { .card { left: 12px !important; right: 12px; top: auto !important; bottom: 12px; width: auto; } }
+  @media (max-width: 600px) { .card .pic img { aspect-ratio: 16 / 7; } .card { left: 12px !important; right: 12px; top: auto !important; bottom: 12px; width: auto; } }
   body.render .ui, body.render .note, body.render .card { display: none; }
 </style>
 <script type="importmap">{"imports": {"three": "./vendor/three.module.min.js"}}</script>
@@ -43,7 +47,7 @@
 <canvas id="c" aria-label="3D model of the Light City plan"></canvas>
 <div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><label class="ctl phase"><span>Phase</span><select id="phaseSel" aria-label="Phase"></select></label><label class="ctl"><span>View</span><select id="viewSel" aria-label="View"></select></label><label class="ctl"><span>Time</span><select id="timeSel" aria-label="Time of day"></select></label></div>
 <details class="note" id="noteBox"><summary><span id="noteSum"></span></summary><p id="note"></p></details>
-<div class="card" id="card" role="dialog" aria-live="polite" aria-labelledby="cardT" hidden><button class="x" id="cardX" aria-label="Close">×</button><h2 id="cardT"></h2><span class="ph" id="cardP"></span><p id="cardD"></p><a id="cardL" target="_blank" rel="noopener">Read the full description →</a></div>
+<div class="card" id="card" role="dialog" aria-live="polite" aria-labelledby="cardT" hidden><button class="x" id="cardX" aria-label="Close">×</button><a id="cardIL" class="pic" target="_blank" rel="noopener" title="Open the photo guide"><img id="cardI" alt="" loading="lazy"></a><h2 id="cardT"></h2><span class="ph" id="cardP"></span><p id="cardD"></p><a id="cardL" target="_blank" rel="noopener">Read the full description →</a></div>
 <script type="module">
   import {start, VIEWS, PHASES} from './city.js';
   import {INFO} from './info.js';
@@ -84,7 +88,7 @@
     ['Centre', [['plaza', 'Street level at the plaza'], ['heart', 'Along the heart rill'], ['path', 'On a spiral path'], ['homes', 'Homes ring'], ['solar', 'Solar ring'], ['entrances', 'Dome entrances'], ['builds', 'Four ways to build a home'], ['courtyards', 'Courtyard clusters'], ['dome', 'Inside a communosphere']]],
     ['Water and boats', [['lake', 'Heart canal and lake'], ['harbour', 'Harbour crescent'], ['canal', 'Canal quay', 3]]],
     ['Living and work', [['hub', 'Mobility hub'], ['work', 'Neighbourhood work hub', 2], ['terracesAir', 'Above the terraces', 3], ['terraces', 'Between the terraces', 3]]],
-    ['Life in the city', [['amphitheatre', 'Plaza amphitheatre and fire circle'], ['green', 'Village green and playground'], ['lakeside', 'Swimming pond and retreat cabins'], ['orchard', 'Orchard and food forest'], ['school', 'Primary school (Phase 2)'], ['sport', 'Village sports field (Phase 2)'], ['food', 'Aquaponics and food hall (Phase 2)'], ['sportspark', 'Town sports park (Phase 3)'], ['farm', 'Vertical farm (Phase 3)']]],
+    ['Life in the city', [['amphitheatre', 'Plaza amphitheatre and fire circle'], ['green', 'Village green and playground'], ['lakeside', 'Swimming pond and retreat cabins'], ['orchard', 'Orchard and food forest'], ['spirepark', 'Spire Park'], ['falls', 'Park waterfall'], ['lakefalls', 'Lake falls'], ['carefarm', 'Care farm and animals'], ['dogpark', 'Dog park'], ['woods', 'Woods and open meadows'], ['school', 'Primary school (Phase 2)'], ['sport', 'Village sports field (Phase 2)'], ['food', 'Aquaponics and food hall (Phase 2)'], ['sportspark', 'Town sports park (Phase 3)'], ['council', 'Council House (Phase 2)'], ['festival', 'Festival meadow (Phase 2)'], ['stables', 'Stables (Phase 2)'], ['boathouse', 'Boathouse (Phase 2)'], ['farm', 'Vertical farm (Phase 3)'], ['eventhall', 'Event hall (Phase 3)']]],
     ['Infrastructure', [['yard', 'Water yard (grows each phase)'], ['reedbeds', 'Treatment garden (grows each phase)'], ['utilities', 'Utility campus (Phase 3)'], ['watermouth', 'Water mouth and wetland (Phase 3)']]],
   ];
   const vs = document.getElementById('viewSel');
@@ -121,6 +125,8 @@
     const hit = app.pick(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
     const it = hit && INFO[hit.key];
     if (!it) { hideCard(); return; }
+    const pic = document.getElementById('cardIL'), im = document.getElementById('cardI');
+    if (it.img) { im.src = it.img; im.alt = it.title + ': concept rendering'; pic.href = '../docs/design/structures#' + hit.key.toLowerCase(); pic.hidden = false; } else pic.hidden = true;
     document.getElementById('cardT').textContent = it.title;
     document.getElementById('cardP').textContent = hit.from > 1 ? 'Added in Phase ' + hit.from : 'Built in Phase 1';
     document.getElementById('cardD').textContent = it.text;
