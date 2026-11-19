@@ -123,6 +123,10 @@ Each [candidate region](/docs/project/site-locations) has its own palette. The s
 | **Greenhouses** | Glass box | Gridshell with polycarbonate or glass | Proven agricultural shapes |
 | **Plaza canopies & floors** | Concrete slab | Thin funicular shells | 70% less concrete |
 
+### In the 3D model
+
+The [3D model](pathname:///model/index.html?phase=2&view=builds) shows four home types on the same plots, so the plan does not depend on one method: earth-sheltered homes with green roofs, earthbag (superadobe) twin domes, ribbed 3D-printed earth domes with skylights in the style of [TECLA](https://www.3dwasp.com/en/3d-printed-house-tecla/), and timber frames with hempcrete infill, lime render and a stone plinth. Ring 4 mixes them plot by plot, and in Phase 1 it uses earth, earthbag and hempcrete only. Each Phase 2 courtyard is built by one crew with one method. Harder materials stay where they earn their place: stone plinths and paving, printed or thin-shell concrete for footings on wet ground, terrace floors and plaza canopies. Which mix is used depends on the site: printed earth suits dry, mild climates, and hempcrete suits cooler, wetter ones.
+
 ### An accessibility ladder
 
 1. **Anyone, now:** clay plaster, natural textiles and rounded built-in furniture in an existing home. Costs a weekend and materials.
