@@ -32,6 +32,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Planning principles: a sourced design page on walking distance, movement (car-free core, mobility hubs, morning and evening flows), scattered work, water, what goes inside a communosphere and a feng shui check of the plan
 
 ### Changed
+- Landscaping in the 3D model: the wild woodland is now natural groves with shrub edges, woods have an understorey, reeds, willows and alders line the river, creek and lake, and path bends and ring paths get small trees, shrubs, hedges and lavender. Trees include autumn tints and flowering trees near the centre. The triangle count stays within the previous budget.
 - Model made much lighter: trees thin out from 400 m past each phase's edge and stop 900 m out (the wild woodland no longer runs 2 km into the countryside), tree shapes use fewer faces, trees beyond the final town edge drop their trunks, and hidden zero-size tree parts are no longer drawn. About 5.3 million triangles fall to 0.6 million in Phase 1, 5.6 to 1.2 million in Phase 2 and 6.7 to 2.4 million in Phase 3
 - Structure photos re-staged scene by scene: realistic numbers of people for each place (a full class in the learning pavilion, busy market and food hall, lighter parks), clothing that suits the activity, and the fire station photos now match the curved model
 - Fire stations in Phases 2 and 3 turned so their bays open toward the ring road, with a short curved drive; the Phase 2 fire station view now shows the doors and stone end
