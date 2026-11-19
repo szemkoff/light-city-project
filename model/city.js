@@ -679,14 +679,67 @@ export function buildCity(scene, env = null) {
       glow('window', g.x, g.y, g.z);
     }
   };
+  // Other low-carbon home types, on the same footprints (about 2·size·sx by 2·size), so plots never move.
+  const AY = new THREE.Vector3(0, 1, 0);
+  const local = (p, deg, x, z) => new THREE.Vector3(x, 0, z).applyAxisAngle(AY, rad(deg)).add(p);
+  const homeWindows = (p, deg, size, along = 0) => {
+    for (const side of [1, -1]) {
+      const w = local(p, deg, along, side * size * 0.88).setY(p.y + 0.75); place('window', winG, winM, w, rad(deg));
+      const g = local(p, deg, along, side * (size * 0.88 + 1.2)).setY(p.y + 0.9); glow('window', g.x, g.y, g.z);
+    }
+  };
+  // One plan footprint per home for the audit, however many parts it has
+  const homeFoot = (p, deg, hx, hz) => { const b = new THREE.Mesh(new THREE.BoxGeometry(hx * 2, 1, hz * 2)); b.position.copy(p); b.rotation.y = rad(deg); footM('home', b); };
+  // Superadobe / earthbag: a main dome and a smaller one joined, coiled earth tubes under lime plaster
+  const bagM = mat(0xe0b88c, {roughness: 0.95, map: TX.repeated(TX.earth(), 3, 6)});
+  const earthbagHome = inf('earthbagHome', (p, deg, size, sx = 1.3) => {
+    const L = size * sx;
+    for (const [x, r] of [[-L * 0.38, size * 0.95], [L * 0.55, size * 0.62]]) {
+      const d = new THREE.Mesh(new THREE.SphereGeometry(r, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2), bagM);
+      d.scale.y = 1.05; d.position.copy(local(p, deg, x, 0)); d.castShadow = true; add(d);
+    }
+    homeFoot(p, deg, L, size);
+    homeWindows(p, deg, size, -L * 0.38);
+  });
+  // 3D-printed earth (TECLA-style): two ribbed, printed-clay domes with skylights, joined by a low link
+  const printM = mat(0xc98f5f, {roughness: 1, map: TX.repeated(TX.earth(), 2, 9)});
+  const printG = (() => {
+    const pts = [];
+    for (let i = 0; i <= 40; i++) { const t = i / 40, y = t * 0.92, r = Math.sqrt(Math.max(0, 1 - y * y)) * (1 + 0.025 * Math.cos(t * 80)); pts.push(new THREE.Vector2(Math.max(r, 0.2), y)); }
+    return new THREE.LatheGeometry(pts, 28);
+  })();
+  const skyM = atNight(mat(0xbcd8e8, {roughness: 0.2, metalness: 0.1}), warm(0xffc070, 0.8));
+  const printedHome = inf('printedHome', (p, deg, size, sx = 1.3) => {
+    const L = size * sx, r = size * 0.72;
+    for (const x of [-L * 0.45, L * 0.45]) {
+      const d = new THREE.Mesh(printG, printM); d.scale.set(r, r * 1.05, r); d.position.copy(local(p, deg, x, 0)); d.castShadow = true; add(d);
+      const sk = new THREE.Mesh(new THREE.CircleGeometry(r * 0.21, 16), skyM); sk.rotation.x = -Math.PI / 2; sk.position.copy(d.position).setY(p.y + r * 0.96); add(sk);
+    }
+    homeFoot(p, deg, L * 0.45 + r, r);
+    homeWindows(p, deg, size * 0.82, 0);
+  });
+  // Timber frame with hempcrete infill: lime-rendered walls on a stone plinth, a curved green roof
+  const limeM = mat(0xefe6d4, {roughness: 0.9, map: TX.repeated(TX.earth(), 2, 1)});
+  const hempHome = inf('hempHome', (p, deg, size, sx = 1.3) => {
+    const L = size * sx * 1.7, W = size * 1.55, H = 2.7;
+    const pl = new THREE.Mesh(new THREE.BoxGeometry(L + 0.4, 0.5, W + 0.4), stoneM); pl.position.copy(p).setY(p.y + 0.25); pl.rotation.y = rad(deg); add(pl); homeFoot(p, deg, (L + 0.4) / 2, (W + 0.4) / 2);
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, H, 28), limeM); body.scale.set(L / 2, 1, W / 2); body.position.copy(p).setY(p.y + 0.5 + H / 2); body.rotation.y = rad(deg); body.castShadow = true; add(body);
+    const roof = new THREE.Mesh(new THREE.SphereGeometry(1, 24, 8, 0, Math.PI * 2, 0, Math.PI / 2), capM); roof.scale.set(L / 2 + 0.5, 1.5, W / 2 + 0.5); roof.position.copy(p).setY(p.y + 0.5 + H); roof.rotation.y = rad(deg); roof.castShadow = true; add(roof);
+    for (const [a, b] of [[1, 1], [1, -1], [-1, 1], [-1, -1]]) { const q = local(p, deg, a * L * 0.36, b * W * 0.36); place('hempPost', hempPostG, pavM(0x9a6a3e), q.setY(p.y + 0.5 + H / 2)); }
+    homeWindows(p, deg, W / 2 / 0.88 + 0.02, 0);
+  });
+  const hempPostG = new THREE.CylinderGeometry(0.16, 0.16, 2.7, 6);
+  const HOME = [earthHome, earthbagHome, hempHome, printedHome];
   // Fixed home plots: five per 30° sector. Phase 1 builds 30 of them, later phases fill the gaps; none move.
   for (let sec = 0; sec < 12; sec++) {
     // In sector 8 the heart rill takes the middle plot, so its Phase 1 home moves to the first plot
     const mid = sec === 8 ? 0 : sec % 2 ? 3 : 1, first = sec === 8 ? 1 : 2;
-    [[sec * 30 + 10, 1], [sec * 30 + 20, 1], [sec * 30 + 15, mid], [sec * 30 + 5, first], [sec * 30 + 25, 2]].forEach(([deg, n]) => {
+    [[sec * 30 + 10, 1], [sec * 30 + 20, 1], [sec * 30 + 15, mid], [sec * 30 + 5, first], [sec * 30 + 25, 2]].forEach(([deg, n], j) => {
       if (!n) return;
       layer(n); trees(n);
-      earthHome(polar(P.homes.radius, deg), deg + twist(P.homes.radius), P.homes.size);
+      // A mix of building methods round the ring; Phase 1 sticks to earth, earthbag and hempcrete
+      const t = (sec * 2 + j) % 4, kind = n === 1 && t === 3 ? 1 : t;
+      HOME[kind](polar(P.homes.radius, deg), deg + twist(P.homes.radius), P.homes.size);
       const q = polar(P.homes.radius + 12, deg + 2.5); tree(q.x, q.z, 0.7);
     });
   }
@@ -744,9 +797,11 @@ export function buildCity(scene, env = null) {
       const c = polar(r, deg);
       if (wet(c.x, c.z, 32) || blocked(c.x, c.z, 20) || HUBS2.some((d) => Math.hypot(c.x - polar(HUBR2, d).x, c.z - polar(HUBR2, d).z) < 52)) continue;
       flat(new THREE.CircleGeometry(9, 32), garden, 0.27).position.set(c.x, 0.27, c.z);
+      // Each courtyard is built by one crew with one method
+      const build = HOME[i % 4];
       for (let k = 0; k < 6; k++) {
         const a = deg + twist(r) + k * 60;
-        earthHome(c.clone().add(polar0(15, a)), a + 90, 4, 1.2);
+        build(c.clone().add(polar0(15, a)), a + 90, 4, 1.2);
       }
       tree(c.x, c.z, 0.9);
     }
@@ -1306,6 +1361,8 @@ export const VIEWS = {
   watermouth: {pos: [-60, 90, 960], target: [70, 0, 1085], fov: 55, label: 'The water mouth: wetland, grove and bridge'},
   harbour: {pos: [-10, 110, 150], target: [40, 0, 270], fov: 55, label: 'The harbour crescent and the heart canal'},
   entrances: {pos: [150, 62, 175], target: [62, 0, 70], fov: 50, label: 'Dome entrances on the radial paths'},
+  builds: {pos: [60, 16, 200], target: [5, 0, 155], fov: 50, label: 'Four ways to build a home'},
+  courtyards: {pos: [90, 45, 330], target: [0, 0, 250], fov: 50, label: 'Courtyard clusters, Phase 2'},
   dome: {pos: [56, 44, 141], target: [24, 3, 106], fov: 52, label: 'Into a communosphere through its oculus'},
   hub: {pos: [79, 45, -208], target: [-31, 0, -248], fov: 50, label: 'Phase 1 mobility hub on the north road'},
   work: {pos: [234, 70, -217], target: [107, 0, -264], fov: 50, label: 'A Phase 2 neighbourhood work hub'},
