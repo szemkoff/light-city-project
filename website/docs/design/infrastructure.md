@@ -9,6 +9,9 @@ description: How Light City supplies water, treats sewage, handles waste and run
 
 A city works only if water arrives, sewage leaves clean, rubbish is collected and the lights stay on. This page sets out how Light City does each of these, where each system sits in the plan, and what the [3D model](pathname:///model/index.html?phase=3&view=utilities) shows, and how each system grows with the phases. It is a concept for engineers to test against a real site, not an engineering design.
 
+![Utility campus (Phase 3): concept rendering](/img/structures/utilityCampus.webp)
+
+
 > **Our rule: close the loops on site. Water is reused, waste becomes soil or fuel, and power is made and stored locally.**
 
 The model follows one example closely. In Stockholm's Hammarby Sjöstad, the district's own systems for energy, water and waste were planned together as one loop. Sewage gives biogas and heat, waste gives district heat and fuel, and rainwater is treated locally ([Energy Innovation, Hammarby model](https://energyinnovation.org/wp-content/uploads/2015/12/Hammarby-Sjostad.pdf)).
@@ -41,12 +44,50 @@ Phase 3 adds the town-scale works:
 
 ## Water supply
 
+<div className="photo-grid">
+
+<figure>
+
+![Covered reservoir: concept rendering](/img/structures/reservoir.webp)
+
+<figcaption>Covered reservoir</figcaption>
+</figure>
+
+<figure>
+
+![Slow sand filters: concept rendering](/img/structures/sandFilter.webp)
+
+<figcaption>Slow sand filters</figcaption>
+</figure>
+
+</div>
+
+
 - **Gravity first.** Water is drawn from the site's spring, well or stream, filtered and stored in reservoirs on the high ground to the north. From there it reaches the city downhill without pumping in normal use. Gravity schemes are simple to run and reliable, and should store at least one day's demand ([WaterAid](https://www.wateraid.org/us/publications/gravity-fed-schemes-technical-brief)).
 - **Slow sand filters.** Beds of sand clean the water slowly by a living layer on top, with no chemicals beyond a final safety dose.
 - **Rain.** Domes and roofs collect rain into cisterns for gardens, toilets and laundry. Streets and squares drain to planted swales, the canals and the lake, which also store floodwater.
 - **Reuse.** Treated water from the wetland feeds irrigation of the food belts, meeting the target to reuse water at least once ([At a Glance](/docs/at-a-glance)).
 
 ## Sewage
+
+<div className="photo-grid">
+
+<figure>
+
+![Town treatment hall (Phase 3): concept rendering](/img/structures/treatmentHall.webp)
+
+<figcaption>Town treatment hall (Phase 3)</figcaption>
+</figure>
+
+<figure>
+
+![Town treatment wetland (Phase 3): concept rendering](/img/structures/wetland.webp)
+
+<figcaption>Town treatment wetland (Phase 3)</figcaption>
+</figure>
+
+</div>
+
 
 - **Downhill to the water mouth.** Sewers fall by gravity to the south, with the land. Only the lowest areas need small pump stations.
 - **Treatment hall.** Screening and settling happen indoors, under a solar roof, so smells stay inside.
@@ -56,12 +97,57 @@ Phase 3 adds the town-scale works:
 
 ## Waste
 
+<div className="photo-grid">
+
+<figure>
+
+![Recycling and repair hall: concept rendering](/img/structures/recycling.webp)
+
+<figcaption>Recycling and repair hall</figcaption>
+</figure>
+
+<figure>
+
+![Compost windrows: concept rendering](/img/structures/compost.webp)
+
+<figcaption>Compost windrows</figcaption>
+</figure>
+
+<figure>
+
+![Biogas digesters: concept rendering](/img/structures/biogas.webp)
+
+<figcaption>Biogas digesters</figcaption>
+</figure>
+
+</div>
+
+
 - **Sort at home, collect without trucks.** Each dome sorts food, recycling and residual waste. Where it pays, waste is carried away by underground vacuum pipes, as in Hammarby Sjöstad ([Smithsonian](https://www.smithsonianmag.com/innovation/this-stockholm-neighborhood-was-built-on-ambitious-sustainability-goals-when-it-came-up-short-it-doubled-down-and-became-a-blueprint-for-others-180988672)). Such systems can remove up to 90% of waste-collection traffic ([EU Urban Mobility Observatory](https://webgate.ec.europa.eu/circabc-ewpp/rest/download/2b393b16-d614-41ca-83e5-d3ab654cd22a)). Otherwise, small electric vehicles collect it along the service loop.
 - **Recycling hall.** Sorting, repair and reuse workshops sit together on the north campus.
 - **Compost.** Garden and crop waste is composted in windrows, and the compost goes back to the food belts.
 - **Biogas.** Food waste, sewage sludge and manure feed anaerobic digesters. They make biogas for cooking, heat and the backup gensets, and digestate that fertilises the fields ([EPA](https://www.epa.gov/anaerobic-digestion/basic-information-about-anaerobic-digestion)). Digesting food waste together with sludge raises the gas yield ([OSTI](https://www.osti.gov/servlets/purl/2352208)).
 
 ## Power
+
+<div className="photo-grid">
+
+<figure>
+
+![Hub battery and substation: concept rendering](/img/structures/hubBattery.webp)
+
+<figcaption>Hub battery and substation</figcaption>
+</figure>
+
+<figure>
+
+![Main substation and batteries: concept rendering](/img/structures/substation.webp)
+
+<figcaption>Main substation and batteries</figcaption>
+</figure>
+
+</div>
+
 
 - **Solar** on domes, carports, ring 5 and the food belts, as set out in [Energy systems](/docs/concepts/energy-systems).
 - **Batteries in layers.** A main battery bank and substation on the north campus, and a battery container at every mobility hub, so each district can carry on alone. Community-scale batteries can keep a neighbourhood running for days in an outage when paired with solar ([NREL](https://docs.nrel.gov/docs/fy21osti/79778.pdf)).

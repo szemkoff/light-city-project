@@ -14,6 +14,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Prototype communosphere designs
 
 ### Added
+- City page: a "Life in the city" section with photo cards for the Spire Park, Council House, festival meadow and event hall, care farm and stables, water sports, woods, learning and fire and rescue, each linking to the model or the growth plan
+- Photos in the documentation: each section that an info card links to now shows that card's picture
+- Model: a "Fire station (Phase 2)" view
 - 3D model: a Spire Park of lawns and groves round the spire, natural boulder waterfalls in the park and at the lake outlet, woods on the north and the flanks and open hay meadows to the south, a care farm (goats, sheep, hens, ducks, bees), dog parks in every phase, and in Phase 2 a Council House, a festival meadow and stage, stables for about ten horses and a lake boathouse, with a covered event hall in Phase 3. Each has an info card and a view in the "Life in the city" menu
 - Photo guide: a concept picture for every structure type, shown at the top of each info card in the model and large on the new "Structures of Light City" page; How the city grows gains sections on the park and woods, events, animals, water sports and the Council House
 - 3D model: the places of daily life now grow with the phases. Phase 1 adds a plaza amphitheatre and fire circle, a base hall, lift core and gathering level in the spire, a village green and playground, a natural swimming pond, six retreat cabins, an orchard and food forest and a fire shed. Phase 2 adds a primary school, a health centre, a sports field, aquaponics tunnels and a food hall, a fire station, a second pond and a retreat lodge. Phase 3 adds a secondary school, a town health centre, a vertical farm, a sports park with a wellness centre and a fire and ambulance station. Each has an info card, and there is a new "Life in the city" view menu
@@ -29,6 +32,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Planning principles: a sourced design page on walking distance, movement (car-free core, mobility hubs, morning and evening flows), scattered work, water, what goes inside a communosphere and a feng shui check of the plan
 
 ### Changed
+- Fire stations in the model rebuilt to match their photo: a curved glulam vault with a green roof, exposed arches, glass gables and clerestory, a stone end wall, a living wall and red bay doors
+- All structure photos regenerated with people in a mix of modern everyday, smart, sporty and fashionable clothing
+- Phase images on the City page regenerated from the current model layout (curving rings, lake, canal, river and woods)
+- Phase card texts, the phase table and the daily timeline mention the new parks, gathering places, animals and water sports
 - 3D model: the Phase 2 ring road now starts and ends in the two southern mobility hubs instead of stopping in a field south-west of the city
 - 3D model: fly across the ground with the arrow keys or WASD (Shift for faster), keeping height and view direction; menus hand the keys back after a choice
 - 3D model: click or tap any building, dome, utility or waterway to open a card that says what it is, the phase it arrives in and a link to its full description in the docs

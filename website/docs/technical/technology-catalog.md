@@ -421,6 +421,25 @@ This catalog identifies **currently available** and **near-term emerging** techn
 
 ## Food Production
 
+<div className="photo-grid">
+
+<figure>
+
+![Agrivoltaic array: concept rendering](/img/structures/agrivoltaic.webp)
+
+<figcaption>Agrivoltaic array</figcaption>
+</figure>
+
+<figure>
+
+![Solar greenhouse: concept rendering](/img/home/city-greenhouse.webp)
+
+<figcaption>Solar greenhouse</figcaption>
+</figure>
+
+</div>
+
+
 ### 1 Vertical Hydroponic/Aeroponic Systems
 
 :::caution Realism note (2026)

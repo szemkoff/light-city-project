@@ -36,6 +36,9 @@ Masdar's lesson, from [Similar Movements](/docs/research/similar-movements), sti
 
 ## Feng shui: reading the land
 
+![River: concept rendering](/img/structures/river.webp)
+
+
 Feng shui is a traditional Chinese way of choosing and arranging a site. It is not a proven science, and we treat it as a design tradition. Many of its landscape rules agree with climate and ecology: shelter from cold winds, sun on the front, clean water close by and nothing aimed at the door. We use it where it agrees with those, and say so where it does not.
 
 - **High ground behind, water in front.** Architects and texts describe the ideal site as backed by a mountain and belted with water in front. The *Water Dragon Classic* puts the water to the south, calm and smooth, never fast or straight ([Building and Environment](https://www.sciencedirect.com/science/article/abs/pii/S0360132304002197)).
@@ -58,6 +61,9 @@ In the northern hemisphere "behind" means north and "in front" means south. On a
 The [sacred geometry](/docs/concepts/sacred-geometry) of the 12 paths is kept: they are still 12, evenly spaced, but they now run as the arms of a spiral rather than as spokes.
 
 ### Feng shui in the plan, point by point
+
+![Water-mouth pavilion: concept rendering](/img/structures/shuikou.webp)
+
 
 Feng shui texts treat straight lines as the main thing to avoid. Straight roads and T-junctions aimed at a building are the classic "poison arrows", and qi is said to move well only along curving lines ([Feng Shui Practice](https://www.hpsst.com/uploads/6/2/9/3/62931075/chap_4_feng_shui_practice.pdf)). The second round of checks applied this to every path, road and building in the model:
 
@@ -89,6 +95,39 @@ After the fixes the audit reports, in every phase: 0 buildings on paths or in wa
 
 ## Movement
 
+<div className="photo-grid">
+
+<figure>
+
+![Mobility hub: concept rendering](/img/structures/hub.webp)
+
+<figcaption>Mobility hub</figcaption>
+</figure>
+
+<figure>
+
+![Electric boat: concept rendering](/img/structures/boat.webp)
+
+<figcaption>Electric boat</figcaption>
+</figure>
+
+<figure>
+
+![Boat pier: concept rendering](/img/structures/pier.webp)
+
+<figcaption>Boat pier</figcaption>
+</figure>
+
+<figure>
+
+![Footbridge: concept rendering](/img/structures/bridge.webp)
+
+<figcaption>Footbridge</figcaption>
+</figure>
+
+</div>
+
+
 **Each way of moving has its place:**
 
 1. **Walking.** Every home is within about 4 minutes' walk of a work hub and market (about 300 m). In Phase 3, the plaza is about 12 minutes on foot from the outer edge.
@@ -109,6 +148,32 @@ After the fixes the audit reports, in every phase: 0 buildings on paths or in wa
 
 ## Work and daily flows
 
+<div className="photo-grid">
+
+<figure>
+
+![Neighbourhood work hub: concept rendering](/img/structures/workHub.webp)
+
+<figcaption>Neighbourhood work hub</figcaption>
+</figure>
+
+<figure>
+
+![Market hall: concept rendering](/img/structures/market.webp)
+
+<figcaption>Market hall</figcaption>
+</figure>
+
+<figure>
+
+![District square: concept rendering](/img/structures/districtSquare.webp)
+
+<figcaption>District square</figcaption>
+</figure>
+
+</div>
+
+
 A town with all its jobs in the centre fills its roads inward every morning and outward every evening. Light City spreads work across the city instead:
 
 - **Phase 1.** The studios on ring 3 and the learning pavilions are the workplaces, all within 3 minutes' walk.
@@ -120,6 +185,53 @@ A town with all its jobs in the centre fills its roads inward every morning and 
 ---
 
 ## Water
+
+<div className="photo-grid">
+
+<figure>
+
+![Heart lake: concept rendering](/img/structures/lake.webp)
+
+<figcaption>Heart lake</figcaption>
+</figure>
+
+<figure>
+
+![Heart canal: concept rendering](/img/structures/heartCanal.webp)
+
+<figcaption>Heart canal</figcaption>
+</figure>
+
+<figure>
+
+![Harbour: concept rendering](/img/structures/harbour.webp)
+
+<figcaption>Harbour</figcaption>
+</figure>
+
+<figure>
+
+![Heart rill: concept rendering](/img/structures/rill.webp)
+
+<figcaption>Heart rill</figcaption>
+</figure>
+
+<figure>
+
+![Creek: concept rendering](/img/structures/creek.webp)
+
+<figcaption>Creek</figcaption>
+</figure>
+
+<figure>
+
+![Canal: concept rendering](/img/structures/canal.webp)
+
+<figcaption>Canal</figcaption>
+</figure>
+
+</div>
+
 
 - **Phase 1.** A lake south of the core, fed by rain and the land, spills down a winding creek to the river. A heart canal winds from the lake to a harbour at the edge of the core. From there a narrow stone rill, about 2–3 m wide, carries the water between the domes into the ring pool around the spire. Whether it flows by gravity or with solar pumping depends on the site's slope.
 - **Phase 2.** A canal ring at 377 m runs through the lake.

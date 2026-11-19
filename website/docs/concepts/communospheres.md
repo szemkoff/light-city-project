@@ -8,6 +8,25 @@ sidebar_label: Communospheres
 
 *Shared timber domes where a community of about a hundred people lives, eats and gathers*
 
+<div className="photo-grid">
+
+<figure>
+
+![Communosphere, 40 m: concept rendering](/img/home/dome-interior.webp)
+
+<figcaption>Communosphere, 40 m</figcaption>
+</figure>
+
+<figure>
+
+![District communosphere, 80 m: concept rendering](/img/structures/dome80.webp)
+
+<figcaption>District communosphere, 80 m</figcaption>
+</figure>
+
+</div>
+
+
 ## Overview
 
 A communosphere is a large shared dome with private homes inside or around it and common spaces at its heart. The source describes communospheres as spheres that hold a resonant frequency and keep their inhabitants consciously connected; on Earth we build the social and architectural idea and treat any wider effect as a research question.

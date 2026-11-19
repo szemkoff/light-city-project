@@ -126,7 +126,7 @@ $('#railPrev').onclick = () => rail.scrollBy({ left: -step() * 2, behavior: 'smo
 $('#railNext').onclick = () => rail.scrollBy({ left: step() * 2, behavior: 'smooth' });
 
 /* ---------- DAY ---------- */
-const H = [['6:00', 'Wake', 'Wake naturally as circadian lighting warms with the sunrise.'], ['7:00', 'Meditate', 'Morning meditation together in the temple dome.'], ['9:00', 'Work', 'Remote work, the studios, the labs — or out on the land.'], ['17:00', 'Create', 'Workshops, sport, music and art in the middle ring.'], ['19:00', 'Dine', 'Communal dinner, cooked from the food belt.'], ['20:00', 'Gather', 'Evening ceremony beneath the spire.'], ['22:00', 'Rest', 'Quiet hours. Stars over the domes.']];
+const H = [['6:00', 'Wake', 'Wake naturally as circadian lighting warms with the sunrise.'], ['7:00', 'Meditate', 'Morning meditation together in the temple dome.'], ['9:00', 'Work', 'Remote work, the studios and labs, the care farm and stables, or out on the land.'], ['17:00', 'Create', 'Workshops, sport, music and art; a swim in the pond or a paddle from the boathouse.'], ['19:00', 'Dine', 'Communal dinner, cooked from the food belt.'], ['20:00', 'Gather', 'An evening ceremony in the Spire Park, or a concert on the festival meadow.'], ['22:00', 'Rest', 'Quiet hours. Stars over the domes.']];
 const hours = $('#hours'), range = $('#dayRange'), arc = $('#arcPath'), sun = $('#sun'), hd = $('#hourDetail');
 hours.innerHTML = H.map(([t, n], i) => `<li><button data-i="${i}"><b>${t}</b>${n}</button></li>`).join('');
 function hour(i) {

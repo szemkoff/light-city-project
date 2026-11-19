@@ -473,7 +473,7 @@ A shed by the mobility hub for a water tender and rescue gear, crewed by trained
 
 A volunteer fire station on the ring road, with two engine bays and a training yard.
 
-[See it in the 3D model](pathname:///model/index.html?view=food&phase=2) · [Read the full description](/docs/design/growth-plan/#emergency-services)
+[See it in the 3D model](pathname:///model/index.html?view=firestation&phase=2) · [Read the full description](/docs/design/growth-plan/#emergency-services)
 
 ### Town fire and ambulance station {#firestation3}
 

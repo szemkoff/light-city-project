@@ -929,9 +929,33 @@ export function buildCity(scene, env = null) {
     const cabin = (q, a) => { const b = new THREE.Mesh(new THREE.BoxGeometry(6, 2.8, 4.2), timberF); b.position.copy(q).setY(1.7); b.rotation.y = rad(a); b.castShadow = true; add(b); footM('home', b);
       const r = new THREE.Mesh(new THREE.CylinderGeometry(2.5, 2.5, 6.4, 16, 1, false, -Math.PI / 2, Math.PI), capM); r.rotation.set(0, rad(a), Math.PI / 2); r.scale.set(0.5, 1, 1); r.rotation.order = 'YXZ'; r.position.copy(q).setY(3.1); add(r);
       glow('window', q.x, 1.6, q.z); };
-    const station = (S, L, bays) => { const b = new THREE.Mesh(new THREE.BoxGeometry(L, 4.5, 10), pavM(0xc9b79a)); b.position.copy(S.C).setY(2.55); b.rotation.y = rad(S.a + 90); b.castShadow = true; add(b); footM('utility', b);
-      const r = new THREE.Mesh(new THREE.BoxGeometry(L + 0.6, 0.4, 10.6), capM); r.position.copy(S.C).setY(5); r.rotation.copy(b.rotation); add(r);
-      for (let i = 0; i < bays; i++) { const d = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 3.6), redM); d.position.copy(S.at(-L / 2 + (i + 0.5) * L / bays, -5.06)).setY(2.1); d.rotation.y = rad(S.a + 180) + Math.PI / 2; add(d); glow('lamp', d.position.x, 4, d.position.z); } };
+    // Fire station: a timber hall under a shallow barrel vault of glulam arches with a green roof, red bay doors
+    // under a band of clerestory glass, a local-stone end wall and a living wall, and a paved apron in front
+    const LOGF = (k, S) => { if (S && typeof location !== 'undefined' && /[?&]log\b/.test(location.search)) console.log('FAC', k, S.C.x.toFixed(0), S.C.z.toFixed(0)); };
+    const fsStone = mat(0xcabda4, {roughness: 0.95, map: TX.repeated(TX.paving(), 1.5, 0.8)}), fsRib = mat(0x9a6a3c, {roughness: 0.6, map: TX.repeated(TX.timber(12), 1, 1)});
+    const fsGlass = atNight(shiny(mat(0x86aab8, {roughness: 0.08, metalness: 0.45, transparent: true, opacity: 0.82})), warm(0xffc27a, 0.55));
+    const fsSoffit = mat(0xc89a66, {roughness: 0.6, side: THREE.DoubleSide, map: TX.repeated(TX.timber(14), 6, 2)});
+    const station = (S, L, bays) => {
+      const D = 10, wH = 4.4, c = D + 3.2, sg = 3.6, R = (c * c / 4 + sg * sg) / (2 * sg), th = 2 * Math.asin(c / (2 * R)), y0 = wH - (R - sg), rot = rad(S.a + 90);
+      const b = new THREE.Mesh(new THREE.BoxGeometry(L, wH, D), pavM(0xc9a77a)); b.position.copy(S.C).setY(wH / 2 + 0.3); b.rotation.y = rot; b.castShadow = true; add(b); footM('utility', b);
+      const shell = (r, w, th2, m) => { const g = new THREE.CylinderGeometry(r, r, w, 40, 1, true, Math.PI / 2 - th2 / 2, th2); g.rotateZ(Math.PI / 2); const o = new THREE.Mesh(g, m); o.position.copy(S.C).setY(y0 + 0.3); o.rotation.y = rot; o.castShadow = true; add(o); return o; };
+      shell(R, L + 2.6, th, fsSoffit); shell(R + 0.18, L + 2.4, th * 0.97, capM);
+      // exposed glulam arches at each bay line and at the ends
+      for (let i = 0; i <= bays; i++) { const x = -L / 2 + i * L / bays, rb = shell(R + 0.32, 0.35, th * 1.01, fsRib); rb.position.copy(S.at(x, 0)).setY(y0 + 0.3);
+        const col = new THREE.Mesh(new THREE.BoxGeometry(0.45, wH, 0.45), fsRib); col.position.copy(S.at(x, -D / 2 - 0.25)).setY(wH / 2 + 0.3); col.rotation.y = rot; add(col); }
+      // arched gables: glass over the stone end, glass over the living-wall end
+      const gab = new THREE.Shape(); for (let k = 0; k <= 24; k++) { const t = Math.PI / 2 - th / 2 + th * k / 24, x = R * Math.cos(t) * (D / c), y = R * Math.sin(t) - (R - sg); k ? gab.lineTo(x, y) : gab.moveTo(x, y); }
+      for (const e of [-1, 1]) { const g = new THREE.Mesh(new THREE.ShapeGeometry(gab), fsGlass); g.material.side = THREE.DoubleSide; g.position.copy(S.at(e * (L / 2 + 0.02), 0)).setY(wH + 0.3); g.rotation.y = rot + Math.PI / 2; add(g);
+        for (const t of [-0.5, 0, 0.5]) { const h = sg * Math.sqrt(Math.max(0, 1 - t * t * 1.3)), mu = new THREE.Mesh(new THREE.BoxGeometry(0.16, h, 0.16), fsRib); mu.position.copy(S.at(e * (L / 2 + 0.05), t * D / 2)).setY(wH + 0.3 + h / 2); add(mu); } }
+      const st = new THREE.Mesh(new THREE.BoxGeometry(0.6, wH + 0.2, D + 0.6), fsStone); st.position.copy(S.at(-L / 2 - 0.3, 0)).setY((wH + 0.2) / 2 + 0.3); st.rotation.y = rot; st.castShadow = true; add(st);
+      const lw = new THREE.Mesh(new THREE.BoxGeometry(0.3, wH - 0.6, D - 1), livingM2); lw.position.copy(S.at(L / 2 + 0.15, 0)).setY(wH / 2 + 0.3); lw.rotation.y = rot; add(lw);
+      // front: red doors with a band of clerestory glass above them
+      const bw = L / bays;
+      for (let i = 0; i < bays; i++) { const d = new THREE.Mesh(new THREE.PlaneGeometry(bw - 1.1, 3.3), redM); d.position.copy(S.at(-L / 2 + (i + 0.5) * bw, -D / 2 - 0.06)).setY(1.95); d.rotation.y = rot + Math.PI; add(d); glow('lamp', d.position.x, 4.3, d.position.z); }
+      const cl = new THREE.Mesh(new THREE.PlaneGeometry(L - 0.4, wH - 3.8), fsGlass); cl.position.copy(S.at(0, -D / 2 - 0.08)).setY(3.8 + (wH - 3.8) / 2 + 0.3); cl.rotation.y = rot + Math.PI; add(cl);
+      const cl2 = cl.clone(); cl2.position.copy(S.at(0, D / 2 + 0.08)).setY(cl.position.y); cl2.rotation.y = rot; add(cl2);
+      const ap = new THREE.Mesh(new THREE.PlaneGeometry(L + 2, 6), padM); ap.rotation.set(-Math.PI / 2, 0, -rot, 'YXZ'); ap.rotation.set(-Math.PI / 2, 0, 0); ap.rotation.order = 'YXZ'; ap.rotation.y = rot; ap.position.copy(S.at(0, -D / 2 - 3)).setY(0.32); ap.receiveShadow = true; add(ap);
+      for (let k = 0; k < 3; k++) glow('window', S.at(-L / 3 + k * L / 3, D / 2 + 0.2).x, 3, S.at(-L / 3 + k * L / 3, D / 2 + 0.2).z); };
     const tunnel = (S, x, y, L, W) => { const q = S.at(x, y), g = new THREE.Mesh(new THREE.CylinderGeometry(W / 2, W / 2, L, 20, 1, false, 0, Math.PI), glassM); g.rotation.set(0, rad(S.a + 90), Math.PI / 2); g.rotation.order = 'YXZ'; g.position.copy(q).setY(0.3); add(g);
       const fb = new THREE.Mesh(new THREE.BoxGeometry(L, 0.6, W), pitchM); fb.position.copy(q).setY(0.3); fb.rotation.y = rad(S.a + 90); footM('greenhouse', fb);
       for (let i = 0; i < 4; i++) { const t = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.4, 1.1, 16), poolM); t.position.copy(S.at(x - L / 2 + (i + 0.5) * L / 4, y)).setY(0.85); add(t); } };
@@ -972,7 +996,7 @@ export function buildCity(scene, env = null) {
     { const S0 = find(412, 236, 26, null, 14);
       if (S0) { I('retreatCabin'); for (let i = 0; i < 6; i++) { const q = S0.at(-18 + i * 7.2, 3 * Math.sin(i * 1.3)); cabin(q, S0.a + 90 + 8 * Math.sin(i)); } I(null); } }
     // Fire and rescue shed with a water tender at the Phase 1 hub
-    { const S = find(288, 76, 8, null, 10); if (S) { I('fireShed'); flat(new THREE.CircleGeometry(10, 32), padM, 0.31).position.set(S.C.x, 0.31, S.C.z); station(S, 12, 2); I(null); } }
+    { const S = find(288, 76, 8, null, 10); LOGF('fireShed', S); if (S) { I('fireShed'); flat(new THREE.CircleGeometry(10, 32), padM, 0.31).position.set(S.C.x, 0.31, S.C.z); station(S, 12, 2); I(null); } }
     // Orchard and food forest, planted in Phase 1 in the permanent belt so it is mature by Phase 2:
     // fruit trees in curving rows that follow the ground, not a grid
     { I('orchard'); let n = 0;
@@ -1001,7 +1025,7 @@ export function buildCity(scene, env = null) {
     { const S = find(410, 75, 0, caps(64, 34), 24);
       if (S) { capsBlock(S, 64, 34); I('aquaponics'); tunnel(S, -16, 7, 26, 8); tunnel(S, -16, -7, 26, 8); I('foodHall'); hallF(S, 16, 0, 26, 16, 6, 0xc99a68, 'market'); I(null); } }
     // Volunteer fire station on the ring road, by the north-east hub
-    { const S = find(462, 58, 9, null, 16); if (S) { I('fireStation'); station(S, 16, 3); I(null); } }
+    { const S = find(462, 58, 9, null, 16); LOGF('fireStation', S); if (S) { I('fireStation'); station(S, 16, 3); I(null); } }
     // A second natural pond and a retreat lodge by the lake
     { const S = find(318, 228, 14, null, 18); if (S) { I('swimPond2'); pond(S, 12, 2.2); I(null); } }
     { const S = find(425, 226, 11, null, 20); if (S) { I('retreatLodge'); hallF(S, 0, 0, 22, 11, 5, 0xc7955f, 'home'); I(null); } }
@@ -1026,10 +1050,9 @@ export function buildCity(scene, env = null) {
     { const S = find(880, 217.5, 0, caps(160, 80), 5);
       if (S) { capsBlock(S, 160, 80); I('sportsPark'); pitch(S, 90, 56, -30, 0); I('wellnessCentre'); hallF(S, 50, 0, 44, 22, 8, 0xd9c3a0);
         { const q = S.at(50, -20); const pl = new THREE.Mesh(new THREE.PlaneGeometry(25, 10), poolM); pl.rotation.set(-Math.PI / 2, 0, rad(S.a + 90)); pl.position.copy(q).setY(0.33); add(pl); } I(null); } }
-    { const S = find(1002, 222, 12, null, 16); if (S) { I('fireStation3'); station(S, 22, 4); I(null); } }
+    { const S = find(1002, 222, 12, null, 16); LOGF('fireStation3', S); if (S) { I('fireStation3'); station(S, 22, 4); I(null); } }
 
     // ---- Parks, gathering, animals, water sports and the council house (see design/growth-plan) ----
-    const LOGF = (k, S) => { if (S && typeof location !== 'undefined' && /[?&]log\b/.test(location.search)) console.log('FAC', k, S.C.x.toFixed(0), S.C.z.toFixed(0)); };
     // Merge simple parts into one geometry, so repeated things (animals, rocks) can be instanced
     const mergeG = (parts) => {
       const gs = parts.map(([g, m]) => { const x = (g.index ? g.toNonIndexed() : g.clone()); x.deleteAttribute('uv'); x.applyMatrix4(m); return x; });
@@ -1849,6 +1872,7 @@ export const VIEWS = {
   amphitheatre: {pos: [80, 16, 66], target: [28, 10, 22], fov: 55, label: 'The plaza amphitheatre and fire circle'},
   green: {pos: [-118, 50, 95], target: [-180, 0, 175], fov: 55, label: 'The village green, field and playground'},
   lakeside: {pos: [-5, 60, 250], target: [-75, 0, 370], fov: 55, label: 'Swimming ponds and retreat cabins by the lake'},
+  firestation: {pos: [70, 12, -420], target: [44, 3, -444], fov: 50, label: 'The village fire station under its curved green roof (Phase 2)'},
   orchard: {pos: [-300, 55, -30], target: [-400, 0, -95], fov: 55, label: 'The orchard and food forest, planted in Phase 1'},
   spirepark: {pos: [62, 34, 88], target: [-8, 4, -14], fov: 55, label: 'The Spire Park: lawns, a grove and a waterfall around the spire'},
   council: {pos: [6, 14, -22], target: [10, 4, -63], fov: 55, label: 'The Council House, a round glass hall facing the spire (Phase 2)'},
