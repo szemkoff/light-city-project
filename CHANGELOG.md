@@ -32,6 +32,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Planning principles: a sourced design page on walking distance, movement (car-free core, mobility hubs, morning and evening flows), scattered work, water, what goes inside a communosphere and a feng shui check of the plan
 
 ### Changed
+- Structure photos re-staged scene by scene: realistic numbers of people for each place (a full class in the learning pavilion, busy market and food hall, lighter parks), clothing that suits the activity, and the fire station photos now match the curved model
+- Fire stations in Phases 2 and 3 turned so their bays open toward the ring road, with a short curved drive; the Phase 2 fire station view now shows the doors and stone end
 - Structure photos made calmer: a few people in each instead of crowds (crowds kept only at the festival meadow and event hall), and utility sites show only one or two staff at work
 - Fire stations in the model rebuilt to match their photo: a curved glulam vault with a green roof, exposed arches, glass gables and clerestory, a stone end wall, a living wall and red bay doors
 - All structure photos regenerated with people in a mix of modern everyday, smart, sporty and fashionable clothing
