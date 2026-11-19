@@ -1513,10 +1513,13 @@ export function buildCity(scene, env = null) {
   I(null);
   // Wild woodland: one forest round the city; each phase clears only the land its new rings need
   const w0 = PHASES[1].extent + 13, w1 = FINAL.extent + 450;
-  for (let i = 0; i < 4600; i++) {
-    const deg = rnd() * 360, r = Math.sqrt(w0 * w0 + rnd() * (w1 * w1 - w0 * w0)), s = 1 + rnd() * 0.8;
-    trees(1, [2, 3].find((n) => r < PHASES[n].extent + 13) || 4);
-    const p = polar(r, deg); tree(p.x, p.z, s, (i * 7919) % 10 < 3 ? 1 : 0);
+  // Trees stand in groves of 3 to 15 with open glades between, and shrubs fill the grove edges
+  for (let c = 0; c < 520; c++) {
+    const deg = rnd() * 360, r = Math.sqrt(w0 * w0 + rnd() * (w1 * w1 - w0 * w0)), n = 3 + Math.floor(rnd() * 13), R = 5 + n * 1.3, conif = rnd() < 0.3;
+    trees(1, [2, 3].find((k) => r < PHASES[k].extent + 13) || 4);
+    const p = polar(r, deg);
+    for (let i = 0; i < n; i++) { const a = rnd() * 2 * Math.PI, d = R * Math.sqrt(rnd()); tree(p.x + Math.cos(a) * d, p.z + Math.sin(a) * d, 0.8 + rnd() * 0.9, conif ? (rnd() < 0.75 ? 1 : 0) : rnd() < 0.06 ? 3 : rnd() < 0.1 ? 1 : 0); }
+    for (let i = 0; i < 2 + n / 3; i++) { const a = rnd() * 2 * Math.PI, d = R + 1 + rnd() * 3; tree(p.x + Math.cos(a) * d, p.z + Math.sin(a) * d, 0.45 + rnd() * 0.35, 2); }
   }
   // Distant hills, set out as the feng shui "armchair": the highest ground behind the city to the north
   // (the Tortoise), a ridge on the east (the Dragon) a little higher than the one on the west (the Tiger),
@@ -1717,9 +1720,19 @@ export function buildCity(scene, env = null) {
   }
 
   // Build trees as two instanced meshes per layer
-  const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 5, 1, true), crownG = new THREE.SphereGeometry(2.4, 8, 6);
+  const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 5, 1, true), crownG = new THREE.SphereGeometry(2.4, 7, 5);
   // Far trees: a lighter crown and no trunk, since only the crown reads at that distance
   const crownFarG = new THREE.SphereGeometry(2.4, 6, 4);
+  // Shrubs and reeds: very light shapes, since there are many of them
+  const bushG = crownFarG, reedG = new THREE.ConeGeometry(0.75, 1.7, 5, 1, true); reedG.translate(0, 0.85, 0);
+  // Leaf colours by kind: 0 broadleaf (with some autumn colour), 3 columnar, 4 willow, 5 flowering,
+  // 2 shrub, 7 lavender and flowering shrub, 6 reed
+  const autumnC = [0xb8833a, 0xc99a3e, 0xa4552f, 0xd0a845].map((c) => new THREE.Color(c));
+  const willowC = [0x8fa04f, 0x9aab58, 0x83964a].map((c) => new THREE.Color(c));
+  const flowerC = [0xe6b3c6, 0xf1ece4, 0xd99fb6, 0xf3d6dd].map((c) => new THREE.Color(c));
+  const shrubC = [0x4a6233, 0x55703a, 0x3f5a2e, 0x5f7440].map((c) => new THREE.Color(c));
+  const lavC = [0x8a78b0, 0x9c86c0, 0xc59ab8, 0xb98fc4].map((c) => new THREE.Color(c));
+  const reedC = [0x9aa055, 0xb2a866, 0x8c9a4c].map((c) => new THREE.Color(c));
   const coneG = new THREE.ConeGeometry(2.1, 8, 7, 1, true); coneG.translate(0, 1.6, 0);
   const trunkM = mat(0x6b5038), leafM = mat(0xffffff, {map: TX.repeated(TX.leaves(), 3, 2)});
   // Leaf colours vary per tree, from deep green to olive and the odd autumn-touched crown
@@ -1753,8 +1766,42 @@ export function buildCity(scene, env = null) {
         if (Math.hypot(x, z) > R * (1 + 0.22 * Math.sin(2 * an + ph) + 0.12 * Math.sin(3 * an + 2 * ph))) continue;
         if (!free(px, pz, 3)) continue;
         treePts.push([px, pz, 0.6 + fr() * 0.55, 1, 4, fr() < (back(a) > 0.5 ? 0.45 : 0.2) ? 1 : 0]); nT++;
+        // an understorey of shrubs round the edge of each wood
+        if (Math.hypot(x, z) > R * 0.8 && fr() < 0.55) { const qx = px + (fr() - 0.5) * 4, qz = pz + (fr() - 0.5) * 4; if (free(qx, qz, 1.2)) treePts.push([qx, qz, 0.4 + fr() * 0.3, 1, 4, 2]); }
       }
     }
+    // Planted water edges: reed beds in patches along the shallow margins of the river, creek and lake,
+    // with willows and alders leaning over the water. Stone-edged canals, the rill and the harbour
+    // keep their quays. Banks hold soil and slow the water (the feng shui ideal of slow, clean water)
+    const dry = (x, z, pad) => !blocked(x, z, pad) && !inObst(x, z, pad) && !(fgrid.get(Math.floor(x / FG) + ',' + Math.floor(z / FG)) || []).some((b) => x > b[0] - pad && x < b[2] + pad && z > b[1] - pad && z < b[3] + pad);
+    const reed = (x, z, from) => { if (dry(x, z, 1.2)) for (let k = 0; k < 3; k++) treePts.push([x + (fr() - 0.5) * 1.6, z + (fr() - 0.5) * 1.6, 0.8 + fr() * 0.5, from, 4, 6]); };
+    const edgeTree = (x, z, from) => { if (free(x, z, 1.5)) treePts.push([x, z, 0.8 + fr() * 0.5, from, 4, fr() < 0.6 ? 4 : 0]); };
+    waters.forEach((w) => { if (w.kind !== 'river' && w.kind !== 'creek') return; const P = w.pts, st = w.kind === 'river' ? 3 : 2;
+      for (let i = 1; i < P.length - 1; i += st) { const q = P[i], dx = P[i + 1][0] - P[i - 1][0], dz = P[i + 1][1] - P[i - 1][1], L = Math.hypot(dx, dz) || 1, nx = -dz / L, nz = dx / L;
+        if (Math.hypot(q[0], q[1]) > FINAL.extent + 700) continue;
+        for (const sd of [-1, 1]) { const ph = Math.sin(q[0] / 37 + sd * 2 + Math.cos(q[1] / 29));
+          if (ph > 0.15) reed(q[0] + sd * nx * (q[2] - 0.6), q[1] + sd * nz * (q[2] - 0.6), w.from);
+          if (ph < -0.55 && i % (st * 6) === 0) edgeTree(q[0] + sd * nx * (q[2] + w.bank + 3.5), q[1] + sd * nz * (q[2] + w.bank + 3.5), w.from); } } });
+    for (let k = 0; k < 360; k++) { const a = (k / 360) * 2 * Math.PI, ph = Math.sin(3 * a + 1) + 0.6 * Math.sin(7 * a); if (ph < 0.25) continue;
+      const R = lakeR(a) - 0.8; reed(LAKE.x + Math.cos(a) * R, LAKE.z + Math.sin(a) * R, 1);
+      if (ph > 1.1 && k % 9 === 0) { const R2 = lakeR(a) + 7; edgeTree(LAKE.x + Math.cos(a) * R2, LAKE.z + Math.sin(a) * R2, 1); } }
+    // Path edges: a small tree and shrubs on the outside of each bend, so the meander reads as planted,
+    // and runs of low hedge and lavender along stretches of the ring paths, broken by open gaps
+    const plant = (x, z, from, s, kind) => { if (free(x, z, 1.1)) treePts.push([x, z, s, from, 4, kind]); };
+    paths.forEach((pa) => { if (pa.ring || pa.road || pa.pts.length < 9) return; const P = pa.pts, from = pa.from || 1;
+      let last = -99;
+      for (let i = 4; i < P.length - 4; i++) {
+        const a0 = Math.atan2(P[i][1] - P[i - 4][1], P[i][0] - P[i - 4][0]), a1 = Math.atan2(P[i + 4][1] - P[i][1], P[i + 4][0] - P[i][0]);
+        let turn = a1 - a0; while (turn > Math.PI) turn -= 2 * Math.PI; while (turn < -Math.PI) turn += 2 * Math.PI;
+        if (Math.abs(turn) < 0.28 || i - last < 10) continue; last = i;
+        const dx = P[i + 1][0] - P[i - 1][0], dz = P[i + 1][1] - P[i - 1][1], L = Math.hypot(dx, dz) || 1, sd = turn > 0 ? 1 : -1, nx = dz / L * sd, nz = -dx / L * sd, o = pa.w / 2;
+        plant(P[i][0] + nx * (o + 3.5), P[i][1] + nz * (o + 3.5), from, 0.55 + fr() * 0.25, fr() < 0.3 ? 5 : 0);
+        for (let k = -1; k <= 1; k++) plant(P[i][0] + nx * (o + 1.6) + dx / L * k * 2.2, P[i][1] + nz * (o + 1.6) + dz / L * k * 2.2, from, 0.35 + fr() * 0.15, k ? 2 : 7);
+      } });
+    paths.forEach((pa) => { if (!pa.ring || pa.r > FINAL.extent + 40) return; const n = Math.floor(2 * Math.PI * pa.r / 2.4), off = pa.w / 2 + 1.3;
+      for (let i = 0; i < n; i++) { const a = (i / n) * 2 * Math.PI, ph = Math.sin(a * pa.r / 45 + pa.r) + 0.5 * Math.sin(a * pa.r / 17);
+        if (ph < 0.55) continue; const sd = Math.sin(a * pa.r / 90 + 1) > 0 ? 1 : -1, R = pa.r + sd * off;
+        plant(Math.cos(a) * R, -Math.sin(a) * R, pa.from || 1, 0.32 + fr() * 0.08, ph > 1.15 ? 7 : 2); } });
     // Open hay meadows, mostly in the south and the belts between the woods
     I('woodland'); layer(1);
     const MEAD = [[560, 250, 60], [600, 290, 50], [900, 255, 80], [880, 300, 70], [520, 200, 45], [860, 190, 60], [1150, 240, 90], [1180, 300, 80], [560, 340, 45], [900, 345, 60]];
@@ -1762,7 +1809,7 @@ export function buildCity(scene, env = null) {
     MEAD.forEach(([r, d, R], i) => { const q = polar(r, d), sh = new THREE.Shape();
       for (let k = 0; k <= 96; k++) { const an = (k / 96) * 2 * Math.PI, rr2 = R * (1 + 0.18 * Math.sin(2 * an + i) + 0.09 * Math.sin(3 * an + 2 * i)), x = q.x + Math.cos(an) * rr2, z = q.z + Math.sin(an) * rr2; k ? sh.lineTo(x, -z) : sh.moveTo(x, -z); }
       const g = new THREE.ShapeGeometry(sh); g.rotateX(-Math.PI / 2); const o = new THREE.Mesh(g, hay); o.position.y = 0.15; o.receiveShadow = true; add(o);
-      for (let j = treePts.length - 1; j >= 0; j--) { const t = treePts[j]; if (t[5] !== 2 && Math.hypot(t[0] - q.x, t[1] - q.z) < R * 0.85) treePts.splice(j, 1); } });
+      for (let j = treePts.length - 1; j >= 0; j--) { const t = treePts[j]; if (t[5] !== 2 && t[5] !== 6 && Math.hypot(t[0] - q.x, t[1] - q.z) < R * 0.85) treePts.splice(j, 1); } });
     I(null);
     if (typeof location !== 'undefined' && /[?&]log\b/.test(location.search)) console.log('FAC woods', nT);
   }
@@ -1798,10 +1845,12 @@ export function buildCity(scene, env = null) {
   // country and the model stays fast: full woods to 400 m past the edge, none beyond 900 m. A tree that
   // is kept in one phase stays in the later ones (each later phase reaches further out).
   for (let i = treePts.length - 1; i >= 0; i--) {
-    const t = treePts[i]; if (t[5] === 2) continue;
+    const t = treePts[i];
     const R = Math.hypot(t[0], t[1]), h = (Math.abs(Math.sin(t[0] * 12.9898 + t[1] * 78.233)) * 43758.5453) % 1;
     const k = [1, 2, 3].find((n) => n >= t[3] && h < 1 - (R - PHASES[n].extent - 400) / 500);
-    if (!k || k >= t[4]) treePts.splice(i, 1); else t[3] = k;
+    if (!k || k >= t[4]) { treePts.splice(i, 1); continue; } t[3] = k;
+    // Flowering trees round the plaza and the Spire Park; columnar trees here and there in the town
+    if (t[5] === 0) { const h2 = (h * 7.31) % 1; if (R < 300 && h2 < 0.2) t[5] = 5; else if (R < FINAL.extent && h2 > 0.94) t[5] = 3; }
   }
   const FAR = FINAL.extent + 60;
   const byLayer = new Map();
@@ -1810,19 +1859,32 @@ export function buildCity(scene, env = null) {
   byLayer.forEach((pts, key) => {
     layer(pts[0][3], pts[0][4]);
     const far = key.endsWith('f');
-    // Separate lists so no instance is drawn at zero scale: trunks for near trees, round crowns for
-    // broadleaf trees and bushes, cones for conifers
-    const tr = far ? [] : pts.filter((t) => t[5] !== 2), cr = pts.filter((t) => t[5] !== 1), co = pts.filter((t) => t[5] === 1);
+    // Separate lists so no instance is drawn at zero scale: trunks for near trees, crowns for broadleaf,
+    // columnar, willow and flowering trees, cones for conifers, and light shapes for shrubs and reeds
+    const isTree = (k) => k === 0 || k === 1 || k === 3 || k === 4 || k === 5;
+    const tr = far ? [] : pts.filter((t) => isTree(t[5])), cr = pts.filter((t) => [0, 3, 4, 5].includes(t[5])), co = pts.filter((t) => t[5] === 1);
+    const sh = pts.filter((t) => t[5] === 2 || t[5] === 7), re = pts.filter((t) => t[5] === 6);
+    const pick = (C) => tint.copy(C[Math.floor(rnd() * C.length)]);
     const put = (list, geo, m, shadow, fn) => { if (!list.length) return; const im = new THREE.InstancedMesh(geo, m, list.length); im.castShadow = shadow;
       list.forEach((t, i) => fn(im, t, i)); im.computeBoundingSphere(); add(im); };
-    put(tr, trunkG, trunkM, false, (im, [x, z, s], i) => { m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s)); im.setMatrixAt(i, m4); });
-    put(cr, far ? crownFarG : crownG, leafM, !far, (im, [x, z, s, , , kind, y0 = 0], i) => {
-      if (kind === 2) m4.compose(new THREE.Vector3(x, 1.1 * s + y0, z), q, new THREE.Vector3(s * 1.3, s * 0.75, s * 1.3));
-      else m4.compose(new THREE.Vector3(x, (far ? 2.5 : 4.2) * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
-      im.setMatrixAt(i, m4); im.setColorAt(i, tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar(1.05 + rnd() * 0.25)); });
+    const v = new THREE.Vector3(), sc = new THREE.Vector3();
+    put(tr, trunkG, trunkM, false, (im, [x, z, s, , , kind], i) => { m4.compose(v.set(x, 1.5 * s * (kind === 4 ? 0.85 : 1), z), q, sc.set(s, s * (kind === 4 ? 0.85 : 1), s)); im.setMatrixAt(i, m4); });
+    put(cr, far ? crownFarG : crownG, leafM, !far, (im, [x, z, s, , , kind], i) => {
+      const y = far ? 2.5 : 4.2, j = 0.9 + rnd() * 0.3;
+      if (kind === 3) m4.compose(v.set(x, (y + 1.2) * s, z), q, sc.set(s * 0.5, s * 1.55, s * 0.5));
+      else if (kind === 4) m4.compose(v.set(x, (y - 0.9) * s, z), q, sc.set(s * 1.35, s * 0.8, s * 1.35));
+      else m4.compose(v.set(x, y * s, z), q, sc.set(s, s * j, s));
+      im.setMatrixAt(i, m4);
+      const c = kind === 4 ? pick(willowC) : kind === 5 ? pick(flowerC) : kind === 0 && rnd() < 0.09 ? pick(autumnC) : pick(leafC).multiplyScalar(kind === 3 ? 0.85 : 1.05 + rnd() * 0.25);
+      im.setColorAt(i, c); });
     put(co, coneG, leafM, !far, (im, [x, z, s], i) => {
-      m4.compose(new THREE.Vector3(x, (far ? 2.4 : 4.2) * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
-      im.setMatrixAt(i, m4); im.setColorAt(i, tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar((1.05 + rnd() * 0.25) * 0.72)); });
+      m4.compose(v.set(x, (far ? 2.4 : 4.2) * s, z), q, sc.set(s, s * (0.9 + rnd() * 0.3), s));
+      im.setMatrixAt(i, m4); im.setColorAt(i, pick(leafC).multiplyScalar((1.05 + rnd() * 0.25) * 0.72)); });
+    put(sh, bushG, leafM, false, (im, [x, z, s, , , kind, y0 = 0], i) => {
+      m4.compose(v.set(x, 1.1 * s + y0, z), q, sc.set(s * 1.3, s * (kind === 7 ? 0.55 : 0.75), s * 1.3)); im.setMatrixAt(i, m4);
+      im.setColorAt(i, kind === 7 ? pick(lavC) : pick(shrubC).multiplyScalar(0.95 + rnd() * 0.25)); });
+    put(re, reedG, leafM, false, (im, [x, z, s], i) => {
+      m4.compose(v.set(x, 0.1, z), q, sc.set(s, s * (0.8 + rnd() * 0.5), s)); im.setMatrixAt(i, m4); im.setColorAt(i, pick(reedC)); });
   });
 
   // Build the instanced parts and the night glows
