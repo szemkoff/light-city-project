@@ -956,6 +956,16 @@ export function buildCity(scene, env = null) {
       const cl2 = cl.clone(); cl2.position.copy(S.at(0, D / 2 + 0.08)).setY(cl.position.y); cl2.rotation.y = rot; add(cl2);
       const ap = new THREE.Mesh(new THREE.PlaneGeometry(L + 2, 6), padM); ap.rotation.set(-Math.PI / 2, 0, -rot, 'YXZ'); ap.rotation.set(-Math.PI / 2, 0, 0); ap.rotation.order = 'YXZ'; ap.rotation.y = rot; ap.position.copy(S.at(0, -D / 2 - 3)).setY(0.32); ap.receiveShadow = true; add(ap);
       for (let k = 0; k < 3; k++) glow('window', S.at(-L / 3 + k * L / 3, D / 2 + 0.2).x, 3, S.at(-L / 3 + k * L / 3, D / 2 + 0.2).z); };
+    // Fire stations on a ring road turn their bays to the road: a short drive leaves the east end of the
+    // apron, swings round in a gentle curve and joins the road, so engines run out without reversing and
+    // the drive never points at the doors
+    const roadStation = (S, L, bays, roadR, from) => {
+      const F = {C: S.C, a: S.a + 180, at: (x, y) => S.at(-x, -y)}; station(F, L, bays);
+      const pts = [], x0 = L / 2 + 2, rho = 9;
+      for (let k = 0; k <= 8; k++) { const f = (k / 8) * Math.PI / 2, q = F.at(x0 + rho * Math.sin(f), -8 - rho * (1 - Math.cos(f))); pts.push([q.x, q.z]); }
+      for (let y = -8 - rho - 2, i = 0; i < 40; y -= 2, i++) { const q = F.at(x0 + rho + 1.5 * Math.sin(i / 3), y); pts.push([q.x, q.z]); if (Math.hypot(q.x, q.z) > roadR) break; }
+      road(pts, 4, from); layer(from);
+    };
     const tunnel = (S, x, y, L, W) => { const q = S.at(x, y), g = new THREE.Mesh(new THREE.CylinderGeometry(W / 2, W / 2, L, 20, 1, false, 0, Math.PI), glassM); g.rotation.set(0, rad(S.a + 90), Math.PI / 2); g.rotation.order = 'YXZ'; g.position.copy(q).setY(0.3); add(g);
       const fb = new THREE.Mesh(new THREE.BoxGeometry(L, 0.6, W), pitchM); fb.position.copy(q).setY(0.3); fb.rotation.y = rad(S.a + 90); footM('greenhouse', fb);
       for (let i = 0; i < 4; i++) { const t = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.4, 1.1, 16), poolM); t.position.copy(S.at(x - L / 2 + (i + 0.5) * L / 4, y)).setY(0.85); add(t); } };
@@ -1025,7 +1035,7 @@ export function buildCity(scene, env = null) {
     { const S = find(410, 75, 0, caps(64, 34), 24);
       if (S) { capsBlock(S, 64, 34); I('aquaponics'); tunnel(S, -16, 7, 26, 8); tunnel(S, -16, -7, 26, 8); I('foodHall'); hallF(S, 16, 0, 26, 16, 6, 0xc99a68, 'market'); I(null); } }
     // Volunteer fire station on the ring road, by the north-east hub
-    { const S = find(462, 58, 9, null, 16); LOGF('fireStation', S); if (S) { I('fireStation'); station(S, 16, 3); I(null); } }
+    { const S = find(462, 58, 9, null, 16); LOGF('fireStation', S); if (S) { I('fireStation'); roadStation(S, 16, 3, 480, 2); I(null); } }
     // A second natural pond and a retreat lodge by the lake
     { const S = find(318, 228, 14, null, 18); if (S) { I('swimPond2'); pond(S, 12, 2.2); I(null); } }
     { const S = find(425, 226, 11, null, 20); if (S) { I('retreatLodge'); hallF(S, 0, 0, 22, 11, 5, 0xc7955f, 'home'); I(null); } }
@@ -1050,7 +1060,7 @@ export function buildCity(scene, env = null) {
     { const S = find(880, 217.5, 0, caps(160, 80), 5);
       if (S) { capsBlock(S, 160, 80); I('sportsPark'); pitch(S, 90, 56, -30, 0); I('wellnessCentre'); hallF(S, 50, 0, 44, 22, 8, 0xd9c3a0);
         { const q = S.at(50, -20); const pl = new THREE.Mesh(new THREE.PlaneGeometry(25, 10), poolM); pl.rotation.set(-Math.PI / 2, 0, rad(S.a + 90)); pl.position.copy(q).setY(0.33); add(pl); } I(null); } }
-    { const S = find(1002, 222, 12, null, 16); LOGF('fireStation3', S); if (S) { I('fireStation3'); station(S, 22, 4); I(null); } }
+    { const S = find(1002, 222, 12, null, 16); LOGF('fireStation3', S); if (S) { I('fireStation3'); roadStation(S, 22, 4, 1035, 3); I(null); } }
 
     // ---- Parks, gathering, animals, water sports and the council house (see design/growth-plan) ----
     // Merge simple parts into one geometry, so repeated things (animals, rocks) can be instanced
@@ -1872,7 +1882,7 @@ export const VIEWS = {
   amphitheatre: {pos: [80, 16, 66], target: [28, 10, 22], fov: 55, label: 'The plaza amphitheatre and fire circle'},
   green: {pos: [-118, 50, 95], target: [-180, 0, 175], fov: 55, label: 'The village green, field and playground'},
   lakeside: {pos: [-5, 60, 250], target: [-75, 0, 370], fov: 55, label: 'Swimming ponds and retreat cabins by the lake'},
-  firestation: {pos: [70, 12, -420], target: [44, 3, -444], fov: 50, label: 'The village fire station under its curved green roof (Phase 2)'},
+  firestation: {pos: [62, 6.5, -468], target: [42, 3.2, -444], fov: 48, label: 'The village fire station under its curved green roof (Phase 2)'},
   orchard: {pos: [-300, 55, -30], target: [-400, 0, -95], fov: 55, label: 'The orchard and food forest, planted in Phase 1'},
   spirepark: {pos: [62, 34, 88], target: [-8, 4, -14], fov: 55, label: 'The Spire Park: lawns, a grove and a waterfall around the spire'},
   council: {pos: [6, 14, -22], target: [10, 4, -63], fov: 55, label: 'The Council House, a round glass hall facing the spire (Phase 2)'},
