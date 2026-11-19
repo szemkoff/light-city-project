@@ -18,17 +18,35 @@
     background-position: calc(100% - 11px) 52%, calc(100% - 6px) 52%; background-size: 5px 5px; background-repeat: no-repeat; }
   .ctl select:focus-visible { outline: 2px solid #C9A24A; border-radius: 6px; }
   .ctl.phase { border-color: #C9A24A; }
-  .note { position: fixed; left: 12px; bottom: 12px; right: 12px; max-width: 640px; background: rgba(251,248,242,.92); padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #5F584C; }
-  body.render .ui, body.render .note { display: none; }
+  .note { position: fixed; left: 12px; bottom: 12px; max-width: min(640px, calc(100vw - 24px)); background: rgba(251,248,242,.92); padding: 0; border-radius: 8px; font-size: 13px; color: #5F584C; }
+  .note summary { cursor: pointer; list-style: none; padding: 7px 12px; display: flex; gap: 8px; align-items: baseline; }
+  .note summary::-webkit-details-marker { display: none; }
+  .note summary::after { content: 'More'; margin-left: auto; padding-left: 8px; font-size: 12px; font-weight: 600; color: #8A6A1F; white-space: nowrap; }
+  .note[open] summary::after { content: 'Less'; }
+  .note summary:focus-visible { outline: 2px solid #C9A24A; border-radius: 8px; }
+  .note #noteSum { color: #1D1A15; }
+  .note p { margin: 0; padding: 0 12px 9px; max-height: 40vh; overflow: auto; }
+  .card { position: fixed; z-index: 5; width: 300px; max-width: calc(100vw - 24px); background: rgba(251,248,242,.97); border: 1px solid #D8CDBA; border-radius: 10px; padding: 12px 14px 12px; box-shadow: 0 6px 24px rgba(29,26,21,.18); font-size: 14px; }
+  .card[hidden] { display: none; }
+  .card h2 { font: 600 16px/1.25 Georgia, serif; margin: 0 26px 4px 0; }
+  .card .ph { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #8A6A1F; border: 1px solid #C9A24A; border-radius: 999px; padding: 1px 8px; margin-bottom: 6px; }
+  .card p { margin: 0 0 8px; color: #3F3A31; }
+  .card a { color: #1D1A15; font-weight: 600; }
+  .card .x { position: absolute; right: 6px; top: 6px; border: 0; background: none; font: 20px/1 system-ui, sans-serif; color: #5F584C; cursor: pointer; padding: 4px 8px; border-radius: 6px; }
+  .card .x:focus-visible, .card a:focus-visible { outline: 2px solid #C9A24A; }
+  @media (max-width: 600px) { .card { left: 12px !important; right: 12px; top: auto !important; bottom: 12px; width: auto; } }
+  body.render .ui, body.render .note, body.render .card { display: none; }
 </style>
 <script type="importmap">{"imports": {"three": "./vendor/three.module.min.js"}}</script>
 </head>
 <body>
 <canvas id="c" aria-label="3D model of the Light City plan"></canvas>
 <div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><label class="ctl phase"><span>Phase</span><select id="phaseSel" aria-label="Phase"></select></label><label class="ctl"><span>View</span><select id="viewSel" aria-label="View"></select></label><label class="ctl"><span>Time</span><select id="timeSel" aria-label="Time of day"></select></label></div>
-<p class="note" id="note"></p>
+<details class="note" id="noteBox"><summary><span id="noteSum"></span></summary><p id="note"></p></details>
+<div class="card" id="card" role="dialog" aria-live="polite" aria-labelledby="cardT" hidden><button class="x" id="cardX" aria-label="Close">×</button><h2 id="cardT"></h2><span class="ph" id="cardP"></span><p id="cardD"></p><a id="cardL" target="_blank" rel="noopener">Read the full description →</a></div>
 <script type="module">
   import {start, VIEWS, PHASES} from './city.js';
+  import {INFO} from './info.js';
   const q = new URLSearchParams(location.search);
   const phase = [1, 2, 3].includes(+q.get('phase')) ? +q.get('phase') : 1;
   const NOTES = {
@@ -45,7 +63,9 @@
   for (const n of [1, 2, 3]) opt(ps, n, PHASE_LABELS[n], n === 1 ? 'Phase 1 only' : 'Turn on the structures Phase ' + n + ' adds');
   const showPhase = (n) => {
     document.getElementById('ttl').textContent = 'Light City, ' + PHASES[n].name;
-    document.getElementById('note').textContent = NOTES[n] + ' Drag to orbit, scroll or pinch to zoom.';
+    const cut = NOTES[n].indexOf('. ') + 1;
+    document.getElementById('noteSum').textContent = NOTES[n].slice(0, cut);
+    document.getElementById('note').textContent = NOTES[n].slice(cut).trim() + ' Drag to orbit, scroll or pinch to zoom. Click or tap a building to see what it is.';
     ps.value = n;
   };
   let curPhase = phase;
@@ -84,6 +104,30 @@
   const ts = document.getElementById('timeSel');
   opt(ts, 'day', 'Day'); opt(ts, 'night', 'Night'); ts.value = time;
   ts.onchange = () => { app.setTime(ts.value); setQ('time', ts.value === 'night' ? 'night' : null); };
+  // Click or tap a structure to see what it is; a drag (orbit) does not count as a click
+  const card = document.getElementById('card');
+  const hideCard = () => { card.hidden = true; };
+  document.getElementById('cardX').onclick = hideCard;
+  addEventListener('keydown', (e) => { if (e.key === 'Escape') hideCard(); });
+  let down = null;
+  c.addEventListener('pointerdown', (e) => { down = {x: e.clientX, y: e.clientY, t: performance.now()}; });
+  c.addEventListener('pointerup', (e) => {
+    if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 6 || performance.now() - down.t > 700) { down = null; return; }
+    down = null;
+    const r = c.getBoundingClientRect();
+    const hit = app.pick(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    const it = hit && INFO[hit.key];
+    if (!it) { hideCard(); return; }
+    document.getElementById('cardT').textContent = it.title;
+    document.getElementById('cardP').textContent = hit.from > 1 ? 'Added in Phase ' + hit.from : 'Built in Phase 1';
+    document.getElementById('cardD').textContent = it.text;
+    const a = document.getElementById('cardL'); a.href = it.link; a.hidden = !it.link;
+    card.hidden = false;
+    const w = card.offsetWidth, h = card.offsetHeight;
+    card.style.left = Math.max(12, Math.min(innerWidth - w - 12, e.clientX + 14)) + 'px';
+    card.style.top = Math.max(60, Math.min(innerHeight - h - 12, e.clientY - h / 2)) + 'px';
+  });
+  window.__app = app;
   window.__ready = true;
 </script>
 </body>
