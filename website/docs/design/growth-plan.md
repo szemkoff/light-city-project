@@ -32,8 +32,10 @@ The loops connect. Rain from the domes fills cisterns, and the water serves toil
 | **Wellness** | Temple pavilion with a meditation hall and sound-healing room; natural swimming pond by the lake | Larger temples; a bigger natural pool and a lake beach | A wellness and sports centre with an indoor pool |
 | **Learning** | A learning pavilion with a small multi-age school and the library | A primary school; the library grows in the learning pavilions | A secondary school, more primary places and district libraries |
 | **Health** | A health room in a dome, with first aid, telehealth and a visiting clinician | A health centre with at least one full-time clinician | A town health centre with five or six clinicians, dental and urgent care |
-| **Civic and gathering** | Plaza with amphitheatre seating and a fire circle; spire deck and gathering levels | Work hub market halls | District squares and halls |
-| **Parks, play and sport** | A village green, a playground and a small field | A sports field, courts, play areas and a running loop | A sports park in the outer belt, with a park within a short walk of every home |
+| **Civic and gathering** | Plaza with amphitheatre seating and a fire circle; spire deck and gathering levels; the council meets in the spire hall | The Council House facing the spire; a festival meadow with a stage for about 3,000; work hub market halls | A covered event hall for about 1,000; district squares and halls |
+| **Parks, play and sport** | The Spire Park with lawns, groves and a waterfall; a village green, a playground and a small field; the north woods and the first dog park | A sports field, courts, play areas and a running loop; a second dog park | A sports park in the outer belt, with a park within a short walk of every home; open hay meadows and two more dog parks |
+| **Animals** | A care farm with goats, sheep, hens, ducks and bees | Stables for about ten horses, with an arena and paddocks | Grazing rotates over the hay meadows and food belt |
+| **Water sports** | Swimming in the natural pond | A boathouse on the lake: kayaks, paddle boards and sailing dinghies | Paddling on the canals and the river |
 | **Food** | Kitchen gardens, 1–2 ha of orchard and food forest | Greenhouses, aquaponics and a food-processing hall | A vertical farm, a larger processing hub and the outer food belt |
 | **Guests** | Six to ten retreat cabins by the lake | A retreat lodge | A guest house by a mobility hub |
 | **Water** | Rain cisterns at every dome; a well, a 300 m³ tank and two sand filters in a water yard behind the hamlet | A second, larger tank and more filters beside the first | North reservoirs and sand filters on the utility campus |
@@ -44,11 +46,11 @@ The loops connect. Rain from the domes fills cisterns, and the water serves toil
 
 The [model](pathname:///model/index.html?phase=2&view=reedbeds) shows the water yard, the treatment garden and the rain cisterns at each phase. The places in this table are in the model too, each in its own phase:
 
-- **Phase 1:** the [amphitheatre and fire circle](pathname:///model/index.html?phase=1&view=amphitheatre), the spire's base hall, lift core and gathering level, the [village green and playground](pathname:///model/index.html?phase=1&view=green), the [swimming pond and retreat cabins](pathname:///model/index.html?phase=1&view=lakeside), the [orchard and food forest](pathname:///model/index.html?phase=1&view=orchard) and the fire shed at the hub.
-- **Phase 2:** the [primary school](pathname:///model/index.html?phase=2&view=school) and health centre, the [sports field](pathname:///model/index.html?phase=2&view=sport), the [aquaponics tunnels, food hall and fire station](pathname:///model/index.html?phase=2&view=food), a second swimming pond and the retreat lodge.
-- **Phase 3:** the secondary school, town health centre, [vertical farm](pathname:///model/index.html?phase=3&view=farm), [sports park and wellness centre](pathname:///model/index.html?phase=3&view=sportspark) and the staffed fire and ambulance station.
+- **Phase 1:** the [Spire Park](pathname:///model/index.html?phase=1&view=spirepark) and its [waterfall](pathname:///model/index.html?phase=1&view=falls), the [lake falls](pathname:///model/index.html?phase=1&view=lakefalls), the [care farm](pathname:///model/index.html?phase=1&view=carefarm), the first [dog park](pathname:///model/index.html?phase=1&view=dogpark), the [amphitheatre and fire circle](pathname:///model/index.html?phase=1&view=amphitheatre), the spire's base hall, lift core and gathering level, the [village green and playground](pathname:///model/index.html?phase=1&view=green), the [swimming pond and retreat cabins](pathname:///model/index.html?phase=1&view=lakeside), the [orchard and food forest](pathname:///model/index.html?phase=1&view=orchard) and the fire shed at the hub.
+- **Phase 2:** the [Council House](pathname:///model/index.html?phase=2&view=council), the [festival meadow](pathname:///model/index.html?phase=2&view=festival), the [stables](pathname:///model/index.html?phase=2&view=stables), the [boathouse](pathname:///model/index.html?phase=2&view=boathouse), the [primary school](pathname:///model/index.html?phase=2&view=school) and health centre, the [sports field](pathname:///model/index.html?phase=2&view=sport), the [aquaponics tunnels, food hall and fire station](pathname:///model/index.html?phase=2&view=food), a second swimming pond and the retreat lodge.
+- **Phase 3:** the [event hall](pathname:///model/index.html?phase=3&view=eventhall), the [woods and hay meadows](pathname:///model/index.html?phase=3&view=woods), the secondary school, town health centre, [vertical farm](pathname:///model/index.html?phase=3&view=farm), [sports park and wellness centre](pathname:///model/index.html?phase=3&view=sportspark) and the staffed fire and ambulance station.
 
-Each one sits between the radial paths, next to a path or ring, so nothing blocks the way and every building can be reached. A few smaller items are still missing (see [What the model does not show yet](/docs/design/visual-language#what-the-model-does-not-show-yet)).
+Each one sits between the radial paths, next to a path or ring, so nothing blocks the way and every building can be reached. Every structure type has a picture in the [photo guide](/docs/design/structures). A few smaller items are still missing (see [What the model does not show yet](/docs/design/visual-language#what-the-model-does-not-show-yet)).
 
 ---
 
@@ -112,6 +114,48 @@ All green space together comes to 5.35 ha per 1,000 people ([Fields in Trust, vi
 | Phase 3 (8,000) | 12.8 ha: a sports park in the outer belt | 4.4 ha across the districts | 6.4 ha, a park within 710 m of every home |
 
 The rings already give most of the park space: the gardens of ring 4, the belts, the lake and the woods.
+
+## The Spire Park and the woods
+
+![The Spire Park: lawns, groves and a waterfall around the spire (concept rendering)](/img/structures/spirePark.webp)
+
+- **Spire Park.** Ring 2 around the spire is a park from the first day: open lawns, groves on the quiet sides, the amphitheatre and a waterfall of local boulders fed by the heart rill. It is the open ming tang (bright hall) in front of the spire, so no building stands in it except the Council House on its north edge.
+- **Waterfalls.** The park waterfall and the lake falls are built like streams, not fountains: boulders, two ledges and a plunge pool. At the lake the falls are the weir that holds the water level. Its concrete core sits inside the boulders, so the hard engineering is still there, but hidden.
+- **Woods behind, meadows in front.** Woodland grows on the north side of the city and along its flanks, the armchair of feng shui. That is also where a shelterbelt helps most: it breaks cold winds from the north, shades the soil and holds water. To the south the land stays open as hay meadows, so the city looks out over its water. The woods are planted only where no phase will ever build, so no tree is felled later.
+
+![Woodland trail and an open hay meadow (concept rendering)](/img/structures/woodland.webp)
+
+## Events and gathering
+
+- **Open air.** The festival meadow by the south-east hub opens in Phase 2: about 4,500 m² of lawn with a timber stage shell and light towers. At a comfortable 1.5 m² a person it holds about 3,000 people, twice the Phase 2 population. UK event guidance plans open event areas at up to 2 people per m² ([OnePlan, on the Purple Guide](https://www.oneplan.io/articles/calculate-outdoor-event-capacity); [G. Keith Still](https://www.gkstill.com/Support/crowd-density/CrowdDensity-1.html)), so the hard limit is far above what the town needs.
+- **Indoors.** The event hall comes in Phase 3, when the town is large enough to fill it: a long timber hall with a glass foyer, seating about 1,000, on the outer ring road so crowds and deliveries never pass through the homes.
+- **Every day.** The plaza amphitheatre and the fire circle remain the everyday gathering places; the spire hall takes the first concerts and meetings in Phase 1.
+
+![The festival meadow and stage (concept rendering)](/img/structures/festivalMeadow.webp)
+
+## Animals
+
+- **Care farm (Phase 1).** By the orchard: goats, sheep, hens, ducks and bees, a barn, a hen house and a duck pond. Children learn to care for animals, the kitchens get eggs and honey, and the manure goes to the compost and the orchard.
+- **Stables (Phase 2).** A barn for about ten horses, a sand arena and fenced turnout paddocks in the food belt. Horses need about one to two acres (0.4 to 0.8 ha) of pasture each if they graze all day, or about half an acre with less than three hours of turnout a day ([Rutgers Cooperative Extension](https://extension.rutgers.edu/e296); [University of Minnesota Extension](https://extension.umn.edu/agriculture/animals-and-livestock/horse/managing-established-horse-pastures)). The paddocks are for turnout; the herd grazes the hay meadows and the food belt in rotation, about 4 to 8 ha for ten horses.
+- **Dog parks.** One in Phase 1, one more in Phase 2 and two in Phase 3, each fenced, with a gate and shade trees, off a radial path and away from playgrounds. Cities usually ask for half an acre to an acre ([Ann Arbor guidelines](https://www.a2gov.org/media/hvqhrksg/recommendations-and-guidelines-for-dog-park-site-selection-updated-4-10-15.pdf)); the ones in the model are smaller pocket parks, and the larger off-lead areas will be in the woods.
+
+![Children and goats at the care farm (concept rendering)](/img/structures/careFarm.webp)
+
+## Water sports
+
+- **Phase 1:** swimming in the natural pond by the lake.
+- **Phase 2:** a boathouse on the lake shore with a jetty, kayaks, paddle boards and sailing dinghies, and lessons for every age.
+- **Phase 3:** paddling routes on the canal rings and the river, which need no new building.
+
+## The Council House
+
+What a city hall looks like here follows the [governance model](/docs/project/governance): a council of about one member for every 50 residents (4 in Phase 1, 30 in Phase 2, 160 in Phase 3), open meetings every month, town halls every quarter, and major decisions by 80% consent.
+
+- **Phase 1:** the council of four meets in the spire hall; town halls are held in the amphitheatre.
+- **Phase 2:** the Council House, a round glass hall with a timber roof open to the sky through an oculus, on the north edge of the Spire Park and facing the spire. Inside, the council sits in a circle with no raised seat, and the public sits in the outer rings. Glass walls mean anyone walking past can see the council at work.
+- **Phase 3:** the 160-member council works mostly in committees in the district halls and meets in full in the Council House or the event hall.
+
+![The Council House: a round hall with the council in a circle (concept rendering)](/img/structures/councilHouse.webp)
 
 ## Emergency services
 
