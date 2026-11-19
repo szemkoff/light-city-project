@@ -38,19 +38,15 @@ The model shows the plan, the main buildings, water, movement and the [infrastru
 
 | Missing from the model | Where it is described | Notes |
 |---|---|---|
-| Schools, a clinic and a library | [How the city grows](/docs/design/growth-plan#learning-health-and-care), [Architecture: learning centres](/docs/design/architecture#3-learning-centers) | Sized per phase; the learning pavilions stand in for them in the model for now |
-| Inside the spire | [Architecture: the central spire](/docs/design/architecture#the-central-spire) | The lattice and solar crown are shown; the observation deck, lifts and gathering levels are not |
-| Plaza amphitheatre and fire circle | [Architecture: the central plaza](/docs/design/architecture#1-the-central-plaza) | The plaza is open paving round the ring pool |
 | Creative studios and maker spaces in detail | [Architecture: creative studios](/docs/design/architecture#5-creative-studios) | Shown as simple ring 3 buildings and work hub workshops |
-| Food processing, aquaponics, vertical farms and mushrooms | [Technology catalog](/docs/technical/technology-catalog#food-production) | Greenhouses and crop rows only |
-| Food forests and orchards | [Technology catalog](/docs/technical/technology-catalog#3-agroforestry--food-forests) | Woodland and meadow, not planted as food forest |
-| Guest and retreat housing | [How the city grows](/docs/design/growth-plan#phase-by-phase) | Cabins, a lodge and a guest house are planned per phase; not in the model yet |
+| Mushrooms and food processing in detail | [Technology catalog](/docs/technical/technology-catalog#food-production) | The food hall, aquaponics tunnels and vertical farm are shown as simple buildings |
 | Housing counts per dome and per terrace | [How the city grows](/docs/design/growth-plan#phase-by-phase), [At a Glance](/docs/at-a-glance) | Counts per phase are set out; terraced levels are shown, not individual homes |
+| Rooms inside the domes and the spire | [How the city grows](/docs/design/growth-plan#inside-the-communospheres) | The dome commons (yoga, sound room, tool library, childcare) and the spire's lift core, base hall and gathering level are shown as volumes, not furnished rooms |
+| Courts, ambulances and the guest house | [How the city grows](/docs/design/growth-plan#phase-by-phase) | Schools, health centres, fields, ponds, cabins, the lodge and fire stations are in the model; these smaller items are not |
 | Pipes, cables and utility tunnels | [Infrastructure](/docs/design/infrastructure#utility-tunnels) | Underground, so not drawn |
 | Swales and pump stations | [Infrastructure](/docs/design/infrastructure#water-supply) | Rain cisterns, the phased water yard and the reed beds are drawn; swales and pumps are not |
 | Micro-hydro and geothermal | [Energy systems](/docs/concepts/energy-systems#resilience-without-diesel) | Depend on the site |
 | Sound, healing and float rooms | [Technology catalog](/docs/technical/technology-catalog#consciousness--wellness-tech) | Inside the temples and domes, not modelled |
-| Sports fields, playgrounds, swimming ponds and emergency services | [How the city grows](/docs/design/growth-plan#parks-play-and-sport) | Sized per phase; next to go in the model |
 | The real landform | [Site locations](/docs/project/site-locations) | The hills, river and slopes are schematic until a site is chosen |
 
 ## Concept photos (Modern Organic)
