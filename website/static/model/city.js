@@ -429,6 +429,20 @@ export function buildCity(scene, env = null) {
   const pv = shiny(mat(0xffffff, {roughness: 0.25, metalness: 0.45, map: TX.solar()}));
   const carport = inf('hub', carportB);
   CARPORTS.forEach(([n, r, ds, rows, len]) => { layer(n); ds.forEach((d) => carport(polar(r, d), d + twist(r), rows, len)); });
+  // Footpaths from the hubs into the city, so nobody steps out of a shared car or shuttle into a field.
+  // Each one leaves the hub's city side and curves gently to the nearest ring path. (The Phase 1 hub has the
+  // entry path below; the Phase 2 hub at 300°
+  // and the Phase 3 hubs sit on radial paths already.)
+  const spurB = (from, r0, r1, d0, d1, w = 3.2) => {
+    layer(from);
+    const pts = [];
+    for (let r = r0; r >= r1 - 0.01; r -= 2) { const t = (r0 - r) / (r0 - r1), e = t * t * (3 - 2 * t), q = polar(r, d0 + (d1 - d0) * e + (180 / Math.PI) * 4 * Math.sin(Math.PI * t) / r); pts.push([q.x, q.z, w / 2]); }
+    paths.push({pts, w, from}); ribbon(pts, 0, 0.31, path);
+    pts.forEach(([x, z], i) => { if (i % 2 === 0) block(x, z, w / 2 + 0.5); });
+    for (let i = 7; i < pts.length - 4; i += 15) { const a = pts[i], b = pts[i + 1], L = Math.hypot(b[0] - a[0], b[1] - a[1]); lamp(a[0] - (b[1] - a[1]) / L * (w / 2 + 1.2), a[1] + (b[0] - a[0]) / L * (w / 2 + 1.2)); }
+  };
+  const spur = inf(null, spurB);
+  spur(2, 477, 360, 45, 45); spur(2, 477, 360, 165, 165);
   layer(1); radial(ENTRY, P.rings[3].r + 1.6, 240, 3);
   { const q = polar(P.rings[3].r - 4.5, ENTRY); BEDS.push([q.x, q.z, 1]); }
 
@@ -596,26 +610,57 @@ export function buildCity(scene, env = null) {
   const dome = inf((p, d) => (d < 45 ? 'dome40' : d < 60 ? 'dome52' : 'dome80'), domeB);
   // Each dome plot is meadow and tree nursery until its dome is built; the young trees are then moved out
   const meadow = ground(0xc2ca86, TX.meadow(), 10, 0);
-  // Each dome plot has a forecourt (feng shui ming tang) where its path arrives. A round planted bed on
-  // the axis makes the arriving path turn aside before the door instead of running straight at it.
-  layer(1); trees(1);
-  OBST.filter((o) => o.dome).forEach((o) => {
-    for (const sgn of [-1, 1]) {
-      const q = polar(P.domeRing + sgn * (o.dome / 2 + 2.9), o.deg);
-      flat(new THREE.CircleGeometry(1.6, 20), meadow, 0.33).position.set(q.x, 0.33, q.z);
-      for (let k = 0; k < 3; k++) treePts.push([q.x + Math.cos(k * 2.1) * 0.8, q.z + Math.sin(k * 2.1) * 0.8, 0.3, 1, 4, 2]);
+  // Each dome plot sits across one of the 12 radial paths, and the path goes through it. Until the dome is
+  // built the path crosses the tree nursery; once it is built the path arrives at a paved forecourt (the
+  // feng shui ming tang: open, level and bright in front of the door) and an entrance vault on each side,
+  // and runs through the ground-floor commons from door to door. The ring paths still bend round the plot.
+  const doorM = atNight(mat(0x2f363c, {roughness: 0.15, metalness: 0.35}), warm(0xffb55c, 1.8));
+  const foreM = ground(0xddd2bc, TX.paving(), 4, 0.1);
+  const vaultG = new THREE.CylinderGeometry(2.5, 2.5, 5.2, 18, 1, true, 0, Math.PI); vaultG.rotateZ(Math.PI / 2);
+  const vaultEndG = new THREE.CircleGeometry(2.2, 18, 0, Math.PI); vaultEndG.rotateY(Math.PI / 2);
+  const FORE = [];
+  const spiralAt = (deg, r) => polar(r, deg);
+  // Where the radial path at `deg` meets a circle of radius rr round the dome centre, on the inner or outer side
+  const meet = (deg, rr, side) => { let a = P.domeRing, b = P.domeRing + side * (rr + 15); const C = polar(P.domeRing, deg); for (let k = 0; k < 30; k++) { const m = (a + b) / 2; (spiralAt(deg, m).distanceTo(C) < rr) ? (a = m) : (b = m); } return (a + b) / 2; };
+  const entrancesB = (deg, d, from) => {
+    const C = polar(P.domeRing, deg), r = d / 2, W = [];
+    for (const side of [-1, 1]) {
+      const w = spiralAt(deg, meet(deg, r, side)), u = w.clone().sub(C).setY(0).normalize(), head = Math.atan2(-u.z, u.x);
+      W.push(w);
+      const v = new THREE.Mesh(vaultG, deckTM); v.position.copy(w).addScaledVector(u, 1.2); v.rotation.y = head; v.castShadow = true; add(v);
+      const door = new THREE.Mesh(vaultEndG, doorM); door.position.copy(w).addScaledVector(u, 3.7).setY(0.05); door.rotation.y = head; add(door);
+      const g = w.clone().addScaledVector(u, 4.4); glow('window', g.x, 1.4, g.z);
+      const f = w.clone().addScaledVector(u, 4.4);
+      flat(new THREE.CircleGeometry(4.8, 28), foreM, 0.325).position.set(f.x, 0.325, f.z);
+      FORE.push([f.x, f.z, 4.8, from]);
+      // Two shrubs flank the door against the shell, leaving the forecourt and the path open
+      const a0 = Math.atan2(-u.z, u.x) * 180 / Math.PI;
+      for (const t of [-1, 1]) { const q = C.clone().add(polar0(r + 1.4, a0 + t * (520 / r))); treePts.push([q.x, q.z, 0.4, from, 4, 2]); }
     }
-  });
+    // Ground-floor street through the commons, from door to door, stepping round the rain pool
+    const [A, B] = W, ax = B.clone().sub(A), n = new THREE.Vector3(-ax.z, 0, ax.x).normalize(), off = r * 0.4 * 0.28 + 1.9, pts = [];
+    for (let k = 0; k <= 24; k++) { const t = k / 24, q = A.clone().addScaledVector(ax, t).addScaledVector(n, off * Math.sin(Math.PI * t)); pts.push([q.x, q.z, 1.4]); }
+    ribbon(pts, 0, 0.37, foreM);
+  };
+  const entrances = inf((deg, d) => (d < 45 ? 'dome40' : d < 60 ? 'dome52' : 'dome80'), entrancesB);
   for (let deg = 0; deg < 360; deg += 30) {
     const p = polar(P.domeRing, deg);
     const built = firstIn('domes', ([d]) => d === deg) || 4;
     if (built > 1) {
       I('nursery'); layer(1, built); trees(1, built);
       flat(new THREE.CircleGeometry(20, 40), meadow, 0.27).position.set(p.x, 0.27, p.z);
-      for (let x = -9; x <= 9; x += 4.5) for (let z = -9; z <= 9; z += 4.5) if (x * x + z * z < 110) tree(p.x + x, p.z + z, 0.4);
+      { const ax = polar0(1, deg + twist(P.domeRing)); for (let x = -9; x <= 9; x += 4.5) for (let z = -9; z <= 9; z += 4.5) if (x * x + z * z < 110 && Math.abs(x * ax.z - z * ax.x) > 4.2) tree(p.x + x, p.z + z, 0.4); }
     }
     I(null);
-    if (built < 4) { const d = FINAL.domes.find(([a]) => a === deg)[1]; layer(built); dome(p, d, d > 45 ? 0.8 : 1); }
+    const d = FINAL.domes.find(([a]) => a === deg)[1];
+    // Before the dome: the radial path runs straight on across the nursery plot
+    if (built > 1) {
+      layer(1, built);
+      const pc = plotClear(d), pts = [];
+      for (let r = P.domeRing - pc - 1; r <= P.domeRing + pc + 1; r += 2) { const q = spiralAt(deg, r); pts.push([q.x, q.z, 2]); }
+      paths.push({pts, w: 4, from: 1, to: built}); ribbon(pts, 0, 0.31, path);
+    }
+    if (built < 4) { layer(built); dome(p, d, d > 45 ? 0.8 : 1); entrances(deg, d, built); }
   }
 
   I('earthHome');
@@ -1163,17 +1208,17 @@ export function buildCity(scene, env = null) {
   });
   // Clear trees off every path and road: a tree under a later phase's path is felled when that path is built
   {
-    const PG = 8, pg = new Map(), put = (x, z, h, from) => { const k = Math.floor(x / PG) + ',' + Math.floor(z / PG); if (!pg.has(k)) pg.set(k, []); pg.get(k).push([x, z, h, from]); };
+    const PG = 8, pg = new Map(), put = (x, z, h, from, to = 4) => { const k = Math.floor(x / PG) + ',' + Math.floor(z / PG); if (!pg.has(k)) pg.set(k, []); pg.get(k).push([x, z, h, from, to]); };
     const rings = [];
     paths.forEach((pa) => {
       if (pa.ring) { rings.push(pa); return; }
       const P = pa.pts;
-      for (let i = 1; i < P.length; i++) { const L = Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]), n = Math.max(1, Math.ceil(L / 1.5)); for (let k = 0; k < n; k++) { const t = k / n; put(P[i - 1][0] + (P[i][0] - P[i - 1][0]) * t, P[i - 1][1] + (P[i][1] - P[i - 1][1]) * t, pa.w / 2, pa.from); } }
+      for (let i = 1; i < P.length; i++) { const L = Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]), n = Math.max(1, Math.ceil(L / 1.5)); for (let k = 0; k < n; k++) { const t = k / n; put(P[i - 1][0] + (P[i][0] - P[i - 1][0]) * t, P[i - 1][1] + (P[i][1] - P[i - 1][1]) * t, pa.w / 2, pa.from, pa.to || 4); } }
     });
     for (let i = treePts.length - 1; i >= 0; i--) {
       const t = treePts[i], pad = 0.6 + 1.6 * t[2]; let cutAt = 99;
       const gx = Math.floor(t[0] / PG), gz = Math.floor(t[1] / PG);
-      for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) (pg.get(gx + a + ',' + (gz + b)) || []).forEach((q) => { if (q[3] < t[4] && Math.hypot(t[0] - q[0], t[1] - q[1]) < q[2] + pad) cutAt = Math.min(cutAt, q[3]); });
+      for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) (pg.get(gx + a + ',' + (gz + b)) || []).forEach((q) => { if (q[3] < t[4] && q[4] > t[3] && Math.hypot(t[0] - q[0], t[1] - q[1]) < q[2] + pad) cutAt = Math.min(cutAt, q[3]); });
       const R0 = Math.hypot(t[0], t[1]);
       rings.forEach((rp) => { if (rp.from < t[4] && Math.abs(R0 - rp.r) < rp.w / 2 + pad) cutAt = Math.min(cutAt, rp.from); });
       if (cutAt <= t[3]) treePts.splice(i, 1); else if (cutAt < t[4]) t[4] = cutAt;
@@ -1234,7 +1279,7 @@ export function buildCity(scene, env = null) {
 
   // Show the layers that exist in phase n; setNight switches emissive materials and glows
   if (typeof location !== 'undefined' && /[?&]audit\b/.test(location.search)) {
-    globalThis.__audit = {foot: FOOT, paths, beds: BEDS, trees: treePts.map((t) => t.slice(0, 6)),
+    globalThis.__audit = {foot: FOOT, paths, beds: BEDS, fore: FORE, trees: treePts.map((t) => t.slice(0, 6)),
       waters: waters.map((w) => ({kind: w.kind, from: w.from, closed: w.closed, bank: w.bank, pts: w.pts}))};
   }
   const show = (n) => layers.forEach((g) => { g.visible = g.userData.from <= n && n < g.userData.to; });
@@ -1260,6 +1305,7 @@ export const VIEWS = {
   utilities: {pos: [-500, 150, -870], target: [-618, 0, -1029], fov: 50, label: 'North utility campus in the feng shui woods'},
   watermouth: {pos: [-60, 90, 960], target: [70, 0, 1085], fov: 55, label: 'The water mouth: wetland, grove and bridge'},
   harbour: {pos: [-10, 110, 150], target: [40, 0, 270], fov: 55, label: 'The harbour crescent and the heart canal'},
+  entrances: {pos: [150, 62, 175], target: [62, 0, 70], fov: 50, label: 'Dome entrances on the radial paths'},
   dome: {pos: [56, 44, 141], target: [24, 3, 106], fov: 52, label: 'Into a communosphere through its oculus'},
   hub: {pos: [79, 45, -208], target: [-31, 0, -248], fov: 50, label: 'Phase 1 mobility hub on the north road'},
   work: {pos: [234, 70, -217], target: [107, 0, -264], fov: 50, label: 'A Phase 2 neighbourhood work hub'},

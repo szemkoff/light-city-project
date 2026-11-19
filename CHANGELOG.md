@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Prototype communosphere designs
 
 ### Added
+- 3D model: every communosphere now has timber entrance vaults and paved forecourts on its inner and outer sides, and the radial paths run through the domes instead of stopping at them; the planted beds that blocked the doors are gone, paths cross the Phase 1 nursery plots, Phase 2 hubs have footpaths to the city, and a new "Dome entrances" view; the audit now counts paths that arrive at a dome entrance separately from screened path ends
 - Similar Movements: a sourced comparison of visionary cities, ecovillages, intentional communities and planned towns, with lessons for Light City
 - The Venus Project added to the "What others teach us" table in Economy and Migration
 - Infrastructure: a sourced design page on water supply, sewage, waste and power, with a utility campus in the northern woods and a treatment wetland at the water mouth

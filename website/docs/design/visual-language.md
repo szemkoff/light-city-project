@@ -30,7 +30,7 @@ Every illustration of the city as a whole starts from one shared 3D model, so th
 - **Label the phase.** Any image of the whole city says which phase it shows, and must match the model at that phase: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a flared lattice of stacked sections: three in Phase 1, five in Phase 2, eight in Phase 3.
 - **What must match.** One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.
 - **Changing the plan.** Update `static/model/city.js` and the plan diagram together, then re-render the views and the affected images.
-- **Check the layout.** After any change to the plan, run `node scripts/audit-model.cjs` from `website/`. For each phase it reports buildings on paths or in water, overlapping buildings, path ends aimed at doors without a planted bed, straight runs over 80 m and trees on paths. All counts should be zero before a change is merged ([Planning principles](/docs/design/planning-principles#collisions-and-the-layout-audit)).
+- **Check the layout.** After any change to the plan, run `node scripts/audit-model.cjs` from `website/`. For each phase it reports buildings on paths or in water, overlapping buildings, path ends aimed at buildings without a planted bed (paths that arrive at a dome entrance forecourt are counted separately and are fine), straight runs over 80 m and trees on paths. All counts should be zero before a change is merged ([Planning principles](/docs/design/planning-principles#collisions-and-the-layout-audit)).
 
 ### What the model does not show yet
 
