@@ -1,1 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1300" width="1100" height="1300" role="img" aria-label="Light Spire, Phase 1"><title>Light Spire, Phase 1</title><rect width="1100" height="1300" rx="18" fill="#FBF8F2"/><text x="48" y="74" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="400" fill="#1D1A15" text-anchor="start">Light Spire, Phase 1</text><text x="48" y="114" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="400" fill="#5F584C" text-anchor="start">A light, sound and solar tower at the center of the plaza</text><line x1="120" y1="1150" x2="120" y2="150" stroke="#5F584C" stroke-width="2"/><line x1="112" y1="1150" x2="128" y2="1150" stroke="#5F584C" stroke-width="2"/><text x="100" y="1143" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">0 m</text><line x1="112" y1="990" x2="128" y2="990" stroke="#5F584C" stroke-width="2"/><text x="100" y="997" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">20 m</text><line x1="112" y1="830" x2="128" y2="830" stroke="#5F584C" stroke-width="2"/><text x="100" y="837" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">40 m</text><line x1="112" y1="670" x2="128" y2="670" stroke="#5F584C" stroke-width="2"/><text x="100" y="677" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">60 m</text><line x1="112" y1="510" x2="128" y2="510" stroke="#5F584C" stroke-width="2"/><text x="100" y="517" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">80 m</text><line x1="112" y1="350" x2="128" y2="350" stroke="#5F584C" stroke-width="2"/><text x="100" y="357" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">100 m</text><line x1="112" y1="190" x2="128" y2="190" stroke="#5F584C" stroke-width="2"/><text x="100" y="197" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="end">120 m</text><rect x="150" y="190" width="14" height="480" rx="7" fill="#F6D38C"/><text x="178" y="550" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1D1A15" text-anchor="start">Phase 1</text><text x="178" y="576" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">range</text><text x="178" y="602" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">60–120 m</text><rect x="60" y="1150" width="980" height="6" fill="#1D1A15"/><rect x="300" y="1144" width="520" height="6" fill="#9DB7C4"/><polygon points="490.0,1150 544.0,310 576.0,310 630.0,1150" fill="#F3ECDF" stroke="#8A5F17" stroke-width="4"/><g stroke="#8A5F17" stroke-opacity=".55" stroke-width="2"><line x1="490.0" y1="1150" x2="626.4" y2="1094"/><line x1="630.0" y1="1150" x2="493.6" y2="1094"/><line x1="493.6" y1="1094" x2="622.8" y2="1038"/><line x1="626.4" y1="1094" x2="497.2" y2="1038"/><line x1="497.2" y1="1038" x2="619.2" y2="982"/><line x1="622.8" y1="1038" x2="500.8" y2="982"/><line x1="500.8" y1="982" x2="615.6" y2="926"/><line x1="619.2" y1="982" x2="504.4" y2="926"/><line x1="504.4" y1="926" x2="612.0" y2="870"/><line x1="615.6" y1="926" x2="508.0" y2="870"/><line x1="508.0" y1="870" x2="608.4" y2="814"/><line x1="612.0" y1="870" x2="511.6" y2="814"/><line x1="511.6" y1="814" x2="604.8" y2="758"/><line x1="608.4" y1="814" x2="515.2" y2="758"/><line x1="515.2" y1="758" x2="601.2" y2="702"/><line x1="604.8" y1="758" x2="518.8" y2="702"/><line x1="518.8" y1="702" x2="597.6" y2="646"/><line x1="601.2" y1="702" x2="522.4" y2="646"/><line x1="522.4" y1="646" x2="594.0" y2="590"/><line x1="597.6" y1="646" x2="526.0" y2="590"/><line x1="526.0" y1="590" x2="590.4" y2="534"/><line x1="594.0" y1="590" x2="529.6" y2="534"/><line x1="529.6" y1="534" x2="586.8" y2="478"/><line x1="590.4" y1="534" x2="533.2" y2="478"/><line x1="533.2" y1="478" x2="583.2" y2="422"/><line x1="586.8" y1="478" x2="536.8" y2="422"/><line x1="536.8" y1="422" x2="579.6" y2="366"/><line x1="583.2" y1="422" x2="540.4" y2="366"/><line x1="540.4" y1="366" x2="576.0" y2="310"/><line x1="579.6" y1="366" x2="544.0" y2="310"/></g><path d="M410 1150 Q560 1022 710 1150 Z" fill="#D9C3A5" fill-opacity=".8" stroke="#8A5F17" stroke-width="3"/><rect x="490" y="734" width="141" height="32" rx="6" fill="#E1EAEE" stroke="#1D1A15" stroke-width="3"/><path d="M480 310 L560 206 L640 310 Z" fill="#1D1A15" fill-opacity=".85"/><circle cx="560" cy="206" r="9" fill="#E9B85A"/><line x1="300" y1="466.79999999999995" x2="1040" y2="466.79999999999995" stroke="#B5643C" stroke-width="2" stroke-dasharray="10 8"/><text x="1040" y="454.79999999999995" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#B5643C" text-anchor="end">Mjøstårnet, Norway: 85.4 m timber tower</text><path d="M600 262 L760 208" stroke="#5F584C" stroke-width="1.6" fill="none"/><circle cx="600" cy="262" r="5" fill="#1D1A15"/><text x="770" y="216" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1D1A15" text-anchor="start">Solar crown</text><text x="770" y="244.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">200–500 kWp canopy feeding</text><text x="770" y="270.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">the microgrid;</text><text x="770" y="296.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">programmable light at</text><text x="770" y="322.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">night</text><path d="M600 590 L760 612" stroke="#5F584C" stroke-width="1.6" fill="none"/><circle cx="600" cy="590" r="5" fill="#1D1A15"/><text x="770" y="620" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1D1A15" text-anchor="start">Steel and timber lattice</text><text x="770" y="648.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">CLT/steel hybrid; a novel</text><text x="770" y="674.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">assembly of proven parts</text><text x="770" y="700.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">(TRL 4–5)</text><path d="M600 750 L760 814" stroke="#5F584C" stroke-width="1.6" fill="none"/><circle cx="600" cy="750" r="5" fill="#1D1A15"/><text x="770" y="822" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1D1A15" text-anchor="start">Observation level</text><text x="770" y="850.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">Public views and a quiet</text><text x="770" y="876.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">room for sound and</text><text x="770" y="902.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">meditation</text><path d="M600 1086 L760 982" stroke="#5F584C" stroke-width="1.6" fill="none"/><circle cx="600" cy="1086" r="5" fill="#1D1A15"/><text x="770" y="990" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="700" fill="#1D1A15" text-anchor="start">Gathering pavilion</text><text x="770" y="1018.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">Ceremonies and events at</text><text x="770" y="1044.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">the base, opening onto the</text><text x="770" y="1070.75" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#5F584C" text-anchor="start">plaza</text><text x="290" y="1190" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="21" font-weight="400" fill="#5F584C" text-anchor="start">Reflecting plaza</text><text x="48" y="1270" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" font-weight="400" fill="#5F584C" text-anchor="start" font-style="italic">Phase 2 may extend the tower to 120–300 m in stages. It adds solar power; it is not the city’s main power source.</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1400" viewBox="0 0 2000 1400" font-family="DejaVu Sans, Arial" >
+<rect width="2000" height="1400" fill="#faf8f3"/>
+<text x="40" y="58" font-size="34" font-weight="bold" fill="#222">Crystal Point spire: inside plan</text>
+<text x="40" y="92" font-size="19" fill="#555">Section through the tower, base hall plan and sky observatory plan. Heights in metres; the crystal is built in sections: 90 m (Phase 1), 150 m (Phase 2), 240 m (Phase 3).</text>
+<polygon points="182,1290 195,510 212,455 260,354 260,354 308,455 325,510 338,1290" fill="#e9f1f4" stroke="#7a8f99" stroke-width="3"/>
+<rect x="170" y="1290.0" width="180" height="31.2" fill="#d9cdb6" stroke="#8a7d66" stroke-width="2"/>
+<line x1="170" y1="1305.6" x2="10" y2="1305.6" stroke="#8a7d66" stroke-width="10"/>
+<text x="15" y="1335.6" font-size="14" fill="#6b604c">service tunnel to the north</text>
+<line x1="20" y1="1290.0" x2="560" y2="1290.0" stroke="#6d7a4a" stroke-width="3"/>
+<rect x="248" y="482.70000000000005" width="24" height="807.3" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
+<line x1="150" y1="939.0" x2="380" y2="939.0" stroke="#c0763a" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="180" y="944.0" font-size="14" fill="#c0763a" text-anchor="middle" dy="-8">Phase 1 top, 90 m</text>
+<line x1="150" y1="705.0" x2="380" y2="705.0" stroke="#c0763a" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="180" y="710.0" font-size="14" fill="#c0763a" text-anchor="middle" dy="-8">Phase 2 top, 150 m</text>
+<rect x="172" y="1290.0" width="176" height="31.2" fill="#cfc3aa" stroke="#555" stroke-width="1.2"/>
+<rect x="186.8777" y="1262.7" width="146.2446" height="27.3" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="188.4663" y="1161.3" width="143.06740000000002" height="11.7" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="189.3828" y="1102.8" width="141.2344" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="190.4826" y="1032.6" width="139.0348" height="31.2" fill="#8fb3c9" stroke="#555" stroke-width="1.2"/>
+<rect x="191.3991" y="974.1" width="137.2018" height="35.1" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
+<rect x="193.9042" y="814.2" width="132.1916" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="195.12619999999998" y="736.2" width="129.7476" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="196.2871" y="662.1" width="127.42580000000001" height="19.5" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
+<rect x="198.67000000000002" y="510.0" width="122.66" height="132.6" fill="#cfe3d0" stroke="#555" stroke-width="1.2"/>
+<rect x="207.13" y="482.70000000000005" width="105.74000000000002" height="15.6" fill="#a9a9a9" stroke="#555" stroke-width="1.2"/>
+<line x1="260" y1="342.0" x2="260" y2="463.20000000000005" stroke="#555" stroke-width="3"/>
+<line x1="350" y1="1305.6" x2="455" y2="1305.6" stroke="#999" stroke-width="1"/>
+<text x="460" y="1310.6" font-size="15.5" fill="#222">Basement: batteries, grid control, pumps and heat store</text>
+<line x1="350" y1="1276.35" x2="455" y2="1271.6" stroke="#999" stroke-width="1"/>
+<text x="460" y="1276.6" font-size="15.5" fill="#222">Base hall: welcome, exhibition, meeting room (see plan)</text>
+<line x1="350" y1="1167.15" x2="455" y2="1167.15" stroke="#999" stroke-width="1"/>
+<text x="460" y="1172.15" font-size="15.5" fill="#222">Gathering level, 30 m: talks and small concerts, 120 seats</text>
+<line x1="350" y1="1110.6" x2="455" y2="1110.6" stroke="#999" stroke-width="1"/>
+<text x="460" y="1115.6" font-size="15.5" fill="#222">Quiet level, 44 m: meditation and sound rooms</text>
+<line x1="350" y1="1048.2" x2="455" y2="1048.2" stroke="#999" stroke-width="1"/>
+<text x="460" y="1053.2" font-size="15.5" fill="#222">Water reservoir, 58 m: gravity supply and fire water for the town</text>
+<line x1="350" y1="991.6500000000001" x2="455" y2="991.6500000000001" stroke="#999" stroke-width="1"/>
+<text x="460" y="996.6500000000001" font-size="15.5" fill="#222">Sky observatory, 72 m: enclosed, double height, café</text>
+<line x1="350" y1="822.0" x2="455" y2="822.0" stroke="#999" stroke-width="1"/>
+<text x="460" y="827.0" font-size="15.5" fill="#222">Learning level, 118 m: weather station, climate lab, archive</text>
+<line x1="350" y1="744.0" x2="455" y2="744.0" stroke="#999" stroke-width="1"/>
+<text x="460" y="749.0" font-size="15.5" fill="#222">Prism hall, 138 m: light and sound art, small events</text>
+<line x1="350" y1="671.85" x2="455" y2="671.85" stroke="#999" stroke-width="1"/>
+<text x="460" y="676.85" font-size="15.5" fill="#222">Star room, 156 m: stargazing and quiet evenings</text>
+<line x1="350" y1="576.3000000000001" x2="455" y2="576.3000000000001" stroke="#999" stroke-width="1"/>
+<text x="460" y="581.3000000000001" font-size="15.5" fill="#222">Wind crown, 166–200 m: six helical turbines, three per level, upper row turned 60°</text>
+<line x1="350" y1="490.5" x2="455" y2="490.5" stroke="#999" stroke-width="1"/>
+<text x="460" y="495.5" font-size="15.5" fill="#222">Sway damper, 204 m: a water tank that steadies the tower in wind</text>
+<line x1="350" y1="412.5" x2="455" y2="412.5" stroke="#999" stroke-width="1"/>
+<text x="460" y="417.5" font-size="15.5" fill="#222">Faceted glass point: antennas, aviation light, lightning rod</text>
+<text x="40" y="140" font-size="15" fill="#444">Lift core: two public lifts, one fire and goods lift and two</text>
+<text x="40" y="162" font-size="15" fill="#444">pressurised stairs; it grows with each new section.</text>
+<text x="40" y="184" font-size="15" fill="#444">Between the floors the crystal is an open light atrium.</text>
+<text x="40" y="206" font-size="15" fill="#444">The skin is a double layer of solar glass; warm air rises in</text>
+<text x="40" y="228" font-size="15" fill="#444">the gap and draws fresh air through the halls.</text>
+<text x="1560" y="152" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Base hall, ground level (about 33 m across the faces)</text>
+<polygon points="1760,400 1660,573 1460,573 1360,400 1460,227 1660,227" fill="#f3ead9" stroke="#7a8f99" stroke-width="4"/>
+<circle cx="1560" cy="400" r="40" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
+<text x="1560" y="405" font-size="14" text-anchor="middle" fill="#223">lift core</text>
+<circle cx="1560" cy="550" r="5" fill="#c0763a"/>
+<text x="1560" y="572" font-size="14.5" text-anchor="middle" fill="#222">Main entrance</text>
+<text x="1560" y="590" font-size="14.5" text-anchor="middle" fill="#222">faces the plaza</text>
+<circle cx="1560" cy="510" r="5" fill="#555"/>
+<text x="1560" y="532" font-size="14.5" text-anchor="middle" fill="#222">Welcome desk</text>
+<circle cx="1447" cy="465" r="5" fill="#555"/>
+<text x="1447" y="487" font-size="14.5" text-anchor="middle" fill="#222">Exhibition</text>
+<circle cx="1673" cy="465" r="5" fill="#555"/>
+<text x="1673" y="487" font-size="14.5" text-anchor="middle" fill="#222">Exhibition</text>
+<circle cx="1456" cy="340" r="5" fill="#555"/>
+<text x="1456" y="362" font-size="14.5" text-anchor="middle" fill="#222">Meeting room</text>
+<text x="1456" y="380" font-size="14.5" text-anchor="middle" fill="#222">(council in Phase 1)</text>
+<circle cx="1664" cy="340" r="5" fill="#555"/>
+<text x="1664" y="362" font-size="14.5" text-anchor="middle" fill="#222">Café and</text>
+<text x="1664" y="380" font-size="14.5" text-anchor="middle" fill="#222">shop</text>
+<circle cx="1560" cy="290" r="5" fill="#555"/>
+<text x="1560" y="312" font-size="14.5" text-anchor="middle" fill="#222">Toilets, first aid</text>
+<circle cx="1560" cy="230" r="5" fill="#888"/>
+<text x="1560" y="252" font-size="14.5" text-anchor="middle" fill="#222">Service entrance</text>
+<text x="1560" y="640" font-size="15" text-anchor="middle" fill="#2c5a7a">South: plaza, reflecting pool, Spire Park</text>
+<text x="1560" y="186" font-size="15" text-anchor="middle" fill="#666">North: woods and hills behind</text>
+<polygon points="1530,628 1590,628 1560,604" fill="#c0763a"/>
+<text x="1560" y="782" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Sky observatory, 72 m (enclosed behind the glass)</text>
+<polygon points="1760,1030 1660,1203 1460,1203 1360,1030 1460,857 1660,857" fill="#f3ead9" stroke="#7a8f99" stroke-width="4"/>
+<polygon points="1734,1030 1647,1181 1473,1181 1386,1030 1473,879 1647,879" fill="none" stroke="#9fb6c0" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="1560" cy="1030" r="40" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
+<text x="1560" y="1035" font-size="14" text-anchor="middle" fill="#223">lift core</text>
+<circle cx="1560" cy="1180" r="5" fill="#c0763a"/>
+<text x="1560" y="1202" font-size="14.5" text-anchor="middle" fill="#222">Open view south</text>
+<text x="1560" y="1220" font-size="14.5" text-anchor="middle" fill="#222">over the city</text>
+<circle cx="1681" cy="1100" r="5" fill="#555"/>
+<text x="1681" y="1122" font-size="14.5" text-anchor="middle" fill="#222">Low seating</text>
+<text x="1681" y="1140" font-size="14.5" text-anchor="middle" fill="#222">terraces</text>
+<circle cx="1439" cy="1100" r="5" fill="#555"/>
+<text x="1439" y="1122" font-size="14.5" text-anchor="middle" fill="#222">Low seating</text>
+<text x="1439" y="1140" font-size="14.5" text-anchor="middle" fill="#222">terraces</text>
+<circle cx="1677" cy="962" r="5" fill="#555"/>
+<text x="1677" y="984" font-size="14.5" text-anchor="middle" fill="#222">Café</text>
+<circle cx="1443" cy="962" r="5" fill="#555"/>
+<text x="1443" y="984" font-size="14.5" text-anchor="middle" fill="#222">Telescopes and</text>
+<text x="1443" y="1002" font-size="14.5" text-anchor="middle" fill="#222">city model</text>
+<circle cx="1560" cy="890" r="5" fill="#555"/>
+<text x="1560" y="912" font-size="14.5" text-anchor="middle" fill="#222">Quiet corner,</text>
+<text x="1560" y="930" font-size="14.5" text-anchor="middle" fill="#222">view to the woods</text>
+<text x="1560" y="1270" font-size="15" text-anchor="middle" fill="#2c5a7a">South: plaza, reflecting pool, Spire Park</text>
+<text x="1560" y="816" font-size="15" text-anchor="middle" fill="#666">North: woods and hills behind</text>
+<text x="1775" y="1025" font-size="13" fill="#6b7f89">glass</text><text x="1775" y="1042" font-size="13" fill="#6b7f89">facets</text>
+</svg>

@@ -77,7 +77,7 @@ flowchart LR
 **Inner shift.** From talking about a shared life to living one, with all the friction that brings. This is where most communities lose their founding spirit. Research on long-lived communities notes that the hardest years come after the pioneering phase, when organization has to grow without smothering the community's spirit ([Camphill research](https://research.camphill.edu/wp-content/uploads/2019/12/Plant-Developmental-Dilemmas.pdf)).
 
 **Outer form (Stage 5, Dec 2028 – Nov 2031).**
-- Pilot Hamlet construction: 3 communosphere domes, a 60–120 m spire, temple and plaza, studios, and a solar microgrid. Figures are on [At a Glance](/docs/at-a-glance).
+- Pilot Hamlet construction: 3 communosphere domes, the first 90 m of the crystal spire, temple and plaza, studios, and a solar microgrid. Figures are on [At a Glance](/docs/at-a-glance).
 - Founding residents join in waves as buildings open. They help shape interiors, gardens and rituals.
 - Land held in a trust or community land structure. Communities whose land is held by charitable trusts have proved more durable ([Waikato comparative study](https://researchcommons.waikato.ac.nz/server/api/core/bitstreams/fbfac45f-c75e-4963-9c6d-c83c38bd3ff9/content)).
 

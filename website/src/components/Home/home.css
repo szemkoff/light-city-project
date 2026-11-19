@@ -441,3 +441,22 @@ html:has(.lc-home:not(.lc-chrome)) .main-wrapper{overflow:visible}
 }
 .lc-home .nav-links a,.lc-home .brand span{white-space:nowrap}
 @media (max-width:1180px) and (min-width:981px){.lc-home .nav-in{gap:var(--space-4)}.lc-home .nav-links a{padding:var(--space-2) .45rem;font-size:.9rem}.lc-home .nav-cta{padding:0 var(--space-4)}}
+
+/* ---------- CRYSTAL POINT ---------- */
+.lc-home .crystal{padding-block:clamp(var(--space-16),9vw,var(--space-32));background:linear-gradient(180deg,var(--pearl) 0%,#eef1f0 100%)}
+.lc-home .crystal-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(var(--space-8),5vw,var(--space-16));align-items:center}
+.lc-home .crystal-art{margin:0}
+.lc-home .crystal-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r-lg);box-shadow:0 40px 80px -40px rgba(60,80,90,.5)}
+.lc-home .crystal-text h2{margin-bottom:var(--space-5)}
+.lc-home .crystal-facts{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5) var(--space-6);margin:var(--space-8) 0 0}
+.lc-home .crystal-facts div{border-top:1px solid var(--line);padding-top:var(--space-3)}
+.lc-home .crystal-facts dt{font:400 var(--text-xl)/1.1 var(--display);color:var(--ink)}
+.lc-home .crystal-facts dd{margin:var(--space-1) 0 0;font-size:var(--text-sm);color:var(--muted)}
+.lc-home .crystal-cta{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-6);margin-top:var(--space-8)}
+.lc-home .crystal-cta .link{margin-top:0}
+.lc-home .crystal-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:clamp(var(--space-10),5vw,var(--space-16))}
+.lc-home .crystal-tiles a{position:relative;display:block;overflow:hidden;border-radius:var(--r-lg);text-decoration:none}
+.lc-home .crystal-tiles img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;transition:transform .6s var(--ease)}
+.lc-home .crystal-tiles a:hover img{transform:scale(1.04)}
+.lc-home .crystal-tiles span{position:absolute;left:0;right:0;bottom:0;padding:var(--space-8) var(--space-4) var(--space-3);color:#fff;font-size:var(--text-sm);font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+@media (max-width:860px){.lc-home .crystal-grid{grid-template-columns:1fr}.lc-home .crystal-tiles{grid-template-columns:1fr}}

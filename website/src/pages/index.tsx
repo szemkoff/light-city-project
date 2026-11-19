@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a wide-based timber lattice spire with a solar crown, ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
+        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a six-sided crystal spire of milky solar glass with a faceted glass point, ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
@@ -159,6 +159,35 @@ export default function Home(): JSX.Element {
             </div>
           </div>
           <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a> <a className="link light" href={u('docs/design/structures')} style={{marginLeft: 'var(--space-6)'}}>See every structure in photos <span aria-hidden="true">→</span></a> <a className="link light" href={u('locations')} style={{marginLeft: 'var(--space-6)'}}>See the four candidate regions on a map <span aria-hidden="true">→</span></a></p>
+        </div>
+      </section>
+
+      {/* CRYSTAL POINT */}
+      <section className="crystal" id="spire">
+        <div className="wrap crystal-grid">
+          <figure className="crystal-art">
+            <img src={img('spire')} alt="The Crystal Point spire at sunset: a six-sided prism of milky solar glass with a faceted glass point and an open wind crown, rising over timber domes, lawns and a reflecting pool" width="1200" height="675" loading="lazy" />
+          </figure>
+          <div className="crystal-text">
+            <p className="eyebrow">The landmark</p>
+            <h2>The Crystal Point.<br />A spire shaped like quartz.</h2>
+            <p className="lead">A six-sided prism of milky solar glass on a slender steel diagrid, a little wider at the foot, ending in a faceted point cut like a gem. It grows in 30 m sections on a foundation built for the final height, and in Phase 3 its top opens into a wind crown of six helical turbines.</p>
+            <dl className="crystal-facts">
+              <div><dt>90 → 240 m</dt><dd>Built in sections over three phases</dd></div>
+              <div><dt>72 m</dt><dd>Enclosed sky observatory and café</dd></div>
+              <div><dt>6 turbines</dt><dd>Three per level, upper row turned 60°</dd></div>
+              <div><dt>0.5–1 GWh</dt><dd>A year from glass and wind, a supplement</dd></div>
+            </dl>
+            <div className="crystal-cta">
+              <a className="btn" href={u('model/index.html?phase=3&view=spire')}>See it in 3D</a>
+              <a className="link" href={u('docs/design/architecture#the-central-spire')}>Read the design <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+        <div className="wrap crystal-tiles">
+          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Six white helical wind turbines in two rows inside the open crown below the glass point" width="1200" height="675" loading="lazy" /><span>Wind crown, 166–200 m</span></a>
+          <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireObs.webp'} alt="Visitors in the enclosed sky observatory behind faceted glass, looking out over domes and woods" width="1200" height="675" loading="lazy" /><span>Sky observatory, 72 m</span></a>
+          <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireHall.webp'} alt="The bright base hall of the spire with a timber floor, exhibitions and the glass lift core" width="1200" height="675" loading="lazy" /><span>Base hall and lift core</span></a>
         </div>
       </section>
 
@@ -343,7 +372,7 @@ export default function Home(): JSX.Element {
 
       {/* ROADMAP */}
       <section className="night roadmap" id="roadmap">
-        <img className="roadmap-bg" src={img('spire')} alt="" width="1200" height="960" loading="lazy" />
+        <img className="roadmap-bg" src={img('spire')} alt="" width="1200" height="675" loading="lazy" />
         <div className="wrap">
           <div className="sec-head">
             <p className="eyebrow light">08 — Roadmap</p>
@@ -414,7 +443,7 @@ export default function Home(): JSX.Element {
 
       {/* JOIN */}
       <section className="join" id="join">
-        <img src={img('spire')} alt="" width="1200" height="960" loading="lazy" className="join-bg" />
+        <img src={img('spire')} alt="" width="1200" height="675" loading="lazy" className="join-bg" />
         <div className="join-veil"></div>
         <div className="wrap join-in">
           <h2>Help light the first dome.</h2>

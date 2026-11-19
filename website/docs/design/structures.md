@@ -21,37 +21,45 @@ The round stone plaza at the heart of the city, with a ring of reflecting water 
 
 [See it in the 3D model](pathname:///model/index.html?view=plaza) · [Read the full description](/docs/design/architecture/#1-the-central-plaza)
 
-### Light Spire {#spire}
+### Crystal Point spire {#spire}
 
-![Light Spire: concept rendering](/img/home/spire.webp)
+![Crystal Point spire: concept rendering](/img/home/spire.webp)
 
-A timber and steel lattice tower built in sections: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, on a foundation sized for the final height from the start. A solar crown sits on top and is lifted with each new section; a glass hall at the base, a lift core, a gathering level at 30 m and a viewing deck at 72 m.
+The city's landmark, shaped like a natural quartz point: a six-sided prism of milky solar glass on a slender steel diagrid, a little wider at the foot than at the top, ending in a faceted glass point cut like a gem. It is built in sections on a foundation sized for the final height: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a short temporary glass point on top until the full point and wind crown are built. Inside: a base hall, a gathering level at 30 m, a water tank at about 60 m, an enclosed double-height observatory with a café at 72 m, a learning level and a star room. The glass skin and the wind crown give supplemental power, not the city's main supply.
 
-[See it in the 3D model](pathname:///model/index.html?view=heart) · [Read the full description](/docs/design/architecture/#the-central-spire)
+[See it in the 3D model](pathname:///model/index.html?view=spire&phase=3) · [Read the full description](/docs/design/architecture/#the-central-spire)
+
+### Wind crown {#spirecrown}
+
+![Wind crown: concept rendering](/img/structures/spireCrown.webp)
+
+Phase 3 only. Between 166 and 200 m the crystal opens into a two-storey wind crown: six helical vertical-axis turbines about 10 m across, three per level, the upper row turned 60 degrees so the six fill every corner. Helical blades give smooth torque; rubber mounts, speed control, louvres and a tuned water damper at 204 m keep vibration out of the rooms below, and the turbine floors are not occupied. Expect very roughly 0.5 to 1 GWh a year from the glass and the wind together, a supplement to the city's solar fields.
+
+[See it in the 3D model](pathname:///model/index.html?view=crown&phase=3) · [Read the full description](/docs/design/architecture/#the-wind-crown)
 
 ### Spire lift core {#spirecore}
 
 ![Spire lift core: concept rendering](/img/structures/spireCore.webp)
 
-A glazed core inside the lattice with two lifts and a stair. It rises with each new section of the spire and serves the gathering level, the 72 m deck and the crown.
+A concrete shaft wrapped in a glass core at the centre of the crystal, with two public lifts, a fire and goods lift and two stairs. It rises with each new section and serves every level from the base hall to the wind crown; the double glass skin around it works as a solar chimney that draws fresh air up the tower.
 
-[Read the full description](/docs/design/growth-plan/#phase-by-phase)
+[Read the full description](/docs/design/architecture/#the-central-spire)
 
 ### Spire gathering level {#spirelevel}
 
 ![Spire gathering level: concept rendering](/img/structures/spireLevel.webp)
 
-A glazed ring at about 30 m for talks, small concerts and quiet sitting above the trees, reached by the lifts. The open viewing deck is higher up, at 72 m.
+A six-sided hall at 30 m for talks, small concerts and quiet sitting above the trees, with about 120 seats, reached by the lifts. The enclosed observatory is higher up, at 72 m.
 
-[Read the full description](/docs/design/growth-plan/#phase-by-phase)
+[Read the full description](/docs/design/architecture/#the-central-spire)
 
 ### Spire base hall {#spirehall}
 
 ![Spire base hall: concept rendering](/img/structures/spireHall.webp)
 
-A round glass hall at the foot of the spire, inside the lattice, where the lifts start. It holds the welcome desk, exhibitions about the project and a room for town meetings.
+The glass hall at the foot of the crystal, where the lifts start. The main entrance faces south across the park; service comes in from the north. It holds the welcome desk, exhibitions about the project, a café and, in Phase 1, the room where the council meets. Batteries, grid control and pumps sit in the basement below.
 
-[Read the full description](/docs/design/growth-plan/#phase-by-phase)
+[Read the full description](/docs/design/architecture/#the-central-spire)
 
 ### Spire Park {#spirepark}
 

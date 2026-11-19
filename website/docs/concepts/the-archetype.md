@@ -39,7 +39,7 @@ Contact accounts describe **Delphin** as a crystal city that already exists on a
 
 The source presents Delphin as proof that the Light City pattern is real and already built elsewhere. We do not. There is no evidence for Delphin, and we treat it as a mythic or visionary image.
 
-**How we use it:** the communosphere idea (people living around a shared dome) and the spire-and-spheres plan come from here. The Earth versions are a 60–300 m lattice spire and 30–90 m timber gridshell domes. See [Communospheres](/docs/concepts/communospheres).
+**How we use it:** the communosphere idea (people living around a shared dome) and the spire-and-spheres plan come from here. The Earth versions are a 90–240 m crystal spire of glass and steel built in sections and 30–90 m timber gridshell domes. See [Communospheres](/docs/concepts/communospheres).
 
 ![Delphin, as imagined from the contact accounts. Visionary archetype art, not a real place or a design.](/img/inspiration/delphin-aerial-view-1.png)
 
@@ -62,7 +62,7 @@ The source places Light City within a wider spiritual story: a "New Earth" timel
 | The source describes | What we build or do on Earth | Where |
 |---|---|---|
 | A crystal city of white-gold light | Timber, glass and clay buildings with warm, shielded light | [Architecture](/docs/design/architecture), [Light on the Land](/docs/design/light-on-the-land) |
-| A 40,000 ft crystal spire that makes power | A 60–300 m timber and steel lattice spire carrying solar panels and an observation deck | [The central spire](/docs/design/architecture#the-central-spire) |
+| A 40,000 ft crystal spire that makes power | A 90–240 m crystal of solar glass on a steel diagrid, with a wind crown and an enclosed observatory; its power is a supplement, not the city's supply | [The central spire](/docs/design/architecture#the-central-spire) |
 | Communospheres 600–1,200 ft across for 10,000 people | Timber gridshell domes 30–90 m across; a Phase 1 dome is shared by 80–120 residents | [Communospheres](/docs/concepts/communospheres) |
 | A unified consciousness field and knowledge transfer | Shared meals, councils, open documentation, and optional, consent-based research on group practice | [Governance](/docs/project/governance), [Open Questions](/docs/research/open-questions) |
 | An etheric blueprint remembered from Earth's memory | A plan shaped by the chosen land: its water, soil, climate and the people who already live there | [Site Locations](/docs/project/site-locations) |

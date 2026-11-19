@@ -115,22 +115,22 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Fill the gaps, then go outward.** Ring 4 has 60 fixed home plots; Phase 1 builds 30 and later phases fill the gaps. New neighborhoods are added as new rings outside the existing ones, never on top of them.
 - **Every system grows with the town.** Water, sewage, food, care, learning and play are sized for each phase and built close to its people, then extended beside what is there. See [How the city grows](/docs/design/growth-plan).
 - **Belts are permanent.** The Phase 2 food and energy belt stays as a green belt between the village and the town; Phase 3 adds its own belt further out.
-- **One spire, built in sections.** The foundation, base and 72 m deck are sized for the final height in Phase 1. Later phases add lattice sections on top and lift the solar crown, the way the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) in Moscow was built from stacked sections lifted into place.
+- **One spire, built in sections.** The foundation, basement and lift core are sized for the final height in Phase 1. Later phases add glass sections on top and lift the temporary point, then add the wind crown in Phase 3, the way the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) in Moscow was built from stacked sections lifted into place.
 - **Only movable things move.** Solar panels, greenhouses and nursery trees may be relocated. Buildings, paths, mature trees and soil are not.
 
 ![Top views of the one model at each phase, side by side: the Phase 1 hamlet with three domes, the Phase 2 village with eight domes and courtyard homes, and the Phase 3 town with eighteen domes and timber terraces](/img/diagrams/model-phases.webp)
 
 *Top views of the three 3D models. Each panel is drawn at its own scale.*
 
-![Aerial view of the Phase 1 pilot hamlet: a lattice spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, surrounded by woodland](/img/home/city-phase-1.webp)
+![Aerial view of the Phase 1 pilot hamlet: a crystal spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, surrounded by woodland](/img/home/city-phase-1.webp)
 
 **Phase 1 - Pilot Hamlet** (built in Stage 5, Dec 2028 – Nov 2031):
 - **Population**: 200 residents target (150-300 range)
 - **Footprint**: 20-30 acres (8-12 hectares)
-- **Structures**: Central plaza, 1 temple, 3 communosphere domes, spire tower (60-120 m)
+- **Structures**: Central plaza, 1 temple, 3 communosphere domes, crystal spire (90 m, base built for 240 m)
 - **Energy**: 2-5 MWp solar PV + 8-20 MWh storage
 - **Food**: 1-2 ha agroforestry, supplemented by external sources
-- **In the model**: 90 m spire (three lattice sections on a base built for 240 m), one temple and two learning pavilions, three 40 m domes, 30 homes on ring 4 in three building methods (earth-sheltered, earthbag and timber with hempcrete; see [Beyond the Box](/docs/design/organic-forms-and-materials#in-the-3d-model)), solar on ring 5, reserved plots as meadow and nursery; a heart lake with a wooded island to the south-west, joined to the plaza by a short canal to a small harbour and a narrow rill that runs between the domes into the plaza pool; low hills to the north at the back; the 12 paths turn in a gentle spiral from the plaza and pass between the domes, which sit in the middle of each sector; each dome's main doors open onto paved forecourts on the ring paths, with side doors onto the radials; a small water yard just behind the hamlet to the north, a treatment garden of reed beds just downhill to the south-east and two rain cisterns at every dome ([How the city grows](/docs/design/growth-plan)); a mobility hub with a solar carport where the north road ends at the edge; plan radius 222 m ([Planning principles](/docs/design/planning-principles))
+- **In the model**: 90 m crystal spire (three glass sections on a base built for 240 m), one temple and two learning pavilions, three 40 m domes, 30 homes on ring 4 in three building methods (earth-sheltered, earthbag and timber with hempcrete; see [Beyond the Box](/docs/design/organic-forms-and-materials#in-the-3d-model)), solar on ring 5, reserved plots as meadow and nursery; a heart lake with a wooded island to the south-west, joined to the plaza by a short canal to a small harbour and a narrow rill that runs between the domes into the plaza pool; low hills to the north at the back; the 12 paths turn in a gentle spiral from the plaza and pass between the domes, which sit in the middle of each sector; each dome's main doors open onto paved forecourts on the ring paths, with side doors onto the radials; a small water yard just behind the hamlet to the north, a treatment garden of reed beds just downhill to the south-east and two rain cisterns at every dome ([How the city grows](/docs/design/growth-plan)); a mobility hub with a solar carport where the north road ends at the edge; plan radius 222 m ([Planning principles](/docs/design/planning-principles))
 
 ![Aerial view of the Phase 2 village: eight domes around the spire, rings of earth-home courtyard clusters and an outer belt of solar rows and greenhouses](/img/home/city-phase-2.webp)
 
@@ -150,7 +150,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Structures**: Full concentric ring layout with 12+ domes
 - **Energy**: 15-50 MWp distributed renewable + storage
 - **Food**: 20-50 ha regenerative agriculture
-- **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m, eight pavilions, all eleven ring domes (the twelfth sector is left to the heart rill and a water garden) and 60 ring homes, then outside the green belt crescents of flowing two-to-three storey terraces (curved glass facades, thin-shell concrete floor and balcony bands, timber roof edges, green roofs with skylights and living-wall ends), six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; an outer canal ring and three S-curved canals through the town link both rings, the lake and a slow river that bends round the south of the town (the city sits inside its curve), so electric boats and water buses reach every district; each district has a market hall and a row of workshops, cars stop at mobility hubs on an outer ring road, and the radial paths keep a gentle twist; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan: the course of the river, lake and canals will follow the site's real landform and drainage.
+- **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m with the wind crown and glass point, eight pavilions, all eleven ring domes (the twelfth sector is left to the heart rill and a water garden) and 60 ring homes, then outside the green belt crescents of flowing two-to-three storey terraces (curved glass facades, thin-shell concrete floor and balcony bands, timber roof edges, green roofs with skylights and living-wall ends), six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; an outer canal ring and three S-curved canals through the town link both rings, the lake and a slow river that bends round the south of the town (the city sits inside its curve), so electric boats and water buses reach every district; each district has a market hall and a row of workshops, cars stop at mobility hubs on an outer ring road, and the radial paths keep a gentle twist; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan: the course of the river, lake and canals will follow the site's real landform and drainage.
 
 **Note on the source's scale**: the source describes a 40,000 ft spire and 60,000–120,000 people ([The Archetype](/docs/concepts/the-archetype)). That is inspiration only; the Earth build follows the phases above.
 
@@ -205,7 +205,7 @@ graph TB
 
 The source describes a city with these features ([The Archetype](/docs/concepts/the-archetype)). Each is translated into something buildable:
 
-- **Central crystal spire** → a timber and steel lattice spire with solar panels and an observation deck
+- **Central crystal spire** → a 240 m glass and steel crystal built in sections, with solar glass, a wind crown and an enclosed observatory
 - **Radial urban area** → denser homes and studios in the middle rings
 - **Communospheres** → shared timber domes on ring 3
 - **Natural surroundings** → woodland, wild buffer and food belts around the city
@@ -215,55 +215,76 @@ The source describes a city with these features ([The Archetype](/docs/concepts/
 
 ### The Central Spire
 
-![Light Spire: concept rendering](/img/home/spire.webp)
+![The Crystal Point spire at sunset: a six-sided prism of milky solar glass with a faceted glass point and an open wind crown, rising over timber domes, lawns and a reflecting pool](/img/home/spire.webp)
 
+*The Crystal Point spire in Phase 3, 240 m. Concept rendering made on top of the 3D model; [see it in 3D](pathname:///model/index.html?phase=3&view=spire).*
 
-![Central Spire Cross-Section](/img/diagrams/central-spire-cross-section.svg)
+The spire is shaped like a natural quartz point: a six-sided prism with flat faces and sharp corners, a little wider at the foot than at the top, ending in a faceted glass point. It is 38 m across the corners at the foot and 32 m at the crown. The point is cut like a gem: six lower facets rise from the edges to a ring turned 30 degrees, six more fill between them and six upper facets meet at the apex, with a steel rib on every edge and a small glowing crystal inside. The walls are milky solar glass on a slender steel diagrid of large diamonds, so by day it reads as one solid crystal and at night it glows softly from inside.
 
-*The Phase 1 Light Spire: a 60–120 m steel and timber lattice with a 200–500 kWp solar crown, an observation level and a gathering pavilion. Mjøstårnet (85.4 m) shows that tall timber is already built.*
+![Section through the Crystal Point spire with every level, and plans of the base hall and the sky observatory](/img/diagrams/central-spire-cross-section.svg)
+
+*Section and plans. The crystal is built in sections of 30 m: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3.*
 
 #### In the source (visionary reference)
 
-The source describes a 40,000 ft (about 12 km) crystal spire that powers the whole city. It is not a verified place or a buildable design; we use it only as a proportional guide ([The Archetype](/docs/concepts/the-archetype)).
+The source describes a 40,000 ft (about 12 km) crystal spire that powers the whole city. It is not a verified place or a buildable design; we use it as a design brief for the form, not for its height or its claims ([The Archetype](/docs/concepts/the-archetype)).
 
-#### Terrestrial prototype (Earth implementation)
+#### Built in sections
 
-**Phase 1 (built in Stage 5, Dec 2028 – Nov 2031)**: 60-120 m light/acoustic tower
-- Feasible height range: 200-400 feet
-- Built as stacked lattice sections on a foundation and base sized for the final height, so later phases add sections instead of rebuilding (precedent: the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower), 1922)
-- Primary functions: Lighting, acoustic resonance, ceremonial focus
-- PV canopy integrated at top (200-500 kWp)
-- Public observation deck
-- Wind chimes tuned to harmonic series
-- Shielded, warm, downward lighting only; no light art or shows
+- **Phase 1 (built in Stage 5, Dec 2028 – Nov 2031):** 90 m, three sections, on a foundation, basement and lift core sized for the final 240 m. A short temporary glass point sits on top.
+- **Phase 2 (mid-2030s):** 150 m, two more sections. The temporary point is lifted off and set back on top.
+- **Phase 3:** 240 m. The wind crown and the full glass point are added.
+- **Precedent:** towers built from stacked sections lifted into place, such as the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) (1922). Tall timber is proven to 85 m at [Mjøstårnet](https://en.wikipedia.org/wiki/Mj%C3%B8st%C3%A5rnet); the spire uses timber inside (floors, halls, benches) and steel, glass and a concrete core for the height, because a 240 m tower needs harder materials.
 
-**Phase 2 (mid-2030s, after Phase 1 proves out)**: 120-300 m, the same tower with sections added on top
-- Height range: 400-1,000 feet
-- Enhanced public access and ceremonial spaces
-- Expanded PV capacity (500 kWp - 2 MWp)
-- Advanced acoustic design with resonance chambers
-- Becomes regional landmark
+#### Inside, level by level
 
-**Function - Terrestrial Model**:
-- **Symbolic & Ceremonial**: Axis mundi, focal point for consciousness work
-- **Lighting**: Daylight landmark; at night only shielded, warm, downward lighting with no uplighting or light shows, to protect wildlife and the stars ([Light on the Land](/docs/design/light-on-the-land))
-- **Acoustic Resonance**: Generates harmonic tones, amplifies ceremony sound
-- **Consciousness Hub**: Anchors meditation and collective intention (subtle energy)
-- **Solar Generation**: Contributes to renewable micro-grid (physical energy)
-- **NOT grid baseload**: Primary power from distributed PV + storage system
+| Level | Use |
+|---|---|
+| Basement | Batteries, grid control, pumps and a heat store; a service tunnel to the north |
+| 0 m, base hall | Main entrance facing south over the plaza; welcome desk, exhibitions, café; in Phase 1 the council meets here. Service enters from the north |
+| 30 m | Gathering level: talks and small concerts, about 120 seats |
+| 44 m | Quiet level: meditation and sound rooms |
+| 58 m | Water tank: gravity supply and fire water for the town |
+| 72 m | Sky observatory: enclosed, double height, with a café and telescopes. Phase 1 top: 90 m |
+| 118 m | Learning level: weather station, climate lab, archive |
+| 138 m | Prism hall: light and sound art, small events. Phase 2 top: 150 m |
+| 156 m | Star room: stargazing and quiet evenings |
+| 166–200 m | Wind crown (not occupied) |
+| 204 m | Sway damper: a tuned water tank that steadies the tower in wind |
+| 210–240 m | Glass point: radio and emergency antennas, aviation light, lightning rod |
 
-**Design**:
-- **Material**: Crystalline glazing, structural steel/CLT hybrid, integrated PV
-- **Form**: Tapers toward top, faceted geometry reflecting sacred proportions
-- **Light**: Internal LED systems, natural light refraction through glazing
-- **Geometry**: Golden ratio proportions, spiral or helical elements
+The lift core has two public lifts, a fire and goods lift and two pressurised stairs, and it grows with each section. The skin is a double layer of glass; warm air rises in the gap, like a solar chimney, and draws fresh air through the halls.
+
+#### The wind crown
+
+![The wind crown: six white helical turbines in two rows inside an open steel frame below the glass point, at sunset](/img/structures/spireCrown.webp)
+
+![Plan of the two turbine levels: three turbines at the south, north-east and north-west corners below, three at the other corners above](/img/diagrams/wind-crown-plan.svg)
+
+Between 166 and 200 m the crystal opens into a two-storey wind crown with six helical vertical-axis turbines, about 10 m across and 15 m tall, three per level. The upper row is turned 60 degrees, so together the six fill every corner while the lift core runs up the middle. Helical (Gorlov) blades are a kind of Darrieus turbine with similar or slightly lower efficiency but much smoother torque, which matters on a building ([University of New Hampshire](https://scholars.unh.edu/cgi/viewcontent.cgi?article=1660&context=thesis)). Wind turbines have been built into towers before, at the [Bahrain World Trade Centre](https://www.building.co.uk/focus/harnessing-the-wind-bahrain-world-trade-centre/3123951.article) and the [Pearl River Tower](https://www.buildinggreen.com/feature/folly-building-integrated-wind), and the lessons are clear: vibration and noise must be designed out from the start.
+
+- **Vibration.** Rubber mounts under every turbine, speed control that brakes the rotors in storms, louvres that calm the gusts, the tuned water damper at 204 m, and no rooms on the turbine floors.
+- **Power.** Very roughly 0.5 to 1 GWh a year from the glass skin and the turbines together. This is a useful supplement and a visible lesson in clean energy, not the city's main supply, which comes from the solar fields and roofs.
+- **Other uses.** Antennas for radio and emergencies, a weather and fire watch, the lightning rod for the plaza, the gravity water tank and the basement batteries that help steady the town grid.
+- **What it does not do.** The spire makes no measurable "biofield" and no healing energy; any wellbeing effects of its halls and light are studied as open questions ([Research](/docs/research/open-questions)).
+
+#### Light at night
+
+Only shielded, warm light: a soft glow from inside the crystal and the required red aviation lights, with no uplighting or light shows, to protect wildlife and the stars ([Light on the Land](/docs/design/light-on-the-land)).
+
+#### Role in the city
+
+- **Symbolic and ceremonial:** the axis of the plan and the city's orientation point, seen from every path
+- **Civic:** halls for gathering, quiet, learning and the council in Phase 1
+- **Acoustic:** halls tuned for sound and music, studied openly
+- **Energy:** a supplement to the microgrid, not baseload
 
 **Energy System - Layered Approach**:
 
 *Physical Energy (Measurable)*:
 - **Primary Power**: 2-15 MWp distributed solar PV across rooftops, canopies, and ground arrays
 - **Storage**: 8-80 MWh battery + thermal storage
-- **Spire Contribution**: 200 kWp - 2 MWp (supplemental, not primary)
+- **Spire Contribution**: very roughly 0.5–1 GWh a year from the glass skin and wind crown (supplemental, not primary)
 - **Backup**: Grid interconnect or micro-hydro where available
 
 *Subtle Energy (Consciousness Field)*:
@@ -685,7 +706,7 @@ Light City builds on these principles with modern materials and engineering, and
 
 | Subsystem | Phase 1 (built 2028–2031) | Phase 2 (mid-2030s) | Current TRL | Notes |
 |-----------|-------------------|-------------------|-------------|-------|
-| **Spire (Terrestrial)** | 60-120 m light/acoustic tower; PV canopy | 120-300 m tower; public deck | 3-4 | Steel/CLT hybrid proven; LED art systems mature |
+| **Spire (Terrestrial)** | 90 m crystal of solar glass on a steel diagrid, base built for 240 m | 150 m, then 240 m with a wind crown; enclosed observatory | 3-4 | Steel/CLT hybrid proven; LED art systems mature |
 | **Communospheres** | 3 domes (30-45 m) | 6-12 domes (45-60 m) | 4-5 | Geodesic CLT domes built globally; BIPV glazing TRL 6-7 |
 | **Plaza/Temples** | Central plaza + 1 temple | 3-5 temples | 4-6 | Sacred architecture well-established; acoustic design mature |
 | **Energy (Physical)** | 2-5 MWp PV + 8-20 MWh storage | 5-15 MWp + 40-80 MWh | 6-8 | Solar+storage is proven tech; micro-grid controls TRL 7 |
@@ -730,7 +751,7 @@ Light City builds on these principles with modern materials and engineering, and
 |----------|-----|--------|------|-------|
 | **Land Acquisition** | $500K | $2M | $5M | Varies wildly by location; rural vs. peri-urban |
 | **Site Infrastructure** | $1M | $3M | $6M | Roads, utilities, earthwork, drainage |
-| **Spire Tower** | $2M | $5M | $10M | 60-120 m; steel/CLT; PV canopy; LED systems |
+| **Spire Tower** | $2M | $5M | $10M | 90 m first stage; steel diagrid, solar glass, concrete core |
 | **3 Communosphere Domes** | $6M | $12M | $20M | $2M-$7M each; CLT+steel; BIPV; interiors |
 | **Plaza + 1 Temple** | $2M | $5M | $10M | Stone/concrete plaza; timber-frame temple |
 | **Studios/Maker** | $1M | $2M | $4M | Light industrial construction |
