@@ -1512,7 +1512,7 @@ export function buildCity(scene, env = null) {
   }
   I(null);
   // Wild woodland: one forest round the city; each phase clears only the land its new rings need
-  const w0 = PHASES[1].extent + 13, w1 = FINAL.extent + 1200;
+  const w0 = PHASES[1].extent + 13, w1 = FINAL.extent + 450;
   for (let i = 0; i < 4600; i++) {
     const deg = rnd() * 360, r = Math.sqrt(w0 * w0 + rnd() * (w1 * w1 - w0 * w0)), s = 1 + rnd() * 0.8;
     trees(1, [2, 3].find((n) => r < PHASES[n].extent + 13) || 4);
@@ -1717,8 +1717,10 @@ export function buildCity(scene, env = null) {
   }
 
   // Build trees as two instanced meshes per layer
-  const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 6), crownG = new THREE.SphereGeometry(2.4, 10, 8);
-  const coneG = new THREE.ConeGeometry(2.1, 8, 9); coneG.translate(0, 1.6, 0);
+  const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 5, 1, true), crownG = new THREE.SphereGeometry(2.4, 8, 6);
+  // Far trees: a lighter crown and no trunk, since only the crown reads at that distance
+  const crownFarG = new THREE.SphereGeometry(2.4, 6, 4);
+  const coneG = new THREE.ConeGeometry(2.1, 8, 7, 1, true); coneG.translate(0, 1.6, 0);
   const trunkM = mat(0x6b5038), leafM = mat(0xffffff, {map: TX.repeated(TX.leaves(), 3, 2)});
   // Leaf colours vary per tree, from deep green to olive and the odd autumn-touched crown
   const leafC = [0x56733a, 0x5f7a3d, 0x4d6a35, 0x6b8442, 0x738a3f, 0x47612f, 0x7d8a45].map((c) => new THREE.Color(c));
@@ -1792,34 +1794,35 @@ export function buildCity(scene, env = null) {
       if (cutAt <= t[3]) treePts.splice(i, 1); else if (cutAt < t[4]) t[4] = cutAt;
     }
   }
+  // Trees thin out with distance from each phase's edge, so the wild land far from the town is open
+  // country and the model stays fast: full woods to 400 m past the edge, none beyond 900 m. A tree that
+  // is kept in one phase stays in the later ones (each later phase reaches further out).
+  for (let i = treePts.length - 1; i >= 0; i--) {
+    const t = treePts[i]; if (t[5] === 2) continue;
+    const R = Math.hypot(t[0], t[1]), h = (Math.abs(Math.sin(t[0] * 12.9898 + t[1] * 78.233)) * 43758.5453) % 1;
+    const k = [1, 2, 3].find((n) => n >= t[3] && h < 1 - (R - PHASES[n].extent - 400) / 500);
+    if (!k || k >= t[4]) treePts.splice(i, 1); else t[3] = k;
+  }
+  const FAR = FINAL.extent + 60;
   const byLayer = new Map();
-  treePts.forEach((t) => { const k = t[3] + '-' + t[4]; if (!byLayer.has(k)) byLayer.set(k, []); byLayer.get(k).push(t); });
+  treePts.forEach((t) => { const k = t[3] + '-' + t[4] + (Math.hypot(t[0], t[1]) > FAR ? 'f' : ''); if (!byLayer.has(k)) byLayer.set(k, []); byLayer.get(k).push(t); });
   const m4 = new THREE.Matrix4(), q = new THREE.Quaternion();
-  byLayer.forEach((pts) => {
+  byLayer.forEach((pts, key) => {
     layer(pts[0][3], pts[0][4]);
-    const trunks = new THREE.InstancedMesh(trunkG, trunkM, pts.length);
-    const crowns = new THREE.InstancedMesh(crownG, leafM, pts.length);
-    const nCone = pts.filter((t) => t[5] === 1).length;
-    const cones = nCone ? new THREE.InstancedMesh(coneG, leafM, nCone) : null;
-    if (cones) cones.castShadow = true;
-    let ci = 0;
-    crowns.castShadow = true;
-    pts.forEach(([x, z, s, , , , y0 = 0], i) => {
-      const bush = pts[i][5] === 2;
-      if (bush) m4.makeScale(0, 0, 0); else m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s));
-      trunks.setMatrixAt(i, m4);
-      const cone = pts[i][5] === 1;
-      if (bush) m4.compose(new THREE.Vector3(x, 1.1 * s + y0, z), q, new THREE.Vector3(s * 1.3, s * 0.75, s * 1.3));
-      else m4.compose(new THREE.Vector3(x, 4.2 * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
-      if (cone) { cones.setMatrixAt(ci, m4); m4.makeScale(0, 0, 0); }
-      crowns.setMatrixAt(i, m4);
-      tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar(1.05 + rnd() * 0.25);
-      if (cone) { cones.setColorAt(ci++, tint.multiplyScalar(0.72)); tint.setRGB(1, 1, 1); }
-      crowns.setColorAt(i, tint);
-    });
-    trunks.computeBoundingSphere(); crowns.computeBoundingSphere();
-    add(trunks, crowns);
-    if (cones) { cones.computeBoundingSphere(); add(cones); }
+    const far = key.endsWith('f');
+    // Separate lists so no instance is drawn at zero scale: trunks for near trees, round crowns for
+    // broadleaf trees and bushes, cones for conifers
+    const tr = far ? [] : pts.filter((t) => t[5] !== 2), cr = pts.filter((t) => t[5] !== 1), co = pts.filter((t) => t[5] === 1);
+    const put = (list, geo, m, shadow, fn) => { if (!list.length) return; const im = new THREE.InstancedMesh(geo, m, list.length); im.castShadow = shadow;
+      list.forEach((t, i) => fn(im, t, i)); im.computeBoundingSphere(); add(im); };
+    put(tr, trunkG, trunkM, false, (im, [x, z, s], i) => { m4.compose(new THREE.Vector3(x, 1.5 * s, z), q, new THREE.Vector3(s, s, s)); im.setMatrixAt(i, m4); });
+    put(cr, far ? crownFarG : crownG, leafM, !far, (im, [x, z, s, , , kind, y0 = 0], i) => {
+      if (kind === 2) m4.compose(new THREE.Vector3(x, 1.1 * s + y0, z), q, new THREE.Vector3(s * 1.3, s * 0.75, s * 1.3));
+      else m4.compose(new THREE.Vector3(x, (far ? 2.5 : 4.2) * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
+      im.setMatrixAt(i, m4); im.setColorAt(i, tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar(1.05 + rnd() * 0.25)); });
+    put(co, coneG, leafM, !far, (im, [x, z, s], i) => {
+      m4.compose(new THREE.Vector3(x, (far ? 2.4 : 4.2) * s, z), q, new THREE.Vector3(s, s * (0.9 + rnd() * 0.3), s));
+      im.setMatrixAt(i, m4); im.setColorAt(i, tint.copy(leafC[Math.floor(rnd() * leafC.length)]).multiplyScalar((1.05 + rnd() * 0.25) * 0.72)); });
   });
 
   // Build the instanced parts and the night glows
@@ -2071,6 +2074,13 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
       return null;
     }
     return null;
+  };
+  // Geometry budget per phase, for checking the model stays fast (only with ?log)
+  if (typeof location !== 'undefined' && /[?&]log\b/.test(location.search)) window.__tris = (n) => {
+    setPhase(n, {keepCamera: true}); let tris = 0, verts = 0, draws = 0, inst = 0; const top = {};
+    scene.traverseVisible((o) => { if (!o.isMesh) return; const g = o.geometry, c = o.isInstancedMesh ? o.count : 1, t = (g.index ? g.index.count : g.attributes.position.count) / 3;
+      tris += t * c; verts += g.attributes.position.count * c; draws++; if (o.isInstancedMesh) inst += c; const k = g.type + (o.isInstancedMesh ? '*' : '') + ':' + Math.round(t); top[k] = (top[k] || 0) + t * c; });
+    return {tris: Math.round(tris), verts, draws, inst, top: Object.entries(top).sort((a, b) => b[1] - a[1]).slice(0, 14).map(([k, v]) => k + ' ' + Math.round(v / 1000) + 'k')};
   };
   return {setView, setPhase, setTime, pick, camera};
 }
