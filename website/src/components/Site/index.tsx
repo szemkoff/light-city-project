@@ -122,7 +122,7 @@ export function Cards({items}: {items: {title: string; text: React.ReactNode; im
       {items.map((c) => {
         const inner = (
           <>
-            {c.img ? <img src={`${base}img/home/${c.img}.webp`} alt={c.alt ?? ''} loading="lazy" width="600" height="400" /> : null}
+            {c.img ? <img src={`${base}img/${c.img.includes('/') ? c.img : 'home/' + c.img}.webp`} alt={c.alt ?? ''} loading="lazy" width="600" height="400" /> : null}
             <div className="pg-card-body">
               {c.kicker ? <p className="pg-kicker">{c.kicker}</p> : null}
               <h3>{c.title}</h3>

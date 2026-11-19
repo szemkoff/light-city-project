@@ -88,6 +88,25 @@ Connection across dimensions:
 
 ### Phased Development & Scale
 
+<div className="photo-grid">
+
+<figure>
+
+![Reserved dome plot: concept rendering](/img/structures/nursery.webp)
+
+<figcaption>Reserved dome plot</figcaption>
+</figure>
+
+<figure>
+
+![Courtyard cluster: concept rendering](/img/structures/courtyard.webp)
+
+<figcaption>Courtyard cluster</figcaption>
+</figure>
+
+</div>
+
+
 The city grows in three phases from one radial plan. It is one interactive 3D model: every structure is tagged with the phase that builds it, and the phase switch turns on what each later phase adds ([Phase 1](pathname:///model/index.html?phase=1), [Phase 2](pathname:///model/index.html?phase=2), [Phase 3](pathname:///model/index.html?phase=3)). The spire, plaza, rings and 12 radial paths stay where they are; later phases fill the empty dome plots, extend the same spire and add rings outward.
 
 **Rule: build once, grow outward.** Nothing built in one phase is torn down in the next. Every phase has to work as a finished place on its own, in case the next one never comes.
@@ -196,6 +215,9 @@ The source describes a city with these features ([The Archetype](/docs/concepts/
 
 ### The Central Spire
 
+![Light Spire: concept rendering](/img/home/spire.webp)
+
+
 ![Central Spire Cross-Section](/img/diagrams/central-spire-cross-section.svg)
 
 *The Phase 1 Light Spire: a 60–120 m steel and timber lattice with a 200–500 kWp solar crown, an observation level and a gathering pavilion. Mjøstårnet (85.4 m) shows that tall timber is already built.*
@@ -299,6 +321,9 @@ The source describes a 40,000 ft (about 12 km) crystal spire that powers the who
 
 ### 1. The Central Plaza
 
+![Central plaza: concept rendering](/img/structures/plaza.webp)
+
+
 **Location**: Surrounds the central spire
 
 **Function**:
@@ -315,6 +340,25 @@ The source describes a 40,000 ft (about 12 km) crystal spire that powers the who
 - Clear sightlines to spire
 
 ### 2. Temples and Meditation Spaces
+
+<div className="photo-grid">
+
+<figure>
+
+![Temple: concept rendering](/img/home/city-temple.webp)
+
+<figcaption>Temple</figcaption>
+</figure>
+
+<figure>
+
+![District temple: concept rendering](/img/structures/districtTemple.webp)
+
+<figcaption>District temple</figcaption>
+</figure>
+
+</div>
+
 
 **Purpose**: Consciousness elevation, spiritual practice
 
@@ -400,6 +444,9 @@ The source describes mega-spheres 600–1,200 ft across for 10,000 people each, 
 *See detailed documentation: [Communospheres](/docs/concepts/communospheres)*
 
 ### 5. Creative Studios
+
+![Workshop: concept rendering](/img/home/city-studios.webp)
+
 
 **Purpose**: Artistic and creative work
 

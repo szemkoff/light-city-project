@@ -158,7 +158,7 @@ export default function Home(): JSX.Element {
               <a className="btn" href={u('model/index.html?phase=1')}>Explore the 3D model</a>
             </div>
           </div>
-          <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a> <a className="link light" href={u('locations')} style={{marginLeft: 'var(--space-6)'}}>See the four candidate regions on a map <span aria-hidden="true">→</span></a></p>
+          <p style={{marginTop: 'var(--space-8)'}}><a className="link light" href={u('city')}>Tour every structure, with specifications <span aria-hidden="true">→</span></a> <a className="link light" href={u('docs/design/structures')} style={{marginLeft: 'var(--space-6)'}}>See every structure in photos <span aria-hidden="true">→</span></a> <a className="link light" href={u('locations')} style={{marginLeft: 'var(--space-6)'}}>See the four candidate regions on a map <span aria-hidden="true">→</span></a></p>
         </div>
       </section>
 

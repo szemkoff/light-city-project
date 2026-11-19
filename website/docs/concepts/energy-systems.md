@@ -8,6 +8,9 @@ sidebar_label: Energy Systems
 
 *This document explores the energy generation, distribution, and consciousness technologies of Light City*
 
+![Solar array, ring 5: concept rendering](/img/structures/solar.webp)
+
+
 ![Solar microgrid at the edge of Light City: canopy arrays, a battery building and gardens](/img/home/city-microgrid.webp)
 
 *The Phase 1 microgrid: 2–5 MWp of solar and 8–20 MWh of batteries, all proven technology.*

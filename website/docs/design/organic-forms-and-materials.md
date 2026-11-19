@@ -9,6 +9,32 @@ description: How Light City can move past boxy buildings with curved forms and l
 
 Most modern buildings are boxes because boxes are cheap to frame, furnish and permit. Light City wants buildings that feel alive: curved, daylit, made of breathing natural materials. This page sets out how to do that **without luxury budgets**, using a simple rule:
 
+<div className="photo-grid">
+
+<figure>
+
+![Earthbag (superadobe) home: concept rendering](/img/home/form-superadobe.webp)
+
+<figcaption>Earthbag (superadobe) home</figcaption>
+</figure>
+
+<figure>
+
+![Timber and hempcrete home: concept rendering](/img/structures/hempHome.webp)
+
+<figcaption>Timber and hempcrete home</figcaption>
+</figure>
+
+<figure>
+
+![Flowing terraces: concept rendering](/img/structures/terrace.webp)
+
+<figcaption>Flowing terraces</figcaption>
+</figure>
+
+</div>
+
+
 > **High-tech design, low-tech materials.** Use computers to find efficient curved shapes, then build them from earth, timber, bamboo, hemp and lime that local people can handle.
 
 Each method shows its readiness horizon (**Proven, Scaling, Emerging, Frontier**), as defined in [Technology Horizon](/docs/technical/technology-horizon).
