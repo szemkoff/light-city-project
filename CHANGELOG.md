@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Prototype communosphere designs
 
 ### Added
+- 3D model: the communospheres moved to the middle of each sector so the 12 radial paths pass between them instead of into them; main doors face the plaza and the outer rings and open onto forecourts on the ring paths, with side doors onto the radials; Phase 2 and 3 ring domes are 44 m (was 52 m) to leave room for the paths, and the sector at 255° is left to the heart rill, so there are 11 ring domes
 - 3D model: four home types on the same plots (earth-sheltered, earthbag twin domes, ribbed 3D-printed earth and timber with hempcrete on a stone plinth), mixed round ring 4 and one method per courtyard cluster, each with its own info card, plus "Four ways to build a home" and "Courtyard clusters" views
 - 3D model: every communosphere now has timber entrance vaults and paved forecourts on its inner and outer sides, and the radial paths run through the domes instead of stopping at them; the planted beds that blocked the doors are gone, paths cross the Phase 1 nursery plots, Phase 2 hubs have footpaths to the city, and a new "Dome entrances" view; the audit now counts paths that arrive at a dome entrance separately from screened path ends
 - Similar Movements: a sourced comparison of visionary cities, ecovillages, intentional communities and planned towns, with lessons for Light City
