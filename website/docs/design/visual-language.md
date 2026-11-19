@@ -13,7 +13,7 @@ This guide keeps every Light City image, diagram and page consistent and readabl
 ## Core principles
 
 - **Modern Organic.** Nature and technology together: curved glulam and CLT, gridshells, glass, rammed earth and clay, living walls, solar glazing, warm integrated light. Not medieval, not rustic cabins, not science fiction.
-- **Buildable first.** Images of what we plan to build show Phase 1 facts: 30–45 m domes, a 60–120 m spire, 200 residents.
+- **Buildable first.** Images of what we plan to build show Phase 1 facts: 30–45 m domes, a 90 m crystal spire, 200 residents.
 - **Honest labels.** Visionary archetype art (Delphin, the original vision images) is always captioned as "Visionary archetype art, not a real place or a design."
 - **Readable.** If you cannot read a label on a phone, the diagram is not finished.
 - **Respectful.** Sacred symbols from living traditions are shown with their context and are not used as decoration only.
@@ -27,8 +27,8 @@ Every illustration of the city as a whole starts from one shared 3D model, so th
 *The Phase 1 model, top and aerial views. Open the interactive model to orbit it and switch phases: [Phase 1](pathname:///model/index.html?phase=1), [Phase 2](pathname:///model/index.html?phase=2), [Phase 3](pathname:///model/index.html?phase=3).*
 
 - **How to use it.** Pick the phase the image shows, then render the closest named view (aerial, top, low aerial, radial path, homes ring, plaza or solar ring) with `PHASE=1|2|3 node scripts/render-model.cjs <view>`. Give that render to the image tool as the layout reference, with the current photo as a style reference.
-- **Label the phase.** Any image of the whole city says which phase it shows, and must match the model at that phase: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a flared lattice of stacked sections: three in Phase 1, five in Phase 2, eight in Phase 3.
-- **What must match.** One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.
+- **Label the phase.** Any image of the whole city says which phase it shows, and must match the model at that phase: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a straight crystal of stacked 30 m glass sections: three in Phase 1 (90 m, short faceted point), five in Phase 2 (150 m), eight in Phase 3 (240 m, with the wind crown and full point).
+- **What must match.** One central six-sided crystal spire with flat faces, a gentle taper and a faceted point (no flare, no external deck), rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.
 - **Changing the plan.** Update `static/model/city.js` and the plan diagram together, then re-render the views and the affected images.
 - **Check the layout.** After any change to the plan, run `node scripts/audit-model.cjs` from `website/`. For each phase it reports buildings on paths or in water, overlapping buildings, path ends aimed at buildings without a planted bed (paths that arrive at a dome entrance forecourt are counted separately and are fine), straight runs over 80 m and trees on paths. All counts should be zero before a change is merged ([Planning principles](/docs/design/planning-principles#collisions-and-the-layout-audit)).
 
@@ -58,7 +58,7 @@ Use this style note at the end of every image prompt:
 
 > Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm shielded lighting, local stone, and only occasionally a single vertical quartz point on a pedestal. People of many ethnicities, ages and body types in varied, natural clothing: linen and cotton trousers, skirts and dresses, tunics, knitwear, shawls and work wear in earthy tones with warm accents, almost no denim. Mixed daylight and weather, not always sunset. Realistic documentary photo of a place that could be built today. No text or logos. Avoid medieval, rustic cabins and fantasy.
 
-- **Scale.** Domes 30–45 m across, 3–5 levels; the spire is a wide-based lattice tower (36 m base, 90 m in Phase 1), not a skyscraper.
+- **Scale.** Domes 30–45 m across, 3–5 levels; the spire is a six-sided crystal prism of milky glass with flat faces and sharp corners (38 m across at the foot, tapering gently to 32 m; 90 m in Phase 1, 240 m in Phase 3) with a faceted glass point; it is never round and never flares at the foot like a rocket.
 - **People.** Diverse ages, ethnicities, body types and personal styles, doing ordinary things: cooking, working, building, resting.
 - **Clothing.** Varied and organic-looking, never a uniform look: natural fibres, many cuts (trousers, skirts, dresses, tunics, overalls, knitwear), earthy colors with some warmth. Avoid a crowd in jeans, and avoid costumes, robes or matching outfits.
 - **Technology.** Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.
@@ -103,7 +103,7 @@ A good example is the city plan in [Architecture → Circular form](/docs/design
 - Circle, vesica piscis, Flower of Life, golden ratio, Platonic solids, star tetrahedron (Merkaba), Metatron's Cube, Sri Yantra.
 - Geometry guides proportion, plans and ornament. We do not claim physical effects from shapes.
 
-- The golden ratio is a proportion guide for rooms, windows and ring spacing; the star tetrahedron is a motif for the spire crown, screens and lattice nodes. The diagrams are in [Sacred Geometry](/docs/concepts/sacred-geometry).
+- The golden ratio is a proportion guide for rooms, windows and ring spacing; the star tetrahedron is a motif for the spire crown, screens and diagrid nodes. The diagrams are in [Sacred Geometry](/docs/concepts/sacred-geometry).
 
 ## Accessibility
 

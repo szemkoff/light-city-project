@@ -73,7 +73,7 @@ export default function Technology(): JSX.Element {
           title="Mass timber & bio-based materials"
           tag="Proven to Emerging"
           specs={[['Structure', 'CLT and glulam, prefabricated'], ['Envelope', 'Hempcrete, mycelium insulation'], ['Glazing', 'Solar glass; tandem PV if durable'], ['Site work', '3D-printed walls and foundations']]}>
-          <p>Factory-made timber panels go up fast and store carbon. The tallest timber building today is 86.6 m, so a 60–120 m timber-steel spire sits within the demonstrated range, though its exact form is new.</p>
+          <p>Factory-made timber panels go up fast and store carbon. The tallest timber building today is 86.6 m, so the spire uses timber for its floors and halls, while steel, glass and a concrete core carry its 240 m height.</p>
           <p>3D-printed construction handles foundations, garden walls and studios; prefabricated CLT remains the main method for the domes.</p>
         </Feature>
         <Feature to="/docs/research/open-questions#c-wellbeing-and-environment-answer-in-stages-56"
@@ -90,7 +90,7 @@ export default function Technology(): JSX.Element {
 
       <Section alt night id="scaling" eyebrow="Scaling in 2026" title="What changed this year." lead="These technologies moved from labs into factories in 2026. Light City will decide between them with field data from 2027–2028.">
         <Cards items={[
-          {to: '/docs/technical/technology-horizon#perovskite-silicon-tandem-solar', title: 'Perovskite-silicon tandem solar', kicker: 'Energy', text: 'Commercial production began in the US with modules above 27% efficiency, delivering in 2027. Candidate for the spire canopy and dome glazing.'},
+          {to: '/docs/technical/technology-horizon#perovskite-silicon-tandem-solar', title: 'Perovskite-silicon tandem solar', kicker: 'Energy', text: 'Commercial production began in the US with modules above 27% efficiency, delivering in 2027. Candidate for the solar glass of the spire and the dome glazing.'},
           {to: '/docs/technical/technology-horizon#sodium-ion-batteries', title: 'Sodium-ion batteries', kicker: 'Storage', text: 'Mass production by end of 2026, safe and cold-tolerant, with costs approaching LFP. Preferred Phase 1 storage if pricing holds.'},
           {to: '/docs/technical/technology-horizon#enhanced-geothermal', title: 'Enhanced geothermal', kicker: 'Firm power', text: 'First commercial plant at 33 MW in Utah in 2026. Site-dependent option for always-on heat and power from Phase 2.'},
           {to: '/docs/technical/technology-horizon#ai-building-digital-twins', title: 'AI building digital twins', kicker: 'Operations', text: 'Studies report 15–40% HVAC savings. The Stage 3 design model becomes the operating twin of the real city.'},

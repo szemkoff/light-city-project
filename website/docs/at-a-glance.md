@@ -25,7 +25,7 @@ Light City is a planned, regenerative community. It starts as a 200-person **pil
 | **Built core** | 20–30 acres | 150–300 acres | Long-term master plan |
 | **Communosphere domes** | 3 domes, 30–45 m | 6–12 domes, 45–60 m | 12+ domes, up to 90 m |
 | **Residents per dome** | 80–120 | 120–200 | up to 400 |
-| **Spire** | 60–120 m | 120–300 m (staged) | Up to 300 m |
+| **Spire** | 90 m | 150 m (staged) | 240 m |
 | **Temples** | 1 | 3–5 | Network |
 | **Solar** | 2–5 MWp | 5–15 MWp | 15–50 MWp |
 | **Storage** | 8–20 MWh | 40–80 MWh | Long-duration mix |
@@ -41,7 +41,7 @@ Light City is a planned, regenerative community. It starts as a 200-person **pil
 | Structure | Phase 1 specification | Readiness |
 |---|---|---|
 | **Communosphere domes** | Geodesic CLT (cross-laminated timber) with steel nodes, solar glazing, 3–5 levels | TRL 7–9 (proven components) |
-| **Light Spire** | Steel/CLT hybrid, 60–120 m, 200–500 kWp PV canopy, observation and gathering levels | TRL 4–5 (novel assembly of proven parts) |
+| **Crystal Point spire** | Six-sided crystal of solar glass on a steel diagrid with a concrete core; 90 m, base built for 240 m; observatory, gathering levels, wind crown in Phase 3 | TRL 4–5 (novel assembly of proven parts) |
 | **Temple and plaza** | Timber-frame temple, stone plaza oriented on the sacred-geometry plan | TRL 9 |
 | **Microgrid** | Solar + battery storage, grid-tied with islanding | TRL 9 |
 

@@ -119,7 +119,7 @@ Hydro and geothermal are treated as bonuses, not promises: they depend on the la
 - Each communosphere: 200-500 kW peak demand
 - Temples: 50-150 kW
 - Studios/Maker spaces: 100-300 kW
-- Central spire: 50-200 kW (lighting, elevators, observation deck)
+- Central spire: 50-200 kW (lighting, lifts, observatory)
 - Infrastructure: 100-300 kW (water, wastewater, roads)
 
 ### Metrology & Monitoring (Physical Layer)
@@ -273,7 +273,7 @@ graph TD
 **Connection Points**:
 - Each communosphere: Dedicated 200-500 kW service entrance
 - Temples and major buildings: 50-300 kW services
-- Spire: 50-200 kW (lighting, elevators, observation deck)
+- Spire: 50-200 kW (lighting, lifts, observatory)
 - Infrastructure: 100-300 kW (water pumps, wastewater, street lighting)
 
 **No Wireless Power Transmission**: All physical power via conventional wiring (copper/aluminum conductors, conduit, code-compliant)
@@ -471,7 +471,7 @@ graph TD
 - [ ] Achieve 99.5%+ uptime
 
 **Resonance Systems**:
-- [ ] Construct central spire (60-120 m, acoustic + light)
+- [ ] Construct the first 90 m of the crystal spire (acoustic, light, solar glass)
 - [ ] Install crystal technology (if validated in Stage 3-4)
 - [ ] Create resonance chambers in temples and communospheres
 - [ ] Activate and tune systems (frequency stability)

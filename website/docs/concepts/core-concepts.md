@@ -19,7 +19,7 @@ This is a **conceptual primer**. Read anything attributed to "the source" as **d
 :::
 
 :::note Light City in one breath
-A 200-resident pilot hamlet of three timber-and-glass domes around a 60–120 m solar spire, built in Stage 5 (Dec 2028 – Nov 2031) for about $45M, then growing into a 1,500-person village and an 8,000+ person town. Every number lives on [At a Glance](/docs/at-a-glance). How people journey from today's life into this future is described in [The Transition](/docs/concepts/the-transition).
+A 200-resident pilot hamlet of three timber-and-glass domes around a 90 m crystal spire of solar glass, built in Stage 5 (Dec 2028 – Nov 2031) for about $45M, then growing into a 1,500-person village and an 8,000+ person town. Every number lives on [At a Glance](/docs/at-a-glance). How people journey from today's life into this future is described in [The Transition](/docs/concepts/the-transition).
 :::
 
 The original visions that sparked this project are shown once, in [Architecture → Vision references](/docs/design/architecture#vision-references).
@@ -146,7 +146,7 @@ This means:
 ### What we build
 
 - **Materials**: timber, glass, clay and local stone, with warm, shielded light at night ([Beyond the Box](/docs/design/organic-forms-and-materials), [Light on the Land](/docs/design/light-on-the-land)).
-- **Layout**: the same circle, five rings and 12 radial paths around a 60–300 m lattice spire ([Architecture → Circular form](/docs/design/architecture#circular-form)).
+- **Layout**: the same circle, five rings and 12 radial paths around a 90–240 m crystal spire ([Architecture → Circular form](/docs/design/architecture#circular-form)).
 - **Atmosphere**: acoustics, daylight and gardens designed for calm. Any effect on wellbeing is a research question, measured with consent ([Open Questions](/docs/research/open-questions)).
 
 > **Terminology:** where older pages say "energetic", they mean **experiential** (light, sound, a sense of connection), not electrical. **Electrical power** comes from a renewable **microgrid** (solar, batteries, renewable backup); see [Energy Systems](/docs/concepts/energy-systems).

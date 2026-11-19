@@ -26,7 +26,7 @@ export default function City(): JSX.Element {
         <div className="pg-facts">
           <div className="pg-fact"><b>20–30</b><span>acre Phase 1 core within a 100–500 acre site</span></div>
           <div className="pg-fact"><b>3</b><span>communosphere domes, 30–45 m across</span></div>
-          <div className="pg-fact"><b>60–120 m</b><span>central spire in Phase 1</span></div>
+          <div className="pg-fact"><b>90 m</b><span>crystal spire in Phase 1, 240 m at full build</span></div>
           <div className="pg-fact"><b>10 min</b><span>walk from any home to the plaza</span></div>
         </div>
       </Section>
@@ -56,13 +56,13 @@ export default function City(): JSX.Element {
       <Section id="structures" eyebrow="Key structures" title="What gets built, and how ready it is." lead="Each structure shows its Technology Readiness Level (TRL): 9 means proven at scale, 1 means early research.">
         <Feature to="/docs/design/architecture#the-central-spire"
           img="spire"
-          alt="Slender lattice spire rising above the central plaza"
+          alt="The Crystal Point spire: a six-sided prism of milky solar glass with a faceted glass point, rising over domes and lawns at sunset"
           kicker="Central sanctum"
-          title="The spire"
+          title="The Crystal Point spire"
           tag="TRL 4–5 at full scale"
-          specs={[['Height', '60–120 m (Phase 1)'], ['Structure', 'Steel and CLT lattice'], ['Solar', '200–500 kWp integrated'], ['Role', 'Landmark, observation, energy']]}>
-          <p>The spire is the city's orientation point: visible from every path by day, softly lit and shielded at night, and carrying building-integrated solar. Its first purpose is practical: a landmark, an observation deck, a communications mast and a solar collector.</p>
-          <p>Tall timber-hybrid towers exist today, but a lattice spire of this height with integrated solar has not been built, so it will be engineered and reviewed in Stage 2. Its foundation and base are sized for the final height, so Phase 2 can add lattice sections on top (to 120–300 m) instead of rebuilding it, as the Shukhov Tower in Moscow was built from stacked sections.</p>
+          specs={[['Height', '90 m → 150 m → 240 m'], ['Structure', 'Steel diagrid, solar glass, concrete core'], ['Energy', 'Solar glass + 6 helical wind turbines'], ['Role', 'Landmark, observatory, civic halls']]}>
+          <p>Shaped like a natural quartz point: a six-sided prism of milky solar glass on a slender steel diagrid, a little wider at the foot, ending in a faceted glass point. It is the city's orientation point, seen from every path by day and glowing softly at night. Inside are a base hall, a gathering level, an enclosed observatory at 72 m, a water tank for the town, a learning level and a star room.</p>
+          <p>In Phase 3 the top opens into a wind crown: six helical turbines, three per level, the upper row turned 60 degrees. Together with the solar glass they give very roughly 0.5–1 GWh a year, a supplement rather than the city's supply. The foundation is sized for 240 m from the start, so later phases add sections on top instead of rebuilding, as the Shukhov Tower in Moscow was built from stacked sections. <a href="pathname:///model/index.html?phase=3&amp;view=spire">See it in 3D</a>.</p>
         </Feature>
         <Feature to="/docs/concepts/communospheres"
           reverse
@@ -121,9 +121,9 @@ export default function City(): JSX.Element {
 
       <Section alt id="phases" eyebrow="Growth by phase" title="Built in steps, each one proven before the next." lead="One radial plan grows outward from the same spire and plaza, and nothing built in one phase is torn down in the next. One 3D model shows all three: open it at any phase and switch phases to turn on what each step adds.">
         <Cards items={[
-          {to: 'pathname:///model/index.html?phase=1', more: 'Open the model at Phase 1', img: 'city-phase-1', alt: 'Aerial view of the Phase 1 pilot hamlet: a lattice spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, a creek winding south to a small lake, surrounded by woodland', kicker: 'Phase 1 · 200 residents', title: 'Pilot hamlet', text: 'A 90 m spire, one temple and two learning pavilions, three 40 m domes and about 30 earth homes on a 20–30 acre core. Reserved dome plots hold meadow and a tree nursery. The Spire Park, a care farm, a swimming pond and the first woods are there from the start.'},
+          {to: 'pathname:///model/index.html?phase=1', more: 'Open the model at Phase 1', img: 'city-phase-1', alt: 'Aerial view of the Phase 1 pilot hamlet: a crystal spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, a creek winding south to a small lake, surrounded by woodland', kicker: 'Phase 1 · 200 residents', title: 'Pilot hamlet', text: 'A 90 m spire, one temple and two learning pavilions, three 40 m domes and about 30 earth homes on a 20–30 acre core. Reserved dome plots hold meadow and a tree nursery. The Spire Park, a care farm, a swimming pond and the first woods are there from the start.'},
           {to: 'pathname:///model/index.html?phase=2', more: 'Open the model at Phase 2', img: 'city-phase-2', alt: 'Aerial view of the Phase 2 village: eight domes around the spire, rings of earth-home courtyard clusters and an outer belt of solar rows and greenhouses, ringed by a curving canal with a lake to the south-west', kicker: 'Phase 2 · 1,500 residents', title: 'Village', text: 'Everything from Phase 1 stays. The spire gains two sections (150 m), five domes fill reserved plots, courtyard clusters of earth homes form a new ring and a food and energy belt is added. The Council House, a festival meadow, stables, a boathouse, a primary school and a health centre arrive. About 160 acres.'},
-          {to: 'pathname:///model/index.html?phase=3', more: 'Open the model at Phase 3', img: 'city-phase-3', alt: 'Aerial view of the Phase 3 town: twelve domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses, with a river winding past and woods to the north', kicker: 'Phase 3 · 8,000+ residents', title: 'Town', text: 'The village and its belt stay as built. The spire reaches 240 m and the last ring domes are filled; outside the green belt come flowing terraces of glass, timber and thin-shell concrete with green roofs, six 80 m district domes and a new outer belt, with an event hall, a sports park, a secondary school and a town health centre. About 1.2 square miles.'},
+          {to: 'pathname:///model/index.html?phase=3', more: 'Open the model at Phase 3', img: 'city-phase-3', alt: 'Aerial view of the Phase 3 town: twelve domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses, with a river winding past and woods to the north', kicker: 'Phase 3 · 8,000+ residents', title: 'Town', text: 'The village and its belt stay as built. The crystal spire reaches 240 m with its wind crown, and the last ring domes are filled; outside the green belt come flowing terraces of glass, timber and thin-shell concrete with green roofs, six 80 m district domes and a new outer belt, with an event hall, a sports park, a secondary school and a town health centre. About 1.2 square miles.'},
         ]} />
         <div className="pg-table-wrap">
           <table className="pg-table">
@@ -131,7 +131,7 @@ export default function City(): JSX.Element {
             <tbody>
               <tr><th>Residents</th><td>200 (150–300)</td><td>1,500 (1,500–3,000)</td><td>8,000+</td></tr>
               <tr><th>Domes</th><td>3 domes, 30–45 m</td><td>6–12 domes, 45–60 m</td><td>Up to 90 m, 400 residents each</td></tr>
-              <tr><th>Spire</th><td>60–120 m</td><td>120–300 m</td><td>Up to 300 m</td></tr>
+              <tr><th>Spire</th><td>90 m</td><td>150 m</td><td>240 m</td></tr>
               <tr><th>Daily life</th><td>Spire Park, amphitheatre, care farm, swimming pond, small school, health room</td><td>Council House, festival meadow, stables, boathouse, primary school, health centre</td><td>Event hall, sports park, secondary school, town health centre, staffed fire station</td></tr>
               <tr><th>Timing</th><td>Move-in 2031</td><td>Mid-2030s</td><td>2040s+</td></tr>
               <tr><th>Gate to next phase</th><td>Operating break-even with about 110 homes full</td><td>Proven operations and demand</td><td>Regional partnerships</td></tr>
@@ -143,7 +143,7 @@ export default function City(): JSX.Element {
 
       <Section id="life" eyebrow="Life in the city" title="Parks, gathering, animals and civic life." lead="Every phase is a complete place to live. Each one adds its own parks, places to gather, care, learning and sport, sized for the people who live there. Every place below is in the 3D model; the pictures are concept renderings.">
         <Cards items={[
-          {to: 'pathname:///model/index.html?phase=1&view=spirepark', more: 'See it in the model', img: 'structures/spirePark', alt: 'People on lawns and among trees around the foot of the timber spire, with a boulder waterfall', kicker: 'Phase 1', title: 'Spire Park and waterfalls', text: 'Lawns and groves around the spire, a boulder waterfall fed by the heart rill, and natural falls where the creek leaves the lake.'},
+          {to: 'pathname:///model/index.html?phase=1&view=spirepark', more: 'See it in the model', img: 'structures/spirePark', alt: 'People on lawns and among trees around the foot of the spire, with a boulder waterfall', kicker: 'Phase 1', title: 'Spire Park and waterfalls', text: 'Lawns and groves around the spire, a boulder waterfall fed by the heart rill, and natural falls where the creek leaves the lake.'},
           {to: 'pathname:///model/index.html?phase=2&view=council', more: 'See it in the model', img: 'structures/councilHouse', alt: 'Residents seated in a circle inside a round timber and glass council hall with an oculus', kicker: 'Phase 2', title: 'Council House', text: 'The city hall: a round glass hall facing the spire. The council sits in a circle with no raised seat; open meetings every month, decisions by 80% consent.'},
           {to: 'pathname:///model/index.html?phase=2&view=festival', more: 'See it in the model', img: 'structures/festivalMeadow', alt: 'A large crowd on a meadow in front of a curved timber stage shell at dusk', kicker: 'Phase 2 and 3', title: 'Festival meadow and event hall', text: 'An open-air meadow and stage for about 3,000 people in Phase 2, and a covered hall for about 1,000 in Phase 3.'},
           {to: 'pathname:///model/index.html?phase=2&view=stables', more: 'See it in the model', img: 'structures/careFarm', alt: 'Children and adults feeding goats and sheep at a small timber care farm', kicker: 'Phase 1 and 2', title: 'Care farm, stables and dog parks', text: 'Goats, sheep, hens, ducks and bees from the start; stables for about ten horses in Phase 2; a fenced dog park in every phase.'},
