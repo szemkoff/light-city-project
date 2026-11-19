@@ -101,7 +101,7 @@ After the fixes the audit reports, in every phase: 0 buildings on paths or in wa
 | Phase | Road | Hubs |
 |---|---|---|
 | 1 | A service road from the north, through the valley in the hills | One hub at 252 m with about 30 shared cars, e-bikes and a shuttle stop |
-| 2 | A ring road at 480 m, open to the south so the lake and river front stay quiet | Three hubs at 45°, 165° and 300° |
+| 2 | A ring road at 480 m round the back and sides, starting and ending in the two southern hubs, so the lake and river front stay quiet | Three hubs at 45°, 165° and 300° |
 | 3 | An outer ring road at 1,035 m outside the food belt; the 480 m ring becomes the shuttle loop | Six hubs, one per district |
 
 ---

@@ -382,7 +382,9 @@ export function buildCity(scene, env = null) {
   road(northRoad(266, 1500), 6, 1);
   road(northRoad(1500, 2300), 6, 2);
   road(northRoad(2300, 3600), 6, 3);
-  road(arc(480, 300, 570), 6.5, 2);
+  // The Phase 2 ring runs round the back and sides from the south-east hub (300°) to the west hub (165°) and
+  // ends in both hubs' paved squares, so no road stops in a field and the whole south front stays car-free
+  road(arc(480, 300, 525), 6.5, 2);
   road(arc(1035, 0, 360), 7, 3);
   // Solar carports, car-share EVs, chargers and a shuttle stop
   const carG = new THREE.BoxGeometry(4.3, 0.9, 1.8); carG.translate(0, 0.75, 0);
