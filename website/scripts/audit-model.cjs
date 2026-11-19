@@ -35,7 +35,7 @@ function audit(A, n) {
   const near = (bb) => { const s = new Set(); for (let x = Math.floor(bb[0] / G); x <= Math.floor(bb[2] / G); x++) for (let z = Math.floor(bb[1] / G); z <= Math.floor(bb[3] / G); z++) (grid.get(x + ',' + z) || []).forEach((i) => s.add(i)); return s; };
   // Linear features as segments with a half-width
   const segs = [];
-  A.paths.filter((p) => p.from <= n).forEach((p, pi) => {
+  A.paths.filter((p) => p.from <= n && n < (p.to || 4)).forEach((p, pi) => {
     if (p.ring) { segs.push({ring: true, r: p.r, hw: p.w / 2, what: `ring path r ${p.r}`}); return; }
     for (let i = 0; i < p.pts.length - 1; i++) segs.push({a: p.pts[i], b: p.pts[i + 1], hw: p.w / 2, what: p.road ? 'road' : 'path', pi});
   });
@@ -47,7 +47,7 @@ function audit(A, n) {
     if (inside(s.a, f.poly) || inside(s.b, f.poly)) return true;
     return f.d.some((p) => segDist(p, s.a, s.b) < s.hw + pad);
   };
-  const out = {onPath: [], inWater: [], overlap: [], arrows: [], straight: [], treesOnPaths: 0, treeSamples: []};
+  const out = {onPath: [], inWater: [], overlap: [], arrows: [], entrances: 0, straight: [], treesOnPaths: 0, treeSamples: []};
   const seen = new Set();
   foot.forEach((f) => {
     const cands = [...near(f.bb), ...rings];
@@ -73,10 +73,13 @@ function audit(A, n) {
   // Path ends aimed at a door, and straight runs
   const trees = A.trees.filter((t) => t[3] <= n && n < t[4]);
   const tg = new Map(); trees.forEach((t) => { const k = Math.floor(t[0] / G) + ',' + Math.floor(t[1] / G); if (!tg.has(k)) tg.set(k, []); tg.get(k).push(t); });
-  A.paths.filter((p) => p.from <= n && !p.ring).forEach((p) => {
+  const fore = (A.fore || []).filter((f) => f[3] <= n);
+  A.paths.filter((p) => p.from <= n && n < (p.to || 4) && !p.ring).forEach((p) => {
     const P = p.pts;
     if (!p.loop) for (const [e, f] of [[P[P.length - 1], P[P.length - 2]], [P[0], P[1]]]) {
       const dx = e[0] - f[0], dz = e[1] - f[1], L = Math.hypot(dx, dz) || 1, u = [dx / L, dz / L];
+      // A path that arrives in a dome's paved forecourt (the ming tang) is an entrance, not an arrow
+      if (fore.some((f) => Math.hypot(e[0] - f[0], e[1] - f[1]) < f[2] + 2)) { out.entrances++; continue; }
       let screened = false;
       for (let s = 1; s <= 30; s += 1) {
         const q = [e[0] + u[0] * s, e[1] + u[1] * s];
@@ -120,7 +123,7 @@ function audit(A, n) {
     const r = audit(A, n); report[n] = r;
     const hard = r.onPath.length + r.inWater.length + r.overlap.length;
     problems += hard;
-    console.log(`\nPhase ${n}: ${r.onPath.length} on paths, ${r.inWater.length} in water, ${r.overlap.length} overlaps, ${r.arrows.length} path ends aimed at buildings, ${r.straight.length} straight runs > 80 m, ${r.treesOnPaths} trees on paths`);
+    console.log(`\nPhase ${n}: ${r.onPath.length} on paths, ${r.inWater.length} in water, ${r.overlap.length} overlaps, ${r.arrows.length} path ends aimed at buildings, ${r.entrances} paths arriving at dome entrances, ${r.straight.length} straight runs > 80 m, ${r.treesOnPaths} trees on paths`);
     for (const k of ['onPath', 'inWater', 'overlap', 'arrows', 'straight']) r[k].slice(0, 12).forEach((x) => console.log(`  [${k}] ${x}`));
     r.treeSamples.slice(0, 4).forEach((x) => console.log(`  [tree] ${x}`));
   }
