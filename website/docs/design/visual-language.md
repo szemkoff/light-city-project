@@ -67,7 +67,7 @@ Use this style note at the end of every image prompt:
 - **Reality check.** Before an image goes in, ask: could this be photographed in a real eco-village next year? No open fire indoors, no glowing ground lights or rows of candles, no uplit domes, handrails at every drop, bird-safe patterned glass on large glazing, plants at a believable size, wild land around the buildings rather than lawns. Crystals are occasional, at most one point in a scene, and most images have none.
 - **Formats.** 16:9 for heroes, 4:3 for cards, 1:1 for tiles. Export as WebP or JPG at about 1,400–2,000 px wide.
 
-Earth domes and printed-earth homes belong in the image library alongside timber domes; examples are in [Beyond the Box](/docs/design/organic-forms-and-materials).
+Earth domes, earthbag, printed-earth and hempcrete homes belong in the image library alongside timber domes (the model shows all four home types); examples are in [Beyond the Box](/docs/design/organic-forms-and-materials).
 
 ## Diagrams
 
