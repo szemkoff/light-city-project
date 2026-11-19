@@ -65,7 +65,7 @@
     document.getElementById('ttl').textContent = 'Light City, ' + PHASES[n].name;
     const cut = NOTES[n].indexOf('. ') + 1;
     document.getElementById('noteSum').textContent = NOTES[n].slice(0, cut);
-    document.getElementById('note').textContent = NOTES[n].slice(cut).trim() + ' Drag to orbit, scroll or pinch to zoom. Click or tap a building to see what it is.';
+    document.getElementById('note').textContent = NOTES[n].slice(cut).trim() + ' Drag to orbit, scroll or pinch to zoom, and fly with the arrow keys or WASD (hold Shift to go faster). Click or tap a building to see what it is.';
     ps.value = n;
   };
   let curPhase = phase;
@@ -104,6 +104,8 @@
   const ts = document.getElementById('timeSel');
   opt(ts, 'day', 'Day'); opt(ts, 'night', 'Night'); ts.value = time;
   ts.onchange = () => { app.setTime(ts.value); setQ('time', ts.value === 'night' ? 'night' : null); };
+  // Hand the arrow keys back to flying once a menu choice is made
+  for (const s of [ps, vs, ts]) s.addEventListener('change', () => s.blur());
   // Click or tap a structure to see what it is; a drag (orbit) does not count as a click
   const card = document.getElementById('card');
   const hideCard = () => { card.hidden = true; };

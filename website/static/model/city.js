@@ -1371,7 +1371,44 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
   };
   if (interactive) {
     window.addEventListener('resize', resize);
-    const loop = () => { controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop); };
+    // Fly with the arrow keys or WASD: forward, back and sideways on the horizontal plane, keeping height and
+    // view direction. Speed follows height above the ground, so a walk-level view moves at a brisk walk and an
+    // aerial view covers the city in seconds; Shift goes three times faster.
+    const held = new Set();
+    const FLY = {ArrowUp: [0, 1], KeyW: [0, 1], ArrowDown: [0, -1], KeyS: [0, -1], ArrowLeft: [-1, 0], KeyA: [-1, 0], ArrowRight: [1, 0], KeyD: [1, 0]};
+    const typing = (e) => /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) || e.target.isContentEditable;
+    window.addEventListener('keydown', (e) => {
+      if (!FLY[e.code] || typing(e) || e.metaKey || e.ctrlKey || e.altKey) return;
+      held.add(e.code); e.preventDefault();
+    });
+    window.addEventListener('keyup', (e) => held.delete(e.code));
+    window.addEventListener('blur', () => held.clear());
+    let fast = false;
+    window.addEventListener('keydown', (e) => { if (e.key === 'Shift') fast = true; });
+    window.addEventListener('keyup', (e) => { if (e.key === 'Shift') fast = false; });
+    const fwd = new THREE.Vector3(), side = new THREE.Vector3(), step = new THREE.Vector3(), up = new THREE.Vector3(0, 1, 0);
+    let last = performance.now();
+    const fly = (dt) => {
+      let f = 0, r = 0;
+      for (const k of held) { f += FLY[k][1]; r += FLY[k][0]; }
+      if (!f && !r) return;
+      camera.getWorldDirection(fwd); fwd.y = 0;
+      if (fwd.lengthSq() < 1e-6) fwd.set(controls.target.x - camera.position.x, 0, controls.target.z - camera.position.z);
+      if (fwd.lengthSq() < 1e-6) fwd.set(0, 0, -1);
+      fwd.normalize(); side.crossVectors(fwd, up).normalize();
+      const speed = Math.min(600, Math.max(12, camera.position.y * 0.9)) * (fast ? 3 : 1);
+      step.copy(fwd).multiplyScalar(f).addScaledVector(side, r);
+      if (step.lengthSq() > 1) step.normalize();
+      step.multiplyScalar(speed * dt);
+      // stay within the land around the city
+      const lim = PHASES[curPhase].extent * 3 + 1500, nx = camera.position.x + step.x, nz = camera.position.z + step.z;
+      if (Math.hypot(nx, nz) > lim && Math.hypot(nx, nz) > Math.hypot(camera.position.x, camera.position.z)) return;
+      camera.position.add(step); controls.target.add(step);
+    };
+    const loop = (now = performance.now()) => {
+      fly(Math.min(0.1, (now - last) / 1000)); last = now;
+      controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop);
+    };
     loop();
   }
   // Click picking: the nearest tagged structure under a screen point (x, y in -1..1). Trees, lamps and night
@@ -1393,5 +1430,5 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
     }
     return null;
   };
-  return {setView, setPhase, setTime, pick};
+  return {setView, setPhase, setTime, pick, camera};
 }

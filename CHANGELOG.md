@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Planning principles: a sourced design page on walking distance, movement (car-free core, mobility hubs, morning and evening flows), scattered work, water, what goes inside a communosphere and a feng shui check of the plan
 
 ### Changed
+- 3D model: fly across the ground with the arrow keys or WASD (Shift for faster), keeping height and view direction; menus hand the keys back after a choice
 - 3D model: click or tap any building, dome, utility or waterway to open a card that says what it is, the phase it arrives in and a link to its full description in the docs
 - 3D model: the phase note at the bottom is now foldable, showing one line by default with a More / Less toggle
 - 3D model: procedural textures (grass, crop rows, gravel paths, stone paving, water, timber, rammed earth, solar cells, glazing, facades and foliage), a sky gradient with reflections on glass, water and solar panels, and per-tree leaf colour
