@@ -32,6 +32,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Planning principles: a sourced design page on walking distance, movement (car-free core, mobility hubs, morning and evening flows), scattered work, water, what goes inside a communosphere and a feng shui check of the plan
 
 ### Changed
+- Structure photos made calmer: a few people in each instead of crowds (crowds kept only at the festival meadow and event hall), and utility sites show only one or two staff at work
 - Fire stations in the model rebuilt to match their photo: a curved glulam vault with a green roof, exposed arches, glass gables and clerestory, a stone end wall, a living wall and red bay doors
 - All structure photos regenerated with people in a mix of modern everyday, smart, sporty and fashionable clothing
 - Phase images on the City page regenerated from the current model layout (curving rings, lake, canal, river and woods)
