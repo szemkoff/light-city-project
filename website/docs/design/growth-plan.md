@@ -42,7 +42,13 @@ The loops connect. Rain from the domes fills cisterns, and the water serves toil
 | **Movement** | North road and one mobility hub | A ring road and three hubs open to the south; shuttle | An outer ring road and six hubs |
 | **Emergency** | A fire and rescue shed with a volunteer crew at the hub | A volunteer fire station on the ring road | A staffed station and ambulance base on the outer ring road |
 
-The [model](pathname:///model/index.html?phase=2&view=reedbeds) shows the water yard, the treatment garden and the rain cisterns at each phase. The other new items in this table are described here first and will be added to the model next (see [What the model does not show yet](/docs/design/visual-language#what-the-model-does-not-show-yet)).
+The [model](pathname:///model/index.html?phase=2&view=reedbeds) shows the water yard, the treatment garden and the rain cisterns at each phase. The places in this table are in the model too, each in its own phase:
+
+- **Phase 1:** the [amphitheatre and fire circle](pathname:///model/index.html?phase=1&view=amphitheatre), the spire's base hall, lift core and gathering level, the [village green and playground](pathname:///model/index.html?phase=1&view=green), the [swimming pond and retreat cabins](pathname:///model/index.html?phase=1&view=lakeside), the [orchard and food forest](pathname:///model/index.html?phase=1&view=orchard) and the fire shed at the hub.
+- **Phase 2:** the [primary school](pathname:///model/index.html?phase=2&view=school) and health centre, the [sports field](pathname:///model/index.html?phase=2&view=sport), the [aquaponics tunnels, food hall and fire station](pathname:///model/index.html?phase=2&view=food), a second swimming pond and the retreat lodge.
+- **Phase 3:** the secondary school, town health centre, [vertical farm](pathname:///model/index.html?phase=3&view=farm), [sports park and wellness centre](pathname:///model/index.html?phase=3&view=sportspark) and the staffed fire and ambulance station.
+
+Each one sits between the radial paths, next to a path or ring, so nothing blocks the way and every building can be reached. A few smaller items are still missing (see [What the model does not show yet](/docs/design/visual-language#what-the-model-does-not-show-yet)).
 
 ---
 
@@ -101,7 +107,7 @@ All green space together comes to 5.35 ha per 1,000 people ([Fields in Trust, vi
 
 | | Sport | Play | Parks |
 |---|---|---|---|
-| Phase 1 (200) | 0.3 ha: a small field on the green | 0.1 ha: a playground by the plaza | 0.2 ha, plus the gardens and woods |
+| Phase 1 (200) | 0.3 ha: a small field on the green | 0.1 ha: a playground beside the green | 0.2 ha, plus the gardens and woods |
 | Phase 2 (1,500) | 2.4 ha: a full pitch, courts and a running loop | 0.8 ha in the courtyard rings | 1.2 ha, plus the food belt |
 | Phase 3 (8,000) | 12.8 ha: a sports park in the outer belt | 4.4 ha across the districts | 6.4 ha, a park within 710 m of every home |
 
