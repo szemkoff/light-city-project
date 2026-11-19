@@ -624,6 +624,7 @@ export function buildCity(scene, env = null) {
   const vaultEndG = new THREE.CircleGeometry(2.2, 18, 0, Math.PI); vaultEndG.rotateY(Math.PI / 2);
   const sideDoorG = new THREE.CircleGeometry(1.5, 14, 0, Math.PI); sideDoorG.rotateY(Math.PI / 2);
   const FORE = [];
+  const cisternG = new THREE.CylinderGeometry(2.3, 2.5, 0.35, 24); cisternG.translate(0, 0.17, 0);
   const entrancesB = (deg, d, from) => {
     const C = domeAt(deg), r = d / 2, out = C.clone().setY(0).normalize(), tan = new THREE.Vector3(-out.z, 0, out.x), W = [];
     // Main doors: inward (towards the plaza) and outward, each with a timber vault and a forecourt
@@ -648,6 +649,9 @@ export function buildCity(scene, env = null) {
       flat(new THREE.CircleGeometry(2.1, 20), foreM, 0.325).position.set(f.x, 0.325, f.z);
       FORE.push([f.x, f.z, 2.1, from]);
     }
+    // Rain cisterns: the dome's shell drains to two buried tanks on its outer diagonals (lids shown)
+    for (const t of [-1, 1]) { const q = C.clone().addScaledVector(out, (r + 3.3) * 0.72).addScaledVector(tan, t * (r + 3.3) * 0.7);
+      const lid = new THREE.Mesh(cisternG, concreteU); lid.position.copy(q).setY(0.3); lid.userData.info = 'cistern'; add(lid); }
     // Ground-floor street through the commons, from the inner door to the outer door, round the rain pool
     const [A, B] = W, ax = B.clone().sub(A), n = new THREE.Vector3(-ax.z, 0, ax.x).normalize(), off = r * 0.4 * 0.28 + 1.9, pts = [];
     for (let k = 0; k <= 24; k++) { const t = k / 24, q = A.clone().addScaledVector(ax, t).addScaledVector(n, off * Math.sin(Math.PI * t)); pts.push([q.x, q.z, 1.4]); }
@@ -789,6 +793,68 @@ export function buildCity(scene, env = null) {
   const workHub = inf('workHub', workHubB);
   layer(2);
   HUBS2.forEach((d) => workHub(polar(HUBR2, d), d));
+
+  // Utilities that grow with the town. Water and sewage cannot sit a kilometre away from a hamlet of 200,
+  // so each phase builds its own small works at its own edge, where its pipes are short, and later phases
+  // add modules beside them rather than replacing them (build as you grow). Water storage sits behind,
+  // on the north side; sewage is treated on the south-east side, downhill and away from the swimming lake.
+  // Phase 3 adds the north campus and the water-mouth plant for the town; the earlier works stay in use.
+  {
+    const waterU = shiny(mat(0x6f93a0, {roughness: 0.08, metalness: 0.3}));
+    const moundM = ground(0x95a463, TX.grass(23), 8, 0.2), reedM = ground(0x6c8c58, TX.leaves(), 3, 0.15), gravelM = ground(0xb5ab92, TX.gravel(), 5, 0.3);
+    const compostM = mat(0x6b5236, {roughness: 1, map: TX.repeated(TX.gravel(), 4, 1)}), digM = mat(0x7f8a5c, {roughness: 0.6});
+    // A local frame on a site: u along the ring, v outward
+    const site = (r, deg) => { const C = polar(r, deg), a = deg + twist(r), v = [Math.cos(rad(a)), -Math.sin(rad(a))], u = [-v[1], v[0]];
+      return {C, a, at: (x, y) => new THREE.Vector3(C.x + u[0] * x + v[0] * y, 0, C.z + u[1] * x + v[1] * y)}; };
+    const cell = (c, R, ph, m = reedM) => {
+      const f = (a) => R * (1 + 0.14 * Math.sin(2 * a + ph) + 0.07 * Math.sin(3 * a + ph * 2)), sh = new THREE.Shape(), sg = new THREE.Shape();
+      for (let i = 0; i <= 96; i++) { const a = (i / 96) * 2 * Math.PI; for (const [s, k] of [[sh, 0], [sg, 2.2]]) { const x = c.x + Math.cos(a) * (f(a) + k), z = c.z + Math.sin(a) * (f(a) + k); i ? s.lineTo(x, -z) : s.moveTo(x, -z); } }
+      for (const [s, y, mm] of [[sg, 0.3, gravelM], [sh, 0.34, m]]) { const g = new THREE.ShapeGeometry(s); g.rotateX(-Math.PI / 2); const o = new THREE.Mesh(g, mm); o.position.y = y; o.receiveShadow = true; add(o); }
+    };
+    const tank = (q, R, h) => {
+      const t = new THREE.Mesh(new THREE.CylinderGeometry(R, R + 0.8, h, 36), concreteU); t.position.copy(q).setY(h / 2); t.castShadow = true; add(t); footM('utility', t);
+      const top = new THREE.Mesh(new THREE.SphereGeometry(R + 0.2, 36, 8, 0, Math.PI * 2, 0, 0.55), moundM); top.scale.y = 0.45; top.position.copy(q).setY(h - 0.3); add(top);
+    };
+    const box = (q, a, sx, sy, sz, m) => { const b = new THREE.Mesh(new THREE.BoxGeometry(sx, sy, sz), m); b.position.copy(q).setY(sy / 2 + 0.3); b.rotation.y = rad(a); b.castShadow = true; add(b); footM('utility', b); return b; };
+    const screen = (S, pts, from) => pts.forEach(([x, y, s]) => { const q = S.at(x, y); treePts.push([q.x, q.z, s, from, 4, 1]); });
+    // Phase 1 water yard, behind the hamlet to the north-west: a well and pump house, one earth-covered
+    // tank of about 300 m³ (three days' use plus a fire reserve), two small slow sand filters, compost bays
+    layer(1);
+    const Y1 = site(258, 112.5);
+    I('waterYard1'); flat(new THREE.CircleGeometry(17, 40), padM, 0.3).position.set(Y1.C.x, 0.3, Y1.C.z); block(Y1.C.x, Y1.C.z, 19);
+    tank(Y1.at(-6, 3), 5.5, 3.6);
+    box(Y1.at(6, 6), Y1.a, 3.2, 2.8, 3.2, pavM(0xc49a68));
+    for (const x of [3, 9]) { const b = box(Y1.at(x, -4), Y1.a, 4.6, 0.8, 4.6, concreteU); const w = new THREE.Mesh(new THREE.PlaneGeometry(4, 4), waterU); w.rotation.set(-Math.PI / 2, 0, rad(Y1.a)); w.position.copy(b.position).setY(1.12); add(w); }
+    I('compost1'); for (let k = 0; k < 3; k++) { const m = new THREE.Mesh(new THREE.SphereGeometry(1, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2), compostM); m.scale.set(4, 1.1, 1.2); m.rotation.y = rad(Y1.a); m.position.copy(Y1.at(-10 + k * 3.6, -11)).setY(0.3); add(m); footM('utility', m); }
+    I(null); screen(Y1, [[-15, 12, 0.6], [14, 12, 0.6], [0, 15, 0.55]], 1);
+    lamp(Y1.at(0, -14).x, Y1.at(0, -14).z);
+    // Phase 1 treatment garden, just outside the hamlet on the south-east, downhill: a settling tank and two
+    // planted vertical-flow reed beds of about 300 m² each (about 3 m² a person). The cleaned water
+    // irrigates the orchards; nothing reaches the swimming lake.
+    const T1 = site(258, 322.5);
+    I('reedBeds1'); block(T1.C.x, T1.C.z, 22);
+    for (const [x, ph] of [[-11, 0.4], [11, 2.1]]) cell(T1.at(x, 0), 9.8, ph);
+    { const q = T1.at(0, -12), s = new THREE.Mesh(new THREE.CylinderGeometry(2.6, 2.6, 0.5, 24), concreteU); s.position.copy(q).setY(0.55); add(s); footM('utility', s); }
+    I(null); screen(T1, [[-24, -4, 0.55], [24, -4, 0.55], [-8, 13, 0.5], [8, 13, 0.5]], 1);
+    // Phase 2 adds beside each, across the new ring path: a second, larger tank, two more filters and a biogas
+    // digester for food waste at the water yard; a compact treatment hall (settling and a membrane module,
+    // under a solar roof) and four more reed beds at the treatment garden, for the village of 1,500.
+    layer(2);
+    const Y2 = site(318, 112.5);
+    I('waterYard2'); flat(new THREE.CircleGeometry(19, 40), padM, 0.3).position.set(Y2.C.x, 0.3, Y2.C.z); block(Y2.C.x, Y2.C.z, 21);
+    tank(Y2.at(-9, 2), 7, 4);
+    for (const x of [6, 12]) { const b = box(Y2.at(x, 6), Y2.a, 4.6, 0.8, 4.6, concreteU); const w = new THREE.Mesh(new THREE.PlaneGeometry(4, 4), waterU); w.rotation.set(-Math.PI / 2, 0, rad(Y2.a)); w.position.copy(b.position).setY(1.12); add(w); }
+    I('biogas2'); { const d = new THREE.Mesh(new THREE.SphereGeometry(4.5, 24, 10, 0, Math.PI * 2, 0, Math.PI / 2), digM); d.scale.y = 0.85; d.position.copy(Y2.at(8, -8)).setY(0.3); d.castShadow = true; add(d); footM('utility', d); }
+    I(null); screen(Y2, [[-17, 13, 0.6], [16, 13, 0.6]], 2);
+    const T2 = site(316, 315);
+    I('treatment2'); block(T2.C.x, T2.C.z, 14);
+    const hall = box(T2.at(0, 0), T2.a, 12, 4, 8, pavM(0xb98f62));
+    { const r = new THREE.Mesh(new THREE.BoxGeometry(12.4, 0.2, 8.4), pv); r.position.copy(hall.position).setY(4.45); r.rotation.copy(hall.rotation); add(r); }
+    I('reedBeds2');
+    [[-43, 0.9], [-20, 2.6], [20, 1.3], [43, 3.4]].forEach(([x, ph]) => { const q = T2.at(x, 0); cell(q, 11.5, ph); block(q.x, q.z, 13); });
+    I(null); screen(T2, [[-31, 12, 0.55], [31, 12, 0.55], [-31, -12, 0.5], [31, -12, 0.5]], 2);
+    I(null);
+  }
 
   I('courtyard');
   // Phase 2: village neighborhoods of earth-home courtyard clusters (six homes round a shared garden)
@@ -998,8 +1064,9 @@ export function buildCity(scene, env = null) {
     const roadA = (r) => { const pts = northRoad(r, r); return Math.atan2(-pts[0][1], pts[0][0]) * 180 / Math.PI; };
     const UC = 121, URr = 1200, C = polar0(URr, UC), uv = [Math.cos(rad(UC + 90)), -Math.sin(rad(UC + 90))], vv = [Math.cos(rad(UC)), -Math.sin(rad(UC))];
     const at = (u, v) => new THREE.Vector3(C.x + uv[0] * u + vv[0] * v, 0, C.z + uv[1] * u + vv[1] * v);
+    layer(3);
     I('utilityCampus'); flat(new THREE.CircleGeometry(60, 56), padM, 0.32).position.set(C.x, 0.32, C.z); block(C.x, C.z, 66); I(null);
-    { const a0 = roadA(1180), pts = []; for (let d = a0 + 0.3; d <= UC - (54 / 1180) * 180 / Math.PI; d += 0.25) { const q = polar0(1180 + 4 * Math.sin((d - a0) * 0.9), d); pts.push([q.x, q.z]); } road(pts, 5, 1); }
+    { const a0 = roadA(1180), pts = []; for (let d = a0 + 0.3; d <= UC - (54 / 1180) * 180 / Math.PI; d += 0.25) { const q = polar0(1180 + 4 * Math.sin((d - a0) * 0.9), d); pts.push([q.x, q.z]); } road(pts, 5, 3); }
     I('reservoir');
     // Covered reservoir: two earth-sheltered cells on the high ground, feeding the city by gravity
     for (const u of [-17, 17]) {
@@ -1032,8 +1099,8 @@ export function buildCity(scene, env = null) {
     // and a bridge, and the treatment wetland cleans the city's water before it reaches the river
     const plant = new THREE.Mesh(new THREE.BoxGeometry(22, 4.5, 12), pavM(0xb98f62)); plant.position.set(122, 2.25, 1052); plant.rotation.y = Math.atan2(1052, 122) - Math.PI / 2; plant.castShadow = true; add(plant); footM('utility', plant);
     { const r = new THREE.Mesh(new THREE.BoxGeometry(22.4, 0.2, 12.4), pv); r.position.set(122, 4.6, 1052); r.rotation.copy(plant.rotation); add(r); block(122, 1052, 16); }
-    WETLAND.forEach(([c, f]) => { block(c.x, c.z, 0); for (let a = 0; a < 2 * Math.PI; a += 0.5) { const R = f(a) - 2.5 - (Math.floor(a * 7) % 3); treePts.push([c.x + Math.cos(a) * R, c.z + Math.sin(a) * R, 0.35, 1, 4, 2]); } });
-    I(null);
+    WETLAND.forEach(([c, f]) => { block(c.x, c.z, 0); for (let a = 0; a < 2 * Math.PI; a += 0.5) { const R = f(a) - 2.5 - (Math.floor(a * 7) % 3); treePts.push([c.x + Math.cos(a) * R, c.z + Math.sin(a) * R, 0.35, 3, 4, 2]); } });
+    I(null); layer(1);
     const promenade = []; for (let x = -280; x <= 280; x += 4) promenade.push([x, riverZ(x) - 26 - 6 * Math.sin(x / 70), 1.5]);
     paths.push({pts: promenade, w: 3, from: 1}); ribbon(promenade, 0, 0.31, path); promenade.forEach((q, i) => { if (i % 12 === 6) lamp(q[0], q[1] - 2.7); });
     I('shuikou'); pavilion(new THREE.Vector3(-8, 0, 1098), 7); I(null);
@@ -1103,7 +1170,7 @@ export function buildCity(scene, env = null) {
     layer(1);
     I('harbour'); blob((a) => harbR(a) + 3, 0.335, quayM, HARB); blob(harbR, 0.36, waterM, HARB);
     // Treatment wetland cells: shallow reed beds with gravel margins
-    I('wetland'); WETLAND.forEach(([c, f]) => { blob((a) => f(a) + 2.5, 0.335, sandM, c); blob(f, 0.36, ground(0x6f8a72, TX.water(), 10, 0.2), c); });
+    layer(3); I('wetland'); WETLAND.forEach(([c, f]) => { blob((a) => f(a) + 2.5, 0.335, sandM, c); blob(f, 0.36, ground(0x6f8a72, TX.water(), 10, 0.2), c); });
     I(null);
     // The rill glows softly at night, like the plaza pool it feeds
     waters.filter((w) => w.kind === 'rill').forEach((w) => w.pts.forEach((q, i) => { if (i % 4 === 0) glow('cool', q[0], 0.5, q[1]); }));
@@ -1367,6 +1434,8 @@ export const VIEWS = {
   builds: {pos: [60, 16, 200], target: [5, 0, 155], fov: 50, label: 'Four ways to build a home'},
   courtyards: {pos: [90, 45, 330], target: [0, 0, 250], fov: 50, label: 'Courtyard clusters, Phase 2'},
   dome: {pos: [91, 44, 122], target: [50, 3, 97], fov: 52, label: 'Into a communosphere through its oculus'},
+  yard: {pos: [-118, 55, -128], target: [-205, 0, -200], fov: 50, label: 'The water yard behind the hamlet, growing with each phase'},
+  reedbeds: {pos: [205, 60, 22], target: [272, 0, 92], fov: 52, label: 'The treatment garden downhill of the hamlet'},
   hub: {pos: [79, 45, -208], target: [-31, 0, -248], fov: 50, label: 'Phase 1 mobility hub on the north road'},
   work: {pos: [234, 70, -217], target: [107, 0, -264], fov: 50, label: 'A Phase 2 neighbourhood work hub'},
 };

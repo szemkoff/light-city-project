@@ -7,7 +7,7 @@ description: How Light City supplies water, treats sewage, handles waste and run
 
 # Infrastructure: Water, Sewage, Waste and Power
 
-A city works only if water arrives, sewage leaves clean, rubbish is collected and the lights stay on. This page sets out how Light City does each of these, where each system sits in the plan, and what the [3D model](pathname:///model/index.html?phase=3&view=utilities) shows. It is a concept for engineers to test against a real site, not an engineering design.
+A city works only if water arrives, sewage leaves clean, rubbish is collected and the lights stay on. This page sets out how Light City does each of these, where each system sits in the plan, and what the [3D model](pathname:///model/index.html?phase=3&view=utilities) shows, and how each system grows with the phases. It is a concept for engineers to test against a real site, not an engineering design.
 
 > **Our rule: close the loops on site. Water is reused, waste becomes soil or fuel, and power is made and stored locally.**
 
@@ -17,7 +17,11 @@ The model follows one example closely. In Stockholm's Hammarby Sjöstad, the dis
 
 ## Where it sits
 
-The plan follows the feng shui rule of a quiet front and service behind (see [Planning principles](/docs/design/planning-principles#feng-shui-reading-the-land)):
+The plan follows the feng shui rule of a quiet front and service behind (see [Planning principles](/docs/design/planning-principles#feng-shui-reading-the-land)). The systems also grow with the town. Each phase builds small works at its own edge, close to the people it serves, and later phases add modules beside them. The full schedule is in [How the city grows](/docs/design/growth-plan).
+
+- **Phases 1 and 2: close by.** A water yard sits just behind the hamlet to the north. It has a well, an earth-covered tank, slow sand filters and compost bays. A treatment garden with a settling tank and reed beds sits just downhill on the south-east, away from the swimming lake. Phase 2 adds a larger tank, a biogas digester, a compact treatment hall and four more reed beds beside them. Every dome keeps its own rain cisterns.
+
+Phase 3 adds the town-scale works:
 
 - **Behind, to the north.** The utility campus sits inside the woods on the higher ground behind the city. It holds water storage, the sand filters, the recycling hall, compost and the biogas digesters. The service road reaches it from the north road, so heavy vehicles never cross the town.
 - **In front, to the south.** Sewage runs downhill to the water mouth, where the creek meets the river. The treatment hall and the treatment wetland clean it there, before any water leaves the city.
@@ -25,9 +29,12 @@ The plan follows the feng shui rule of a quiet front and service behind (see [Pl
 
 | System | Where in the model | View |
 |---|---|---|
-| Water storage and treatment | Two earth-covered reservoirs, a valve house and slow sand filter beds on the north campus | [utilities](pathname:///model/index.html?phase=1&view=utilities) |
-| Recycling, compost and biogas | Recycling hall and bins, four compost windrows, two digesters and a gas holder | [utilities](pathname:///model/index.html?phase=1&view=utilities) |
-| Sewage treatment | A treatment hall with a solar roof and three wetland cells at the water mouth | [watermouth](pathname:///model/index.html?phase=1&view=watermouth) |
+| Rain cisterns | Two lids beside every dome | [entrances](pathname:///model/index.html?phase=1&view=entrances) |
+| Phase 1 and 2 water yard | A well and pump house, earth-covered tanks, slow sand filters, compost bays and, from Phase 2, a small digester | [yard](pathname:///model/index.html?phase=2&view=yard) |
+| Phase 1 and 2 treatment garden | A settling tank and two reed beds, then a treatment hall and four more beds | [reedbeds](pathname:///model/index.html?phase=2&view=reedbeds) |
+| Phase 3 water storage and treatment | Two earth-covered reservoirs, a valve house and slow sand filter beds on the north campus | [utilities](pathname:///model/index.html?phase=3&view=utilities) |
+| Phase 3 recycling, compost and biogas | Recycling hall and bins, four compost windrows, two digesters and a gas holder | [utilities](pathname:///model/index.html?phase=3&view=utilities) |
+| Phase 3 sewage treatment | A treatment hall with a solar roof and three wetland cells at the water mouth | [watermouth](pathname:///model/index.html?phase=3&view=watermouth) |
 | Power | Solar on ring 5 and the food belts, a battery bank and substation on the campus, a battery container and substation at every mobility hub | [hub](pathname:///model/index.html?phase=1&view=hub) |
 
 ---
