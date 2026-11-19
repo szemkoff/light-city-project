@@ -32,6 +32,8 @@ Every illustration of the city as a whole starts from one shared 3D model, so th
 - **Changing the plan.** Update `static/model/city.js` and the plan diagram together, then re-render the views and the affected images.
 - **Check the layout.** After any change to the plan, run `node scripts/audit-model.cjs` from `website/`. For each phase it reports buildings on paths or in water, overlapping buildings, path ends aimed at buildings without a planted bed (paths that arrive at a dome entrance forecourt are counted separately and are fine), straight runs over 80 m and trees on paths. All counts should be zero before a change is merged ([Planning principles](/docs/design/planning-principles#collisions-and-the-layout-audit)).
 
+Every structure type in the model has a concept picture in the [photo guide](/docs/design/structures), and the same picture appears at the top of its info card when you click it in the model.
+
 ### What the model does not show yet
 
 The model shows the plan, the main buildings, water, movement and the [infrastructure](/docs/design/infrastructure). These parts of the documented design are not in it yet:
@@ -42,6 +44,7 @@ The model shows the plan, the main buildings, water, movement and the [infrastru
 | Mushrooms and food processing in detail | [Technology catalog](/docs/technical/technology-catalog#food-production) | The food hall, aquaponics tunnels and vertical farm are shown as simple buildings |
 | Housing counts per dome and per terrace | [How the city grows](/docs/design/growth-plan#phase-by-phase), [At a Glance](/docs/at-a-glance) | Counts per phase are set out; terraced levels are shown, not individual homes |
 | Rooms inside the domes and the spire | [How the city grows](/docs/design/growth-plan#inside-the-communospheres) | The dome commons (yoga, sound room, tool library, childcare) and the spire's lift core, base hall and gathering level are shown as volumes, not furnished rooms |
+| Animals in detail, benches and stage equipment | [How the city grows: animals](/docs/design/growth-plan#animals) | The care farm, stables, dog parks, festival meadow, event hall, boathouse and Council House are in the model with simple animals and fences; furniture is not |
 | Courts, ambulances and the guest house | [How the city grows](/docs/design/growth-plan#phase-by-phase) | Schools, health centres, fields, ponds, cabins, the lodge and fire stations are in the model; these smaller items are not |
 | Pipes, cables and utility tunnels | [Infrastructure](/docs/design/infrastructure#utility-tunnels) | Underground, so not drawn |
 | Swales and pump stations | [Infrastructure](/docs/design/infrastructure#water-supply) | Rain cisterns, the phased water yard and the reed beds are drawn; swales and pumps are not |

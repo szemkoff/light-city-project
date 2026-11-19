@@ -54,6 +54,8 @@ const polar0 = (r, deg) => new THREE.Vector3(Math.cos(rad(deg)) * r, 0, -Math.si
 // is straight and none aims at the spire or at a door (feng shui: qi meanders, straight lines carry sha).
 // Everything placed with polar() follows the turn; rings stay true circles.
 export const TWIST = {r0: 35, k: 11, cap: 1060};
+// Textures that flow (waterfalls); the render loop scrolls them
+const FLOW = [], AIMS = [];
 const twist = (r) => (r <= TWIST.r0 ? 0 : TWIST.k * Math.log(Math.min(r, TWIST.cap) / TWIST.r0));
 const polar = (r, deg) => polar0(r, deg + twist(r));
 
@@ -1025,6 +1027,197 @@ export function buildCity(scene, env = null) {
       if (S) { capsBlock(S, 160, 80); I('sportsPark'); pitch(S, 90, 56, -30, 0); I('wellnessCentre'); hallF(S, 50, 0, 44, 22, 8, 0xd9c3a0);
         { const q = S.at(50, -20); const pl = new THREE.Mesh(new THREE.PlaneGeometry(25, 10), poolM); pl.rotation.set(-Math.PI / 2, 0, rad(S.a + 90)); pl.position.copy(q).setY(0.33); add(pl); } I(null); } }
     { const S = find(1002, 222, 12, null, 16); if (S) { I('fireStation3'); station(S, 22, 4); I(null); } }
+
+    // ---- Parks, gathering, animals, water sports and the council house (see design/growth-plan) ----
+    const LOGF = (k, S) => { if (S && typeof location !== 'undefined' && /[?&]log\b/.test(location.search)) console.log('FAC', k, S.C.x.toFixed(0), S.C.z.toFixed(0)); };
+    // Merge simple parts into one geometry, so repeated things (animals, rocks) can be instanced
+    const mergeG = (parts) => {
+      const gs = parts.map(([g, m]) => { const x = (g.index ? g.toNonIndexed() : g.clone()); x.deleteAttribute('uv'); x.applyMatrix4(m); return x; });
+      const n = gs.reduce((s, g) => s + g.attributes.position.count, 0), P = new Float32Array(n * 3), N = new Float32Array(n * 3); let o = 0;
+      gs.forEach((g) => { P.set(g.attributes.position.array, o * 3); N.set(g.attributes.normal.array, o * 3); o += g.attributes.position.count; });
+      const out = new THREE.BufferGeometry(); out.setAttribute('position', new THREE.BufferAttribute(P, 3)); out.setAttribute('normal', new THREE.BufferAttribute(N, 3)); return out;
+    };
+    const M4 = (x, y, z, sx = 1, sy = 1, sz = 1, rz = 0, ry = 0) => new THREE.Matrix4().compose(new THREE.Vector3(x, y, z), new THREE.Quaternion().setFromEuler(new THREE.Euler(0, ry, rz)), new THREE.Vector3(sx, sy, sz));
+    const legs = (L, h, x, z, r = 0.07) => [[x, z], [x, -z], [-x, z], [-x, -z]].map(([a, b]) => [new THREE.CylinderGeometry(r, r * 0.8, h, 5), M4(a, h / 2, b)]);
+    const ANIM = {
+      horse: mergeG([[new THREE.SphereGeometry(1, 10, 8), M4(0, 1.45, 0, 1.1, 0.48, 0.36)], [new THREE.CylinderGeometry(0.17, 0.26, 0.95, 6), M4(0.95, 1.85, 0, 1, 1, 1, -0.65)],
+        [new THREE.BoxGeometry(0.6, 0.24, 0.22), M4(1.4, 2.18, 0, 1, 1, 1, -0.55)], [new THREE.CylinderGeometry(0.04, 0.09, 0.8, 5), M4(-1.15, 1.2, 0, 1, 1, 1, 0.35)], ...legs(0, 1.2, 0.72, 0.2)]),
+      sheep: mergeG([[new THREE.SphereGeometry(1, 9, 7), M4(0, 0.68, 0, 0.62, 0.4, 0.38)], [new THREE.SphereGeometry(0.17, 7, 5), M4(0.62, 0.82, 0)], ...legs(0, 0.42, 0.36, 0.17, 0.05)]),
+      goat: mergeG([[new THREE.SphereGeometry(1, 9, 7), M4(0, 0.72, 0, 0.55, 0.3, 0.26)], [new THREE.CylinderGeometry(0.08, 0.1, 0.4, 5), M4(0.52, 0.95, 0, 1, 1, 1, -0.5)], [new THREE.BoxGeometry(0.32, 0.15, 0.14), M4(0.72, 1.12, 0, 1, 1, 1, -0.4)], ...legs(0, 0.5, 0.33, 0.13, 0.04)]),
+      hen: mergeG([[new THREE.SphereGeometry(0.2, 7, 5), M4(0, 0.3, 0, 1.2, 1, 0.9)], [new THREE.SphereGeometry(0.09, 6, 4), M4(0.2, 0.48, 0)]]),
+      dog: mergeG([[new THREE.SphereGeometry(1, 8, 6), M4(0, 0.45, 0, 0.42, 0.18, 0.15)], [new THREE.SphereGeometry(0.13, 7, 5), M4(0.45, 0.6, 0, 1.2, 1, 0.9)], ...legs(0, 0.34, 0.28, 0.09, 0.035)]),
+    };
+    const animM = {horse: mat(0x6e4a30, {roughness: 0.8}), horse2: mat(0x3a2e26, {roughness: 0.8}), horse3: mat(0xc9b294, {roughness: 0.8}), sheep: mat(0xeeeadf, {roughness: 1}), goat: mat(0xb08a5e, {roughness: 0.9}), hen: mat(0xa8603a, {roughness: 0.9}), dog: mat(0x8a6a4a, {roughness: 0.9}), dog2: mat(0x2e2a26, {roughness: 0.9})};
+    const animal = (name, kind, q, a, m = kind) => place(name + '-' + m, ANIM[kind], animM[m], new THREE.Vector3(q.x, 0.3, q.z), rad(a));
+    // A timber post-and-rail fence round an organic outline; the gap at `gate` (radians) is the gate
+    const fpostG = new THREE.CylinderGeometry(0.07, 0.08, 1.3, 5); fpostG.translate(0, 0.65, 0);
+    const fence = (name, c, R, ph, gate = null) => {
+      const f = (a) => R * (1 + 0.12 * Math.sin(2 * a + ph) + 0.06 * Math.sin(3 * a + 2 * ph)), pts = [];
+      const n = Math.max(12, Math.round(2 * Math.PI * R / 3.2));
+      for (let i = 0; i <= n; i++) { const a = (i / n) * 2 * Math.PI; if (gate !== null && Math.abs(((a - gate + 3 * Math.PI) % (2 * Math.PI)) - Math.PI) < 1.6 / R) { if (pts.length > 1) rails(pts); pts.length = 0; continue; }
+        const x = c.x + Math.cos(a) * f(a), z = c.z + Math.sin(a) * f(a); pts.push(new THREE.Vector3(x, 0, z)); if (i < n) place(name, fpostG, timberF, new THREE.Vector3(x, 0.3, z)); }
+      if (pts.length > 1) rails(pts);
+      return f;
+    };
+    const rails = (pts) => { for (const h of [0.75, 1.3]) { const cv = new THREE.CatmullRomCurve3(pts.map((p) => p.clone().setY(h))); add(new THREE.Mesh(new THREE.TubeGeometry(cv, pts.length * 3, 0.04, 4, false), timberF)); } };
+    // Rocks with irregular faces; a waterfall: boulders piled into a crescent, two falls of moving water over a
+    // ledge into a plunge pool ringed by foam, ferns and trees
+    const rockG = (() => { const g = new THREE.IcosahedronGeometry(1, 1), p = g.attributes.position;
+      for (let k = 0; k < p.count; k++) { const x = p.getX(k), y = p.getY(k), z = p.getZ(k), f = 1 + 0.2 * Math.sin(5 * x + 2 * y) + 0.13 * Math.cos(4 * z - 3 * y); p.setXYZ(k, x * f, y * f * 0.75, z * f); }
+      g.computeVertexNormals(); return g; })();
+    const rockM = mat(0x8c867a, {roughness: 0.95, map: TX.repeated(TX.gravel(), 0.6, 0.6)}), mossM = mat(0x7a8a55, {roughness: 1, map: TX.repeated(TX.gravel(), 0.6, 0.6)});
+    const foamM = mat(0xf4fafc, {roughness: 0.4, transparent: true, opacity: 0.75, depthWrite: false});
+    const fallTex = TX.repeated(TX.water(), 1, 2.5); FLOW.push(fallTex);
+    const fallM = atNight(mat(0xe6f4f8, {roughness: 0.15, metalness: 0.1, transparent: true, opacity: 0.88, map: fallTex, side: THREE.DoubleSide}), warm(0x5fa8c8, 0.5));
+    let rs = 11; const rr = () => ((rs = (rs * 16807) % 2147483647) / 2147483647);
+    const waterfall = (C, face, H, W, poolR) => {
+      // face: the direction (degrees, plan) the falls look towards; rocks pile up behind
+      const fx = Math.cos(rad(face)), fz = -Math.sin(rad(face)), sx = -fz, sz = fx;
+      const at = (s, b, y = 0) => new THREE.Vector3(C.x + sx * s - fx * b, y, C.z + sz * s - fz * b);
+      blobAt(C, poolR + 2, face, ground(0xa79c74, TX.gravel(), 6, 0.35), 0.31); blobAt(C, poolR, face + 1, poolM, 0.35);
+      // boulders: a crescent ridge behind the pool, highest at the back, with a notch where the water falls
+      for (let i = 0; i < 46; i++) {
+        const t = (i / 45) * 2 - 1, back = poolR * 0.55 + (rr() * 0.5 + 0.2) * H * 0.9, s = t * (W * 0.6 + poolR * 0.6) + (rr() - 0.5) * 1.5;
+        const notch = Math.abs(s) < W * 0.55, hk = (1 - 0.55 * Math.abs(t)) * (notch ? 0.9 : 1), sc = 1.3 + rr() * 1.8 + H * 0.12 * hk;
+        const q = at(s, notch ? back * 1.45 + H * 0.25 + 2 : back, 0); const m = new THREE.Mesh(rockG, i % 5 === 2 ? mossM : rockM);
+        m.position.set(q.x, Math.max(0.4, H * hk * (0.35 + rr() * 0.75) - sc * 0.3), q.z); m.scale.set(sc * (1 + rr() * 0.6), sc * (0.8 + rr() * 0.6), sc * (1 + rr() * 0.5)); m.rotation.y = rr() * 6; m.castShadow = true; add(m);
+        // the ridge stands on a base of larger stones
+        if (i % 3 === 0) { const b = new THREE.Mesh(rockG, rockM); b.position.copy(q).setY(0.5); b.scale.set(sc * 1.6, sc * 0.9, sc * 1.4); b.rotation.y = rr() * 6; add(b); }
+      }
+      // the two falls: an upper sheet from the crest to a ledge, a wider lower sheet to the pool
+      const sheet = (w, h0, h1, b0, b1) => { const g = new THREE.PlaneGeometry(w, 1, 8, 10), p = g.attributes.position;
+        for (let k = 0; k < p.count; k++) { const u = p.getX(k), v = p.getY(k) + 0.5, y = h1 + (h0 - h1) * v, b = b1 + (b0 - b1) * Math.pow(v, 0.6) + 0.25 * Math.sin(u * 2.3 + v * 4); const q = at(u * (0.85 + 0.25 * (1 - v)), b, y); p.setXYZ(k, q.x, q.y, q.z); }
+        g.computeVertexNormals(); const m = new THREE.Mesh(g, fallM); add(m); };
+      const ledge = H * 0.45, back = poolR * 0.55 + H * 0.35;
+      sheet(W * 0.55, H, ledge, back + 1.2, back * 0.7);
+      sheet(W * 0.8, ledge, 0.36, back * 0.7 - 0.2, poolR * 0.35);
+      const lg = new THREE.Mesh(rockG, rockM); lg.position.copy(at(0, back * 0.7 + 0.8, ledge - 0.9)); lg.scale.set(W * 0.5, 1, 2.2); add(lg);
+      { const fo = new THREE.Shape(); for (let k = 0; k <= 40; k++) { const an = (k / 40) * 2 * Math.PI, rq = W * 0.42 * (1 + 0.3 * Math.sin(3 * an) + 0.15 * Math.cos(5 * an)), q = at(Math.cos(an) * rq * 1.3, poolR * 0.32 + Math.sin(an) * rq * 0.6, 0); k ? fo.lineTo(q.x, -q.z) : fo.moveTo(q.x, -q.z); }
+        const g = new THREE.ShapeGeometry(fo); g.rotateX(-Math.PI / 2); const m = new THREE.Mesh(g, foamM); m.position.y = 0.38; add(m); }
+      for (let i = 0; i < 14; i++) { const a = face + 180 + (i / 13 - 0.5) * 230, q = new THREE.Vector3(C.x + Math.cos(rad(a)) * (poolR + 3 + rr() * 4), 0, C.z - Math.sin(rad(a)) * (poolR + 3 + rr() * 4));
+        treePts.push([q.x, q.z, i % 3 ? 0.35 : 0.7, cur.userData.from, 4, i % 3 ? 2 : (i % 2 ? 1 : 0)]); }
+      for (let k = 0; k < 4; k++) { const q = at(0, -poolR * 0.4, 0); glow('cool', q.x + (k - 1.5) * 1.5, 0.6, q.z); }
+      footC('pavilion', C.x, C.z, poolR + 2); block(C.x, C.z, poolR + 6); FAC.push({x: C.x, z: C.z, R: poolR + 4});
+    };
+    const barn = (S, x, y, L, W, H) => { const q = S.at(x, y), b = new THREE.Mesh(new THREE.BoxGeometry(L, H, W), timberF); b.position.copy(q).setY(H / 2 + 0.3); b.rotation.y = rad(S.a + 90); b.castShadow = true; add(b); footM('workshop', b);
+      const r = new THREE.Mesh(new THREE.CylinderGeometry(W / 2 + 0.6, W / 2 + 0.6, L + 0.8, 18, 1, false, -Math.PI / 2, Math.PI), capM); r.rotation.set(0, rad(S.a + 90), Math.PI / 2); r.rotation.order = 'YXZ'; r.scale.set(0.45, 1, 1); r.position.copy(q).setY(H + 0.3); add(r);
+      glow('window', q.x, 2, q.z); return b; };
+    const sandM = ground(0xd6c49a, TX.gravel(), 6, 0.3), hayM = ground(0xc9c27c, TX.meadow(), 14, 0.3), lawnM = ground(0x93b061, TX.grass(37), 10, 0.25);
+
+    // Council house (Phase 2): a round timber hall with an oculus on the north side of the plaza, the place feng
+    // shui gives the main hall, with its back to the north and its front open to the plaza and the spire. The
+    // council (one member for every 50 residents) sits in a circle with no raised seat; the public gallery rings it.
+    layer(2);
+    { const S = find(64, 75, 11.5, null, 6); LOGF('councilHouse', S);
+      if (S) { I('councilHouse'); const C = S.C;
+        const base = new THREE.Mesh(new THREE.CylinderGeometry(11, 11.3, 0.6, 40), stoneM); base.position.copy(C).setY(0.3); add(base);
+        const wall = new THREE.Mesh(new THREE.CylinderGeometry(9.2, 9.2, 4.2, 40, 1, true), glassM); wall.position.copy(C).setY(2.7); add(wall);
+        const roof = new THREE.Mesh(new THREE.SphereGeometry(10.6, 40, 12, 0, Math.PI * 2, 0.32, Math.PI / 2 - 0.32), pavM(0xcf9f68)); roof.scale.y = 0.42; roof.position.copy(C).setY(4.6); roof.castShadow = true; add(roof); footC('pavilion', C.x, C.z, 11);
+        const oc = new THREE.Mesh(new THREE.TorusGeometry(3.4, 0.35, 6, 32), deckTM); oc.rotation.x = Math.PI / 2; oc.position.copy(C).setY(8.75); add(oc);
+        for (let i = 0; i < 12; i++) { const q = C.clone().add(polar0(9.2, i * 30)); const col = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.26, 4.4, 8), deckTM); col.position.copy(q).setY(2.6); add(col); }
+        flat(new THREE.CircleGeometry(4, 32), deckTM, 0.62).position.set(C.x, 0.62, C.z); glow('halo', C.x, 1, C.z, 34);
+        for (let i = 0; i < 8; i++) { const g = C.clone().add(polar0(9.6, i * 45)); glow('window', g.x, 2.4, g.z); }
+        I(null); } }
+
+    // Spire Park (Phase 1): ring 2 becomes a park round the spire. Groves and open lawns alternate, with a
+    // wildflower meadow and a rock garden whose waterfall drops into a still pool. The groves stand on the
+    // north side, the higher ground, and the lawns open to the south (an armchair in small).
+    layer(1);
+    { I('spirePark'); const g = flat(new THREE.RingGeometry(36.4, 79.6, 160, 1), lawnM, 0.2); g.receiveShadow = true; I(null);
+      const S = find(64, 135, 11, null, 8); LOGF('parkFalls', S);
+      if (S) { I('waterfall'); waterfall(S.C, S.a + 180, 6.5, 6, 6.5); I(null); }
+      let n = 0;
+      for (let r = 39; r <= 78; r += 3.1) for (let d = 0; d < 360; d += (3.6 / r) * 180 / Math.PI) {
+        const q = polar(r + 1.2 * Math.sin(d * 0.21), d + 0.8 * Math.sin(r * 0.5)), x = q.x, z = q.z;
+        const north = Math.sin(rad(d + twist(r))) * 0.5, gv = Math.sin(x / 8.5) + Math.sin(z / 10 + 1.3) + Math.sin((x - z) / 12.5) + north;
+        if (gv < 0.25) continue;
+        if (!clearAt(x, z, 1.6)) continue;
+        treePts.push([x, z, 0.5 + 0.35 * ((n * 13) % 7) / 6, 1, 4, n % 6 === 1 ? 1 : (n % 9 === 4 ? 2 : 0)]); n++;
+      }
+      LOGF('parkTrees', {C: {x: n, z: 0}}); }
+
+    // Lake falls (Phase 1): where the lake spills into the creek, the water drops over a rock sill into a pool
+    { const a = Math.PI / 2 + 0.35, R = lakeR(a); let C = null;
+      for (let k = 0; k < 40 && !C; k++) { const aa = a + (k % 2 ? 1 : -1) * Math.floor((k + 1) / 2) * 0.05, rq = lakeR(aa) + 16; const x = LAKE.x + Math.cos(aa) * rq, z = LAKE.z + Math.sin(aa) * rq; if (!wet(x, z, 7) && clearAt(x, z, 9)) C = {x, z, aa}; }
+      if (C) { I('lakeFalls'); waterfall(C, Math.atan2(-(LAKE.z - C.z), LAKE.x - C.x) * 180 / Math.PI, 7.5, 7, 7); LOGF('lakeFalls', {C}); I(null); } else console.warn('no lake falls', R); }
+
+    // Care farm (Phase 1): a barn, hen house and run, goats and sheep in paddocks, beehives on the orchard
+    // edge and a duck pond, beside a radial path that the hamlet runs out to the farm and the orchard
+    radial(180, PHASES[1].extent + 18, 446, 4);
+    { const S = find(418, 173, 0, caps(64, 38), 18); LOGF('careFarm', S);
+      if (S) { capsBlock(S, 64, 38); I('careFarm'); barn(S, 0, 10, 20, 9, 4.2);
+        const P1 = S.at(-17, -4), P2 = S.at(17, -4);
+        fence('fpostC', P1, 12, 0.4, rad(S.a)); fence('fpostC', P2, 12, 1.7, rad(S.a));
+        for (let i = 0; i < 6; i++) { animal('farm', 'goat', P1.clone().add(polar0(3 + (i % 3) * 2.5, i * 63)), i * 47); animal('farm', 'sheep', P2.clone().add(polar0(2.5 + (i % 3) * 3, i * 58 + 20)), i * 61 + 10); }
+        const hq = S.at(-25, 12), hh = new THREE.Mesh(new THREE.BoxGeometry(3, 2, 2.2), redM); hh.position.copy(hq).setY(1.3); hh.rotation.y = rad(S.a); add(hh);
+        for (let i = 0; i < 10; i++) animal('farm', 'hen', S.at(-25 + (i % 5) * 1.6 - 3, 7 + Math.floor(i / 5) * 1.5), i * 37);
+        const hiveG = new THREE.BoxGeometry(0.6, 0.7, 0.5); hiveG.translate(0, 0.35, 0); const hiveM = mat(0xe8d9a8, {roughness: 0.7});
+        for (let i = 0; i < 6; i++) place('hive', hiveG, hiveM, S.at(8 + i * 2.2, 17).setY(0.3));
+        const dq = S.at(26, 12); blobAt(dq, 4.5, 2.1, poolM, 0.34); for (let i = 0; i < 3; i++) animal('farm', 'hen', dq.clone().add(polar0(1.5 + i, i * 110)), i * 90);
+        I(null); } }
+
+    // Dog parks: fenced, off the lead, with a double gate and shade trees; one per phase near the homes
+    const dogPark = (r, d, R, span) => { const S = find(r, d, R + 2, null, span); LOGF('dogPark', S);
+      if (S) { I('dogPark'); blobAt(S.C, R, 1.1, lawnM, 0.24); fence('fpostD', S.C, R, 1.1, rad(S.a + 180));
+        for (let i = 0; i < 4; i++) { const q = S.C.clone().add(polar0(R * 0.55, i * 90 + 30)); animal('dog', 'dog', q, i * 80, i % 2 ? 'dog' : 'dog2'); }
+        for (let i = 0; i < 3; i++) { const q = S.C.clone().add(polar0(R * 0.7, i * 120 + 75)); treePts.push([q.x, q.z, 0.7, cur.userData.from, 4, 0]); }
+        I(null); } };
+    dogPark(262, 172, 13, 30);
+
+    // Phase 2 · Village
+    layer(2);
+    // Festival meadow by the south-east hub: a natural grass bowl with a timber stage shell, for concerts,
+    // festivals and the yearly gatherings (4,500 m² of lawn: about 3,000 people at 1.5 m² each)
+    { const S = find(421, 300, 0, caps(110, 58), 30); LOGF('festivalMeadow', S); if (S) AIMS.push([S.C.x, S.C.z, 70]);
+      if (S) { capsBlock(S, 110, 58); I('festivalMeadow');
+        const sh = new THREE.Shape(); for (let i = 0; i <= 120; i++) { const t = i / 120 * 2 * Math.PI, x = 53 * Math.cos(t), z = 27 * Math.sin(t) * (1 + 0.08 * Math.cos(t)); i ? sh.lineTo(x, z) : sh.moveTo(x, z); }
+        const g = new THREE.ShapeGeometry(sh); g.rotateX(-Math.PI / 2); const m = new THREE.Mesh(g, lawnM); m.position.copy(S.C).setY(0.24); m.rotation.y = rad(S.a + 90); m.receiveShadow = true; add(m);
+        const st = S.at(44, 0), shell = new THREE.Mesh(new THREE.SphereGeometry(11, 28, 12, 0, Math.PI, 0, Math.PI / 2), pavM(0xc79a64)); shell.material.side = THREE.DoubleSide;
+        shell.scale.set(1, 0.8, 0.85); shell.position.copy(st).setY(1.2); shell.rotation.y = rad(S.a + 180); shell.castShadow = true; add(shell); footC('pavilion', st.x, st.z, 11);
+        const deck = new THREE.Mesh(new THREE.CylinderGeometry(10, 10.5, 1.2, 32, 1, false, 0, Math.PI), deckTM); deck.position.copy(st).setY(0.6); deck.rotation.y = rad(S.a + 180); add(deck);
+        for (let i = 0; i < 4; i++) { const q = S.at(-20 + i * 14, 24 * (i % 2 ? 1 : -1)); const tw = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.3, 9, 6), deckTM); tw.position.copy(q).setY(4.8); add(tw); glow('lamp', q.x, 9.3, q.z); }
+        I(null); } }
+    // Riding stables: a timber barn for about ten horses, a sand arena and paddocks, in the food belt
+    { const S = find(421, 335, 0, caps(104, 54), 30); LOGF('stables', S); if (S) AIMS.push([S.C.x, S.C.z, 70]);
+      if (S) { capsBlock(S, 104, 54); I('stables'); barn(S, -36, 12, 26, 10, 4.6);
+        const ar = new THREE.Shape(); for (let i = 0; i <= 80; i++) { const t = i / 80 * 2 * Math.PI, x = 15 * Math.cos(t), z = 9 * Math.sin(t); i ? ar.lineTo(x, z) : ar.moveTo(x, z); }
+        const ag = new THREE.ShapeGeometry(ar); ag.rotateX(-Math.PI / 2); const am = new THREE.Mesh(ag, sandM); am.position.copy(S.at(-30, -10)).setY(0.27); am.rotation.y = rad(S.a + 90); add(am);
+        fence('fpostS', S.at(-30, -10), 13, 0.2, rad(S.a + 90));
+        const P1 = S.at(8, 0), P2 = S.at(36, 2);
+        blobAt(P1, 16, 0.5, hayM, 0.24); blobAt(P2, 13, 2.4, hayM, 0.24);
+        fence('fpostS', P1, 16, 0.5, rad(S.a + 180)); fence('fpostS', P2, 13, 2.4, rad(S.a + 180));
+        ['horse', 'horse2', 'horse3', 'horse', 'horse2'].forEach((m, i) => animal('stable', 'horse', P1.clone().add(polar0(3 + (i % 3) * 3.5, i * 72)), i * 67, m));
+        ['horse3', 'horse', 'horse2', 'horse'].forEach((m, i) => animal('stable', 'horse', P2.clone().add(polar0(2.5 + (i % 2) * 4, i * 90 + 40)), i * 53 + 20, m));
+        animal('stable', 'horse', S.at(-30, -10), S.a, 'horse2');
+        I(null); } }
+    // Boathouse and paddle club on the lake: kayaks, canoes, paddleboards and small sailing dinghies
+    { let C = null;
+      for (let k = 0; k < 60 && !C; k++) { const aa = -0.3 + (k % 2 ? 1 : -1) * Math.floor((k + 1) / 2) * 0.06, rq = lakeR(aa) + 14; const x = LAKE.x + Math.cos(aa) * rq, z = LAKE.z + Math.sin(aa) * rq; if (clearAt(x, z, 9)) C = {x, z, aa}; }
+      LOGF('boathouse', C && {C});
+      if (C) { I('boathouse'); const o = Math.atan2(-(LAKE.z - C.z), LAKE.x - C.x), v = [Math.cos(o), -Math.sin(o)], u = [-v[1], v[0]], Sb = {C: new THREE.Vector3(C.x, 0, C.z), a: o * 180 / Math.PI, at: (x, y) => new THREE.Vector3(C.x + u[0] * x + v[0] * y, 0, C.z + u[1] * x + v[1] * y)};
+        hallF(Sb, 0, 0, 18, 9, 5, 0xc7955f, 'workshop'); FAC.push({x: C.x, z: C.z, R: 9}); block(C.x, C.z, 10);
+        const dx = LAKE.x - C.x, dz = LAKE.z - C.z, L = Math.hypot(dx, dz), ux = dx / L, uz = dz / L;
+        const jet = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.3, 26), deckTM); jet.position.set(C.x + ux * 19, 0.6, C.z + uz * 19); jet.rotation.y = Math.atan2(ux, uz); add(jet);
+        const kayM = [mat(0xd9533a), mat(0xe8b13a), mat(0x3a7fb0), mat(0x5aa05a)], kG = new THREE.SphereGeometry(1, 10, 6); kG.scale(2.3, 0.22, 0.38);
+        for (let i = 0; i < 8; i++) { const t = 22 + (i % 4) * 7, s = (i < 4 ? -1 : 1) * (6 + (i % 3) * 3); const k = new THREE.Mesh(kG, kayM[i % 4]); k.position.set(C.x + ux * t - uz * s, 0.45, C.z + uz * t + ux * s); k.rotation.y = i * 0.7; add(k); }
+        const sailM = mat(0xf7f4ec, {roughness: 0.6, side: THREE.DoubleSide}), hullG2 = new THREE.SphereGeometry(1, 12, 6, 0, 2 * Math.PI, Math.PI / 2, Math.PI / 2); hullG2.scale(2.4, 0.6, 0.9);
+        for (let i = 0; i < 3; i++) { const t = 45 + i * 16, s = (i - 1) * 18, x = C.x + ux * t - uz * s, z = C.z + uz * t + ux * s; if (!inLake(x, z, -8)) continue;
+          const h = new THREE.Mesh(hullG2, mat(0xffffff, {roughness: 0.4})); h.position.set(x, 0.62, z); h.rotation.y = i * 1.3; add(h);
+          const sg = new THREE.BufferGeometry(); sg.setAttribute('position', new THREE.Float32BufferAttribute([0, 0.7, 0, 0, 6.5, 0, -2.6, 0.9, 0], 3)); sg.computeVertexNormals();
+          const sl = new THREE.Mesh(sg, sailM); sl.position.set(x + 0.4, 0.4, z); sl.rotation.y = i * 1.3; add(sl); }
+        I(null); } }
+    dogPark(424, 100, 16, 30);
+
+    // Phase 3 · Town
+    layer(3);
+    // Concert and event hall by the south-east hub: about 1,000 seats under a flowing timber roof, with a
+    // glass foyer facing the festival meadow
+    { const S = find(640, 300, 0, caps(72, 46), 24); LOGF('eventHall', S);
+      if (S) { capsBlock(S, 72, 46); I('eventHall'); const h = hallF(S, 0, 4, 64, 36, 15, 0xd2a46e);
+        const fy = new THREE.Mesh(new THREE.CylinderGeometry(12, 12, 6, 32, 1, true, 0, Math.PI), glassM); fy.position.copy(S.at(0, -14)).setY(3.3); fy.rotation.y = rad(S.a + 90); add(fy);
+        for (let i = 0; i < 10; i++) { const q = S.at(-30 + i * 6.6, -19); glow('window', q.x, 2.5, q.z); }
+        I(null); } }
+    dogPark(640, 60, 18, 30); dogPark(640, 230, 18, 30);
     I(null);
   }
 
@@ -1497,7 +1690,52 @@ export function buildCity(scene, env = null) {
   // Leaf colours vary per tree, from deep green to olive and the odd autumn-touched crown
   const leafC = [0x56733a, 0x5f7a3d, 0x4d6a35, 0x6b8442, 0x738a3f, 0x47612f, 0x7d8a45].map((c) => new THREE.Color(c));
   const tint = new THREE.Color();
+  // Woods and open meadows. Woodland patches stand where nothing is ever built in any phase: denser on the
+  // north (the feng shui back), then the east and west flanks, thinner to the open south over the river.
+  // Hay meadows are kept open as fields, with the scattered trees inside them cleared.
+  {
+    const FG = 30, fgrid = new Map(), putF = (x, z, it) => { const k = Math.floor(x / FG) + ',' + Math.floor(z / FG); if (!fgrid.has(k)) fgrid.set(k, []); fgrid.get(k).push(it); };
+    FOOT.forEach((f) => { const pts = f.c ? [f.c] : f.poly, R = f.c ? f.r : 0;
+      const b = pts.reduce((b, q) => [Math.min(b[0], q[0] - R), Math.min(b[1], q[1] - R), Math.max(b[2], q[0] + R), Math.max(b[3], q[1] + R)], [1e9, 1e9, -1e9, -1e9]);
+      for (let x = Math.floor(b[0] / FG); x <= Math.floor(b[2] / FG); x++) for (let z = Math.floor(b[1] / FG); z <= Math.floor(b[3] / FG); z++) { const k = x + ',' + z; if (!fgrid.has(k)) fgrid.set(k, []); fgrid.get(k).push(b); } });
+    paths.forEach((pa) => { if (pa.ring) return; const P = pa.pts; for (let i = 1; i < P.length; i++) { const L = Math.hypot(P[i][0] - P[i - 1][0], P[i][1] - P[i - 1][1]), n = Math.max(1, Math.ceil(L / 3)); for (let k = 0; k <= n; k++) { const t = k / n, x = P[i - 1][0] + (P[i][0] - P[i - 1][0]) * t, z = P[i - 1][1] + (P[i][1] - P[i - 1][1]) * t; putF(x, z, [x - pa.w / 2, z - pa.w / 2, x + pa.w / 2, z + pa.w / 2]); } } });
+    const rings = paths.filter((p) => p.ring).map((p) => [p.r, p.w / 2]).concat([[1035, 3.5]]);
+    const free = (x, z, pad) => {
+      if (wet(x, z, pad) || blocked(x, z, pad) || inObst(x, z, pad)) return false;
+      const R0 = Math.hypot(x, z); if (rings.some(([r, h]) => Math.abs(R0 - r) < h + pad)) return false;
+      const c = fgrid.get(Math.floor(x / FG) + ',' + Math.floor(z / FG)); if (!c) return true;
+      return !c.some((b) => x > b[0] - pad && x < b[2] + pad && z > b[1] - pad && z < b[3] + pad);
+    };
+    let fs = 23; const fr = () => ((fs = (fs * 16807) % 2147483647) / 2147483647);
+    const back = (deg) => { const d = ((deg % 360) + 360) % 360; return d > 40 && d < 140 ? 0.8 : (d <= 40 || d >= 330 || (d >= 140 && d < 210)) ? 0.45 : 0.1; };
+    let nT = 0;
+    for (let r = 300; r <= 1500; r += 64) for (let d = 0; d < 360; d += (64 / r) * 180 / Math.PI) {
+      const dd = d + (fr() - 0.5) * 6, rq = r + (fr() - 0.5) * 30, a = dd + twist(rq), cx = Math.cos(rad(a)) * rq, cz = -Math.sin(rad(a)) * rq;
+      if (fr() > back(a) * (0.6 + 0.4 * Math.sin(cx / 210 + Math.cos(cz / 170)))) continue;
+      const R = 18 + fr() * 26, ph = fr() * 6;
+      for (let x = -R; x <= R; x += 6.5) for (let z = -R; z <= R; z += 6.5) {
+        const px = cx + x + (fr() - 0.5) * 3.4, pz = cz + z + (fr() - 0.5) * 3.4, an = Math.atan2(z, x);
+        if (Math.hypot(x, z) > R * (1 + 0.22 * Math.sin(2 * an + ph) + 0.12 * Math.sin(3 * an + 2 * ph))) continue;
+        if (!free(px, pz, 3)) continue;
+        treePts.push([px, pz, 0.6 + fr() * 0.55, 1, 4, fr() < (back(a) > 0.5 ? 0.45 : 0.2) ? 1 : 0]); nT++;
+      }
+    }
+    // Open hay meadows, mostly in the south and the belts between the woods
+    I('woodland'); layer(1);
+    const MEAD = [[560, 250, 60], [600, 290, 50], [900, 255, 80], [880, 300, 70], [520, 200, 45], [860, 190, 60], [1150, 240, 90], [1180, 300, 80], [560, 340, 45], [900, 345, 60]];
+    const hay = ground(0xc8c47e, TX.meadow(), 16, 0.35);
+    MEAD.forEach(([r, d, R], i) => { const q = polar(r, d), sh = new THREE.Shape();
+      for (let k = 0; k <= 96; k++) { const an = (k / 96) * 2 * Math.PI, rr2 = R * (1 + 0.18 * Math.sin(2 * an + i) + 0.09 * Math.sin(3 * an + 2 * i)), x = q.x + Math.cos(an) * rr2, z = q.z + Math.sin(an) * rr2; k ? sh.lineTo(x, -z) : sh.moveTo(x, -z); }
+      const g = new THREE.ShapeGeometry(sh); g.rotateX(-Math.PI / 2); const o = new THREE.Mesh(g, hay); o.position.y = 0.15; o.receiveShadow = true; add(o);
+      for (let j = treePts.length - 1; j >= 0; j--) { const t = treePts[j]; if (t[5] !== 2 && Math.hypot(t[0] - q.x, t[1] - q.z) < R * 0.85) treePts.splice(j, 1); } });
+    I(null);
+    if (typeof location !== 'undefined' && /[?&]log\b/.test(location.search)) console.log('FAC woods', nT);
+  }
   // Planted beds where paths arrive at squares (queued while the paths were laid)
+  // A planted bed at any path end that points straight at a large facility, so no path runs at its door
+  AIMS.forEach(([cx, cz, R]) => paths.forEach((pa) => { if (pa.ring || pa.pts.length < 2) return; const P = pa.pts;
+    for (const [e, f] of [[P[P.length - 1], P[P.length - 2]], [P[0], P[1]]]) { const dx = e[0] - f[0], dz = e[1] - f[1], L = Math.hypot(dx, dz) || 1;
+      if (Math.hypot(e[0] - cx, e[1] - cz) < R && (dx * (cx - e[0]) + dz * (cz - e[1])) > 0 && !BEDS.some((b) => Math.hypot(b[0] - e[0], b[1] - e[1]) < 7)) BEDS.push([e[0] + dx / L * 4, e[1] + dz / L * 4, pa.from]); } }));
   BEDS.forEach(([x, z, from]) => {
     layer(from);
     flat(new THREE.CircleGeometry(1.8, 20), meadow, 0.34).position.set(x, 0.34, z);
@@ -1612,6 +1850,17 @@ export const VIEWS = {
   green: {pos: [-118, 50, 95], target: [-180, 0, 175], fov: 55, label: 'The village green, field and playground'},
   lakeside: {pos: [-5, 60, 250], target: [-75, 0, 370], fov: 55, label: 'Swimming ponds and retreat cabins by the lake'},
   orchard: {pos: [-300, 55, -30], target: [-400, 0, -95], fov: 55, label: 'The orchard and food forest, planted in Phase 1'},
+  spirepark: {pos: [62, 34, 88], target: [-8, 4, -14], fov: 55, label: 'The Spire Park: lawns, a grove and a waterfall around the spire'},
+  council: {pos: [6, 14, -22], target: [10, 4, -63], fov: 55, label: 'The Council House, a round glass hall facing the spire (Phase 2)'},
+  falls: {pos: [-26, 10, -14], target: [-50, 3, -42], fov: 55, label: 'The park waterfall below the spire'},
+  lakefalls: {pos: [72, 16, 436], target: [64, 3, 471], fov: 55, label: 'Falls where the creek leaves the swimming lake'},
+  carefarm: {pos: [-338, 42, 98], target: [-392, 0, 145], fov: 55, label: 'The care farm: goats, sheep, hens, bees and a duck pond'},
+  dogpark: {pos: [-212, 26, 46], target: [-240, 0, 72], fov: 55, label: 'A fenced dog park off the radial path'},
+  festival: {pos: [250, 62, 218], target: [315, 0, 280], fov: 55, label: 'The festival meadow and stage, for about 3,000 people (Phase 2)'},
+  stables: {pos: [370, 42, -8], target: [419, 0, -39], fov: 55, label: 'Stables, riding arena and paddocks (Phase 2)'},
+  boathouse: {pos: [205, 30, 400], target: [145, 0, 440], fov: 55, label: 'The boathouse: kayaks and sailing dinghies on the lake (Phase 2)'},
+  eventhall: {pos: [468, 72, 268], target: [538, 0, 347], fov: 55, label: 'The covered event hall (Phase 3)'},
+  woods: {pos: [80, 110, -380], target: [-40, 0, -800], fov: 55, label: 'Woods behind the city to the north, open hay meadows to the south'},
   school: {pos: [-200, 60, 230], target: [-280, 0, 300], fov: 55, label: 'The village primary school, Phase 2'},
   sport: {pos: [380, 60, -200], target: [313, 0, -286], fov: 55, label: 'The village sports field, Phase 2'},
   food: {pos: [60, 60, -330], target: [5, 0, -425], fov: 55, label: 'Aquaponics, food hall and fire station, Phase 2'},
@@ -1764,7 +2013,8 @@ export function start(canvas, {interactive = true, view = 'aerial', width, heigh
       camera.position.add(step); controls.target.add(step);
     };
     const loop = (now = performance.now()) => {
-      fly(Math.min(0.1, (now - last) / 1000)); last = now;
+      const dt = Math.min(0.1, (now - last) / 1000); fly(dt); last = now;
+      FLOW.forEach((t) => { t.offset.y = (t.offset.y + dt * 0.9) % 1; });
       controls.update(); renderer.render(scene, camera); requestAnimationFrame(loop);
     };
     loop();

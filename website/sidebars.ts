@@ -32,6 +32,7 @@ const sidebars: SidebarsConfig = {
         'design/planning-principles',
         'design/infrastructure',
         'design/growth-plan',
+        'design/structures',
         'concepts/communospheres',
         'concepts/sacred-geometry',
         'design/visual-language',
