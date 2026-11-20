@@ -23,7 +23,7 @@ Light City is a planned, regenerative community. It starts as a 200-person **pil
 |---|---|---|---|
 | **Residents** | 200 target (150–300) | 1,500 target (1,500–3,000) | 8,000+ (8,000–12,000) |
 | **Built core** | 20–30 acres | 150–300 acres | Long-term master plan |
-| **Communosphere domes** | 3 domes, 30–45 m | 6–12 domes, 45–60 m | 12+ domes, up to 90 m |
+| **Communosphere domes** | 3 domes, 40 m | 8 domes, 40–44 m | 17 domes: 11 on the ring (40–44 m) and 6 district domes (80 m) |
 | **Residents per dome** | 80–120 | 120–200 | up to 400 |
 | **Spire** | 90 m | 150 m (staged) | 240 m |
 | **Temples** | 1 | 3–5 | Network |

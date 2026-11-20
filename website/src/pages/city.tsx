@@ -130,7 +130,7 @@ export default function City(): JSX.Element {
             <thead><tr><th></th><th>Phase 1 · Pilot Hamlet</th><th>Phase 2 · Village</th><th>Phase 3 · Town</th></tr></thead>
             <tbody>
               <tr><th>Residents</th><td>200 (150–300)</td><td>1,500 (1,500–3,000)</td><td>8,000+</td></tr>
-              <tr><th>Domes</th><td>3 domes, 30–45 m</td><td>6–12 domes, 45–60 m</td><td>Up to 90 m, 400 residents each</td></tr>
+              <tr><th>Domes</th><td>3 domes, 40 m</td><td>8 domes, 40–44 m</td><td>17 domes: 11 on the ring, 6 district domes of 80 m</td></tr>
               <tr><th>Spire</th><td>90 m</td><td>150 m</td><td>240 m</td></tr>
               <tr><th>Daily life</th><td>Spire Park, amphitheatre, care farm, swimming pond, small school, health room</td><td>Council House, festival meadow, stables, boathouse, primary school, health centre</td><td>Event hall, sports park, secondary school, town health centre, staffed fire station</td></tr>
               <tr><th>Timing</th><td>Move-in 2031</td><td>Mid-2030s</td><td>2040s+</td></tr>

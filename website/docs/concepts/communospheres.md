@@ -83,13 +83,13 @@ The source describes mega-spheres 600–1,200 ft across, each a self-contained c
 - **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
 - **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
 
-**Phase 2 (mid-2030s, after Phase 1 proves out)**: 6-12 domes expansion
+**Phase 2 (mid-2030s, after Phase 1 proves out)**: 8 domes (five new at 44 m)
 - **Size**: 45-60 m diameter (150-200 ft)
 - **Capacity**: 120-200 residents per dome
 - **Total in domes**: 720-2,400 residents (Village total 1,500-3,000 including ring housing)
 - **Clustered**: Outer ring arrangement, connected by covered walkways
 
-**Phase 3 (Long-term vision)**: 12+ domes
+**Phase 3 (Long-term vision)**: 17 domes (11 on the ring, 6 district domes)
 - **Size**: 60-90 m diameter (200-300 ft)
 - **Capacity**: 200-400 residents per dome
 - **Total in domes**: 2,400-4,800+ residents (Town total 8,000+ including ring housing)
@@ -209,8 +209,8 @@ See [Energy Systems](/docs/concepts/energy-systems) for detailed research protoc
 
 **Number** (Phased Approach):
 - **Phase 1**: 3 domes (200 residents target, 150-300 range)
-- **Phase 2**: 6-12 domes (720-2,400 residents in domes; Village 1,500 target)
-- **Phase 3**: 12+ domes (2,400-4,800+ residents in domes; Town 8,000+)
+- **Phase 2**: 8 domes (720-2,400 residents in domes; Village 1,500 target)
+- **Phase 3**: 17 domes (2,400-4,800+ residents in domes; Town 8,000+)
 - **In the source**: 12 mega-spheres for 60,000–120,000 people, used only as inspiration
 
 **Architecture**:

@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a crystal spire of faceted solar glass with a glass point, ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
+        <img className="hero-img" src={img('hero')} alt="Golden-hour view across the Phase 1 garden town toward a broad twelve-sided crystal spire of blue, violet, amber and clear glass, with glass domes, curving paths and green-roofed homes" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
@@ -397,8 +397,8 @@ export default function Home(): JSX.Element {
               <figcaption><span>Delphin · visionary archetype, not a real place</span>As the source describes it: a 40,000 ft spire and spheres for 10,000 people</figcaption>
             </figure>
             <figure className="cmp cmp-b">
-              <img src={img('vision-1')} alt="Concept art of Light City: a circular white city with a glowing central spire on a lake among mountains" width="1216" height="832" loading="lazy" />
-              <figcaption><span>Light City · Earth</span>Spire 60–300 m · spheres for 80–400 people · CLT, BIPV, geodesic</figcaption>
+              <img src={img('city-phase-3')} alt="Aerial view of Light City in Phase 3: a faceted crystal spire with a wind crown at the centre of curved green-roofed terraces, glass domes, canal rings and solar fields" width="1600" height="900" loading="lazy" />
+              <figcaption><span>Light City · Earth</span>Spire 90–240 m · spheres for 80–400 people · CLT, BIPV, geodesic</figcaption>
             </figure>
             <figure className="cmp cmp-c">
               <img src={img('borobudur')} alt="Stone stupas of Borobudur temple at sunrise" width="1000" height="562" loading="lazy" />
