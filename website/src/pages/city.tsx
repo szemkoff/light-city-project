@@ -56,12 +56,12 @@ export default function City(): JSX.Element {
       <Section id="structures" eyebrow="Key structures" title="What gets built, and how ready it is." lead="Each structure shows its Technology Readiness Level (TRL): 9 means proven at scale, 1 means early research.">
         <Feature to="/docs/design/architecture#the-central-spire"
           img="spire"
-          alt="The Crystal Point spire: a six-sided prism of milky solar glass with a faceted glass point, rising over domes and lawns at sunset"
+          alt="The Crystal Point spire: a six-sided crystal of rainbow-tinted glass diamonds narrowing to a sharp point, rising over domes and green-roofed buildings at sunset"
           kicker="Central sanctum"
           title="The Crystal Point spire"
           tag="TRL 4–5 at full scale"
           specs={[['Height', '90 m → 150 m → 240 m'], ['Structure', 'Steel diagrid, solar glass, concrete core'], ['Energy', 'Solar glass + 6 helical wind turbines'], ['Role', 'Landmark, observatory, civic halls']]}>
-          <p>Shaped like a natural quartz point: a six-sided prism of milky solar glass on a slender steel diagrid, a little wider at the foot, ending in a faceted glass point. It is the city's orientation point, seen from every path by day and glowing softly at night. Inside are a base hall, a gathering level, an enclosed observatory at 72 m, a water tank for the town, a learning level and a star room.</p>
+          <p>Shaped like a natural quartz point: six flat faces of rainbow-tinted solar glass diamonds on a white steel diagrid, narrowing in one long curve to a sharp crystal point. It is the city's orientation point, seen from every path by day and glowing softly at night. Inside are a base hall, a gathering level, an enclosed observatory at 72 m, a water tank for the town, a learning level and a star room.</p>
           <p>In Phase 3 the top opens into a wind crown: six helical turbines, three per level, the upper row turned 60 degrees. Together with the solar glass they give very roughly 0.5–1 GWh a year, a supplement rather than the city's supply. The foundation is sized for 240 m from the start, so later phases add sections on top instead of rebuilding, as the Shukhov Tower in Moscow was built from stacked sections. <a href="pathname:///model/index.html?phase=3&amp;view=spire">See it in 3D</a>.</p>
         </Feature>
         <Feature to="/docs/concepts/communospheres"
