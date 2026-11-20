@@ -2,7 +2,7 @@
 <rect width="2000" height="1400" fill="#faf8f3"/>
 <text x="40" y="58" font-size="34" font-weight="bold" fill="#222">Crystal Point spire: inside plan</text>
 <text x="40" y="92" font-size="19" fill="#555">Section through the tower, base hall plan and sky observatory plan. Heights in metres; the crystal is built in sections: 90 m (Phase 1), 150 m (Phase 2), 240 m (Phase 3).</text>
-<polygon points="117,1290 127,1173 135,1056 141,939 147,822 157,705 166,627 178,568 191,526 208,494 219,458 260,354 260,354 301,458 312,494 329,526 342,568 354,627 363,705 373,822 379,939 385,1056 393,1173 403,1290" fill="#e9f1f4" stroke="#7a8f99" stroke-width="3"/>
+<polygon points="117,1290 127,1173 135,1056 141,939 147,822 157,705 166,627 178,568 191,526 208,494 215,460 260,393 260,393 305,460 312,494 329,526 342,568 354,627 363,705 373,822 379,939 385,1056 393,1173 403,1290" fill="#e9f1f4" stroke="#7a8f99" stroke-width="3"/>
 <rect x="170" y="1290.0" width="180" height="31.2" fill="#d9cdb6" stroke="#8a7d66" stroke-width="2"/>
 <line x1="170" y1="1305.6" x2="10" y2="1305.6" stroke="#8a7d66" stroke-width="10"/>
 <text x="15" y="1335.6" font-size="14" fill="#6b604c">service tunnel to the north</text>
@@ -22,8 +22,8 @@
 <rect x="151.82666666666665" y="814.2" width="216.3466666666667" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
 <rect x="158.0933333333333" y="736.2" width="203.81333333333336" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
 <rect x="212.3" y="494.4" width="95.4" height="210.6" fill="#cfe3d0" stroke="#555" stroke-width="1.2"/>
-<rect x="218.89999999999998" y="471.0" width="82.20000000000002" height="15.6" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
-<rect x="226.68270676691728" y="447.6" width="66.63458646616543" height="15.6" fill="#a9a9a9" stroke="#555" stroke-width="1.2"/>
+<rect x="217.10681818181817" y="471.0" width="85.78636363636365" height="15.6" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
+<rect x="227.656976744186" y="447.6" width="64.68604651162795" height="15.6" fill="#a9a9a9" stroke="#555" stroke-width="1.2"/>
 <line x1="260" y1="342.0" x2="260" y2="439.80000000000007" stroke="#555" stroke-width="3"/>
 <line x1="403.35" y1="1305.6" x2="455" y2="1305.6" stroke="#999" stroke-width="1"/>
 <text x="460" y="1310.6" font-size="15.5" fill="#222">Basement: batteries, grid control, pumps and heat store</text>
@@ -50,7 +50,7 @@
 <line x1="350" y1="455.4" x2="455" y2="444.80000000000007" stroke="#999" stroke-width="1"/>
 <text x="460" y="449.80000000000007" font-size="15.5" fill="#222">Sway damper, 214 m: a water tank that steadies the tower in wind</text>
 <line x1="350" y1="396.9" x2="455" y2="396.9" stroke="#999" stroke-width="1"/>
-<text x="460" y="401.9" font-size="15.5" fill="#222">Glass point, 204–240 m: antennas, aviation light, lightning rod</text>
+<text x="460" y="401.9" font-size="15.5" fill="#222">Glass point, 204–230 m, mast to 240 m: antennas, aviation light, lightning rod</text>
 <text x="40" y="140" font-size="15" fill="#444">Lift core: two public lifts, one fire and goods lift and two</text>
 <text x="40" y="162" font-size="15" fill="#444">pressurised stairs; it grows with each new section.</text>
 <text x="40" y="184" font-size="15" fill="#444">Between the floors the crystal is an open light atrium.</text>
