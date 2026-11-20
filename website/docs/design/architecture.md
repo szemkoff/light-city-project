@@ -215,11 +215,11 @@ The source describes a city with these features ([The Archetype](/docs/concepts/
 
 ### The Central Spire
 
-![The Crystal Point spire at sunset: a six-sided prism of milky solar glass with a faceted glass point and an open wind crown, rising over timber domes, lawns and a reflecting pool](/img/home/spire.webp)
+![The Crystal Point spire at sunset: a six-sided crystal of rainbow-tinted glass diamonds narrowing in one long curve to a sharp point, rising over green-roofed timber buildings, glass domes and a reflecting pool](/img/home/spire.webp)
 
 *The Crystal Point spire in Phase 3, 240 m. Concept rendering made on top of the 3D model; [see it in 3D](pathname:///model/index.html?phase=3&view=spire).*
 
-The spire is shaped like a natural quartz point: a six-sided prism with flat faces and sharp corners, a little wider at the foot than at the top, ending in a faceted glass point. It is 38 m across the corners at the foot and 32 m at the crown. The point is cut like a gem: six lower facets rise from the edges to a ring turned 30 degrees, six more fill between them and six upper facets meet at the apex, with a steel rib on every edge and a small glowing crystal inside. The walls are milky solar glass on a slender steel diagrid of large diamonds, so by day it reads as one solid crystal and at night it glows softly from inside.
+The spire is shaped like a natural quartz crystal: six flat faces with sharp corners, 42 m across the corners at the foot, a little fuller (46 m) at about 55 m, then narrowing in one long, smooth curve to a sharp point at 240 m. Every face is cut into tall diamonds of dichroic solar glass in soft rainbow tints (aqua, lilac, rose, gold), with pale glass triangles between them, all on a white steel diagrid; the diamonds get smaller as the crystal narrows. A band of clearer glass marks the observatory at 72 m, and the wind crown higher up is wrapped in near-clear glass louvres, so the crystal keeps one unbroken outline. By day the facets throw rainbow glints; at night it glows softly from inside, with a small inner crystal lit in the point.
 
 ![Section through the Crystal Point spire with every level, and plans of the base hall and the sky observatory](/img/diagrams/central-spire-cross-section.svg)
 
@@ -248,20 +248,20 @@ The source describes a 40,000 ft (about 12 km) crystal spire that powers the who
 | 72 m | Sky observatory: enclosed, double height, with a café and telescopes. Phase 1 top: 90 m |
 | 118 m | Learning level: weather station, climate lab, archive |
 | 138 m | Prism hall: light and sound art, small events. Phase 2 top: 150 m |
-| 156 m | Star room: stargazing and quiet evenings |
-| 166–200 m | Wind crown (not occupied) |
+| 150–186 m | Wind crown (not occupied) |
+| 190 m | Star room: stargazing and quiet evenings |
 | 204 m | Sway damper: a tuned water tank that steadies the tower in wind |
-| 210–240 m | Glass point: radio and emergency antennas, aviation light, lightning rod |
+| 186–240 m | Glass point: radio and emergency antennas, aviation light, lightning rod |
 
 The lift core has two public lifts, a fire and goods lift and two pressurised stairs, and it grows with each section. The skin is a double layer of glass; warm air rises in the gap, like a solar chimney, and draws fresh air through the halls.
 
 #### The wind crown
 
-![The wind crown: six white helical turbines in two rows inside an open steel frame below the glass point, at sunset](/img/structures/spireCrown.webp)
+![The wind crown: six white helical turbines in two rows behind clear glass louvres, below the glass point, at sunset](/img/structures/spireCrown.webp)
 
 ![Plan of the two turbine levels: three turbines at the south, north-east and north-west corners below, three at the other corners above](/img/diagrams/wind-crown-plan.svg)
 
-Between 166 and 200 m the crystal opens into a two-storey wind crown with six helical vertical-axis turbines, about 10 m across and 15 m tall, three per level. The upper row is turned 60 degrees, so together the six fill every corner while the lift core runs up the middle. Helical (Gorlov) blades are a kind of Darrieus turbine with similar or slightly lower efficiency but much smoother torque, which matters on a building ([University of New Hampshire](https://scholars.unh.edu/cgi/viewcontent.cgi?article=1660&context=thesis)). Wind turbines have been built into towers before, at the [Bahrain World Trade Centre](https://www.building.co.uk/focus/harnessing-the-wind-bahrain-world-trade-centre/3123951.article) and the [Pearl River Tower](https://www.buildinggreen.com/feature/folly-building-integrated-wind), and the lessons are clear: vibration and noise must be designed out from the start.
+Between 150 and 186 m the crystal becomes a two-storey wind crown, wrapped in near-clear glass louvres that let the wind through, with six helical vertical-axis turbines, about 7 m across and 14 m tall, three per level. The upper row is turned 60 degrees, so together the six fill every corner while the lift core runs up the middle. Helical (Gorlov) blades are a kind of Darrieus turbine with similar or slightly lower efficiency but much smoother torque, which matters on a building ([University of New Hampshire](https://scholars.unh.edu/cgi/viewcontent.cgi?article=1660&context=thesis)). Wind turbines have been built into towers before, at the [Bahrain World Trade Centre](https://www.building.co.uk/focus/harnessing-the-wind-bahrain-world-trade-centre/3123951.article) and the [Pearl River Tower](https://www.buildinggreen.com/feature/folly-building-integrated-wind), and the lessons are clear: vibration and noise must be designed out from the start.
 
 - **Vibration.** Rubber mounts under every turbine, speed control that brakes the rotors in storms, louvres that calm the gusts, the tuned water damper at 204 m, and no rooms on the turbine floors.
 - **Power.** Very roughly 0.5 to 1 GWh a year from the glass skin and the turbines together. This is a useful supplement and a visible lesson in clean energy, not the city's main supply, which comes from the solar fields and roofs.
