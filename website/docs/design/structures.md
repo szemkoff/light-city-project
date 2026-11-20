@@ -189,6 +189,12 @@ Phase 3 homes in crescents along the rings, two storeys rising to three. Curved 
 
 [See it in the 3D model](pathname:///model/index.html?view=terraces&phase=3) · [Read the full description](/docs/design/organic-forms-and-materials/)
 
+### Courtyard terraces {#cityblock}
+
+Two- and three-storey buildings that fill in the rings as the city grows: timber frames, wide glass, green or solar roofs and balconies, with homes above and studios, cafés and workshops at street level. They curve with the rings, sit between the paths and gardens, and leave room for glass garden halls and trees.
+
+[See it in the 3D model](pathname:///model/index.html?view=close&phase=2) · [Read the full description](/docs/design/architecture/)
+
 ## Neighbourhoods and work
 
 ### District square {#districtsquare}
