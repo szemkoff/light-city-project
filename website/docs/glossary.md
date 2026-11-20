@@ -169,7 +169,7 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **Solid-state battery**: A battery with a solid electrolyte instead of a liquid one, promising higher energy density and safety. Still pilot-scale in 2026. **Emerging**, aimed first at vehicles. See [Technology Horizon](/docs/technical/technology-horizon#emerging--leave-room-for-it-adopt-in-phase-2).
 
-**Spire (Light Spire)**: The central tower, 60–120 m in Phase 1, crowned by a solar canopy. It serves as the city's landmark, energy collector and gathering place.
+**Spire (Light Spire)**: The central tower, the Crystal Point: a twelve-sided faceted glass crystal, 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a wind crown of six turbines in an open lattice under a glass point. It serves as the city's landmark, energy collector and gathering place.
 
 **Superadobe (earthbag)**: Building with long bags filled with moist earth, coiled into domes and vaults. Developed by Nader Khalili at Cal-Earth. Low cost and suited to self-build. **Proven**, though permits vary. See [Beyond the Box](/docs/design/organic-forms-and-materials).
 

@@ -1,6 +1,6 @@
 # Purpose and Mission
 
-![Light City at dusk: timber domes, gardens and a crystal spire of milky solar glass](/img/home/hero.webp)
+![Light City at golden hour: glass domes, gardens and a faceted crystal spire of blue, violet, amber and clear glass](/img/home/hero.webp)
 
 *Light City as we plan to build it: a 200-person hamlet of timber domes, gardens and a solar spire.*
 

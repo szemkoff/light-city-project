@@ -78,7 +78,7 @@ Connection across dimensions:
 
 ## Overall Layout
 
-![Aerial view of the Phase 1 hamlet: three timber domes, gardens and solar fields](/img/home/city-aerial.webp)
+![Aerial view of the Phase 1 hamlet: a faceted crystal spire, three glass domes, ring gardens, homes and solar arrays in meadow](/img/home/city-aerial.webp)
 
 *Phase 1 as planned: three 30–45 m timber domes around a plaza, with gardens and a solar microgrid at the edge.*
 
@@ -118,7 +118,7 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **One spire, built in sections.** The foundation, basement and lift core are sized for the final height in Phase 1. Later phases add glass sections on top and lift the temporary point, then add the wind crown in Phase 3, the way the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) in Moscow was built from stacked sections lifted into place.
 - **Only movable things move.** Solar panels, greenhouses and nursery trees may be relocated. Buildings, paths, mature trees and soil are not.
 
-![Top views of the one model at each phase, side by side: the Phase 1 hamlet with three domes, the Phase 2 village with eight domes and courtyard homes, and the Phase 3 town with eighteen domes and timber terraces](/img/diagrams/model-phases.webp)
+![Top views of the one model at each phase, side by side: the Phase 1 hamlet with three domes, the Phase 2 village with eight domes and courtyard homes, and the Phase 3 town with seventeen domes and timber terraces](/img/diagrams/model-phases.webp)
 
 *Top views of the three 3D models. Each panel is drawn at its own scale.*
 
@@ -132,22 +132,22 @@ The city grows in three phases from one radial plan. It is one interactive 3D mo
 - **Food**: 1-2 ha agroforestry, supplemented by external sources
 - **In the model**: 90 m crystal spire (three glass sections on a base built for 240 m), one temple and two learning pavilions, three 40 m domes, 30 homes on ring 4 in three building methods (earth-sheltered, earthbag and timber with hempcrete; see [Beyond the Box](/docs/design/organic-forms-and-materials#in-the-3d-model)), solar on ring 5, reserved plots as meadow and nursery; a heart lake with a wooded island to the south-west, joined to the plaza by a short canal to a small harbour and a narrow rill that runs between the domes into the plaza pool; low hills to the north at the back; the 12 paths turn in a gentle spiral from the plaza and pass between the domes, which sit in the middle of each sector; each dome's main doors open onto paved forecourts on the ring paths, with side doors onto the radials; a small water yard just behind the hamlet to the north, a treatment garden of reed beds just downhill to the south-east and two rain cisterns at every dome ([How the city grows](/docs/design/growth-plan)); a mobility hub with a solar carport where the north road ends at the edge; plan radius 222 m ([Planning principles](/docs/design/planning-principles))
 
-![Aerial view of the Phase 2 village: eight domes around the spire, rings of earth-home courtyard clusters and an outer belt of solar rows and greenhouses](/img/home/city-phase-2.webp)
+![Aerial view of the Phase 2 village: the 150 m spire, eight domes around it, courtyard homes in curved rings, a canal ring, the lake and solar arrays in meadow](/img/home/city-phase-2.webp)
 
 **Phase 2 - Village** (mid-2030s, after Phase 1 proves out):
 - **Population**: 1,500 target (1,500-3,000 range)
 - **Footprint**: 150-300 acres (60-120 hectares)
-- **Structures**: Expanded plaza, 3-5 temples, 6-12 domes, taller spire (120-300 m)
+- **Structures**: Expanded plaza, 3-5 temples, 8 domes, taller spire (150 m)
 - **Energy**: 5-15 MWp solar + 40-80 MWh storage
 - **Food**: 5-10 ha food forests, approaching self-sufficiency
 - **In the model**: everything from Phase 1 kept; spire extended to 150 m with two more sections, six pavilions (temples and learning), eight domes (five new at 44 m on reserved plots), 54 homes on ring 4 that add 3D-printed earth to the mix, a new ring of courtyard clusters of six homes, each cluster built with one method, short curved courtyard terraces (two and three storeys of timber and glass with green or solar roofs) and glass garden halls filling the village rings between the paths, as in the concept render, and a food and energy belt of agrivoltaics, greenhouses and food forest; a soft canal ring with stone quays joins the lake, crossed by arched timber footbridges, with solar-roofed electric boats as a transport option; beyond the core the radial paths turn gently; three work hubs (a timber market hall and workshop vaults) sit about 4 minutes on foot from every home, and three mobility hubs sit on an arc road open to the south; plan radius 460 m (about 160 acres)
 
-![Aerial view of the Phase 3 town: twelve domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses](/img/home/city-phase-3.webp)
+![Aerial view of the Phase 3 town: the tall spire with its wind crown, eleven domes around it, six large district domes, curved green-roofed terraces, canal rings, the river and a wide belt of solar and food fields](/img/home/city-phase-3.webp)
 
 **Phase 3 - Town** (Long-term vision):
 - **Population**: 8,000+ residents (8,000-12,000 range)
 - **Footprint**: 1-3 square miles (2.6-7.8 km²)
-- **Structures**: Full concentric ring layout with 12+ domes
+- **Structures**: Full concentric ring layout with 17 domes (11 on the ring, 6 district domes) and a 240 m spire
 - **Energy**: 15-50 MWp distributed renewable + storage
 - **Food**: 20-50 ha regenerative agriculture
 - **In the model**: the village and its food and energy belt kept as built, the belt now a green belt; spire extended to 240 m with the wind crown and glass point, eight pavilions, all eleven ring domes (the twelfth sector is left to the heart rill and a water garden) and 60 ring homes; the ring-5 solar arrays give way to solar-roofed terraces, and more terraces and garden halls fill the town rings between the crescents; then outside the green belt crescents of flowing two-to-three storey terraces (curved glass facades, thin-shell concrete floor and balcony bands, timber roof edges, green roofs with skylights and living-wall ends), six 80 m district domes (each with a small temple and market green) and a new outer food and energy belt; an outer canal ring and three S-curved canals through the town link both rings, the lake and a slow river that bends round the south of the town (the city sits inside its curve), so electric boats and water buses reach every district; each district has a market hall and a row of workshops, cars stop at mobility hubs on an outer ring road, and the radial paths keep a gentle twist; plan radius 1,000 m (about 1.2 square miles). This is schematic, not a final master plan: the course of the river, lake and canals will follow the site's real landform and drainage.
@@ -428,7 +428,7 @@ The source describes mega-spheres 600–1,200 ft across for 10,000 people each, 
 - **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
 - **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
 
-**Phase 2 (mid-2030s, after Phase 1 proves out)**: 6-12 domes expansion
+**Phase 2 (mid-2030s, after Phase 1 proves out)**: 8 domes (five new at 44 m)
 - **Size**: 45-60 m diameter (150-200 ft)
 - **Capacity**: 120-200 residents per dome
 - **Total in domes**: 720-2,400 residents (the rest of the Village lives in ring housing)
@@ -706,7 +706,7 @@ Light City builds on these principles with modern materials and engineering, and
 | Subsystem | Phase 1 (built 2028–2031) | Phase 2 (mid-2030s) | Current TRL | Notes |
 |-----------|-------------------|-------------------|-------------|-------|
 | **Spire (Terrestrial)** | 90 m crystal of solar glass on a steel diagrid, base built for 240 m | 150 m, then 240 m with a wind crown; enclosed observatory | 3-4 | Steel/CLT hybrid proven; LED art systems mature |
-| **Communospheres** | 3 domes (30-45 m) | 6-12 domes (45-60 m) | 4-5 | Geodesic CLT domes built globally; BIPV glazing TRL 6-7 |
+| **Communospheres** | 3 domes (40 m) | 8 domes (40-44 m) | 4-5 | Geodesic CLT domes built globally; BIPV glazing TRL 6-7 |
 | **Plaza/Temples** | Central plaza + 1 temple | 3-5 temples | 4-6 | Sacred architecture well-established; acoustic design mature |
 | **Energy (Physical)** | 2-5 MWp PV + 8-20 MWh storage | 5-15 MWp + 40-80 MWh | 6-8 | Solar+storage is proven tech; micro-grid controls TRL 7 |
 | **Water/Food** | Rain/grey loops; 1-2 ha agroforestry | 5-10 ha food forests | 5-6 | Permaculture systems proven; greywater recycling TRL 6 |
