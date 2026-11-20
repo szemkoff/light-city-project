@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a six-sided crystal spire of milky solar glass with a faceted glass point, ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
+        <img className="hero-img" src={img('hero')} alt="Aerial view at sunset of a modern organic city: a crystal spire of faceted solar glass with a glass point, ringed by timber-and-glass domes, green-roofed buildings, gardens and water channels beside a lake" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
@@ -166,7 +166,7 @@ export default function Home(): JSX.Element {
       <section className="crystal" id="spire">
         <div className="wrap crystal-grid">
           <figure className="crystal-art">
-            <img src={img('spire')} alt="The Crystal Point spire at sunset: a six-sided crystal of rainbow-tinted glass diamonds narrowing in one long curve to a sharp point, rising over green-roofed timber buildings, glass domes and a reflecting pool" width="1200" height="675" loading="lazy" />
+            <img src={img('spire')} alt="The Crystal Point spire at sunset: a twelve-sided crystal of faceted blue, violet and amber glass diamonds on a white diagrid, narrowing to a glass point, rising over green-roofed timber buildings, glass domes and a reflecting pool" width="1200" height="675" loading="lazy" />
           </figure>
           <div className="crystal-text">
             <p className="eyebrow">The landmark</p>
@@ -185,7 +185,7 @@ export default function Home(): JSX.Element {
           </div>
         </div>
         <div className="wrap crystal-tiles">
-          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Six white helical wind turbines in two rows behind clear glass louvres, below the glass point" width="1200" height="675" loading="lazy" /><span>Wind crown, 166–200 m</span></a>
+          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Six white helical wind turbines inside the open white lattice of the crown, above the slanted edge of the glass" width="1200" height="675" loading="lazy" /><span>Wind crown, 150–204 m</span></a>
           <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireObs.webp'} alt="Visitors in the enclosed sky observatory behind faceted glass, looking out over domes and woods" width="1200" height="675" loading="lazy" /><span>Sky observatory, 72 m</span></a>
           <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireHall.webp'} alt="The bright base hall of the spire with a timber floor, exhibitions and the glass lift core" width="1200" height="675" loading="lazy" /><span>Base hall and lift core</span></a>
         </div>
