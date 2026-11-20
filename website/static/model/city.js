@@ -850,6 +850,8 @@ export function buildCity(scene, env = null) {
     a.position.copy(p).setY(2.2); a.rotation.y = rad(deg) + Math.PI / 2; a.rotateX(-0.45); a.castShadow = true; add(a); footM('solar', a);
   };
   // Two arrays per 30° sector, set 9.5° either side of the sector's middle so they sit clear of the spiral paths
+  // In Phase 3 the ring-5 arrays come down and the same sun is caught on the solar roofs of the terraces built there
+  layer(1, 3);
   for (let i = 0; i < 24; i++) { const deg = Math.floor(i / 2) * 30 + (i % 2 ? 20.5 : 9.5), q = polar(P.solar.radius, deg); if (!wet(q.x, q.z, 11) && !inObst(q.x, q.z, 12)) array(q, deg + twist(P.solar.radius)); }
 
   I(null);
@@ -890,6 +892,7 @@ export function buildCity(scene, env = null) {
   // add modules beside them rather than replacing them (build as you grow). Water storage sits behind,
   // on the north side; sewage is treated on the south-east side, downhill and away from the swimming lake.
   // Phase 3 adds the north campus and the water-mouth plant for the town; the earlier works stay in use.
+  let CLEAR_AT = null;
   {
     const waterU = shiny(mat(0x6f93a0, {roughness: 0.08, metalness: 0.3}));
     const moundM = ground(0x95a463, TX.grass(23), 8, 0.2), reedM = ground(0x6c8c58, TX.leaves(), 3, 0.15), gravelM = ground(0xb5ab92, TX.gravel(), 5, 0.3);
@@ -951,7 +954,10 @@ export function buildCity(scene, env = null) {
     const LATER = [[285, 1.2], [345, 1.2], [360, 2], [460, 2], [488, 1.2], [532, 1.2], [548, 1.2], [592, 1.2], [688, 1.2], [732, 1.2], [760, 2], [1035, 3.5]];
     const segD = (x, z, a, b) => { const dx = b[0] - a[0], dz = b[1] - a[1], L = dx * dx + dz * dz || 1, t = Math.max(0, Math.min(1, ((x - a[0]) * dx + (z - a[1]) * dz) / L)); return Math.hypot(x - a[0] - t * dx, z - a[1] - t * dz); };
     const bbOf = (pts) => pts.reduce((b, q) => [Math.min(b[0], q[0]), Math.min(b[1], q[1]), Math.max(b[2], q[0]), Math.max(b[3], q[1])], [1e9, 1e9, -1e9, -1e9]);
-    const clearAt = (x, z, R) => {
+    const inPoly = (x, z, P) => { let c = false; for (let i = 0, j = P.length - 1; i < P.length; j = i++) if ((P[i][1] > z) !== (P[j][1] > z) && x < P[j][0] + (P[i][0] - P[j][0]) * (z - P[j][1]) / (P[i][1] - P[j][1])) c = !c; return c; };
+    const polyD = (x, z, P) => { if (inPoly(x, z, P)) return 0; let d = 1e9; for (let i = 0; i < P.length; i++) d = Math.min(d, segD(x, z, P[i], P[(i + 1) % P.length])); return d; };
+    // exact: test footprints by their outline, not their bounding box (used by the infill)
+    const clearAt = (x, z, R, exact = false, phase = 0) => {
       if (wet(x, z, R) || blocked(x, z, R) || inObst(x, z, R)) return false;
       const rr = Math.hypot(x, z);
       if (LATER.some(([r, h]) => Math.abs(rr - r) < R + h + 2.5)) return false;
@@ -963,13 +969,15 @@ export function buildCity(scene, env = null) {
         for (let i = 1; i < p.pts.length; i++) if (segD(x, z, p.pts[i - 1], p.pts[i]) < R + (p.pts[i][2] || p.w / 2) + 2.5) return false;
       }
       for (const f of FOOT) {
+        if (phase && f.to <= phase) continue;
         if (f.c) { if (Math.hypot(x - f.c[0], z - f.c[1]) < R + f.r + 1.5) return false; continue; }
         if (!fbb.has(f)) fbb.set(f, bbOf(f.poly));
-        const b = fbb.get(f); if (Math.hypot(Math.max(b[0] - x, 0, x - b[2]), Math.max(b[1] - z, 0, z - b[3])) < R + 1.5) return false;
+        const b = fbb.get(f); if (Math.hypot(Math.max(b[0] - x, 0, x - b[2]), Math.max(b[1] - z, 0, z - b[3])) < R + 1.5 && (!exact || polyD(x, z, f.poly) < R + 1.5)) return false;
       }
       if (FORE.some(([fx, fz, fr]) => Math.hypot(x - fx, z - fz) < R + fr + 1.5)) return false;
       return !FAC.some((s) => Math.hypot(x - s.x, z - s.z) < R + s.R + 2.5);
     };
+    CLEAR_AT = clearAt;
     // A capsule (fields, long halls): circles along the long axis, which runs along the ring
     const caps = (L, W) => (S) => { const n = Math.max(1, Math.ceil((L - W) / (W / 2))); for (let i = 0; i <= n; i++) { const q = S.at(-(L - W) / 2 + (L - W) * i / n, 0); if (!clearAt(q.x, q.z, W / 2 + 1)) return false; } return true; };
     const find = (r0, d0, R, fit = null, span = 14) => {
@@ -1449,7 +1457,7 @@ export function buildCity(scene, env = null) {
   const building = (B) => {
     // Buildings give way to the canals and the river; their place becomes waterfront
     for (let t = 0; t <= 1; t += 0.1) { const c = polar(B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), B.a0 + (B.a1 - B.a0) * t); if (wet(c.x, c.z, B.hw + 5) || blocked(c.x, c.z, B.hw + 3)) return; }
-    FOOT.push({kind: 'terrace', from: cur.userData.from, to: cur.userData.to, poly: outline(B, 1.9).loop.map((q) => [q.x, q.z])});
+    FOOT.push({kind: B.kind || 'terrace', from: cur.userData.from, to: cur.userData.to, poly: outline(B, 1.9).loop.map((q) => [q.x, q.z])});
     const H = (t) => B.base + B.rise * Math.pow(Math.sin(Math.PI * t), 0.8) * (0.8 + 0.2 * Math.cos(2 * Math.PI * (t * 1.3 + B.ph)));
     const k = (v) => () => v;
     band(outline(B, 0.3), k(0), k(0.45), plinthM);
@@ -1460,14 +1468,15 @@ export function buildCity(scene, env = null) {
     band(outline(B, 1.8), k(3.6), k(4.6), railM);
     band(outline(B, -0.7), k(3.6), (t) => H(t) - 0.5, glazeM);
     const roof = outline(B, 1.6);
-    band(roof, (t) => H(t) - 0.5, (t) => H(t) + 0.2, edgeM); cap(roof, (t) => H(t) - 0.5, edgeM, -1); cap(roof, (t) => H(t) + 0.2, roofM);
+    band(roof, (t) => H(t) - 0.5, (t) => H(t) + 0.2, edgeM); cap(roof, (t) => H(t) - 0.5, edgeM, -1); cap(roof, (t) => H(t) + 0.2, B.roofM || roofM);
     // Glass skylights over the tallest part of the roof
     for (const [s0, s1] of [[0.2, 0.42], [0.5, 0.78]]) {
       const sky = outline({...B, t0: s0, t1: s1}, -4.9);
       band(sky, (t) => H(t) + 0.2, (t) => H(t) + 1.4, glassM); cap(sky, (t) => H(t) + 1.4, glassM);
     }
     // Planting beds of shrubs round the building, and a tree at each end
-    outline(B, 3.6).loop.forEach((p, i) => { if (i % 2 === 0) tree(p.x, p.z, 0.4 + ((i * 7) % 5) * 0.06, 2); });
+    const sh = B.shrubs || 2;
+    outline(B, 3.6).loop.forEach((p, i) => { if (i % sh === 0) tree(p.x, p.z, 0.4 + ((i * 7) % 5) * 0.06, 2); });
     for (const t of [0, 1]) { const q = polar(B.r + B.amp * Math.sin(2 * Math.PI * t + B.ph), B.a0 + (B.a1 - B.a0) * t + (t ? 1 : -1) * (7 / B.r) * (180 / Math.PI)); tree(q.x, q.z, 1.1); }
   };
   const D = FINAL.districts;
@@ -1483,14 +1492,15 @@ export function buildCity(scene, env = null) {
     ringPath(r + 22, 2.4); ringPath(r - 22, 2.4);
     for (let i = 0; i < n * 6; i++) { const q = polar(r + 30 + ((i * 5) % 3 - 1) * 2.5, (i + 0.5) * (360 / (n * 6))); tree(q.x, q.z, 0.75 + ((i * 3) % 4) * 0.12, i % 5 === 2 ? 1 : 0); }
   });
-  batches.forEach((b, m) => {
+  const flushBatches = () => { batches.forEach((b, m) => {
     const g = new THREE.BufferGeometry();
     g.setAttribute('position', new THREE.Float32BufferAttribute(b.p, 3));
     g.setAttribute('normal', new THREE.Float32BufferAttribute(b.n, 3));
     g.setAttribute('uv', new THREE.Float32BufferAttribute(b.u, 2));
     g.computeBoundingSphere();
     const mesh = new THREE.Mesh(g, m); mesh.castShadow = true; mesh.receiveShadow = true; add(mesh);
-  });
+  }); batches.clear(); };
+  flushBatches();
   I('districtSquare');
   // District hubs: large communosphere domes with a small temple and a market green
   D.deg.forEach((deg) => {
@@ -1811,6 +1821,81 @@ export function buildCity(scene, env = null) {
     });
   }
 
+  // Infill: the city fills in as it grows, as in the favourite concept render. Between the paths, the
+  // dome plots and the gardens, short curved buildings of two and three storeys line the rings: timber,
+  // glass and green roofs, some with solar roofs, with glass garden halls among them. Each one is placed
+  // only where it is clear of every path, water, plot and building of every phase. Phase 1 stays a
+  // hamlet; Phase 2 fills the village core; Phase 3 fills the outer village and the town.
+  {
+    let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const vaultM = atNight(shiny(mat(0xcfe2e6, {roughness: 0.05, metalness: 0.35, transparent: true, opacity: 0.55, depthWrite: false, map: TX.repeated(TX.glass(), 4, 2)})), warm(0xffc27a, 0.5));
+    const vaultBaseM = pavM(0xc49a68);
+    const free = (pts, R, n) => pts.every(([x, z]) => CLEAR_AT(x, z, R, true, n));
+    const clearTrees = (pts, R, n) => { for (let i = treePts.length - 1; i >= 0; i--) { const t = treePts[i]; if (pts.some(([x, z]) => Math.hypot(t[0] - x, t[1] - z) < R)) { t[4] = Math.min(t[4], n); if (t[3] >= t[4]) treePts.splice(i, 1); } } };
+    const mark = (pts, R) => pts.forEach(([x, z]) => block(x, z, R));
+    // A glass garden hall: a barrel vault on a low timber base, its axis along the ring
+    const vault = (r, a0, a1) => {
+      const am = (a0 + a1) / 2, c = polar(r, am), L = rad(a1 - a0) * r, W = 11, th = rad(am + twist(r) - 90), ax = [Math.cos(th), -Math.sin(th)];
+      const m = new THREE.Mesh(new THREE.CylinderGeometry(W / 2, W / 2, L, 18, 1, true, 0, Math.PI), vaultM);
+      m.rotation.set(0, th, Math.PI / 2, 'YXZ'); m.position.copy(c).setY(1.1); add(m); footM('greenhouse', m);
+      for (const e of [-1, 1]) { const cp = new THREE.Mesh(new THREE.CircleGeometry(W / 2, 18, 0, Math.PI), vaultM); cp.position.set(c.x + ax[0] * e * L / 2, 1.1, c.z + ax[1] * e * L / 2); cp.rotation.y = th + Math.PI / 2; add(cp); }
+      const b = new THREE.Mesh(new THREE.BoxGeometry(L, 1.1, W + 0.4), vaultBaseM); b.position.copy(c).setY(0.55); b.rotation.y = th; b.castShadow = true; add(b);
+      glow('window', c.x, 3, c.z);
+    };
+    // Rows sit in the middle of each gap between ring paths, as deep as the gap allows (one or two rows)
+    // Ring paths: true rings, plus those that bend round dome plots or run through hub squares
+    const rq = new Map(paths.filter((p) => p.ring).map((p) => [Math.round(p.r), p.w]));
+    paths.filter((p) => !p.ring && p.pts && p.pts.length > 40).forEach((p) => {
+      const R = p.pts.map((q) => Math.hypot(q[0], q[1])), m = R.reduce((a, b) => a + b, 0) / R.length;
+      const a0 = Math.atan2(p.pts[0][1], p.pts[0][0]), a1 = Math.atan2(p.pts[p.pts.length >> 1][1], p.pts[p.pts.length >> 1][0]);
+      if (R.every((x) => Math.abs(x - m) < 14) && Math.abs(a1 - a0) > 0.3) { const k = Math.round(m); if (![...rq.keys()].some((x) => Math.abs(x - k) < 6)) rq.set(k, Math.max(p.w || 3.2, 2 * (Math.max(...R) - Math.min(...R)) / 2)); }
+    });
+    for (const [r, h] of [...P.rings.map((q) => [q.r, 1.6]), [P.domeRing, 1.6]]) if (![...rq.keys()].some((x) => Math.abs(x - r) < 6)) rq.set(r, 2 * h);
+    const RINGS = [...rq.entries()].sort((p, q) => p[0] - q[0]);
+    const fill = (n, r0, r1, opts) => {
+      layer(n); trees(n);
+      const rows = []; let placed = 0;
+      for (let i = 0; i < RINGS.length - 1; i++) {
+        const [ra, wa] = RINGS[i], [rb, wb] = RINGS[i + 1];
+        if (ra < r0 - 20 || rb > r1 + 20) continue;
+        const inner = ra + wa / 2 + 4.6, outer = rb - wb / 2 - 4.6, room = outer - inner;
+        if (room < 8) continue;
+        const k = room > 34 ? 2 : 1, hw = Math.min(6, (room / k - (k - 1) * 5) / 2);
+        for (let j = 0; j < k; j++) rows.push([inner + hw + j * (room - 2 * hw) / Math.max(1, k - 1) + (k === 1 ? (room - 2 * hw) / 2 : 0), hw]);
+      }
+      for (const [r, hw0] of rows) {
+        const C = 2 * Math.PI * r; let s0 = rnd() * 30;
+        while (s0 < C - 20) {
+          // try a long deep block first, then shorter and shallower ones, then a little in or out of the row
+          let fit = null;
+          const L0 = 18 + rnd() * 20, kindV = hw0 >= 5 && rnd() < opts.vaults;
+          for (const [Lf, hf, dr] of [[1, 1, 0], [0.7, 1, 0], [1, 0.75, 0], [0.6, 0.75, 0], [0.7, 0.75, 3], [0.7, 0.75, -3], [0.45, 0.65, 0]]) {
+            const L = Math.max(13, L0 * Lf), hw = Math.max(3.8, (kindV ? Math.min(5.5, hw0) : hw0) * hf), rr = r + dr * (hw0 - hw) / 1.5;
+            const a0 = s0 / r * 180 / Math.PI, a1 = (s0 + L) / r * 180 / Math.PI, pts = [];
+            for (let k = 0; k <= 8; k++) { const q = polar(rr, a0 + (a1 - a0) * k / 8); pts.push([q.x, q.z]); }
+            if (free(pts, hw + 1.5, n)) { fit = {L, hw, rr, a0, a1, pts}; break; }
+          }
+          if (!fit) { s0 += 3; continue; }
+          placed++;
+          const {L, hw, pts} = fit, a0 = fit.a0, a1 = fit.a1;
+          if (kindV && hw >= 4.5) { I('greenhouse'); vault(fit.rr, a0, a1); }
+          else { I('cityBlock'); const solar = rnd() < opts.solar; building({r: fit.rr, a0, a1, hw, amp: Math.min(1.6, hw * 0.25), ph: rnd() * 6, base: hw >= 4.5 && rnd() < opts.tall ? 10.2 : 6.9, rise: 1.4 + rnd() * 1.8, roofM: solar ? pv : null, shrubs: 6, kind: 'cityBlock'}); }
+          mark(pts, hw + 2); clearTrees(pts, hw + 3, n);
+          // a tree or two at each end and on the quiet side, as in the concept render's leafy streets
+          for (const [da, dr] of [[-1, -0.3], [1, 0.4], [-0.5, 1], [0.5, -1]]) {
+            const q = polar(fit.rr + dr * (hw + 4.5), (da < 0 ? a0 : a1) + da * 5.5 / fit.rr * 180 / Math.PI);
+            if (rnd() < 0.75 && CLEAR_AT(q.x, q.z, 2.6, true, n)) { tree(q.x, q.z, 0.55 + rnd() * 0.3); block(q.x, q.z, 2.4); }
+          }
+          s0 += L + 6 + rnd() * 6;
+        }
+      }
+      flushBatches(); I(null);
+    };
+    fill(2, 222, 360, {vaults: 0.14, solar: 0.3, tall: 0.3});
+    fill(3, 182, 222, {vaults: 0.1, solar: 0.85, tall: 0.2});
+    fill(3, 460, 760, {vaults: 0.1, solar: 0.3, tall: 0.45});
+  }
+
   // Build trees as two instanced meshes per layer
   const trunkG = new THREE.CylinderGeometry(0.25, 0.35, 3, 5, 1, true), crownG = new THREE.SphereGeometry(2.4, 7, 5);
   // Far trees: a lighter crown and no trunk, since only the crown reads at that distance
@@ -2015,6 +2100,8 @@ export function buildCity(scene, env = null) {
 // Named camera views used to make reference renders for illustrations
 export const VIEWS = {
   aerial: {pos: [330, 260, 330], target: [0, 10, 0], fov: 40, label: 'Aerial, south-east'},
+  close: {pos: [60, 70, 420], target: [0, 5, 200], fov: 45, label: 'Over the village terraces'},
+  south: {pos: [40, 300, 640], target: [0, 20, -60], fov: 45, label: 'The city from the south, over the river'},
   top: {pos: [0, 620, 0.01], target: [0, 0, 0], fov: 45, label: 'Top-down plan'},
   hero: {pos: [-420, 70, 300], target: [0, 30, 0], fov: 38, label: 'Low aerial from the west'},
   path: {pos: [205, 1.7, 0], target: [0, 25, 0], fov: 55, label: 'On the east radial path'},

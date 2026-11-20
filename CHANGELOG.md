@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Prototype communosphere designs
 
 ### Added
+- 3D model: the city fills in like the concept render. Short curved courtyard terraces of two and three storeys (timber, glass, green or solar roofs) and glass barrel-vault garden halls now line the village rings in Phase 2 and the town rings in Phase 3, each with trees at its ends, and all clear of paths, plots and water. In Phase 3 the ring-5 solar arrays give way to solar-roofed terraces. New "Over the village terraces" and "The city from the south" views, and a "Courtyard terraces" info card
 - City page: a "Life in the city" section with photo cards for the Spire Park, Council House, festival meadow and event hall, care farm and stables, water sports, woods, learning and fire and rescue, each linking to the model or the growth plan
 - Photos in the documentation: each section that an info card links to now shows that card's picture
 - Model: a "Fire station (Phase 2)" view
