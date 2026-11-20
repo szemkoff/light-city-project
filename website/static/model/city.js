@@ -30,7 +30,7 @@ export const PHASES = {
 
 // Spire: the Crystal Point, a hexagonal crystal 30 m across the corners, built in 30 m sections on one
 // foundation sized for the final height: Phase 1 builds 90 m, Phase 2 150 m, Phase 3 the full 240 m.
-export const SPIRE = {section: 30, R: 30.5, profile: [[0, 30.5], [30, 28.4], [60, 26.7], [90, 25.3], [120, 24], [150, 22], [170, 20], [185, 17.4], [196, 14.6], [204, 11]], sides: 12, row: 25, top: 204, tip: 240, deck: 72, crown: [150, 204], glassTop: 166, tilt: 16, tiltAt: -1.05, rows: [152, 173], damper: 214, turbine: {d: 9, h: 18, r: 8.4}};
+export const SPIRE = {section: 30, R: 30.5, profile: [[0, 30.5], [30, 28.4], [60, 26.7], [90, 25.3], [120, 24], [150, 22], [170, 20], [185, 17.4], [196, 14.6], [204, 11]], sides: 12, row: 25, top: 204, tip: 230, deck: 72, crown: [150, 204], glassTop: 166, tilt: 16, tiltAt: -1.05, rows: [152, 173], damper: 214, turbine: {d: 9, h: 18, r: 8.4}};
 
 export const PLAN = {
   rings: [
@@ -467,7 +467,7 @@ export function buildCity(scene, env = null) {
   I('spire');
   // Spire: the Crystal Point, a twelve-sided crystal of dichroic solar glass on a white steel diagrid. It
   // narrows like a gentle cone from 61 m across at the foot to 44 m at 150 m, curves in at the shoulders
-  // to 22 m at 204 m, and a 36 m faceted glass point closes it at 240 m. The skin is one continuous lattice of
+  // to 22 m at 204 m, and a blunt 26 m faceted glass point closes it at 230 m, its mast reaching 240 m. The skin is one continuous lattice of
   // tall staggered diamonds (about 16 m wide and 50 m tall), each cut into four glass facets: blue and violet
   // above, warm amber and clear below. It rises in 30 m sections
   // on one foundation sized for the final 240 m; Phase 1 builds 90 m and Phase 2 150 m, each with a
@@ -510,15 +510,17 @@ export function buildCity(scene, env = null) {
       const hb = cl(j * ROW), hm = cl((j + 1) * ROW), ht = cl((j + 2) * ROW), mid = (j + 1) * ROW;
       if (ht - hb < 0.5) continue;
       const B = at(a, hb), Lf = at(a - 1, hm), Rt = at(a + 1, hm), T = at(a, ht);
-      member(B, Lf, 0.42, L); member(B, Rt, 0.42, L);
       const t = a * DT / 2;
       if (n === 3 && mid > glassTo(t)) {
-        // Open lattice: heavier members and a ring inscribed in each open diamond
-        member(B, Lf, 0.36, L); member(B, Rt, 0.36, L);
+        // Open lattice round the turbines: slim members so the wind and the view pass through, and a
+        // fine ring in every other open diamond
+        member(B, Lf, 0.24, L); member(B, Rt, 0.24, L);
+        if ((a + j) % 4) continue;
         const c = B.clone().add(Lf).add(Rt).add(T).multiplyScalar(0.25), w = Lf.distanceTo(Rt);
-        const ring = new THREE.TorusGeometry(Math.min(w, ht - hb) * 0.3, 0.2, 4, 20); const o = new THREE.Object3D(); o.position.copy(c); o.lookAt(c.x * 2, c.y, c.z * 2); o.updateMatrix(); ring.applyMatrix4(o.matrix); O.push(ring);
+        const ring = new THREE.TorusGeometry(Math.min(w, ht - hb) * 0.26, 0.1, 4, 20); const o = new THREE.Object3D(); o.position.copy(c); o.lookAt(c.x * 2, c.y, c.z * 2); o.updateMatrix(); ring.applyMatrix4(o.matrix); O.push(ring);
         continue;
       }
+      member(B, Lf, 0.42, L); member(B, Rt, 0.42, L);
       const g = GOLD[(k + j) % 3], b1 = BLUE[(k++) % 4], b2 = BLUE[(k + 1) % 4];
       // Four flat facets round the heart of each diamond, like a cut stone: blue and violet above,
       // warm amber and clear below, catching the light from inside
@@ -556,7 +558,7 @@ export function buildCity(scene, env = null) {
     const apex = new THREE.Vector3(0, y0 + ht, 0), P = [], C = [], L = [];
     const tri = (a, b, c, ca, cb, cc) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); C.push(...ca, ...cb, ...cc); };
     for (let i = 0; i < NS; i++) {
-      const A = pt(2 * i, r0, y0), Bn = pt(2 * i + 2, r0, y0), M = pt(2 * i + 1, r0 * 0.8, y0 + ht * 0.26), Mp = pt(2 * i - 1, r0 * 0.8, y0 + ht * 0.26);
+      const A = pt(2 * i, r0, y0), Bn = pt(2 * i + 2, r0, y0), M = pt(2 * i + 1, r0 * 0.86, y0 + ht * 0.34), Mp = pt(2 * i - 1, r0 * 0.86, y0 + ht * 0.34);
       const c1 = BLUE[i % 4], c2 = GOLD[i % 3], c3 = [0.96, 0.97, 1];
       tri(A, Bn, M, c1, c1, c2); tri(Mp, A, M, c2, c1, c3); tri(Mp, M, apex, c3, c2, c3);
       member(A, M, rib, L); member(Bn, M, rib, L); member(M, apex, rib * 1.3, L); member(M, Mp, rib * 0.8, L); member(A, Bn, rib, L);
@@ -577,7 +579,7 @@ export function buildCity(scene, env = null) {
   // Phase 3: the point, the central mast and the antenna
   layer(3);
   point(SP.top, rr(SP.top), SP.tip - SP.top, 0.22);
-  const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 1.3, SP.tip - 4 - SP.crown[0], 8), gridM); mast.position.y = (SP.tip - 4 + SP.crown[0]) / 2; mast.castShadow = true; add(mast);
+  const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.9, SP.tip - 4 - SP.crown[0], 8), gridM); mast.position.y = (SP.tip - 4 + SP.crown[0]) / 2; mast.castShadow = true; add(mast);
   const ant = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.3, 10, 5), gridM); ant.position.y = SP.tip + 4; add(ant); glow('red', 0, SP.tip + 9, 0);
   for (let i = 0; i < NS; i++) { const q = at(2 * i, SP.top); glow('red', q.x, q.y, q.z); }
   // Helical turbines: three per level round the mast, the upper row turned 60 degrees
