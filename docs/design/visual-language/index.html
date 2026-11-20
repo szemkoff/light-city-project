@@ -10,8 +10,8 @@
 
 
 
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500&amp;f[]=switzer@400,500,600&amp;display=swap"><link rel="stylesheet" href="/light-city-project/assets/css/styles.168a7314.css">
-<script src="/light-city-project/assets/js/runtime~main.f19f3879.js" defer="defer"></script>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=zodiak@300,400,500&amp;f[]=switzer@400,500,600&amp;display=swap"><link rel="stylesheet" href="/light-city-project/assets/css/styles.6e8b391f.css">
+<script src="/light-city-project/assets/js/runtime~main.522a4abd.js" defer="defer"></script>
 <script src="/light-city-project/assets/js/main.42e49b4a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -27,7 +27,7 @@
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-principles">Core principles<a href="#core-principles" class="hash-link" aria-label="Direct link to Core principles" title="Direct link to Core principles" translate="no">​</a></h2>
 <ul>
 <li class=""><strong>Modern Organic.</strong> Nature and technology together: curved glulam and CLT, gridshells, glass, rammed earth and clay, living walls, solar glazing, warm integrated light. Not medieval, not rustic cabins, not science fiction.</li>
-<li class=""><strong>Buildable first.</strong> Images of what we plan to build show Phase 1 facts: 30–45 m domes, a 60–120 m spire, 200 residents.</li>
+<li class=""><strong>Buildable first.</strong> Images of what we plan to build show Phase 1 facts: 30–45 m domes, a 90 m crystal spire, 200 residents.</li>
 <li class=""><strong>Honest labels.</strong> Visionary archetype art (Delphin, the original vision images) is always captioned as &quot;Visionary archetype art, not a real place or a design.&quot;</li>
 <li class=""><strong>Readable.</strong> If you cannot read a label on a phone, the diagram is not finished.</li>
 <li class=""><strong>Respectful.</strong> Sacred symbols from living traditions are shown with their context and are not used as decoration only.</li>
@@ -38,8 +38,8 @@
 <p><em>The Phase 1 model, top and aerial views. Open the interactive model to orbit it and switch phases: <a href="/light-city-project/model/index.html?phase=1" target="_blank" rel="noopener noreferrer" class="">Phase 1</a>, <a href="/light-city-project/model/index.html?phase=2" target="_blank" rel="noopener noreferrer" class="">Phase 2</a>, <a href="/light-city-project/model/index.html?phase=3" target="_blank" rel="noopener noreferrer" class="">Phase 3</a>.</em></p>
 <ul>
 <li class=""><strong>How to use it.</strong> Pick the phase the image shows, then render the closest named view (aerial, top, low aerial, radial path, homes ring, plaza or solar ring) with <code>PHASE=1|2|3 node scripts/render-model.cjs &lt;view&gt;</code>. Give that render to the image tool as the layout reference, with the current photo as a style reference.</li>
-<li class=""><strong>Label the phase.</strong> Any image of the whole city says which phase it shows, and must match the model at that phase: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a flared lattice of stacked sections: three in Phase 1, five in Phase 2, eight in Phase 3.</li>
-<li class=""><strong>What must match.</strong> One central spire with a round deck and a solar ring at the top, rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.</li>
+<li class=""><strong>Label the phase.</strong> Any image of the whole city says which phase it shows, and must match the model at that phase: three domes in Phase 1, eight in Phase 2, eighteen in Phase 3. The spire is a straight crystal of stacked 30 m glass sections: three in Phase 1 (90 m, short faceted point), five in Phase 2 (150 m), eight in Phase 3 (240 m, with the wind crown and full point).</li>
+<li class=""><strong>What must match.</strong> One central six-sided crystal spire with flat faces, a gentle taper and a faceted point (no flare, no external deck), rings and radial paths in the same places, domes only where the plan puts them, no extra towers or buildings outside the rings.</li>
 <li class=""><strong>Changing the plan.</strong> Update <code>static/model/city.js</code> and the plan diagram together, then re-render the views and the affected images.</li>
 <li class=""><strong>Check the layout.</strong> After any change to the plan, run <code>node scripts/audit-model.cjs</code> from <code>website/</code>. For each phase it reports buildings on paths or in water, overlapping buildings, path ends aimed at buildings without a planted bed (paths that arrive at a dome entrance forecourt are counted separately and are fine), straight runs over 80 m and trees on paths. All counts should be zero before a change is merged (<a class="" href="/light-city-project/docs/design/planning-principles#collisions-and-the-layout-audit">Planning principles</a>).</li>
 </ul>
@@ -53,7 +53,7 @@
 <p>Curved glulam and CLT, timber gridshells, glass, living walls, rammed earth and clay plaster, warm shielded lighting, local stone, and only occasionally a single vertical quartz point on a pedestal. People of many ethnicities, ages and body types in varied, natural clothing: linen and cotton trousers, skirts and dresses, tunics, knitwear, shawls and work wear in earthy tones with warm accents, almost no denim. Mixed daylight and weather, not always sunset. Realistic documentary photo of a place that could be built today. No text or logos. Avoid medieval, rustic cabins and fantasy.</p>
 </blockquote>
 <ul>
-<li class=""><strong>Scale.</strong> Domes 30–45 m across, 3–5 levels; the spire is a wide-based lattice tower (36 m base, 90 m in Phase 1), not a skyscraper.</li>
+<li class=""><strong>Scale.</strong> Domes 30–45 m across, 3–5 levels; the spire is a six-sided crystal prism of milky glass with flat faces and sharp corners (38 m across at the foot, tapering gently to 32 m; 90 m in Phase 1, 240 m in Phase 3) with a faceted glass point; it is never round and never flares at the foot like a rocket.</li>
 <li class=""><strong>People.</strong> Diverse ages, ethnicities, body types and personal styles, doing ordinary things: cooking, working, building, resting.</li>
 <li class=""><strong>Clothing.</strong> Varied and organic-looking, never a uniform look: natural fibres, many cuts (trousers, skirts, dresses, tunics, overalls, knitwear), earthy colors with some warmth. Avoid a crowd in jeans, and avoid costumes, robes or matching outfits.</li>
 <li class=""><strong>Technology.</strong> Visible but calm: solar glazing, batteries in a timber room, sensors that look like furniture.</li>
@@ -97,7 +97,7 @@
 <p>Geometry guides proportion, plans and ornament. We do not claim physical effects from shapes.</p>
 </li>
 <li class="">
-<p>The golden ratio is a proportion guide for rooms, windows and ring spacing; the star tetrahedron is a motif for the spire crown, screens and lattice nodes. The diagrams are in <a class="" href="/light-city-project/docs/concepts/sacred-geometry">Sacred Geometry</a>.</p>
+<p>The golden ratio is a proportion guide for rooms, windows and ring spacing; the star tetrahedron is a motif for the spire crown, screens and diagrid nodes. The diagrams are in <a class="" href="/light-city-project/docs/concepts/sacred-geometry">Sacred Geometry</a>.</p>
 </li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="accessibility">Accessibility<a href="#accessibility" class="hash-link" aria-label="Direct link to Accessibility" title="Direct link to Accessibility" translate="no">​</a></h2>
