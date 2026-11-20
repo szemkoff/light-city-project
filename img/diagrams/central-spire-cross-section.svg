@@ -2,59 +2,62 @@
 <rect width="2000" height="1400" fill="#faf8f3"/>
 <text x="40" y="58" font-size="34" font-weight="bold" fill="#222">Crystal Point spire: inside plan</text>
 <text x="40" y="92" font-size="19" fill="#555">Section through the tower, base hall plan and sky observatory plan. Heights in metres; the crystal is built in sections: 90 m (Phase 1), 150 m (Phase 2), 240 m (Phase 3).</text>
-<polygon points="161,1290 159,1251 156,1212 154,1173 153,1134 152,1095 152,1056 153,1017 155,978 157,939 160,900 164,861 168,822 173,783 179,744 184,705 191,666 198,627 205,588 213,549 222,510 231,471 240,432 250,393 260,354 260,354 270,393 280,432 289,471 298,510 307,549 315,588 322,627 329,666 336,705 341,744 347,783 352,822 356,861 360,900 363,939 365,978 367,1017 368,1056 368,1095 367,1134 366,1173 364,1212 361,1251 359,1290" fill="#e9f1f4" stroke="#7a8f99" stroke-width="3"/>
+<polygon points="117,1290 127,1173 135,1056 141,939 147,822 157,705 166,627 178,568 191,526 208,494 219,458 260,354 260,354 301,458 312,494 329,526 342,568 354,627 363,705 373,822 379,939 385,1056 393,1173 403,1290" fill="#e9f1f4" stroke="#7a8f99" stroke-width="3"/>
 <rect x="170" y="1290.0" width="180" height="31.2" fill="#d9cdb6" stroke="#8a7d66" stroke-width="2"/>
 <line x1="170" y1="1305.6" x2="10" y2="1305.6" stroke="#8a7d66" stroke-width="10"/>
 <text x="15" y="1335.6" font-size="14" fill="#6b604c">service tunnel to the north</text>
 <line x1="20" y1="1290.0" x2="560" y2="1290.0" stroke="#6d7a4a" stroke-width="3"/>
-<rect x="248" y="482.70000000000005" width="24" height="807.3" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
+<rect x="248" y="369.6" width="24" height="920.4" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
 <line x1="10" y1="939.0" x2="380" y2="939.0" stroke="#c0763a" stroke-width="2" stroke-dasharray="8 6"/>
 <text x="14" y="933.0" font-size="14" fill="#c0763a" text-anchor="start">Phase 1 top, 90 m</text>
 <line x1="10" y1="705.0" x2="380" y2="705.0" stroke="#c0763a" stroke-width="2" stroke-dasharray="8 6"/>
 <text x="14" y="699.0" font-size="14" fill="#c0763a" text-anchor="start">Phase 2 top, 150 m</text>
 <rect x="172" y="1290.0" width="176" height="31.2" fill="#cfc3aa" stroke="#555" stroke-width="1.2"/>
-<rect x="165.3" y="1262.7" width="189.4" height="27.3" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
-<rect x="158.20299999999997" y="1161.3" width="203.59400000000002" height="11.7" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
-<rect x="156.4452" y="1102.8" width="207.1096" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
-<rect x="156.6614" y="1032.6" width="206.67720000000003" height="31.2" fill="#8fb3c9" stroke="#555" stroke-width="1.2"/>
-<rect x="159.10539999999997" y="974.1" width="201.78920000000002" height="35.1" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
-<rect x="173.3182" y="814.2" width="173.36360000000002" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
-<rect x="183.73340000000002" y="736.2" width="152.5332" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
-<rect x="214.0296" y="564.6" width="91.94080000000002" height="140.4" fill="#cfe3d0" stroke="#555" stroke-width="1.2"/>
-<rect x="219.7119" y="537.3000000000001" width="80.5762" height="15.6" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
-<rect x="231.852" y="482.70000000000005" width="56.29600000000001" height="15.6" fill="#a9a9a9" stroke="#555" stroke-width="1.2"/>
-<line x1="260" y1="342.0" x2="260" y2="463.20000000000005" stroke="#555" stroke-width="3"/>
-<line x1="358.7" y1="1305.6" x2="455" y2="1305.6" stroke="#999" stroke-width="1"/>
+<rect x="122.953" y="1262.7" width="274.094" height="27.3" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="131.31900000000002" y="1161.3" width="257.36199999999997" height="11.7" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="135.314" y="1102.8" width="249.372" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="139.82600000000002" y="1032.6" width="240.34799999999998" height="31.2" fill="#8fb3c9" stroke="#555" stroke-width="1.2"/>
+<rect x="143.11599999999999" y="974.1" width="233.768" height="35.1" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
+<rect x="143.99333333333334" y="958.5" width="232.01333333333335" height="23.4" fill="#e8e4dc" stroke="#555" stroke-width="1.2"/>
+<rect x="151.82666666666665" y="814.2" width="216.3466666666667" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="158.0933333333333" y="736.2" width="203.81333333333336" height="15.6" fill="#e2c9a0" stroke="#555" stroke-width="1.2"/>
+<rect x="212.3" y="494.4" width="95.4" height="210.6" fill="#cfe3d0" stroke="#555" stroke-width="1.2"/>
+<rect x="218.89999999999998" y="471.0" width="82.20000000000002" height="15.6" fill="#f0d27a" stroke="#555" stroke-width="1.2"/>
+<rect x="226.68270676691728" y="447.6" width="66.63458646616543" height="15.6" fill="#a9a9a9" stroke="#555" stroke-width="1.2"/>
+<line x1="260" y1="342.0" x2="260" y2="439.80000000000007" stroke="#555" stroke-width="3"/>
+<line x1="403.35" y1="1305.6" x2="455" y2="1305.6" stroke="#999" stroke-width="1"/>
 <text x="460" y="1310.6" font-size="15.5" fill="#222">Basement: batteries, grid control, pumps and heat store</text>
-<line x1="358.7" y1="1276.35" x2="455" y2="1271.6" stroke="#999" stroke-width="1"/>
+<line x1="403.35" y1="1276.35" x2="455" y2="1271.6" stroke="#999" stroke-width="1"/>
 <text x="460" y="1276.6" font-size="15.5" fill="#222">Base hall: welcome, exhibition, meeting room (see plan)</text>
-<line x1="365.797" y1="1167.15" x2="455" y2="1167.15" stroke="#999" stroke-width="1"/>
+<line x1="393.48" y1="1167.15" x2="455" y2="1167.15" stroke="#999" stroke-width="1"/>
 <text x="460" y="1172.15" font-size="15.5" fill="#222">Gathering level, 30 m: talks and small concerts, 120 seats</text>
-<line x1="367.5548" y1="1110.6" x2="455" y2="1110.6" stroke="#999" stroke-width="1"/>
+<line x1="389.7513333333333" y1="1110.6" x2="455" y2="1110.6" stroke="#999" stroke-width="1"/>
 <text x="460" y="1115.6" font-size="15.5" fill="#222">Quiet level, 44 m: meditation and sound rooms</text>
-<line x1="367.9684" y1="1048.2" x2="455" y2="1048.2" stroke="#999" stroke-width="1"/>
+<line x1="386.0226666666667" y1="1048.2" x2="455" y2="1048.2" stroke="#999" stroke-width="1"/>
 <text x="460" y="1053.2" font-size="15.5" fill="#222">Water reservoir, 58 m: gravity supply and fire water for the town</text>
-<line x1="366.56780000000003" y1="991.6500000000001" x2="455" y2="991.6500000000001" stroke="#999" stroke-width="1"/>
+<line x1="382.858" y1="991.6500000000001" x2="455" y2="991.6500000000001" stroke="#999" stroke-width="1"/>
 <text x="460" y="996.6500000000001" font-size="15.5" fill="#222">Sky observatory, 72 m: enclosed, double height, café</text>
-<line x1="352.5054" y1="822.0" x2="455" y2="822.0" stroke="#999" stroke-width="1"/>
+<line x1="381.3226666666667" y1="970.2" x2="455" y2="957.6500000000001" stroke="#999" stroke-width="1"/>
+<text x="460" y="962.6500000000001" font-size="15.5" fill="#222">Mirrored globe room round the core, 82 m</text>
+<line x1="373.20733333333334" y1="822.0" x2="455" y2="822.0" stroke="#999" stroke-width="1"/>
 <text x="460" y="827.0" font-size="15.5" fill="#222">Learning level, 118 m: weather station, climate lab, archive</text>
-<line x1="350" y1="744.0" x2="455" y2="744.0" stroke="#999" stroke-width="1"/>
+<line x1="367.16" y1="744.0" x2="455" y2="744.0" stroke="#999" stroke-width="1"/>
 <text x="460" y="749.0" font-size="15.5" fill="#222">Prism hall, 138 m: light and sound art, small events</text>
-<line x1="350" y1="634.8000000000001" x2="455" y2="634.8000000000001" stroke="#999" stroke-width="1"/>
-<text x="460" y="639.8000000000001" font-size="15.5" fill="#222">Wind crown, 150–186 m: six helical turbines behind glass louvres, upper row turned 60°</text>
-<line x1="350" y1="545.1" x2="455" y2="545.1" stroke="#999" stroke-width="1"/>
-<text x="460" y="550.1" font-size="15.5" fill="#222">Star room, 190 m: stargazing and quiet evenings</text>
-<line x1="350" y1="490.5" x2="455" y2="490.5" stroke="#999" stroke-width="1"/>
-<text x="460" y="495.5" font-size="15.5" fill="#222">Sway damper, 204 m: a water tank that steadies the tower in wind</text>
-<line x1="350" y1="412.5" x2="455" y2="412.5" stroke="#999" stroke-width="1"/>
-<text x="460" y="417.5" font-size="15.5" fill="#222">Crystal point: antennas, aviation light, lightning rod</text>
+<line x1="363.4" y1="599.7" x2="455" y2="599.7" stroke="#999" stroke-width="1"/>
+<text x="460" y="604.7" font-size="15.5" fill="#222">Wind crown, 150–204 m: glass rises on a slant into an open lattice; six helical turbines round a central mast</text>
+<line x1="350" y1="478.80000000000007" x2="455" y2="478.80000000000007" stroke="#999" stroke-width="1"/>
+<text x="460" y="483.80000000000007" font-size="15.5" fill="#222">Star room in the glass point, 206 m: stargazing and quiet evenings</text>
+<line x1="350" y1="455.4" x2="455" y2="444.80000000000007" stroke="#999" stroke-width="1"/>
+<text x="460" y="449.80000000000007" font-size="15.5" fill="#222">Sway damper, 214 m: a water tank that steadies the tower in wind</text>
+<line x1="350" y1="396.9" x2="455" y2="396.9" stroke="#999" stroke-width="1"/>
+<text x="460" y="401.9" font-size="15.5" fill="#222">Glass point, 204–240 m: antennas, aviation light, lightning rod</text>
 <text x="40" y="140" font-size="15" fill="#444">Lift core: two public lifts, one fire and goods lift and two</text>
 <text x="40" y="162" font-size="15" fill="#444">pressurised stairs; it grows with each new section.</text>
 <text x="40" y="184" font-size="15" fill="#444">Between the floors the crystal is an open light atrium.</text>
 <text x="40" y="206" font-size="15" fill="#444">The skin is a double layer of solar glass; warm air rises in</text>
 <text x="40" y="228" font-size="15" fill="#444">the gap and draws fresh air through the halls.</text>
-<text x="1560" y="152" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Base hall, ground level (about 36 m across the faces)</text>
-<polygon points="1760,400 1660,573 1460,573 1360,400 1460,227 1660,227" fill="#f3ead9" stroke="#7a8f99" stroke-width="4"/>
+<text x="1560" y="152" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Base hall, ground level (about 48 m across, inside a 61 m crystal)</text>
+<polygon points="1753,452 1701,541 1612,593 1508,593 1419,541 1367,452 1367,348 1419,259 1508,207 1612,207 1701,259 1753,348" fill="#f3ead9" stroke="#7a8f99" stroke-width="4"/>
 <circle cx="1560" cy="400" r="40" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
 <text x="1560" y="405" font-size="14" text-anchor="middle" fill="#223">lift core</text>
 <circle cx="1560" cy="550" r="5" fill="#c0763a"/>
@@ -79,9 +82,9 @@
 <text x="1560" y="640" font-size="15" text-anchor="middle" fill="#2c5a7a">South: plaza, reflecting pool, Spire Park</text>
 <text x="1560" y="186" font-size="15" text-anchor="middle" fill="#666">North: woods and hills behind</text>
 <polygon points="1530,628 1590,628 1560,604" fill="#c0763a"/>
-<text x="1560" y="782" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Sky observatory, 72 m (enclosed behind the glass)</text>
-<polygon points="1760,1030 1660,1203 1460,1203 1360,1030 1460,857 1660,857" fill="#f3ead9" stroke="#7a8f99" stroke-width="4"/>
-<polygon points="1734,1030 1647,1181 1473,1181 1386,1030 1473,879 1647,879" fill="none" stroke="#9fb6c0" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="1560" y="782" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Sky observatory, 72 m (about 52 m across, enclosed behind the glass)</text>
+<polygon points="1753,1082 1701,1171 1612,1223 1508,1223 1419,1171 1367,1082 1367,978 1419,889 1508,837 1612,837 1701,889 1753,978" fill="#f3ead9" stroke="#7a8f99" stroke-width="4"/>
+<polygon points="1728,1075 1683,1153 1605,1198 1515,1198 1437,1153 1392,1075 1392,985 1437,907 1515,862 1605,862 1683,907 1728,985" fill="none" stroke="#9fb6c0" stroke-width="2" stroke-dasharray="5 5"/>
 <circle cx="1560" cy="1030" r="40" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
 <text x="1560" y="1035" font-size="14" text-anchor="middle" fill="#223">lift core</text>
 <circle cx="1560" cy="1180" r="5" fill="#c0763a"/>
