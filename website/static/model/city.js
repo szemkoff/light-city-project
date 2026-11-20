@@ -30,11 +30,11 @@ export const PHASES = {
 
 // Spire: the Crystal Point, a hexagonal crystal 30 m across the corners, built in 30 m sections on one
 // foundation sized for the final height: Phase 1 builds 90 m, Phase 2 150 m, Phase 3 the full 240 m.
-export const SPIRE = {section: 30, R: 21, Rmax: 23, bulge: 55, tip: 240, deck: 72, levels: [0, 15, 30, 45, 60, 72, 81, 90, 105, 120, 135, 150, 168, 186, 198, 208, 217, 225, 232, 237, 240], crown: [150, 186], rows: [151, 168], star: 190, damper: 204, turbine: {d: 7, h: 14, r: 6.4}};
+export const SPIRE = {section: 30, R: 30.5, profile: [[0, 30.5], [30, 28.4], [60, 26.7], [90, 25.3], [120, 24], [150, 22], [170, 20], [185, 17.4], [196, 14.6], [204, 11]], sides: 12, row: 25, top: 204, tip: 240, deck: 72, crown: [150, 204], glassTop: 166, tilt: 16, tiltAt: -1.05, rows: [152, 173], damper: 214, turbine: {d: 9, h: 18, r: 8.4}};
 
 export const PLAN = {
   rings: [
-    {n: 1, name: 'Spire & plaza', r: 35, color: 0xd9cdb6},
+    {n: 1, name: 'Spire & plaza', r: 44, color: 0xd9cdb6},
     {n: 2, name: 'Temple & learning', r: 82, color: 0xc8c49a},
     {n: 3, name: 'Studios & domes', r: 135, color: 0xa9b98a},
     {n: 4, name: 'Homes & gardens', r: 182, color: 0x9fb07a},
@@ -457,145 +457,144 @@ export function buildCity(scene, env = null) {
   I('plaza');
   layer(1);
   flat(new THREE.CircleGeometry(P.rings[0].r - 1.6, 96), ground(0xddd2ba, TX.paving(), 5, 0), 0.26);
-  const pool = flat(new THREE.RingGeometry(24.5, 32, 96), shiny(ground(0x7f9aa6, TX.water(), 9, 0)), 0.29);
+  const pool = flat(new THREE.RingGeometry(34, 40, 96), shiny(ground(0x7f9aa6, TX.water(), 9, 0)), 0.29);
   Object.assign(pool.material, {roughness: 0.08, metalness: 0.25});
   atNight(pool.material, warm(0x2f7f9a, 0.45));
-  for (let i = 0; i < 24; i++) { const q = polar(32.8, i * 15); glow('cool', q.x, 0.6, q.z); }
+  for (let i = 0; i < 24; i++) { const q = polar(41, i * 15); glow('cool', q.x, 0.6, q.z); }
   pool.receiveShadow = false;
   const poolM = pool.material;
 
   I('spire');
-  // Spire: the Crystal Point, a six-sided quartz-point tower of dichroic solar glass on a white steel
-  // diagrid. It swells a little above the foot and then narrows in one long curve to a sharp point,
-  // like a natural crystal. Each face is cut into large diamonds of rainbow-tinted glass. It rises in
-  // 30 m sections on one foundation sized for the final 240 m; Phase 1 builds 90 m and Phase 2 150 m,
-  // each with a short temporary faceted point. Phase 3 adds the open wind crown (six helical turbines,
-  // three per level, the upper row turned 60 degrees), the star room and the glass point.
+  // Spire: the Crystal Point, a twelve-sided crystal of dichroic solar glass on a white steel diagrid. It
+  // narrows like a gentle cone from 61 m across at the foot to 44 m at 150 m, curves in at the shoulders
+  // to 22 m at 204 m, and a 36 m faceted glass point closes it at 240 m. The skin is one continuous lattice of
+  // tall staggered diamonds (about 16 m wide and 50 m tall), each cut into four glass facets: blue and violet
+  // above, warm amber and clear below. It rises in 30 m sections
+  // on one foundation sized for the final 240 m; Phase 1 builds 90 m and Phase 2 150 m, each with a
+  // short temporary point. In Phase 3 the glass climbs on a slant into the open lattice of the wind
+  // crown: higher on one side than the other, so the turbines show through open diamonds above the
+  // slanted glass edge, and a central mast runs up through the lattice to the point.
   // At night the crystal glows softly from within; it never shines upward.
-  const SP = SPIRE, R = SP.R;
+  const SP = SPIRE, R = SP.R, NS = SP.sides, DT = Math.PI * 2 / NS, ROW = SP.row;
   const secPhase = (h) => (h < PHASES[1].spireSections * SP.section ? 1 : h < PHASES[2].spireSections * SP.section ? 2 : 3);
-  // Corner radius: 21 m at the foot, 23 m at the widest (55 m), then an ogive curve to the point
-  const rr = (h) => (h <= SP.bulge ? R + (SP.Rmax - R) * Math.sin(Math.PI / 2 * h / SP.bulge) : SP.Rmax * (1 - Math.pow(Math.min(1, (h - SP.bulge) / (SP.tip - SP.bulge)), 1.8)));
-  const rAt = (h) => rr(h) * 0.866 - 0.6;
+  // Node radius, measured off the reference render: 30.5 m at the foot, a gentle cone to about 22 m at
+  // 150 m, then the shoulders of the crown curve in to 11 m at the foot of the point
+  const rr = (h) => { const T = SP.profile; h = Math.max(0, Math.min(h, SP.top)); let i = 0; while (i < T.length - 2 && h > T[i + 1][0]) i++; const [a0, r0] = T[i], [a1, r1] = T[i + 1]; return r0 + (r1 - r0) * (h - a0) / (a1 - a0); };
+  const rAt = (h) => rr(h) * Math.cos(Math.PI / NS) - 0.6;
   const merge = (geos) => {
     let n = 0; const P = [], N = [], X = [];
     for (const g of geos) { const p = g.attributes.position.array, q = g.attributes.normal.array; for (let i = 0; i < p.length; i++) { P.push(p[i]); N.push(q[i]); } const ix = g.index ? g.index.array : [...Array(p.length / 3).keys()]; for (const i of ix) X.push(i + n); n += p.length / 3; }
     const m = new THREE.BufferGeometry(); m.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); m.setAttribute('normal', new THREE.Float32BufferAttribute(N, 3)); m.setIndex(X); return m;
   };
-  const corner = (i, r, h) => new THREE.Vector3(Math.sin(i * Math.PI / 3) * r, h, Math.cos(i * Math.PI / 3) * r);
-  const cn = (i, h, d = 0.05) => corner(i, rr(h) + d, h);
+  // A point on the skin: half-step index a round the tower (a * DT / 2), height h
+  const at = (a, h, d = 0.05) => { const t = a * DT / 2, r = rr(h) + d; return new THREE.Vector3(Math.sin(t) * r, h, Math.cos(t) * r); };
   const member = (a, b, t, list) => { const g = new THREE.CylinderGeometry(t, t, a.distanceTo(b), 4, 1); const o = new THREE.Object3D(); o.position.copy(a).add(b).multiplyScalar(0.5); o.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize()); o.updateMatrix(); g.applyMatrix4(o.matrix); list.push(g); };
-  const crystalM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.08, metalness: 0.2, transparent: true, opacity: 0.9, iridescence: 1, iridescenceIOR: 1.7, iridescenceThicknessRange: [200, 800], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe8c0, 0.32));
-  const skinClearM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.04, metalness: 0.3, transparent: true, opacity: 0.5, iridescence: 0.9, side: THREE.DoubleSide, depthWrite: false})), warm(0xffcf8a, 0.9));
+  const crystalM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.08, metalness: 0.08, transparent: true, opacity: 0.7, iridescence: 0.5, iridescenceIOR: 1.5, iridescenceThicknessRange: [300, 700], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe0b0, 0.34));
   const clearM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xdfeef2, roughness: 0.04, metalness: 0.3, transparent: true, opacity: 0.45, iridescence: 0.8, side: THREE.DoubleSide, depthWrite: false})), warm(0xffcf8a, 0.9));
-  const gridM = atNight(mat(0xe6e2da, {roughness: 0.3, metalness: 0.6}), warm(0xfff1d6, 0.2));
+  const gridM = atNight(mat(0xeee8dc, {roughness: 0.3, metalness: 0.55}), warm(0xfff1d6, 0.2));
   const bladeM = atNight(mat(0xf7f5f0, {roughness: 0.3, metalness: 0.2}), warm(0xbfe3ff, 0.4));
-  const floorM = atNight(mat(0xb9a88c, {roughness: 0.8}), warm(0xffc27a, 0.35));
+  const floorM = atNight(mat(0xd8cbb2, {roughness: 0.8, transparent: true, opacity: 0.3, depthWrite: false}), warm(0xffc27a, 0.35));
   const OBS = [SP.deck, SP.deck + 9];
-  // Bands of diamonds: 30 m sections, a clearer band for the observatory, the open crown, then shorter
-  // bands as the point narrows
-  const LV = SP.levels, inCrown = (h) => h >= SP.crown[0] && h < SP.crown[1];
-  // Rainbow tints of dichroic glass for the diamonds, pale white-gold for the triangles between them
-  const TINT = [[0.45, 0.78, 0.98], [0.7, 0.55, 0.98], [0.98, 0.62, 0.78], [1, 0.8, 0.45], [0.5, 0.92, 0.78], [0.56, 0.62, 1]], PALE = [0.94, 0.95, 0.93];
-  // The crown is wrapped in near-clear glass louvres, open to the wind, so the crystal keeps its outline
-  const louvreM = shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.03, metalness: 0.4, transparent: true, opacity: 0.2, iridescence: 1, side: THREE.DoubleSide, depthWrite: false}));
-  for (const n of [1, 2, 3]) for (const kind of [0, 1, 2]) {
-    const P = [], C = []; let k = n * 7;
-    const tri = (a, b, c, t) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); for (let v = 0; v < 3; v++) C.push(...t); };
-    for (let j = 0; j + 1 < LV.length; j++) {
-      const h = LV[j], h1 = LV[j + 1], mid = (h + h1) / 2;
-      if (secPhase(h) !== n || (inCrown(h) ? 2 : h === OBS[0] ? 1 : 0) !== kind) continue;
-      for (let i = 0; i < 6; i++) {
-        const A = cn(i, h), B = cn(i + 1, h), Cc = cn(i + 1, h1), D = cn(i, h1);
-        const M0 = A.clone().lerp(B, 0.5), M1 = D.clone().lerp(Cc, 0.5), L = cn(i, mid), Rt = cn(i + 1, mid);
-        const t = TINT[(k++ * 5 + j) % 6];
-        tri(M0, Rt, M1, t); tri(M0, M1, L, t);
-        tri(A, M0, L, PALE); tri(M0, B, Rt, PALE); tri(Rt, Cc, M1, PALE); tri(M1, D, L, PALE);
+  // The slanted edge of the glass in the crown: it climbs from 150 m on one side to about 194 m on the other
+  const glassTo = (t) => SP.glassTop + SP.tilt * Math.cos(t - SP.tiltAt);
+  // Iridescent tints: warm gold at the top and bottom points of each diamond, blue and violet at the sides
+  const GOLD = [[1, 0.74, 0.4], [1, 0.82, 0.5], [0.98, 0.7, 0.44]], BLUE = [[0.24, 0.34, 0.92], [0.42, 0.3, 0.88], [0.22, 0.46, 0.94], [0.5, 0.36, 0.9]], CLEAR = [0.9, 0.94, 1];
+  for (const n of [1, 2, 3]) {
+    const h0 = n === 1 ? 0 : PHASES[n - 1].spireSections * SP.section, h1 = n === 3 ? SP.top : PHASES[n].spireSections * SP.section;
+    const P = [], C = [], L = [], O = []; let k = n * 3;
+    const tri = (a, b, c, ca, cb, cc) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); C.push(...ca, ...cb, ...cc); };
+    const cl = (h) => Math.max(h0, Math.min(h1, h));
+    for (let j = Math.floor(h0 / ROW) - 1; j * ROW < h1; j++) for (let a = 0; a < NS * 2; a++) {
+      if ((a + j) % 2) continue;
+      // Diamond with its lower point at row j: lower, left, right and upper nodes, clipped to this phase
+      const hb = cl(j * ROW), hm = cl((j + 1) * ROW), ht = cl((j + 2) * ROW), mid = (j + 1) * ROW;
+      if (ht - hb < 0.5) continue;
+      const B = at(a, hb), Lf = at(a - 1, hm), Rt = at(a + 1, hm), T = at(a, ht);
+      member(B, Lf, 0.42, L); member(B, Rt, 0.42, L);
+      const t = a * DT / 2;
+      if (n === 3 && mid > glassTo(t)) {
+        // Open lattice: heavier members and a ring inscribed in each open diamond
+        member(B, Lf, 0.36, L); member(B, Rt, 0.36, L);
+        const c = B.clone().add(Lf).add(Rt).add(T).multiplyScalar(0.25), w = Lf.distanceTo(Rt);
+        const ring = new THREE.TorusGeometry(Math.min(w, ht - hb) * 0.3, 0.2, 4, 20); const o = new THREE.Object3D(); o.position.copy(c); o.lookAt(c.x * 2, c.y, c.z * 2); o.updateMatrix(); ring.applyMatrix4(o.matrix); O.push(ring);
+        continue;
       }
+      const g = GOLD[(k + j) % 3], b1 = BLUE[(k++) % 4], b2 = BLUE[(k + 1) % 4];
+      // Four flat facets round the heart of each diamond, like a cut stone: blue and violet above,
+      // warm amber and clear below, catching the light from inside
+      const Cn = B.clone().add(Lf).add(Rt).add(T).multiplyScalar(0.25), sw = (a + j) % 4 === 0;
+      const [uR, uL, lL, lR] = sw ? [b2, b1, CLEAR, g] : [b1, b2, g, CLEAR];
+      tri(B, Rt, Cn, lR, lR, lR); tri(Rt, T, Cn, uR, uR, uR); tri(T, Lf, Cn, uL, uL, uL); tri(Lf, B, Cn, lL, lL, lL);
     }
-    if (!P.length) continue;
     layer(n);
     const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); g.setAttribute('color', new THREE.Float32BufferAttribute(C, 3)); g.computeVertexNormals();
-    const skin = new THREE.Mesh(g, [crystalM, skinClearM, louvreM][kind]); skin.renderOrder = 2; add(skin);
-  }
-  // Diagrid: the diamond edges on every face, corner posts and a ring at every band; in the crown the
-  // same lattice stands open, a little heavier, round the turbines
-  for (const n of [1, 2, 3]) {
-    layer(n); const L = [];
-    for (let j = 0; j + 1 < LV.length; j++) {
-      const h = LV[j], h1 = LV[j + 1], mid = (h + h1) / 2;
-      if (secPhase(h) !== n) continue;
-      const w = inCrown(h) ? 1.6 : 1, taper = Math.max(0.45, rr(h) / SP.Rmax);
-      for (let i = 0; i < 6; i++) {
-        const m0 = cn(i, h).lerp(cn(i + 1, h), 0.5), m1 = cn(i, h1).lerp(cn(i + 1, h1), 0.5);
-        member(m0, cn(i, mid), 0.09 * w, L); member(cn(i, mid), m1, 0.09 * w, L);
-        member(m0, cn(i + 1, mid), 0.09 * w, L); member(cn(i + 1, mid), m1, 0.09 * w, L);
-        member(cn(i, h, 0.1), cn(i, h1, 0.1), 0.22 * taper * w, L);
-        member(cn(i, h1, 0.1), cn(i + 1, h1, 0.1), 0.14 * w, L);
-      }
-    }
-    const g = new THREE.Mesh(merge(L), gridM); g.castShadow = true; add(g);
+    const skin = new THREE.Mesh(g, crystalM); skin.renderOrder = 2; add(skin);
+    // Rings: at the foot, the top of the base hall, round the observatory band and at each phase top
+    for (const h of [0.6, 12, 72, 90, h1].filter((h) => h >= h0 && h <= h1)) for (let a = 0; a < NS * 2; a++) member(at(a, h, 0.12), at(a + 1, h, 0.12), 0.38, L);
+    if (n === 1) { for (let a = 0; a < NS * 2; a++) { member(at(a, 0.6, 0.15), at(a, 12, 0.15), 0.2, L); member(at(a + 0.5, 72, 0.15), at(a + 0.5, 90, 0.15), 0.07, L); } }
+    const lat = new THREE.Mesh(merge(L), gridM); lat.castShadow = true; add(lat);
+    if (O.length) add(new THREE.Mesh(merge(O), gridM));
   }
   // Floors seen through the glass: base hall roof, gathering, quiet, observatory (Phase 1); learning and
-  // prism hall (Phase 2); crown floors and the star room above them (Phase 3). The water tank sits at 58 m.
-  for (const [h, n] of [[7, 1], [30, 1], [44, 1], [OBS[0], 1], [OBS[1], 1], [118, 2], [138, 2], ...SP.rows.map((r) => [r - 1, 3]), [SP.crown[1], 3], [SP.star, 3]]) {
-    layer(n); const f = new THREE.Mesh(new THREE.CylinderGeometry(rr(h) * 0.97, rr(h) * 0.97, 0.6, 6), floorM); f.position.y = h; add(f);
+  // prism hall (Phase 2). The turbines hang in the crown lattice. Water tank at 58 m.
+  for (const [h, n] of [[12, 1], [30, 1], [44, 1], [OBS[0], 1], [OBS[1], 1], [118, 2], [138, 2], ]) {
+    layer(n); const f = new THREE.Mesh(new THREE.CylinderGeometry(rAt(h), rAt(h), 0.6, NS), floorM); f.rotation.y = Math.PI / NS; f.position.y = h; add(f);
   }
   layer(1);
-  const tank = new THREE.Mesh(new THREE.CylinderGeometry(13, 13, 8, 24), mat(0x8fb3c9, {roughness: 0.4, metalness: 0.3})); tank.position.y = 62; add(tank);
-  const foot = new THREE.Mesh(new THREE.CylinderGeometry(R + 0.3, R + 0.3, 0.6, 6), mat(0xbdb29c)); foot.position.y = 0.4; add(foot);
-  for (let i = 0; i < 18; i++) { const q = corner(i / 3, rr(OBS[0]) - 1, OBS[0] + 2); glow('window', q.x, q.y, q.z); }
+  const tank = new THREE.Mesh(new THREE.CylinderGeometry(17, 17, 8, 24), mat(0x8fb3c9, {roughness: 0.4, metalness: 0.3})); tank.position.y = 62; add(tank);
+  const foot = new THREE.Mesh(new THREE.CylinderGeometry(R + 0.4, R + 0.4, 0.6, NS), mat(0xbdb29c)); foot.position.y = 0.4; add(foot);
+  // The observatory globe: a mirrored glass sphere room round the lift core, seen through the clear band
+  const globe = new THREE.Mesh(new THREE.SphereGeometry(6.5, 32, 16), atNight(shiny(mat(0xe8e4dc, {roughness: 0.08, metalness: 0.85})), warm(0xffd9a0, 0.6))); globe.position.y = 82; add(globe);
+  for (let i = 0; i < NS * 2; i++) { const q = at(i, OBS[0] + 2, -1.2); glow('window', q.x, q.y, q.z); }
   // Inner light: a soft column of light up the core, lit at night only
-  for (const n of [1, 2, 3]) { layer(n); const top = PHASES[n].spireSections * SP.section, from = n === 1 ? 0 : PHASES[n - 1].spireSections * SP.section;
-    for (let h = from + 6; h < Math.min(top, SP.crown[0]); h += 6) glow('halo', 0, h, 0, 22); }
-  // A short faceted point, used as the temporary top in Phases 1 and 2
-  const tipM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.05, metalness: 0.25, transparent: true, opacity: 0.84, iridescence: 1, iridescenceIOR: 1.8, iridescenceThicknessRange: [240, 900], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe2b0, 0.5));
-  const facetTip = (y0, r0, ht, rib) => {
-    const ring = [...Array(6).keys()].map((i) => corner(i, r0, y0));
-    const midR = [...Array(6).keys()].map((i) => corner(i + 0.5, r0 * 0.74, y0 + ht * 0.36));
+  for (const n of [1, 2, 3]) { layer(n); const top = n === 3 ? SP.glassTop : PHASES[n].spireSections * SP.section, from = n === 1 ? 0 : PHASES[n - 1].spireSections * SP.section;
+    for (let h = from + 6; h < top; h += 6) glow('halo', 0, h, 0, 26); }
+  // A faceted glass point: a ring of the tower's twelve nodes, a middle ring turned half a step, the apex
+  const tipM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.04, metalness: 0.3, transparent: true, opacity: 0.82, iridescence: 1, iridescenceIOR: 1.8, iridescenceThicknessRange: [240, 900], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe2b0, 0.5));
+  const point = (y0, r0, ht, rib) => {
+    const pt = (a, r, y) => new THREE.Vector3(Math.sin(a * DT / 2) * r, y, Math.cos(a * DT / 2) * r);
     const apex = new THREE.Vector3(0, y0 + ht, 0), P = [], C = [], L = [];
-    let k = 0; const tri = (a, b, c) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); const t = TINT[k++ % 6]; for (let v = 0; v < 3; v++) C.push(...t); };
-    for (let i = 0; i < 6; i++) {
-      const j = (i + 1) % 6;
-      tri(ring[i], ring[j], midR[i]); tri(midR[i], ring[j], midR[j]); tri(midR[i], midR[j], apex);
-      member(ring[i], midR[i], rib * 0.6, L); member(ring[j], midR[i], rib * 0.6, L); member(midR[i], midR[j], rib * 0.6, L); member(midR[i], apex, rib, L); member(ring[i], ring[j], rib * 0.8, L);
+    const tri = (a, b, c, ca, cb, cc) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); C.push(...ca, ...cb, ...cc); };
+    for (let i = 0; i < NS; i++) {
+      const A = pt(2 * i, r0, y0), Bn = pt(2 * i + 2, r0, y0), M = pt(2 * i + 1, r0 * 0.8, y0 + ht * 0.26), Mp = pt(2 * i - 1, r0 * 0.8, y0 + ht * 0.26);
+      const c1 = BLUE[i % 4], c2 = GOLD[i % 3], c3 = [0.96, 0.97, 1];
+      tri(A, Bn, M, c1, c1, c2); tri(Mp, A, M, c2, c1, c3); tri(Mp, M, apex, c3, c2, c3);
+      member(A, M, rib, L); member(Bn, M, rib, L); member(M, apex, rib * 1.3, L); member(M, Mp, rib * 0.8, L); member(A, Bn, rib, L);
     }
     const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); g.setAttribute('color', new THREE.Float32BufferAttribute(C, 3)); g.computeVertexNormals();
     const glass = new THREE.Mesh(g, tipM); glass.renderOrder = 3; add(glass);
     const ribs = new THREE.Mesh(merge(L), gridM); ribs.castShadow = true; add(ribs);
-    glow('halo', 0, y0 + ht * 0.4, 0, r0 * 1.2);
+    glow('halo', 0, y0 + ht * 0.35, 0, r0 * 1.2);
   };
-  // Temporary short glass points on the Phase 1 and Phase 2 tops, lifted off when the next sections go on
-  const spCapM = shiny(mat(0xffffff, {roughness: 0.3, metalness: 0.45, map: TX.repeated(TX.solar(), 6, 1)}));
+  // Temporary short points on the Phase 1 and Phase 2 tops, lifted off when the next sections go on
   [1, 2].forEach((n) => {
     layer(n, n + 1);
-    const top = PHASES[n].spireSections * SP.section;
-    const ring = new THREE.Mesh(new THREE.CylinderGeometry(rr(top) + 0.4, rr(top) + 0.4, 1.2, 6), spCapM); ring.position.y = top + 0.6; add(ring);
-    facetTip(top + 1.2, rr(top), 22, 0.12);
-    for (let i = 0; i < 6; i++) { const q = corner(i, rr(top), top + 1); glow('red', q.x, q.y, q.z); }
-    const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.25, 8, 5), gridM); mast.position.y = top + 27; add(mast); glow('red', 0, top + 31, 0);
+    const top = PHASES[n].spireSections * SP.section, ht = rr(top) * 0.8;
+    point(top, rr(top), ht, 0.14);
+    for (let i = 0; i < NS; i++) { const q = at(2 * i, top + 0.5); glow('red', q.x, q.y, q.z); }
+    const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.15, 0.25, 8, 5), gridM); mast.position.y = top + ht + 4; add(mast); glow('red', 0, top + ht + 8, 0);
   });
-  // Phase 3: the point. A small inner crystal glows inside the glass above the star room.
+  // Phase 3: the point, the central mast and the antenna
   layer(3);
-  const inner = new THREE.Mesh(new THREE.OctahedronGeometry(1, 0), clearM); inner.scale.set(2.6, 9, 2.6); inner.rotation.y = Math.PI / 4; inner.position.y = 214; add(inner);
-  glow('halo', 0, 212, 0, 18);
-  const ant = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.3, 14, 5), gridM); ant.position.y = SP.tip + 6; add(ant); glow('red', 0, SP.tip + 13, 0);
-  for (let i = 0; i < 6; i++) { const q = cn(i, SP.crown[1]); glow('red', q.x, q.y, q.z); }
-  // Helical turbines: three per level round the core, at alternate corners; the upper row turned 60 degrees
+  point(SP.top, rr(SP.top), SP.tip - SP.top, 0.22);
+  const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 1.3, SP.tip - 4 - SP.crown[0], 8), gridM); mast.position.y = (SP.tip - 4 + SP.crown[0]) / 2; mast.castShadow = true; add(mast);
+  const ant = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.3, 10, 5), gridM); ant.position.y = SP.tip + 4; add(ant); glow('red', 0, SP.tip + 9, 0);
+  for (let i = 0; i < NS; i++) { const q = at(2 * i, SP.top); glow('red', q.x, q.y, q.z); }
+  // Helical turbines: three per level round the mast, the upper row turned 60 degrees
   I('spireCrown');
-  const helix = (r, h, turn, ph) => new THREE.TubeGeometry(new THREE.CatmullRomCurve3([...Array(13).keys()].map((k) => { const t = k / 12, a = ph + t * turn; return new THREE.Vector3(Math.cos(a) * r, t * h, Math.sin(a) * r); })), 32, 0.55, 2);
+  const helix = (r, h, turn, ph) => new THREE.TubeGeometry(new THREE.CatmullRomCurve3([...Array(13).keys()].map((k) => { const t = k / 12, a = ph + t * turn; return new THREE.Vector3(Math.cos(a) * r, t * h, Math.sin(a) * r); })), 32, 0.6, 2);
   const tb = []; const TR = SP.turbine;
   for (let b = 0; b < 3; b++) tb.push(helix(TR.d / 2, TR.h, Math.PI * 2 / 3, b * Math.PI * 2 / 3));
   tb.push(new THREE.CylinderGeometry(0.3, 0.3, TR.h + 1, 8).translate(0, TR.h / 2, 0));
   for (const y of [0.4, TR.h - 0.4]) for (let b = 0; b < 3; b++) { const a = b * Math.PI * 2 / 3 + (y > 1 ? Math.PI * 2 / 3 : 0); const g = new THREE.BoxGeometry(TR.d / 2, 0.16, 0.35); g.translate(TR.d / 4, y, 0); g.rotateY(-a); tb.push(g); }
   const turbG = merge(tb);
-  SP.rows.forEach((y0, row) => [0, 2, 4].forEach((c) => {
-    const q = corner(c + row, TR.r, y0);
-    const t = new THREE.Mesh(turbG, bladeM); t.position.copy(q); t.rotation.y = row * 0.7 + c; t.castShadow = true; t.userData.spin = row ? -1 : 1; add(t);
+  SP.rows.forEach((y0, row) => [0, 1, 2].forEach((c) => {
+    const t = (c * 120 + row * 60) * Math.PI / 180;
+    const tm = new THREE.Mesh(turbG, bladeM); tm.position.set(Math.sin(t) * TR.r, y0, Math.cos(t) * TR.r); tm.rotation.y = row * 0.7 + c; tm.castShadow = true; tm.userData.spin = row ? -1 : 1; add(tm);
   }));
   I('spire');
-  const coreTop = new THREE.Mesh(new THREE.CylinderGeometry(2.6, 2.6, SP.crown[1] - SP.crown[0], 6), clearM); coreTop.position.y = (SP.crown[0] + SP.crown[1]) / 2; add(coreTop);
-  const damper = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, 4, 6), mat(0x9a9a9a, {metalness: 0.5, roughness: 0.4})); damper.position.y = SP.damper; add(damper);
+  const coreTop = new THREE.Mesh(new THREE.CylinderGeometry(3.5, 3.5, SP.rows[0] - SP.crown[0] + 2, 8), clearM); coreTop.position.y = (SP.crown[0] + SP.rows[0] + 2) / 2; add(coreTop);
+  const damper = new THREE.Mesh(new THREE.CylinderGeometry(6, 6, 4, NS), mat(0x9a9a9a, {metalness: 0.5, roughness: 0.4})); damper.position.y = SP.damper; add(damper);
 
   I(null);
   // Phase in which an item first appears in a phase list
@@ -1073,8 +1072,8 @@ export function buildCity(scene, env = null) {
       layer(1);
       I('spireLevel'); const lv = new THREE.Mesh(new THREE.RingGeometry(2.6, rAt(30) - 0.6, 40), deckTM); lv.rotation.x = -Math.PI / 2; lv.position.y = 30; add(lv);
       const lr = new THREE.Mesh(new THREE.TorusGeometry(rAt(30) - 0.7, 0.08, 4, 48), railM2); lr.rotation.x = Math.PI / 2; lr.position.y = 31.1; add(lr);
-      I('spireHall'); const sh = new THREE.Mesh(new THREE.CylinderGeometry(15, 15.5, 4.2, 40, 1, true), glassM); sh.position.y = 2.9; add(sh);
-      const sr = new THREE.Mesh(new THREE.CylinderGeometry(16, 15.2, 0.5, 40), deckTM); sr.position.y = 5.1; add(sr); glow('halo', 0, 1, 0, 30); I(null); }
+      I('spireHall'); const sh = new THREE.Mesh(new THREE.CylinderGeometry(24, 24.5, 4.2, 40, 1, true), glassM); sh.position.y = 2.9; add(sh);
+      const sr = new THREE.Mesh(new THREE.CylinderGeometry(25, 24.2, 0.5, 40), deckTM); sr.position.y = 5.1; add(sr); glow('halo', 0, 1, 0, 30); I(null); }
     // Plaza amphitheatre: three curved stone tiers round a stage with a fire circle, on the plaza's
     // south-east, so the audience looks back over the stage to the spire
     { const S = find(62, 315, 10, null, 6);
@@ -2026,7 +2025,7 @@ export const VIEWS = {
   water: {pos: [900, 420, 300], target: [-100, 0, 700], fov: 50, label: 'Lake, creek and river from the east'},
   terracesAir: {pos: [-427, 45, -195], target: [-413, 6, -378], fov: 55, label: 'Above the Phase 3 terraces'},
   spire: {pos: [170, 50, 300], target: [0, 108, 0], fov: 50, label: 'The Crystal Point spire from the south-east'},
-  crown: {pos: [34, 172, 30], target: [0, 168, 0], fov: 60, label: 'The wind crown: six helical turbines in two rows (Phase 3)'},
+  crown: {pos: [72, 178, 64], target: [0, 168, 0], fov: 55, label: 'The wind crown: six helical turbines in two rows (Phase 3)'},
   heart: {pos: [0, 48, 343], target: [6, 18, 19], fov: 50, label: 'Along the heart rill to the spire'},
   utilities: {pos: [-500, 150, -870], target: [-618, 0, -1029], fov: 50, label: 'North utility campus in the feng shui woods'},
   watermouth: {pos: [-60, 90, 960], target: [70, 0, 1085], fov: 55, label: 'The water mouth: wetland, grove and bridge'},

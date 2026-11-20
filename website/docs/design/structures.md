@@ -25,7 +25,7 @@ The round stone plaza at the heart of the city, with a ring of reflecting water 
 
 ![Crystal Point spire: concept rendering](/img/home/spire.webp)
 
-The city's landmark, shaped like a natural quartz point: six flat faces of rainbow-tinted solar glass diamonds on a white steel diagrid, 42 m across at the foot and a little fuller just above it, narrowing in one long curve to a sharp crystal point. It is built in sections on a foundation sized for the final height: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a short temporary glass point on top until the full point and wind crown are built. Inside: a base hall, a gathering level at 30 m, a water tank at about 60 m, an enclosed double-height observatory with a café at 72 m, a learning level and a star room. The glass skin and the wind crown give supplemental power, not the city's main supply.
+The city's landmark, shaped like a natural quartz point: a twelve-sided crystal of solar glass diamonds on a white steel diagrid, 61 m across at the foot, narrowing like a gentle cone to 44 m at 150 m, then curving in at the shoulders to a 36 m faceted glass point at 240 m. Each tall diamond is cut into four glass facets, blue and violet above, warm amber and clear below, so the crystal sparkles like a cut stone. It is built in sections on a foundation sized for the final height: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a short temporary glass point on top until the full point and wind crown are built. Inside: a base hall, a gathering level at 30 m, a water tank at about 60 m, an enclosed double-height observatory with a café at 72 m, a mirrored globe room at 82 m, a learning level, a prism hall and a star room inside the glass point. The glass skin and the wind crown give supplemental power, not the city's main supply.
 
 [See it in the 3D model](pathname:///model/index.html?view=spire&phase=3) · [Read the full description](/docs/design/architecture/#the-central-spire)
 
@@ -33,7 +33,7 @@ The city's landmark, shaped like a natural quartz point: six flat faces of rainb
 
 ![Wind crown: concept rendering](/img/structures/spireCrown.webp)
 
-Phase 3 only. Between 150 and 186 m the crystal becomes a two-storey wind crown behind near-clear glass louvres that let the wind through: six helical vertical-axis turbines about 7 m across, three per level, the upper row turned 60 degrees so the six fill every corner. Helical blades give smooth torque; rubber mounts, speed control, louvres and a tuned water damper at 204 m keep vibration out of the rooms below, and the turbine floors are not occupied. Expect very roughly 0.5 to 1 GWh a year from the glass and the wind together, a supplement to the city's solar fields.
+Phase 3 only. Between 150 and 204 m the glass climbs on a slant into an open white lattice with a ring in every open diamond, higher on one side than the other, so the wind passes through: six helical vertical-axis turbines about 9 m across and 18 m tall, three per level round a central mast, the upper row turned 60 degrees so the six fill every corner. Helical blades give smooth torque; rubber mounts, speed control, the open lattice and a tuned water damper at 214 m keep vibration out of the rooms below, and the turbine floors are not occupied. Expect very roughly 0.5 to 1 GWh a year from the glass and the wind together, a supplement to the city's solar fields.
 
 [See it in the 3D model](pathname:///model/index.html?view=crown&phase=3) · [Read the full description](/docs/design/architecture/#the-wind-crown)
 
@@ -49,7 +49,7 @@ A concrete shaft wrapped in a glass core at the centre of the crystal, with two 
 
 ![Spire gathering level: concept rendering](/img/structures/spireLevel.webp)
 
-A six-sided hall at 30 m for talks, small concerts and quiet sitting above the trees, with about 120 seats, reached by the lifts. The enclosed observatory is higher up, at 72 m.
+A twelve-sided hall at 30 m for talks, small concerts and quiet sitting above the trees, with about 120 seats, reached by the lifts. The enclosed observatory is higher up, at 72 m.
 
 [Read the full description](/docs/design/architecture/#the-central-spire)
 

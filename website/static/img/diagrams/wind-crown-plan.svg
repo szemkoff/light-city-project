@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="880" viewBox="0 0 1800 880" font-family="DejaVu Sans, Arial"><rect width="1800" height="880" fill="#faf8f3"/>
-<text x="40" y="56" font-size="32" font-weight="bold" fill="#222">Wind crown, 150–186 m: plan of the two turbine levels</text>
-<text x="40" y="88" font-size="18" fill="#555">To scale. At the foot of the crown the crystal is 32 m across the corners (42 m at the foot of the tower, 46 m at its fullest).</text>
-<text x="40" y="112" font-size="18" fill="#555">The lift core is 5 m across. Six helical turbines, 7 m across and 14 m tall, three per level.</text>
-<text x="450" y="180" font-size="24" font-weight="bold" text-anchor="middle" fill="#222">Lower level, 151–165 m</text>
-<polygon points="450,234 672,362 672,618 450,746 228,618 228,362" fill="#eef3f5" stroke="#7a8f99" stroke-width="4"/>
-<circle cx="539" cy="439" r="56.0" fill="#d3eada" stroke="#3f7a4b" stroke-width="2.5"/>
-<circle cx="539" cy="439" r="4" fill="#3f7a4b"/>
-<circle cx="450" cy="592" r="56.0" fill="#d3eada" stroke="#3f7a4b" stroke-width="2.5"/>
-<circle cx="450" cy="592" r="4" fill="#3f7a4b"/>
-<circle cx="361" cy="439" r="56.0" fill="#d3eada" stroke="#3f7a4b" stroke-width="2.5"/>
-<circle cx="361" cy="439" r="4" fill="#3f7a4b"/>
-<circle cx="450" cy="490" r="41.6" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
-<text x="450" y="486" font-size="11" text-anchor="middle" fill="#223">lift and</text><text x="450" y="504" font-size="11" text-anchor="middle" fill="#223">stair core</text>
-<text x="450" y="222" font-size="15" text-anchor="middle" fill="#666">North</text><text x="450" y="772" font-size="15" text-anchor="middle" fill="#2c5a7a">South</text>
+<text x="40" y="56" font-size="32" font-weight="bold" fill="#222">Wind crown, 150–204 m: plan of the two turbine levels</text>
+<text x="40" y="88" font-size="18" fill="#555">To scale. At the foot of the crown the twelve-sided crystal is 44 m across (61 m at the foot of the tower).</text>
+<text x="40" y="112" font-size="18" fill="#555">A central mast runs up the middle. Six helical turbines, 9 m across and 18 m tall, three per level, in the open lattice.</text>
+<text x="450" y="180" font-size="24" font-weight="bold" text-anchor="middle" fill="#222">Lower level, 152–170 m</text>
+<polygon points="450,259 566,290 650,374 681,490 650,606 566,690 450,721 335,690 250,606 219,490 250,374 334,290" fill="#eef3f5" stroke="#7a8f99" stroke-width="4"/>
+<circle cx="526" cy="446" r="47.25" fill="#d3eada" stroke="#3f7a4b" stroke-width="2.5"/>
+<circle cx="526" cy="446" r="4" fill="#3f7a4b"/>
+<circle cx="450" cy="578" r="47.25" fill="#d3eada" stroke="#3f7a4b" stroke-width="2.5"/>
+<circle cx="450" cy="578" r="4" fill="#3f7a4b"/>
+<circle cx="374" cy="446" r="47.25" fill="#d3eada" stroke="#3f7a4b" stroke-width="2.5"/>
+<circle cx="374" cy="446" r="4" fill="#3f7a4b"/>
+<circle cx="450" cy="490" r="16.8" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
+<text x="450" y="524" font-size="13" text-anchor="middle" fill="#223">mast</text>
+<text x="450" y="247.0" font-size="15" text-anchor="middle" fill="#666">North</text><text x="450" y="747.0" font-size="15" text-anchor="middle" fill="#2c5a7a">South</text>
 <text x="450" y="815" font-size="17" text-anchor="middle" fill="#222">Three turbines at the south, north-east</text>
 <text x="450" y="841" font-size="17" text-anchor="middle" fill="#222">and north-west corners</text>
-<text x="1350" y="180" font-size="24" font-weight="bold" text-anchor="middle" fill="#222">Upper level, 168–182 m</text>
-<polygon points="1350,234 1572,362 1572,618 1350,746 1128,618 1128,362" fill="#eef3f5" stroke="#7a8f99" stroke-width="4"/>
-<circle cx="1350" cy="388" r="56.0" fill="#dbe8f4" stroke="#3f7a4b" stroke-width="2.5"/>
-<circle cx="1350" cy="388" r="4" fill="#3f7a4b"/>
-<circle cx="1439" cy="541" r="56.0" fill="#dbe8f4" stroke="#3f7a4b" stroke-width="2.5"/>
-<circle cx="1439" cy="541" r="4" fill="#3f7a4b"/>
-<circle cx="1261" cy="541" r="56.0" fill="#dbe8f4" stroke="#3f7a4b" stroke-width="2.5"/>
-<circle cx="1261" cy="541" r="4" fill="#3f7a4b"/>
-<circle cx="1350" cy="490" r="41.6" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
-<text x="1350" y="486" font-size="11" text-anchor="middle" fill="#223">lift and</text><text x="1350" y="504" font-size="11" text-anchor="middle" fill="#223">stair core</text>
-<text x="1350" y="222" font-size="15" text-anchor="middle" fill="#666">North</text><text x="1350" y="772" font-size="15" text-anchor="middle" fill="#2c5a7a">South</text>
+<text x="1350" y="180" font-size="24" font-weight="bold" text-anchor="middle" fill="#222">Upper level, 173–191 m</text>
+<polygon points="1350,259 1466,290 1550,374 1581,490 1550,606 1466,690 1350,721 1234,690 1150,606 1119,490 1150,374 1234,290" fill="#eef3f5" stroke="#7a8f99" stroke-width="4"/>
+<circle cx="1350" cy="402" r="47.25" fill="#dbe8f4" stroke="#3f7a4b" stroke-width="2.5"/>
+<circle cx="1350" cy="402" r="4" fill="#3f7a4b"/>
+<circle cx="1426" cy="534" r="47.25" fill="#dbe8f4" stroke="#3f7a4b" stroke-width="2.5"/>
+<circle cx="1426" cy="534" r="4" fill="#3f7a4b"/>
+<circle cx="1274" cy="534" r="47.25" fill="#dbe8f4" stroke="#3f7a4b" stroke-width="2.5"/>
+<circle cx="1274" cy="534" r="4" fill="#3f7a4b"/>
+<circle cx="1350" cy="490" r="16.8" fill="#b8ccd3" stroke="#5f7680" stroke-width="2"/>
+<text x="1350" y="524" font-size="13" text-anchor="middle" fill="#223">mast</text>
+<text x="1350" y="247.0" font-size="15" text-anchor="middle" fill="#666">North</text><text x="1350" y="747.0" font-size="15" text-anchor="middle" fill="#2c5a7a">South</text>
 <text x="1350" y="815" font-size="17" text-anchor="middle" fill="#222">Three turbines at the other three corners,</text>
 <text x="1350" y="841" font-size="17" text-anchor="middle" fill="#222">turned 60° from the row below</text>
 <text x="900" y="490" font-size="20" text-anchor="middle" fill="#555">turn 60°</text><path d="M840 510 Q900 550 960 510" fill="none" stroke="#777" stroke-width="2.5"/>
