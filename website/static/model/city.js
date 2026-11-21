@@ -30,7 +30,7 @@ export const PHASES = {
 
 // Spire: the Crystal Point, a straight eight-sided crystal prism about 50 by 54 m at the foot, built in 30 m sections on one
 // foundation sized for the final height: Phase 1 builds 90 m, Phase 2 150 m, Phase 3 the full 240 m.
-export const SPIRE = {section: 30, sides: 8, plan: [[-18, 27], [18, 27], [25, 14.5], [25, -14.5], [18, -27], [-18, -27], [-25, -14.5], [-25, 14.5]], taper: [[0, 1], [165, 0.8], [198, 0.77]], inR: 25, body: 165, top: 198, tip: 240, deck: 72, crown: [165, 198], rotor: {r: 12, chord: 2.8, vanes: 5, levels: [[167, 181], [182, 196]]}, damper: 206, tempTip: 30, slot: 1.6, overlap: 2.2};
+export const SPIRE = {section: 30, sides: 8, plan: [[-18, 27], [18, 27], [25, 14.5], [25, -14.5], [18, -27], [-18, -27], [-25, -14.5], [-25, 14.5]], taper: [[0, 1], [165, 0.8], [198, 0.77]], inR: 25, body: 165, top: 198, tip: 240, deck: 72, crown: [165, 198], rotor: {r: 12, chord: 2.8, vanes: 5, levels: [[167, 181], [182, 196]]}, damper: 206, tempTip: 30, slot: 1.8, overlap: 4};
 
 export const PLAN = {
   rings: [
@@ -588,21 +588,23 @@ export function buildCity(scene, env = null) {
     // starts on the corner of the prism and runs past the next corner, standing off the next panel by
     // SP.slot metres, so from the side every slot is a narrow gap from top to bottom. Wind from any
     // direction slips in through the slots on its side, always turning the same way, and swirls round the
-    // rotors. The glass sits in gold channels top and bottom, cut in the same offset lines.
-    const vortexM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xf3e2c4, roughness: 0.05, metalness: 0.15, transparent: true, opacity: 0.32, iridescence: 0.7, iridescenceIOR: 1.6, side: THREE.DoubleSide, depthWrite: false})), warm(0xffd9a0, 0.4));
-    const GP = [], gs = SP.slot, ov = SP.overlap;
+    // rotors. Nothing else: frameless glass, each panel standing in a slot cut in the crown floor.
+    const vortexM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xeadcc4, roughness: 0.04, metalness: 0.2, transparent: true, opacity: 0.4, iridescence: 0.7, iridescenceIOR: 1.6, side: THREE.DoubleSide, depthWrite: false})), warm(0xffd9a0, 0.4));
+    const GP = [], SL = [], gs = SP.slot, ov = SP.overlap;
     for (let f = 0; f < NS; f++) {
       const ends = (h) => { const A = V(f, h, 0), B = V(f + 1, h, 0), d = B.clone().sub(A).normalize(), nrm = new THREE.Vector3(d.z, 0, -d.x);
         if (nrm.dot(A.clone().add(B)) < 0) nrm.negate();
         return [A, B.clone().add(d.multiplyScalar(ov)).add(nrm.multiplyScalar(gs))]; };
-      const [A0, B0] = ends(c0 + 0.6), [A1, B1] = ends(c1 - 0.6);
+      const [A0, B0] = ends(c0 + 0.8), [A1, B1] = ends(c1 - 0.8);
       const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute([A0.x, A0.y, A0.z, B0.x, B0.y, B0.z, B1.x, B1.y, B1.z, A0.x, A0.y, A0.z, B1.x, B1.y, B1.z, A1.x, A1.y, A1.z], 3)); g.computeVertexNormals(); GP.push(g);
-      // Channels along the bottom and top edges, and a mullion at each end of the panel
-      member(A0, B0, 0.45, L); member(A1, B1, 0.45, L); member(A0, A1, 0.5, L); member(B0, B1, 0.35, L);
+      // No frames: each panel stands in a slot cut in the crown floor, in the same offset line
+      member(A0.clone().setY(c0 + 0.72), B0.clone().setY(c0 + 0.72), 0.32, SL);
     }
     const vg = new THREE.Mesh(merge(GP), vortexM); vg.renderOrder = 3; add(vg);
+    add(new THREE.Mesh(merge(SL), mat(0x15120f, {roughness: 0.9})));
     const fr = new THREE.Mesh(merge(L), gridM); fr.castShadow = true; add(fr);
-    add(plate(c0 + 0.3, 0.4, mat(0xcfc6b4, {roughness: 0.6, metalness: 0.3}), 0.8));
+    // The crown floor reaches out past the glass, so the slots are cut into it, as in a fire pit's base
+    add(plate(c0 + 0.3, -(SP.slot + 1.2), mat(0x4a4540, {roughness: 0.5, metalness: 0.45}), 0.8));
     add(plate(c1 - 0.3, 0.4, mat(0xcfc6b4, {roughness: 0.6, metalness: 0.3}), 0.8));
     // Two stacked vertical-vane rotors (H type) on one shaft; the upper one turned half a vane
     const RT = SP.rotor;
