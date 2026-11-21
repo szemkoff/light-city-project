@@ -185,7 +185,7 @@ export default function Home(): JSX.Element {
           </div>
         </div>
         <div className="wrap crystal-tiles">
-          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Six white helical wind turbines inside the open white lattice of the crown, above the slanted edge of the glass" width="1200" height="675" loading="lazy" /><span>Wind crown, 150–204 m</span></a>
+          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Offset glass panels with narrow slots, like a tornado fire pit, round two vertical-vane wind rotors in the crown" width="1200" height="675" loading="lazy" /><span>Vortex wind crown, 165–198 m</span></a>
           <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireObs.webp'} alt="Visitors in the enclosed sky observatory behind faceted glass, looking out over domes and woods" width="1200" height="675" loading="lazy" /><span>Sky observatory, 72 m</span></a>
           <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireHall.webp'} alt="The bright base hall of the spire with a timber floor, exhibitions and the glass lift core" width="1200" height="675" loading="lazy" /><span>Base hall and lift core</span></a>
         </div>
