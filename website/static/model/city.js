@@ -30,7 +30,7 @@ export const PHASES = {
 
 // Spire: the Crystal Point, a straight eight-sided crystal prism about 50 by 54 m at the foot, built in 30 m sections on one
 // foundation sized for the final height: Phase 1 builds 90 m, Phase 2 150 m, Phase 3 the full 240 m.
-export const SPIRE = {section: 30, sides: 8, plan: [[-18, 27], [18, 27], [25, 14.5], [25, -14.5], [18, -27], [-18, -27], [-25, -14.5], [-25, 14.5]], taper: [[0, 1], [165, 0.8], [198, 0.77]], inR: 25, body: 165, top: 198, tip: 240, deck: 72, crown: [165, 198], rotor: {r: 12, chord: 2.8, vanes: 5, levels: [[167, 181], [182, 196]]}, damper: 206, tempTip: 30, slot: 1.8, overlap: 4};
+export const SPIRE = {section: 30, sides: 8, plan: [[-18, 27], [18, 27], [25, 14.5], [25, -14.5], [18, -27], [-18, -27], [-25, -14.5], [-25, 14.5]], taper: [[0, 1], [165, 0.76], [192, 0.735]], cell: 30, inR: 25, body: 165, top: 192, tip: 240, deck: 72, crown: [165, 192], rotor: {r: 12, chord: 2.8, vanes: 5, levels: [[167, 178], [179, 190]]}, damper: 206, tempTip: 30, slot: 1.8, overlap: 1.5};
 
 export const PLAN = {
   rings: [
@@ -468,10 +468,10 @@ export function buildCity(scene, env = null) {
   // Spire: the Crystal Point, a straight eight-sided crystal prism like a natural quartz column: two
   // wide faces to the south and north, two narrower faces to the east and west and four slim chamfered
   // corners. It is 50 m across east to west and 54 m north to south at the foot and tapers only slightly,
-  // to about 40 by 43 m at 165 m. Champagne-gold steel frames run up every corner and down the middle of
+  // to about 38 by 41 m at 165 m. Champagne-gold steel frames run up every corner and down the middle of
   // each wide face; within each 30 m section an X of slim members cuts every face panel into four glass
   // facets, blue and violet above, warm amber and clear below. Above the glass, an open wind crown from
-  // 165 to 198 m: vortex glass, one flat panel per face set as a pinwheel with a narrow full-height slot
+  // 165 to 192 m: vortex glass, one flat panel per face set as a pinwheel with a narrow full-height slot
   // between each panel and the next, like a tornado fire pit, so the wind swirls round two stacked
   // vertical-vane rotors on one central shaft. A sharp four-facet glass point closes it at 240 m: two large facets
   // over the south and north faces, two smaller facets over the east and west faces, turned 90 degrees,
@@ -492,7 +492,7 @@ export function buildCity(scene, env = null) {
     const m = new THREE.BufferGeometry(); m.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); m.setAttribute('normal', new THREE.Float32BufferAttribute(N, 3)); m.setIndex(X); return m;
   };
   const member = (a, b, t, list) => { const g = new THREE.CylinderGeometry(t, t, a.distanceTo(b), 4, 1); const o = new THREE.Object3D(); o.position.copy(a).add(b).multiplyScalar(0.5); o.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize()); o.updateMatrix(); g.applyMatrix4(o.matrix); list.push(g); };
-  const crystalM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.06, metalness: 0.1, transparent: true, opacity: 0.74, iridescence: 0.6, iridescenceIOR: 1.6, iridescenceThicknessRange: [300, 750], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe0b0, 0.34));
+  const crystalM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.05, metalness: 0.2, transparent: true, opacity: 0.84, iridescence: 0.8, iridescenceIOR: 1.6, iridescenceThicknessRange: [300, 750], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe0b0, 0.34));
   const clearM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xdfeef2, roughness: 0.04, metalness: 0.3, transparent: true, opacity: 0.45, iridescence: 0.8, side: THREE.DoubleSide, depthWrite: false})), warm(0xffcf8a, 0.9));
   // Champagne-gold frames, as in the drawing
   const gridM = atNight(mat(0xe2c890, {roughness: 0.28, metalness: 0.7}), warm(0xfff1d6, 0.2));
@@ -501,16 +501,20 @@ export function buildCity(scene, env = null) {
   const OBS = [SP.deck, SP.deck + 9];
   // Tints by face, as the low sun catches them: blue to the south and north, violet to the east, warm
   // amber to the west; each panel's facets add gold and clear below
-  const TINT = [[0.3, 0.5, 0.95], [0.55, 0.42, 0.92], [0.6, 0.45, 0.9], [0.36, 0.42, 0.93], [0.3, 0.46, 0.95], [0.98, 0.8, 0.55], [0.98, 0.74, 0.46], [0.97, 0.84, 0.64]];
+  const TINT = [[0.22, 0.42, 0.96], [0.56, 0.36, 0.94], [0.62, 0.38, 0.92], [0.3, 0.36, 0.94], [0.24, 0.4, 0.96], [0.98, 0.74, 0.42], [0.98, 0.68, 0.36], [0.98, 0.78, 0.5]];
   const GOLD = [[1, 0.78, 0.46], [1, 0.84, 0.56]], CLEAR = [0.9, 0.94, 1];
   const lift = (c, k) => c.map((v) => Math.min(1, v * k + (1 - k) * 0.9));
   const wide = (i) => i % 2 === 0;
+  // Colour of the diamond at column key k and row r: mostly the face tint in lighter and deeper shades,
+  // now and then a gold or clear facet catching the light
+  const DC = (k, r) => { const x = Math.sin(k * 127.1 + r * 311.7) * 43758.5453, q = x - Math.floor(x);
+    return (t) => q < 0.04 ? GOLD[1] : q < 0.1 ? lift(t, 0.45) : q < 0.45 ? t : q < 0.75 ? lift(t, 0.8) : t.map((v) => v * 0.9); };
   for (const n of [1, 2, 3]) {
     const h0 = n === 1 ? 0 : PHASES[n - 1].spireSections * SP.section, h1 = n === 3 ? SP.body : PHASES[n].spireSections * SP.section;
     const P = [], C = [], L = [];
     const tri = (a, b, c, ca, cb, cc) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); C.push(...ca, ...cb, ...cc); };
-    for (let hb = h0; hb < h1 - 0.5; hb += SP.section) {
-      const ht = Math.min(h1, hb + SP.section);
+    for (let hb = h0; hb < h1 - 0.5; hb += SP.cell) {
+      const ht = Math.min(h1, hb + SP.cell), rw = Math.round(hb / SP.cell);
       for (let f = 0; f < NS; f++) {
         // A wide face has two panels either side of a central mullion; a narrow face one panel
         const cols = wide(f) ? 2 : 1, tint = TINT[f];
@@ -519,10 +523,13 @@ export function buildCity(scene, env = null) {
           const p = (u, h) => V(f, h).lerp(V(f + 1, h), u);
           const BL = p(u0, hb), BR = p(u1, hb), TR = p(u1, ht), TL = p(u0, ht);
           const Cn = BL.clone().add(BR).add(TR).add(TL).multiplyScalar(0.25);
-          const g = GOLD[(f + c + hb / SP.section) % 2], alt = (f + c + hb / SP.section) % 2;
-          tri(BL, BR, Cn, g, g, lift(tint, 0.8)); tri(BR, TR, Cn, lift(tint, alt ? 0.7 : 1), tint, tint);
-          tri(TR, TL, Cn, tint, tint, lift(tint, 0.85)); tri(TL, BL, Cn, lift(tint, alt ? 1 : 0.7), CLEAR, tint);
-          member(BL, TR, 0.16, L); member(BR, TL, 0.16, L);
+          // Each triangle is half of a tall diamond (the X lines are the diamond edges), so the two halves
+          // share one colour and the skin reads as long diamonds, not bands
+          const k0 = f * 4 + c * 2, ce = (k) => DC(k, rw), cm = (k) => DC(k, rw + 0.5);
+          const cb = cm(k0 + 1), ctp = DC(k0 + 1, rw + 1), cr = ce(k0 + 2), cl = ce(k0);
+          tri(BL, BR, Cn, cb(tint), cb(tint), cb(tint)); tri(BR, TR, Cn, cr(tint), cr(tint), cr(tint));
+          tri(TR, TL, Cn, ctp(tint), ctp(tint), ctp(tint)); tri(TL, BL, Cn, cl(tint), cl(tint), cl(tint));
+          member(BL, TR, 0.1, L); member(BR, TL, 0.1, L);
           if (c) member(BL, TL, 0.32, L);
         }
         member(V(f, hb, 0.1), V(f, ht, 0.1), 0.55, L);
@@ -531,8 +538,8 @@ export function buildCity(scene, env = null) {
     layer(n);
     const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); g.setAttribute('color', new THREE.Float32BufferAttribute(C, 3)); g.computeVertexNormals();
     const skin = new THREE.Mesh(g, crystalM); skin.renderOrder = 2; add(skin);
-    // Rings: at the foot, the top of the base hall, round the observatory band and at each phase top
-    for (const h of [0.6, 12, h1].filter((h) => h >= h0 && h <= h1)) for (let f = 0; f < NS; f++) member(V(f, h, 0.15), V(f + 1, h, 0.15), 0.4, L);
+    // Rings only at the foot and at the foot of the crown: the faces run up unbroken between gold corners
+    for (const h of [0.6, n === 3 ? h1 : -1].filter((h) => h >= h0 && h <= h1)) for (let f = 0; f < NS; f++) member(V(f, h, 0.15), V(f + 1, h, 0.15), 0.4, L);
     const lat = new THREE.Mesh(merge(L), gridM); lat.castShadow = true; add(lat);
   }
   // Floors seen through the glass: base hall roof, gathering, quiet, observatory (Phase 1); learning and
@@ -557,7 +564,7 @@ export function buildCity(scene, env = null) {
     const tri = (a, b, c, col) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); C.push(...col, ...col, ...col); };
     // Knot over chamfer k (faces 1, 3, 5, 7)
     const knot = (f) => V(f, y0).lerp(V(f + 1, y0), 0.5).multiplyScalar(0.8).setY(y0 + ht * 0.32);
-    const big = [[0.42, 0.62, 0.98], [0.62, 0.48, 0.95], [0.4, 0.58, 0.98], [0.98, 0.84, 0.6]];
+    const big = [[0.3, 0.52, 0.98], [0.56, 0.4, 0.96], [0.3, 0.5, 0.98], [0.62, 0.42, 0.95]];
     for (let k = 0; k < 4; k++) {
       const f = 2 * k, A = V(f, y0), B = V(f + 1, y0), Kp = knot(f - 1), Kn = knot(f + 1), Bn = V(f + 2, y0);
       const col = big[k];
@@ -584,9 +591,10 @@ export function buildCity(scene, env = null) {
   layer(3);
   I('spireCrown');
   { const [c0, c1] = SP.crown, L = [];
-    // Vortex glass, like a tornado fire pit: one flat glass panel per face, set as a pinwheel. Each panel
-    // starts on the corner of the prism and runs past the next corner, standing off the next panel by
-    // SP.slot metres, so from the side every slot is a narrow gap from top to bottom. Wind from any
+    // Vortex glass, like a tornado fire pit: one flat glass panel per face, set as a pinwheel and kept
+    // inside the outline of the tower. Each panel is flush with the surface at one corner and steps in by
+    // SP.slot metres at the other, starting just behind the end of the panel before it, so from the side
+    // every slot is a narrow gap from top to bottom and no glass stands proud of the building. Wind from any
     // direction slips in through the slots on its side, always turning the same way, and swirls round the
     // rotors. Nothing else: frameless glass, each panel standing in a slot cut in the crown floor.
     const vortexM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xeadcc4, roughness: 0.04, metalness: 0.2, transparent: true, opacity: 0.4, iridescence: 0.7, iridescenceIOR: 1.6, side: THREE.DoubleSide, depthWrite: false})), warm(0xffd9a0, 0.4));
@@ -594,17 +602,19 @@ export function buildCity(scene, env = null) {
     for (let f = 0; f < NS; f++) {
       const ends = (h) => { const A = V(f, h, 0), B = V(f + 1, h, 0), d = B.clone().sub(A).normalize(), nrm = new THREE.Vector3(d.z, 0, -d.x);
         if (nrm.dot(A.clone().add(B)) < 0) nrm.negate();
-        return [A, B.clone().add(d.multiplyScalar(ov)).add(nrm.multiplyScalar(gs))]; };
+        return [A.clone().sub(d.multiplyScalar(ov)).sub(nrm.multiplyScalar(gs)), B]; };
       const [A0, B0] = ends(c0 + 0.8), [A1, B1] = ends(c1 - 0.8);
       const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute([A0.x, A0.y, A0.z, B0.x, B0.y, B0.z, B1.x, B1.y, B1.z, A0.x, A0.y, A0.z, B1.x, B1.y, B1.z, A1.x, A1.y, A1.z], 3)); g.computeVertexNormals(); GP.push(g);
       // No frames: each panel stands in a slot cut in the crown floor, in the same offset line
       member(A0.clone().setY(c0 + 0.72), B0.clone().setY(c0 + 0.72), 0.32, SL);
+      // A slim gold trim on the glass edges, as in the drawing
+      member(A0, A1, 0.18, L); member(B0, B1, 0.18, L); member(A1, B1, 0.18, L);
     }
     const vg = new THREE.Mesh(merge(GP), vortexM); vg.renderOrder = 3; add(vg);
     add(new THREE.Mesh(merge(SL), mat(0x15120f, {roughness: 0.9})));
     const fr = new THREE.Mesh(merge(L), gridM); fr.castShadow = true; add(fr);
-    // The crown floor reaches out past the glass, so the slots are cut into it, as in a fire pit's base
-    add(plate(c0 + 0.3, -(SP.slot + 1.2), mat(0x4a4540, {roughness: 0.5, metalness: 0.45}), 0.8));
+    // The crown floor, flush with the tower, with the slots cut into it as in a fire pit's base
+    add(plate(c0 + 0.3, 0, mat(0x4a4540, {roughness: 0.5, metalness: 0.45}), 0.8));
     add(plate(c1 - 0.3, 0.4, mat(0xcfc6b4, {roughness: 0.6, metalness: 0.3}), 0.8));
     // Two stacked vertical-vane rotors (H type) on one shaft; the upper one turned half a vane
     const RT = SP.rotor;
