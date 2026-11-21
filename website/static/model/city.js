@@ -28,9 +28,9 @@ export const PHASES = {
     homes: 3, clusters: [255, 315], belts: [[360, 460], [760, 1000]], town: [460, 760], terraces: [510, 570, 710], extent: 1000, view: 3.9},
 };
 
-// Spire: the Crystal Point, a straight eight-sided crystal prism about 50 by 54 m at the foot, built in 30 m sections on one
+// Spire: the Crystal Point, an eight-sided crystal about 52 by 56 m at the foot, built in 30 m sections on one
 // foundation sized for the final height: Phase 1 builds 90 m, Phase 2 150 m, Phase 3 the full 240 m.
-export const SPIRE = {section: 30, sides: 8, plan: [[-18, 27], [18, 27], [25, 14.5], [25, -14.5], [18, -27], [-18, -27], [-25, -14.5], [-25, 14.5]], taper: [[0, 1], [165, 0.76], [192, 0.735]], cell: 30, inR: 25, body: 165, top: 192, tip: 240, deck: 72, crown: [165, 192], rotor: {r: 12, chord: 2.8, vanes: 5, levels: [[167, 178], [179, 190]]}, damper: 206, tempTip: 30, slot: 1.8, overlap: 1.5};
+export const SPIRE = {section: 30, sides: 8, taper: [[0, 28, 17], [165, 22.5, 7], [192, 21.7, 6.5]], ew: 0.93, cell: 30, body: 165, top: 192, tip: 240, deck: 72, crown: [165, 192], rotor: {r: 12, chord: 2.8, vanes: 5, levels: [[167, 178], [179, 190]]}, damper: 206, tempTip: 30, dip: 9, slot: 1.8, overlap: 1.5};
 
 export const PLAN = {
   rings: [
@@ -465,12 +465,14 @@ export function buildCity(scene, env = null) {
   const poolM = pool.material;
 
   I('spire');
-  // Spire: the Crystal Point, a straight eight-sided crystal prism like a natural quartz column: two
-  // wide faces to the south and north, two narrower faces to the east and west and four slim chamfered
-  // corners. It is 50 m across east to west and 54 m north to south at the foot and tapers only slightly,
-  // to about 38 by 41 m at 165 m. Champagne-gold steel frames run up every corner and down the middle of
-  // each wide face; within each 30 m section an X of slim members cuts every face panel into four glass
-  // facets, blue and violet above, warm amber and clear below. Above the glass, an open wind crown from
+  // Spire: the Crystal Point, an eight-sided crystal like a natural quartz column. Its four main faces
+  // (south, east, north, west) are wide at the foot and narrow towards the top; the four diagonal faces
+  // between them (south-east, north-east, north-west, south-west) are narrow at the foot and widen towards
+  // the top. About 56 by 52 m across at the foot, 45 by 42 m at 165 m. At the top, the point's glass dips
+  // into each diagonal face in a V, so no level line runs round the tower there.
+  // Champagne-gold steel frames run up every corner and down the middle of each face; within each
+  // 30 m section an X of slim members cuts every face panel into tall diamond facets in shades of the
+  // face's tint: blue, violet and warm amber. Above the glass, an open wind crown from
   // 165 to 192 m: vortex glass, one flat panel per face set as a pinwheel with a narrow full-height slot
   // between each panel and the next, like a tornado fire pit, so the wind swirls round two stacked
   // vertical-vane rotors on one central shaft. A sharp four-facet glass point closes it at 240 m: two large facets
@@ -479,13 +481,18 @@ export function buildCity(scene, env = null) {
   // final height: Phase 1 builds 90 m and Phase 2 150 m, each with a short temporary point of the same
   // shape. At night the crystal glows softly from within; it never shines upward.
   const SP = SPIRE, NS = SP.sides;
-  const OCT = SP.plan.map(([x, z]) => [x, z]);
-  // Taper: scale of the plan at height h
-  const sc = (h) => { const T = SP.taper; h = Math.max(0, Math.min(h, SP.top)); let i = 0; while (i < T.length - 2 && h > T[i + 1][0]) i++; const [a0, s0] = T[i], [a1, s1] = T[i + 1]; return s0 + (s1 - s0) * (h - a0) / (a1 - a0); };
+  // Plan at height h, as in the drawing: the four main faces (south, east, north, west) are narrow at the
+  // foot and widen towards the top, and the four corner faces between them are wide at the foot and
+  // narrow towards the top, like the faces of a natural quartz crystal. D is the distance from the centre
+  // to the south and north faces, a the half-width of those faces; east and west are SP.ew as far out.
+  const prof = (h) => { const T = SP.taper; h = Math.max(0, Math.min(h, SP.top)); let i = 0; while (i < T.length - 2 && h > T[i + 1][0]) i++; const [h0, D0, a0] = T[i], [h1, D1, a1] = T[i + 1], u = (h - h0) / (h1 - h0); return [D0 + (D1 - D0) * u, a0 + (a1 - a0) * u]; };
+  const sc = (h) => prof(h)[0] / SP.taper[0][1];
+  const OCT = [...Array(NS).keys()];
+  const corner = (i, h) => { const [D, a] = prof(h), q = SP.ew; return [[-a, D], [a, D], [D * q, a * q], [D * q, -a * q], [a, -D], [-a, -D], [-D * q, -a * q], [-D * q, a * q]][((i % NS) + NS) % NS]; };
   // Corner i of the plan at height h, pushed out d metres
-  const V = (i, h, d = 0) => { const [x, z] = OCT[((i % NS) + NS) % NS], s = sc(h), L = Math.hypot(x, z); return new THREE.Vector3(x * s + x / L * d, h, z * s + z / L * d); };
-  // Radius of the largest circle inside the plan (the east and west faces are closest), less a margin
-  const rAt = (h) => SP.inR * sc(h) - 0.6;
+  const V = (i, h, d = 0) => { const [x, z] = corner(i, h), L = Math.hypot(x, z); return new THREE.Vector3(x + x / L * d, h, z + z / L * d); };
+  // Radius of the largest circle inside the plan, less a margin
+  const rAt = (h) => { let m = 1e9; for (let i = 0; i < NS; i++) { const [x0, z0] = corner(i, h), [x1, z1] = corner(i + 1, h); m = Math.min(m, Math.abs(x0 * (z1 - z0) - z0 * (x1 - x0)) / Math.hypot(x1 - x0, z1 - z0)); } return m - 0.6; };
   const merge = (geos) => {
     let n = 0; const P = [], N = [], X = [];
     for (const g of geos) { const p = g.attributes.position.array, q = g.attributes.normal.array; for (let i = 0; i < p.length; i++) { P.push(p[i]); N.push(q[i]); } const ix = g.index ? g.index.array : [...Array(p.length / 3).keys()]; for (const i of ix) X.push(i + n); n += p.length / 3; }
@@ -516,8 +523,8 @@ export function buildCity(scene, env = null) {
     for (let hb = h0; hb < h1 - 0.5; hb += SP.cell) {
       const ht = Math.min(h1, hb + SP.cell), rw = Math.round(hb / SP.cell);
       for (let f = 0; f < NS; f++) {
-        // A wide face has two panels either side of a central mullion; a narrow face one panel
-        const cols = wide(f) ? 2 : 1, tint = TINT[f];
+        // Every face has two panels either side of a central mullion, as in the drawing
+        const cols = 2, tint = TINT[f];
         for (let c = 0; c < cols; c++) {
           const u0 = c / cols, u1 = (c + 1) / cols;
           const p = (u, h) => V(f, h).lerp(V(f + 1, h), u);
@@ -559,13 +566,26 @@ export function buildCity(scene, env = null) {
   // over the chamfered corners. Each corner is cut by a small triangle up to its knot; the south and north
   // facets (large) and the east and west facets (smaller) run from the knots to the apex.
   const tipM = atNight(shiny(new THREE.MeshPhysicalMaterial({color: 0xffffff, vertexColors: true, roughness: 0.03, metalness: 0.3, transparent: true, opacity: 0.84, iridescence: 1, iridescenceIOR: 1.8, iridescenceThicknessRange: [240, 900], side: THREE.DoubleSide, depthWrite: false})), warm(0xffe2b0, 0.5));
-  const point = (y0, ht, rib) => {
+  const point = (y0, ht, rib, dip = 0) => {
     const apex = new THREE.Vector3(0, y0 + ht, 0), P = [], C = [], L = [];
     const tri = (a, b, c, col) => { P.push(a.x, a.y, a.z, b.x, b.y, b.z, c.x, c.y, c.z); C.push(...col, ...col, ...col); };
     // Knot over chamfer k (faces 1, 3, 5, 7)
-    const knot = (f) => V(f, y0).lerp(V(f + 1, y0), 0.5).multiplyScalar(0.8).setY(y0 + ht * 0.32);
+    // With a dip, the knot drops instead to the middle of the corner face, dip metres below the foot of
+    // the point, so the point's glass comes down into each smaller face in a V and no level line is left
+    const knot = (f) => dip ? V(f, y0 - dip).lerp(V(f + 1, y0 - dip), 0.5) : V(f, y0).lerp(V(f + 1, y0), 0.5).multiplyScalar(0.8).setY(y0 + ht * 0.32);
     const big = [[0.3, 0.52, 0.98], [0.56, 0.4, 0.96], [0.3, 0.5, 0.98], [0.62, 0.42, 0.95]];
-    for (let k = 0; k < 4; k++) {
+    if (dip) {
+      // Kite facets over the four diagonal faces, their lower tips dipping into the faces; plain triangles
+      // over the narrow tops of the main faces; a rib from every corner to the apex
+      const kite = [[0.3, 0.52, 0.98], [0.56, 0.4, 0.96], [0.3, 0.5, 0.98], [0.62, 0.42, 0.95]];
+      for (let j = 0; j < NS; j++) {
+        const Pj = V(j, y0), Qj = V(j + 1, y0);
+        if (j % 2) { const K = knot(j), c = kite[j >> 1]; tri(Pj, K, apex, c); tri(K, Qj, apex, lift(c, 0.88)); member(Pj, K, rib, L); member(K, Qj, rib, L); member(K, apex, rib * 0.6, L); }
+        else { tri(Pj, Qj, apex, [0.86, 0.9, 1]); member(Pj, Qj, rib, L); }
+        member(Pj, apex, rib * 1.2, L);
+      }
+    }
+    for (let k = 0; k < 4 && !dip; k++) {
       const f = 2 * k, A = V(f, y0), B = V(f + 1, y0), Kp = knot(f - 1), Kn = knot(f + 1), Bn = V(f + 2, y0);
       const col = big[k];
       // Facet over the wide or narrow face f: its base edge, up to the knots and the apex
@@ -604,18 +624,19 @@ export function buildCity(scene, env = null) {
         if (nrm.dot(A.clone().add(B)) < 0) nrm.negate();
         return [A.clone().sub(d.multiplyScalar(ov)).sub(nrm.multiplyScalar(gs)), B]; };
       const [A0, B0] = ends(c0 + 0.8), [A1, B1] = ends(c1 - 0.8);
-      const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute([A0.x, A0.y, A0.z, B0.x, B0.y, B0.z, B1.x, B1.y, B1.z, A0.x, A0.y, A0.z, B1.x, B1.y, B1.z, A1.x, A1.y, A1.z], 3)); g.computeVertexNormals(); GP.push(g);
+      // On the four smaller faces the top of the glass follows the V of the point above
+      const M1 = A1.clone().lerp(B1, 0.5); if (f % 2) M1.y -= SP.dip;
+      const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute([A0.x, A0.y, A0.z, B0.x, B0.y, B0.z, B1.x, B1.y, B1.z, A0.x, A0.y, A0.z, B1.x, B1.y, B1.z, M1.x, M1.y, M1.z, A0.x, A0.y, A0.z, M1.x, M1.y, M1.z, A1.x, A1.y, A1.z], 3)); g.computeVertexNormals(); GP.push(g);
       // No frames: each panel stands in a slot cut in the crown floor, in the same offset line
       member(A0.clone().setY(c0 + 0.72), B0.clone().setY(c0 + 0.72), 0.32, SL);
       // A slim gold trim on the glass edges, as in the drawing
-      member(A0, A1, 0.18, L); member(B0, B1, 0.18, L); member(A1, B1, 0.18, L);
+      member(A0, A1, 0.18, L); member(B0, B1, 0.18, L); member(A1, M1, 0.18, L); member(M1, B1, 0.18, L);
     }
     const vg = new THREE.Mesh(merge(GP), vortexM); vg.renderOrder = 3; add(vg);
     add(new THREE.Mesh(merge(SL), mat(0x15120f, {roughness: 0.9})));
     const fr = new THREE.Mesh(merge(L), gridM); fr.castShadow = true; add(fr);
     // The crown floor, flush with the tower, with the slots cut into it as in a fire pit's base
     add(plate(c0 + 0.3, 0, mat(0x4a4540, {roughness: 0.5, metalness: 0.45}), 0.8));
-    add(plate(c1 - 0.3, 0.4, mat(0xcfc6b4, {roughness: 0.6, metalness: 0.3}), 0.8));
     // Two stacked vertical-vane rotors (H type) on one shaft; the upper one turned half a vane
     const RT = SP.rotor;
     const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 0.9, c1 - c0, 12), gridM); shaft.position.y = (c0 + c1) / 2; add(shaft);
@@ -630,7 +651,7 @@ export function buildCity(scene, env = null) {
     });
   }
   I('spire');
-  point(SP.top, SP.tip - SP.top, 0.24);
+  point(SP.top, SP.tip - SP.top, 0.24, SP.dip);
   const damper = new THREE.Mesh(new THREE.CylinderGeometry(6, 6, 4, NS), mat(0x9a9a9a, {metalness: 0.5, roughness: 0.4})); damper.position.y = SP.damper; add(damper);
 
   I(null);
@@ -1117,8 +1138,8 @@ export function buildCity(scene, env = null) {
       layer(1);
       I('spireLevel'); const lv = new THREE.Mesh(new THREE.RingGeometry(2.6, rAt(30) - 0.6, 40), deckTM); lv.rotation.x = -Math.PI / 2; lv.position.y = 30; add(lv);
       const lr = new THREE.Mesh(new THREE.TorusGeometry(rAt(30) - 0.7, 0.08, 4, 48), railM2); lr.rotation.x = Math.PI / 2; lr.position.y = 31.1; add(lr);
-      I('spireHall'); const sh = new THREE.Mesh(new THREE.CylinderGeometry(22.5, 23, 4.2, 40, 1, true), glassM); sh.position.y = 2.9; add(sh);
-      const sr = new THREE.Mesh(new THREE.CylinderGeometry(23.5, 22.7, 0.5, 40), deckTM); sr.position.y = 5.1; add(sr); glow('halo', 0, 1, 0, 30); I(null); }
+      I('spireHall'); const sh = new THREE.Mesh(new THREE.CylinderGeometry(21.5, 22, 4.2, 40, 1, true), glassM); sh.position.y = 2.9; add(sh);
+      const sr = new THREE.Mesh(new THREE.CylinderGeometry(22.6, 21.8, 0.5, 40), deckTM); sr.position.y = 5.1; add(sr); glow('halo', 0, 1, 0, 30); I(null); }
     // Plaza amphitheatre: three curved stone tiers round a stage with a fire circle, on the plaza's
     // south-east, so the audience looks back over the stage to the spire
     { const S = find(62, 315, 10, null, 6);
