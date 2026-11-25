@@ -33,7 +33,7 @@ export default function City(): JSX.Element {
 
       <Section id="model">
         <div className="pg-model">
-          <img src={modelImg} alt="Rendering from the 3D model: the Phase 3 town with twelve domes around the central spire, timber terraces and a wide belt of solar and greenhouses" loading="lazy" width="1600" height="1000" />
+          <img src={modelImg} alt="Rendering from the 3D model: the Phase 3 town with eleven ring domes around the central spire, timber terraces and a wide belt of solar and greenhouses" loading="lazy" width="1600" height="1000" />
           <div>
             <p className="eyebrow">Interactive 3D</p>
             <h2>Walk the whole plan in 3D.</h2>
@@ -56,13 +56,13 @@ export default function City(): JSX.Element {
       <Section id="structures" eyebrow="Key structures" title="What gets built, and how ready it is." lead="Each structure shows its Technology Readiness Level (TRL): 9 means proven at scale, 1 means early research.">
         <Feature to="/docs/design/architecture#the-central-spire"
           img="spire"
-          alt="The Crystal Point spire: a twelve-sided crystal of faceted blue, violet and amber glass diamonds on a white diagrid, narrowing to a glass point, rising over domes and green-roofed buildings at sunset"
+          alt="The Crystal Point spire: an eight-sided crystal of faceted blue, violet and amber solar glass in champagne-gold frames, with the vortex wind crown and a sharp glass point, rising over domes and green-roofed buildings at sunset"
           kicker="Central sanctum"
           title="The Crystal Point spire"
           tag="TRL 4–5 at full scale"
-          specs={[['Height', '90 m → 150 m → 240 m'], ['Structure', 'Steel diagrid, solar glass, concrete core'], ['Energy', 'Solar glass + 6 helical wind turbines'], ['Role', 'Landmark, observatory, civic halls']]}>
-          <p>Shaped like a natural quartz point: twelve sides of faceted solar glass diamonds, blue and violet above and amber below, on a white steel diagrid, 61 m across at the foot and narrowing to a faceted glass point. Near the top the glass climbs on a slant into an open lattice where the wind turbines turn. It is the city's orientation point, seen from every path by day and glowing softly at night. Inside are a base hall, a gathering level, an enclosed observatory at 72 m, a water tank for the town, a learning level and a star room in the point.</p>
-          <p>In Phase 3 the top opens into a wind crown: six helical turbines, three per level, the upper row turned 60 degrees. Together with the solar glass they give very roughly 0.5–1 GWh a year, a supplement rather than the city's supply. The foundation is sized for 240 m from the start, so later phases add sections on top instead of rebuilding, as the Shukhov Tower in Moscow was built from stacked sections. <a href="pathname:///model/index.html?phase=3&amp;view=spire">See it in 3D</a>.</p>
+          specs={[['Height', '90 m → 150 m → 240 m'], ['Structure', 'Steel frame, solar glass, concrete core'], ['Energy', 'Solar glass + vortex wind crown (2 rotors)'], ['Role', 'Landmark, observatory, civic halls']]}>
+          <p>Shaped like a natural quartz column: eight faces of faceted solar glass diamonds in blue, violet and amber, in slim champagne-gold steel frames, about 56 by 52 m across at the foot and closing in a sharp glass point at 240 m. It is the city's orientation point, seen from every path by day and glowing softly at night. Inside are a base hall, a gathering level, a water tank for the town, an enclosed observatory at 72 m, the Living Archive, a learning level and a star room in the point.</p>
+          <p>In Phase 3 the vortex wind crown is added between 165 and 192 m: eight offset glass panels with narrow slots swirl the wind round two stacked vertical-vane rotors. Together with the solar glass they give very roughly 0.5–1 GWh a year, a supplement rather than the city's supply. The foundation is sized for 240 m from the start, so later phases add sections on top instead of rebuilding, as the Shukhov Tower in Moscow was built from stacked sections. <a href="pathname:///model/index.html?phase=3&amp;view=spire">See it in 3D</a>.</p>
         </Feature>
         <Feature to="/docs/concepts/communospheres"
           reverse
@@ -71,7 +71,7 @@ export default function City(): JSX.Element {
           kicker="Neighborhood"
           title="Communosphere"
           tag="TRL 7–9"
-          specs={[['Diameter', '30–45 m'], ['Levels', '3–5 terraced floors'], ['Residents', '80–120 per dome'], ['Build', 'CLT frame, solar glass']]}>
+          specs={[['Diameter', '30–45 m'], ['Levels', '3–5 terraced floors'], ['Residents', 'built for 80–120; about 50 in Phase 1'], ['Build', 'CLT frame, solar glass']]}>
           <p>Each communosphere is a neighborhood under one dome: apartments terraced around a planted atrium, a shared kitchen and dining hall, and wellness spaces. The shell creates a mild indoor climate, cutting heating and cooling needs.</p>
           <p>Geodesic domes and cross-laminated timber are both proven. The new part is combining them at this size with homes inside, which is a design challenge rather than a research one.</p>
         </Feature>
@@ -123,7 +123,7 @@ export default function City(): JSX.Element {
         <Cards items={[
           {to: 'pathname:///model/index.html?phase=1', more: 'Open the model at Phase 1', img: 'city-phase-1', alt: 'Aerial view of the Phase 1 pilot hamlet: a crystal spire on a round plaza, three glazed domes, a ring of earth homes and solar arrays in meadow, a creek winding south to a small lake, surrounded by woodland', kicker: 'Phase 1 · 200 residents', title: 'Pilot hamlet', text: 'A 90 m spire, one temple and two learning pavilions, three 40 m domes and about 30 earth homes on a 20–30 acre core. Reserved dome plots hold meadow and a tree nursery. The Spire Park, a care farm, a swimming pond and the first woods are there from the start.'},
           {to: 'pathname:///model/index.html?phase=2', more: 'Open the model at Phase 2', img: 'city-phase-2', alt: 'Aerial view of the Phase 2 village: eight domes around the spire, rings of earth-home courtyard clusters and an outer belt of solar rows and greenhouses, ringed by a curving canal with a lake to the south-west', kicker: 'Phase 2 · 1,500 residents', title: 'Village', text: 'Everything from Phase 1 stays. The spire gains two sections (150 m), five domes fill reserved plots, courtyard clusters of earth homes form a new ring and a food and energy belt is added. The Council House, a festival meadow, stables, a boathouse, a primary school and a health centre arrive. About 160 acres.'},
-          {to: 'pathname:///model/index.html?phase=3', more: 'Open the model at Phase 3', img: 'city-phase-3', alt: 'Aerial view of the Phase 3 town: twelve domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses, with a river winding past and woods to the north', kicker: 'Phase 3 · 8,000+ residents', title: 'Town', text: 'The village and its belt stay as built. The crystal spire reaches 240 m with its wind crown, and the last ring domes are filled; outside the green belt come flowing terraces of glass, timber and thin-shell concrete with green roofs, six 80 m district domes and a new outer belt, with an event hall, a sports park, a secondary school and a town health centre. About 1.2 square miles.'},
+          {to: 'pathname:///model/index.html?phase=3', more: 'Open the model at Phase 3', img: 'city-phase-3', alt: 'Aerial view of the Phase 3 town: eleven ring domes around the spire, six large district domes, crescents of green-roofed timber terraces and a wide belt of solar and greenhouses, with a river winding past and woods to the north', kicker: 'Phase 3 · 8,000+ residents', title: 'Town', text: 'The village and its belt stay as built. The crystal spire reaches 240 m with its wind crown, and the last ring domes are filled; outside the green belt come flowing terraces of glass, timber and thin-shell concrete with green roofs, six 80 m district domes and a new outer belt, with an event hall, a sports park, a secondary school and a town health centre. About 1.2 square miles.'},
         ]} />
         <div className="pg-table-wrap">
           <table className="pg-table">
