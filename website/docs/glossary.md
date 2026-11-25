@@ -119,7 +119,7 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **LFP battery**: Lithium iron phosphate: the safe, long-lived lithium battery chemistry most common in stationary storage today. **Proven.**
 
-**Living Archive**: The city's open memory: a spiral gallery in the spire (94–114 m) holding the history of the land and the city, oral histories, live data and a seed library, free for anyone to read and copy. Inspired by the source's living archive. See [The Living Archive](/docs/concepts/living-archive).
+**Living Archive**: The city's open memory: six library floors in the spire (94–114 m), linked by a gentle ramp along the glass, holding the history of the land and the city, oral histories, live data and a seed library, free for anyone to read and copy. Inspired by the source's living archive. See [The Living Archive](/docs/concepts/living-archive).
 
 **Living machine**: A wastewater treatment system that uses plants, microbes and constructed wetlands to clean water biologically. **Proven.**
 

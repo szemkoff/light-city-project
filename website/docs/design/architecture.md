@@ -246,7 +246,7 @@ The source describes a 40,000 ft (about 12 km) crystal spire that powers the who
 | 44 m | Quiet level: meditation and sound rooms |
 | 58 m | Water tank: gravity supply and fire water for the town |
 | 72 m | Sky observatory: enclosed, double height, with a café and telescopes. Phase 1 top: 90 m |
-| 94–114 m | [The Living Archive](/docs/concepts/living-archive): a spiral gallery round the lift core holding the city's open record, oral histories and data |
+| 94–114 m | [The Living Archive](/docs/concepts/living-archive): six level library floors round the lift core, with a ramp along the glass rising 4 m per turn (about 3.2%) to the learning level |
 | 118 m | Learning level: weather station, climate lab and reading room, fed by the archive below |
 | 138 m | Prism hall: light and sound art, small events. Phase 2 top: 150 m |
 | 150–204 m | Wind crown: open lattice above the slanted glass edge (not occupied) |
