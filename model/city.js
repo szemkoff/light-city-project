@@ -1140,22 +1140,29 @@ export function buildCity(scene, env = null) {
       const lr = new THREE.Mesh(new THREE.TorusGeometry(rAt(30) - 0.7, 0.08, 4, 48), railM2); lr.rotation.x = Math.PI / 2; lr.position.y = 31.1; add(lr);
       I('spireHall'); const sh = new THREE.Mesh(new THREE.CylinderGeometry(21.5, 22, 4.2, 40, 1, true), glassM); sh.position.y = 2.9; add(sh);
       const sr = new THREE.Mesh(new THREE.CylinderGeometry(22.6, 21.8, 0.5, 40), deckTM); sr.position.y = 5.1; add(sr); glow('halo', 0, 1, 0, 30);
-      // The Living Archive (Phase 2): a gallery that climbs one and a half turns round the lift core from
-      // 94 to 114 m, under the learning level. Curved timber walls of archive bays line its outer edge,
-      // lit warm at night; the ramp has no straight run and no corner, so visitors read the archive as a
-      // spiral walk through time, from the founding at the foot to the present at the top.
+      // The Living Archive (Phase 2): level library floors every 4 m from 94 to 114 m round the lift core,
+      // their shelves in arcs facing inward, out of the sun. A ramp runs right by the glass and rises 4 m in
+      // each full turn (about 3.3%, never over 3.5%), passing every floor and ending at the learning level at
+      // 118 m. Non-combustible: steel and concrete structure, stone floors, bronze steel shelving, a glass
+      // balustrade; the archive is its own fire compartment with water mist.
       layer(2); I('livingArchive');
-      { const A0 = 94, A1 = 114, TURNS = 1.5, N = 72, rIn = 5.6, P = [], ix = [], wall = [], wix = [];
-        for (let i = 0; i <= N; i++) { const t = i / N, a = t * TURNS * 2 * Math.PI, h = A0 + t * (A1 - A0), rOut = rAt(h) - 3.2;
-          P.push(rIn * Math.cos(a), h, rIn * Math.sin(a), rOut * Math.cos(a), h, rOut * Math.sin(a));
-          wall.push(rOut * Math.cos(a), h, rOut * Math.sin(a), rOut * Math.cos(a), h + 3, rOut * Math.sin(a));
-          if (i < N) { const k = 2 * i; ix.push(k, k + 1, k + 2, k + 1, k + 3, k + 2); wix.push(k, k + 1, k + 2, k + 1, k + 3, k + 2); }
-          if (i % 4 === 2) glow('window', (rOut - 0.6) * Math.cos(a), h + 1.6, (rOut - 0.6) * Math.sin(a)); }
-        const rg = new THREE.BufferGeometry(); rg.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); rg.setIndex(ix); rg.computeVertexNormals();
-        const rampM = deckTM.clone(); rampM.side = THREE.DoubleSide; add(new THREE.Mesh(rg, rampM));
-        const wg = new THREE.BufferGeometry(); wg.setAttribute('position', new THREE.Float32BufferAttribute(wall, 3)); wg.setIndex(wix); wg.computeVertexNormals();
-        add(new THREE.Mesh(wg, atNight(mat(0xc89a62, {roughness: 0.7, side: THREE.DoubleSide}), warm(0xffc27a, 0.45))));
-        add(plate(A0, 0.8, floorM)); }
+      { const A0 = 94, STEP = 4, FLOORS = 6, TOP = A0 + STEP * FLOORS, N = 64 * FLOORS, W = 3.2, rIn = 5.2, P = [], ix = [], rail = [];
+        const stoneM = mat(0xd9d1c2, {roughness: 0.6, side: THREE.DoubleSide}), shelfM = atNight(mat(0x9a8466, {roughness: 0.45, metalness: 0.6}), warm(0xffc27a, 0.35));
+        let slope = 0;
+        for (let i = 0; i <= N; i++) { const t = i / N, a = t * FLOORS * 2 * Math.PI, h = A0 + t * (TOP - A0), ro = rAt(h) - 0.4, ri = ro - W;
+          P.push(ri * Math.cos(a), h, ri * Math.sin(a), ro * Math.cos(a), h, ro * Math.sin(a));
+          rail.push(ri * Math.cos(a), h, ri * Math.sin(a), ri * Math.cos(a), h + 1.1, ri * Math.sin(a));
+          if (i < N) { const k = 2 * i; ix.push(k, k + 1, k + 2, k + 1, k + 3, k + 2); }
+          slope = Math.max(slope, STEP / (2 * Math.PI * (ro - W / 2))); }
+        if (slope > 0.035) console.warn('archive ramp slope', slope);
+        const mk = (A) => { const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(A, 3)); g.setIndex(ix); g.computeVertexNormals(); return g; };
+        add(new THREE.Mesh(mk(P), stoneM)); add(new THREE.Mesh(mk(rail), railM2));
+        for (let f = 0; f < FLOORS; f++) { const h = A0 + f * STEP, rf = rAt(h) - 0.4 - W - 0.2;
+          const fl = new THREE.Mesh(new THREE.RingGeometry(rIn, rf, 64), stoneM); fl.rotation.x = -Math.PI / 2; fl.position.y = h; add(fl);
+          // Two arcs of shelving per floor, with gaps so the floor opens to the ramp and the core
+          for (const [r, n] of [[rf * 0.55, 4], [rf * 0.82, 6]]) for (let j = 0; j < n; j++) {
+            const sh = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 2.2, 24, 1, true, (j + 0.12) * 2 * Math.PI / n, 0.76 * 2 * Math.PI / n), shelfM); sh.position.y = h + 1.1; add(sh); }
+          glow('window', 0, h + 2.4, rf * 0.7); glow('window', 0, h + 2.4, -rf * 0.7); glow('window', rf * 0.7, h + 2.4, 0); glow('window', -rf * 0.7, h + 2.4, 0); } }
       layer(1); I(null); }
     // Plaza amphitheatre: three curved stone tiers round a stage with a fire circle, on the plaza's
     // south-east, so the audience looks back over the stage to the spire
