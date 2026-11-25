@@ -18,7 +18,7 @@ Each diagram is shown once, on the page that explains it. This list points to it
 | Icon set | Stroke icons for city elements | [Visual Language](/docs/design/visual-language#iconography) |
 
 ## Required Diagram Set (Stage 1)
-- City Plan (Top-Down): Concentric rings, radial spokes, ~12 communospheres
+- City Plan (Top-Down): Concentric rings, radial spokes, 3 communospheres in Phase 1, 8 in Phase 2, 17 in Phase 3
 - Energy Grid: Nodes (spire, spheres, temples), pathways, flow direction
 - Central Spire Cross Section: Structural zones, energy/resonance layers
 - Communosphere Interior Concept: Levels, private/common spaces, resonance hardware

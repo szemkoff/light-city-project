@@ -41,7 +41,7 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **Coherence**: In our usage, a felt and potentially measurable state of attunement. In a person, it means calm, focused physiology (for example, regular heart-rate variability). In a group, it means trust, shared purpose and synchrony. Group-level effects beyond the social are a **frontier** research question.
 
-**Communosphere**: A dome neighborhood of 80–400 residents (80–120 in Phase 1). It combines homes, shared kitchens, gardens and gathering space under a geodesic timber-and-glass shell.
+**Communosphere**: A dome neighborhood of 80–400 residents (about 45–60 in each Phase 1 dome, built for up to 120). It combines homes, shared kitchens, gardens and gathering space under a geodesic timber-and-glass shell.
 
 **Contribution-based residency**: A residency path where work hours offset monthly fees. See [Contribution-Based Residency](/docs/project/contribution-based-residency).
 
@@ -119,6 +119,8 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **LFP battery**: Lithium iron phosphate: the safe, long-lived lithium battery chemistry most common in stationary storage today. **Proven.**
 
+**Living Archive**: The city's open memory: six library floors in the spire (94–114 m), linked by a gentle ramp along the glass, holding the history of the land and the city, oral histories, live data and a seed library, free for anyone to read and copy. Inspired by the source's living archive. See [The Living Archive](/docs/concepts/living-archive).
+
 **Living machine**: A wastewater treatment system that uses plants, microbes and constructed wetlands to clean water biologically. **Proven.**
 
 **Long-duration storage**: Energy storage that can deliver power for many hours to days (for example iron-air or flow batteries), rather than the 2–4 hours typical of lithium batteries.
@@ -169,7 +171,7 @@ Plain-language definitions of the terms used across the Light City library. Tech
 
 **Solid-state battery**: A battery with a solid electrolyte instead of a liquid one, promising higher energy density and safety. Still pilot-scale in 2026. **Emerging**, aimed first at vehicles. See [Technology Horizon](/docs/technical/technology-horizon#emerging--leave-room-for-it-adopt-in-phase-2).
 
-**Spire (Light Spire)**: The central tower, the Crystal Point: a twelve-sided faceted glass crystal, 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a wind crown of six turbines in an open lattice under a glass point. It serves as the city's landmark, energy collector and gathering place.
+**Spire (Light Spire)**: The central tower, the Crystal Point: an eight-sided faceted crystal of solar glass on a steel and concrete structure, 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with the vortex wind crown (165–192 m) under a sharp glass point. It serves as the city's landmark, energy collector and gathering place.
 
 **Superadobe (earthbag)**: Building with long bags filled with moist earth, coiled into domes and vaults. Developed by Nader Khalili at Cal-Earth. Low cost and suited to self-build. **Proven**, though permits vary. See [Beyond the Box](/docs/design/organic-forms-and-materials).
 

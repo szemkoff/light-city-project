@@ -36,7 +36,7 @@ A communosphere is a large shared dome with private homes inside or around it an
 :::info Scale Clarification
 **In the source** (visionary reference): spheres 600–1,200 ft across, each housing 10,000 people.
 
-**Light City Scale** (Earth Implementation): Phase 1 domes are 30–45 m (100–150 ft) across and house 80–120 residents each, using proven technologies (timber gridshells, CLT, clay interiors, BIPV). See [Beyond the Box](/docs/design/organic-forms-and-materials) for forms and materials.
+**Light City Scale** (Earth Implementation): Phase 1 domes are 30–45 m (100–150 ft) across, are built for 80–120 residents each and house about 45–60 each in Phase 1, using proven technologies (timber gridshells, CLT, clay interiors, BIPV). See [Beyond the Box](/docs/design/organic-forms-and-materials) for forms and materials.
 :::
 
 ### Visual Reference
@@ -78,8 +78,8 @@ The source describes mega-spheres 600–1,200 ft across, each a self-contained c
 **Phase 1 (built in Stage 5, Dec 2028 – Nov 2031)**: 3 geodesic domes
 - **Size**: 30-45 m diameter (100-150 ft)
 - **Height**: 3-5 levels, 15-25 m tall
-- **Capacity**: 80-120 residents per dome
-- **Total Phase 1**: 240-360 residents (target: 200)
+- **Capacity**: built for up to 80-120 residents per dome; about 45-60 per dome in Phase 1
+- **Total Phase 1**: about 140-170 residents in the domes and the rest in 30 small homes on ring 4, about 110 homes and 200 residents in all
 - **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
 - **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
 
@@ -124,7 +124,7 @@ The source describes mega-spheres 600–1,200 ft across, each a self-contained c
 **Community Scale**: Complete self-sufficient communities
 
 **Population**: 
-- Phase 1: 80–120 people per dome
+- Phase 1: about 45–60 people per dome (built for 80–120)
 - Large enough for diversity and culture
 - Small enough for genuine community
 - Close to the size at which people can still know each other well

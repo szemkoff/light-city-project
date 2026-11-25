@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Golden-hour view across the swimming lake to the completed Phase 3 city: the full 240 m twelve-sided crystal spire of blue, violet, amber and clear glass with its open wind crown and sharp faceted crystal point, glass domes and green-roofed homes below wooded hills, and people walking the curving lakeside paths, sitting on the grass and boating" width="1672" height="941" />
+        <img className="hero-img" src={img('hero')} alt="Golden-hour view across the swimming lake to the completed Phase 3 city: the full 240 m eight-sided crystal spire of blue, violet, amber and clear glass with its vortex wind crown and sharp faceted glass point, glass domes and green-roofed homes below wooded hills, and people walking the curving lakeside paths, sitting on the grass and boating" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
@@ -166,12 +166,12 @@ export default function Home(): JSX.Element {
       <section className="crystal" id="spire">
         <div className="wrap crystal-grid">
           <figure className="crystal-art">
-            <img src={img('spire')} alt="The Crystal Point spire at sunset: a twelve-sided crystal of faceted blue, violet and amber glass diamonds on a white diagrid, narrowing to a glass point, rising over green-roofed timber buildings, glass domes and a reflecting pool" width="1200" height="675" loading="lazy" />
+            <img src={img('spire')} alt="The Crystal Point spire at sunset: an eight-sided crystal of faceted blue, violet and amber solar glass in champagne-gold frames, with the vortex wind crown and a sharp glass point, rising over green-roofed timber buildings, glass domes and a reflecting pool" width="1200" height="675" loading="lazy" />
           </figure>
           <div className="crystal-text">
             <p className="eyebrow">The landmark</p>
             <h2>The Crystal Point.<br />A spire shaped like quartz.</h2>
-            <p className="lead">Six flat faces of rainbow-tinted solar glass diamonds on a white steel diagrid, a little fuller just above the foot and narrowing in one long curve to a sharp crystal point. It grows in 30 m sections on a foundation built for the final height, and in Phase 3 its top opens into a wind crown of six helical turbines.</p>
+            <p className="lead">Eight faces of rainbow-tinted solar glass diamonds in slim champagne-gold steel frames, rising almost straight like a quartz column to a sharp glass point. It grows in 30 m sections on a foundation built for the final height, and in Phase 3 the vortex wind crown is added at 165–192 m: offset glass panels that swirl the wind round two stacked rotors.</p>
             <dl className="crystal-facts">
               <div><dt>90 → 240 m</dt><dd>Built in sections over three phases</dd></div>
               <div><dt>72 m</dt><dd>Enclosed sky observatory and café</dd></div>
@@ -185,7 +185,7 @@ export default function Home(): JSX.Element {
           </div>
         </div>
         <div className="wrap crystal-tiles">
-          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Six white helical wind turbines inside the open white lattice of the crown, above the slanted edge of the glass" width="1200" height="675" loading="lazy" /><span>Wind crown, 150–204 m</span></a>
+          <a href={u('model/index.html?phase=3&view=crown')}><img src={base + 'img/structures/spireCrown.webp'} alt="Offset glass panels with narrow slots, like a tornado fire pit, round two vertical-vane wind rotors in the crown" width="1200" height="675" loading="lazy" /><span>Vortex wind crown, 165–192 m</span></a>
           <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireObs.webp'} alt="Visitors in the enclosed sky observatory behind faceted glass, looking out over domes and woods" width="1200" height="675" loading="lazy" /><span>Sky observatory, 72 m</span></a>
           <a href={u('docs/design/architecture#inside-level-by-level')}><img src={base + 'img/structures/spireHall.webp'} alt="The bright base hall of the spire with a timber floor, exhibitions and the glass lift core" width="1200" height="675" loading="lazy" /><span>Base hall and lift core</span></a>
         </div>

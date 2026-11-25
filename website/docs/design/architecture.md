@@ -215,11 +215,11 @@ The source describes a city with these features ([The Archetype](/docs/concepts/
 
 ### The Central Spire
 
-![The Crystal Point spire at sunset: a twelve-sided crystal of faceted blue, violet and amber glass diamonds on a white diagrid, narrowing to a glass point, rising over green-roofed timber buildings, glass domes and a reflecting pool](/img/home/spire.webp)
+![The Crystal Point spire at sunset: a faceted crystal of blue, violet and amber glass diamonds in champagne-gold frames, narrowing to a glass point, rising over green-roofed timber buildings, glass domes and a reflecting pool](/img/home/spire.webp)
 
-*The Crystal Point spire in Phase 3, 240 m. Concept rendering made on top of the 3D model; [see it in 3D](pathname:///model/index.html?phase=3&view=spire).*
+The Crystal Point spire in Phase 3, 240 m. Concept rendering based on the 3D model; [see it in 3D](pathname:///model/index.html?phase=3&view=spire).
 
-The spire is shaped like a natural quartz crystal: twelve sides, 61 m across at the foot, narrowing like a gentle cone to 44 m at 150 m, then curving in at the shoulders to 22 m at 204 m, where a blunt 26 m faceted glass point closes it at 230 m and its mast reaches 240 m. The skin is one continuous white steel diagrid of tall staggered diamonds, about 16 m wide and 50 m tall at the foot, and each diamond is cut into four facets of dichroic solar glass like a cut stone: blue and violet above, warm amber and clear below. A ring of slender mullions marks the observatory at 72–90 m, where a mirrored globe room hangs round the core. Higher up the glass climbs on a slant into the open lattice of the wind crown, higher on one side than the other, so the turbines show through the open diamonds. By day the facets throw rainbow glints; at night it glows softly from inside, with a small inner crystal lit in the point.
+The spire is shaped like a natural quartz column: an eight-sided crystal of solar glass in slim champagne-gold steel frames. Its four main faces (south, east, north and west) are wide at the foot and narrow towards the top; the four diagonal faces between them are narrow at the foot and widen towards the top, so the lines of the faces cross over as the tower rises. It is about 56 by 52 m across at the foot and 45 by 42 m at 165 m. An X of slim members cuts each panel into tall diamond facets of solar glass: blue and violet, with warm amber. The enclosed observatory sits at 72–81 m, with a mirrored globe room round the core at 82 m. Above the glass body, from 165 to 192 m, is the vortex wind crown, and a sharp glass point closes the tower at 240 m: four large kite-shaped facets over the diagonal faces, whose lower tips dip into those faces in a V so no level line runs round the top, and slim triangles over the main faces. By day the facets throw rainbow glints; at night it glows softly from inside.
 
 ![Section through the Crystal Point spire with every level, and plans of the base hall and the sky observatory](/img/diagrams/central-spire-cross-section.svg)
 
@@ -233,37 +233,37 @@ The source describes a 40,000 ft (about 12 km) crystal spire that powers the who
 
 - **Phase 1 (built in Stage 5, Dec 2028 – Nov 2031):** 90 m, three sections, on a foundation, basement and lift core sized for the final 240 m. A short temporary glass point sits on top.
 - **Phase 2 (mid-2030s):** 150 m, two more sections. The temporary point is lifted off and set back on top.
-- **Phase 3:** 240 m. The wind crown and the full glass point are added.
-- **Precedent:** towers built from stacked sections lifted into place, such as the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) (1922). Tall timber is proven to 85 m at [Mjøstårnet](https://en.wikipedia.org/wiki/Mj%C3%B8st%C3%A5rnet); the spire uses timber inside (floors, halls, benches) and steel, glass and a concrete core for the height, because a 240 m tower needs harder materials.
+- **Phase 3:** 240 m. The glass body reaches 165 m, and the wind crown (165–192 m) and the full glass point (192–240 m) are added.
+- **Precedent:** towers built from stacked sections lifted into place, such as the [Shukhov Tower](https://en.wikipedia.org/wiki/Shukhov_Tower) (1922). Tall timber is proven to 85 m at [Mjøstårnet](https://en.wikipedia.org/wiki/Mj%C3%B8st%C3%A5rnet); the spire is steel, glass and a concrete core, because a 240 m tower needs harder materials, and US code limits even encased mass timber to 270 ft (82 m) ([WoodWorks](https://www.woodworks.org/wp-content/uploads/wood_solution_paper-tall-wood.pdf)). Wood is used inside only as finishes that do not burn, such as real veneer on a fibre-gypsum core, and for furniture and handrails.
 
 #### Inside, level by level
 
 | Level | Use |
 |---|---|
-| Basement | Batteries, grid control, pumps and a heat store; a service tunnel to the north |
+| Basement | Batteries, grid control, pumps and a heat store; the archive vault for originals and the seed library; a service tunnel to the north |
 | 0 m, base hall | Main entrance facing south over the plaza; welcome desk, exhibitions, café; in Phase 1 the council meets here. Service enters from the north |
 | 30 m | Gathering level: talks and small concerts, about 120 seats |
 | 44 m | Quiet level: meditation and sound rooms |
-| 58 m | Water tank: gravity supply and fire water for the town |
-| 72 m | Sky observatory: enclosed, double height, with a café and telescopes. Phase 1 top: 90 m |
-| 118 m | Learning level: weather station, climate lab, archive |
+| 62 m | Water tank: gravity supply and fire water for the town |
+| 72–81 m | Sky observatory: enclosed, double height, with a café and telescopes |
+| 82 m | Mirrored globe room round the core. Phase 1 top: 90 m |
+| 94–114 m | [The Living Archive](/docs/concepts/living-archive): six level library floors round the lift core, with a ramp along the glass rising 4 m per turn (about 3.2%) to the learning level |
+| 118 m | Learning level: weather station, climate lab and reading room, fed by the archive below |
 | 138 m | Prism hall: light and sound art, small events. Phase 2 top: 150 m |
-| 150–204 m | Wind crown: open lattice above the slanted glass edge (not occupied) |
-| 204–230 m | Glass point (mast to 240 m): star room for stargazing and quiet evenings, radio and emergency antennas, aviation light, lightning rod |
-| 214 m | Sway damper: a tuned water tank inside the point that steadies the tower in wind |
+| 165–192 m | Vortex wind crown: two stacked rotors inside eight offset glass panels (not occupied) |
+| 192–240 m | Glass point: star room for stargazing and quiet evenings, radio and emergency antennas, aviation light, lightning rod |
+| 206 m | Sway damper: a tuned water tank inside the point that steadies the tower in wind |
 
 The lift core has two public lifts, a fire and goods lift and two pressurised stairs, and it grows with each section. The skin is a double layer of glass; warm air rises in the gap, like a solar chimney, and draws fresh air through the halls.
 
 #### The wind crown
 
-![The wind crown: six white helical turbines in two rows inside the open white lattice, above the slanted edge of the glass, at sunset](/img/structures/spireCrown.webp)
+![The vortex wind crown: two stacked vertical-vane rotors seen through eight offset glass panels above the faceted body, under the glass point, at sunset](/img/structures/spireCrown.webp)
 
-![Plan of the two turbine levels: three turbines at the south, north-east and north-west corners below, three at the other corners above](/img/diagrams/wind-crown-plan.svg)
+Between 165 and 192 m the crystal becomes a vortex wind crown. Eight flat glass panels stand round two stacked vertical-vane rotors, like the glass of a tornado fire pit: each panel is flush with the tower at one corner and steps in by about 1.8 m at the other, starting just behind the end of the panel before it. No glass stands proud of the building, and from the side every slot is a narrow gap from top to bottom. Wind from any direction slips in through the slots on its side, always turned the same way, and swirls round the rotors, which share one central shaft; the upper rotor is turned half a vane so the two never pulse together. Guide panels like these have raised the output of vertical-axis turbines in wind-tunnel tests; the swirl helps the rotors but is not a self-sustaining tornado. Wind turbines have been built into towers before, at the [Bahrain World Trade Centre](https://www.building.co.uk/focus/harnessing-the-wind-bahrain-world-trade-centre/3123951.article) and the [Pearl River Tower](https://www.buildinggreen.com/feature/folly-building-integrated-wind), and the lessons are clear: vibration and noise must be designed out from the start.
 
-Between 150 and 204 m the crystal becomes a wind crown. The glass climbs on a slant, from about 150 m on one side to about 182 m on the other, and above it the white diagrid stays open, with slim members and a fine ring set in every other open diamond, so the wind passes straight through. Inside hang six helical vertical-axis turbines, about 9 m across and 18 m tall, three per level. The upper row is turned 60 degrees, so together the six fill every corner while a central mast runs up the middle to the point. Helical (Gorlov) blades are a kind of Darrieus turbine with similar or slightly lower efficiency but much smoother torque, which matters on a building ([University of New Hampshire](https://scholars.unh.edu/cgi/viewcontent.cgi?article=1660&context=thesis)). Wind turbines have been built into towers before, at the [Bahrain World Trade Centre](https://www.building.co.uk/focus/harnessing-the-wind-bahrain-world-trade-centre/3123951.article) and the [Pearl River Tower](https://www.buildinggreen.com/feature/folly-building-integrated-wind), and the lessons are clear: vibration and noise must be designed out from the start.
-
-- **Vibration.** Rubber mounts under every turbine, speed control that brakes the rotors in storms, an open lattice that breaks up the gusts, the tuned water damper at 214 m, and no rooms on the turbine floors.
-- **Power.** Very roughly 0.5 to 1 GWh a year from the glass skin and the turbines together. This is a useful supplement and a visible lesson in clean energy, not the city's main supply, which comes from the solar fields and roofs.
+- **Vibration.** Rubber mounts under the rotors, speed control that brakes them in storms, the tuned water damper at 206 m, and no rooms on the crown floors.
+- **Power.** Very roughly 0.5 to 1 GWh a year from the glass skin and the rotors together. This is a useful supplement and a visible lesson in clean energy, not the city's main supply, which comes from the solar fields and roofs.
 - **Other uses.** Antennas for radio and emergencies, a weather and fire watch, the lightning rod for the plaza, the gravity water tank and the basement batteries that help steady the town grid.
 - **What it does not do.** The spire makes no measurable "biofield" and no healing energy; any wellbeing effects of its halls and light are studied as open questions ([Research](/docs/research/open-questions)).
 
@@ -423,8 +423,8 @@ The source describes mega-spheres 600–1,200 ft across for 10,000 people each, 
 **Phase 1 (built in Stage 5, Dec 2028 – Nov 2031)**: 3 geodesic domes
 - **Size**: 30-45 m diameter (100-150 ft)
 - **Height**: 3-5 levels, 15-25 m tall
-- **Capacity**: 80-120 residents per dome
-- **Total Phase 1**: 240-360 residents
+- **Capacity**: built for up to 80-120 residents per dome; about 45-60 per dome in Phase 1
+- **Total Phase 1**: about 140-170 residents in the domes and the rest in 30 small homes on ring 4, about 110 homes and 200 residents in all
 - **Structure**: CLT (cross-laminated timber) + steel nodes, or tensegrity geodesic
 - **Glazing**: BIPV (building-integrated photovoltaics) + insulated panels
 
@@ -705,7 +705,7 @@ Light City builds on these principles with modern materials and engineering, and
 
 | Subsystem | Phase 1 (built 2028–2031) | Phase 2 (mid-2030s) | Current TRL | Notes |
 |-----------|-------------------|-------------------|-------------|-------|
-| **Spire (Terrestrial)** | 90 m crystal of solar glass on a steel diagrid, base built for 240 m | 150 m, then 240 m with a wind crown; enclosed observatory | 3-4 | Steel/CLT hybrid proven; LED art systems mature |
+| **Spire (Terrestrial)** | 90 m eight-sided crystal of solar glass in steel frames on a concrete core, base built for 240 m | 150 m, then 240 m with the vortex wind crown and glass point; enclosed observatory at 72 m | 3-4 | Steel and concrete towers of this height proven; LED art systems mature |
 | **Communospheres** | 3 domes (40 m) | 8 domes (40-44 m) | 4-5 | Geodesic CLT domes built globally; BIPV glazing TRL 6-7 |
 | **Plaza/Temples** | Central plaza + 1 temple | 3-5 temples | 4-6 | Sacred architecture well-established; acoustic design mature |
 | **Energy (Physical)** | 2-5 MWp PV + 8-20 MWh storage | 5-15 MWp + 40-80 MWh | 6-8 | Solar+storage is proven tech; micro-grid controls TRL 7 |

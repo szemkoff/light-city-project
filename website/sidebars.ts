@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
         'design/growth-plan',
         'design/structures',
         'concepts/communospheres',
+        'concepts/living-archive',
         'concepts/sacred-geometry',
         'design/visual-language',
         'design/color-and-light',

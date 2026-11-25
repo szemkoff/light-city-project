@@ -78,6 +78,7 @@ Citation style: link inline at the point of use, and note the access date for we
 ## Visionary sources
 
 - Delphin channeled information, the origin of the Light City archetype: [research/spiritual/delphin-channeled-info.md](https://github.com/szemkoff/light-city-project/blob/main/research/spiritual/delphin-channeled-info.md) (E). Used as inspiration and as a source of [frontier research questions](/docs/research/open-questions#d-frontier-questions-study-openly-never-depend-on).
+- Arcturian crystal city, recording transcript (Cosmic Disclosure, Emery Smith with Victoria): the living archive, communospheres and the open-knowledge story behind [The Living Archive](/docs/concepts/living-archive): [research/spiritual/arcturian-crystal-city-transcript.md](https://github.com/szemkoff/light-city-project/blob/main/research/spiritual/arcturian-crystal-city-transcript.md) (E).
 
 ---
 
