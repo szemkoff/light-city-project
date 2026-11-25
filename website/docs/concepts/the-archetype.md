@@ -65,6 +65,7 @@ The source places Light City within a wider spiritual story: a "New Earth" timel
 | A 40,000 ft crystal spire that makes power | A 90–240 m crystal of solar glass on a steel diagrid, with a wind crown and an enclosed observatory; its power is a supplement, not the city's supply | [The central spire](/docs/design/architecture#the-central-spire) |
 | Communospheres 600–1,200 ft across for 10,000 people | Timber gridshell domes 30–90 m across; a Phase 1 dome is shared by 80–120 residents | [Communospheres](/docs/concepts/communospheres) |
 | A unified consciousness field and knowledge transfer | Shared meals, councils, open documentation, and optional, consent-based research on group practice | [Governance](/docs/project/governance), [Open Questions](/docs/research/open-questions) |
+| A living archive of star seed history, and the Lemurian Hall of Amenti | The Living Archive, a spiral gallery in the spire with the city's open record and a seed library, under the rule that knowledge is never hoarded | [The Living Archive](/docs/concepts/living-archive) |
 | An etheric blueprint remembered from Earth's memory | A plan shaped by the chosen land: its water, soil, climate and the people who already live there | [Site Locations](/docs/project/site-locations) |
 | A convergence point with other civilizations | A retreat and learning center open to visitors | [Development Stages](/docs/project/development-stages) |
 

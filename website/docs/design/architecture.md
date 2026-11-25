@@ -240,13 +240,14 @@ The source describes a 40,000 ft (about 12 km) crystal spire that powers the who
 
 | Level | Use |
 |---|---|
-| Basement | Batteries, grid control, pumps and a heat store; a service tunnel to the north |
+| Basement | Batteries, grid control, pumps and a heat store; the archive vault for originals and the seed library; a service tunnel to the north |
 | 0 m, base hall | Main entrance facing south over the plaza; welcome desk, exhibitions, café; in Phase 1 the council meets here. Service enters from the north |
 | 30 m | Gathering level: talks and small concerts, about 120 seats |
 | 44 m | Quiet level: meditation and sound rooms |
 | 58 m | Water tank: gravity supply and fire water for the town |
 | 72 m | Sky observatory: enclosed, double height, with a café and telescopes. Phase 1 top: 90 m |
-| 118 m | Learning level: weather station, climate lab, archive |
+| 94–114 m | [The Living Archive](/docs/concepts/living-archive): a spiral gallery round the lift core holding the city's open record, oral histories and data |
+| 118 m | Learning level: weather station, climate lab and reading room, fed by the archive below |
 | 138 m | Prism hall: light and sound art, small events. Phase 2 top: 150 m |
 | 150–204 m | Wind crown: open lattice above the slanted glass edge (not occupied) |
 | 204–230 m | Glass point (mast to 240 m): star room for stargazing and quiet evenings, radio and emergency antennas, aviation light, lightning rod |
