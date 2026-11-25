@@ -40,11 +40,39 @@
   .card .x:focus-visible, .card a:focus-visible { outline: 2px solid #C9A24A; }
   @media (max-width: 600px) { .card .pic img { aspect-ratio: 16 / 7; } .card { left: 12px !important; right: 12px; top: auto !important; bottom: 12px; width: auto; } }
   body.render .ui, body.render .note, body.render .card { display: none; }
+  #loader { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: radial-gradient(ellipse at 50% 40%, #FFFDF8 0%, #F3ECDF 70%); transition: opacity .6s ease, visibility .6s; }
+  #loader.done { opacity: 0; visibility: hidden; }
+  body.render #loader { display: none; }
+  #loader .gem { width: 46px; height: 92px; position: relative; animation: lfloat 2.4s ease-in-out infinite; }
+  #loader .gem::before { content: ""; position: absolute; inset: 0; clip-path: polygon(50% 0, 100% 28%, 82% 100%, 18% 100%, 0 28%); background: linear-gradient(135deg, #9fc3e8, #b49be0 45%, #e9c48a); }
+  #loader .gem::after { content: ""; position: absolute; inset: 0; clip-path: polygon(50% 0, 100% 28%, 82% 100%, 18% 100%, 0 28%); background: linear-gradient(100deg, transparent 30%, rgba(255,255,255,.75) 50%, transparent 70%); background-size: 250% 100%; animation: lshine 1.8s linear infinite; }
+  #loader h2 { margin: 6px 0 0; font: 600 20px/1.2 Georgia, serif; }
+  #loader p { margin: 0; color: #6B6255; min-height: 1.4em; }
+  #loader .bar { width: min(260px, 70vw); height: 4px; border-radius: 4px; background: #E6DCCB; overflow: hidden; }
+  #loader .bar i { display: block; height: 100%; width: 8%; border-radius: 4px; background: linear-gradient(90deg, #C9A55C, #9C7BD6); transition: width .5s ease; }
+  #loader.busy .bar i { animation: lpulse 1.6s ease-in-out infinite; }
+  #loader .steps { display: flex; gap: 18px; font-size: 13px; color: #9A8F7E; }
+  #loader .steps span.on { color: #1D1A15; font-weight: 600; }
+  #loader .steps span.ok::before { content: "\2713  "; color: #6E9A57; }
+  @keyframes lfloat { 50% { transform: translateY(-6px); } }
+  @keyframes lshine { from { background-position: 150% 0; } to { background-position: -100% 0; } }
+  @keyframes lpulse { 50% { opacity: .55; } }
+  @media (prefers-reduced-motion: reduce) { #loader .gem, #loader .gem::after, #loader.busy .bar i { animation: none; } }
 </style>
 <script type="importmap">{"imports": {"three": "./vendor/three.module.min.js"}}</script>
 </head>
 <body>
 <canvas id="c" aria-label="3D model of the Light City plan"></canvas>
+<div id="loader" class="busy" role="status" aria-live="polite"><div class="gem" aria-hidden="true"></div><h2>Light City in 3D</h2><p id="ldMsg">Downloading the model…</p><div class="bar"><i id="ldBar"></i></div><div class="steps"><span id="ld1" class="on">Download</span><span id="ld2">Build the city</span><span id="ld3">Ready</span></div></div>
+<script>
+  // Shown before the model's scripts arrive; the model script below moves it through the steps.
+  window.__ld = {
+    step(n, msg, pct) { for (let i = 1; i <= 3; i++) { const e = document.getElementById('ld' + i); e.className = i < n ? 'ok' : i === n ? 'on' : ''; } document.getElementById('ldMsg').textContent = msg; document.getElementById('ldBar').style.width = pct + '%'; },
+    fail(msg) { const l = document.getElementById('loader'); l.classList.remove('busy'); document.getElementById('ldMsg').textContent = msg; }
+  };
+  setTimeout(() => { if (window.__ld) document.getElementById('ldBar').style.width = '35%'; }, 400);
+  addEventListener('error', (e) => { if (window.__ld && !document.getElementById('loader').classList.contains('done')) __ld.fail('The 3D model could not load. Please refresh the page, or try another browser.'); });
+</script>
 <div class="ui"><h1><span id="ttl">Light City reference model</span> · <a href="../docs/design/visual-language/#3d-reference-model" style="color:inherit;font-weight:400;pointer-events:auto">About</a></h1><label class="ctl phase"><span>Phase</span><select id="phaseSel" aria-label="Phase"></select></label><label class="ctl"><span>View</span><select id="viewSel" aria-label="View"></select></label><label class="ctl"><span>Time</span><select id="timeSel" aria-label="Time of day"></select></label></div>
 <details class="note" id="noteBox"><summary><span id="noteSum"></span></summary><p id="note"></p></details>
 <div class="card" id="card" role="dialog" aria-live="polite" aria-labelledby="cardT" hidden><button class="x" id="cardX" aria-label="Close">×</button><a id="cardIL" class="pic" target="_blank" rel="noopener" title="Open the photo guide"><img id="cardI" alt="" loading="lazy"></a><h2 id="cardT"></h2><span class="ph" id="cardP"></span><p id="cardD"></p><a id="cardL" target="_blank" rel="noopener">Read the full description →</a></div>
@@ -80,7 +108,17 @@
   const c = document.getElementById('c');
   if (render) { c.style.width = q.get('w') + 'px'; c.style.height = q.get('h') + 'px'; }
   const time = q.get('time') === 'night' ? 'night' : 'day';
-  app = start(c, {phase, time, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
+  const ld = window.__ld, paint = () => new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0)));
+  if (!render) { ld.step(2, 'Building the city: domes, spire, paths and water…', 70); await paint(); }
+  try {
+    app = start(c, {phase, time, interactive: !render, view: q.get('view') || 'aerial', width: render ? +q.get('w') : 0, height: render ? +q.get('h') : 0});
+  } catch (err) {
+    ld.fail('The 3D model needs WebGL, which this browser or device could not start.'); throw err;
+  }
+  if (!render) {
+    ld.step(3, 'Ready', 100); await paint(); await paint();
+    document.getElementById('loader').classList.add('done'); window.__ld = null;
+  }
   showPhase(phase);
   // Views grouped by theme. A view that only exists in a later phase switches the phase up to it.
   const GROUPS = [
