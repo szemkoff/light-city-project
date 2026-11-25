@@ -32,6 +32,14 @@ The "star seed" history in the source becomes, on Earth, a literal seed library:
 
 **In the spire (Phase 2).** The archive fills the spire from 94 m to 118 m. The library is on six level floors, 4 m apart, stacked round the lift core, each about 950 m². Its shelves stand in arcs round the core and its reading areas face inward, away from the bright glass, so books and seeds stay out of direct sun. A ramp runs right along the windows, outside the library floors, and rises 4 m in each full turn: about 125 m of walking per floor at a slope of 3.1 to 3.2%, never more than 3.5%, close to the 2 degrees of the [Seattle Central Library's Books Spiral](https://special.seattletimes.com/o/news/local/library/architecture/bookspiral.html). It passes every floor and ends at the learning level at 118 m, where the archive's data feeds the weather station and the climate lab. The lifts stop at every floor, so nobody has to walk the whole climb. [See it in the 3D model](pathname:///model/index.html?phase=2&view=spire).
 
+![Concept rendering of the Living Archive: a terrazzo ramp along the glass, and level library floors with oak plank ceilings facing the lift core](/img/concepts/living-archive-interior.webp)
+
+Concept rendering: the ramp along the glass on the left, the level library floors round the core on the right.
+
+![3D model: the six archive floors and the ramp seen through the spire's glass](/img/concepts/living-archive-model.webp)
+
+The same floors in the [3D model](pathname:///model/index.html?phase=2&view=spire), seen through the spire's glass.
+
 - **Feng shui:** the ramp has no straight run and no corner, like every path in the city. The archive sits high in the tower, behind the open ming tang of the Spire Park, a quiet place for something meant to last.
 - **Accessible by design:** below a 1:20 (5%) slope a walkway is not a ramp under the [ADA Standards](https://www.access-board.gov/ada/chapter/ch04/), which allow up to 1:12 with a landing for every 0.76 m of rise. At about 3.2%, wheelchairs, prams and book trolleys move freely, and each library floor works as a level resting place.
 - **Phase 1:** until the Phase 2 sections are built, the archive starts as exhibitions in the base hall and a reading room in the learning pavilion.
