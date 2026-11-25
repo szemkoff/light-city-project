@@ -36,9 +36,9 @@ The "star seed" history in the source becomes, on Earth, a literal seed library:
 
 Concept rendering: the ramp along the glass on the left, the level library floors round the core on the right.
 
-![3D model: the six archive floors and the ramp seen through the spire's glass](/img/concepts/living-archive-model.webp)
+![Concept rendering from outside: the archive floors and the ramp seen through the spire's crystal glass above the garden city](/img/concepts/living-archive-exterior.webp)
 
-The same floors in the [3D model](pathname:///model/index.html?phase=2&view=spire), seen through the spire's glass.
+Concept rendering from outside: the archive floors seen through the spire's glass, based on the [3D model](pathname:///model/index.html?phase=2&view=spire).
 
 - **Feng shui:** the ramp has no straight run and no corner, like every path in the city. The archive sits high in the tower, behind the open ming tang of the Spire Park, a quiet place for something meant to last.
 - **Accessible by design:** below a 1:20 (5%) slope a walkway is not a ramp under the [ADA Standards](https://www.access-board.gov/ada/chapter/ch04/), which allow up to 1:12 with a landing for every 0.76 m of rise. At about 3.2%, wheelchairs, prams and book trolleys move freely, and each library floor works as a level resting place.
