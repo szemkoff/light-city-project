@@ -25,15 +25,15 @@ The round stone plaza at the heart of the city, with a ring of reflecting water 
 
 ![Crystal Point spire: concept rendering](/img/home/spire.webp)
 
-The city's landmark, shaped like a natural quartz point: a twelve-sided crystal of solar glass diamonds on a white steel diagrid, 61 m across at the foot, narrowing like a gentle cone to 44 m at 150 m, then curving in at the shoulders to a blunt 26 m faceted glass point at 230 m, with its mast reaching 240 m. Each tall diamond is cut into four glass facets, blue and violet above, warm amber and clear below, so the crystal sparkles like a cut stone. It is built in sections on a foundation sized for the final height: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a short temporary glass point on top until the full point and wind crown are built. Inside: a base hall, a gathering level at 30 m, a water tank at about 60 m, an enclosed double-height observatory with a café at 72 m, a mirrored globe room at 82 m, a learning level, a prism hall and a star room inside the glass point. The glass skin and the wind crown give supplemental power, not the city's main supply.
+The city's landmark, shaped like a natural quartz column: an eight-sided crystal of solar glass in champagne-gold steel frames, about 56 by 52 m across at the foot and 45 by 42 m at 165 m. An X of slim members cuts each panel into tall diamond facets in blue, violet and warm amber, so the crystal sparkles like a cut stone. Above the glass sits the vortex wind crown (165 to 192 m), and a sharp glass point closes the tower at 240 m. It is built in sections on a foundation sized for the final height: 90 m in Phase 1, 150 m in Phase 2 and 240 m in Phase 3, with a short temporary glass point on top until the full point and wind crown are built. Inside: a base hall, a gathering level at 30 m, a water tank at about 60 m, an enclosed double-height observatory with a café at 72 m, a mirrored globe room at 82 m, the Living Archive (94 to 118 m), a learning level, a prism hall and a star room inside the glass point. The glass skin and the wind crown give supplemental power, not the city's main supply.
 
 [See it in the 3D model](pathname:///model/index.html?view=spire&phase=3) · [Read the full description](/docs/design/architecture/#the-central-spire)
 
 ### Wind crown {#spirecrown}
 
-![Wind crown: concept rendering](/img/structures/spireCrown.webp)
+![Vortex wind crown: offset glass panels round two stacked rotors, concept rendering](/img/structures/spireCrown.webp)
 
-Phase 3 only. Between 150 and 204 m the glass climbs on a slant into an open white lattice with a fine ring in every other open diamond and slim members round the turbines, higher on one side than the other, so the wind passes through: six helical vertical-axis turbines about 9 m across and 18 m tall, three per level round a central mast, the upper row turned 60 degrees so the six fill every corner. Helical blades give smooth torque; rubber mounts, speed control, the open lattice and a tuned water damper at 214 m keep vibration out of the rooms below, and the turbine floors are not occupied. Expect very roughly 0.5 to 1 GWh a year from the glass and the wind together, a supplement to the city's solar fields.
+Phase 3 only. Between 165 and 192 m, eight flat glass panels stand round two stacked vertical-vane rotors like the glass of a tornado fire pit: each panel is flush with the tower at one corner and steps in by about 1.8 m at the other, starting just behind the end of the panel before it, so no glass stands proud of the building and from the side every slot is a narrow gap from top to bottom. That is all it is: glass set with an offset, each panel standing in a slot cut in the crown floor, so from the side every slot is a narrow gap from top to bottom. Wind from any direction slips in through the slots on its side, always turned the same way, and swirls round the rotors, which share one central shaft; the upper rotor is turned half a vane so the two never pulse together. Guide panels like these have raised the output of vertical-axis turbines in wind-tunnel tests; the swirl helps the rotors but is not a self-sustaining tornado. Rubber mounts, speed control and a tuned damper at 206 m keep vibration out of the rooms below, and the crown is not occupied. Wind here is a supplement to the city's solar fields, not its main supply.
 
 [See it in the 3D model](pathname:///model/index.html?view=crown&phase=3) · [Read the full description](/docs/design/architecture/#the-wind-crown)
 
@@ -49,7 +49,7 @@ A concrete shaft wrapped in a glass core at the centre of the crystal, with two 
 
 ![Spire gathering level: concept rendering](/img/structures/spireLevel.webp)
 
-A twelve-sided hall at 30 m for talks, small concerts and quiet sitting above the trees, with about 120 seats, reached by the lifts. The enclosed observatory is higher up, at 72 m.
+An eight-sided hall at 30 m for talks, small concerts and quiet sitting above the trees, with about 120 seats, reached by the lifts. The enclosed observatory is higher up, at 72 m.
 
 [Read the full description](/docs/design/architecture/#the-central-spire)
 
