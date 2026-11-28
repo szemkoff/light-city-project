@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
 
       {/* HERO */}
       <section className="hero" id="top">
-        <img className="hero-img" src={img('hero')} alt="Golden-hour view across the swimming lake to the completed Phase 3 city: the full 240 m eight-sided crystal spire of blue, violet, amber and clear glass with its vortex wind crown, glass domes and green-roofed homes below wooded hills, and people walking the curving lakeside paths, sitting on the grass and boating" width="1672" height="941" />
+        <img className="hero-img" src={img('hero')} alt="Golden-hour view across the swimming lake to the completed Phase 3 city: the full 240 m eight-sided crystal spire of blue, violet, amber and clear glass with its vortex wind crown and sharp faceted glass point, glass domes and green-roofed homes below wooded hills, and people walking the curving lakeside paths, sitting on the grass and boating" width="1672" height="941" />
         <div className="hero-veil"></div>
         <div className="hero-in wrap">
           <p className="eyebrow light">Stage 1 · Foundation — finishing now</p>
